@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="303" />
+   <irq preferredWidth="34" />
+   <inputclock preferredWidth="198" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/University Program,Library/Interface Protocols,Project,Library,Library/Interface Protocols/Serial,Library/University Program/Communications" />
+ <window width="1600" height="860" x="0" y="0" />
+ <hdlexample language="VERILOG" />
+</preferences>

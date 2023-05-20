@@ -1,0 +1,5 @@
+PLL_Name	Qsys:u0|Qsys_altpll_0:altpll_0|Qsys_altpll_0_altpll_ftn2:sd1|pll7
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+

@@ -1,0 +1,20 @@
+Fitter Status : Successful - Fri Dec 29 16:30:39 2017
+Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Standard Edition
+Revision Name : C5G_D8M
+Top-level Entity Name : C5G_D8M
+Family : Cyclone V
+Device : 5CGXFC5C6F27C7
+Timing Models : Final
+Logic utilization (in ALMs) : 8,511 / 29,080 ( 29 % )
+Total registers : 12081
+Total pins : 221 / 364 ( 61 % )
+Total virtual pins : 0
+Total block memory bits : 2,278,936 / 4,567,040 ( 50 % )
+Total RAM Blocks : 296 / 446 ( 66 % )
+Total DSP Blocks : 4 / 150 ( 3 % )
+Total HSSI RX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 6 ( 0 % )
+Total HSSI TX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 6 ( 0 % )
+Total PLLs : 3 / 12 ( 25 % )
+Total DLLs : 1 / 4 ( 25 % )

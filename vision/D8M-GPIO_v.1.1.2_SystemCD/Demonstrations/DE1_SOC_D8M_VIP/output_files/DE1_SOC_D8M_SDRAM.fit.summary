@@ -1,0 +1,20 @@
+Fitter Status : Successful - Fri Dec 29 16:47:50 2017
+Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Standard Edition
+Revision Name : DE1_SOC_D8M_SDRAM
+Top-level Entity Name : DE1_SOC_D8M_SDRAM
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 3,655 / 32,070 ( 11 % )
+Total registers : 6265
+Total pins : 190 / 457 ( 42 % )
+Total virtual pins : 0
+Total block memory bits : 1,091,128 / 4,065,280 ( 27 % )
+Total RAM Blocks : 143 / 397 ( 36 % )
+Total DSP Blocks : 5 / 87 ( 6 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,6 @@
+DATE = "13:33:18 December 21, 2015"
+QUARTUS_VERSION = "15.1.0"
+
+# Revisions
+
+PROJECT_REVISION = "DE1_SOC_D8M_SDRAM"

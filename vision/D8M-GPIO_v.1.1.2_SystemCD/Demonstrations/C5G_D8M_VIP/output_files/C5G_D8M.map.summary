@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Fri Dec 29 16:21:31 2017
+Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Standard Edition
+Revision Name : C5G_D8M
+Top-level Entity Name : C5G_D8M
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 11199
+Total pins : 220
+Total virtual pins : 0
+Total block memory bits : 2,278,936
+Total DSP Blocks : 4
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 3
+Total DLLs : 1

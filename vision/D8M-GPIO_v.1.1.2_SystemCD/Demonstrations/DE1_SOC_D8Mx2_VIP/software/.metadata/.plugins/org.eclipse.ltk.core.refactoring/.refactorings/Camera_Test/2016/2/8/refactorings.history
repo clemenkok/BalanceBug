@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Camera_Test/mixerii.c&apos; to &apos;mixerii_config.c&apos;" description="Rename resource &apos;mixerii.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="mixerii.c" name="mixerii_config.c" stamp="1455786159073" updateReferences="true"/>
+</session>
