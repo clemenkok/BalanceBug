@@ -28,3 +28,32 @@ You need to do this in a few steps as dalon mentioned above.
 2. Import project code. Select folder for this, and make sure name of project matches folder. 
 
 3. Import BSP files. Select folder for this and again make sure name matches folder. 
+
+# Notes for myself (Messy)
+
+NIOS II Project Structure and Notes:
+
+1. Design the different hardware components in Verilog
+    - Define read and write registers within the component (These are what the C code accesses and read/write to control or trigger things to happen in the verilog code)
+    - In verilog, to check if a register has been written/read: do eg:
+        - if      (s_chipselect & s_read)
+        - if      (s_address == `REG_STATUS)
+        - Put these address checks in positive-edge-clocked ff
+2. Connect the inputs and outputs of the different hardware components to each other using Qsys. 
+3. Use Qsys to generate BSP and System.h in Eclipse SBT
+4. Have two separate projects in the NIOS workspace for the C code and the bsp
+
+How is the C code written?
+- Header files, C files etc as usual. Main.c as usual.
+- The C code reads and writes to registers in the verilog files to control/trigger logic. The logic itself is written in the verilog files.
+
+5. Build project into an ELF file
+
+My suspicion:
+- Pixel data comes in packets of 24 bits:
+    - source_data: 24 bits, 8 for R, 8 for G, and 8 for B if it is not a sop or eop
+- sop: start of packet (1 for true)
+- eop: end of packet (1 for true)
+- 1 packet per positive clock edge
+- packet_video: 1 if current data packet is a packet that carries video info (?)
+
