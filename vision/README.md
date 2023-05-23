@@ -1,13 +1,20 @@
 ### Quartus Version: Quartus Prime Lite 18.1
 ### FPGA: DE10-Lite
 
-# Setting Up VGA output to Monitor
+# Running Generic Monitor Demo
 
 Follow README in folder DE10_LITE_D8M_VIP.
 
 NOTE: WILL NOT WORK WITH QUARTUS 19 AND ABOVE. For those versions:
 - Nios® II EDS on Windows requires Ubuntu 18.04 LTS on Windows Subsystem for Linux (WSL), which requires a manual installation.
 - Nios® II EDS requires you to install an Eclipse IDE manually.
+
+# Running Software + Hardware
+
+1. Programme the .sof file onto the FPGA using Quartus
+2. Build the .elf file
+    - Run -> Run Configurations -> NiosII Hardware
+    - Select the .elf file and click Run
 
 # D8M Manual and Datasheet
 
