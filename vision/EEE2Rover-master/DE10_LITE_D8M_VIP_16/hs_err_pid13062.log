@@ -1,0 +1,1085 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f111e087f05, pid=13062, tid=139713050569728
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_05-b13) (build 1.8.0_05-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.5-b02 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libcusp160_parser.so+0xa8f05]  jni_ParserLink_c::logMessage(int, char const*)+0x25
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000538
+
+Registers:
+RAX=0x00007f111e57e481, RBX=0x00007f111e57e8f0, RCX=0x00007f117b019cd7, RDX=0x00007f111e57e480
+RSP=0x00007ffca4b53b50, RBP=0x00007ffca4b54240, RSI=0x00007f111e57e480, RDI=0x000000000172c9e0
+R8 =0x0000000000000000, R9 =0x00007f1179788700, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x00007f111900e270, R13=0x0000000000000000, R14=0x00007f117adfefa0, R15=0x00007f1179788700
+RIP=0x00007f111e087f05, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffca4b53b50)
+0x00007ffca4b53b50:   00007f117b011440 00007f111e57e480
+0x00007ffca4b53b60:   00007ffca4b54240 00007f111e57e480
+0x00007ffca4b53b70:   00007f11797889d0 00007f111e07af2f
+0x00007ffca4b53b80:   000000000000000a 00007ffca4b54240
+0x00007ffca4b53b90:   0000000000003308 00007f111e07b0c9
+0x00007ffca4b53ba0:   00000000000000ca 00007f111e11aa58
+0x00007ffca4b53bb0:   0000000000000001 00007f117ac46210
+0x00007ffca4b53bc0:   0000000000000007 0000000000000000
+0x00007ffca4b53bd0:   0000000000000000 00007f1100000002
+0x00007ffca4b53be0:   0000000000000000 0000000000000000
+0x00007ffca4b53bf0:   00007f1179788700 0000000000000000
+0x00007ffca4b53c00:   0000000000000246 0000000000003308
+0x00007ffca4b53c10:   00007f11797889d0 00007f117adfefa0
+0x00007ffca4b53c20:   00007f1179788700 00007f11797889d0
+0x00007ffca4b53c30:   0000000000000000 00007ffca4b54240
+0x00007ffca4b53c40:   00000000000000ca 0000000000003308
+0x00007ffca4b53c50:   00000000000000ca 00007f117b019cd7
+0x00007ffca4b53c60:   00007ffca4b54160 00007f117b019cd5
+0x00007ffca4b53c70:   0000000000000246 002b000000000033
+0x00007ffca4b53c80:   0000000000000000 0000000000000000
+0x00007ffca4b53c90:   0000000000000000 0000000000000000
+0x00007ffca4b53ca0:   00007ffca4b53d80 000000000117d770
+0x00007ffca4b53cb0:   000000000000000f 00007ffca4b53d04
+0x00007ffca4b53cc0:   0000000000000000 0000000000000000
+0x00007ffca4b53cd0:   00007f117992e080 0000000005d4073c
+0x00007ffca4b53ce0:   00007f117b043a78 0000000000000000
+0x00007ffca4b53cf0:   00007f117adf912c 00007ffca4b53d80
+0x00007ffca4b53d00:   00007ffca4b53d90 00007f117b0511e9
+0x00007ffca4b53d10:   0000000000000001 00007f117b044ae0
+0x00007ffca4b53d20:   0000000000000005 0000000000000000
+0x00007ffca4b53d30:   0000000000000001 00007f117b043710
+0x00007ffca4b53d40:   00007ffca4b53dd0 00007f117b044ae0 
+
+Instructions: (pc=0x00007f111e087f05)
+0x00007f111e087ee5:   41 54 49 89 fc 55 53 48 83 ec 08 48 85 d2 74 2b
+0x00007f111e087ef5:   48 8b 1d 0c 59 4d 00 48 89 d6 48 8b 3b 4c 8b 07
+0x00007f111e087f05:   41 ff 90 38 05 00 00 48 85 c0 48 89 c5 75 3b 48
+0x00007f111e087f15:   83 c4 08 5b 5d 41 5c 41 5d c3 90 48 8b 05 d1 4e 
+
+Register to memory mapping:
+
+RAX=0x00007f111e57e481: <offset 0x59f481> in /home/ed/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so at 0x00007f111dfdf000
+RBX=0x00007f111e57e8f0: _ZN8jni_base5s_envE+0 in /home/ed/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so at 0x00007f111dfdf000
+RCX=0x00007f117b019cd7: <offset 0xacd7> in /lib/x86_64-linux-gnu/libpthread.so.0 at 0x00007f117b00f000
+RDX=0x00007f111e57e480: <offset 0x59f480> in /home/ed/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so at 0x00007f111dfdf000
+RSP=0x00007ffca4b53b50 is an unknown value
+RBP=0x00007ffca4b54240 is an unknown value
+RSI=0x00007f111e57e480: <offset 0x59f480> in /home/ed/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so at 0x00007f111dfdf000
+RDI=0x000000000172c9e0 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x00007f1179788700 is pointing into the stack for thread: 0x00007f1168010000
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x00007f111900e270 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x00007f117adfefa0: <offset 0x6fa0> in /home/ed/altera_lite/16.0/quartus/linux64/jre64/bin/../lib/amd64/jli/libjli.so at 0x00007f117adf8000
+R15=0x00007f1179788700 is pointing into the stack for thread: 0x00007f1168010000
+
+
+Stack: [0x00007ffca4a5e000,0x00007ffca4b5e000],  sp=0x00007ffca4b53b50,  free space=982k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libcusp160_parser.so+0xa8f05]  jni_ParserLink_c::logMessage(int, char const*)+0x25
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 54528K, used 22234K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K,  37% used [0x00000000a2400000, 0x00000000a35eb398, 0x00000000a5360000)
+  from space 6016K,  64% used [0x00000000a5360000, 0x00000000a572b770, 0x00000000a5940000)
+  to   space 6016K,   0% used [0x00000000a5940000, 0x00000000a5940000, 0x00000000a5f20000)
+ tenured generation   total 120944K, used 110191K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  91% used [0x00000000c1800000, 0x00000000c839bdd8, 0x00000000c839be00, 0x00000000c8e1c000)
+ Metaspace       used 60644K, capacity 62134K, committed 62512K, reserved 1103872K
+  class space    used 7836K, capacity 8161K, committed 8240K, reserved 1048576K
+
+Card table byte_map: [0x00007f1176da8000,0x00007f1177097000] byte_map_base: 0x00007f1176896000
+
+Polling page: 0x00007f117b071000
+
+CodeCache: size=245760Kb used=46070Kb max_used=46705Kb free=199689Kb
+ bounds [0x00007f1159000000, 0x00007f115bdf0000, 0x00007f1168000000]
+ total_blobs=14971 nmethods=14239 adapters=643
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 400.045 Thread 0x00007f11681eb800 18397  s    4       java.io.BufferedInputStream::available (35 bytes)
+Event: 400.047 Thread 0x00007f11681eb800 nmethod 18397 0x00007f115b0fce90 code [0x00007f115b0fcfe0, 0x00007f115b0fd368]
+Event: 401.936 Thread 0x00007f11681ee000 18398       3       sun.awt.X11.XWindowPeer::isGrabbed (20 bytes)
+Event: 401.936 Thread 0x00007f11681ee000 nmethod 18398 0x00007f115a92b010 code [0x00007f115a92b180, 0x00007f115a92b3a8]
+Event: 402.424 Thread 0x00007f11681ee000 18399       3       sun.awt.X11.XCrossingEvent::get_window (20 bytes)
+Event: 402.425 Thread 0x00007f11681ee000 nmethod 18399 0x00007f115b3de690 code [0x00007f115b3de820, 0x00007f115b3debc8]
+Event: 481.319 Thread 0x00007f11681ee000 18400       3       sun.awt.X11.XWindowPeer::isSimpleWindow (26 bytes)
+Event: 481.320 Thread 0x00007f11681ee000 nmethod 18400 0x00007f11598ef850 code [0x00007f11598ef9c0, 0x00007f11598efd90]
+Event: 543.115 Thread 0x00007f11681eb800 18401       4       java.util.TaskQueue::rescheduleMin (16 bytes)
+Event: 543.128 Thread 0x00007f11681eb800 nmethod 18401 0x00007f11598fa450 code [0x00007f11598fa5c0, 0x00007f11598fa8f8]
+
+GC Heap History (10 events):
+Event: 223.477 GC heap before
+{Heap before GC invocations=446 (full 5):
+ def new generation   total 54528K, used 48587K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K, 100% used [0x00000000a2400000, 0x00000000a5360000, 0x00000000a5360000)
+  from space 6016K,   1% used [0x00000000a5940000, 0x00000000a5952ea8, 0x00000000a5f20000)
+  to   space 6016K,   0% used [0x00000000a5360000, 0x00000000a5360000, 0x00000000a5940000)
+ tenured generation   total 120944K, used 109961K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  90% used [0x00000000c1800000, 0x00000000c8362670, 0x00000000c8362800, 0x00000000c8e1c000)
+ Metaspace       used 60497K, capacity 62006K, committed 62256K, reserved 1103872K
+  class space    used 7831K, capacity 8161K, committed 8240K, reserved 1048576K
+Event: 223.482 GC heap after
+Heap after GC invocations=447 (full 5):
+ def new generation   total 54528K, used 44K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000a5360000)
+  from space 6016K,   0% used [0x00000000a5360000, 0x00000000a536b3e8, 0x00000000a5940000)
+  to   space 6016K,   0% used [0x00000000a5940000, 0x00000000a5940000, 0x00000000a5f20000)
+ tenured generation   total 120944K, used 109970K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  90% used [0x00000000c1800000, 0x00000000c8364ac0, 0x00000000c8364c00, 0x00000000c8e1c000)
+ Metaspace       used 60497K, capacity 62006K, committed 62256K, reserved 1103872K
+  class space    used 7831K, capacity 8161K, committed 8240K, reserved 1048576K
+}
+Event: 224.744 GC heap before
+{Heap before GC invocations=447 (full 5):
+ def new generation   total 54528K, used 48556K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K, 100% used [0x00000000a2400000, 0x00000000a5360000, 0x00000000a5360000)
+  from space 6016K,   0% used [0x00000000a5360000, 0x00000000a536b3e8, 0x00000000a5940000)
+  to   space 6016K,   0% used [0x00000000a5940000, 0x00000000a5940000, 0x00000000a5f20000)
+ tenured generation   total 120944K, used 109970K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  90% used [0x00000000c1800000, 0x00000000c8364ac0, 0x00000000c8364c00, 0x00000000c8e1c000)
+ Metaspace       used 60497K, capacity 62006K, committed 62256K, reserved 1103872K
+  class space    used 7831K, capacity 8161K, committed 8240K, reserved 1048576K
+Event: 224.747 GC heap after
+Heap after GC invocations=448 (full 5):
+ def new generation   total 54528K, used 2222K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000a5360000)
+  from space 6016K,  36% used [0x00000000a5940000, 0x00000000a5b6ba00, 0x00000000a5f20000)
+  to   space 6016K,   0% used [0x00000000a5360000, 0x00000000a5360000, 0x00000000a5940000)
+ tenured generation   total 120944K, used 109984K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  90% used [0x00000000c1800000, 0x00000000c83680f0, 0x00000000c8368200, 0x00000000c8e1c000)
+ Metaspace       used 60497K, capacity 62006K, committed 62256K, reserved 1103872K
+  class space    used 7831K, capacity 8161K, committed 8240K, reserved 1048576K
+}
+Event: 241.835 GC heap before
+{Heap before GC invocations=448 (full 5):
+ def new generation   total 54528K, used 50734K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K, 100% used [0x00000000a2400000, 0x00000000a5360000, 0x00000000a5360000)
+  from space 6016K,  36% used [0x00000000a5940000, 0x00000000a5b6ba00, 0x00000000a5f20000)
+  to   space 6016K,   0% used [0x00000000a5360000, 0x00000000a5360000, 0x00000000a5940000)
+ tenured generation   total 120944K, used 109984K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  90% used [0x00000000c1800000, 0x00000000c83680f0, 0x00000000c8368200, 0x00000000c8e1c000)
+ Metaspace       used 60543K, capacity 62006K, committed 62256K, reserved 1103872K
+  class space    used 7833K, capacity 8161K, committed 8240K, reserved 1048576K
+Event: 241.839 GC heap after
+Heap after GC invocations=449 (full 5):
+ def new generation   total 54528K, used 2466K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000a5360000)
+  from space 6016K,  41% used [0x00000000a5360000, 0x00000000a55c8b60, 0x00000000a5940000)
+  to   space 6016K,   0% used [0x00000000a5940000, 0x00000000a5940000, 0x00000000a5f20000)
+ tenured generation   total 120944K, used 109985K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  90% used [0x00000000c1800000, 0x00000000c83685c8, 0x00000000c8368600, 0x00000000c8e1c000)
+ Metaspace       used 60543K, capacity 62006K, committed 62256K, reserved 1103872K
+  class space    used 7833K, capacity 8161K, committed 8240K, reserved 1048576K
+}
+Event: 258.221 GC heap before
+{Heap before GC invocations=449 (full 5):
+ def new generation   total 54528K, used 50978K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K, 100% used [0x00000000a2400000, 0x00000000a5360000, 0x00000000a5360000)
+  from space 6016K,  41% used [0x00000000a5360000, 0x00000000a55c8b60, 0x00000000a5940000)
+  to   space 6016K,   0% used [0x00000000a5940000, 0x00000000a5940000, 0x00000000a5f20000)
+ tenured generation   total 120944K, used 109985K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  90% used [0x00000000c1800000, 0x00000000c83685c8, 0x00000000c8368600, 0x00000000c8e1c000)
+ Metaspace       used 60593K, capacity 62070K, committed 62256K, reserved 1103872K
+  class space    used 7834K, capacity 8161K, committed 8240K, reserved 1048576K
+Event: 258.226 GC heap after
+Heap after GC invocations=450 (full 5):
+ def new generation   total 54528K, used 3285K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000a5360000)
+  from space 6016K,  54% used [0x00000000a5940000, 0x00000000a5c75568, 0x00000000a5f20000)
+  to   space 6016K,   0% used [0x00000000a5360000, 0x00000000a5360000, 0x00000000a5940000)
+ tenured generation   total 120944K, used 109985K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  90% used [0x00000000c1800000, 0x00000000c8368620, 0x00000000c8368800, 0x00000000c8e1c000)
+ Metaspace       used 60593K, capacity 62070K, committed 62256K, reserved 1103872K
+  class space    used 7834K, capacity 8161K, committed 8240K, reserved 1048576K
+}
+Event: 270.634 GC heap before
+{Heap before GC invocations=450 (full 5):
+ def new generation   total 54528K, used 51797K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K, 100% used [0x00000000a2400000, 0x00000000a5360000, 0x00000000a5360000)
+  from space 6016K,  54% used [0x00000000a5940000, 0x00000000a5c75568, 0x00000000a5f20000)
+  to   space 6016K,   0% used [0x00000000a5360000, 0x00000000a5360000, 0x00000000a5940000)
+ tenured generation   total 120944K, used 109985K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  90% used [0x00000000c1800000, 0x00000000c8368620, 0x00000000c8368800, 0x00000000c8e1c000)
+ Metaspace       used 60626K, capacity 62070K, committed 62256K, reserved 1103872K
+  class space    used 7834K, capacity 8161K, committed 8240K, reserved 1048576K
+Event: 270.647 GC heap after
+Heap after GC invocations=451 (full 5):
+ def new generation   total 54528K, used 3885K [0x00000000a2400000, 0x00000000a5f20000, 0x00000000c1800000)
+  eden space 48512K,   0% used [0x00000000a2400000, 0x00000000a2400000, 0x00000000a5360000)
+  from space 6016K,  64% used [0x00000000a5360000, 0x00000000a572b770, 0x00000000a5940000)
+  to   space 6016K,   0% used [0x00000000a5940000, 0x00000000a5940000, 0x00000000a5f20000)
+ tenured generation   total 120944K, used 110191K [0x00000000c1800000, 0x00000000c8e1c000, 0x0000000100000000)
+   the space 120944K,  91% used [0x00000000c1800000, 0x00000000c839bdd8, 0x00000000c839be00, 0x00000000c8e1c000)
+ Metaspace       used 60626K, capacity 62070K, committed 62256K, reserved 1103872K
+  class space    used 7834K, capacity 8161K, committed 8240K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 270.436 Thread 0x00007f11688bd000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f115bcb8080 method=com.altera.sopceditor.tools.systemtable.widgets.InterfaceExportDataWrangler.getValue(Lcom/altera/ui/widgets/systemtable/SystemTableModel;Lcom/altera/ui/widgets/systemtab
+Event: 270.437 Thread 0x00007f11688bd000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f115bcb8080 method=com.altera.sopceditor.tools.systemtable.widgets.InterfaceExportDataWrangler.getValue(Lcom/altera/ui/widgets/systemtable/SystemTableModel;Lcom/altera/ui/widgets/systemtab
+Event: 270.439 Thread 0x00007f11688bd000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f115bcb8080 method=com.altera.sopceditor.tools.systemtable.widgets.InterfaceExportDataWrangler.getValue(Lcom/altera/ui/widgets/systemtable/SystemTableModel;Lcom/altera/ui/widgets/systemtab
+Event: 270.441 Thread 0x00007f11688bd000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f115bcb8080 method=com.altera.sopceditor.tools.systemtable.widgets.InterfaceExportDataWrangler.getValue(Lcom/altera/ui/widgets/systemtable/SystemTableModel;Lcom/altera/ui/widgets/systemtab
+Event: 270.480 Thread 0x00007f11688bd000 Uncommon trap: reason=unreached action=reinterpret pc=0x00007f11599add18 method=com.altera.sopceditor.tools.systemtable.widgets.ConnectionMatrixModel.getPossibleConnection(II)Lcom/altera/sopceditor/tools/systemtable/widgets/PossibleConnection; @ 4
+Event: 270.600 Thread 0x00007f11688bd000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f115ba008c0 method=com.altera.ui.util.TextPanel$6.create(Ljavax/swing/text/Element;)Ljavax/swing/text/View; @ 1
+Event: 270.600 Thread 0x00007f11688bd000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f115ba008c0 method=com.altera.ui.util.TextPanel$6.create(Ljavax/swing/text/Element;)Ljavax/swing/text/View; @ 1
+Event: 270.600 Thread 0x00007f11688bd000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f115ba008c0 method=com.altera.ui.util.TextPanel$6.create(Ljavax/swing/text/Element;)Ljavax/swing/text/View; @ 1
+Event: 270.600 Thread 0x00007f11688bd000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f115ba008c0 method=com.altera.ui.util.TextPanel$6.create(Ljavax/swing/text/Element;)Ljavax/swing/text/View; @ 1
+Event: 270.794 Thread 0x00007f11688bd000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f115a5267d4 method=java.awt.KeyboardFocusManager.clearMostRecentFocusOwner(Ljava/awt/Component;)V @ 67
+
+Internal exceptions (10 events):
+Event: 224.762 Thread 0x00007f11688bd000 Implicit null exception at 0x00007f115bc68d0a to 0x00007f115bc6ac19
+Event: 224.768 Thread 0x00007f11688bd000 Implicit null exception at 0x00007f115bc24c10 to 0x00007f115bc29031
+Event: 246.550 Thread 0x00007f11688bd000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a3732970) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jvm.cpp, line 1248]
+Event: 246.598 Thread 0x00007f11688bd000 Implicit null exception at 0x00007f115bb6dfdc to 0x00007f115bb6eb99
+Event: 256.858 Thread 0x00007f11688bd000 Implicit null exception at 0x00007f115acfef36 to 0x00007f115acff5a1
+Event: 265.042 Thread 0x00007f11688bd000 Exception <a 'java/lang/UnsupportedOperationException': > (0x00000000a2fe6800) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jni.cpp, line 742]
+Event: 270.480 Thread 0x00007f11688bd000 Implicit null exception at 0x00007f11599adc73 to 0x00007f11599adcfd
+Event: 491.194 Thread 0x00007f11685dd000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a35af3c0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jvm.cpp, line 1248]
+Event: 491.195 Thread 0x00007f11685dd000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a35cbf08) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jvm.cpp, line 1248]
+Event: 491.195 Thread 0x00007f11685dd000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000a35cfb68) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u5/2488/hotspot/src/share/vm/prims/jvm.cpp, line 1248]
+
+Events (10 events):
+Event: 270.814 Executing VM operation: BulkRevokeBias done
+Event: 270.837 Thread 0x00007f113562b800 Thread added: 0x00007f113562b800
+Event: 272.862 Executing VM operation: RevokeBias
+Event: 272.862 Executing VM operation: RevokeBias done
+Event: 491.194 loading class com/altera/utilities/AltCmdLineToolBase$3
+Event: 491.194 loading class com/altera/utilities/AltCmdLineToolBase$3 done
+Event: 491.195 loading class com/altera/ui/util/UiUtils$2
+Event: 491.195 loading class com/altera/ui/util/UiUtils$2 done
+Event: 491.195 loading class com/altera/ui/app/base/BasicEditor$2
+Event: 491.195 loading class com/altera/ui/app/base/BasicEditor$2 done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:05 1458378                            /home/ed/altera_lite/16.0/quartus/linux64/jre64/bin/java
+00600000-00601000 rw-p 00000000 08:05 1458378                            /home/ed/altera_lite/16.0/quartus/linux64/jre64/bin/java
+01175000-0178e000 rw-p 00000000 00:00 0                                  [heap]
+a2400000-a5f20000 rw-p 00000000 00:00 0 
+a5f20000-c1800000 ---p 00000000 00:00 0 
+c1800000-c8e1c000 rw-p 00000000 00:00 0 
+c8e1c000-100000000 ---p 00000000 00:00 0 
+100000000-10080c000 rw-p 00000000 00:00 0 
+10080c000-140000000 ---p 00000000 00:00 0 
+7f1110000000-7f1113024000 rw-p 00000000 00:00 0 
+7f1113024000-7f1114000000 ---p 00000000 00:00 0 
+7f1118000000-7f111a22a000 rw-p 00000000 00:00 0 
+7f111a22a000-7f111c000000 ---p 00000000 00:00 0 
+7f111cb9f000-7f111cdce000 rw-s 00000000 00:01 655422                     /SYSV00000000 (deleted)
+7f111cdce000-7f111cfce000 rw-p 00000000 00:00 0 
+7f111cfce000-7f111d1ce000 rw-p 00000000 00:00 0 
+7f111d1ce000-7f111d3ce000 rw-p 00000000 00:00 0 
+7f111d3ce000-7f111d7c3000 rw-p 00000000 00:00 0 
+7f111d7df000-7f111d8df000 rw-p 00000000 00:00 0 
+7f111d8df000-7f111d9df000 ---p 00000000 00:00 0 
+7f111d9df000-7f111dbdf000 rw-p 00000000 00:00 0 
+7f111dbdf000-7f111dddf000 rw-p 00000000 00:00 0 
+7f111dddf000-7f111dfdf000 rw-p 00000000 00:00 0 
+7f111dfdf000-7f111e356000 r-xp 00000000 08:05 1722362                    /home/ed/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so
+7f111e356000-7f111e555000 ---p 00377000 08:05 1722362                    /home/ed/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so
+7f111e555000-7f111e57f000 rw-p 00376000 08:05 1722362                    /home/ed/altera_lite/16.0/quartus/cusp/bin/libcusp160_parser.so
+7f111e57f000-7f111e5c9000 rw-p 00000000 00:00 0 
+7f111e5c9000-7f111e5d1000 r-xp 00000000 08:05 1458479                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libmanagement.so
+7f111e5d1000-7f111e7d1000 ---p 00008000 08:05 1458479                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libmanagement.so
+7f111e7d1000-7f111e7d2000 rw-p 00008000 08:05 1458479                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libmanagement.so
+7f111e7d2000-7f111e7d3000 ---p 00000000 00:00 0 
+7f111e7d3000-7f111f1d3000 rw-p 00000000 00:00 0 
+7f111f1d3000-7f111f1ea000 r-xp 00000000 08:05 1332838                    /home/ed/altera_lite/16.0/quartus/linux64/libtbbmalloc.so.2
+7f111f1ea000-7f111f3ea000 ---p 00017000 08:05 1332838                    /home/ed/altera_lite/16.0/quartus/linux64/libtbbmalloc.so.2
+7f111f3ea000-7f111f3ed000 rw-p 00017000 08:05 1332838                    /home/ed/altera_lite/16.0/quartus/linux64/libtbbmalloc.so.2
+7f111f3ed000-7f1120000000 rw-p 00000000 00:00 0 
+7f1120000000-7f1120033000 rw-p 00000000 00:00 0 
+7f1120033000-7f1124000000 ---p 00000000 00:00 0 
+7f11240c8000-7f11242c8000 rw-p 00000000 00:00 0 
+7f11242c8000-7f11244c8000 rw-p 00000000 00:00 0 
+7f11244c8000-7f11244cb000 ---p 00000000 00:00 0 
+7f11244cb000-7f11247c9000 rw-p 00000000 00:00 0 
+7f11247c9000-7f11249c9000 rw-p 00000000 00:00 0 
+7f11249c9000-7f11249d8000 r-xp 00000000 08:05 1332810                    /home/ed/altera_lite/16.0/quartus/linux64/libccl_thr.so
+7f11249d8000-7f1124bd7000 ---p 0000f000 08:05 1332810                    /home/ed/altera_lite/16.0/quartus/linux64/libccl_thr.so
+7f1124bd7000-7f1124bd8000 rw-p 0000e000 08:05 1332810                    /home/ed/altera_lite/16.0/quartus/linux64/libccl_thr.so
+7f1124bd8000-7f1124bfb000 rw-p 00000000 00:00 0 
+7f1124bfb000-7f1124bfc000 r-xp 00000000 08:05 1332831                    /home/ed/altera_lite/16.0/quartus/linux64/libtbbamalloc.so
+7f1124bfc000-7f1124dfb000 ---p 00001000 08:05 1332831                    /home/ed/altera_lite/16.0/quartus/linux64/libtbbamalloc.so
+7f1124dfb000-7f1124dfc000 rw-p 00000000 08:05 1332831                    /home/ed/altera_lite/16.0/quartus/linux64/libtbbamalloc.so
+7f1124dfc000-7f1124dfe000 r-xp 00000000 08:05 1332835                    /home/ed/altera_lite/16.0/quartus/linux64/libtbbmalloc_proxy.so.2
+7f1124dfe000-7f1124ffe000 ---p 00002000 08:05 1332835                    /home/ed/altera_lite/16.0/quartus/linux64/libtbbmalloc_proxy.so.2
+7f1124ffe000-7f1124fff000 rw-p 00002000 08:05 1332835                    /home/ed/altera_lite/16.0/quartus/linux64/libtbbmalloc_proxy.so.2
+7f1124fff000-7f1128000000 rw-p 00000000 00:00 0 
+7f1128000000-7f1128021000 rw-p 00000000 00:00 0 
+7f1128021000-7f112c000000 ---p 00000000 00:00 0 
+7f112c06f000-7f112c218000 r-xp 00000000 08:05 1332825                    /home/ed/altera_lite/16.0/quartus/linux64/libtcl8.6.so
+7f112c218000-7f112c418000 ---p 001a9000 08:05 1332825                    /home/ed/altera_lite/16.0/quartus/linux64/libtcl8.6.so
+7f112c418000-7f112c428000 rw-p 001a9000 08:05 1332825                    /home/ed/altera_lite/16.0/quartus/linux64/libtcl8.6.so
+7f112c428000-7f112c429000 rw-p 00000000 00:00 0 
+7f112c429000-7f112c42f000 r-xp 00000000 08:05 1332051                    /home/ed/altera_lite/16.0/quartus/linux64/libtcl_jni_bridge.so
+7f112c42f000-7f112c62e000 ---p 00006000 08:05 1332051                    /home/ed/altera_lite/16.0/quartus/linux64/libtcl_jni_bridge.so
+7f112c62e000-7f112c62f000 rw-p 00005000 08:05 1332051                    /home/ed/altera_lite/16.0/quartus/linux64/libtcl_jni_bridge.so
+7f112c62f000-7f112c74d000 r-xp 00000000 08:05 1332157                    /home/ed/altera_lite/16.0/quartus/linux64/libsld_filejni.so
+7f112c74d000-7f112c94c000 ---p 0011e000 08:05 1332157                    /home/ed/altera_lite/16.0/quartus/linux64/libsld_filejni.so
+7f112c94c000-7f112c95d000 rw-p 0011d000 08:05 1332157                    /home/ed/altera_lite/16.0/quartus/linux64/libsld_filejni.so
+7f112c95d000-7f112c963000 rw-p 00000000 00:00 0 
+7f112c963000-7f112c98d000 r-xp 00000000 08:05 1458457                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libdcpr.so
+7f112c98d000-7f112cb8c000 ---p 0002a000 08:05 1458457                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libdcpr.so
+7f112cb8c000-7f112cb8f000 rw-p 00029000 08:05 1458457                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libdcpr.so
+7f112cb8f000-7f112cd8f000 rw-p 00000000 00:00 0 
+7f112cd8f000-7f112cf8f000 rw-p 00000000 00:00 0 
+7f112cf8f000-7f112d18f000 r-xp 00000000 08:05 1332826                    /home/ed/altera_lite/16.0/quartus/linux64/libnlview.so
+7f112d18f000-7f112d19e000 rw-p 00200000 08:05 1332826                    /home/ed/altera_lite/16.0/quartus/linux64/libnlview.so
+7f112d19e000-7f112d3a0000 rw-p 00000000 00:00 0 
+7f112d3a0000-7f112d5a0000 rw-p 00000000 00:00 0 
+7f112d5a0000-7f112d7a0000 rw-p 00000000 00:00 0 
+7f112d7a0000-7f112d7a3000 ---p 00000000 00:00 0 
+7f112d7a3000-7f112d8a1000 rw-p 00000000 00:00 0 
+7f112d8a1000-7f112d8a4000 ---p 00000000 00:00 0 
+7f112d8a4000-7f112dba2000 rw-p 00000000 00:00 0 
+7f112dba2000-7f112dda2000 rw-p 00000000 00:00 0 
+7f112dda2000-7f112de0b000 r-xp 00000000 08:05 1458500                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libt2k.so
+7f112de0b000-7f112e00a000 ---p 00069000 08:05 1458500                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libt2k.so
+7f112e00a000-7f112e011000 rw-p 00068000 08:05 1458500                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libt2k.so
+7f112e011000-7f112e221000 rw-p 00000000 00:00 0 
+7f112e221000-7f112e231000 r-xp 00000000 08:05 1458487                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnio.so
+7f112e231000-7f112e431000 ---p 00010000 08:05 1458487                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnio.so
+7f112e431000-7f112e432000 rw-p 00010000 08:05 1458487                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnio.so
+7f112e432000-7f112e435000 ---p 00000000 00:00 0 
+7f112e435000-7f112e733000 rw-p 00000000 00:00 0 
+7f112e733000-7f112e749000 r-xp 00000000 08:05 1458461                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnet.so
+7f112e749000-7f112e948000 ---p 00016000 08:05 1458461                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnet.so
+7f112e948000-7f112e949000 rw-p 00015000 08:05 1458461                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libnet.so
+7f112e949000-7f112eb49000 rw-p 00000000 00:00 0 
+7f112eb49000-7f112eb51000 r-xp 00000000 08:05 1332906                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_chrono.so.1.59.0
+7f112eb51000-7f112ed50000 ---p 00008000 08:05 1332906                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_chrono.so.1.59.0
+7f112ed50000-7f112ed51000 rw-p 00007000 08:05 1332906                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_chrono.so.1.59.0
+7f112ed51000-7f112ed55000 r-xp 00000000 08:05 1332923                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_timer.so.1.59.0
+7f112ed55000-7f112ef54000 ---p 00004000 08:05 1332923                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_timer.so.1.59.0
+7f112ef54000-7f112ef55000 rw-p 00003000 08:05 1332923                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_timer.so.1.59.0
+7f112ef55000-7f112ef63000 r-xp 00000000 08:05 1333595                    /home/ed/altera_lite/16.0/quartus/linux64/libgomp.so.1
+7f112ef63000-7f112f162000 ---p 0000e000 08:05 1333595                    /home/ed/altera_lite/16.0/quartus/linux64/libgomp.so.1
+7f112f162000-7f112f163000 rw-p 0000d000 08:05 1333595                    /home/ed/altera_lite/16.0/quartus/linux64/libgomp.so.1
+7f112f163000-7f112f24d000 r-xp 00000000 08:05 1333596                    /home/ed/altera_lite/16.0/quartus/linux64/libstdc++.so.6
+7f112f24d000-7f112f44c000 ---p 000ea000 08:05 1333596                    /home/ed/altera_lite/16.0/quartus/linux64/libstdc++.so.6
+7f112f44c000-7f112f454000 r--p 000e9000 08:05 1333596                    /home/ed/altera_lite/16.0/quartus/linux64/libstdc++.so.6
+7f112f454000-7f112f456000 rw-p 000f1000 08:05 1333596                    /home/ed/altera_lite/16.0/quartus/linux64/libstdc++.so.6
+7f112f456000-7f112f46b000 rw-p 00000000 00:00 0 
+7f112f46b000-7f112f527000 r-xp 00000000 08:05 1332908                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_unit_test_framework.so.1.59.0
+7f112f527000-7f112f726000 ---p 000bc000 08:05 1332908                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_unit_test_framework.so.1.59.0
+7f112f726000-7f112f72d000 rw-p 000bb000 08:05 1332908                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_unit_test_framework.so.1.59.0
+7f112f72d000-7f112f72f000 rw-p 00000000 00:00 0 
+7f112f72f000-7f112f792000 r-xp 00000000 08:05 1332912                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_program_options.so.1.59.0
+7f112f792000-7f112f992000 ---p 00063000 08:05 1332912                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_program_options.so.1.59.0
+7f112f992000-7f112f996000 rw-p 00063000 08:05 1332912                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_program_options.so.1.59.0
+7f112f996000-7f112f998000 r-xp 00000000 08:05 1332927                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_system.so.1.59.0
+7f112f998000-7f112fb98000 ---p 00002000 08:05 1332927                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_system.so.1.59.0
+7f112fb98000-7f112fb99000 rw-p 00002000 08:05 1332927                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_system.so.1.59.0
+7f112fb99000-7f112fbaf000 r-xp 00000000 08:05 1332849                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_filesystem.so.1.59.0
+7f112fbaf000-7f112fdaf000 ---p 00016000 08:05 1332849                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_filesystem.so.1.59.0
+7f112fdaf000-7f112fdb0000 rw-p 00016000 08:05 1332849                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_filesystem.so.1.59.0
+7f112fdb0000-7f112fdfd000 r-xp 00000000 08:05 1332928                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_serialization.so.1.59.0
+7f112fdfd000-7f112fffc000 ---p 0004d000 08:05 1332928                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_serialization.so.1.59.0
+7f112fffc000-7f1130000000 rw-p 0004c000 08:05 1332928                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_serialization.so.1.59.0
+7f1130000000-7f1130286000 rw-p 00000000 00:00 0 
+7f1130286000-7f1134000000 ---p 00000000 00:00 0 
+7f1134000000-7f1137ffb000 rw-p 00000000 00:00 0 
+7f1137ffb000-7f1138000000 ---p 00000000 00:00 0 
+7f1138000000-7f1138021000 rw-p 00000000 00:00 0 
+7f1138021000-7f113c000000 ---p 00000000 00:00 0 
+7f113c000000-7f113c021000 rw-p 00000000 00:00 0 
+7f113c021000-7f1140000000 ---p 00000000 00:00 0 
+7f1140000000-7f11422f6000 rw-p 00000000 00:00 0 
+7f11422f6000-7f1144000000 ---p 00000000 00:00 0 
+7f1144000000-7f1144021000 rw-p 00000000 00:00 0 
+7f1144021000-7f1148000000 ---p 00000000 00:00 0 
+7f1148000000-7f1148021000 rw-p 00000000 00:00 0 
+7f1148021000-7f114c000000 ---p 00000000 00:00 0 
+7f114c000000-7f114c021000 rw-p 00000000 00:00 0 
+7f114c021000-7f1150000000 ---p 00000000 00:00 0 
+7f1150000000-7f1153ffe000 rw-p 00000000 00:00 0 
+7f1153ffe000-7f1154000000 ---p 00000000 00:00 0 
+7f1154000000-7f1154021000 rw-p 00000000 00:00 0 
+7f1154021000-7f1158000000 ---p 00000000 00:00 0 
+7f1158082000-7f1158085000 ---p 00000000 00:00 0 
+7f1158085000-7f1158183000 rw-p 00000000 00:00 0 
+7f1158183000-7f1158272000 r-xp 00000000 08:05 1332898                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_regex.so.1.59.0
+7f1158272000-7f1158471000 ---p 000ef000 08:05 1332898                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_regex.so.1.59.0
+7f1158471000-7f1158477000 rw-p 000ee000 08:05 1332898                    /home/ed/altera_lite/16.0/quartus/linux64/libboost_regex.so.1.59.0
+7f1158477000-7f1158515000 r-xp 00000000 08:05 1332627                    /home/ed/altera_lite/16.0/quartus/linux64/libccl_sqlite3.so
+7f1158515000-7f1158714000 ---p 0009e000 08:05 1332627                    /home/ed/altera_lite/16.0/quartus/linux64/libccl_sqlite3.so
+7f1158714000-7f1158719000 rw-p 0009d000 08:05 1332627                    /home/ed/altera_lite/16.0/quartus/linux64/libccl_sqlite3.so
+7f1158719000-7f1158726000 r-xp 00000000 08:05 1331522                    /home/ed/altera_lite/16.0/quartus/linux64/libccl_sqlite3_jdbc_jni_bridge.so
+7f1158726000-7f1158925000 ---p 0000d000 08:05 1331522                    /home/ed/altera_lite/16.0/quartus/linux64/libccl_sqlite3_jdbc_jni_bridge.so
+7f1158925000-7f1158926000 rw-p 0000c000 08:05 1331522                    /home/ed/altera_lite/16.0/quartus/linux64/libccl_sqlite3_jdbc_jni_bridge.so
+7f1158926000-7f1158928000 r--p 00000000 08:05 925017                     /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0
+7f1158928000-7f115898c000 r-xp 00002000 08:05 925017                     /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0
+7f115898c000-7f11589b4000 r--p 00066000 08:05 925017                     /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0
+7f11589b4000-7f11589b5000 r--p 0008d000 08:05 925017                     /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0
+7f11589b5000-7f11589b6000 rw-p 0008e000 08:05 925017                     /usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0
+7f11589b6000-7f11589c0000 r--p 00000000 08:05 924144                     /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+7f11589c0000-7f11589f6000 r-xp 0000a000 08:05 924144                     /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+7f11589f6000-7f1158a06000 r--p 00040000 08:05 924144                     /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+7f1158a06000-7f1158a07000 ---p 00050000 08:05 924144                     /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+7f1158a07000-7f1158a0c000 r--p 00050000 08:05 924144                     /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+7f1158a0c000-7f1158a0d000 rw-p 00055000 08:05 924144                     /usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0
+7f1158a44000-7f1158a46000 r--p 00000000 08:05 925013                     /usr/lib/x86_64-linux-gnu/libpcre.so.3.13.3
+7f1158a46000-7f1158a97000 r-xp 00002000 08:05 925013                     /usr/lib/x86_64-linux-gnu/libpcre.so.3.13.3
+7f1158a97000-7f1158ab5000 r--p 00053000 08:05 925013                     /usr/lib/x86_64-linux-gnu/libpcre.so.3.13.3
+7f1158ab5000-7f1158ab6000 r--p 00070000 08:05 925013                     /usr/lib/x86_64-linux-gnu/libpcre.so.3.13.3
+7f1158ab6000-7f1158ab7000 rw-p 00071000 08:05 925013                     /usr/lib/x86_64-linux-gnu/libpcre.so.3.13.3
+7f1158ab7000-7f1158ab9000 r--p 00000000 08:05 924397                     /usr/lib/x86_64-linux-gnu/libffi.so.7.1.0
+7f1158ab9000-7f1158abf000 r-xp 00002000 08:05 924397                     /usr/lib/x86_64-linux-gnu/libffi.so.7.1.0
+7f1158abf000-7f1158ac0000 r--p 00008000 08:05 924397                     /usr/lib/x86_64-linux-gnu/libffi.so.7.1.0
+7f1158ac0000-7f1158ac1000 ---p 00009000 08:05 924397                     /usr/lib/x86_64-linux-gnu/libffi.so.7.1.0
+7f1158ac1000-7f1158ac2000 r--p 00009000 08:05 924397                     /usr/lib/x86_64-linux-gnu/libffi.so.7.1.0
+7f1158ac2000-7f1158ac3000 rw-p 0000a000 08:05 924397                     /usr/lib/x86_64-linux-gnu/libffi.so.7.1.0
+7f1158aef000-7f1158af2000 ---p 00000000 00:00 0 
+7f1158af2000-7f1158bf0000 rw-p 00000000 00:00 0 
+7f1158bf0000-7f1158bf4000 r--p 00000000 08:05 925115                     /usr/lib/x86_64-linux-gnu/libresolv-2.31.so
+7f1158bf4000-7f1158c04000 r-xp 00004000 08:05 925115                     /usr/lib/x86_64-linux-gnu/libresolv-2.31.so
+7f1158c04000-7f1158c07000 r--p 00014000 08:05 925115                     /usr/lib/x86_64-linux-gnu/libresolv-2.31.so
+7f1158c07000-7f1158c08000 ---p 00017000 08:05 925115                     /usr/lib/x86_64-linux-gnu/libresolv-2.31.so
+7f1158c08000-7f1158c09000 r--p 00017000 08:05 925115                     /usr/lib/x86_64-linux-gnu/libresolv-2.31.so
+7f1158c09000-7f1158c0a000 rw-p 00018000 08:05 925115                     /usr/lib/x86_64-linux-gnu/libresolv-2.31.so
+7f1158c0a000-7f1158c0c000 rw-p 00000000 00:00 0 
+7f1158c0c000-7f1158c12000 r--p 00000000 08:05 925171                     /usr/lib/x86_64-linux-gnu/libselinux.so.1
+7f1158c12000-7f1158c2b000 r-xp 00006000 08:05 925171                     /usr/lib/x86_64-linux-gnu/libselinux.so.1
+7f1158c2b000-7f1158c32000 r--p 0001f000 08:05 925171                     /usr/lib/x86_64-linux-gnu/libselinux.so.1
+7f1158c32000-7f1158c33000 ---p 00026000 08:05 925171                     /usr/lib/x86_64-linux-gnu/libselinux.so.1
+7f1158c33000-7f1158c34000 r--p 00026000 08:05 925171                     /usr/lib/x86_64-linux-gnu/libselinux.so.1
+7f1158c34000-7f1158c35000 rw-p 00027000 08:05 925171                     /usr/lib/x86_64-linux-gnu/libselinux.so.1
+7f1158c35000-7f1158c37000 rw-p 00000000 00:00 0 
+7f1158c37000-7f1158c42000 r--p 00000000 08:05 924834                     /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+7f1158c42000-7f1158c80000 r-xp 0000b000 08:05 924834                     /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+7f1158c80000-7f1158c93000 r--p 00049000 08:05 924834                     /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+7f1158c93000-7f1158c96000 r--p 0005b000 08:05 924834                     /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+7f1158c96000-7f1158c97000 rw-p 0005e000 08:05 924834                     /usr/lib/x86_64-linux-gnu/libmount.so.1.1.0
+7f1158c97000-7f1158c99000 r--p 00000000 08:05 925499                     /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f1158c99000-7f1158caa000 r-xp 00002000 08:05 925499                     /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f1158caa000-7f1158cb0000 r--p 00013000 08:05 925499                     /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f1158cb0000-7f1158cb1000 ---p 00019000 08:05 925499                     /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f1158cb1000-7f1158cb2000 r--p 00019000 08:05 925499                     /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f1158cb2000-7f1158cb3000 rw-p 0001a000 08:05 925499                     /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7f1158d76000-7f1158d79000 ---p 00000000 00:00 0 
+7f1158d79000-7f1158e77000 rw-p 00000000 00:00 0 
+7f1158e77000-7f1158e93000 r--p 00000000 08:05 917879                     /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6
+7f1158e93000-7f1158f17000 r-xp 0001c000 08:05 917879                     /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6
+7f1158f17000-7f1158f9d000 r--p 000a0000 08:05 917879                     /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6
+7f1158f9d000-7f1158f9e000 r--p 00125000 08:05 917879                     /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6
+7f1158f9e000-7f1158f9f000 rw-p 00126000 08:05 917879                     /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6
+7f1158f9f000-7f1158fa0000 rw-p 00000000 00:00 0 
+7f1158fa0000-7f1158fae000 r--p 00000000 08:05 917902                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.6400.6
+7f1158fae000-7f1158fe4000 r-xp 0000e000 08:05 917902                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.6400.6
+7f1158fe4000-7f1158ffc000 r--p 00044000 08:05 917902                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.6400.6
+7f1158ffc000-7f1158fff000 r--p 0005b000 08:05 917902                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.6400.6
+7f1158fff000-7f1159000000 rw-p 0005e000 08:05 917902                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.6400.6
+7f1159000000-7f115bdf0000 rwxp 00000000 00:00 0 
+7f115bdf0000-7f1168000000 ---p 00000000 00:00 0 
+7f1168000000-7f1168929000 rw-p 00000000 00:00 0 
+7f1168929000-7f116c000000 ---p 00000000 00:00 0 
+7f116c000000-7f116c3d0000 rw-p 00000000 00:00 0 
+7f116c3d0000-7f1170000000 ---p 00000000 00:00 0 
+7f1170000000-7f117047d000 rw-p 00000000 00:00 0 
+7f117047d000-7f1174000000 ---p 00000000 00:00 0 
+7f1174082000-7f1174085000 ---p 00000000 00:00 0 
+7f1174085000-7f11740bb000 rw-p 00000000 00:00 0 
+7f11740bb000-7f11740f3000 r--p 00000000 08:05 917870                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.6400.6
+7f11740f3000-7f1174206000 r-xp 00038000 08:05 917870                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.6400.6
+7f1174206000-7f1174290000 r--p 0014b000 08:05 917870                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.6400.6
+7f1174290000-7f1174299000 r--p 001d4000 08:05 917870                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.6400.6
+7f1174299000-7f117429a000 rw-p 001dd000 08:05 917870                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.6400.6
+7f117429a000-7f117429c000 rw-p 00000000 00:00 0 
+7f11742a5000-7f11742a8000 r--s 00022000 08:05 1465201                    /home/ed/altera_lite/16.0/ip/altera/frame_buffer/lib/ip_toolbench/jdom.jar
+7f11742a8000-7f11742ac000 r--s 0004d000 08:05 1465200                    /home/ed/altera_lite/16.0/ip/altera/frame_buffer/lib/ip_toolbench/forms_rt.jar
+7f11742ac000-7f11742b5000 r--s 0007b000 08:05 1465199                    /home/ed/altera_lite/16.0/ip/altera/frame_buffer/lib/ip_toolbench/frame_buffer.jar
+7f11742b5000-7f11742c0000 r--s 00000000 08:05 393510                     /var/cache/fontconfig/a4637e27-4fcc-4bc0-a937-718ae7fb9dce-le64.cache-7
+7f11742c0000-7f11742c6000 r--s 00000000 08:05 393465                     /var/cache/fontconfig/606ab276-7b9b-4a8d-ba0f-d11dc840c63b-le64.cache-7
+7f11742c6000-7f11742c7000 r--s 00000000 08:05 393542                     /var/cache/fontconfig/c8e280ed-afd3-47c2-bab8-41c84247e443-le64.cache-7
+7f11742c7000-7f11742dd000 r--s 00000000 08:05 393413                     /var/cache/fontconfig/24ca075b-24b3-443e-b839-12e0b785755c-le64.cache-7
+7f11742dd000-7f11742de000 r--s 00000000 08:05 393412                     /var/cache/fontconfig/23ea5eec-8abe-425c-8e31-14501dd2c05d-le64.cache-7
+7f11742de000-7f11742df000 r--s 00000000 08:05 393418                     /var/cache/fontconfig/31f6e66f-2ff0-4c60-9807-a6215f19ec0e-le64.cache-7
+7f11742df000-7f11742e1000 r--s 00000000 08:05 393479                     /var/cache/fontconfig/6d7b3acb-1fb6-4014-b9d7-8e88f844dbd4-le64.cache-7
+7f11742e1000-7f11742e2000 r--s 00000000 08:05 393545                     /var/cache/fontconfig/cfa427aa-623e-416c-9510-56b3842277f0-le64.cache-7
+7f11742e2000-7f11742e4000 r--s 00000000 08:05 393476                     /var/cache/fontconfig/6ba86a0c-5536-47df-830b-330a0a6c7c47-le64.cache-7
+7f11742e4000-7f11742e6000 r--s 00000000 08:05 393515                     /var/cache/fontconfig/a6a6c35d-0ce2-48b7-897d-a6183fd0e97f-le64.cache-7
+7f11742e6000-7f11742e7000 r--s 00000000 08:05 393486                     /var/cache/fontconfig/7a1b0847-a32a-43ed-ab48-8e0d80d5aa0e-le64.cache-7
+7f11742e7000-7f11742e9000 r--s 00000000 08:05 393584                     /var/cache/fontconfig/f982cc57-f5d2-4816-b56a-40b977baf995-le64.cache-7
+7f11742e9000-7f11742ee000 r--s 00000000 08:05 393417                     /var/cache/fontconfig/3100a3e8-8260-4176-8376-e74602aa4b7e-le64.cache-7
+7f11742ee000-7f11742ef000 r--s 00000000 08:05 393500                     /var/cache/fontconfig/911b590d-1bae-4329-8900-038496e172ae-le64.cache-7
+7f11742ef000-7f11742f0000 r--s 00000000 08:05 393434                     /var/cache/fontconfig/44d9bfa7-b81a-4325-8781-3fd0543d79e7-le64.cache-7
+7f11742f0000-7f11742f1000 r--s 00000000 08:05 393497                     /var/cache/fontconfig/87fe2ab1-9058-4913-8428-e46b953778a1-le64.cache-7
+7f11742f1000-7f11742f2000 r--s 00000000 08:05 393493                     /var/cache/fontconfig/829604c1-1b2d-40ff-b830-40ef41364dc2-le64.cache-7
+7f11742f2000-7f11742f3000 r--s 00000000 08:05 393396                     /var/cache/fontconfig/15117173-412a-4eca-9408-9b879318ad88-le64.cache-7
+7f11742f3000-7f11742f4000 r--s 00000000 08:05 393404                     /var/cache/fontconfig/1bb63ba4-fd72-4b26-ab50-9048e523804d-le64.cache-7
+7f11742f4000-7f11742f5000 r--s 00000000 08:05 393569                     /var/cache/fontconfig/e29d2e42-aff3-4723-b310-450149b2fb17-le64.cache-7
+7f11742f5000-7f11742f6000 r--s 00000000 08:05 393421                     /var/cache/fontconfig/341d2c2a-9c08-4288-8104-d9a4f307f74b-le64.cache-7
+7f11742f6000-7f11742f7000 r--s 00000000 08:05 393382                     /var/cache/fontconfig/030f639d-03c8-4627-b24f-bc5a26112056-le64.cache-7
+7f11742f7000-7f11742f8000 r--s 00000000 08:05 393405                     /var/cache/fontconfig/1c4ad046-42f8-4993-afcf-56176d8e5375-le64.cache-7
+7f11742f8000-7f11742f9000 r--s 00000000 08:05 393531                     /var/cache/fontconfig/bbad67ab-3c64-4edb-8a52-a09350c22aaa-le64.cache-7
+7f11742f9000-7f11742fe000 r--s 00000000 08:05 393578                     /var/cache/fontconfig/f2b1a1a4-343a-4373-91e5-fac49fa430e6-le64.cache-7
+7f11742fe000-7f1174305000 r--s 00000000 08:05 393536                     /var/cache/fontconfig/c0c8b206-c7dd-477e-bc06-da8b373c3274-le64.cache-7
+7f1174305000-7f117430b000 r--s 00000000 08:05 393561                     /var/cache/fontconfig/db24e243-8a03-47c3-8ab6-272240f2c73b-le64.cache-7
+7f117430b000-7f117431e000 r--s 00000000 08:05 393422                     /var/cache/fontconfig/369be85f-ed25-45fc-b8b8-b0561cc593b3-le64.cache-7
+7f117431e000-7f1174322000 r--s 00000000 08:05 393433                     /var/cache/fontconfig/43f5a2fa-15cb-4d5f-ac3a-6b98f17db5bd-le64.cache-7
+7f1174322000-7f1174325000 ---p 00000000 00:00 0 
+7f1174325000-7f1174423000 rw-p 00000000 00:00 0 
+7f1174423000-7f1174424000 r--p 00000000 08:05 917901                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.6400.6
+7f1174424000-7f1174426000 r-xp 00001000 08:05 917901                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.6400.6
+7f1174426000-7f1174427000 r--p 00003000 08:05 917901                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.6400.6
+7f1174427000-7f1174428000 r--p 00003000 08:05 917901                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.6400.6
+7f1174428000-7f1174429000 rw-p 00004000 08:05 917901                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.6400.6
+7f1174429000-7f117442a000 r--s 00000000 08:05 393505                     /var/cache/fontconfig/9c6749b4-738d-4e81-b63b-146ffc994447-le64.cache-7
+7f117442a000-7f117442b000 r--s 00000000 08:05 393499                     /var/cache/fontconfig/90c21457-a70c-4ebf-a99a-2f9f7c9521c4-le64.cache-7
+7f117442b000-7f117442c000 r--s 00000000 08:05 393381                     /var/cache/fontconfig/01a0da53-557e-4c32-b6b8-b11a6dcad222-le64.cache-7
+7f117442c000-7f117442d000 r--s 00000000 08:05 393530                     /var/cache/fontconfig/bb90e121-4c18-46b2-994d-bc5edc93d11d-le64.cache-7
+7f117442d000-7f117442e000 r--s 00000000 08:05 393547                     /var/cache/fontconfig/d0e601be-c830-4b1c-a834-4803962fac48-le64.cache-7
+7f117442e000-7f117442f000 r--s 00000000 08:05 393447                     /var/cache/fontconfig/50289ae4-6955-4f6c-a8e4-f1e3a7c39eb5-le64.cache-7
+7f117442f000-7f1174432000 r--s 00000000 08:05 393494                     /var/cache/fontconfig/84da5fb7-ac45-4365-a47c-275057a7fb5b-le64.cache-7
+7f1174432000-7f1174434000 r--s 00000000 08:05 393432                     /var/cache/fontconfig/4249dd05-726c-4fb6-81c3-c9400f370a59-le64.cache-7
+7f1174434000-7f1174437000 r--s 00000000 08:05 393537                     /var/cache/fontconfig/c57cbee3-bdc1-4114-badc-a584f67d0c0c-le64.cache-7
+7f1174437000-7f1174438000 r--s 00000000 08:05 393457                     /var/cache/fontconfig/5704c8ff-897f-4b73-9665-68c2d3a48dc9-le64.cache-7
+7f1174438000-7f1174446000 r--s 00000000 08:05 393587                     /var/cache/fontconfig/ffc0df38-5557-426d-b4e0-cddd44e52d03-le64.cache-7
+7f1174446000-7f1174456000 r--s 00000000 08:05 393534                     /var/cache/fontconfig/be3a9e9e-9e71-4f13-b5a6-656901312546-le64.cache-7
+7f1174456000-7f117445a000 r--s 00084000 08:05 1458389                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/jsse.jar
+7f1174460000-7f1174461000 r--p 00000000 00:00 0 
+7f1174461000-7f1174469000 r--s 00051000 08:05 393699                     /home/ed/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/velocity-1.4.jar
+7f1174469000-7f117447c000 r--s 00089000 08:05 393659                     /home/ed/altera_lite/16.0/quartus/dsp_builder/bin64/dspb_entities.jar
+7f117447c000-7f11744ec000 r--s 006c2000 08:05 1722361                    /home/ed/altera_lite/16.0/quartus/cusp/bin/cusp-engine.jar
+7f11744ec000-7f117450c000 r--s 001d6000 08:05 393684                     /home/ed/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/castor-1.0.3.jar
+7f117450c000-7f1174511000 r--p 00000000 08:05 924925                     /usr/lib/x86_64-linux-gnu/libnsl-2.31.so
+7f1174511000-7f1174521000 r-xp 00005000 08:05 924925                     /usr/lib/x86_64-linux-gnu/libnsl-2.31.so
+7f1174521000-7f1174525000 r--p 00015000 08:05 924925                     /usr/lib/x86_64-linux-gnu/libnsl-2.31.so
+7f1174525000-7f1174526000 r--p 00018000 08:05 924925                     /usr/lib/x86_64-linux-gnu/libnsl-2.31.so
+7f1174526000-7f1174527000 rw-p 00019000 08:05 924925                     /usr/lib/x86_64-linux-gnu/libnsl-2.31.so
+7f1174527000-7f1174729000 rw-p 00000000 00:00 0 
+7f1174729000-7f117472c000 ---p 00000000 00:00 0 
+7f117472c000-7f117482a000 rw-p 00000000 00:00 0 
+7f117482a000-7f117482d000 ---p 00000000 00:00 0 
+7f117482d000-7f117492b000 rw-p 00000000 00:00 0 
+7f117492b000-7f117493e000 r--s 00345000 08:05 1458402                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/resources.jar
+7f117493e000-7f1174941000 ---p 00000000 00:00 0 
+7f1174941000-7f1174a3f000 rw-p 00000000 00:00 0 
+7f1174a3f000-7f1174a42000 ---p 00000000 00:00 0 
+7f1174a42000-7f1174b40000 rw-p 00000000 00:00 0 
+7f1174b40000-7f1174b55000 r-xp 00000000 08:05 1333597                    /home/ed/altera_lite/16.0/quartus/linux64/libgcc_s.so.1
+7f1174b55000-7f1174d55000 ---p 00015000 08:05 1333597                    /home/ed/altera_lite/16.0/quartus/linux64/libgcc_s.so.1
+7f1174d55000-7f1174d56000 rw-p 00015000 08:05 1333597                    /home/ed/altera_lite/16.0/quartus/linux64/libgcc_s.so.1
+7f1174d56000-7f1174dbb000 r-xp 00000000 08:05 1458497                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libfontmanager.so
+7f1174dbb000-7f1174fba000 ---p 00065000 08:05 1458497                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libfontmanager.so
+7f1174fba000-7f1174fbe000 rw-p 00064000 08:05 1458497                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libfontmanager.so
+7f1174fbe000-7f1174fcf000 rw-p 00000000 00:00 0 
+7f1174fcf000-7f1174fd1000 r--p 00000000 08:05 924017                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f1174fd1000-7f1174fdc000 r-xp 00002000 08:05 924017                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f1174fdc000-7f1174fdf000 r--p 0000d000 08:05 924017                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f1174fdf000-7f1174fe0000 r--p 0000f000 08:05 924017                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f1174fe0000-7f1174fe1000 rw-p 00010000 08:05 924017                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f1174fe1000-7f1174fe6000 r-xp 00000000 08:05 924035                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f1174fe6000-7f11751e5000 ---p 00005000 08:05 924035                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f11751e5000-7f11751e6000 r--p 00004000 08:05 924035                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f11751e6000-7f11751e7000 rw-p 00005000 08:05 924035                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f11751e7000-7f11751eb000 r--s 00000000 08:05 393464                     /var/cache/fontconfig/5c0bb55f-9bc2-4f07-b2ee-c843e59f0457-le64.cache-7
+7f11751eb000-7f11751ec000 r--s 00000000 08:05 393532                     /var/cache/fontconfig/bcbb8717-be88-4839-a3cb-708800852979-le64.cache-7
+7f11751ec000-7f11751ed000 r--s 00000000 08:05 393548                     /var/cache/fontconfig/d3dfc9e6-6b2a-4fa3-a681-886ea2990c0f-le64.cache-7
+7f11751ed000-7f11751ee000 r--s 00000000 08:05 393484                     /var/cache/fontconfig/772e1db9-7fda-4e2c-a119-411f883e41a6-le64.cache-7
+7f11751ee000-7f11751ef000 r--s 00000000 08:05 393559                     /var/cache/fontconfig/d95de4f8-8480-405a-a8e2-d5e00726bff4-le64.cache-7
+7f11751ef000-7f11751f0000 r--s 00000000 08:05 393393                     /var/cache/fontconfig/0f1e8176-0eef-4f9f-852d-6ffddb548075-le64.cache-7
+7f11751f0000-7f11751f1000 r--s 00000000 08:05 393423                     /var/cache/fontconfig/36b1e010-f1b0-46e9-aece-8e80b11c0889-le64.cache-7
+7f11751f1000-7f11751f2000 r--s 00000000 08:05 393519                     /var/cache/fontconfig/b457a9aa-e4c7-43d7-b6f3-9fe79a881153-le64.cache-7
+7f11751f2000-7f11751f5000 r--s 00000000 08:05 393452                     /var/cache/fontconfig/552326db-e88a-49ad-977f-eb2abcbccb47-le64.cache-7
+7f11751f5000-7f11751f8000 r--s 00000000 08:05 393535                     /var/cache/fontconfig/c0b2c651-e462-487b-86a3-2cbb44de03a9-le64.cache-7
+7f11751f8000-7f1175249000 r-xp 00000000 08:05 1458473                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt_xawt.so
+7f1175249000-7f1175448000 ---p 00051000 08:05 1458473                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt_xawt.so
+7f1175448000-7f117544c000 rw-p 00050000 08:05 1458473                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt_xawt.so
+7f117544c000-7f117544d000 rw-p 00000000 00:00 0 
+7f117544d000-7f11754f0000 r-xp 00000000 08:05 1458453                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt.so
+7f11754f0000-7f11756ef000 ---p 000a3000 08:05 1458453                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt.so
+7f11756ef000-7f11756fb000 rw-p 000a2000 08:05 1458453                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libawt.so
+7f11756fb000-7f117571f000 rw-p 00000000 00:00 0 
+7f117571f000-7f117573b000 r--s 00393000 08:05 1458537                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/ext/cldrdata.jar
+7f117573b000-7f1175746000 r--s 00210000 08:05 1458544                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/ext/localedata.jar
+7f1175746000-7f1175783000 r--s 0024e000 08:05 1592474                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/xbean.jar
+7f1175783000-7f1175785000 r--s 00008000 08:05 1592506                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/wraplf.jar
+7f1175785000-7f1175786000 r--s 00002000 08:05 1592504                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/swing-worker.jar
+7f1175786000-7f1175788000 r--s 00014000 08:05 1592470                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/org-netbeans-swing-outline-RELEASE691-sources.jar
+7f1175788000-7f1175789000 r--s 00011000 08:05 1592509                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/miglayout-swing.jar
+7f1175789000-7f117578f000 r--s 0002e000 08:05 1592436                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/l2fprod-common-sheet.jar
+7f117578f000-7f1175791000 r--s 00004000 08:05 1592425                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jsr173_1.0_api.jar
+7f1175791000-7f1175795000 r--s 00031000 08:05 1592473                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jline-2.12.jar
+7f1175795000-7f11757a1000 r--s 0008f000 08:05 1592492                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jgraphx.jar
+7f11757a1000-7f11757b2000 r--s 0014c000 08:05 1592450                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jfreechart-1.0.13.jar
+7f11757b2000-7f11757b8000 r--s 00046000 08:05 1592498                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jcommon-1.0.16.jar
+7f11757b8000-7f11757f0000 r--s 00217000 08:05 1592429                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/docking-frames-core.jar
+7f11757f0000-7f1175806000 r--s 000bc000 08:05 1592448                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/docking-frames-common.jar
+7f1175806000-7f1175808000 r--s 00003000 08:05 1592503                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.util.elf.jar
+7f1175808000-7f117580a000 r--s 00002000 08:05 1592430                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.tools.sopcformats.jar
+7f117580a000-7f117580b000 r--s 00002000 08:05 1592365                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.tools.exampledesigns.jar
+7f117580b000-7f117580c000 r--s 00006000 08:05 1592511                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.spdy.jar
+7f117580c000-7f117580d000 r--s 0000b000 08:05 1592367                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.sldhubchannel.jar
+7f117580d000-7f117580f000 r--s 00006000 08:05 1592505                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.gdbserver.jar
+7f117580f000-7f1175810000 r--s 00007000 08:05 1592373                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.issp.jar
+7f1175810000-7f1175813000 r--s 0000d000 08:05 1592507                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.monitor.jar
+7f1175813000-7f117581a000 r--s 0003f000 08:05 1592406                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.busanalyzer.jar
+7f117581a000-7f1175828000 r--s 0007f000 08:05 1592437                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-collections-3.2.1.jar
+7f1175828000-7f1175829000 r--s 00003000 08:05 1592402                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.iobus.jar
+7f1175829000-7f117582a000 r--s 00002000 08:05 1592460                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.helper.jar
+7f117582a000-7f117582f000 r--s 0002c000 08:05 1592375                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.dashboard.jar
+7f117582f000-7f1175833000 r--s 00020000 08:05 1592369                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.gui.jar
+7f1175833000-7f1175838000 r--s 00029000 08:05 1592471                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.database.jar
+7f1175838000-7f1175839000 r--s 00001000 08:05 1592393                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.memory.jar
+7f1175839000-7f117583b000 r--s 00003000 08:05 1592370                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.pli.jar
+7f117583b000-7f117583c000 r--s 00006000 08:05 1592413                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.tcpchannel.jar
+7f117583c000-7f117583f000 r--s 00011000 08:05 1592472                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.usb.jar
+7f117583f000-7f1175843000 r--s 0001c000 08:05 1592478                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.trace.drivers.jar
+7f1175843000-7f1175844000 r--s 00001000 08:05 1592399                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.matlabapi.jar
+7f1175844000-7f1175847000 r--s 0001c000 08:05 1592495                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.app.jar
+7f1175847000-7f1175849000 r--s 0000c000 08:05 1592458                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.hwtclvalidator.jar
+7f1175849000-7f117584a000 r--s 0000e000 08:05 1592508                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.atlantic.packetformatconverter.jar
+7f117584a000-7f117584c000 r--s 00003000 08:05 1592409                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.script.debugwindow.jar
+7f117584c000-7f117584e000 r--s 00001000 08:05 1592404                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.nios2.trace.jar
+7f117584e000-7f1175850000 r--s 00009000 08:05 1592494                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.nios2.rtl.trace.jar
+7f1175850000-7f1175862000 r--s 00091000 08:05 1592384                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.nios2.isa.jar
+7f1175862000-7f117586b000 r--s 00076000 08:05 1592447                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jmwizc.jar
+7f117586b000-7f117586d000 r--s 00007000 08:05 1592381                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.ipxact.module.jar
+7f117586d000-7f117586f000 r--s 0000a000 08:05 1592387                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.widgets.jar
+7f117586f000-7f1175874000 r--s 00055000 08:05 1592502                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.hypericonnect.jar
+7f1175874000-7f1175878000 r--s 00035000 08:05 1592468                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.sbtools.jar
+7f1175878000-7f117587a000 r--s 00007000 08:05 1592490                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.blackboxmodule.jar
+7f117587a000-7f117587b000 r--s 00003000 08:05 1592455                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.ui.jar
+7f117587b000-7f11758ab000 r--s 00411000 08:05 1592461                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopceditor.jar
+7f11758ab000-7f11758ae000 r--s 00020000 08:05 1592412                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.iplauncher.jar
+7f11758ae000-7f11758b0000 r--s 0000e000 08:05 1592477                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.ip.regenerator.jar
+7f11758b0000-7f11758b3000 r--s 00024000 08:05 1592445                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.genman.jar
+7f11758b3000-7f11758b6000 r--s 0002d000 08:05 1592491                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.launch.jar
+7f11758b6000-7f11758b7000 r--s 00006000 08:05 1592459                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.configrom.jar
+7f11758b7000-7f11758b8000 r--s 00000000 08:05 1592372                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.jtagsimulator.jar
+7f11758b8000-7f11758ba000 r--s 00007000 08:05 1592424                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.driver.jar
+7f11758ba000-7f11758c8000 r--s 00072000 08:05 1592417                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.elf.jar
+7f11758c8000-7f11758c9000 ---p 00000000 00:00 0 
+7f11758c9000-7f11759c9000 rw-p 00000000 00:00 0 
+7f11759c9000-7f11759cc000 ---p 00000000 00:00 0 
+7f11759cc000-7f1175aca000 rw-p 00000000 00:00 0 
+7f1175aca000-7f1175acb000 ---p 00000000 00:00 0 
+7f1175acb000-7f1175ace000 ---p 00000000 00:00 0 
+7f1175ace000-7f1175bcb000 rw-p 00000000 00:00 0 
+7f1175bcb000-7f1175bcc000 ---p 00000000 00:00 0 
+7f1175bcc000-7f1175bcf000 ---p 00000000 00:00 0 
+7f1175bcf000-7f1175ccc000 rw-p 00000000 00:00 0 
+7f1175ccc000-7f1175ccf000 ---p 00000000 00:00 0 
+7f1175ccf000-7f1175dcd000 rw-p 00000000 00:00 0 
+7f1175dcd000-7f1175dd0000 ---p 00000000 00:00 0 
+7f1175dd0000-7f1175ece000 rw-p 00000000 00:00 0 
+7f1175ece000-7f1175ecf000 ---p 00000000 00:00 0 
+7f1175ecf000-7f1175fcf000 rw-p 00000000 00:00 0 
+7f1175fcf000-7f1175fd0000 r--s 00002000 08:05 1592426                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.lightclient.jar
+7f1175fd0000-7f1175fd8000 r--s 00048000 08:05 1592493                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.plugin.jtag.jar
+7f1175fd8000-7f1175fdc000 r--s 00036000 08:05 1592489                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.gui.jar
+7f1175fdc000-7f1175fdf000 r--s 00038000 08:05 1592497                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.scripting.jar
+7f1175fdf000-7f1175fe5000 r--s 0004a000 08:05 1592464                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.designs.jar
+7f1175fe5000-7f1175ff0000 r--s 00184000 08:05 1592457                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.systemconsole.jar
+7f1175ff0000-7f1175ff7000 r--s 00056000 08:05 1592484                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.flash.jar
+7f1175ff7000-7f1175ff8000 r--s 00004000 08:05 1592366                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.cpexample.jar
+7f1175ff8000-7f1175ff9000 r--s 00003000 08:05 1592379                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.tcl.ui.jar
+7f1175ff9000-7f1175ffb000 r--s 00006000 08:05 1592390                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.lwhal.jar
+7f1175ffb000-7f1175ffe000 ---p 00000000 00:00 0 
+7f1175ffe000-7f11760fc000 rw-p 00000000 00:00 0 
+7f11760fc000-7f11762d1000 r--s 033af000 08:05 1458386                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/rt.jar
+7f11762d1000-7f11762d2000 r--s 0001f000 08:05 1592377                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.scripting.jar
+7f11762d2000-7f11762d5000 r--s 0000b000 08:05 1592364                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.hal.jar
+7f11762d5000-7f11762d9000 r--s 0001c000 08:05 1592386                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.core.jar
+7f11762d9000-7f11762db000 r--s 0000f000 08:05 1592428                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.commandline.jar
+7f11762db000-7f11762e8000 r--s 00084000 08:05 1592444                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.editor.jar
+7f11762e8000-7f11762ef000 r--s 00063000 08:05 1592466                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.megawizard2.jar
+7f11762ef000-7f11762f3000 r--s 00029000 08:05 1592462                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.atlantic.jar
+7f11762f3000-7f11762fe000 r--s 00074000 08:05 1592449                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/velocity-dep-1.4.jar
+7f11762fe000-7f1176306000 r--s 00051000 08:05 1592482                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/velocity-1.4.jar
+7f1176306000-7f117630a000 r--s 0001f000 08:05 1592446                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/explicitlayout.jar
+7f117630a000-7f117630c000 r--s 00006000 08:05 1592362                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcfactories.jar
+7f117630c000-7f117630e000 r--s 0001a000 08:05 1592431                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopclibrary.jar
+7f117630e000-7f117630f000 r--s 00000000 08:05 1592476                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.librarian.jar
+7f117630f000-7f1176310000 r--s 00002000 08:05 1592481                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcplatform.jar
+7f1176310000-7f1176311000 r--s 00000000 08:05 1592382                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.service.jre.jar
+7f1176311000-7f1176312000 r--s 00000000 08:05 1592368                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/xmlbeans-2.2.0.jar
+7f1176312000-7f1176316000 r--s 0001e000 08:05 1592475                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.utilities.jar
+7f1176316000-7f1176317000 r--s 00003000 08:05 1592392                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.embeddedsw.jar
+7f1176317000-7f1176319000 r--s 00016000 08:05 1592415                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.swinfo.jar
+7f1176319000-7f117631d000 r--s 0000d000 08:05 1592480                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.schema.jar
+7f117631d000-7f117631e000 r--s 0000b000 08:05 1592363                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.elements.jar
+7f117631e000-7f1176323000 r--s 0008b000 08:05 1592463                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.jar
+7f1176323000-7f1176326000 r--s 00014000 08:05 1592398                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.app_lib.jar
+7f1176326000-7f117632c000 r--s 0007a000 08:05 1592394                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jacl1.3.2a.jar
+7f117632c000-7f1176330000 r--s 0002a000 08:05 1592500                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.tcl.interpreter.jar
+7f1176330000-7f1176333000 r--s 00012000 08:05 1592400                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcreport.build.jar
+7f1176333000-7f1176335000 r--s 00007000 08:05 1592452                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcreport.jar
+7f1176335000-7f1176337000 r--s 0000d000 08:05 1592422                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.atlantic.jar
+7f1176337000-7f1176338000 r--s 0000c000 08:05 1592407                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-logging-1.1.jar
+7f1176338000-7f1176339000 r--s 00014000 08:05 1592434                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/javasysmon.jar
+7f1176339000-7f117633c000 r--s 0003e000 08:05 1592395                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.utilities.jar
+7f117633c000-7f117633e000 r--s 00007000 08:05 1592441                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.model.common.jar
+7f117633e000-7f1176343000 r--s 0000f000 08:05 1592388                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.privateinterfaces.jar
+7f1176343000-7f1176346000 r--s 0000b000 08:05 1592391                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.entityinterfaces.jar
+7f1176346000-7f1176356000 r--s 000e8000 08:05 1592433                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.jar
+7f1176356000-7f1176357000 r--s 0000b000 08:05 1592496                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcdocument.jar
+7f1176357000-7f117635c000 r--s 00054000 08:05 1592510                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.transforms.jar
+7f117635c000-7f1176364000 r--s 00051000 08:05 1592439                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.ipxact.jar
+7f1176364000-7f117636a000 r--s 00031000 08:05 1592456                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jaxb-core.jar
+7f117636a000-7f117636e000 r--s 00015000 08:05 1592479                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jaxb-api.jar
+7f117636e000-7f117637f000 r--s 000d0000 08:05 1592385                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/jaxb-impl.jar
+7f117637f000-7f1176387000 r--s 00051000 08:05 1592427                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.qsys.cmsis.jar
+7f1176387000-7f117638d000 r--s 00050000 08:05 1592418                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopc.generator.jar
+7f117638d000-7f1176394000 r--s 0007c000 08:05 1592442                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopcmodel.components.tclmodule.jar
+7f1176394000-7f117639a000 r--s 00045000 08:05 1592389                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/hamcrest-all-1.3.jar
+7f117639a000-7f117639d000 r--s 0002a000 08:05 1592419                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.hdlwriter.jar
+7f117639d000-7f11763a0000 r--s 0000e000 08:05 1592483                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.minieval2.jar
+7f11763a0000-7f11763a3000 r--s 00036000 08:05 1592378                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/org-netbeans-swing-outline.jar
+7f11763a3000-7f11763a5000 r--s 00010000 08:05 1592440                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.sopc.qsymbol.jar
+7f11763a5000-7f11763a7000 r--s 00000000 08:05 1592374                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.version.jar
+7f11763a7000-7f11763a9000 r--s 00018000 08:05 1592414                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.jdbcsqlite.jar
+7f11763a9000-7f11763ab000 r--s 0000e000 08:05 1592411                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.infrastructure.jar
+7f11763ab000-7f11763b3000 r--s 0004f000 08:05 1592416                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.ui.ientity.jar
+7f11763b3000-7f1176bb3000 rw-p 00000000 00:00 0 
+7f1176bb3000-7f1176bef000 rw-p 00000000 00:00 0 
+7f1176bef000-7f1176da8000 ---p 00000000 00:00 0 
+7f1176da8000-7f1176dc6000 rw-p 00000000 00:00 0 
+7f1176dc6000-7f1176ea2000 ---p 00000000 00:00 0 
+7f1176ea2000-7f1176ede000 rw-p 00000000 00:00 0 
+7f1176ede000-7f1177096000 ---p 00000000 00:00 0 
+7f1177096000-7f117714f000 rw-p 00000000 00:00 0 
+7f117714f000-7f1177457000 ---p 00000000 00:00 0 
+7f1177457000-7f1177473000 r-xp 00000000 08:05 1458489                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libzip.so
+7f1177473000-7f1177672000 ---p 0001c000 08:05 1458489                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libzip.so
+7f1177672000-7f1177673000 rw-p 0001b000 08:05 1458489                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libzip.so
+7f1177673000-7f117769d000 r-xp 00000000 08:05 1458460                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libjava.so
+7f117769d000-7f117789d000 ---p 0002a000 08:05 1458460                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libjava.so
+7f117789d000-7f117789f000 rw-p 0002a000 08:05 1458460                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libjava.so
+7f117789f000-7f11778ac000 r-xp 00000000 08:05 1458476                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libverify.so
+7f11778ac000-7f1177aac000 ---p 0000d000 08:05 1458476                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libverify.so
+7f1177aac000-7f1177aae000 rw-p 0000d000 08:05 1458476                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libverify.so
+7f1177aae000-7f1177ab7000 r-xp 00000000 08:05 924029                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f1177ab7000-7f1177cb6000 ---p 00009000 08:05 924029                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f1177cb6000-7f1177cb7000 r--p 00008000 08:05 924029                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f1177cb7000-7f1177cb8000 rw-p 00009000 08:05 924029                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f1177cb8000-7f1178a96000 r--p 00000000 08:05 923493                     /usr/lib/locale/locale-archive
+7f1178a96000-7f1178a97000 ---p 00000000 00:00 0 
+7f1178a97000-7f1179497000 rw-p 00000000 00:00 0 
+7f1179497000-7f1179498000 r--s 00000000 08:05 2118542                    /home/ed/altera_lite/16.0/quartus/common/librarian/factories/dspb_entities.jar
+7f1179498000-7f117949a000 r--s 00003000 08:05 2118545                    /home/ed/altera_lite/16.0/quartus/common/librarian/factories/cusp-factory.jar
+7f117949a000-7f117949d000 r--s 00013000 08:05 393712                     /home/ed/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/velocity-tools-1.2.jar
+7f117949d000-7f11794a8000 r--s 00074000 08:05 393698                     /home/ed/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/velocity-dep-1.4.jar
+7f11794a8000-7f11794b1000 r--s 00034000 08:05 393673                     /home/ed/altera_lite/16.0/quartus/dsp_builder/bin64/simulink_model.jar
+7f11794b1000-7f11794b3000 r--s 0000f000 08:05 393683                     /home/ed/altera_lite/16.0/quartus/dsp_builder/bin64/extlibs/JSAP-2.0a.jar
+7f11794b3000-7f11794c2000 r--s 00085000 08:05 393667                     /home/ed/altera_lite/16.0/quartus/dsp_builder/bin64/dspb.jar
+7f11794c2000-7f11794c3000 r--s 00000000 08:05 2118544                    /home/ed/altera_lite/16.0/quartus/common/librarian/factories/mdl_factory.jar
+7f11794c3000-7f11794c6000 ---p 00000000 00:00 0 
+7f11794c6000-7f11795c4000 rw-p 00000000 00:00 0 
+7f11795c4000-7f11795c5000 r--s 00006000 08:05 1592454                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.hdlcomponent.jar
+7f11795c5000-7f11795cb000 r--s 00048000 08:05 1592410                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-lang3-3.1.jar
+7f11795cb000-7f11795f5000 r--s 001e9000 08:05 1592423                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/guava-15.0.jar
+7f11795f5000-7f11795f6000 r--s 00005000 08:05 1592361                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.ui.quartus.jar
+7f11795f6000-7f11795f8000 r--s 00004000 08:05 1592501                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/mydoggy-res.jar
+7f11795f8000-7f11795fa000 r--s 00007000 08:05 1592469                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/mydoggy-api.jar
+7f11795fa000-7f117960a000 r--s 000a4000 08:05 1592435                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/mydoggy-plaf.jar
+7f117960a000-7f117960c000 r--s 00010000 08:05 1592453                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/miglayout15-swing.jar
+7f117960c000-7f1179616000 r--s 00052000 08:05 1592383                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.ui.jar
+7f1179616000-7f1179624000 r--s 0007b000 08:05 1592499                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.componenteditor2.jar
+7f1179624000-7f1179628000 r--s 00022000 08:05 1592371                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/binding-2.0.6.jar
+7f1179628000-7f117962f000 r--s 00094000 08:05 1592396                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/beansbinding-1.2.1.jar
+7f117962f000-7f1179632000 r--s 00011000 08:05 1592420                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/basicmodel.jar
+7f1179632000-7f1179633000 r--s 00007000 08:05 1592488                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/asm-commons-3.1.jar
+7f1179633000-7f1179634000 r--s 0000a000 08:05 1592485                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/asm-3.1.jar
+7f1179634000-7f1179638000 r--s 0004a000 08:05 1592443                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/appframework-1.03.jar
+7f1179638000-7f1179639000 r--s 00002000 08:05 1592487                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/TableLayout.jar
+7f1179639000-7f117963b000 r--s 00009000 08:05 1592467                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-pool.jar
+7f117963b000-7f117963e000 r--s 0001f000 08:05 1592408                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-beanutils.jar
+7f117963e000-7f117964b000 r--s 0007c000 08:05 1592451                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-collections.jar
+7f117964b000-7f117964e000 r--p 00000000 08:05 924933                     /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f117964e000-7f1179655000 r-xp 00003000 08:05 924933                     /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f1179655000-7f1179657000 r--p 0000a000 08:05 924933                     /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f1179657000-7f1179658000 r--p 0000b000 08:05 924933                     /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f1179658000-7f1179659000 rw-p 0000c000 08:05 924933                     /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7f1179659000-7f117965f000 rw-p 00000000 00:00 0 
+7f117965f000-7f1179662000 r--p 00000000 08:05 925135                     /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f1179662000-7f1179666000 r-xp 00003000 08:05 925135                     /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f1179666000-7f1179667000 r--p 00007000 08:05 925135                     /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f1179667000-7f1179668000 ---p 00008000 08:05 925135                     /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f1179668000-7f1179669000 r--p 00008000 08:05 925135                     /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f1179669000-7f117966a000 rw-p 00009000 08:05 925135                     /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7f117966a000-7f117966d000 r--p 00000000 08:05 924003                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f117966d000-7f1179673000 r-xp 00003000 08:05 924003                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f1179673000-7f1179675000 r--p 00009000 08:05 924003                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f1179675000-7f1179676000 r--p 0000a000 08:05 924003                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f1179676000-7f1179677000 rw-p 0000b000 08:05 924003                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f1179677000-7f1179679000 r--s 00008000 08:05 1592405                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-logging.jar
+7f1179679000-7f117967c000 r--s 00018000 08:05 1592380                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/commons-digester.jar
+7f117967c000-7f1179680000 r--s 00036000 08:05 1592486                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/QuickServer.jar
+7f1179680000-7f1179688000 rw-s 00000000 08:05 3415682                    /tmp/hsperfdata_ed/13062
+7f1179688000-7f1179689000 ---p 00000000 00:00 0 
+7f1179689000-7f117968c000 ---p 00000000 00:00 0 
+7f117968c000-7f1179789000 rw-p 00000000 00:00 0 
+7f1179789000-7f117978d000 r--p 00000000 08:05 924163                     /usr/lib/x86_64-linux-gnu/libbsd.so.0.10.0
+7f117978d000-7f117979c000 r-xp 00004000 08:05 924163                     /usr/lib/x86_64-linux-gnu/libbsd.so.0.10.0
+7f117979c000-7f117979f000 r--p 00013000 08:05 924163                     /usr/lib/x86_64-linux-gnu/libbsd.so.0.10.0
+7f117979f000-7f11797a0000 ---p 00016000 08:05 924163                     /usr/lib/x86_64-linux-gnu/libbsd.so.0.10.0
+7f11797a0000-7f11797a1000 r--p 00016000 08:05 924163                     /usr/lib/x86_64-linux-gnu/libbsd.so.0.10.0
+7f11797a1000-7f11797a2000 rw-p 00017000 08:05 924163                     /usr/lib/x86_64-linux-gnu/libbsd.so.0.10.0
+7f11797a2000-7f11797a3000 rw-p 00000000 00:00 0 
+7f11797a3000-7f11797a5000 r--p 00000000 08:05 924007                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f11797a5000-7f11797a7000 r-xp 00002000 08:05 924007                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f11797a7000-7f11797a9000 r--p 00004000 08:05 924007                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f11797a9000-7f11797aa000 r--p 00005000 08:05 924007                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f11797aa000-7f11797ab000 rw-p 00006000 08:05 924007                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f11797ab000-7f11797ac000 r--p 00000000 08:05 923996                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f11797ac000-7f11797ae000 r-xp 00001000 08:05 923996                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f11797ae000-7f11797af000 r--p 00003000 08:05 923996                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f11797af000-7f11797b0000 r--p 00003000 08:05 923996                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f11797b0000-7f11797b1000 rw-p 00004000 08:05 923996                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f11797b1000-7f11797bc000 r--p 00000000 08:05 925469                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f11797bc000-7f11797d0000 r-xp 0000b000 08:05 925469                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f11797d0000-7f11797d9000 r--p 0001f000 08:05 925469                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f11797d9000-7f11797da000 r--p 00027000 08:05 925469                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f11797da000-7f11797db000 rw-p 00028000 08:05 925469                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f11797db000-7f11797df000 r--p 00000000 08:05 924009                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f11797df000-7f11797ea000 r-xp 00004000 08:05 924009                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f11797ea000-7f11797ee000 r--p 0000f000 08:05 924009                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f11797ee000-7f11797ef000 r--p 00012000 08:05 924009                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f11797ef000-7f11797f0000 rw-p 00013000 08:05 924009                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f11797f0000-7f1179808000 r--p 00000000 08:05 923992                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f1179808000-7f1179893000 r-xp 00018000 08:05 923992                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f1179893000-7f1179927000 r--p 000a3000 08:05 923992                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f1179927000-7f1179928000 ---p 00137000 08:05 923992                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f1179928000-7f1179929000 r--p 00137000 08:05 923992                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f1179929000-7f117992d000 rw-p 00138000 08:05 923992                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f117992d000-7f1179988000 r-xp 00000000 08:05 1458478                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libsplashscreen.so
+7f1179988000-7f1179b88000 ---p 0005b000 08:05 1458478                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libsplashscreen.so
+7f1179b88000-7f1179b89000 rw-p 0005b000 08:05 1458478                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/libsplashscreen.so
+7f1179b89000-7f1179b8c000 rw-p 00000000 00:00 0 
+7f1179b8c000-7f1179b9b000 r--p 00000000 08:05 924809                     /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f1179b9b000-7f1179c42000 r-xp 0000f000 08:05 924809                     /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f1179c42000-7f1179cd9000 r--p 000b6000 08:05 924809                     /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f1179cd9000-7f1179cda000 r--p 0014c000 08:05 924809                     /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f1179cda000-7f1179cdb000 rw-p 0014d000 08:05 924809                     /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f1179cdb000-7f117a8f5000 r-xp 00000000 08:05 1458510                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f117a8f5000-7f117aaf4000 ---p 00c1a000 08:05 1458510                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f117aaf4000-7f117abbd000 rw-p 00c19000 08:05 1458510                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/server/libjvm.so
+7f117abbd000-7f117ac00000 rw-p 00000000 00:00 0 
+7f117ac00000-7f117ac25000 r--p 00000000 08:05 924167                     /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f117ac25000-7f117ad9d000 r-xp 00025000 08:05 924167                     /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f117ad9d000-7f117ade7000 r--p 0019d000 08:05 924167                     /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f117ade7000-7f117ade8000 ---p 001e7000 08:05 924167                     /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f117ade8000-7f117adeb000 r--p 001e7000 08:05 924167                     /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f117adeb000-7f117adee000 rw-p 001ea000 08:05 924167                     /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f117adee000-7f117adf2000 rw-p 00000000 00:00 0 
+7f117adf2000-7f117adf3000 r--p 00000000 08:05 924302                     /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f117adf3000-7f117adf5000 r-xp 00001000 08:05 924302                     /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f117adf5000-7f117adf6000 r--p 00003000 08:05 924302                     /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f117adf6000-7f117adf7000 r--p 00003000 08:05 924302                     /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f117adf7000-7f117adf8000 rw-p 00004000 08:05 924302                     /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7f117adf8000-7f117ae0f000 r-xp 00000000 08:05 1458509                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f117ae0f000-7f117b00e000 ---p 00017000 08:05 1458509                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f117b00e000-7f117b00f000 rw-p 00016000 08:05 1458509                    /home/ed/altera_lite/16.0/quartus/linux64/jre64/lib/amd64/jli/libjli.so
+7f117b00f000-7f117b016000 r--p 00000000 08:05 925074                     /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f117b016000-7f117b027000 r-xp 00007000 08:05 925074                     /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f117b027000-7f117b02c000 r--p 00018000 08:05 925074                     /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f117b02c000-7f117b02d000 r--p 0001c000 08:05 925074                     /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f117b02d000-7f117b02e000 rw-p 0001d000 08:05 925074                     /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7f117b02e000-7f117b032000 rw-p 00000000 00:00 0 
+7f117b032000-7f117b033000 r--s 0000d000 08:05 1592397                    /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/Nlview.jar
+7f117b033000-7f117b034000 rw-p 00000000 00:00 0 
+7f117b034000-7f117b036000 r--p 00000000 08:05 924011                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f117b036000-7f117b039000 r-xp 00002000 08:05 924011                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f117b039000-7f117b03a000 r--p 00005000 08:05 924011                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f117b03a000-7f117b03b000 r--p 00005000 08:05 924011                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f117b03b000-7f117b03c000 rw-p 00006000 08:05 924011                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f117b03c000-7f117b043000 r--s 00000000 08:05 1445246                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f117b043000-7f117b045000 rw-p 00000000 00:00 0 
+7f117b045000-7f117b046000 r--p 00000000 08:05 923951                     /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f117b046000-7f117b069000 r-xp 00001000 08:05 923951                     /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f117b069000-7f117b071000 r--p 00024000 08:05 923951                     /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f117b071000-7f117b072000 ---p 00000000 00:00 0 
+7f117b072000-7f117b073000 r--p 0002c000 08:05 923951                     /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f117b073000-7f117b074000 rw-p 0002d000 08:05 923951                     /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f117b074000-7f117b075000 rw-p 00000000 00:00 0 
+7ffca4b39000-7ffca4b5e000 rw-p 00000000 00:00 0                          [stack]
+7ffca4be9000-7ffca4bed000 r--p 00000000 00:00 0                          [vvar]
+7ffca4bed000-7ffca4bef000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx1500M -XX:+UseSerialGC 
+java_command: com.altera.ipedit.QsysEditorApp --project-dir=/home/ed/stuff/EEE2Rover/DE10_LITE_D8M_VIP_16/ --system-info=DEVICE_FAMILY=MAX 10 --system-info=DEVICE=10M50DAF484C7G --system-info=DEVICE_SPEEDGRADE=7 --host-controller
+java_class_path (initial): /home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/Nlview.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/QuickServer.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/TableLayout.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/appframework-1.03.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/asm-3.1.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/asm-commons-3.1.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/basicmodel.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/beansbinding-1.2.1.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/binding-2.0.6.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.componenteditor2.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.app_lib.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.editor.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.elements.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.core.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.hal.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.plugin.lwhal.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.schema.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.bsp.scripting.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.commandline.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.cpexample.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.flash.jar:/home/ed/altera_lite/16.0/quartus/sopc_builder/model/lib/com.altera.embeddedsw.laun
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/ed/altera_lite/16.0/quartus/linux64:/home/ed/altera_lite/16.0/quartus/adm:/home/ed/altera_lite/16.0/quartus/linux64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/ed/altera_lite/16.0/quartus/bin
+USERNAME=ed
+LD_LIBRARY_PATH=/home/ed/altera_lite/16.0/quartus/linux64:/home/ed/altera_lite/16.0/quartus/linux64:
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa2fc90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0xa2fc90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x89b4b0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: SIG_IGN, sa_mask[0]=0x00001000, sa_flags=0x10000000
+SIGXFSZ: SIG_IGN, sa_mask[0]=0x01000000, sa_flags=0x10000000
+SIGILL: [libjvm.so+0x89b4b0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x89cc50], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x89df00], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libcusp160_parser.so+0x13ba40], sa_mask[0]=0x00000002, sa_flags=0x10000000
+SIGTERM: [libcusp160_parser.so+0x13ba40], sa_mask[0]=0x00004000, sa_flags=0x10000000
+SIGQUIT: [libjvm.so+0x89df00], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION="Ubuntu 20.04.2 LTS"
+
+uname:Linux 5.8.0-44-generic #50~20.04.1-Ubuntu SMP Wed Feb 10 21:07:30 UTC 2021 x86_64
+libc:glibc 2.31 NPTL 2.31 
+rlimit: STACK 10240k, CORE 0k, NPROC 15399, NOFILE 1048576, AS infinity
+load average:0.33 0.50 0.61
+
+/proc/meminfo:
+MemTotal:        4000752 kB
+MemFree:          437712 kB
+MemAvailable:    1568256 kB
+Buffers:           29104 kB
+Cached:          1302148 kB
+SwapCached:        60576 kB
+Active:          1954888 kB
+Inactive:         904288 kB
+Active(anon):    1082424 kB
+Inactive(anon):   491656 kB
+Active(file):     872464 kB
+Inactive(file):   412632 kB
+Unevictable:          16 kB
+Mlocked:              16 kB
+SwapTotal:       1918356 kB
+SwapFree:        1028956 kB
+Dirty:             43392 kB
+Writeback:             0 kB
+AnonPages:       1499376 kB
+Mapped:           407332 kB
+Shmem:             46164 kB
+KReclaimable:     100632 kB
+Slab:             227144 kB
+SReclaimable:     100632 kB
+SUnreclaim:       126512 kB
+KernelStack:       13460 kB
+PageTables:        22580 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     3918732 kB
+Committed_AS:    5800320 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       26296 kB
+VmallocChunk:          0 kB
+Percpu:           110592 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      395072 kB
+DirectMap2M:     3799040 kB
+DirectMap1G:     2097152 kB
+
+
+CPU:total 2 (1 cores per cpu, 1 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 94
+model name	: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz
+stepping	: 3
+microcode	: 0xcc
+cpu MHz		: 3408.002
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves arat md_clear flush_l1d arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
+bogomips	: 6816.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 45 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 94
+model name	: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz
+stepping	: 3
+microcode	: 0xcc
+cpu MHz		: 3408.002
+cache size	: 8192 KB
+physical id	: 2
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid rdseed adx smap clflushopt xsaveopt xsavec xgetbv1 xsaves arat md_clear flush_l1d arch_capabilities
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit srbds
+bogomips	: 6816.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 45 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 4000752k(437712k free), swap 1918356k(1028956k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.5-b02) for linux-amd64 JRE (1.8.0_05-b13), built on Mar 18 2014 00:29:27 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Sat Mar 27 07:39:22 2021
+elapsed time: 575 seconds
+
