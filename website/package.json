@@ -4,7 +4,7 @@
   "description": "Node.js Rest APIs with express, sequelize and mysql",
   "main": "server.js",
   "scripts": {
-    "test" : "node test.js"
+    "test": "node test.js"
   },
   "keywords": [
     "nodejs",
@@ -23,5 +23,8 @@
     "mysql2": "^3.3.2",
     "sequelize": "^6.31.1",
     "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
   }
 }
