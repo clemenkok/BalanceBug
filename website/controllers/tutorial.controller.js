@@ -1,3 +1,5 @@
+// Accepts input and converts to commands for the model or view. 
+
 const db = require("../models");
 const Tutorial = db.tutorials;
 const Op = db.Sequelize.Op;
