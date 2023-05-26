@@ -25,8 +25,14 @@ app.get("/", (req, res) => {
   res.json({ message: "test." });
 });
 
-// tutorial routes
-require("./routes/map.routes.js")(app);
+// all_info routes
+require("./routes/all_info.routes.js")(app);
+
+// map_info routes
+require("./routes/map_info.routes.js")(app);
+
+// live_database routes
+require("./routes/live_database.routes.js")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
