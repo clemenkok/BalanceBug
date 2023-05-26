@@ -81,8 +81,5 @@ class Map:
         node.coord = roverCoordinates
 
         return directions
-    
-    def getConnectedNodes(self):
-        return list(self.roverPosition.connections.keys())
 
 arenaMap = Map()
