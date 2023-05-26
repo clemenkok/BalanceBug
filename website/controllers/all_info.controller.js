@@ -18,7 +18,7 @@ exports.create = (req, res) => {
     id: req.body.id,
     map_id: req.body.map_id,
     tile_info: req.body.tile_info,
-    tile_number: req.body.time_number
+    tile_number: req.body.tile_number
   };
 
   All_info.create(all_info)

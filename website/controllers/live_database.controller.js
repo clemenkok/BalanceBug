@@ -7,7 +7,7 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Table
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.title) {
+  if (!req.body.tile_num) {
     res.status(400).send({
       message: "Content can not be empty."
     });
@@ -34,8 +34,8 @@ exports.create = (req, res) => {
 
 // Retrieve all items from the database.
 exports.findAll = (req, res) => {
-  const title = req.query.title;
-  var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
+  const tile_num = req.query.tile_num;
+  var condition = tile_num ? { tile_num: { [Op.like]: `%${tile_num}%` } } : null;
 
   Live_database.findAll({ where: condition })
     .then(data => {

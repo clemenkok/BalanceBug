@@ -23,8 +23,8 @@ db.all_info = require("./all_info.model.js")(sequelize, Sequelize);
 db.map_info = require("./map_info.model.js")(sequelize, Sequelize);
 db.live_database = require("./live_database.model.js")(sequelize, Sequelize);
 
-// Define the foreign key relationships
-all_info.belongsTo(map_info, {
+
+db.all_info.belongsTo(db.map_info, {
   foreignKey: 'map_id'
 });
 
