@@ -29,9 +29,21 @@ docker exec -it mysql1 mysql -uroot -p
 node server.js
 ```  
 
-### Deployment to AWS EC2 and S3
+### TODO
 
-TBA  
+- Postman tests for local REST API endpoints
+- Unit tests for local REST API endpoints
+- Add ngrok to expose REST API endpoints for ESP32 connection
+- Test ESP32 connection
+- Write deployment script to AWS EC2 Instance and test scripts to prevent faulty deployment
+- Write report (MVC, Design Pattern, TDD, CI/CD, Architecture, DB Schema)
+- Create new folder for React application
+- Implement UI and write unit tests
+- Connect React frontend to NodeJS backend via REST API endpoints
+- Add Auth through firebase/cognito
+- Integration tests 
+- Deployment to S3, deployment tests 
+- Assist with other areas of project
 
 ## Tests
 
