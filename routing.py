@@ -1,5 +1,5 @@
 # what i will receive:
-# distance travelled
+# distance travelled and end degree
 # new coordinates
 # directions to take
 
@@ -19,13 +19,11 @@ class Node:
         self.edges[node.id].append(distance)
 
 class Map:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+    def __init__(self):
+        self.rootNode = Node(1, (0, 0))
         self.nodes = {1: self.rootNode} # mapping of nodes ids to nodes, it is a bit redundant but easier to search through
         self.roverPosition = self.rootNode
         self.id = 1
-        self.rootNode = Node(1, (0, 0))
         self.DFSvisited = []
         self.DFSstack = [self.rootNode]
 
