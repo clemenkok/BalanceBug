@@ -19,23 +19,23 @@ Hubert Choo, Lee Jian Rong, Yomna Mohamed, Shermaine Ang, Samsam Lee, Clemen Kok
 
 ### To run the NodeJS Backend Server on your machine
 
-Run the following commands (to condense into a shell script later):
+Run the following commands (`./bin/setup.sh`):
 
 ```
-docker run
 docker pull mysql/mysql-server:latest
 docker run -p3306:3306 --name=mysql1 -d mysql/mysql-server:5.7
 docker exec -it mysql1 mysql -uroot -p
-node server.js
+docker run
+docker run -it -e NGROK_AUTHTOKEN=$NGROK_AUTHTOKEN ngrok/ngrok:latest http host.docker.internal:8080
 ```  
 
 ### TODO
 
-- Postman tests for local REST API endpoints
+- ~~Postman tests for local REST API endpoints~~
 - Unit tests for local REST API endpoints
-- Add ngrok to expose REST API endpoints for ESP32 connection
+- ~~Add ngrok to expose REST API endpoints for ESP32 connection~~
 - Test ESP32 connection
-- Write deployment script to AWS EC2 Instance and test scripts to prevent faulty deployment
+- Write deployment script to AWS EC2 Instance and test scripts to prevent faulty deployment (convert setup from docker to docker-compose)
 - Write report (MVC, Design Pattern, TDD, CI/CD, Architecture, DB Schema)
 - Create new folder for React application
 - Implement UI and write unit tests
