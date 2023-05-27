@@ -1,13 +1,14 @@
-// test.js
-
-// Import the assert module for making assertions
 const assert = require('assert');
+const { exec } = require('child_process');
 
-// Describe the test suite
-describe('Test Suite', () => {
-  // Test case: Check if Node.js builds successfully
-  it('should build Node.js successfully', () => {
-    // Make your assertions here
-    assert.ok(true, 'Build successful');
+
+// is this a dumb test lol
+describe('Server Build', function() {
+  this.timeout(10000);
+  it('should build the server successfully', function(done) {
+    exec('node server.js', function(error, stdout, stderr) {
+      assert.strictEqual(error, null, 'Error occurred while building the server');
+      done();
+    });
   });
 });

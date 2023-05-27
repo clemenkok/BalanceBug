@@ -18,7 +18,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: ./app/Dockerfile
+      dockerfile: ./website/Dockerfile
     image: node-mysql-app
     depends_on:
       - mysqldb
