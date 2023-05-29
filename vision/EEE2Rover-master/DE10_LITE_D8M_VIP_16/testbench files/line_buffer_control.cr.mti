@@ -1,0 +1,15 @@
+C:/Users/Hubert/Desktop/BalanceBug/vision/EEE2Rover-master/DE10_LITE_D8M_VIP_16/ip/LINE_BUFFER_CONTROL_TB.v {1 {vlog -work work -stats=none C:/Users/Hubert/Desktop/BalanceBug/vision/EEE2Rover-master/DE10_LITE_D8M_VIP_16/ip/LINE_BUFFER_CONTROL_TB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module LINE_BUFFER_CONTROL_TB
+
+Top level modules:
+	LINE_BUFFER_CONTROL_TB
+
+} {} {}} C:/Users/Hubert/Desktop/BalanceBug/vision/EEE2Rover-master/DE10_LITE_D8M_VIP_16/ip/LINE_BUFFER_CONTROL.v {1 {vlog -work work -stats=none C:/Users/Hubert/Desktop/BalanceBug/vision/EEE2Rover-master/DE10_LITE_D8M_VIP_16/ip/LINE_BUFFER_CONTROL.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module LINE_BUFFER_CONTROL
+
+Top level modules:
+	LINE_BUFFER_CONTROL
+
+} {} {}}
