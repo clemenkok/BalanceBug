@@ -75,23 +75,81 @@ wire [7:0]   red_out, green_out, blue_out;
 
 wire         sop, eop, in_valid, out_ready;
 ////////////////////////////////////////////////////////////////////////
-
+reg [10:0] x, y;
+wire [10:0] x_wire, y_wire;
+assign x_wire = x;
+assign y_wire = y;
+reg packet_video;
 // Detect red areas
 wire red_detect;
-assign red_detect = red[7] & ~green[7] & ~blue[7];
+assign red_detect = red[7] & green[7] & ~blue[7];
 
 // Find boundary of cursor box
 
 // Highlight detected areas
 wire [23:0] red_high;
 assign grey = green[7:1] + red[7:2] + blue[7:2]; //Grey = green/2 + red/4 + blue/4
-assign red_high  =  red_detect ? {8'hff, 8'h0, 8'h0} : {grey, grey, grey};
+/*
+//assign red_high  =  red_detect ? {8'hff, 8'h0, 8'h0} : {grey, grey, grey};
+assign red_high  =  red_detect ? {8'hff, 8'hff, 8'h00} : {grey, grey, grey};
 
 // Show bounding box
 wire [23:0] new_image;
 wire bb_active;
 assign bb_active = (x == left) | (x == right) | (y == top) | (y == bottom);
 assign new_image = bb_active ? bb_col : red_high;
+*/
+
+wire [23:0] new_image;
+wire [7:0] new_red, new_green, new_blue;
+
+GAUSSIAN_BLUR #(
+	.LINE_WIDTH(IMAGE_W),
+	.PIXEL_DATA_WIDTH(8),
+	.NUM_ADDR_BITS_X(11),
+	.NUM_ADDR_BITS_Y(11)
+)
+	GB_RED (
+	.clk(clk),
+	.x(x_wire),
+	.y(y_wire),
+	.curr_pixel_data(red),
+	.blurred_pixel_data(new_red)
+);
+
+
+GAUSSIAN_BLUR #(
+	.LINE_WIDTH(IMAGE_W),
+	.PIXEL_DATA_WIDTH(8),
+	.NUM_ADDR_BITS_X(11),
+	.NUM_ADDR_BITS_Y(11)
+)
+	GB_GREEN (
+	.clk(clk),
+	.x(x_wire),
+	.y(y_wire),
+	.curr_pixel_data(green),
+	.blurred_pixel_data(new_green)
+);
+/*
+GAUSSIAN_BLUR #(
+	.LINE_WIDTH(IMAGE_W),
+	.PIXEL_DATA_WIDTH(8),
+	.NUM_ADDR_BITS_X(10),
+	.NUM_ADDR_BITS_Y(9)
+)
+	GB_BLUE (
+	.clk(clk),
+	.x(x),
+	.y(y),
+	.curr_pixel_data(blue),
+	.blurred_pixel_data(new_blue)
+);
+*/
+
+//assign new_image = {new_red, 8'b0, 8'b0};
+assign new_image = {new_red, new_green, 8'b0};
+
 
 // Switch output pixels depending on mode switch
 // Don't modify the start-of-packet word - it's a packet discriptor
@@ -99,8 +157,7 @@ assign new_image = bb_active ? bb_col : red_high;
 assign {red_out, green_out, blue_out} = (mode & ~sop & packet_video) ? new_image : {red,green,blue};
 
 //Count valid pixels to tget the image coordinates. Reset and detect packet type on Start of Packet.
-reg [10:0] x, y;
-reg packet_video;
+
 always@(posedge clk) begin
 	if (sop) begin
 		x <= 11'h0;

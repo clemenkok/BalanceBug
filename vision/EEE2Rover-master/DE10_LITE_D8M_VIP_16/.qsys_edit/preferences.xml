@@ -3,21 +3,10 @@
  <debug showDebugMenu="0" />
  <systemtable filter="All Interfaces">
   <columns>
-<<<<<<< Updated upstream:DE10_LITE_D8M_VIP_16/.qsys_edit/preferences.xml
-   <connections preferredWidth="143" />
-=======
-<<<<<<< Updated upstream:DE10_LITE_D8M_VIP/.qsys_edit/preferences.xml
-   <connections preferredWidth="303" />
-=======
-   <connections preferredWidth="159" />
->>>>>>> Stashed changes:DE10_LITE_D8M_VIP_16/.qsys_edit/preferences.xml
->>>>>>> Stashed changes:DE10_LITE_D8M_VIP/.qsys_edit/preferences.xml
+   <connections preferredWidth="47" />
    <irq preferredWidth="34" />
-   <name preferredWidth="201" />
-   <export preferredWidth="267" />
   </columns>
  </systemtable>
- <library
-   expandedCategories="Project,Library/Interface Protocols,Library,Library/Interface Protocols/Serial" />
- <window width="1936" height="1063" x="0" y="0" />
+ <library expandedCategories="Library,Project" />
+ <window width="2560" height="1554" x="0" y="0" />
 </preferences>
