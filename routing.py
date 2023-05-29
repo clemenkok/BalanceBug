@@ -1,7 +1,24 @@
 # what i will receive:
-# distance travelled and end degree
+# distance travelled
+# degree to take to parent node
 # new coordinates
 # directions to take
+
+class Edge:
+    def __init__(self, childNode, parentNode):
+        self.turnsToChild = []
+        self.distance = 0
+        self.childNode = childNode
+        self.parentNode = parentNode
+        self.id = str(parentNode.id)+str(childNode.id)
+
+    def addTurn(self, degree, distance = None):
+        self.turnsToChild.append(degree)
+        if len(self.turnsToChild) > 1:
+            self.distance += distance
+
+    def turnsToParent(self):
+        return (self.turnsToChild).reverse
 
 class Node:
     def __init__(self, id, coordinates, parent=None):
@@ -9,14 +26,14 @@ class Node:
         self.coord = coordinates
         self.parent = parent
         self.children = [] # list of children nodes
-        self.edges = {} # edges will be of the form {node.id: [degree to take to go to node, distance to node]}
+    #     self.edges = {} # edges will be of the form {node.id: [degree to take to go to node, distance to node]}
 
-    # add edge to 
-    def addEdge(self, node, degree):
-        self.edges[node.id] = [degree]
+    # # add edge to node
+    # def addEdge(self, node, degree):
+    #     self.edges[node.id] = [degree, None]
 
-    def addDistance(self, node, distance):
-        self.edges[node.id].append(distance)
+    # def addDistance(self, node, distance):
+    #     self.edges[node.id][1] = distance
 
 class Map:
     def __init__(self):
@@ -26,10 +43,11 @@ class Map:
         self.id = 1
         self.DFSvisited = []
         self.DFSstack = [self.rootNode]
+        self.edges = {}
 
     # create the first junction: the root junction
     def start(self, directions):
-        self.createJuncBranches(self.rootNode, directions)
+        self.addNodeBranches(self.rootNode, directions)
         self.DFS()
 
     def DFS(self):
@@ -62,14 +80,29 @@ class Map:
         child = Node(self.id, None, parent)
         self.nodes[child.id] = child
         parent.children.append(child)
-        parent.addEdge(child, degree)
+        edge = Edge(child, parent)
+        edge.addTurn(degree)
+        self.edges[edge.id] = edge
     
     # move rover to node
     def moveToNode(self, node):
         while node not in self.roverPosition.children:
+            # if needed: signal to rover to take the following directions back to parent
+            # child = self.roverPosition
             self.roverPosition = self.roverPosition.parent
-        self.roverPosition = node # TO-D0 SEND MOVEMENT TO ROVER
+            # edgeID = str(self.roverPosition.id) + str(child.id)
+            # turnsToTake = self.edges[edgeID].turnsToParent()
+            # send turnsToTake to rover
+            
+        parent = self.roverPosition
+        self.roverPosition = node # TO-DO: SEND MOVEMENT TO ROVER SEND SIGNAL TO ROVER TO SEND DIRECTIONS TAKEN
+        edgeID = str(parent.id) + str(node.id)
 
+        while 1: # TO-DO: RECEIVE THE DIRECTION TAKEN AND DISTANCE FROM LAST DIRECTION IF NEEDED
+            turnDegree = None
+            prevDistance = None
+            self.edges[edgeID].addTurn(turnDegree, prevDistance)
+        
         directions = [] # TO-DO: RECEIVE POSSIBLE DIRECTIONS FROM VISION
         parentDegree = None # TO-DO RECEIVE END DEGREE OF PATH TO ADD TO EDGES
         parentDistance = None # TO-DO RECEIVE DISTANCE FROM PARENT
