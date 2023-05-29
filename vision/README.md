@@ -63,4 +63,40 @@ My suspicion:
 - eop: end of packet (1 for true)
 - 1 packet per positive clock edge
 - packet_video: 1 if current data packet is a packet that carries video info (?)
+- Pixel data is serial
+
+# Implementing 3x3 Gaussian Kernel
+
+- Implement 4 line buffers
+    - 3 previous line + 1 current line being filled
+    - Each line buffer is an array of size 24 bits (8x3colors) times 640 pixels, so a total of 15360 (parameterisable)
+- Using 3x3 kernal means we will need to store a minimum of 2 full rows of pixels + 3 extra pixels (This is a total of 1283 pixels = 30792 bits
+
+
+http://www.hlam.ece.ufl.edu/EEL4712/LectureNotes/MAX10-EmbeddedMemory.pdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+)
+
 
