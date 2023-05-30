@@ -1,4 +1,3 @@
-
 const { levenbergMarquardt } = require("ml-levenberg-marquardt");
 
 // Creates linear function using the provided slope and intercept parameters
@@ -13,8 +12,10 @@ const y = [1, 1.5, 2];
 // Parameter values to use for first iteration
 const initialValues = [2, -1]; // i.e., y = x
 
-const result = levenbergMarquardt({ x, y }, circle, { initialValues });
-console.log(result);
+export default function nlsr(x, y){
+    return result = levenbergMarquardt({ x, y }, circle, { initialValues });
+}
+
 // { 
 //   parameterValues: [1.9999986750084096, -1.9999943899435104]
 //   parameterError: 6.787132159723697e-11
