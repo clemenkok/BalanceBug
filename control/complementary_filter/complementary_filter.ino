@@ -8,7 +8,7 @@
 #include <Adafruit_Sensor.h>
 
 
-#define INTERVAL_MS_PRINT 200
+#define INTERVAL_MS_PRINT 100
 
 #define G 9.80665
 
@@ -136,8 +136,9 @@ float gyro_roll = 0;
 
 float temp1;
 float temp2;
+float temp3;
 
-float alpha = 0.05;
+float alpha = 0.25;
 
 
 void loop()
@@ -161,23 +162,20 @@ void loop()
     //Serial.println();
 
 
-    Serial.print("gyroscope_x:");
-    Serial.print(temp1);
+    // Serial.print("gyroscope_x:");
+    // Serial.print(temp1);
+    // Serial.print(",");
+    Serial.print("gyroscope_x*dt:");
+    Serial.print(temp3);
     Serial.print(",");
     Serial.print("acc_pitch:");
-    Serial.print(acc_pitch);
-    Serial.print(",");
-    Serial.print("accX:");
-    Serial.print(degrees(accelerometer.x));
-    Serial.print(",");
-    Serial.print("accY:");
-    Serial.print(accelerometer.y);
+    Serial.print(temp2);
     Serial.print(",");
     Serial.print("pitch:");
-    Serial.print(getPitch());
-    Serial.print(",");
-    Serial.print("getRoll:");
-    Serial.println(getRoll());
+    Serial.println(getPitch());
+    // Serial.print(",");
+    // Serial.print("getRoll:");
+    // Serial.println(getRoll());
 
     float currentValue = gyroscope.x;
     float timeStep = (currentMillis - lastPrintMillis)/1000;

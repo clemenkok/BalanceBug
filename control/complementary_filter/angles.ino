@@ -23,8 +23,9 @@ angle calculateGyroscopeAngles(unsigned long sampleMicros)
 
 void detectPitch(angle gyroscope, angle accelerometer)
 {
-  temp1 = (position.x + degrees(gyroscope.x));
+  temp1 = degrees(gyroscope.x);
   temp2 = degrees(accelerometer.x);
+  temp3 = (position.x + degrees(gyroscope.x));
   position.x = (1-alpha) * (position.x + degrees(gyroscope.x)) + alpha * degrees(accelerometer.x);
 }
 
