@@ -7,7 +7,7 @@ import User from './assets/User.png'
 import Calendar from './assets/Calendar.png'
 import Search from './assets/Search.png'
 import Chart from './assets/Chart.png'
-import Grid from './grid'
+import Grid from './components/grid'
 
 const App = () => {
   const [open, setOpen] = useState(true);
@@ -68,7 +68,7 @@ const App = () => {
       </div>
       <div className="h-screen flex-1 p-7">
         <h1 className="text-2xl font-mono ">Maze Map</h1>
-           <Grid/>
+          <Grid />
       </div>
     </div>
   );
