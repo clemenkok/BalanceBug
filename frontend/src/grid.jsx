@@ -62,6 +62,34 @@ const Grid = () => {
     <div>
       {matrix.map((row, rowIndex) => (
         <div key={rowIndex} className="flex">
+          {row.map((side, colIndex) => (
+            <div
+              key={colIndex}
+              style={{
+                width: '10px',
+                height: '10px',
+                borderTop:  side[0] ? '2px solid black' : '1px solid white',
+                borderBottom: side[1] ?  '2px solid black' : '1px solid white',
+                borderLeft: side[2] ? '2px solid black' : '1px solid white',
+                borderRight: side[3] ? '2px solid black' : '1px solid white',
+                backgroundColor: side[4] ? 'Yellow' : 'WhiteSmoke',
+
+              }}
+            />
+          ))}
+        </div>
+      ))}
+    </div>
+    </div>
+  </div>
+  )
+  /*
+  return (
+    <div class="flex items-center justify-center h-screen">
+    <div class="text-center">
+    <div>
+      {matrix.map((row, rowIndex) => (
+        <div key={rowIndex} className="flex">
           {row.map((side, sideIndex) => (
               <div key={sideIndex} className="flex">
                 {side.map((element, infoIndex) => (
@@ -70,11 +98,11 @@ const Grid = () => {
                     style={{
                       width: '15px',
                       height: '15px',
-                      backgroundColor: 'WhiteSmoke',
                       borderTop:  element == 1 ? '2px solid black' : '1px solid white',
                       borderBottom: element == 2 ?  '2px solid black' : '1px solid white',
                       borderLeft: element == 3 ?'2px solid black' : '1px solid white',
                       borderRight: element == 4 ? '2px solid black' : '1px solid white',
+                      backgroundColor: element == 5 ? 'Yellow' : 'WhiteSmoke',
                     }}
                   />
                 ))}
@@ -86,6 +114,7 @@ const Grid = () => {
     </div>
   </div>
   )
+  */
 }
 
 export default Grid
