@@ -9,7 +9,7 @@ const Grid = () => {
   useEffect(() => {
     const fetchMatrix = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/matrix');
+        const response = await axios.get(process.env.REACT_APP_MATRIX);
         const { matrix } = response.data;
         console.log(matrix);
         setMatrix(matrix);
@@ -24,19 +24,45 @@ const Grid = () => {
       clearInterval(pollingInterval); // Clean up the interval on component unmount
     };
 
-  }, []);
+  }, [])
+  
+  const start = () => {
+    axios.post(process.env.REACT_APP_START)
+      .then((response) => {
+        // Handle the API response data
+        console.log(response.data);
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error('Error:', error);
+      });
+  }
+
+  const stop = () => {
+    axios.post(process.env.REACT_APP_STOP)
+      .then((response) => {
+        // Handle the API response data
+        console.log(response.data);
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error('Error:', error);
+      });
+  }
+
+  ;
 
   return (
-    <div class="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen">
       <div className="flex space-x-2 mb-5">
-        <button className="bg-dark-purple hover:bg-gray-800 text-white font-mono py-4 px-6 rounded-full transform transition-all duration-300 scale-100 hover:scale-110">
+        <button onClick={start} className="bg-dark-purple hover:bg-gray-800 text-white font-mono py-4 px-6 rounded-full transform transition-all duration-300 scale-100 hover:scale-110">
         START
         </button>
-        <button className="bg-dark-purple hover:bg-gray-800 text-white font-mono py-4 px-6 rounded-full transform transition-all duration-300 scale-100 hover:scale-110">
+        <button onClick={stop} className="bg-dark-purple hover:bg-gray-800 text-white font-mono py-4 px-6 rounded-full transform transition-all duration-300 scale-100 hover:scale-110">
         STOP
         </button>
       </div>
-      <div class="text-center">
+      <div className="text-center">
       <input
           type="range"
           min="0"
