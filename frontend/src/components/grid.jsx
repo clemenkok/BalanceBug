@@ -12,7 +12,7 @@ const Grid = () => {
     const fetchMatrix = async () => {
       try {
 
-        const matrix = [];
+        const matrix = []; // this may not refresh for a new update, but we cross that bridge later lol
   
         for (let i = 0; i < 35; i++) {
           const row = Array(35).fill([0, 0, 0, 0, 0]);
@@ -30,12 +30,6 @@ const Grid = () => {
         console.log('Updated Array:', matrix);
         setMatrix(matrix); 
         
-
-/*         const response = await axios.get(process.env.REACT_APP_MATRIX);
-        const { matrix } = response;
-        // Log the updated array (testing)
-        console.log('Updated Array:', matrix);
-        setMatrix(matrix); */
       } catch (error) {
         console.error('Error fetching matrix:', error);
       }
