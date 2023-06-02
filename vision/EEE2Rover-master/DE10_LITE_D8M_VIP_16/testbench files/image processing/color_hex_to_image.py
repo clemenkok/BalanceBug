@@ -1,11 +1,11 @@
 import numpy as np
 from PIL import Image
 
-width, height = 1920, 1080
+width, height = 640, 360
 
-f_red = open('rolls_red_channel_out.txt','r')
-f_blue = open('rolls_blue_channel_out.txt','r')
-f_green = open('rolls_green_channel_out.txt','r')
+f_red = open('dimmer_red_channel_out.txt','r')
+f_blue = open('dimmer_blue_channel_out.txt','r')
+f_green = open('dimmer_green_channel_out.txt','r')
 
 image = []
 
@@ -33,7 +33,7 @@ for i in range(height):
 image = np.array(image)
 
 im = Image.fromarray(np.uint8(image))
-im = im.save("new1.jpg")
+im = im.save("dimmer_beacons_blurred.jpg")
 '''
 returned_image = open('returned_image.jpg', 'wb')
 returned_image.write(data)

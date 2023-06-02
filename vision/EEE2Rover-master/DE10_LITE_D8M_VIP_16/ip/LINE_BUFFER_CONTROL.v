@@ -19,6 +19,7 @@ module LINE_BUFFER_CONTROL #(
 
     // write one pixel data
     input wire [PIXEL_DATA_WIDTH-1:0]       wr_data,
+    input wire                              in_valid,
 
     // 3 rows of output to convolve with Gaussian kernal
     output wire [3*PIXEL_DATA_WIDTH-1:0]    top_row_data,
@@ -39,12 +40,14 @@ module LINE_BUFFER_CONTROL #(
     initial lb_wr_select = 2'd0;
 
     always@(posedge clk) begin
-        if (x == 0 && y == 0) begin
-            lb_wr_select <= 2'd0;
-        end
-        else if (x == LINE_WIDTH-1) begin
-            if (lb_wr_select == 3) lb_wr_select <= 0;
-            else lb_wr_select <= lb_wr_select + 1;
+        if (in_valid) begin
+            if (x == 0 && y == 0) begin
+                lb_wr_select <= 2'd0;
+            end
+            else if (x == LINE_WIDTH-1) begin
+                if (lb_wr_select == 3) lb_wr_select <= 0;
+                else lb_wr_select <= lb_wr_select + 1;
+            end
         end
     end
 
@@ -98,7 +101,8 @@ module LINE_BUFFER_CONTROL #(
         .wr_en(lb_wr_select == 0),
         .wr_data(wr_data),
         .rd_data(lb0_rdata),
-        .addr(x)
+        .addr(x),
+        .in_valid(in_valid)
     );
 
     LINE_BUFFER #(
@@ -111,7 +115,8 @@ module LINE_BUFFER_CONTROL #(
         .wr_en(lb_wr_select == 1),
         .wr_data(wr_data),
         .rd_data(lb1_rdata),
-        .addr(x)
+        .addr(x), 
+        .in_valid(in_valid)
     );
 
     LINE_BUFFER #(
@@ -124,7 +129,8 @@ module LINE_BUFFER_CONTROL #(
         .wr_en(lb_wr_select == 2),
         .wr_data(wr_data),
         .rd_data(lb2_rdata),
-        .addr(x)
+        .addr(x),
+        .in_valid(in_valid)
     );
 
     LINE_BUFFER #(
@@ -137,7 +143,8 @@ module LINE_BUFFER_CONTROL #(
         .wr_en(lb_wr_select == 3),
         .wr_data(wr_data),
         .rd_data(lb3_rdata),
-        .addr(x)
+        .addr(x),
+        .in_valid(in_valid)
     );
     
 endmodule

@@ -10,6 +10,7 @@ module GAUSSIAN_BLUR #(
     input wire                              clk,
     input wire [NUM_ADDR_BITS_X-1:0]        x, //x coordinate of pixel
     input wire [NUM_ADDR_BITS_Y-1:0]        y, //y coordinate of pixel
+    input wire                              in_valid,
 
     // current pixel data
     input wire [PIXEL_DATA_WIDTH-1:0]       curr_pixel_data,
@@ -38,7 +39,8 @@ LINE_BUFFER_CONTROL #(
     .top_row_data(top_row_data),
     .mid_row_data(mid_row_data),
     .bottom_row_data(bottom_row_data),
-    .rd_valid(rd_valid)
+    .rd_valid(rd_valid),
+    .in_valid(in_valid)
 );
 
 wire [9*PIXEL_DATA_WIDTH-1:0] color_matrix;

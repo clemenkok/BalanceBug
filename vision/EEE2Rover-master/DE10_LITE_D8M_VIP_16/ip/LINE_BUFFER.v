@@ -5,6 +5,7 @@ module LINE_BUFFER #(
 ) (
     input wire                              clk,
     input wire                              wr_en,
+    input wire                              in_valid,
 
     // Read and Write
     input wire [PIXEL_DATA_WIDTH-1:0]       wr_data, // write 1 pixel at a time
@@ -24,17 +25,19 @@ module LINE_BUFFER #(
 
     // write on clk rising edge if wr_en
     always@(posedge clk) begin
-        if (wr_en) begin
-            mem[addr] <= wr_data;
+        if (in_valid) begin
+            if (wr_en) begin
+                mem[addr] <= wr_data;
+            end
+            //rd_data_internal <= {mem[addr-1], mem[addr], mem[addr+1]};
+            rd_data_internal <= {prev_prev_read, prev_read, mem[addr+1]};
         end
-        //rd_data_internal <= {mem[addr-1], mem[addr], mem[addr+1]};
-        rd_data_internal <= {prev_prev_read, prev_read, mem[addr+1]};
     end
-    /*
+    
     always@(negedge clk) begin
         prev_prev_read <= prev_read;
         prev_read <= rd_data_internal[PIXEL_DATA_WIDTH-1:0];
     end
-    */
+    
 
 endmodule
