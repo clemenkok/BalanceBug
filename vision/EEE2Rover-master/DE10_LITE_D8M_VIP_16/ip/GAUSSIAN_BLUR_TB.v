@@ -14,10 +14,10 @@ module GAUSSIAN_BLUR_TB;
 
     // [7:0] 8 bits of data per pixel color
     // [0:63] a total of 64 pixels in 64 lines (8 lines of 8 pixels)
-    reg [7:0] read_data [0:2073600];
+    reg [7:0] read_data [0:230400];
 
     GAUSSIAN_BLUR #(
-        .LINE_WIDTH(1920),
+        .LINE_WIDTH(640),
         .PIXEL_DATA_WIDTH(8),
         .NUM_ADDR_BITS_X(11),
         .NUM_ADDR_BITS_Y(11)
@@ -27,25 +27,26 @@ module GAUSSIAN_BLUR_TB;
         .x(x),
         .y(y),
         .curr_pixel_data(curr_pixel_data),
-        .blurred_pixel_data(blurred_pixel_data)
+        .blurred_pixel_data(blurred_pixel_data),
+        .in_valid(1'b1)
     );
 
     initial begin
         clk = 1'b0;
-        repeat(2073601*2) #10 clk = ~clk; // generate a clock
+        repeat(230400*2) #10 clk = ~clk; // generate a clock
     end
 
     initial begin
         x = 1'b0;
         y = 1'b0;
         i = 0;
-        $readmemh("test_input_output_files/rolls_blue_channel.txt", read_data);
-        write_data = $fopen("test_input_output_files/rolls_blue_channel_out.txt");
-        repeat(2073601) @(posedge clk) begin
+        $readmemh("test_input_output_files/dimmer_green_channel.txt", read_data);
+        write_data = $fopen("test_input_output_files/dimmer_green_channel_out.txt");
+        repeat(230400) @(posedge clk) begin
             curr_pixel_data = read_data[i];
             $fdisplay(write_data, "%h", blurred_pixel_data);
             i = i + 1;
-            if (x == 1919) begin
+            if (x == 639) begin
                 x = 0;
                 y = y + 1;
             end

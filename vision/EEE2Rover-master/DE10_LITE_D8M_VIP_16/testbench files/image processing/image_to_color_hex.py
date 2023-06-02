@@ -1,16 +1,16 @@
 from PIL import Image
 
 #img = Image.open('small_rolls.jpg')
-img = Image.open('rolls_royce_phantom.jpg')
+img = Image.open('dimmer_beacons.jpg')
 pixels = img.load() 
 width, height = img.size
 
 print(width, height)
 
 # write the red, green, and blue channels into different files
-f_red = open('image_red_channel.txt','w')
-f_blue = open('image_blue_channel.txt','w')
-f_green = open('image_green_channel.txt','w')
+f_red = open('dimmer_red_channel.txt','w')
+f_blue = open('dimmer_blue_channel.txt','w')
+f_green = open('dimmer_green_channel.txt','w')
 
 for y in range(height):      # this row
     for x in range(width):   # and this row was exchanged

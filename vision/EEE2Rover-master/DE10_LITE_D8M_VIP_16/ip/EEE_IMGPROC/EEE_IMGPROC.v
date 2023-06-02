@@ -76,9 +76,6 @@ wire [7:0]   red_out, green_out, blue_out;
 wire         sop, eop, in_valid, out_ready;
 ////////////////////////////////////////////////////////////////////////
 reg [10:0] x, y;
-wire [10:0] x_wire, y_wire;
-assign x_wire = x;
-assign y_wire = y;
 reg packet_video;
 // Detect red areas
 //wire red_detect;
@@ -95,12 +92,15 @@ assign grey = green[7:1] + red[7:2] + blue[7:2]; //Grey = green/2 + red/4 + blue
 //assign red_high  =  red_detect ? {8'hff, 8'h0, 8'h0} : {grey, grey, grey};
 //assign red_high  =  red_detect ? {8'hff, 8'hff, 8'h00} : {grey, grey, grey};
 
+/*
 // Show bounding box
 wire [23:0] new_image;
 wire bb_active;
 assign bb_active = (x == left) | (x == right) | (y == top) | (y == bottom);
 assign new_image = bb_active ? bb_col : red_high;
+*/
 
+/*
 // State machine to change between colors for detection on consecutive frames
 reg [1:0] curr_color; // 0 for red, 1 for blue, 2 for yellow
 reg [1:0] next_color;
@@ -128,8 +128,8 @@ end
 always@(posedge sop) begin
 	curr_color = next_color;
 end
+*/
 
-/*
 wire [23:0] new_image;
 wire [7:0] new_red, new_green, new_blue;
 
@@ -142,10 +142,11 @@ GAUSSIAN_BLUR #(
 )
 	GB_RED (
 	.clk(clk),
-	.x(x_wire),
-	.y(y_wire),
+	.x(x),
+	.y(y),
 	.curr_pixel_data(red),
-	.blurred_pixel_data(new_red)
+	.blurred_pixel_data(new_red),
+	.in_valid(in_valid)
 );
 
 
@@ -157,12 +158,13 @@ GAUSSIAN_BLUR #(
 )
 	GB_GREEN (
 	.clk(clk),
-	.x(x_wire),
-	.y(y_wire),
+	.x(x),
+	.y(y),
 	.curr_pixel_data(green),
-	.blurred_pixel_data(new_green)
+	.blurred_pixel_data(new_green),
+	.in_valid(in_valid)
 );
-*/
+
 /*
 GAUSSIAN_BLUR #(
 	.LINE_WIDTH(IMAGE_W),
@@ -180,7 +182,7 @@ GAUSSIAN_BLUR #(
 */
 
 //assign new_image = {new_red, 8'b0, 8'b0};
-//assign new_image = {new_red, new_green, 8'b0};
+assign new_image = {new_red, new_green, 8'b0};
 
 
 // Switch output pixels depending on mode switch
