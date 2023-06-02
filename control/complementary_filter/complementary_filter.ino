@@ -39,6 +39,8 @@ struct angle {
 
 angle position;
 
+float velocity = 0.0;
+
 unsigned long lastPrintMillis = 0;
 unsigned long lastSampleMicros = 0;
 
@@ -139,6 +141,7 @@ float temp2;
 float temp3;
 
 float alpha = 0.25;
+float beta = 0.25;
 
 
 void loop()
@@ -231,6 +234,8 @@ bool readSample()
 
   readRawImu();
 
+  float raw_acc = accelerometer.x * 9.807;
+
   normalize(gyroscope);
   normalize(accelerometer);
 
@@ -239,6 +244,8 @@ bool readSample()
 
   detectPitch(gyroscope, accelerometer);
   detectRoll(gyroscope, accelerometer);
+
+  detectVelocity(raw_acc, getPitch(), 0);
 
   return true;
 }

@@ -43,3 +43,14 @@ double getRoll()
 {
   return position.y;
 }
+
+
+void detectVelocity(float raw_acc, angle pitch, float motorvel){
+  velocity = (1-beta) * (velocity + raw_acc * pitch) + beta * motorvel;
+
+  //21.2/200 = 0.106cm = 0.00106m
+}
+
+float getVelocity(){
+  return velocity;
+}
