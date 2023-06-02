@@ -1,9 +1,0 @@
-C:/Users/Hubert/Desktop/BalanceBug/vision/EEE2Rover-master/DE10_LITE_D8M_VIP_16/ip/GAUSSIAN_BLUR.v {0 {vlog -work work -stats=none C:/Users/Hubert/Desktop/BalanceBug/vision/EEE2Rover-master/DE10_LITE_D8M_VIP_16/ip/GAUSSIAN_BLUR.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-** Error: (vlog-66) Execution of vlib.exe failed. Please check the error log for more details.
-
-} {3.0 4.0} {}} C:/Users/Hubert/Desktop/BalanceBug/vision/EEE2Rover-master/DE10_LITE_D8M_VIP_16/ip/GAUSSIAN_BLUR_TB.v {0 {vlog -work work -stats=none C:/Users/Hubert/Desktop/BalanceBug/vision/EEE2Rover-master/DE10_LITE_D8M_VIP_16/ip/GAUSSIAN_BLUR_TB.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-** Error: (vlog-66) Execution of vlib.exe failed. Please check the error log for more details.
-
-} {3.0 4.0} {}}

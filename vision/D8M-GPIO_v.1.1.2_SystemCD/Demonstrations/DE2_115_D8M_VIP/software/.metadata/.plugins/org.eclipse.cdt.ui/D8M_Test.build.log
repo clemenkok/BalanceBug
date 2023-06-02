@@ -1,9 +1,0 @@
-10:18:41 **** Incremental Build of configuration Nios II for project D8M_Test ****
-make all 
-Info: Building ../D8M_Test_bsp/
-E:/intelFPGA/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../D8M_Test_bsp/
-[BSP build complete]
-[D8M_Test build complete]
-
-10:18:42 Build Finished (took 742ms)
-

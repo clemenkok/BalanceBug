@@ -3,23 +3,23 @@ module.exports = app => {
   
     var router = require("express").Router();
   
-    // Create a new Tutorial
+    // Create new row for tile information 
     router.post("/", live_database.create);
+/*   
+    // Retrieve all tile info
+    router.get("/", live_database.findAll); */
   
-    // Retrieve all Tutorials
-    router.get("/", live_database.findAll);
-  
-    // Retrieve a single Tutorial with id
-    router.get("/:id", live_database.findOne);
-  
-    // Update a Tutorial with id
+    // Retrieve a single tile info with id
+    router.get("/latest", live_database.findOne);
+  /* 
+    // Update a tile info with id
     router.put("/:id", live_database.update);
   
-    // Delete a Tutorial with id
+    // Delete a tile info with id
     router.delete("/:id", live_database.delete);
   
-    // Create a new Tutorial
+    // Delete new tile info
     router.delete("/", live_database.deleteAll);
-  
+   */
     app.use('/api/live_database', router);
   };    

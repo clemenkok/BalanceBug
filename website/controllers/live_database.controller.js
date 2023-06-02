@@ -1,10 +1,12 @@
 // Accepts input and converts to commands for the model or view. 
+// TODO: GET endpoint for requesting latest DB record (completed)
+// TODO: Test with React FE
 
 const db = require("../models");
 const Live_database = db.live_database;
 const Op = db.Sequelize.Op;
 
-// Create and Save a new Table
+// Create and Save a new row containing tile info
 exports.create = (req, res) => {
   // Validate request
   if (!req.body.tile_num) {
@@ -14,15 +16,23 @@ exports.create = (req, res) => {
     return;
   }
 
+  // updates map in memory
+  let updatedTileInfo = req.body.tile_info;
+  let newGlobalX = req.body.tile_num[0];
+  let newGlobalY = req.body.tile_num[1];
+  globalMap[newGlobalX][newGlobalY] = updatedTileInfo;
+
+  // Log the updated array (testing)
+  console.log('Updated Array:', globalMap);
+
   const live_database = {
     tile_num: req.body.tile_num,
-    tile_info: req.body.tile_info,
-    last_visited: req.body.last_visited
+    tile_info: req.body.tile_info
   };
 
   Live_database.create(live_database)
     .then(data => {
-      res.send(data);
+      res.send("tile_info successfully created:" + data);
     })
     .catch(err => {
       res.status(500).send({
@@ -31,6 +41,28 @@ exports.create = (req, res) => {
       });
     });
 };
+
+// Find the latest tile information (completed)
+exports.findOne = (req, res) => {
+
+  Live_database.findOne({
+    order: [['createdAt', 'DESC']],
+  })
+    .then(data => {
+      /* updates map in memory
+      let updatedTileInfo = data.tile_info;
+      let newGlobalX = data.tile_num[0];
+      let newGlobalY = data.tile_num[1];
+      globalMap[newGlobalX][newGlobalY] = updatedTileInfo; */
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: err.message || "Error retrieving latest live db tile"
+      });
+    });
+};
+/* 
 
 // Retrieve all items from the database.
 exports.findAll = (req, res) => {
@@ -45,21 +77,6 @@ exports.findAll = (req, res) => {
       res.status(500).send({
         message:
           err.message || "Some error occurred while retrieving live_database."
-      });
-    });
-};
-
-// Find a single map data with an id
-exports.findOne = (req, res) => {
-  const id = req.params.id;
-
-  Live_database.findByPk(id)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message: "Error retrieving live_database with id=" + id
       });
     });
 };
@@ -130,4 +147,4 @@ exports.deleteAll = (req, res) => {
           err.message || "Some error occurred while removing all live_database."
       });
     });
-};
+}; */

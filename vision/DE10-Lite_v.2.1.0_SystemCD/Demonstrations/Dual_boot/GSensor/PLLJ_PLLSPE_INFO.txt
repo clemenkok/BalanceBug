@@ -1,5 +1,0 @@
-PLL_Name	spi_pll:u_spi_pll|altpll:altpll_component|spi_pll_altpll:auto_generated|pll1
-PLLJITTER	37
-PLLSPEmax	84
-PLLSPEmin	-53
-
