@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:3000"
+  origin: ["http://frontend:3000", "http://mysql:3306"]
 };
 
 app.use(cors(corsOptions));

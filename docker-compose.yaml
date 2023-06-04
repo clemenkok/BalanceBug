@@ -1,4 +1,7 @@
 version: '3.8'
+networks:
+    app-tier:
+        driver: bridge
 services:
   # Node.js application
   website:
@@ -8,25 +11,35 @@ services:
     ports:
       - 8080:8080
     depends_on:
-      - mysql
+      mysql:
+        condition: service_healthy
+    networks:
+        - app-tier
     volumes:
       - ./website:/app
     environment:
-      - DB_HOST=${DB_HOST}
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_NAME=${DB_NAME}
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASSWORD=123456
+      - DB_NAME=testdb
       
   # MySQL database
   mysql:
-    image: mysql:5.7
+    container_name: mysql
+    image: mysql:8.0
     ports:
       - 3306:3306
     environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=testdb
     volumes:
       - ./mysql/data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "mysql"]
+      timeout: 10s
+      retries: 3
+    networks:
+        - app-tier
 
   # React frontend
   frontend:
@@ -37,4 +50,5 @@ services:
       - 3000:3000
     volumes:
       - ./frontend:/app
-
+    networks:
+        - app-tier
