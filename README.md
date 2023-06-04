@@ -8,6 +8,10 @@
 └── website // contains code for nodejs server
 ```
 
+## Architecture
+
+[arch](https://ibb.co/rfYRsJq)
+
 ## DevOps Workflow
 
 - The code contained within this branch is code that will be deployed onto our EC2 instance via a simple CI/CD script that does two things: (1) it tests our code to see if it builds and (2) if so it deploys to the EC2 instance via `ssh` using our AWS private key, EC2 hostname and user_name. Then it pulls the latest changes into the code on the EC2 instance and runs `docker-compose up` to start the server.  
