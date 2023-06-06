@@ -54,3 +54,11 @@ void detectVelocity(float raw_acc, angle pitch, float motorvel){
 float getVelocity(){
   return velocity;
 }
+
+
+float getAngularVel(int steps, float deltaT){
+
+  //steps/200 * 2 pi / T
+
+  return (steps/200) * 2 * 3.14159265359 / deltaT;
+}
