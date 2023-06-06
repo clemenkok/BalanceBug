@@ -56,11 +56,11 @@ float getVelocity(){
 }
 
 
-float getSraightAngularVel(float linearvel){
+float getSraightAngularVel(){
 
   // angular velocity of the wheel = linearvel / 21.2 * 2 * pi
 
-  return linearvel /21.2 * 2 * 3.14159265359;
+  return velocity /21.2 * 2 * 3.14159265359;
 }
 
 
