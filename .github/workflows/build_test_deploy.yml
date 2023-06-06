@@ -1,0 +1,43 @@
+name: BalanceBug Build, Test, Deploy 
+
+on:
+  push:
+    branches: [ prod ]
+
+jobs:
+# First we will see the application builds, then we will deploy in EC2
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Build the docker_compose
+      run: docker-compose up -d --build
+      
+    - name: Buid the application
+      run: docker-compose exec -T BalanceBug npm run build
+
+  Deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2 
+      - name: Deploy in EC2
+        env:
+            PRIVATE_KEY: ${{ secrets.AWS_PRIVATE_KEY  }}
+            HOSTNAME : ${{ secrets.HOSTNAME  }}
+            USER_NAME : ${{ secrets.USER_NAME  }}
+            
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
+          
+            cd /home/ubuntu/BalanceBug &&
+            git checkout prod &&
+            git fetch --all &&
+            git reset --hard origin/prod &&
+            git pull origin prod &&
+            docker-compose -f docker-compose.yml up -d --build 
+          '
