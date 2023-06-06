@@ -26,7 +26,7 @@ const float velocityFilterAlpha = radius/2;  // Velocity filter alpha value
 const float angularVelocityConst = radius/length;
 
 // Setpoints
-float pitchSetpoint = 0.0;   // Pitch angle setpoint
+// float pitchSetpoint = 0.0;   // Pitch angle setpoint
 float velocitySetpoint = 0.0;   // Linear velocity setpoint
 float angularVelocitySetpoint = 0.0;  // Angular velocity setpoint
 
@@ -57,7 +57,7 @@ void balancersetup() {
   pinMode(motorRPin, OUTPUT);
 }
 
-void balancerloop() {
+void pitchAngleControlLoop() {
   // Update sensor readings
   updateSensors();
 
@@ -66,6 +66,7 @@ void balancerloop() {
 
   // Apply motor voltages
   applyMotorVoltages(leftMotorVoltage, rightMotorVoltage);
+  delay(10);
 
 
   // velocity
@@ -75,9 +76,14 @@ void balancerloop() {
   // gyroscope.y
   // gyroscope.z
 
-  //test print raw data
-  Serial.print("gyroscope.x:");
-  Serial.print(gyroscope.x);
+  // test print raw data
+  // Serial.print("gyroscope.x:");
+  // Serial.print(gyroscope.x);
+}
+
+void linearVelocityControlLoop(){
+  updateLinearControl();
+  delay(20);
 }
 
 void updateSensors() {
@@ -86,32 +92,31 @@ void updateSensors() {
   pitchAngle = map(sensorValue, 0, 1023, -90, 90);  // Map sensor value to pitch angle range
 
   // get angular velocity
-  angularVelocityL = ??; // need to calculate 
-  angularVelocityR = ??; // need to calculate 
+  // probably need to do smth about the turning part (how will i know when it wants to turn)
+  // if going straight
+  angularVelocityL = getSraightAngularVel() = angularVelocityR; // need to calculate 
+   // or maybe just use velocity? idk can test and see if theres a difference?
+
+  // if turning left
+  angularVelocityR = getTurnAngularVel(abs(gyroscope.z - lastyaw), millis() - lastPrintMillis);
+
+  // if turning right
+  angularVelocityL = getTurnAngularVel(abs(gyroscope.z - lastyaw), millis() - lastPrintMillis);
+
+  //for all cases
   angularVelocity = angularVelocityConst * (angularVelocityR - angularVelocityL);
-
-  // get linear velocity
   linearVelocity = angularVelocityL + angularVelocityR;
-
 
 }
 
-void updateControl() {
-  // Pitch angle control
-  float pitchError = pitchSetpoint - pitchAngle;
+void updatePitchControl() {
+  // Pitch angle control (inner loop)
+  float pitchError = velocityOutput - pitchAngle;
   float pitchErrorDelta = pitchError - lastPitchError;
   pitchErrorSum += pitchError;
 
   // Calculate pitch angle PID control output
   float pitchOutput = pitchKp * pitchError + pitchKi * pitchErrorSum + pitchKd * pitchErrorDelta;
-  
-  // Linear velocity control
-  float velocityError = velocitySetpoint - linearVelocity;
-  float velocityErrorDelta = velocityError - lastVelocityError;
-  velocityErrorSum += velocityError;
-
-  // Calculate linear velocity PID control output
-  float velocityOutput = velocityKp * velocityError + velocityKi * velocityErrorSum + velocityKd * velocityErrorDelta;
 
   // Angular velocity control
   float angularVelocityError = angularVelocitySetpoint - angularVelocity;
@@ -122,13 +127,24 @@ void updateControl() {
   float angularVelocityOutput = angularVelocityKp * angularVelocityError + angularVelocityKi * angularVelocityErrorSum + angularVelocityKd * angularVelocityErrorDelta;
 
   // Calculate left and right motor voltages based on the control outputs
-  float leftMotorVoltage = velocityOutput + angularVelocityOutput;
-  float rightMotorVoltage = velocityOutput - angularVelocityOutput;
+  float leftMotorVoltage = pitchOutput - angularVelocityOutput;
+  float rightMotorVoltage = pitchOutout + angularVelocityOutput;
 
   // Store current errors for the next iteration
   lastPitchError = pitchError;
-  lastVelocityError = velocityError;
   lastAngularVelocityError = angularVelocityError;
+}
+
+void updateLinearControl() {
+  // Linear velocity control
+  float velocityError = velocitySetpoint - linearVelocity;
+  float velocityErrorDelta = velocityError - lastVelocityError;
+  velocityErrorSum += velocityError;
+
+  // Calculate linear velocity PID control output
+  float velocityOutput = velocityKp * velocityError + velocityKi * velocityErrorSum + velocityKd * velocityErrorDelta;
+
+  lastVelocityError = velocityError;
 }
 
 void applyMotorVoltages(float leftVoltage, float rightVoltage) {
