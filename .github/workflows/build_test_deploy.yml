@@ -43,4 +43,5 @@ jobs:
             docker build -t reverseproxy . &&
             cd .. &&
             docker compose -f docker-compose.yaml up -d --build 
+            docker compose ps
           '
