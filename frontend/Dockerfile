@@ -20,9 +20,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Serve the built React app
-# CMD ["npx", "serve", "-s", "build"]
-
-# Serve website on public internet
-RUN cd ../../
-RUN sudo cp -r build /var/www/html
-RUN sudo mv build/* .
+CMD ["npx", "serve", "-s", "build"]
