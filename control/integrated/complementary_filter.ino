@@ -1,6 +1,4 @@
-// -------------------------------------------------
-// Copyright (c) 2023 HiBit <https://www.hibit.dev>
-// -------------------------------------------------
+//https://www.hibit.dev/posts/92/complementary-filter-and-relative-orientation-with-mpu6050
 
 #include "Wire.h"
 #include "I2C.h"
@@ -49,6 +47,8 @@ void setup()
    Serial.begin(115200);
   while (!Serial)
     delay(10); // will pause Zero, Leonardo, etc until serial console opens
+
+  balancersetup();
 
   Serial.println("Adafruit MPU6050 test!");
 
@@ -152,6 +152,7 @@ void loop()
 
   readRawImu();
   pitchrollfiltering();
+  balancerloop();
 
   if (currentMillis - lastPrintMillis > INTERVAL_MS_PRINT) {
 
