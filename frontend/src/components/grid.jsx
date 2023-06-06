@@ -6,13 +6,30 @@ const Grid = () => {
 
   const [matrix, setMatrix] = useState([]);
 
+  
+
   useEffect(() => {
     const fetchMatrix = async () => {
       try {
+
+        const matrix = []; // this may not refresh for a new update, but we cross that bridge later lol
+  
+        for (let i = 0; i < 35; i++) {
+          const row = Array(35).fill([0, 0, 0, 0, 0]);
+          matrix.push(row);
+        } 
         const response = await axios.get(process.env.REACT_APP_MATRIX);
-        const { matrix } = response.data;
-        console.log(matrix);
-        setMatrix(matrix);
+        console.log(response.data.tile_info)
+        let updatedTileInfo = response.data.tile_info;
+        let newGlobalX = response.data.tile_num[0];
+        let newGlobalY = response.data.tile_num[1];
+    
+        matrix[newGlobalX][newGlobalY] = updatedTileInfo;
+     
+        // Log the updated array
+        console.log('Updated Array:', matrix);
+        setMatrix(matrix); 
+        
       } catch (error) {
         console.error('Error fetching matrix:', error);
       }
