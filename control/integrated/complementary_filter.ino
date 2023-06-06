@@ -1,12 +1,10 @@
-// -------------------------------------------------
-// Copyright (c) 2023 HiBit <https://www.hibit.dev>
-// -------------------------------------------------
+//https://www.hibit.dev/posts/92/complementary-filter-and-relative-orientation-with-mpu6050
 
 #include "Wire.h"
 #include "I2C.h"
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
-
+#include "math.h"
 
 #define INTERVAL_MS_PRINT 100
 
@@ -49,6 +47,8 @@ void setup()
    Serial.begin(115200);
   while (!Serial)
     delay(10); // will pause Zero, Leonardo, etc until serial console opens
+
+  balancersetup();
 
   Serial.println("Adafruit MPU6050 test!");
 
@@ -125,7 +125,7 @@ void setup()
 delay(1000);
 }
 
-
+int printloopcount = 0;
 
 float integral=0;
 float previousValue = 0.0;
@@ -143,6 +143,9 @@ float temp3;
 float alpha = 0.25;
 float beta = 0.25;
 
+int GYROINTERVAL = 100; // gyroscope 
+float turningangularvel = 0.0;
+float lastyaw = 0.0;
 
 void loop()
 {
@@ -152,74 +155,91 @@ void loop()
 
   readRawImu();
   pitchrollfiltering();
+  balancerloop();
 
-  if (currentMillis - lastPrintMillis > INTERVAL_MS_PRINT) {
+  //if (currentMillis - lastPrintMillis > INTERVAL_MS_PRINT) {
+  if (currentMillis - lastPrintMillis > GYROINTERVAL) {
 
-
-    //Serial.print("Pitch:\t");
-    //Serial.print(getPitch());
-    //Serial.print("\xC2\xB0"); //Print degree symbol
-    //Serial.println();
-    //Serial.print(" ");
-
-    //Serial.print("Roll:\t");
-    //Serial.print(getRoll());
-    //Serial.print("\xC2\xB0"); //Print degree symbol
-    //Serial.println();
+    //CHANGE ME IF NEEDED BECAUSE IDK IF ITS GYROSCOPE.Z
+    turningangularvel = getTurnAngularVel(abs(gyroscope.z - lastyaw), millis() - lastPrintMillis);
+    lastyaw = gyroscope.z;
 
 
-    // Serial.print("gyroscope_x:");
-    // Serial.print(temp1);
-    // Serial.print(",");
-    Serial.print("gyroscope_x*dt:");
-    Serial.print(temp3);
-    Serial.print(",");
-    Serial.print("acc_pitch:");
-    Serial.print(temp2);
-    Serial.print(",");
-    Serial.print("pitch:");
-    Serial.println(getPitch());
-    // Serial.print(",");
-    // Serial.print("getRoll:");
-    // Serial.println(getRoll());
+    printloopcount ++;
 
-    float currentValue = gyroscope.x;
-    float timeStep = (currentMillis - lastPrintMillis)/1000;
-    integral += ((previousValue + currentValue) / 2.0) * timeStep;
-    previousValue = currentValue;
+    if(printloopcount >=5) // 5*GYROINTERVAL = 500ms
+    {
+      printloopcount = 0;
 
-    // Serial.print("accX:");
-    // Serial.print(accelerometer.x);
-    // Serial.print(",");
-    // Serial.print("gyX:");
-    // Serial.print(gyroscope.x);
-    // Serial.print(",");
-    // Serial.print("Integration_gyX:");
-    // Serial.println(-integral);
+      //Serial.print("Pitch:\t");
+      //Serial.print(getPitch());
+      //Serial.print("\xC2\xB0"); //Print degree symbol
+      //Serial.println();
+      //Serial.print(" ");
+
+      //Serial.print("Roll:\t");
+      //Serial.print(getRoll());
+      //Serial.print("\xC2\xB0"); //Print degree symbol
+      //Serial.println();
 
 
-    // acc_pitch = atan2(accelerometer.x, sqrt( sq(accelerometer.y) + sq(accelerometer.z)));
-    // acc_roll = atan2(accelerometer.y, sqrt(sq(accelerometer.x) + sq(accelerometer.z)));
+      // Serial.print("gyroscope_x:");
+      // Serial.print(temp1);
+      // Serial.print(",");
+      Serial.print("gyroscope_x*dt:");
+      Serial.print(temp3);
+      Serial.print(",");
+      Serial.print("acc_pitch:");
+      Serial.print(temp2);
+      Serial.print(",");
+      Serial.print("pitch:");
+      Serial.println(getPitch());
+      // Serial.print(",");
+      // Serial.print("getRoll:");
+      // Serial.println(getRoll());
 
-    // gyro_pitch = gyro_pitch + gyroscope.x * timeStep;
-    // gyro_roll = gyro_roll + gyroscope.y * timeStep;
+      float currentValue = gyroscope.x;
+      float timeStep = (currentMillis - lastPrintMillis)/1000;
+      integral += ((previousValue + currentValue) / 2.0) * timeStep;
+      previousValue = currentValue;
 
-    // Serial.print("acc pitch:");
-    // Serial.print(acc_pitch);
-    // Serial.print(",");
-    // Serial.print("acc roll:");
-    // Serial.println(acc_roll);
-
-    // Serial.print("gyro pitch:");
-    // Serial.print(gyro_pitch);
-    // Serial.print(",");
-    // Serial.print("gyro roll:");
-    // Serial.println(gyro_roll);
+      // Serial.print("accX:");
+      // Serial.print(accelerometer.x);
+      // Serial.print(",");
+      // Serial.print("gyX:");
+      // Serial.print(gyroscope.x);
+      // Serial.print(",");
+      // Serial.print("Integration_gyX:");
+      // Serial.println(-integral);
 
 
+      // acc_pitch = atan2(accelerometer.x, sqrt( sq(accelerometer.y) + sq(accelerometer.z)));
+      // acc_roll = atan2(accelerometer.y, sqrt(sq(accelerometer.x) + sq(accelerometer.z)));
+
+      // gyro_pitch = gyro_pitch + gyroscope.x * timeStep;
+      // gyro_roll = gyro_roll + gyroscope.y * timeStep;
+
+      // Serial.print("acc pitch:");
+      // Serial.print(acc_pitch);
+      // Serial.print(",");
+      // Serial.print("acc roll:");
+      // Serial.println(acc_roll);
+
+      // Serial.print("gyro pitch:");
+      // Serial.print(gyro_pitch);
+      // Serial.print(",");
+      // Serial.print("gyro roll:");
+      // Serial.println(gyro_roll);
+
+    }
 
     lastPrintMillis = currentMillis;
   }
+
+
+
+
+
 }
 
 
