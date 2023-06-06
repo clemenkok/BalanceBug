@@ -56,9 +56,26 @@ float getVelocity(){
 }
 
 
-float getAngularVel(int steps, float deltaT){
+float getSraightAngularVel(int steps, float deltaT){
 
   //steps/200 * 2 pi / T
 
   return (steps/200) * 2 * 3.14159265359 / deltaT;
+}
+
+
+float roverWidth = 10; 
+
+float getTurnAngularVel(float deltaYaw, float deltaT){
+
+  // CHNAGE the YAW, might not be correct
+
+  //distance of the wheel travelled:
+  //d = 2*pi*roverWidth* DeltaYaw/360
+  //angular velocity of the wheel:
+  //d / 21.2 * 2 * pi /deltaT
+  
+  float d = 2 * 3.14159265359 * roverWidth * deltaYaw /360;
+  return d/ 21.2 * 2 * 3.14159265359 / deltaT;
+
 }
