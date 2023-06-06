@@ -16,7 +16,7 @@ COPY . .
 # Build the React app
 RUN npm run build
 
-# Expose port 80 for the React frontend
+# Expose port 3000 for the React frontend
 EXPOSE 3000
 
 # Serve the built React app
