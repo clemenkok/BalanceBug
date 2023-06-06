@@ -39,5 +39,8 @@ jobs:
             git fetch --all &&
             git reset --hard origin/prod &&
             git pull origin prod &&
+            cd nginx && 
+            docker build -t reverseproxy . &&
+            cd .. &&
             docker compose -f docker-compose.yaml up -d --build 
           '
