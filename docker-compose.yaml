@@ -11,6 +11,8 @@ services:
             - 80:80
         networks:
         - app-tier
+        depends_on:
+          - website
 
   # Node.js application
   website:
@@ -41,8 +43,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=123456
       - MYSQL_DATABASE=testdb
-    depends_on:
-      - reverseproxy
     volumes:
       - ./mysql/data:/var/lib/mysql
     healthcheck:
@@ -61,7 +61,5 @@ services:
       - 3000:3000
     volumes:
       - ./frontend:/app
-    depends_on:
-      - reverseproxy
     networks:
         - app-tier
