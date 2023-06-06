@@ -17,11 +17,26 @@ Hubert Choo, Lee Jian Rong, Yomna Mohamed, Shermaine Ang, Samsam Lee, Clemen Kok
 └── website // contains code for react app, nodejs server
 ```
 
+## Setup
+
+If you just want to test your function in isolation, create a new folder within your subsystem and run `npm init` and follow the corresponding instructions. You will then need to run `npm -i express axios cors` as these are the packages related to setting up API middleware. `node server.js` for example runs the `server.js` file. I strongly recommend doing this first to incorporate a test-driven approach.
+
+To integrate and test the Node server as a whole, first make sure your system has Docker installed. You can find the installation instructions online. You will need to install the `mysql` image and run it. With Docker installed (and the daemon running), run the following commands:
+
+```
+docker pull mysql/mysql-server:latest
+docker run -p3306:3306 --name=mysql1 -d mysql/mysql-server:latest
+```
+
+Now, run `cd website && npm -i`. This will install all the dependencies as indicated in the `package.json` file. Run `npm start` to test the Node server. 
+
+To integrate the ESP32 and bridge the connection without deploying to production, use [ngrok](https://ngrok.com/download). This establishes a secure tunnel into your localhost so the ESP32 can communicate with the server. Once done, you will need to pull the ngrok image and then start the container via `docker run -it -e NGROK_AUTHTOKEN=$NGROK_AUTHTOKEN ngrok/ngrok:latest http host.docker.internal:8080`. Replace `$NGROK_AUTHTOKEN` with your own auth token. You should now be able to copy the ngrok URL in the terminal and use it as a replacement for `localhost:8080`.  
+
 ## API Routing
 
 The architectural style that we use to interface between different components of our system is RESTful API. A quick tutorial on how to set one up. The gist is that a RESTful API is a URL that we can access to send data to an endpoint. It can take place as GET, POST, UPDATE, DELETE, PUT, PATCH. We will most likely use GET and POST. More details on GET and POST can be found in `website/controllers/utils.controllers.js`.  
 
-You can find the guidelines on how to set up your API to perform a function via the following files: `website/routes/utils.routes.js` and `website/controllers/utils.controllers.js`. Please let me know if you have any questions.  
+You can find the guidelines on how to set up your API to perform a function via the following files: `website/routes/utils.routes.js` and `website/controllers/utils.controllers.js`. 
 
 ## System Architecture
 

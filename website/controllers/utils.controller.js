@@ -4,16 +4,19 @@
 
 exports.edit = (req, res) => {
   // Validate request
-  if (!req.body.newMap) {
+  if (!req.body) {
     res.status(400).send({
       message: "Content can not be empty."
     });
     return;
   }
 
+  // Do something
+
   // Log something
   console.log('insert debug statements here');
 
+  // Respond with something
   res.send('Array updated successfully!');
 
 };
