@@ -12,6 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Build the reverseproxy image
+      run: docker build -t reverseproxy .
+
     - name: Build the docker_compose
       run: docker-compose up -d --build
       
