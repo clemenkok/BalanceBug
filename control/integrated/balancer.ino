@@ -66,7 +66,7 @@ void pitchAngleControlLoop() {
 
   // Apply motor voltages
   applyMotorVoltages(leftMotorVoltage, rightMotorVoltage);
-  delay(10);
+  delay(10); // freq to be tested and retuned
 
 
   // velocity
@@ -83,7 +83,7 @@ void pitchAngleControlLoop() {
 
 void linearVelocityControlLoop(){
   updateLinearControl();
-  delay(20);
+  delay(20); // freq to be tested and retuned
 }
 
 void updateSensors() {
@@ -93,16 +93,18 @@ void updateSensors() {
 
   // get angular velocity
   // probably need to do smth about the turning part (how will i know when it wants to turn)
-  // if going straight
-  angularVelocityL = getSraightAngularVel() = angularVelocityR; // need to calculate 
-   // or maybe just use velocity? idk can test and see if theres a difference?
-
-  // if turning left
-  angularVelocityR = getTurnAngularVel(abs(gyroscope.z - lastyaw), millis() - lastPrintMillis);
-
-  // if turning right
-  angularVelocityL = getTurnAngularVel(abs(gyroscope.z - lastyaw), millis() - lastPrintMillis);
-
+  // if going straight 
+  dir = getDirection();
+  if (dir == "straight"){
+    angularVelocityL = getSraightAngularVel() = angularVelocityR;
+    // or maybe just use velocity? idk can test and see if theres a difference?
+  }
+  else if (dir == "left"){
+    angularVelocityR = getTurnAngularVel(abs(gyroscope.z - lastyaw), millis() - lastPrintMillis);
+  }
+  else if (dir == "right"){
+    angularVelocityL = getTurnAngularVel(abs(gyroscope.z - lastyaw), millis() - lastPrintMillis);
+  }
   //for all cases
   angularVelocity = angularVelocityConst * (angularVelocityR - angularVelocityL);
   linearVelocity = angularVelocityL + angularVelocityR;
