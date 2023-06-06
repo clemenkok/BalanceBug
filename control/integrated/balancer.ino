@@ -18,9 +18,12 @@ const float velocityKd = 0.05;  // Linear velocity derivative gain
 const float angularVelocityKp = 0.5;   // Angular velocity proportional gain
 const float angularVelocityKi = 0.05;  // Angular velocity integral gain
 const float angularVelocityKd = 0.02;  // Angular velocity derivative gain
+const float radius = 0.1; // radius of wheel for velocity filter value
+const float length = 0.16; // length of robot
 
 // Filter Constants
-const float velocityFilterAlpha = 0.2;  // Velocity filter alpha value
+const float velocityFilterAlpha = radius/2;  // Velocity filter alpha value
+const float angularVelocityConst = radius/length;
 
 // Setpoints
 float pitchSetpoint = 0.0;   // Pitch angle setpoint
@@ -39,7 +42,7 @@ float lastAngularVelocityError = 0.0;  // Previous angular velocity error
 float angularVelocityErrorSum = 0.0;   // Angular velocity error sum
 
 // Objects
-Adafruit_LSM6DS33 lsm6ds33;
+// Adafruit_MPU6050 mpu;
 
 // Function prototypes
 void updateSensors();
@@ -48,12 +51,6 @@ void applyMotorVoltages(float leftVoltage, float rightVoltage);
 
 void balancersetup() {
   //Serial.begin(9600);
-  
-  // Initialize LSM6DS33
-  if (!lsm6ds33.begin()) {
-    Serial.println("Failed to initialize LSM6DS33!");
-    while (1);
-  }
 
   // Set motor pins as output
   pinMode(motorLPin, OUTPUT);
@@ -61,7 +58,7 @@ void balancersetup() {
 }
 
 void balancerloop() {
-  // Update sensor readings (need to integrate with the comp filter file)
+  // Update sensor readings
   updateSensors();
 
   // Update control loops
@@ -85,18 +82,18 @@ void balancerloop() {
 
 void updateSensors() {
   // Read pitch angle from analog sensor
-  int sensorValue = analogRead(angleSensorPin);
+  int sensorValue = getPitch();
   pitchAngle = map(sensorValue, 0, 1023, -90, 90);  // Map sensor value to pitch angle range
 
-  // Read linear velocity from LSM6DS33 accelerometer
-  sensors_event_t accelEvent;
-  lsm6ds33.getEvent(&accelEvent);
-  linearVelocity = accelEvent.acceleration.x;
+  // get angular velocity
+  angularVelocityL = ??; // need to calculate 
+  angularVelocityR = ??; // need to calculate 
+  angularVelocity = angularVelocityConst * (angularVelocityR - angularVelocityL);
 
-  // Read angular velocity from LSM6DS33 gyroscope
-  sensors_event_t gyroEvent;
-  lsm6ds33.getEvent(&gyroEvent);
-  angularVelocity = gyroEvent.gyro.x;
+  // get linear velocity
+  linearVelocity = angularVelocityL + angularVelocityR;
+
+
 }
 
 void updateControl() {
