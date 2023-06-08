@@ -46,11 +46,10 @@ class Rover:
         self.grid_y = 0
         self.bearing = 0
 
-grid_dimensions = []
-
 class Maze:
     def __init__(self):
         self.grid = []
+        self.visitedGrid = []
 
     def createGrid(self):
         for _ in range(grid_dimensions[0]):
@@ -60,28 +59,29 @@ class Maze:
             self.grid.append(row)
 
     def fillGrid(self, x, y):
-        if (x < 0 or x >= grid_dimensions[0]) or (y < 0 or y >= grid_dimensions[1]) or self.grid[x][y][0]:
+        if (x < 0 or x >= grid_dimensions[0]) or (y < 0 or y >= grid_dimensions[1]) or self.visitedGrid[x][y][0]:
             return
         
-        self.grid[x][y][0] = True
+        self.visitedGrid[x][y][0] = True
         d = [(-1, 0), (0, 1), (1, 0), (0, -1)]
         for i in range(4):
             dx, dy = d[i]
             nx, ny = x + dx, y + dy
             # check the cell exists and that it's accessible from the current cell
-            if (nx >= 0 and nx < grid_dimensions[0]) and (ny >= 0 and ny < grid_dimensions[1]) and not self.grid[x][y][i+1]:
+            if (nx >= 0 and nx < grid_dimensions[0]) and (ny >= 0 and ny < grid_dimensions[1]) and not self.visitedGrid[x][y][i+1]:
                 self.fillGrid(self, nx, ny)
 
     def updateGrid(self):
+        self.visitedGrid = self.grid
         for x in range(grid_dimensions[0]):
             for y in range(grid_dimensions[1]):
-                if not self.grid[x][y][0]:
+                if not self.visitedGrid[x][y][0]:
                     self.fillGrid(self, x, y)
 
     def explored(self):
-        for row in self.grid:
-            for cell in row:
-                if not cell[0]:
+        for x in range(grid_dimensions[0]):
+            for y in range(grid_dimensions[1]):
+                if not (self.grid[x][y][0] == self.visitedGrid[x][y][0]):
                     return False
         return True
 
@@ -89,7 +89,6 @@ rover = Rover()
 maze = Maze()
 
 # helper functions
-
 def getNeighbours(maze, x, y):
     maze = maze.grid
     neighbours = [None, None, None, None]
@@ -139,13 +138,13 @@ def nextTarget(maze, x, y, targetList):
 
     return targetList
 
-def mazeExplored(grid):
-    for r in range(grid_dimensions):
-        for c in range(grid_dimensions):
-            if not grid[r][c][0]:
-                return False
+# def mazeExplored(grid):
+#     for r in range(grid_dimensions):
+#         for c in range(grid_dimensions):
+#             if not grid[r][c][0]:
+#                 return False
     
-    return True
+#     return True
 
 # TO-DO
 def sendCommand(distance, bearing):
@@ -183,14 +182,14 @@ def appxBearing(bearing):
 def caseA(data):
     # TO-DO: breakdown the json packet
     distance, bearing, left_wall, right_wall = data
-    x0, y0 = rover.grid_x, rover.grid_y
+    # x0, y0 = rover.grid_x, rover.grid_y
     updatePosition(distance, bearing)
     x, y = rover.grid_x, rover.grid_y
-    
     bearings = appxBearing(bearing)
-    # update the walls of the current cell
-    maze.grid[x][y] = True  # mark cell as visited
+    
+    maze.grid[x][y][0] = True  # mark cell as visited
 
+    # update the walls of the current cell and its neighbours
     for bearing in bearings:
         if bearing == 0:
             if left_wall:
@@ -237,6 +236,8 @@ def caseA(data):
                 if nx >= 0 and nx < grid_dimensions[0]:
                     maze.grid[nx][y][3] = True
 
+    # updateGrid(grid, x, y)
+
     # if rover.grid[x][y][1]:
     #     rover.grid[x-1][y][3] = True
     # if rover.grid[x][y][2]:
@@ -265,7 +266,12 @@ def caseC():
         distance = math.sqrt(dx**2 + dy**2)
         bearing = math.atan2(dy, dx)
         sendCommand(distance, bearing)
+
+        # update stored inputs
         rover.x, rover.y = cell[0], cell[1]
+        rover.grid_x, rover.grid_y = cell[0], cell[1]
+        maze.grid[cell[0]][cell[1]][0] = True
+        maze.updateGrid()
     # Calculate the bearing and distance to the next target.
     # dx = next_x - rover.x
     # dy = next_y - rover.y
