@@ -1,0 +1,26 @@
+
+WORK > DEFAULT
+DEFAULT:                                                     ./libraries/work/                                                       
+work:                                                        ./libraries/work/                                                       
+rgb_to_hv_internal_inst:                                     ./libraries/rgb_to_hv_internal_inst/                                    
+irq_mapper:                                                  ./libraries/irq_mapper/                                                 
+stream_source_dpi_bfm_rgb_to_hv_blue_inst:                   ./libraries/stream_source_dpi_bfm_rgb_to_hv_blue_inst/                  
+split_component_start_inst:                                  ./libraries/split_component_start_inst/                                 
+rgb_to_hv_inst:                                              ./libraries/rgb_to_hv_inst/                                             
+rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst: ./libraries/rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst/
+main_dpi_controller_inst:                                    ./libraries/main_dpi_controller_inst/                                   
+concatenate_component_done_inst:                             ./libraries/concatenate_component_done_inst/                            
+component_dpi_controller_rgb_to_hv_inst:                     ./libraries/component_dpi_controller_rgb_to_hv_inst/                    
+clock_reset_inst:                                            ./libraries/clock_reset_inst/                                           
+altera_ver:                                                  ./libraries/altera_ver/                                                 
+lpm_ver:                                                     ./libraries/lpm_ver/                                                    
+sgate_ver:                                                   ./libraries/sgate_ver/                                                  
+altera_mf_ver:                                               ./libraries/altera_mf_ver/                                              
+altera_lnsim_ver:                                            ./libraries/altera_lnsim_ver/                                           
+fiftyfivenm_ver:                                             ./libraries/fiftyfivenm_ver/                                            
+altera:                                                      ./libraries/altera/                                                     
+lpm:                                                         ./libraries/lpm/                                                        
+sgate:                                                       ./libraries/sgate/                                                      
+altera_mf:                                                   ./libraries/altera_mf/                                                  
+altera_lnsim:                                                ./libraries/altera_lnsim/                                               
+fiftyfivenm:                                                 ./libraries/fiftyfivenm/                                                

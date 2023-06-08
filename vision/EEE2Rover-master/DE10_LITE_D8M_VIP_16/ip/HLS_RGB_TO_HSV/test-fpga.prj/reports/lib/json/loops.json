@@ -1,0 +1,94 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Bottleneck", "Details"]
+  , "children":
+  [
+    {
+      "name":"Component: rgb_to_hv"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"rgb_to_hsv.c"
+            , "line":13
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Task function"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"rgb_to_hv.B1.start"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Component invocation"
+                , "line":0
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"II is an approximation."
+            }
+            , {
+              "type":"text"
+              , "text":"Run simulation to verify component's dynamic II. Use the %L report to view results. II is an approximation due to the following stallable instructions:"
+              , "links":
+              [
+                {
+                  "view":"Verification statistics"
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"Unknown location"
+                      , "line":"0"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Stream Write Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"Unknown location"
+                      , "line":"0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -77,28 +77,80 @@ wire         sop, eop, in_valid, out_ready;
 ////////////////////////////////////////////////////////////////////////
 reg [10:0] x, y;
 reg packet_video;
-// Detect red areas
-//wire red_detect;
-reg red_detect;
-//assign red_detect = red[7] & ~green[7] & ~blue[7];
 
+wire [27:0] hsv_rgb;
+wire [7:0] value;
+wire [18:0] hue;
+wire saturation;
+wire saturation_out;
+
+assign value = hsv_rgb[7:0];
+assign hue = hsv_rgb[26:8];
+assign saturation_out = hsv_rgb[27];
+
+// Turn RGB into HSV
+// Conversions from the 56 bit HSV value to normal HSV range
+// Hue is given by hue/393222*360 degrees
+// Saturation is given by saturation/2**16
+// Value is given by value/2**8
+
+SATURATION sat(
+	.r(red),
+	.g(green),
+	.b(blue),
+	.s(saturation)
+);
+
+rgb_to_hsv rgb_hsv(
+	.clock(clk),
+	.resetn(1'b1), // this should be 1
+	.returndata(hsv_rgb),
+	.red(red),
+	.green(green),
+	.blue(blue),
+	.s(saturation)
+);
+
+/*
+// only write to the buffer if there has been 54 things written in it
+SAT_SHIFT_REG sat_shift(
+	.clk(clk),
+	.shift(in_valid),
+	.sr_in(saturation),
+	.sr_out(saturation_out)
+);
+*/
+
+/*
+// Detect red areas
+wire red_detect;
+assign red_detect = ~red[7] & ~green[7] & blue[7];
+*/
+
+// for blue, use hue range of 190 to 250, threshold = (207533, 273070)
+// saturation of 70% to 100%, threshold = (45875, 65535)
+// value of 70% to 100%, threshold = (180, 255)
+wire red_detect;
+//assign red_detect = (~|hue[31:19]) & (hue[18] | (hue[17] & hue[16])) & saturation[15] & value[7];
+assign red_detect = (hue > 207533) & (hue < 273070) & saturation_out & (value > 180);
 // Find boundary of cursor box
 
 // Highlight detected areas
-//wire [23:0] red_high;
-reg [23:0] red_high;
+wire [23:0] red_high;
 assign grey = green[7:1] + red[7:2] + blue[7:2]; //Grey = green/2 + red/4 + blue/4
 
-//assign red_high  =  red_detect ? {8'hff, 8'h0, 8'h0} : {grey, grey, grey};
-//assign red_high  =  red_detect ? {8'hff, 8'hff, 8'h00} : {grey, grey, grey};
 
-/*
+//assign red_high  =  red_detect ? {8'h0, 8'h0, 8'hff} : {grey, grey, grey};
+//assign red_high  =  red_detect ? {8'hff, 8'hff, 8'h00} : {grey, grey, grey};
+assign red_high  =  red_detect ? {8'h0, 8'h0, 8'hff} : {grey, grey, grey};
+
+
 // Show bounding box
 wire [23:0] new_image;
 wire bb_active;
 assign bb_active = (x == left) | (x == right) | (y == top) | (y == bottom);
 assign new_image = bb_active ? bb_col : red_high;
-*/
+
 
 /*
 // State machine to change between colors for detection on consecutive frames
@@ -130,10 +182,11 @@ always@(posedge sop) begin
 end
 */
 
+
+// GAUSSIAN BLUR
+/*
 wire [23:0] new_image;
 wire [7:0] new_red, new_green, new_blue;
-
-
 GAUSSIAN_BLUR #(
 	.LINE_WIDTH(IMAGE_W),
 	.PIXEL_DATA_WIDTH(8),
@@ -165,7 +218,6 @@ GAUSSIAN_BLUR #(
 	.in_valid(in_valid)
 );
 
-/*
 GAUSSIAN_BLUR #(
 	.LINE_WIDTH(IMAGE_W),
 	.PIXEL_DATA_WIDTH(8),
@@ -181,8 +233,7 @@ GAUSSIAN_BLUR #(
 );
 */
 
-//assign new_image = {new_red, 8'b0, 8'b0};
-assign new_image = {new_red, new_green, 8'b0};
+//assign new_image = {new_red, new_green, new_blue};
 
 
 // Switch output pixels depending on mode switch
@@ -208,6 +259,8 @@ always@(posedge clk) begin
 		end
 	end
 end
+
+//reg label_control_rst;
 
 //Find first and last red pixels
 reg [10:0] x_min, y_min, x_max, y_max;

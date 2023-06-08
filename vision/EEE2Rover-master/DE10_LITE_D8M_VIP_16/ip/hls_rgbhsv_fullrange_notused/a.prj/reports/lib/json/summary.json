@@ -1,0 +1,76 @@
+{
+  "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Component Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs "]
+    , "children":
+    [
+      {
+        "name":"rgb_to_h"
+        , "data":
+        [3896, 3085, 12, 7.5]
+        , "debug":
+        [
+          [
+            {
+              "filename":"rgb_to_hsv.c"
+              , "line":99
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"rgb_to_s"
+        , "data":
+        [3441, 2827, 12, 7.5]
+        , "debug":
+        [
+          [
+            {
+              "filename":"rgb_to_hsv.c"
+              , "line":170
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"rgb_to_v"
+        , "data":
+        [65, 6, 0, 0]
+        , "debug":
+        [
+          [
+            {
+              "filename":"rgb_to_hsv.c"
+              , "line":224
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [7402, 5918, 24, 15]
+        , "data_percent":
+        [19.986, 11.836, 13.1868, 10.4167]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [37036, 50000, 182, 144]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+    ]
+  }
+}

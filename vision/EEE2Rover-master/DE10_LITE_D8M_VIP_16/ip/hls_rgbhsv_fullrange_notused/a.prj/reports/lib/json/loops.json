@@ -1,0 +1,235 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Bottleneck", "Details"]
+  , "children":
+  [
+    {
+      "name":"Component: rgb_to_h"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"rgb_to_hsv.c"
+            , "line":99
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Task function"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"rgb_to_h.B1.start"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Component invocation"
+                , "line":0
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"II is an approximation."
+            }
+            , {
+              "type":"text"
+              , "text":"Run simulation to verify component's dynamic II. Use the %L report to view results. II is an approximation due to the following stallable instruction:"
+              , "links":
+              [
+                {
+                  "view":"Verification statistics"
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"Unknown location"
+                      , "line":"0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Component: rgb_to_s"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"rgb_to_hsv.c"
+            , "line":170
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Task function"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"rgb_to_s.B1.start"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Component invocation"
+                , "line":0
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"II is an approximation."
+            }
+            , {
+              "type":"text"
+              , "text":"Run simulation to verify component's dynamic II. Use the %L report to view results. II is an approximation due to the following stallable instruction:"
+              , "links":
+              [
+                {
+                  "view":"Verification statistics"
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"Unknown location"
+                      , "line":"0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Component: rgb_to_v"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"rgb_to_hsv.c"
+            , "line":224
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Task function"
+        }
+        , {
+          "type":"text"
+          , "text":"Task function"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"rgb_to_v.B1.start"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"Component invocation"
+                , "line":0
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"II is an approximation."
+            }
+            , {
+              "type":"text"
+              , "text":"Run simulation to verify component's dynamic II. Use the %L report to view results. II is an approximation due to the following stallable instruction:"
+              , "links":
+              [
+                {
+                  "view":"Verification statistics"
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Stream Read Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"Unknown location"
+                      , "line":"0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+Info: Starting: Create simulation model
+Info: qsys-generate C:\intelFPGA_lite\18.1\hls\eebalancebug\test-fpga.prj\verification\tb.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\intelFPGA_lite\18.1\hls\eebalancebug\test-fpga.prj\verification\tb\simulation --family="MAX 10" --part=10M50DAF672I7G
+Progress: Loading verification/tb.qsys
+Progress: Reading input file
+Progress: Adding clock_reset_inst [hls_sim_clock_reset 1.0]
+Progress: Parameterizing module clock_reset_inst
+Progress: Adding component_dpi_controller_rgb_to_hv_inst [hls_sim_component_dpi_controller 1.0]
+Progress: Parameterizing module component_dpi_controller_rgb_to_hv_inst
+Progress: Adding concatenate_component_done_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module concatenate_component_done_inst
+Progress: Adding concatenate_component_wait_for_stream_writes_inst [avalon_concatenate_singlebit_conduits 1.0]
+Progress: Parameterizing module concatenate_component_wait_for_stream_writes_inst
+Progress: Adding main_dpi_controller_inst [hls_sim_main_dpi_controller 1.0]
+Progress: Parameterizing module main_dpi_controller_inst
+Progress: Adding rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst
+Progress: Adding rgb_to_hv_component_dpi_controller_enable_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module rgb_to_hv_component_dpi_controller_enable_conduit_fanout_inst
+Progress: Adding rgb_to_hv_component_dpi_controller_implicit_ready_conduit_fanout_inst [avalon_conduit_fanout 1.0]
+Progress: Parameterizing module rgb_to_hv_component_dpi_controller_implicit_ready_conduit_fanout_inst
+Progress: Adding rgb_to_hv_inst [rgb_to_hv 1.0]
+Progress: Parameterizing module rgb_to_hv_inst
+Progress: Adding split_component_start_inst [avalon_split_multibit_conduit 1.0]
+Progress: Parameterizing module split_component_start_inst
+Progress: Adding stream_source_dpi_bfm_rgb_to_hv_blue_inst [hls_sim_stream_source_dpi_bfm 1.0]
+Progress: Parameterizing module stream_source_dpi_bfm_rgb_to_hv_blue_inst
+Progress: Adding stream_source_dpi_bfm_rgb_to_hv_green_inst [hls_sim_stream_source_dpi_bfm 1.0]
+Progress: Parameterizing module stream_source_dpi_bfm_rgb_to_hv_green_inst
+Progress: Adding stream_source_dpi_bfm_rgb_to_hv_red_inst [hls_sim_stream_source_dpi_bfm 1.0]
+Progress: Parameterizing module stream_source_dpi_bfm_rgb_to_hv_red_inst
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: tb.component_dpi_controller_rgb_to_hv_inst.dpi_control_slaves_ready: Interface has no signals
+Warning: tb.component_dpi_controller_rgb_to_hv_inst.dpi_control_slaves_done: Interface has no signals
+Warning: tb.component_dpi_controller_rgb_to_hv_inst.dpi_control_stream_writes_active: Interface has no signals
+Warning: tb.component_dpi_controller_rgb_to_hv_inst: component_dpi_controller_rgb_to_hv_inst.dpi_control_slaves_ready must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_rgb_to_hv_inst: component_dpi_controller_rgb_to_hv_inst.dpi_control_slaves_done must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_rgb_to_hv_inst: component_dpi_controller_rgb_to_hv_inst.dpi_control_stream_writes_active must be exported, or connected to a matching conduit.
+Warning: tb.component_dpi_controller_rgb_to_hv_inst: component_dpi_controller_rgb_to_hv_inst.readback_from_slaves must be exported, or connected to a matching conduit.
+Warning: tb.stream_source_dpi_bfm_rgb_to_hv_blue_inst: stream_source_dpi_bfm_rgb_to_hv_blue_inst.source must be exported, or connected to a matching conduit.
+Warning: tb.stream_source_dpi_bfm_rgb_to_hv_green_inst: stream_source_dpi_bfm_rgb_to_hv_green_inst.source must be exported, or connected to a matching conduit.
+Warning: tb.stream_source_dpi_bfm_rgb_to_hv_red_inst: stream_source_dpi_bfm_rgb_to_hv_red_inst.source must be exported, or connected to a matching conduit.
+Info: tb: Generating tb "tb" for SIM_VERILOG
+Info: clock_reset_inst: "tb" instantiated hls_sim_clock_reset "clock_reset_inst"
+Info: component_dpi_controller_rgb_to_hv_inst: "tb" instantiated hls_sim_component_dpi_controller "component_dpi_controller_rgb_to_hv_inst"
+Info: concatenate_component_done_inst: "tb" instantiated avalon_concatenate_singlebit_conduits "concatenate_component_done_inst"
+Info: main_dpi_controller_inst: "tb" instantiated hls_sim_main_dpi_controller "main_dpi_controller_inst"
+Info: rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst: "tb" instantiated avalon_conduit_fanout "rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst"
+Info: rgb_to_hv_inst: "tb" instantiated rgb_to_hv "rgb_to_hv_inst"
+Info: split_component_start_inst: "tb" instantiated avalon_split_multibit_conduit "split_component_start_inst"
+Info: stream_source_dpi_bfm_rgb_to_hv_blue_inst: "tb" instantiated hls_sim_stream_source_dpi_bfm "stream_source_dpi_bfm_rgb_to_hv_blue_inst"
+Info: Reusing file C:/intelFPGA_lite/18.1/hls/eebalancebug/test-fpga.prj/verification/tb/simulation/submodules/hls_sim_stream_source_dpi_bfm.sv
+Info: irq_mapper: "tb" instantiated altera_irq_mapper "irq_mapper"
+Info: rgb_to_hv_internal_inst: "rgb_to_hv_inst" instantiated rgb_to_hv_internal "rgb_to_hv_internal_inst"
+Info: tb: Done "tb" with 11 modules, 76 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:\intelFPGA_lite\18.1\hls\eebalancebug\test-fpga.prj\verification\tb\tb.spd --output-directory=C:/intelFPGA_lite/18.1/hls/eebalancebug/test-fpga.prj/verification/tb/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\intelFPGA_lite\18.1\hls\eebalancebug\test-fpga.prj\verification\tb\tb.spd --output-directory=C:/intelFPGA_lite/18.1/hls/eebalancebug/test-fpga.prj/verification/tb/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/intelFPGA_lite/18.1/hls/eebalancebug/test-fpga.prj/verification/tb/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in C:/intelFPGA_lite/18.1/hls/eebalancebug/test-fpga.prj/verification/tb/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/intelFPGA_lite/18.1/hls/eebalancebug/test-fpga.prj/verification/tb/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	10 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/intelFPGA_lite/18.1/hls/eebalancebug/test-fpga.prj/verification/tb/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/intelFPGA_lite/18.1/hls/eebalancebug/test-fpga.prj/verification/tb/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.

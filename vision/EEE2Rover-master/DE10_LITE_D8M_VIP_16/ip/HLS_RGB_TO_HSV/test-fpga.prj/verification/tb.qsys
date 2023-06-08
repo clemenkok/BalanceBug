@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element clock_reset_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element component_dpi_controller_rgb_to_hv_inst
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+   }
+   element concatenate_component_done_inst
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element concatenate_component_wait_for_stream_writes_inst
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element main_dpi_controller_inst
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element rgb_to_hv_component_dpi_controller_enable_conduit_fanout_inst
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element rgb_to_hv_component_dpi_controller_implicit_ready_conduit_fanout_inst
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element rgb_to_hv_inst
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+   element split_component_start_inst
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element stream_source_dpi_bfm_rgb_to_hv_blue_inst
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element stream_source_dpi_bfm_rgb_to_hv_green_inst
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element stream_source_dpi_bfm_rgb_to_hv_red_inst
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="10M08DAF256A7G" />
+ <parameter name="deviceFamily" value="MAX 10" />
+ <parameter name="deviceSpeedGrade" value="7" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <module
+   name="clock_reset_inst"
+   kind="hls_sim_clock_reset"
+   version="1.0"
+   enabled="1">
+  <parameter name="RESET_CYCLE_HOLD" value="4" />
+ </module>
+ <module
+   name="component_dpi_controller_rgb_to_hv_inst"
+   kind="hls_sim_component_dpi_controller"
+   version="1.0"
+   enabled="1">
+  <parameter name="AUTO_COMPONENT_IRQ_INTERRUPTS_USED" value="0" />
+  <parameter name="COMPONENT_HAS_SLAVE_RETURN" value="0" />
+  <parameter name="COMPONENT_NAME" value="rgb_to_hv" />
+  <parameter name="COMPONENT_NUM_OUTPUT_STREAMS" value="0" />
+  <parameter name="COMPONENT_NUM_SLAVES" value="0" />
+  <parameter name="RETURN_DATAWIDTH" value="27" />
+ </module>
+ <module
+   name="concatenate_component_done_inst"
+   kind="avalon_concatenate_singlebit_conduits"
+   version="1.0"
+   enabled="1">
+  <parameter name="multibit_width" value="1" />
+ </module>
+ <module
+   name="concatenate_component_wait_for_stream_writes_inst"
+   kind="avalon_concatenate_singlebit_conduits"
+   version="1.0"
+   enabled="1">
+  <parameter name="multibit_width" value="1" />
+ </module>
+ <module
+   name="main_dpi_controller_inst"
+   kind="hls_sim_main_dpi_controller"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAMES_STR" value="rgb_to_hv" />
+  <parameter name="NUM_COMPONENTS" value="1" />
+ </module>
+ <module
+   name="rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst"
+   kind="avalon_conduit_fanout"
+   version="1.0"
+   enabled="1">
+  <parameter name="numFanOut" value="3" />
+ </module>
+ <module
+   name="rgb_to_hv_component_dpi_controller_enable_conduit_fanout_inst"
+   kind="avalon_conduit_fanout"
+   version="1.0"
+   enabled="1">
+  <parameter name="numFanOut" value="3" />
+ </module>
+ <module
+   name="rgb_to_hv_component_dpi_controller_implicit_ready_conduit_fanout_inst"
+   kind="avalon_conduit_fanout"
+   version="1.0"
+   enabled="1">
+  <parameter name="numFanOut" value="3" />
+ </module>
+ <module name="rgb_to_hv_inst" kind="rgb_to_hv" version="1.0" enabled="1">
+  <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="1" />
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_CLOCK_RESET_DOMAIN" value="1" />
+  <parameter name="AUTO_DEVICE" value="10M08DAF256A7G" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_UNIQUE_ID" value="tb_rgb_to_hv_inst" />
+ </module>
+ <module
+   name="split_component_start_inst"
+   kind="avalon_split_multibit_conduit"
+   version="1.0"
+   enabled="1">
+  <parameter name="multibit_width" value="1" />
+ </module>
+ <module
+   name="stream_source_dpi_bfm_rgb_to_hv_blue_inst"
+   kind="hls_sim_stream_source_dpi_bfm"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAME" value="rgb_to_hv" />
+  <parameter name="FORCE_STREAM_CONDUIT" value="1" />
+  <parameter name="INTERFACE_NAME" value="blue" />
+  <parameter name="STREAM_BITSPERSYMBOL" value="1" />
+  <parameter name="STREAM_DATAWIDTH" value="8" />
+  <parameter name="USES_PACKETS" value="0" />
+ </module>
+ <module
+   name="stream_source_dpi_bfm_rgb_to_hv_green_inst"
+   kind="hls_sim_stream_source_dpi_bfm"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAME" value="rgb_to_hv" />
+  <parameter name="FORCE_STREAM_CONDUIT" value="1" />
+  <parameter name="INTERFACE_NAME" value="green" />
+  <parameter name="STREAM_BITSPERSYMBOL" value="1" />
+  <parameter name="STREAM_DATAWIDTH" value="8" />
+  <parameter name="USES_PACKETS" value="0" />
+ </module>
+ <module
+   name="stream_source_dpi_bfm_rgb_to_hv_red_inst"
+   kind="hls_sim_stream_source_dpi_bfm"
+   version="1.0"
+   enabled="1">
+  <parameter name="COMPONENT_NAME" value="rgb_to_hv" />
+  <parameter name="FORCE_STREAM_CONDUIT" value="1" />
+  <parameter name="INTERFACE_NAME" value="red" />
+  <parameter name="STREAM_BITSPERSYMBOL" value="1" />
+  <parameter name="STREAM_DATAWIDTH" value="8" />
+  <parameter name="USES_PACKETS" value="0" />
+ </module>
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock"
+   end="main_dpi_controller_inst.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock"
+   end="rgb_to_hv_inst.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock"
+   end="stream_source_dpi_bfm_rgb_to_hv_blue_inst.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock"
+   end="stream_source_dpi_bfm_rgb_to_hv_green_inst.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock"
+   end="stream_source_dpi_bfm_rgb_to_hv_red_inst.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock"
+   end="component_dpi_controller_rgb_to_hv_inst.clock" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock2x"
+   end="main_dpi_controller_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock2x"
+   end="stream_source_dpi_bfm_rgb_to_hv_blue_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock2x"
+   end="stream_source_dpi_bfm_rgb_to_hv_green_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock2x"
+   end="stream_source_dpi_bfm_rgb_to_hv_red_inst.clock2x" />
+ <connection
+   kind="clock"
+   version="18.1"
+   start="clock_reset_inst.clock2x"
+   end="component_dpi_controller_rgb_to_hv_inst.clock2x" />
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="component_dpi_controller_rgb_to_hv_inst.component_call"
+   end="rgb_to_hv_inst.call">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="component_dpi_controller_rgb_to_hv_inst.component_done"
+   end="concatenate_component_done_inst.in_conduit_0">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="main_dpi_controller_inst.component_enabled"
+   end="split_component_start_inst.in_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="component_dpi_controller_rgb_to_hv_inst.component_wait_for_stream_writes"
+   end="concatenate_component_wait_for_stream_writes_inst.in_conduit_0">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="component_dpi_controller_rgb_to_hv_inst.dpi_control_bind"
+   end="rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst.in_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="component_dpi_controller_rgb_to_hv_inst.dpi_control_enable"
+   end="rgb_to_hv_component_dpi_controller_enable_conduit_fanout_inst.in_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="concatenate_component_done_inst.out_conduit"
+   end="main_dpi_controller_inst.component_done">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="concatenate_component_wait_for_stream_writes_inst.out_conduit"
+   end="main_dpi_controller_inst.component_wait_for_stream_writes">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="split_component_start_inst.out_conduit_0"
+   end="component_dpi_controller_rgb_to_hv_inst.component_enabled">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_0"
+   end="stream_source_dpi_bfm_rgb_to_hv_blue_inst.dpi_control_bind">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_0"
+   end="stream_source_dpi_bfm_rgb_to_hv_blue_inst.dpi_control_enable">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_component_dpi_controller_implicit_ready_conduit_fanout_inst.out_conduit_0"
+   end="stream_source_dpi_bfm_rgb_to_hv_blue_inst.source_ready">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_1"
+   end="stream_source_dpi_bfm_rgb_to_hv_green_inst.dpi_control_bind">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_1"
+   end="stream_source_dpi_bfm_rgb_to_hv_green_inst.dpi_control_enable">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_component_dpi_controller_implicit_ready_conduit_fanout_inst.out_conduit_1"
+   end="stream_source_dpi_bfm_rgb_to_hv_green_inst.source_ready">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_component_dpi_controller_bind_conduit_fanout_inst.out_conduit_2"
+   end="stream_source_dpi_bfm_rgb_to_hv_red_inst.dpi_control_bind">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_component_dpi_controller_enable_conduit_fanout_inst.out_conduit_2"
+   end="stream_source_dpi_bfm_rgb_to_hv_red_inst.dpi_control_enable">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_component_dpi_controller_implicit_ready_conduit_fanout_inst.out_conduit_2"
+   end="stream_source_dpi_bfm_rgb_to_hv_red_inst.source_ready">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="component_dpi_controller_rgb_to_hv_inst.read_implicit_streams"
+   end="rgb_to_hv_component_dpi_controller_implicit_ready_conduit_fanout_inst.in_conduit">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="main_dpi_controller_inst.reset_ctrl"
+   end="clock_reset_inst.reset_ctrl">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_inst.return"
+   end="component_dpi_controller_rgb_to_hv_inst.component_return">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="rgb_to_hv_inst.returndata"
+   end="component_dpi_controller_rgb_to_hv_inst.returndata">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="stream_source_dpi_bfm_rgb_to_hv_blue_inst.source_data"
+   end="rgb_to_hv_inst.blue">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="stream_source_dpi_bfm_rgb_to_hv_green_inst.source_data"
+   end="rgb_to_hv_inst.green">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="conduit"
+   version="18.1"
+   start="stream_source_dpi_bfm_rgb_to_hv_red_inst.source_data"
+   end="rgb_to_hv_inst.red">
+  <parameter name="endPort" value="" />
+  <parameter name="endPortLSB" value="0" />
+  <parameter name="startPort" value="" />
+  <parameter name="startPortLSB" value="0" />
+  <parameter name="width" value="0" />
+ </connection>
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clock_reset_inst.reset"
+   end="main_dpi_controller_inst.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clock_reset_inst.reset"
+   end="rgb_to_hv_inst.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clock_reset_inst.reset"
+   end="stream_source_dpi_bfm_rgb_to_hv_blue_inst.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clock_reset_inst.reset"
+   end="stream_source_dpi_bfm_rgb_to_hv_green_inst.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clock_reset_inst.reset"
+   end="stream_source_dpi_bfm_rgb_to_hv_red_inst.reset" />
+ <connection
+   kind="reset"
+   version="18.1"
+   start="clock_reset_inst.reset"
+   end="component_dpi_controller_rgb_to_hv_inst.reset" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

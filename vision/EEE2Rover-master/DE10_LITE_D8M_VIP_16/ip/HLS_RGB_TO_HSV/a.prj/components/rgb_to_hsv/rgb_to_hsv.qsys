@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags="INTERNAL_COMPONENT=false"
+   categories="HLS" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element rgb_to_hsv_internal_inst
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="10M50DAF672I7G" />
+ <parameter name="deviceFamily" value="MAX 10" />
+ <parameter name="deviceSpeedGrade" value="7" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface
+   name="blue"
+   internal="rgb_to_hsv_internal_inst.blue"
+   type="conduit"
+   dir="end">
+  <port name="blue" internal="blue" />
+ </interface>
+ <interface
+   name="clock"
+   internal="rgb_to_hsv_internal_inst.clock"
+   type="clock"
+   dir="end">
+  <port name="clock" internal="clock" />
+ </interface>
+ <interface
+   name="green"
+   internal="rgb_to_hsv_internal_inst.green"
+   type="conduit"
+   dir="end">
+  <port name="green" internal="green" />
+ </interface>
+ <interface
+   name="red"
+   internal="rgb_to_hsv_internal_inst.red"
+   type="conduit"
+   dir="end">
+  <port name="red" internal="red" />
+ </interface>
+ <interface
+   name="reset"
+   internal="rgb_to_hsv_internal_inst.reset"
+   type="reset"
+   dir="end">
+  <port name="resetn" internal="resetn" />
+ </interface>
+ <interface
+   name="returndata"
+   internal="rgb_to_hsv_internal_inst.returndata"
+   type="conduit"
+   dir="end">
+  <port name="returndata" internal="returndata" />
+ </interface>
+ <interface
+   name="s"
+   internal="rgb_to_hsv_internal_inst.s"
+   type="conduit"
+   dir="end">
+  <port name="s" internal="s" />
+ </interface>
+ <module
+   name="rgb_to_hsv_internal_inst"
+   kind="rgb_to_hsv_internal"
+   version="1.0"
+   enabled="1"
+   autoexport="1" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

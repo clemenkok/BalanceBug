@@ -75,6 +75,9 @@ My suspicion:
 
 http://www.hlam.ece.ufl.edu/EEL4712/LectureNotes/MAX10-EmbeddedMemory.pdf
 
+# SQUEEZING OUT EXTRA RAM FROM THE START CODE
+- ON CHIP MEMORY CHANGED FROM SIZE OF 131072 BYTES TO 120000 BYTES
+
 
 
 

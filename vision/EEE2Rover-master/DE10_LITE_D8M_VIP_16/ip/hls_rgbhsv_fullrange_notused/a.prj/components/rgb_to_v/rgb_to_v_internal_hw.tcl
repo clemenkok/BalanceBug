@@ -1,0 +1,168 @@
+package require -exact qsys 15.0
+set_module_property NAME rgb_to_v_internal
+set_module_property VERSION 1.0
+set_module_property INTERNAL true
+set_module_property GROUP HLS
+set_module_property DISPLAY_NAME rgb_to_v_internal
+set_module_property INSTANTIATE_IN_SYSTEM_MODULE true
+set_module_property EDITABLE true
+set_module_assignment hls.cosim.name {rgb_to_v}
+
+#### Synthesis fileset
+add_fileset QUARTUS_SYNTH QUARTUS_SYNTH "" ""
+set_fileset_property QUARTUS_SYNTH TOP_LEVEL rgb_to_v_internal
+set_fileset_property QUARTUS_SYNTH ENABLE_RELATIVE_INCLUDE_PATHS false
+add_fileset_file dspba_library_package.vhd VHDL PATH windows64/lib/dspba/Libraries/vhdl/base/dspba_library_package.vhd
+add_fileset_file dspba_library.vhd VHDL PATH windows64/lib/dspba/Libraries/vhdl/base/dspba_library.vhd
+add_fileset_file acl_data_fifo.v SYSTEM_VERILOG PATH ip/acl_data_fifo.v
+add_fileset_file acl_fifo.v SYSTEM_VERILOG PATH ip/acl_fifo.v
+add_fileset_file acl_ll_fifo.v SYSTEM_VERILOG PATH ip/acl_ll_fifo.v
+add_fileset_file acl_ll_ram_fifo.v SYSTEM_VERILOG PATH ip/acl_ll_ram_fifo.v
+add_fileset_file acl_valid_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_valid_fifo_counter.v
+add_fileset_file acl_dspba_valid_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_dspba_valid_fifo_counter.v
+add_fileset_file acl_staging_reg.v SYSTEM_VERILOG PATH ip/acl_staging_reg.v
+add_fileset_file hld_fifo.sv SYSTEM_VERILOG PATH ip/hld_fifo.sv
+add_fileset_file hld_fifo_zero_width.sv SYSTEM_VERILOG PATH ip/hld_fifo_zero_width.sv
+add_fileset_file acl_high_speed_fifo.sv SYSTEM_VERILOG PATH ip/acl_high_speed_fifo.sv
+add_fileset_file acl_low_latency_fifo.sv SYSTEM_VERILOG PATH ip/acl_low_latency_fifo.sv
+add_fileset_file acl_zero_latency_fifo.sv SYSTEM_VERILOG PATH ip/acl_zero_latency_fifo.sv
+add_fileset_file acl_fanout_pipeline.sv SYSTEM_VERILOG PATH ip/acl_fanout_pipeline.sv
+add_fileset_file acl_std_synchronizer_nocut.v SYSTEM_VERILOG PATH ip/acl_std_synchronizer_nocut.v
+add_fileset_file acl_tessellated_incr_decr_threshold.sv SYSTEM_VERILOG PATH ip/acl_tessellated_incr_decr_threshold.sv
+add_fileset_file acl_tessellated_incr_lookahead.sv SYSTEM_VERILOG PATH ip/acl_tessellated_incr_lookahead.sv
+add_fileset_file acl_reset_handler.sv SYSTEM_VERILOG PATH ip/acl_reset_handler.sv
+add_fileset_file acl_lfsr.sv SYSTEM_VERILOG PATH ip/acl_lfsr.sv
+add_fileset_file acl_pop.v SYSTEM_VERILOG PATH ip/acl_pop.v
+add_fileset_file acl_push.v SYSTEM_VERILOG PATH ip/acl_push.v
+add_fileset_file acl_token_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_token_fifo_counter.v
+add_fileset_file acl_pipeline.v SYSTEM_VERILOG PATH ip/acl_pipeline.v
+add_fileset_file acl_dspba_buffer.v SYSTEM_VERILOG PATH ip/acl_dspba_buffer.v
+add_fileset_file acl_enable_sink.v SYSTEM_VERILOG PATH ip/acl_enable_sink.v
+add_fileset_file st_top.v SYSTEM_VERILOG PATH ip/st_top.v
+add_fileset_file rgb_to_v_function_wrapper.vhd VHDL PATH ip/rgb_to_v_function_wrapper.vhd
+add_fileset_file rgb_to_v_function.vhd VHDL PATH ip/rgb_to_v_function.vhd
+add_fileset_file bb_rgb_to_v_B0_runOnce.vhd VHDL PATH ip/bb_rgb_to_v_B0_runOnce.vhd
+add_fileset_file bb_rgb_to_v_B0_runOnce_stall_region.vhd VHDL PATH ip/bb_rgb_to_v_B0_runOnce_stall_region.vhd
+add_fileset_file i_acl_pop_i1_wt_limpop_rgb_to_v0.vhd VHDL PATH ip/i_acl_pop_i1_wt_limpop_rgb_to_v0.vhd
+add_fileset_file i_acl_pop_i1_wt_limpop_rgb_to_vgr_reg.vhd VHDL PATH ip/i_acl_pop_i1_wt_limpop_rgb_to_vgr_reg.vhd
+add_fileset_file i_acl_push_i1_wt_limpush_rgb_to_v2.vhd VHDL PATH ip/i_acl_push_i1_wt_limpush_rgb_to_v2.vhd
+add_fileset_file i_acl_push_i1_wt_limpush_rgb_to_vgr_reg.vhd VHDL PATH ip/i_acl_push_i1_wt_limpush_rgb_to_vgr_reg.vhd
+add_fileset_file rgb_to_v_B0_runOnce_merge_reg.vhd VHDL PATH ip/rgb_to_v_B0_runOnce_merge_reg.vhd
+add_fileset_file rgb_to_v_B0_runOnce_branch.vhd VHDL PATH ip/rgb_to_v_B0_runOnce_branch.vhd
+add_fileset_file rgb_to_v_B0_runOnce_merge.vhd VHDL PATH ip/rgb_to_v_B0_runOnce_merge.vhd
+add_fileset_file bb_rgb_to_v_B1_start.vhd VHDL PATH ip/bb_rgb_to_v_B1_start.vhd
+add_fileset_file bb_rgb_to_v_B1_start_stall_region.vhd VHDL PATH ip/bb_rgb_to_v_B1_start_stall_region.vhd
+add_fileset_file i_iord_bl_do_unnamed_rgb_to_v1_rgb_to_v12.vhd VHDL PATH ip/i_iord_bl_do_unnamed_rgb_to_v1_rgb_to_v12.vhd
+add_fileset_file i_iowr_nb_return_unnamed_rgb_to_v2_rgb_to_v13.vhd VHDL PATH ip/i_iowr_nb_return_unnamed_rgb_to_v2_rgb_to_v13.vhd
+add_fileset_file i_sfc_c0_wt_entry_rgb_to_v_c0_enter_rgb_to_vgr.vhd VHDL PATH ip/i_sfc_c0_wt_entry_rgb_to_v_c0_enter_rgb_to_vgr.vhd
+add_fileset_file i_acl_sfc_exit_c0_wt_entry_rgb_to_v_c0_exit_rgb_to_v10.vhd VHDL PATH ip/i_acl_sfc_exit_c0_wt_entry_rgb_to_v_c0_exit_rgb_to_v10.vhd
+add_fileset_file i_sfc_logic_c0_wt_entry_rgb_to_v_c0_enter_rgb_to_v4.vhd VHDL PATH ip/i_sfc_logic_c0_wt_entry_rgb_to_v_c0_enter_rgb_to_v4.vhd
+add_fileset_file i_acl_pipeline_keep_going_rgb_to_v6.vhd VHDL PATH ip/i_acl_pipeline_keep_going_rgb_to_v6.vhd
+add_fileset_file i_acl_push_i1_notexitcond_rgb_to_v8.vhd VHDL PATH ip/i_acl_push_i1_notexitcond_rgb_to_v8.vhd
+add_fileset_file rgb_to_v_B1_start_merge_reg.vhd VHDL PATH ip/rgb_to_v_B1_start_merge_reg.vhd
+add_fileset_file rgb_to_v_B1_start_branch.vhd VHDL PATH ip/rgb_to_v_B1_start_branch.vhd
+add_fileset_file rgb_to_v_B1_start_merge.vhd VHDL PATH ip/rgb_to_v_B1_start_merge.vhd
+add_fileset_file i_acl_pipeline_keep_going_rgb_to_vgr_sr.vhd VHDL PATH ip/i_acl_pipeline_keep_going_rgb_to_vgr_sr.vhd
+add_fileset_file i_acl_pipeline_keep_going_rgb_to_vgr_valid_fifo.vhd VHDL PATH ip/i_acl_pipeline_keep_going_rgb_to_vgr_valid_fifo.vhd
+add_fileset_file rgb_to_v_internal.v SYSTEM_VERILOG PATH rgb_to_v_internal.v
+
+#### Simulation fileset
+add_fileset SIM_VERILOG SIM_VERILOG "" ""
+set_fileset_property SIM_VERILOG TOP_LEVEL rgb_to_v_internal
+set_fileset_property SIM_VERILOG ENABLE_RELATIVE_INCLUDE_PATHS false
+add_fileset_file dspba_library_package.vhd VHDL PATH windows64/lib/dspba/Libraries/vhdl/base/dspba_library_package.vhd
+add_fileset_file dspba_library.vhd VHDL PATH windows64/lib/dspba/Libraries/vhdl/base/dspba_library.vhd
+add_fileset_file acl_data_fifo.v SYSTEM_VERILOG PATH ip/acl_data_fifo.v
+add_fileset_file acl_fifo.v SYSTEM_VERILOG PATH ip/acl_fifo.v
+add_fileset_file acl_ll_fifo.v SYSTEM_VERILOG PATH ip/acl_ll_fifo.v
+add_fileset_file acl_ll_ram_fifo.v SYSTEM_VERILOG PATH ip/acl_ll_ram_fifo.v
+add_fileset_file acl_valid_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_valid_fifo_counter.v
+add_fileset_file acl_dspba_valid_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_dspba_valid_fifo_counter.v
+add_fileset_file acl_staging_reg.v SYSTEM_VERILOG PATH ip/acl_staging_reg.v
+add_fileset_file hld_fifo.sv SYSTEM_VERILOG PATH ip/hld_fifo.sv
+add_fileset_file hld_fifo_zero_width.sv SYSTEM_VERILOG PATH ip/hld_fifo_zero_width.sv
+add_fileset_file acl_high_speed_fifo.sv SYSTEM_VERILOG PATH ip/acl_high_speed_fifo.sv
+add_fileset_file acl_low_latency_fifo.sv SYSTEM_VERILOG PATH ip/acl_low_latency_fifo.sv
+add_fileset_file acl_zero_latency_fifo.sv SYSTEM_VERILOG PATH ip/acl_zero_latency_fifo.sv
+add_fileset_file acl_fanout_pipeline.sv SYSTEM_VERILOG PATH ip/acl_fanout_pipeline.sv
+add_fileset_file acl_std_synchronizer_nocut.v SYSTEM_VERILOG PATH ip/acl_std_synchronizer_nocut.v
+add_fileset_file acl_tessellated_incr_decr_threshold.sv SYSTEM_VERILOG PATH ip/acl_tessellated_incr_decr_threshold.sv
+add_fileset_file acl_tessellated_incr_lookahead.sv SYSTEM_VERILOG PATH ip/acl_tessellated_incr_lookahead.sv
+add_fileset_file acl_reset_handler.sv SYSTEM_VERILOG PATH ip/acl_reset_handler.sv
+add_fileset_file acl_lfsr.sv SYSTEM_VERILOG PATH ip/acl_lfsr.sv
+add_fileset_file acl_pop.v SYSTEM_VERILOG PATH ip/acl_pop.v
+add_fileset_file acl_push.v SYSTEM_VERILOG PATH ip/acl_push.v
+add_fileset_file acl_token_fifo_counter.v SYSTEM_VERILOG PATH ip/acl_token_fifo_counter.v
+add_fileset_file acl_pipeline.v SYSTEM_VERILOG PATH ip/acl_pipeline.v
+add_fileset_file acl_dspba_buffer.v SYSTEM_VERILOG PATH ip/acl_dspba_buffer.v
+add_fileset_file acl_enable_sink.v SYSTEM_VERILOG PATH ip/acl_enable_sink.v
+add_fileset_file st_top.v SYSTEM_VERILOG PATH ip/st_top.v
+add_fileset_file rgb_to_v_function_wrapper.vhd VHDL PATH ip/rgb_to_v_function_wrapper.vhd
+add_fileset_file rgb_to_v_function.vhd VHDL PATH ip/rgb_to_v_function.vhd
+add_fileset_file bb_rgb_to_v_B0_runOnce.vhd VHDL PATH ip/bb_rgb_to_v_B0_runOnce.vhd
+add_fileset_file bb_rgb_to_v_B0_runOnce_stall_region.vhd VHDL PATH ip/bb_rgb_to_v_B0_runOnce_stall_region.vhd
+add_fileset_file i_acl_pop_i1_wt_limpop_rgb_to_v0.vhd VHDL PATH ip/i_acl_pop_i1_wt_limpop_rgb_to_v0.vhd
+add_fileset_file i_acl_pop_i1_wt_limpop_rgb_to_vgr_reg.vhd VHDL PATH ip/i_acl_pop_i1_wt_limpop_rgb_to_vgr_reg.vhd
+add_fileset_file i_acl_push_i1_wt_limpush_rgb_to_v2.vhd VHDL PATH ip/i_acl_push_i1_wt_limpush_rgb_to_v2.vhd
+add_fileset_file i_acl_push_i1_wt_limpush_rgb_to_vgr_reg.vhd VHDL PATH ip/i_acl_push_i1_wt_limpush_rgb_to_vgr_reg.vhd
+add_fileset_file rgb_to_v_B0_runOnce_merge_reg.vhd VHDL PATH ip/rgb_to_v_B0_runOnce_merge_reg.vhd
+add_fileset_file rgb_to_v_B0_runOnce_branch.vhd VHDL PATH ip/rgb_to_v_B0_runOnce_branch.vhd
+add_fileset_file rgb_to_v_B0_runOnce_merge.vhd VHDL PATH ip/rgb_to_v_B0_runOnce_merge.vhd
+add_fileset_file bb_rgb_to_v_B1_start.vhd VHDL PATH ip/bb_rgb_to_v_B1_start.vhd
+add_fileset_file bb_rgb_to_v_B1_start_stall_region.vhd VHDL PATH ip/bb_rgb_to_v_B1_start_stall_region.vhd
+add_fileset_file i_iord_bl_do_unnamed_rgb_to_v1_rgb_to_v12.vhd VHDL PATH ip/i_iord_bl_do_unnamed_rgb_to_v1_rgb_to_v12.vhd
+add_fileset_file i_iowr_nb_return_unnamed_rgb_to_v2_rgb_to_v13.vhd VHDL PATH ip/i_iowr_nb_return_unnamed_rgb_to_v2_rgb_to_v13.vhd
+add_fileset_file i_sfc_c0_wt_entry_rgb_to_v_c0_enter_rgb_to_vgr.vhd VHDL PATH ip/i_sfc_c0_wt_entry_rgb_to_v_c0_enter_rgb_to_vgr.vhd
+add_fileset_file i_acl_sfc_exit_c0_wt_entry_rgb_to_v_c0_exit_rgb_to_v10.vhd VHDL PATH ip/i_acl_sfc_exit_c0_wt_entry_rgb_to_v_c0_exit_rgb_to_v10.vhd
+add_fileset_file i_sfc_logic_c0_wt_entry_rgb_to_v_c0_enter_rgb_to_v4.vhd VHDL PATH ip/i_sfc_logic_c0_wt_entry_rgb_to_v_c0_enter_rgb_to_v4.vhd
+add_fileset_file i_acl_pipeline_keep_going_rgb_to_v6.vhd VHDL PATH ip/i_acl_pipeline_keep_going_rgb_to_v6.vhd
+add_fileset_file i_acl_push_i1_notexitcond_rgb_to_v8.vhd VHDL PATH ip/i_acl_push_i1_notexitcond_rgb_to_v8.vhd
+add_fileset_file rgb_to_v_B1_start_merge_reg.vhd VHDL PATH ip/rgb_to_v_B1_start_merge_reg.vhd
+add_fileset_file rgb_to_v_B1_start_branch.vhd VHDL PATH ip/rgb_to_v_B1_start_branch.vhd
+add_fileset_file rgb_to_v_B1_start_merge.vhd VHDL PATH ip/rgb_to_v_B1_start_merge.vhd
+add_fileset_file i_acl_pipeline_keep_going_rgb_to_vgr_sr.vhd VHDL PATH ip/i_acl_pipeline_keep_going_rgb_to_vgr_sr.vhd
+add_fileset_file i_acl_pipeline_keep_going_rgb_to_vgr_valid_fifo.vhd VHDL PATH ip/i_acl_pipeline_keep_going_rgb_to_vgr_valid_fifo.vhd
+add_fileset_file rgb_to_v_internal.v SYSTEM_VERILOG PATH rgb_to_v_internal.v
+
+#### Primary clock for the component
+add_interface clock clock end
+set_interface_property clock ENABLED true
+set_interface_assignment clock hls.cosim.name {$clock}
+add_interface_port clock clock clk input 1
+
+#### Primary reset for the component
+add_interface reset reset end
+set_interface_property reset associatedClock clock
+set_interface_assignment reset hls.cosim.name {$reset}
+add_interface_port reset resetn reset_n input 1
+
+#### The component return data interface (returndata)
+add_interface returndata conduit source
+set_interface_property returndata associatedClock clock
+set_interface_property returndata associatedReset reset
+set_interface_assignment returndata hls.cosim.name {$returndata}
+add_interface_port returndata returndata data output 56
+
+#### Parameter red interface
+add_interface red conduit sink
+set_interface_property red associatedClock clock
+set_interface_property red associatedReset reset
+set_interface_assignment red hls.cosim.name {red}
+add_interface_port red red data input 8
+
+#### Parameter green interface
+add_interface green conduit sink
+set_interface_property green associatedClock clock
+set_interface_property green associatedReset reset
+set_interface_assignment green hls.cosim.name {green}
+add_interface_port green green data input 8
+
+#### Parameter blue interface
+add_interface blue conduit sink
+set_interface_property blue associatedClock clock
+set_interface_property blue associatedReset reset
+set_interface_assignment blue hls.cosim.name {blue}
+add_interface_port blue blue data input 8
+
+#### Quartus settings (QIP strings)
+set_qip_strings { "set_instance_assignment -entity \"%entityName%\" -library \"%libraryName%\" -name AUTO_SHIFT_REGISTER_RECOGNITION OFF -to *_NO_SHIFT_REG*"  }
