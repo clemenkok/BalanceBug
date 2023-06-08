@@ -9,16 +9,16 @@ const int angleSensorPin = ??;  // Pitch angle sensor analog pin
 
 // PID Constants
 // have to be changed based on mass, length and other params of our actual robot
-const float pitchKp = 2.0;   // Pitch angle proportional gain
-const float pitchKi = 0.2;   // Pitch angle integral gain
-const float pitchKd = 0.1;   // Pitch angle derivative gain
-const float velocityKp = 1.0;   // Linear velocity proportional gain
-const float velocityKi = 0.1;   // Linear velocity integral gain
-const float velocityKd = 0.05;  // Linear velocity derivative gain
+const float pitchKp = 1347.43260385301;   // Pitch angle proportional gain
+const float pitchKi = 8116.84712570619;   // Pitch angle integral gain
+const float pitchKd = 25.4046839009897;   // Pitch angle derivative gain
+const float velocityKp = 0.00521143498243029;   // Linear velocity proportional gain
+const float velocityKi = 0.00225434547288991;   // Linear velocity integral gain
+const float velocityKd = 0.00267679521781729;  // Linear velocity derivative gain
 const float angularVelocityKp = 0.5;   // Angular velocity proportional gain
 const float angularVelocityKi = 0.05;  // Angular velocity integral gain
 const float angularVelocityKd = 0.02;  // Angular velocity derivative gain
-const float radius = 0.1; // radius of wheel for velocity filter value
+const float radius = 0.0337; // radius of wheel for velocity filter value
 const float length = 0.16; // length of robot
 
 // Filter Constants
@@ -27,8 +27,8 @@ const float angularVelocityConst = radius/length;
 
 // Setpoints
 // float pitchSetpoint = 0.0;   // Pitch angle setpoint
-float velocitySetpoint = 0.0;   // Linear velocity setpoint
-float angularVelocitySetpoint = 0.0;  // Angular velocity setpoint
+float velocitySetpoint = 0.1;   // Linear velocity setpoint
+float angularVelocitySetpoint = 0.1;  // Angular velocity setpoint
 
 // Variables
 float pitchAngle = 0.0;   // Current pitch angle
@@ -94,7 +94,10 @@ void updateSensors() {
   // get angular velocity
   // probably need to do smth about the turning part (how will i know when it wants to turn)
   // if going straight 
-  dir = getDirection();
+  dir = getDirection(); //this requires the LDR part, so just put dir as straight for testing 
+  // for testing purpose
+  dir = "straight";
+
   if (dir == "straight"){
     angularVelocityL = getSraightAngularVel() = angularVelocityR;
     // or maybe just use velocity? idk can test and see if theres a difference?
