@@ -9,6 +9,7 @@ module.exports = app => {
     // modify the server's state. in that case, POST requests are made by the ESP32 to send something
     // to the server and GET requests are made by the ESP32 to get something from the server, vv.
     // router.post("/", utils.edit);
-  
+    router.post("/start_rover", utils.start_rover);
+
     app.use('/api/utils', router);
   };    
