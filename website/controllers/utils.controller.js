@@ -16,7 +16,7 @@ exports.light_led = (req, res) => {
   // This then uses axios to send a request to the API endpoint hosted by the Raspberry Pi
   const url = "http://192.168.25.157" // API URL endpoint of Pi (192.68.34.157 is Pi Static IP)
   
-  axios.post(url, "light_on") // send a POST request to that URL, with 'light_on' as the payload
+  axios.post(url, "light_on") // send a POST request to that URL, with 'light_on' as the payload (change this to 'light_off' for turning off LED)
   .then((response) => console.log(response))
   .catch((error) => console.log(error));
     
