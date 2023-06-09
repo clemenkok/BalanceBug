@@ -8,7 +8,7 @@ const app = express();
 var corsOptions = {
   origin: "http://localhost:8081"
 };
-
+app.listen(80, '0.0.0.0');
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
