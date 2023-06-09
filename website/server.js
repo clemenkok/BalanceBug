@@ -8,7 +8,8 @@ const app = express();
 var corsOptions = {
   origin: "http://localhost:8081"
 };
-app.listen(80, '0.0.0.0');
+// listen to all IPs in LAN for port 80
+// app.listen(80, '0.0.0.0');
 app.use(cors(corsOptions));
 
 // parse requests of content-type - application/json
@@ -17,7 +18,7 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// call sync()
+// call sync() on database
 const db = require("./models");
 db.sequelize.sync();
 
