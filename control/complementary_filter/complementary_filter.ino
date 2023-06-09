@@ -3,7 +3,7 @@
 // -------------------------------------------------
 
 #include "Wire.h"
-#include "I2C.h"
+//#include "I2C.h"
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
 
@@ -246,6 +246,7 @@ bool pitchrollfiltering()
   detectPitch(gyroscope, accelerometer);
   detectRoll(gyroscope, accelerometer);
 
+  //change the X/Y cuz not sure
   detectVelocity(raw_acc, getPitch(), 0);
 
   return true;
