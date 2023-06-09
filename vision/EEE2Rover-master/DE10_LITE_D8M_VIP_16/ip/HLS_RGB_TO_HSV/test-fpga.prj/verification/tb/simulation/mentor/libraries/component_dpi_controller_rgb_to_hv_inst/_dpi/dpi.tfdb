@@ -1,0 +1,83 @@
+VERSION 10 1 1
+SYM_BEGIN 29
+9 14
+component_name
+3 18
+concurrent_threads
+26 55
+tb/simulation/submodules/hls_sim_stream_sink_dpi_bfm.sv
+4 12
+first_in_set
+2 10
+start_time
+6 3
+msg
+0 16
+invocation_stats
+19 22
+__ihc_hls_stream_front
+1 49
+hls_sim_component_dpi_controller.invocation_stats
+24 21
+__ihc_hls_stream_read
+23 3
+eop
+5 14
+__ihc_hls_dbgs
+10 14
+interface_name
+21 4
+data
+25 22
+__ihc_hls_stream_ready
+17 15
+last_valid_time
+15 11
+stream_name
+22 3
+sop
+7 60
+tb/simulation/submodules/hls_sim_component_dpi_controller.sv
+8 52
+__ihc_hls_get_stream_obj_ptr_for_component_interface
+28 5
+valid
+14 40
+__ihc_hls_register_stream_data_rate_info
+16 16
+first_valid_time
+13 8
+end_time
+18 22
+num_elements_in_stream
+12 44
+__ihc_hls_register_component_invocation_info
+27 22
+__ihc_hls_stream_write
+20 7
+obj_ptr
+11 57
+tb/simulation/submodules/hls_sim_stream_source_dpi_bfm.sv
+SYM_END
+TYPEDEF_BEGIN 1
+0 235 
+0 -1 1 0x0 1 0 2 0 0 32 1 192 3 3 0 0 0x2 1 3 2 0 0x0 1 0 10 0 -1 16 278537 64 0 63 63 0 64 0x1 0 0 0 -1 3 16 0x0 1 0 12 0 -1 8 278569 64 0 63 63 0 64 0x1 0 0 0 -1 4 24 0x0 1 0 12 0 -1 8 278569 64 0 63 63 0 64 0x1 0 0 0 -1 0x3 0x1 1 0  
+TYPEDEF_END 
+TF_BEGIN 8
+5 81 
+5 -1 -1 6 1 1 0 0x0 0 0x1 0 6 0x0 1 0 52 16 1 16 17413 0 0 0 -1 0 0 0x1 1 1 7 54  
+8 166 
+8 -1 -1 6 2 1 0 0x0 1 0 25 0 -1 4 278561 32 0 31 31 0 32 0x1 0 9 0x0 1 0 52 16 1 16 17413 0 0 0 -1 0 0 0x1 1 0 10 0x0 1 0 52 16 1 16 17413 0 0 0 -1 0 0 0x1 1 1 11 41  
+12 287 
+12 -1 -1 6 5 1 0 0x0 0 0x1 0 9 0x0 1 0 52 16 1 16 17413 0 0 0 -1 0 0 0x1 1 0 2 0x0 1 0 12 0 -1 8 278569 64 0 63 63 0 64 0x1 1 0 13 0x0 1 0 12 0 -1 8 278569 64 0 63 63 0 64 0x1 1 0 3 0x0 1 0 12 0 -1 8 278569 64 0 63 63 0 64 0x1 1 0 4 0x0 1 0 12 0 -1 8 278569 64 0 63 63 0 64 0x1 1 1 7 55  
+14 288 
+14 -1 -1 6 5 1 0 0x0 0 0x1 0 9 0x0 1 0 52 16 1 16 17413 0 0 0 -1 0 0 0x1 1 0 15 0x0 1 0 52 16 1 16 17413 0 0 0 -1 0 0 0x1 1 0 16 0x0 1 0 12 0 -1 8 278569 64 0 63 63 0 64 0x1 1 0 17 0x0 1 0 12 0 -1 8 278569 64 0 63 63 0 64 0x1 1 0 18 0x0 1 0 12 0 -1 8 278569 64 0 63 63 0 64 0x1 1 1 11 50  
+19 255 
+19 -1 -1 6 4 1 0 0x0 1 0 12 0 -1 4 278571 32 0 31 31 0 32 0x1 0 20 0x0 1 0 25 0 -1 4 278561 32 0 31 31 0 32 0x1 1 0 21 0x0 1 0 12 0 1 0 278569 1 0 0 0 0 1 0x1 3 0 22 0x0 1 0 12 0 1 4 41 1 0 0 0 0 1 0x1 3 0 23 0x0 1 0 12 0 1 4 41 1 0 0 0 0 1 0x1 3 1 11 45  
+24 255 
+24 -1 -1 6 4 1 0 0x0 1 0 12 0 -1 4 278571 32 0 31 31 0 32 0x1 0 20 0x0 1 0 25 0 -1 4 278561 32 0 31 31 0 32 0x1 1 0 21 0x0 1 0 12 0 1 0 278569 1 0 0 0 0 1 0x1 3 0 22 0x0 1 0 12 0 1 4 41 1 0 0 0 0 1 0x1 3 0 23 0x0 1 0 12 0 1 4 41 1 0 0 0 0 1 0x1 3 1 11 47  
+25 122 
+25 -1 -1 6 1 1 0 0x0 1 0 12 0 -1 4 278571 32 0 31 31 0 32 0x1 0 20 0x0 1 0 25 0 -1 4 278561 32 0 31 31 0 32 0x1 1 1 26 45  
+27 268 
+27 -1 -1 6 5 1 0 0x0 0 0x1 0 20 0x0 1 0 25 0 -1 4 278561 32 0 31 31 0 32 0x1 1 0 21 0x0 1 0 12 0 1 0 278569 1 0 0 0 0 1 0x1 3 0 22 0x0 1 0 12 0 1 4 41 1 0 0 0 0 1 0x1 3 0 23 0x0 1 0 12 0 1 4 41 1 0 0 0 0 1 0x1 3 0 28 0x0 1 0 12 0 -1 4 278571 8 0 7 7 0 8 0x1 1 1 26 48  
+TF_END 

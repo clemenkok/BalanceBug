@@ -247,7 +247,7 @@ Memory Configuration
 
 Name             Origin             Length             Attributes
 reset            0x0000000000020000 0x0000000000000020
-onchip_memory2_0 0x0000000000020020 0x000000000001ffe0
+onchip_memory2_0 0x0000000000020020 0x000000000001d4a0
 *default*        0x0000000000000000 0xffffffffffffffff
 
 Linker script and memory map
@@ -2655,11 +2655,11 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 0x0000000000000000       0x30 ../D8M_Camera_Test_bsp//obj/HAL/src/crt0.o
  .debug_alt_sim_info
                 0x0000000000000030       0x30 ../D8M_Camera_Test_bsp/\libhal_bsp.a(alt_busy_sleep.o)
-                0x0000000000040000                __alt_data_end = 0x40000
-                0x0000000000040000                PROVIDE (__alt_stack_pointer, __alt_data_end)
+                0x000000000003d4c0                __alt_data_end = 0x3d4c0
+                0x000000000003d4c0                PROVIDE (__alt_stack_pointer, __alt_data_end)
                 [!provide]                        PROVIDE (__alt_stack_limit, __alt_stack_base)
                 0x0000000000038228                PROVIDE (__alt_heap_start, end)
-                0x0000000000040000                PROVIDE (__alt_heap_limit, 0x40000)
+                0x000000000003d4c0                PROVIDE (__alt_heap_limit, 0x3d4c0)
 OUTPUT(D8M_Camera_Test.elf elf32-littlenios2)
 
 .debug_ranges   0x0000000000000000     0x1a30

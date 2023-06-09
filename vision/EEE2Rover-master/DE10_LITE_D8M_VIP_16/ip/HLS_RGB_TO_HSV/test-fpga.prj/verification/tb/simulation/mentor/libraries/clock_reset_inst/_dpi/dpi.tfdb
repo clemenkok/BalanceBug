@@ -1,0 +1,15 @@
+VERSION 10 1 1
+SYM_BEGIN 3
+1 3
+msg
+0 14
+__ihc_hls_dbgs
+2 47
+tb/simulation/submodules/hls_sim_clock_reset.sv
+SYM_END
+TYPEDEF_BEGIN 0
+TYPEDEF_END 
+TF_BEGIN 1
+0 81 
+0 -1 -1 6 1 1 0 0x0 0 0x1 0 1 0x0 1 0 52 16 1 16 17413 0 0 0 -1 0 0 0x1 1 1 2 38  
+TF_END 

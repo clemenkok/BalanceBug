@@ -1,24 +1,24 @@
 #include <Wire.h>
 #include <Adafruit_Sensor.h>
-#include <Adafruit_LSM6DS33.h>
+#include <Adafruit_MPU6050.h>
 
 // Constants
-const int motorLPin = ?;  // Left motor PWM pin
-const int motorRPin = ?;  // Right motor PWM pin
-const int angleSensorPin = ??;  // Pitch angle sensor analog pin
+const int motorLPin = 1;  // Left motor PWM pin
+const int motorRPin = 2;  // Right motor PWM pin
+const int angleSensorPin = A0;  // Pitch angle sensor analog pin
 
 // PID Constants
 // have to be changed based on mass, length and other params of our actual robot
-const float pitchKp = 2.0;   // Pitch angle proportional gain
-const float pitchKi = 0.2;   // Pitch angle integral gain
-const float pitchKd = 0.1;   // Pitch angle derivative gain
-const float velocityKp = 1.0;   // Linear velocity proportional gain
-const float velocityKi = 0.1;   // Linear velocity integral gain
-const float velocityKd = 0.05;  // Linear velocity derivative gain
+const float pitchKp = 1347.43260385301;   // Pitch angle proportional gain
+const float pitchKi = 8116.84712570619;   // Pitch angle integral gain
+const float pitchKd = 25.4046839009897;   // Pitch angle derivative gain
+const float velocityKp = 0.00521143498243029;   // Linear velocity proportional gain
+const float velocityKi = 0.00225434547288991;   // Linear velocity integral gain
+const float velocityKd = 0.00267679521781729;  // Linear velocity derivative gain
 const float angularVelocityKp = 0.5;   // Angular velocity proportional gain
 const float angularVelocityKi = 0.05;  // Angular velocity integral gain
 const float angularVelocityKd = 0.02;  // Angular velocity derivative gain
-const float radius = 0.1; // radius of wheel for velocity filter value
+const float radius = 0.0337; // radius of wheel for velocity filter value
 const float length = 0.16; // length of robot
 
 // Filter Constants
@@ -26,9 +26,9 @@ const float velocityFilterAlpha = radius/2;  // Velocity filter alpha value
 const float angularVelocityConst = radius/length;
 
 // Setpoints
-// float pitchSetpoint = 0.0;   // Pitch angle setpoint
-float velocitySetpoint = 0.0;   // Linear velocity setpoint
-float angularVelocitySetpoint = 0.0;  // Angular velocity setpoint
+float pitchSetpoint = 0.0;   // Pitch angle setpoint
+float velocitySetpoint = 0.1;   // Linear velocity setpoint
+float angularVelocitySetpoint = 0.1;  // Angular velocity setpoint
 
 // Variables
 float pitchAngle = 0.0;   // Current pitch angle
@@ -40,6 +40,11 @@ float lastVelocityError = 0.0;   // Previous linear velocity error
 float velocityErrorSum = 0.0;    // Linear velocity error sum
 float lastAngularVelocityError = 0.0;  // Previous angular velocity error
 float angularVelocityErrorSum = 0.0;   // Angular velocity error sum
+float angularVelocityL = 0.0;
+float angularVelocityR = 0.0;
+float leftMotorVoltage = 0.0;
+float rightMotorVoltage = 0.0;
+String dir = "";
 
 // Objects
 // Adafruit_MPU6050 mpu;
@@ -62,23 +67,12 @@ void pitchAngleControlLoop() {
   updateSensors();
 
   // Update control loops
-  updateControl();
+  updatePitchControl();
 
   // Apply motor voltages
   applyMotorVoltages(leftMotorVoltage, rightMotorVoltage);
   delay(10); // freq to be tested and retuned
 
-
-  // velocity
-  // getPitch()
-  // getRoll()
-  // gyroscope.x (raw data)
-  // gyroscope.y
-  // gyroscope.z
-
-  // test print raw data
-  // Serial.print("gyroscope.x:");
-  // Serial.print(gyroscope.x);
 }
 
 void linearVelocityControlLoop(){
@@ -94,16 +88,22 @@ void updateSensors() {
   // get angular velocity
   // probably need to do smth about the turning part (how will i know when it wants to turn)
   // if going straight 
-  dir = getDirection();
+  //dir = getDirection(); //this requires the LDR part, so just put dir as straight for testing 
+  // for testing purpose
+  dir = "straight";
+
   if (dir == "straight"){
-    angularVelocityL = getSraightAngularVel() = angularVelocityR;
+    angularVelocityL = getStraightAngularVel();
+    angularVelocityR = getStraightAngularVel();
     // or maybe just use velocity? idk can test and see if theres a difference?
   }
   else if (dir == "left"){
-    angularVelocityR = getTurnAngularVel(abs(gyroscope.z - lastyaw), millis() - lastPrintMillis);
+    angularVelocityR = getTurnAngularVel(abs(getYaw() - lastyaw), millis() - lastPrintMillis);
+    angularVelocityL = 0;
   }
   else if (dir == "right"){
-    angularVelocityL = getTurnAngularVel(abs(gyroscope.z - lastyaw), millis() - lastPrintMillis);
+    angularVelocityL = getTurnAngularVel(abs(getYaw() - lastyaw), millis() - lastPrintMillis);
+    angularVelocityR = 0;
   }
   //for all cases
   angularVelocity = angularVelocityConst * (angularVelocityR - angularVelocityL);
@@ -113,7 +113,7 @@ void updateSensors() {
 
 void updatePitchControl() {
   // Pitch angle control (inner loop)
-  float pitchError = velocityOutput - pitchAngle;
+  float pitchError = pitchSetpoint - pitchAngle;
   float pitchErrorDelta = pitchError - lastPitchError;
   pitchErrorSum += pitchError;
 
@@ -130,7 +130,7 @@ void updatePitchControl() {
 
   // Calculate left and right motor voltages based on the control outputs
   float leftMotorVoltage = pitchOutput - angularVelocityOutput;
-  float rightMotorVoltage = pitchOutout + angularVelocityOutput;
+  float rightMotorVoltage = pitchOutput + angularVelocityOutput;
 
   // Store current errors for the next iteration
   lastPitchError = pitchError;

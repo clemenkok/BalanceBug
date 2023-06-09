@@ -1,0 +1,1661 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [29.8478, 19.986, 11.836, 13.1868, 10.4167]
+  , "total":
+  [7402, 5918, 24, 15]
+  , "name":"System"
+  , "max_resources":
+  [37036, 50000, 182, 144]
+  , "children":
+  [
+    {
+      "name":"rgb_to_h"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [15.6444, 10.5195, 6.17, 6.59341, 5.55556]
+      , "total_kernel_resources":
+      [3896, 3085, 12, 7.5]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Component call"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 24 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Component return"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 64 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"rgb_to_h.B1.start"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [2501, 2464, 4, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [2501, 2464, 4, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [28, 74, 3, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [53, 12, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [33, 3, 0, 0]
+                    }
+                    , {
+                      "name":"Non-Blocking Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [15, 8, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"rgb_to_hsv.c:104 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [22, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":104
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:106 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [11, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":106
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:109"
+                  , "type":"resource"
+                  , "data":
+                  [26.3333, 5.33333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":109
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":6
+                      , "data":
+                      [26.3333, 5.33333, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:115 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [11, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":115
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:120"
+                  , "type":"resource"
+                  , "data":
+                  [26.3333, 5.33333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":120
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":6
+                      , "data":
+                      [26.3333, 5.33333, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:126 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [22, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":126
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:131"
+                  , "type":"resource"
+                  , "data":
+                  [19.3333, 5.33333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":131
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [19.3333, 5.33333, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:140"
+                  , "type":"resource"
+                  , "data":
+                  [12, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":140
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [9, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:149 > ac_int.h:2223 > \nac_int.h:1838 > ac_int.h:973"
+                  , "type":"resource"
+                  , "data":
+                  [6.5, 1.5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":149
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":2223
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1838
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":973
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [0.5, 0.5, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [6, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:150"
+                  , "type":"resource"
+                  , "data":
+                  [2, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":150
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:150 > ac_int.h:2223 > \nac_int.h:1838 > ac_int.h:973"
+                  , "type":"resource"
+                  , "data":
+                  [3, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":150
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":2223
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1838
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":973
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:151"
+                  , "type":"resource"
+                  , "data":
+                  [2, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":151
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [2, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:151 > ac_int.h:2223 > \nac_int.h:1838 > ac_int.h:973"
+                  , "type":"resource"
+                  , "data":
+                  [3, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":151
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":2223
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1838
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":973
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:152"
+                  , "type":"resource"
+                  , "data":
+                  [2.5, 2.5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":152
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":6
+                      , "data":
+                      [2.5, 2.5, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:152 > ac_int.h:2223 > \nac_int.h:1838 > ac_int.h:973"
+                  , "type":"resource"
+                  , "data":
+                  [3, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":152
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":2223
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1838
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":973
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:153"
+                  , "type":"resource"
+                  , "data":
+                  [81, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":153
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":12
+                      , "data":
+                      [80, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:153 > ac_int.h:2223 > \nac_int.h:1838 > ac_int.h:973"
+                  , "type":"resource"
+                  , "data":
+                  [3, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":153
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":2223
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1838
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":973
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:156"
+                  , "type":"resource"
+                  , "data":
+                  [9, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":156
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [9, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:159"
+                  , "type":"resource"
+                  , "data":
+                  [966, 486, 5, 7.5]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":159
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Divide"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [933, 486, 5, 7.5]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:159 > ac_int.h:1490 > \nac_int.h:1089 > ac_int.h:593"
+                  , "type":"resource"
+                  , "data":
+                  [8.5, 8.5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":159
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1490
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1089
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":593
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [8.5, 8.5, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:161 > ac_int.h:2226 > \nac_int.h:1579 > ac_int.h:790"
+                  , "type":"resource"
+                  , "data":
+                  [26.5, 8.5, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":161
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":2226
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1579
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":790
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"17-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [18, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [8.5, 8.5, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:163 > ac_int.h:2226 > \nac_int.h:1573 > ac_int.h:785"
+                  , "type":"resource"
+                  , "data":
+                  [20, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":163
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":2226
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1573
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":785
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"19-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [20, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:165 > ac_int.h:1468 > \nac_int.h:566"
+                  , "type":"resource"
+                  , "data":
+                  [28, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":165
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1468
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":566
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [28, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"rgb_to_s"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [14.0424, 9.29096, 5.654, 6.59341, 5.55556]
+      , "total_kernel_resources":
+      [3441, 2827, 12, 7.5]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Component call"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 24 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Component return"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 64 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"rgb_to_s.B1.start"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [2244, 2210, 4, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [2244, 2210, 4, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [28, 74, 3, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [20, 9, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Non-Blocking Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [15, 8, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"rgb_to_hsv.c:175 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [22, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":175
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:177 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [11, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":177
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:180"
+                  , "type":"resource"
+                  , "data":
+                  [13.1667, 2.66667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":180
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [13.1667, 2.66667, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:186 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [11, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":186
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:191"
+                  , "type":"resource"
+                  , "data":
+                  [13.1667, 2.66667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":191
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [13.1667, 2.66667, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:197 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [22, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":197
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:202"
+                  , "type":"resource"
+                  , "data":
+                  [9.66667, 2.66667, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":202
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [9.66667, 2.66667, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:211"
+                  , "type":"resource"
+                  , "data":
+                  [12, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":211
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"8-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [9, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:217"
+                  , "type":"resource"
+                  , "data":
+                  [1007, 519, 5, 7.5]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":217
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Divide"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [939, 518, 5, 7.5]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:219 > ac_int.h:1468 > \nac_int.h:566"
+                  , "type":"resource"
+                  , "data":
+                  [28, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":219
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1468
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":566
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [28, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"rgb_to_v"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.160975, 0.175505, 0.012, 0, 0]
+      , "total_kernel_resources":
+      [65, 6, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Component call"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 24 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"Component return"
+          , "type":"resource"
+          , "data":
+          [0, 0, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Stream implemented 64 bits wide with a buffer size of 0 elements."
+            }
+          ]
+        }
+        , {
+          "name":"rgb_to_v.B1.start"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [1, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [4, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Channel Read"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Non-Blocking Channel Write"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"rgb_to_hsv.c:240"
+                  , "type":"resource"
+                  , "data":
+                  [8, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":240
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [7, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:240 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [22, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":240
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:251"
+                  , "type":"resource"
+                  , "data":
+                  [8, 1, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":251
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 1, 0, 0]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [7, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"rgb_to_hsv.c:251 > ac_int.h:1854 > \nac_int.h:980"
+                  , "type":"resource"
+                  , "data":
+                  [22, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"rgb_to_hsv.c"
+                        , "line":251
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":1854
+                      }
+                      , {
+                        "filename":"C:/intelFPGA_lite/18.1/hls/include\\HLS/ac_int.h"
+                        , "line":980
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

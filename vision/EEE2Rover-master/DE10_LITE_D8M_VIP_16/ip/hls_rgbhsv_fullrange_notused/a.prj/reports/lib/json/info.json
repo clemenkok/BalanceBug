@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"name":"Project Name","data":["./a"],"classes":["info-table"]},
+{"name":"Target Family, Device","data":["MAX 10, 10M50DAF672I7G"]},
+{"name":"i++ Version","data":["18.1.0 Build 625"]},
+{"name":"Quartus Version","data":["18.1.0 Build 625"]},
+{"name":"Command","data":["i++ rgb_to_hsv.c -march=Max10 --simulator none --fpga-only -v"]},
+{"name":"Reports Generated At", "data":["Tue Jun  6 01:49:48 2023"]}
+]}

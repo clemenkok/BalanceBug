@@ -1,0 +1,100 @@
+{
+  "nodes":
+  [
+    {
+      "type":"interface"
+      , "id":13
+      , "name":"blue"
+      , "debug":
+      [
+        [
+          {
+            "filename":"rgb_to_hsv.c"
+            , "line":13
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"8 bits"
+          , "Component":"rgb_to_hsv"
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":12
+      , "name":"green"
+      , "debug":
+      [
+        [
+          {
+            "filename":"rgb_to_hsv.c"
+            , "line":13
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"8 bits"
+          , "Component":"rgb_to_hsv"
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":11
+      , "name":"red"
+      , "debug":
+      [
+        [
+          {
+            "filename":"rgb_to_hsv.c"
+            , "line":13
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"8 bits"
+          , "Component":"rgb_to_hsv"
+        }
+      ]
+    }
+    , {
+      "type":"interface"
+      , "id":14
+      , "name":"s"
+      , "debug":
+      [
+        [
+          {
+            "filename":"rgb_to_hsv.c"
+            , "line":13
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Stable":"No"
+          , "Width":"8 bits"
+          , "Component":"rgb_to_hsv"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+  ]
+}
