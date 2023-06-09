@@ -1,7 +1,5 @@
 # import modules
 import socket
-import ujson
-import urequests
 import time
 import network  
 from machine import Pin
@@ -10,11 +8,6 @@ from machine import Pin
 
 # PIN allocation 
 led = Pin(15, Pin.OUT)
-
-tile_data = ujson.dumps({"tile_info": [1,1,1,1,1],
-    "tile_num": [1,1]})
-
-print(tile_data)
 
 # wifi config -----------------------------------------------------------------
 # Connect to network
@@ -36,15 +29,7 @@ while wlan.isconnected() == False:
 ip = wlan.ifconfig()[0]
 print(f'Connected on {ip}')
 
-# example for sending data out to server ----------------------------------------------------
-
-# send data to IP on LAN Wi-Fi Interface of my laptop
-# if we want to send data outwards, do something like this (e.g. voltage)
-url = "http://192.168.25.131:8080/api/live_database"
-response = urequests.post(url, headers = {'content-type': 'application/json'}, data=tile_data)
-print (response.text)
-
-# example for receiving data from server and taking action afterwards ----------------------------------------------------
+# receive data from server and taking action afterwards ----------------------------------------------------
 
 # bind to IP addresses: 0.0.0.0 for all IP address in LAN
 
@@ -75,13 +60,13 @@ while True:
         # so if light on was found, its integer position is given. else if it was not found, -1 would be returned from .find(), thus triggering this
         if light_on != -1:	# found light_on 
             print("led on")
-            led.value(1) # switches on LED
+            led.value(1) # switches on LED (TODO: replace this with the code to turn on)
             stateis = "LED is ON"
         
         # likewise for light_off
         if light_off != -1: # found light_off
             print("led off")
-            led.value(0) # switches off LED
+            led.value(0) # switches off LED (TODO: replace this with the code to turn off)
             stateis = "LED is OFF"
 
         cl.send('OK')
