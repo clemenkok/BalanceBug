@@ -27,12 +27,6 @@ app.get("/", (req, res) => {
   res.json({ message: "test." });
 });
 
-// all_info routes (an API route to save data directly into the all_info table)
-require("./routes/all_info.routes.js")(app);
-
-// map_info routes (an API route to save data directly into the map_info table)
-require("./routes/map_info.routes.js")(app);
-
 // live_database routes (an API route to save data directly into the live_database table)
 require("./routes/live_database.routes.js")(app);
 
