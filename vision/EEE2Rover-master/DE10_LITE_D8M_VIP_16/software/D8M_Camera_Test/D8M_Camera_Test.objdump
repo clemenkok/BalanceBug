@@ -602,7 +602,7 @@ Disassembly of section .entry:
    20014:	08409114 	ori	at,at,580
     jmp r1
    20018:	0800683a 	jmp	at
-   2001c:	00000000 	call	0 <__reset-0x20000>
+   2001c:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x20000>
 
 Disassembly of section .exceptions:
 
@@ -6665,7 +6665,7 @@ void QUEUE_Empty(QUEUE_STRUCT *pQueue){
    24438:	00024db0 	cmpltui	zero,zero,2358
    2443c:	00024edc 	xori	zero,zero,2363
    24440:	00024edc 	xori	zero,zero,2363
-   24444:	00024dc0 	call	24dc <__reset-0x1db24>
+   24444:	00024dc0 	call	24dc <__alt_mem_onchip_memory2_0-0x1db24>
    24448:	d9003117 	ldw	r4,196(sp)
    2444c:	d8802d15 	stw	r2,180(sp)
    24450:	0109c83a 	sub	r4,zero,r4
@@ -13722,21 +13722,21 @@ void QUEUE_Empty(QUEUE_STRUCT *pQueue){
    2b044:	10800017 	ldw	r2,0(r2)
    2b048:	1000683a 	jmp	r2
    2b04c:	0002b734 	movhi	zero,2780
-   2b050:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b054:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b050:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b054:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b058:	0002b754 	movui	zero,2781
-   2b05c:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b060:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b064:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b068:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b06c:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b070:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b05c:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b060:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b064:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b068:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b06c:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b070:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b074:	0002b93c 	xorhi	zero,zero,2788
    2b078:	0002b958 	cmpnei	zero,zero,2789
-   2b07c:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b080:	0002b240 	call	2b24 <__reset-0x1d4dc>
+   2b07c:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b080:	0002b240 	call	2b24 <__alt_mem_onchip_memory2_0-0x1d4dc>
    2b084:	0002b968 	cmpgeui	zero,zero,2789
-   2b088:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b088:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b08c:	0002b760 	cmpeqi	zero,zero,2781
    2b090:	0002b76c 	andhi	zero,zero,2781
    2b094:	0002b76c 	andhi	zero,zero,2781
@@ -13747,68 +13747,68 @@ void QUEUE_Empty(QUEUE_STRUCT *pQueue){
    2b0a8:	0002b76c 	andhi	zero,zero,2781
    2b0ac:	0002b76c 	andhi	zero,zero,2781
    2b0b0:	0002b76c 	andhi	zero,zero,2781
-   2b0b4:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0b8:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0bc:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0c0:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0c4:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0c8:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0cc:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0d0:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0d4:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0d8:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b0b4:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0b8:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0bc:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0c0:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0c4:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0c8:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0cc:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0d0:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0d4:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0d8:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b0dc:	0002b798 	cmpnei	zero,zero,2782
-   2b0e0:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0e4:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0e8:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0ec:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0f0:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0f4:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0f8:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b0fc:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b100:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b104:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b0e0:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0e4:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0e8:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0ec:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0f0:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0f4:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0f8:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b0fc:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b100:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b104:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b108:	0002b7d0 	cmplti	zero,zero,2783
-   2b10c:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b110:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b114:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b118:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b11c:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b10c:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b110:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b114:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b118:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b11c:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b120:	0002b828 	cmpgeui	zero,zero,2784
-   2b124:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b128:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b124:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b128:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b12c:	0002b898 	cmpnei	zero,zero,2786
-   2b130:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b134:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b138:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b13c:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b140:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b144:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b148:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b14c:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b150:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b154:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b130:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b134:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b138:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b13c:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b140:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b144:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b148:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b14c:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b150:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b154:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b158:	0002b644 	movi	zero,2777
    2b15c:	0002b670 	cmpltui	zero,zero,2777
-   2b160:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b164:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b168:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b160:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b164:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b168:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b16c:	0002b9a8 	cmpgeui	zero,zero,2790
    2b170:	0002b670 	cmpltui	zero,zero,2777
-   2b174:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b178:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b174:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b178:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b17c:	0002b504 	movi	zero,2772
-   2b180:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b180:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b184:	0002b514 	movui	zero,2772
    2b188:	0002b550 	cmplti	zero,zero,2773
    2b18c:	0002b24c 	andi	zero,zero,2761
    2b190:	0002b4f8 	rdprs	zero,zero,2771
-   2b194:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b194:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b198:	0002b8d4 	movui	zero,2787
-   2b19c:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b19c:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b1a0:	0002b92c 	andhi	zero,zero,2788
-   2b1a4:	0002ba00 	call	2ba0 <__reset-0x1d460>
-   2b1a8:	0002ba00 	call	2ba0 <__reset-0x1d460>
+   2b1a4:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
+   2b1a8:	0002ba00 	call	2ba0 <__alt_mem_onchip_memory2_0-0x1d460>
    2b1ac:	0002b5f0 	cmpltui	zero,zero,2775
    2b1b0:	42000204 	addi	r8,r8,8
    2b1b4:	da802317 	ldw	r10,140(sp)
