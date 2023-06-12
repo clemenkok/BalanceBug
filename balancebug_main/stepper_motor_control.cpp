@@ -24,8 +24,8 @@ double angularVeloToStepSpeed(double angularVelo){
 
 void stepperMotorSetup() {
   // Set the maximum speed and acceleration
-  stepper1.setMaxSpeed(500);     // Set the maximum speed in steps per second
-  stepper2.setMaxSpeed(500);     // Set the maximum speed in steps per second
+  stepper1.setMaxSpeed(1001);     // Set the maximum speed in steps per second
+  stepper2.setMaxSpeed(1001);     // Set the maximum speed in steps per second
   
   // Set the initial speed
   stepper1.setSpeed(50);         // Set the constant speed in steps per second
@@ -44,6 +44,10 @@ void setMotorSpeedAngularVelo(double angularVelo, int motorNumber){
 void runstepperMotors(){
   stepper1.run();
   stepper2.run();
+}
+
+double getMotorSpeedInSteps(){
+  return stepper1.speed();
 }
 
 /*
