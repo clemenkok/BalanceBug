@@ -31,6 +31,7 @@ void connectToMQTT()
   Serial.println("MQTT Connected");
 }
 
+// function to help with debugging Wifi
 void WiFiEvent(WiFiEvent_t event)
 {
   switch (event)
@@ -86,37 +87,35 @@ void keepMQTTAlive(void *parameters)
       }
       connectToMQTT();
     }
-    vTaskDelay(250 / portTICK_PERIOD_MS); // task runs approx every 250 mS
+    vTaskDelay(250 / portTICK_PERIOD_MS); // task runs approx every 250 ms
   }
   vTaskDelete(NULL);
 }
 
-void publishDeadreckoningData (void *parameters)
+void publishDeadreckoningData(void *parameters)
 {
   // await MQTT Connection
-  while ( !MQTTclient.connected() )
+  while (!MQTTclient.connected())
   {
-    vTaskDelay ( 250 / portTICK_PERIOD_MS );
+    vTaskDelay(250 / portTICK_PERIOD_MS);
   }
 
   for (;;)
   {
-    const char * topicDistance = "deadreckoning_data";
-    double distance = 4.0;
-    xSemaphoreTake( sema_keepMQTTAlive, portMAX_DELAY );
-    if ( MQTTclient.connected() )
+    const char *topicDistance = "deadreckoning_data";
+    double distance = 4.0; // dummy data, to replace with sensor 
+    xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
+    if (MQTTclient.connected())
     {
-      MQTTclient.publish( topicDistance, String(distance).c_str() );
-      vTaskDelay( 2 / portTICK_PERIOD_MS ); // give MQTT Broker time to receive and process msg
+      MQTTclient.publish(topicDistance, String(distance).c_str());
+      vTaskDelay(2 / portTICK_PERIOD_MS); // give MQTT Broker time to receive and process msg
     }
-    xSemaphoreGive( sema_keepMQTTAlive ); // return Semaphore to keepMQTTAlive
-    vTaskDelay ( 1000 * 15 / portTICK_PERIOD_MS );
+    xSemaphoreGive(sema_keepMQTTAlive); // return Semaphore to keepMQTTAlive
+    vTaskDelay(1000 * 15 / portTICK_PERIOD_MS); // adjust delay based off how often we want to send data
   }
 
-  vTaskDelete (NULL); // TODO: Identify why we have to delete Task
-
+  vTaskDelete(NULL); // TODO: Identify why we have to delete Task
 }
-
 
 void setup()
 {
@@ -148,6 +147,8 @@ void setup()
       NULL,
       CONFIG_ARDUINO_RUNNING_CORE
   );
+
+  // TODO: Research about Symmetric Multiprocessing and how we can use 1 core to do control, permanently
 }
 
 void loop()
