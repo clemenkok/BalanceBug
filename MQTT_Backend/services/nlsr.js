@@ -6,13 +6,9 @@ function circle([pos_x, pos_y]) {
     Math.sqrt(Math.pow(pos_x - x[0], 2) + Math.pow(pos_y - x[1], 2));
 }
 
-function nlsr(x, y, initialValues) {
+export default function nlsr(x, y, initialValues) {
   return levenbergMarquardt({ x, y }, circle, { initialValues });
 }
-
-module.exports = {
-  nlsr,
-};
 
 /*
 // Input points (x,y) 

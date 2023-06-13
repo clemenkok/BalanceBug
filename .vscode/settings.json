@@ -11,5 +11,9 @@
     ],
     "python.analysis.extraPaths": [
         ".vscode\\Pico-W-Stub\\stubs"
-    ]
+    ],
+    "eslint.workingDirectories": [
+    "./MQTT_Backend", 
+    "./frontend"
+],
 }

@@ -22,7 +22,7 @@ function heuristic(start, end) {
     return Math.abs(start[0] - end[0]) + Math.abs(start[1] - end[1]);
 }
 
-function aStar(start, goal, mazeMap) {
+export default function aStar(start, goal, mazeMap) {
     let rows = mazeMap.length;
     let cols = mazeMap[0].length;
     let neighbours = {};
@@ -79,6 +79,3 @@ function aStar(start, goal, mazeMap) {
     return {shortest_path, cost};
 }
 
-module.exports = {
-    aStar
-};
