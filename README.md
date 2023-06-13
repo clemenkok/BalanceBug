@@ -2,7 +2,7 @@
   <a href="http://intranet.ee.ic.ac.uk/electricalengineering/eecourses_t4/course_content.asp?c=ELEC50003&s=I2#start">
     <img
       alt="BalanceBug"
-      src=![istockphoto-470365028-612x612-removebg-preview](https://github.com/clemenkok/BalanceBug/assets/68755138/e69133b5-43e1-414c-af10-5f2febbfa0aa)
+      src=[BalanceBugLogo](./img/istockphoto-470365028-612x612-removebg-preview.png)
       width="300"
     />
   </a>
