@@ -1,21 +1,35 @@
-# BalanceBug
+<p align="center">
+  <a href="http://intranet.ee.ic.ac.uk/electricalengineering/eecourses_t4/course_content.asp?c=ELEC50003&s=I2#start">
+    <img
+      alt="BalanceBug"
+      src=![istockphoto-470365028-612x612-removebg-preview](https://github.com/clemenkok/BalanceBug/assets/68755138/e69133b5-43e1-414c-af10-5f2febbfa0aa)
+      width="300"
+    />
+  </a>
+</p>
+
+
+<div align="center">
+  <h1>BalanceBug</h1>
+  
+<p>
+  Self-Balancing Autonomous Maze Solver from Imperial EEE
+</p>
+
+[![BalanceBug CD/CI](https://github.com/clemenkok/BalanceBug/actions/workflows/build_test_deploy.yml/badge.svg)](https://github.com/clemenkok/BalanceBug/actions/workflows/build_test_deploy.yml)
+  
+</div>
+
+# Table of contents
+
+* [Team Members](#team-members)
+* [Setup](#setup)
+* [What is this project?](#what-is-this-project)
+
 
 ## Team Members
 
 Hubert Choo, Lee Jian Rong, Yomna Mohamed, Shermaine Ang, Samsam Lee, Clemen Kok
-
-## Folder Structure
-
-```
-├── .github/workflows // contains CI/CD scripts
-├── chassis // physical design files
-├── control // contains all code related to microcontroller, arduino and esp32
-├── frontend // frontend stuff react
-├── img // README images
-├── report // contains report data (drafts, assets etc)
-├── vision // contains code for vision subsystem
-└── website // contains code for react app, nodejs server
-```
 
 ## Setup
 
@@ -49,17 +63,17 @@ A Linter (ESLint) has been installed to fix JavaScript bugs in development inste
     ]
 ```
 
-## API Routing
+### API Routing
 
 The architectural style that we use to interface between the frontend anc backend of our system is RESTful API. A quick tutorial on how to set one up. The gist is that a RESTful API is a URL that we can access to send data to an endpoint. It can take place as GET, POST, UPDATE, DELETE, PUT, PATCH. We will most likely use GET and POST.  
 
 MQTT is used to connect the IoT devices to the backend server.  
 
-## System Architecture
+### System Architecture
 
 ![arch2](img/arch2.png)
 
-## A set of useful commands
+### A set of useful commands
 
 ```
 docker pull mysql/mysql-server:latest
@@ -69,7 +83,7 @@ docker run
 docker run -it -e NGROK_AUTHTOKEN=$NGROK_AUTHTOKEN ngrok/ngrok:latest http host.docker.internal:8080
 ```
 
-## Wall Following Algorithm
+## What is this project? 
 
 CASE I: FOLLOW THE WALL. When the rover encounters a wall, keep following the wall. Periodically send over deadreckoning data via POST requests to the server (this means distance moved and bearing). Use interrupts/RTOS to allow simultaneous action by the microcontroller. The map is to be updated in real-time on the server's memory. This is concurrently stored into the database and is polled asynchronously by React to update the UI.  
 
