@@ -10,6 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mqtt": "^4.3.7"
+    "mqtt": "^4.3.7",
+    "mysql2": "^3.3.5",
+    "sequelize": "^6.32.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.42.0"
   }
 }

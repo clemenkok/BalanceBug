@@ -19,14 +19,14 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.all_info = require("./all_info.model.js")(sequelize, Sequelize);
-db.map_info = require("./map_info.model.js")(sequelize, Sequelize);
-db.live_database = require("./live_database.model.js")(sequelize, Sequelize);
+db.all_info = require("./all_info.models.js")(sequelize, Sequelize);
+db.map_info = require("./map_info.models.js")(sequelize, Sequelize);
+db.live_database = require("./live_database.models.js")(sequelize, Sequelize);
 
 
-db.map_info.belongsTo(db.all.info, {
-  foreignKey: 'map_id'
-});
+//db.map_info.belongsTo(db.all.info, {
+//  foreignKey: 'map_id'
+//});
 
 /* // Raw SQL Query to insert data in all_info when saving
 sequelize.query(
