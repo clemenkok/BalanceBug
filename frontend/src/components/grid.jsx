@@ -2,6 +2,9 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 
+import '../index.css'
+import '../App.css'
+
 const Grid = () => {
 
   const [matrix, setMatrix] = useState([]);
@@ -9,7 +12,7 @@ const Grid = () => {
   
 
   useEffect(() => {
-    const fetchMatrix = async () => {
+    const fetchMatrix = async () => {  console.log("asda")
       try {
 
         const matrix = []; // this may not refresh for a new update, but we cross that bridge later lol
@@ -40,6 +43,8 @@ const Grid = () => {
     return () => {
       clearInterval(pollingInterval); // Clean up the interval on component unmount
     };
+
+   
 
   }, [])
   
@@ -87,7 +92,7 @@ const Grid = () => {
           step="1"
           className="w-full appearance-none bg-gray-300 h-3 outline-none focus:outline-none"
         />
-      <div>
+      <div> 
         {matrix.map((row, rowIndex) => (
           <div key={rowIndex} className="flex">
             {row.map((side, colIndex) => (

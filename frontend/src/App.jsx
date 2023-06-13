@@ -1,14 +1,8 @@
+import React from 'react';
 import { useState } from 'react'
 import './index.css'
-import control from './assets/control.png'
-import logo from './assets/logo.png'
-import Chart_fill from './assets/Chart_fill.png'
-import User from './assets/User.png'
-import Calendar from './assets/Calendar.png'
-import Search from './assets/Search.png'
-import Chart from './assets/Chart.png'
+import './App.css'
 
-import Grid from './components/grid'
 import {
   createBrowserRouter, 
   createRoutesFromElements,
@@ -16,8 +10,12 @@ import {
   RouterProvider
 } from 'react-router-dom'
 
+import Grid from './components/grid'
 import RootLayout from './components/root'
-
+import Login from './components/login'
+import History from './components/history'
+import GridMonitoring from './components/gridmonitoring';
+import Search from './components/search'
 
 
 // const App = () => {
@@ -96,8 +94,11 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Login />} />
+      <Route path="login" element={<Login />} />
+      <Route path= "history" element={<History />} />
+      <Route path="search" element={<Search />} />
+      <Route path="gridmonitoring" element={<GridMonitoring />} />
       <Route path="mazemap" element={<Grid />} />
-
     </Route>
   )
 )

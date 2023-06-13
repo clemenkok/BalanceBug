@@ -1,4 +1,18 @@
+import React from 'react';
 import { Outlet, NavLink } from "react-router-dom"
+import { useState } from 'react'
+
+import control from '../assets/control.png'
+import logo from '../assets/logo.png'
+import Chart_fill from '../assets/Chart_fill.png'
+import User from '../assets/User.png'
+import Calendar from '../assets/Calendar.png'
+import Search from '../assets/Search.png'
+import Chart from '../assets/Chart.png'
+
+import '../index.css'
+import '../App.css'
+
 
 export default function RootLayout() {
 
@@ -15,7 +29,7 @@ export default function RootLayout() {
 
     return (
 
-        <div className="flex">
+        <div className="flex ">
             <div
                 className={` ${open ? "w-72" : "w-20 "
                     } bg-dark-purple h-screen p-5  pt-8 relative duration-300`}
@@ -41,7 +55,7 @@ export default function RootLayout() {
                 </div>
                 <ul className="pt-6">
                     {Menus.map((Menu, index) => (
-                        <NavLink to={"/" + str.toLowerCase().replace(/\s/g, "")}>Home
+                        <NavLink to={"/" + Menu.title.toLowerCase().replace(/\s/g, "")}>
                             <li
                                 key={index}
                                 className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 

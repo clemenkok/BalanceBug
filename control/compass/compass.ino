@@ -97,13 +97,173 @@
 
 
 
+
+
+
+
+
+
+
+// // --------------------------------------
+// // i2c_scanner
+// //
+// // Modified from https://playground.arduino.cc/Main/I2cScanner/
+// // --------------------------------------
+
+// #include <Wire.h>
+
+// // Set I2C bus to use: Wire, Wire1, etc.
+// #define WIRE Wire
+
+// void setup() {
+//   WIRE.begin();
+
+//   Serial.begin(115200);
+//   while (!Serial)
+//      delay(10);
+//   Serial.println("\nI2C Scanner");
+// }
+
+
+// void loop() {
+//   byte error, address;
+//   int nDevices;
+
+//   Serial.println("Scanning...");
+
+//   nDevices = 0;
+//   for(address = 1; address < 127; address++ ) 
+//   {
+//     // The i2c_scanner uses the return value of
+//     // the Write.endTransmisstion to see if
+//     // a device did acknowledge to the address.
+//     Serial.println(address);
+//     WIRE.beginTransmission(address);
+//     error = WIRE.endTransmission();
+
+//     if (error == 0)
+//     {
+//       Serial.print("I2C device found at address 0x");
+//       if (address<16) 
+//         Serial.print("0");
+//       Serial.print(address,HEX);
+//       Serial.println("  !");
+
+//       nDevices++;
+//     }
+//     else if (error==4) 
+//     {
+//       Serial.print("Unknown error at address 0x");
+//       if (address<16) 
+//         Serial.print("0");
+//       Serial.println(address,HEX);
+//     }    
+//   }
+//   if (nDevices == 0)
+//     Serial.println("No I2C devices found\n");
+//   else
+//     Serial.println("done\n");
+
+//   delay(5000);           // wait 5 seconds for next scan
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // I2C Scanner
+// // Written by Nick Gammon
+// // Date: 20th April 2011
+
+// #include <Wire.h>
+
+// void setup() {
+//   //Wire.setClock( 50000);
+//   Serial.begin (115200);
+
+//   Serial.println("asdas");
+
+//   // Leonardo: wait for serial port to connect
+//   while (!Serial) 
+//     {
+//     }
+
+//   Serial.println ();
+//   Serial.println ("I2C scanner. Scanning ...");
+//   byte count = 0;
+  
+//   Wire.begin();
+//   for (byte i = 8; i < 120; i++)
+//   {
+//     Serial.println(i);
+//     Wire.beginTransmission (i);
+//     if (Wire.endTransmission () == 0)
+//       {
+//       Serial.print ("Found address: ");
+//       Serial.print (i, DEC);
+//       Serial.print (" (0x");
+//       Serial.print (i, HEX);
+//       Serial.println (")");
+//       count++;
+//       delay (1);  // maybe unneeded?
+//       } // end of good response
+//   } // end of for loop
+//   Serial.println ("Done.");
+//   Serial.print ("Found ");
+//   Serial.print (count, DEC);
+//   Serial.println (" device(s).");
+// }  // end of setup
+
+// void loop() {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* LAB: 17
+* Name: ESP32 I2C Scanner
+* Author: Khaled Magdy
+* For More Info Visit: www.DeepBlueMbedded.com
+*/
+ 
 #include <Wire.h>
  
 #define I2C_Freq 100000
 #define SDA_0 21
 #define SCL_0 22
- 
-TwoWire I2C_0 = TwoWire(1);
+
+TwoWire I2C_0 = TwoWire(0);
  
 void setup()
 {
@@ -118,7 +278,7 @@ void loop()
   Serial.println("Scanning...");
   nDevices = 0;
   for(address = 1; address < 127; address++ )
-  {  Serial.println(address);
+  {
     // The i2c_scanner uses the return value of
     // the Write.endTransmisstion to see if
     // a device did acknowledge to the address.
@@ -165,24 +325,30 @@ void loop()
 
 
 
+ 
 
-// /************************************************************************
 
-//   Test of the Pmod
 
-// *************************************************************************
 
-//   Description: Pmod_CMPS2
-//   Calculates the heading of the device form the X and Y components of the magnetic field
 
-//   Wiring
-//   Module<----------> Arduino
-//   VCC     to        3V3
-//   GND     to        GND
-//   SCL     to        A5 (SCL)
-//   SDA     to        A4 (SDA)
 
-// *************************************************************************/
+// // /************************************************************************
+
+// //   Test of the Pmod
+
+// // *************************************************************************
+
+// //   Description: Pmod_CMPS2
+// //   Calculates the heading of the device form the X and Y components of the magnetic field
+
+// //   Wiring
+// //   Module<----------> Arduino
+// //   VCC     to        3V3
+// //   GND     to        GND
+// //   SCL     to        A5 (SCL)
+// //   SDA     to        A4 (SDA)
+
+// // *************************************************************************/
 
 // // The earth's magnetic field varies according to its location.
 // // Add or subtract a constant to get the right value
@@ -197,16 +363,17 @@ void loop()
 
 // unsigned char CMPS2_address = 0x30; //I2C address of the device
 
-// TwoWire mywire = TwoWire(0);
-
 // //store highest, middle and lowest values, x component and y component
 // float Max[2], Mid[2], Min[2], X, Y;
 
 // void setup() {
 //   Serial.begin(115200); //serial initialization
+
+//   Serial.println("asdas1");
 //   pinMode(13, OUTPUT);
 //   delay(10);
 //   CMPS2_init(); //initialize the compass
+//   Serial.println("asdas2");
 // }
 
 // void loop() {
@@ -330,25 +497,25 @@ void loop()
 // //reads measurements in mG
 // void CMPS2_read_XYZ(void) {
 //   //command internal control register 0 bit 0 (measure)
-//   mywire.beginTransmission(CMPS2_address);
-//   mywire.write(0x07);
-//   mywire.write(0x01);
-//   mywire.endTransmission();
+//   Wire.beginTransmission(CMPS2_address);
+//   Wire.write(0x07);
+//   Wire.write(0x01);
+//   Wire.endTransmission();
 //   delay(8);
 
 //   //wait for measurement to be completed
 //   bool flag = false;
-//   while (!flag) { Serial.println("stuck here");
+//   while (!flag) {
 //     //jump to status register
-//     mywire.beginTransmission(CMPS2_address);
-//     mywire.write(0x06);
-//     mywire.endTransmission();
+//     Wire.beginTransmission(CMPS2_address);
+//     Wire.write(0x06);
+//     Wire.endTransmission();
 
 //     //read its value
-//     mywire.requestFrom(CMPS2_address, (uint8_t)1);
+//     Wire.requestFrom(CMPS2_address, (uint8_t)1);
 //     int temporal = 0;
-//     if (mywire.available()) {
-//       temporal = mywire.read();
+//     if (Wire.available()) {
+//       temporal = Wire.read();
 //     }
 
 //     //if the last bit is 1, data is ready
@@ -359,16 +526,16 @@ void loop()
 //   }
 
 //   //move address pointer to first address
-//   mywire.beginTransmission(CMPS2_address);
-//   mywire.write(0x00);
-//   mywire.endTransmission();
+//   Wire.beginTransmission(CMPS2_address);
+//   Wire.write(0x00);
+//   Wire.endTransmission();
 
 //   //save data
-//   mywire.requestFrom(CMPS2_address, (uint8_t)6);
+//   Wire.requestFrom(CMPS2_address, (uint8_t)6);
 //   byte tmp[6] = {0, 0, 0, 0, 0, 0}; //array for raw data
-//   if (mywire.available()) {
+//   if (Wire.available()) {
 //     for (int i = 0; i < 6; i++) {
-//       tmp[i] = mywire.read(); //save it
+//       tmp[i] = Wire.read(); //save it
 //     }
 //   }
 
@@ -409,20 +576,24 @@ void loop()
 
 // //initialize the compass
 // void CMPS2_init(void) {
-//   mywire.begin(); // initialization of I2C bus
+
+// // Wire.setClock(400000);
+
+//   Wire.begin(); // initialization of I2C bus
+
 
 //   //command internal control register 0 for set operation
-//   mywire.beginTransmission(CMPS2_address);
-//   mywire.write(0x07);
-//   mywire.write(0x20);
-//   mywire.endTransmission();
-//   delay(10);
+//   Wire.beginTransmission(CMPS2_address);
+//   Wire.write(0x07);Serial.println("sa2sd");
+//   Wire.write(0x20);Serial.println("sa2d");
+//   Wire.endTransmission();Serial.println("sa222d");
+//   delay(10);  
 
 //   //command internal control register 1 to 16 bit resolution, 8ms measurement time
-//   mywire.beginTransmission(CMPS2_address);
-//   mywire.write(0x08);
-//   mywire.write(0x00);
-//   mywire.endTransmission();
+//   Wire.beginTransmission(CMPS2_address);
+//   Wire.write(0x08);
+//   Wire.write(0x00);
+//   Wire.endTransmission();
 //   delay(10);
 
 //   //initialize minimum, mid and maximum values
@@ -436,26 +607,26 @@ void loop()
 // //sets/resets the sensor, changing the magnetic polarity of the sensing element
 // void CMPS2_set(bool reset) {
 //   //command internal control register 0 bit 7 (capacitor recharge)
-//   mywire.beginTransmission(CMPS2_address);
-//   mywire.write(0x07);
-//   mywire.write(0x80);
-//   mywire.endTransmission();
+//   Wire.beginTransmission(CMPS2_address);
+//   Wire.write(0x07);
+//   Wire.write(0x80);
+//   Wire.endTransmission();
 //   delay(50);
 
 //   if (reset) {
 //     //command internal control register 0 bit 6 (reset)
-//     mywire.beginTransmission(CMPS2_address);
-//     mywire.write(0x07);
-//     mywire.write(0x40);
-//     mywire.endTransmission();
+//     Wire.beginTransmission(CMPS2_address);
+//     Wire.write(0x07);
+//     Wire.write(0x40);
+//     Wire.endTransmission();
 //     delay(10);
 //   }
 //   else {
 //     //command internal control register 0 bit 5 (set)
-//     mywire.beginTransmission(CMPS2_address);
-//     mywire.write(0x07);
-//     mywire.write(0x20);
-//     mywire.endTransmission();
+//     Wire.beginTransmission(CMPS2_address);
+//     Wire.write(0x07);
+//     Wire.write(0x20);
+//     Wire.endTransmission();
 //     delay(10);
 //   }
 //   return;
