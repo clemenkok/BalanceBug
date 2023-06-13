@@ -8,12 +8,14 @@ module.exports = (sequelize, Sequelize) => {
           primaryKey: true
         },
         map_id: {
-          type: Sequelize.INTEGER
+          type: Sequelize.INTEGER,
+          primaryKey: true,
+          autoIncrement: true
         },
         tile_info: {
           type: Sequelize.JSON
         },
-        tile_number: {
+        tile_num: {
           type: Sequelize.JSON
         }
       });
