@@ -2,18 +2,15 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 
-import '../index.css'
-import '../App.css'
-
-const Login = () => {
+const GridMonitoring = () => {
 
   
 
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      login page
+      grid monitoring
   </div>
   )
 }
 
-export default Login
+export default GridMonitoring
