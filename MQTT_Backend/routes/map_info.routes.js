@@ -1,7 +1,7 @@
 module.exports = app => {
-    const map_info = require("../controllers/map_info.controller.js");
+    // const map_info = require("../controllers/map_info.controllers.js");
 
-    var router = require("express").Router();
+    const router = require("express").Router();
 
     app.use('/api/map_info', router);
-}
+};

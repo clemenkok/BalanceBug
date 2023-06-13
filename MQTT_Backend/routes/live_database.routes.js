@@ -1,5 +1,5 @@
 module.exports = app => {
-    const live_database = require("../controllers/live_database.controller.js");
+    const live_database = require("../controllers/live_database.controllers.js");
   
     const router = require("express").Router();
   
@@ -8,5 +8,8 @@ module.exports = app => {
     // after we process - so we keep this route.
     router.get("/latest", live_database.findOne);
     
+    // route for testing
+    router.post("/add", live_database.create);
+
     app.use('/api/live_database', router);
   };    

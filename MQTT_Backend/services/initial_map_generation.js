@@ -1,5 +1,5 @@
 // Create an empty 35x35 matrix
-function generate_initial_map(matrix) {
+export default function generate_initial_map(matrix: Array<Array<number | any>>): Array<Array<number | any>> {
 
     for (let i = 0; i < 35; i++) {
         matrix[i] = [];
@@ -10,11 +10,8 @@ function generate_initial_map(matrix) {
         }
     }
 
-    console.log(matrix)
-    return matrix
+    console.log(matrix);
+    return matrix;
     
 }
 
-module.exports = {
-    generate_initial_map
-};

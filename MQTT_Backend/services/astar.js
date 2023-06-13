@@ -61,7 +61,7 @@ function aStar(start, goal, mazeMap) {
 
         for (let next of neighbours[current]) {
             let new_cost = cost_so_far[current] + 1;
-            if (!cost_so_far.hasOwnProperty(next) || new_cost < cost_so_far[next]) {
+            if (Object.prototype.hasOwnProperty.call(cost_so_far, next) || new_cost < cost_so_far[next]) { // I modified this to fix a linting error.
                 cost_so_far[next] = new_cost;
                 let priority = new_cost + heuristic(goal, next);
                 frontier.put(next, priority);
@@ -78,3 +78,7 @@ function aStar(start, goal, mazeMap) {
     let cost = cost_so_far[goal];
     return {shortest_path, cost};
 }
+
+module.exports = {
+    aStar
+};
