@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "babel app.js -d dist",
-    "start": "node --experimental-modules app.js"
+    "start": "npm run build && node --experimental-modules app.js"
   },
   "author": "",
   "license": "ISC",
