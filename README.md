@@ -42,8 +42,8 @@ If you just want to test your function in isolation, create a new folder within 
 To integrate and test the Node server as a whole, first make sure your system has Docker installed. Docker is a configuration management tool where we can pull images from a central repository. You can find the installation instructions online. You will need to install the `mysql` image and run it. With Docker installed (and the daemon running), run the following commands:
 
 ```
-docker pull mysql/mysql-server:latest
-docker run -p3306:3306 --name=mysql1 -d mysql/mysql-server:latest
+docker pull clemenkok/mysqlbalancebug
+docker run -p3306:3306 --name=mysql1 -d mysqlbalancebug
 ```
 
 Now, run `cd website && npm -i`. This will install all the dependencies as indicated in the `package.json` file. Run `npm run start` to test the Node server.  
