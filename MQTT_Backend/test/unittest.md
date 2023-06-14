@@ -40,3 +40,13 @@ tile_info: res.body.tile_num,
 `/api/map_info`
 
 waiting for my boss clemen to make it
+
+
+
+
+## Routing algorithm
+
+
+loop through the answer and the input foler and check for routingalgo(input) == answer
+
+eg:  input_1.json applies routing algo should return answer
