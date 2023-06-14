@@ -3,10 +3,6 @@
 
 module.exports = (sequelize, Sequelize) => {
     const all_info = sequelize.define("all_info", {
-        id: {
-          type: Sequelize.INTEGER,
-          primaryKey: true
-        },
         map_id: {
           type: Sequelize.INTEGER,
           primaryKey: true,

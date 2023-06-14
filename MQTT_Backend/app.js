@@ -51,7 +51,6 @@ require("./routes/map_info.routes.js")(app);
 require("./routes/live_database.routes.js")(app);
 
 
-
 module.exports = app;
 
 //commented out and placed in index.js so that i can do unit test
@@ -68,6 +67,7 @@ module.exports = app;
 
 
 
+// example simple nodejs server
 
 
 // const express = require( 'express')
