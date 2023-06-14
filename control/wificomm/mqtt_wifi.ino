@@ -1,6 +1,11 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 
+// DEBUGGING
+// Is it a problem with your Wifi connection?
+// Is it a problem with the MQTT Broker? (try connecting to a public MQTT Broker)
+// Is it a problem with your code? (revert to golden copy -  c9be18f1819a253eeeb39f96fd38fb76d81006e6)
+
 // Configuration Variables
 const char *ssid = "myhotspot";
 const char *password = "racemicracemate";
