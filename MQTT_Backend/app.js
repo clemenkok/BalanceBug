@@ -50,8 +50,35 @@ require("./routes/all_info.routes.js")(app);
 require("./routes/map_info.routes.js")(app);
 require("./routes/live_database.routes.js")(app);
 
-// set port, listen for requests
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
-});
+
+
+module.exports = app;
+
+//commented out and placed in index.js so that i can do unit test
+
+// // set port, listen for requests
+// const PORT = process.env.PORT || 8080;
+
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}.`);
+// });
+
+
+
+
+
+
+
+
+// const express = require( 'express')
+
+// const app = express()
+
+// app.use(express.json())
+// app.get('/', async (req, res) => {
+
+//   res.sendStatus(200)
+// })
+
+// module.exports = app;
+

@@ -2,27 +2,37 @@
   "name": "mqtt_backend",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "build": "babel app.js -d dist",
-    "start": "node --experimental-modules app.js"
+    "build": "babel index.js -d dist",
+    "start": "node --experimental-modules index.js",
+    "test": "mocha --reporter spec"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/node": "^7.22.5",
+    "babel-jest": "^29.5.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "mqtt": "^4.3.7",
     "mysql2": "^3.3.5",
     "nodemon": "^2.0.22",
+    "request": "^2.88.2",
     "rimraf": "^5.0.1",
+    "save-dev": "^0.0.1-security",
     "sequelize": "^6.32.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.5",
     "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
-    "eslint": "^8.42.0"
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
+    "eslint": "^8.42.0",
+    "jest": "^29.5.0",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
   }
 }
