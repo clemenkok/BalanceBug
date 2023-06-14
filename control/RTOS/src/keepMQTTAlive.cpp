@@ -11,7 +11,7 @@ SemaphoreHandle_t sema_keepMQTTAlive;
 #define MQTT_USERNAME "BalanceBug"
 #define MQTT_PASSWORD "123"
 
-const char *MQTT_SERVER = "44.201.248.191";
+const char *MQTT_SERVER = "3.84.3.59";
 uint16_t MQTT_PORT = 1883;
 
 WiFiClient wifiClient;
