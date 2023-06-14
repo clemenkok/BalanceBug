@@ -1,12 +1,14 @@
-FROM node:18-alpine
+FROM node:latest
+
+#RUN apk update && apk add bash
 
 WORKDIR /MQTT_backend
 
-COPY /MQTT_backend/package.json .
+COPY ./package.json .
 
 RUN npm install
 
-COPY /app .
+COPY . .
 
 EXPOSE 8080 1883
 

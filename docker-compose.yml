@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  api:
+    build: ./MQTT_Backend
+    container_name: myfuckingmqtt
+    ports:
+      - '1234:8080'
+    volumes:
+      - ./MQTT_Backend:/MQTT_Backend
+      - /MQTT_Backend/node_modules
