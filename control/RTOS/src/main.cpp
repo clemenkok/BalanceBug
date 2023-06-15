@@ -22,6 +22,7 @@ void setup()
   );
 
   // task to obtain data from sensors, and publish to MQTT topic
+  // NOTE: Tasks within the same "state" should not be in separate tasks
   xTaskCreatePinnedToCore(
       publishDeadreckoningData,
       "Publish Deadreckoning Data",

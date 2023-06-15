@@ -95,7 +95,7 @@ MQTT is used to connect the IoT devices to the backend server.
 
 ### System Architecture
 
-![arch2](img/arch2.png)
+![arch4](img/arch4.png)
 
 ### A set of useful commands
 
