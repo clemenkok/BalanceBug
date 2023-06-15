@@ -107,6 +107,16 @@ docker run
 docker run -it -e NGROK_AUTHTOKEN=$NGROK_AUTHTOKEN ngrok/ngrok:latest http host.docker.internal:8080
 ```
 
+
+## Unit Test on Server Database API and Maze Routing Algorithm
+
+To verify the correctness of our server's database API and maze routing algorithm, we decided to perform unit testing with the aid of the [Mocha Javascript Test Framework](https://mochajs.org/).
+
+[Unit Test Report](./MQTT_Backend/test/unittest.md)
+
+[Smoke Test Report](./MQTT_Backend/smoketest/smoketest.md)
+
+
 ## What is this project? 
 
 CASE I: FOLLOW THE WALL. When the rover encounters a wall, keep following the wall. Periodically send over deadreckoning data via POST requests to the server (this means distance moved and bearing). Use interrupts/RTOS to allow simultaneous action by the microcontroller. The map is to be updated in real-time on the server's memory. This is concurrently stored into the database and is polled asynchronously by React to update the UI.  
