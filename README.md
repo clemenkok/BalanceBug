@@ -33,20 +33,44 @@ Hubert Choo, Lee Jian Rong, Yomna Mohamed, Shermaine Ang, Samsam Lee, Clemen Kok
 
 ## Setup
 
-Node version used in production: node-18. 
+Node version used in production: node-18. I assume you have Node installed. If not, go to [here](https://nodejs.org/en/download).   
 
 If you just want to test your function in isolation, create a new folder within your subsystem and run `npm init` and follow the corresponding instructions. You will then need to run `npm -i mqtt` as these are the packages related to setting up MQTT middleware. `node server.js` for example runs the `server.js` file. I strongly recommend doing this first to incorporate a test-driven approach.
 
 ### Docker
 
-To integrate and test the Node server as a whole, first make sure your system has Docker installed. Docker is a configuration management tool where we can pull images from a central repository. You can find the installation instructions online. You will need to install the `mysql` image and run it. With Docker installed (and the daemon running), run the following commands:
+To integrate and test the Node server as a whole, first make sure your system has Docker installed. Docker is a configuration management tool where we can pull images from a central repository. You can find the installation instructions online. You will need to install the `mysql` image and run it. With Docker installed (and the daemon running), run the following commands. We need to set up our database container. See the docs [here](https://hub.docker.com/r/mysql/mysql-server).  
+
+First we pull the latest docker image for mysql.  
 
 ```
-docker pull clemenkok/mysqlbalancebug
-docker run -p3306:3306 --name=mysql1 -d mysqlbalancebug
+docker pull mysql/mysql-server:latest
 ```
 
-Now, run `cd website && npm -i`. This will install all the dependencies as indicated in the `package.json` file. Run `npm run start` to test the Node server.  
+Then we run the image, mapping port 3306 on the container to our local system's port 3306. We name the container mysql1.   
+
+```
+docker run -p3306:3306 --name=mysql1 -d mysql/mysql-server:latest
+```
+
+Afterwards we find the random first password for mysql1. If you are using a windows-based system, replace grep with findstr.  
+
+```
+docker logs mysql1 2>&1 | grep GENERATED
+[Entrypoint] GENERATED ROOT PASSWORD: -odOg(aMAMydAfC@g2aL]uPk@vv << Copy this set of random characters
+```
+
+We then access the mysql database as root, and key in the randomly generated password. We then create a superuser so we can access the database as root from anywhere.  
+
+```
+docker exec -it mysql1 mysql -uroot -p
+Enter password: 
+... << Key the characters in
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+mysql> create database testdb;
+```
+
+Now, run `cd MQTT_Backend && npm -i`. This will install all the dependencies as indicated in the `package.json` file. Run `npm run start` to test the Node server.  
 
 Ask Clemen to set up the MQTT Server and then just input its IP address.   
 
