@@ -9,6 +9,9 @@ module.exports = {
         "dark-purple": "#333",
         "light-white": "rgba(255,255,255,0.17)",
       },
+      fontFamily: {
+        'Fira Code': ['"Fira Code"', 'monospace'],
+      },
     },
   },
   plugins: [],
