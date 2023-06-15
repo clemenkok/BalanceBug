@@ -9,8 +9,7 @@ export const NavBarTabs = () => {
     <div className="nav-bar__tabs">
       {!isAuthenticated && (
         <>
-        <NavBarTab path="/history" label="History" />
-        <NavBarTab path="/search" label="Search" />
+        <NavBarTab path="/history" label="View History" />
         <NavBarTab path="/gridmonitoring" label="Grid Monitoring" />
         <NavBarTab path="/grid" label="Grid" />
         </>

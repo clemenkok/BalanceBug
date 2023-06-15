@@ -1,6 +1,6 @@
 const { client } = new (require("../services/mqtt_service"))();
-const db = require("../models");
-const Live_database = db.live_database;
+// const db = require("../models");
+// const Live_database = db.live_database;
 
 // MQTT is not request-response based (it is a message queue)! So server-side delays (e.g. DB writes) do not hold up board-side processing!
 function subscribe() {
@@ -26,7 +26,7 @@ function subscribe() {
 
         // Log into the database map data (tile information) - this is important so we can save history from different maps. 
         // Plus the frontend will also poll and receive data this way. Why not send directly to the frontend (minimising read/writes)? We want to implement 'separation of responsibilities' here.
-        const live_database = {
+/*      const live_database = {
             tile_num: tile_info,
             tile_info: tile_num
         };
@@ -41,7 +41,7 @@ function subscribe() {
                         err.message || "Some error occurred while creating the live_database Table."
                 });
             });
-
+*/
     });
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
