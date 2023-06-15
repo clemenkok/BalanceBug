@@ -18,7 +18,7 @@ enum State {
 };
 
 State currentState = WAITING;
-bool change_state = true;
+bool change_state = false;
 int distance = 0;
 int red_dist;
 int blue_dist;
@@ -40,17 +40,9 @@ long getBoxHeightInPixels(byte (&myBuffer)[12]){
   // {11110, y_max} is given by buffer[8] + buffer[9]<<8
   // so y_max is (buffer[8] + buffer[9]<<8) - 15<<9
   long y_max = (myBuffer[8] + (myBuffer[9]<<8)) - (61440);
-  //Serial.println("y_max: ");
-  //Serial.println(y_max);
 
   // {00000, y_min} given by buffer[4] + buffer[5]<<8
   long y_min = (myBuffer[4] + (myBuffer[5]<<8));
-  //Serial.print("y_min ");
-  //Serial.println(y_min);
-
-  //Serial.println("y_min_max");
-  //Serial.println(y_max);
-  //Serial.println(y_min);
 
   if (y_max - y_min < 0) return 0;
   return y_max - y_min;
@@ -61,12 +53,8 @@ long getPixelCenterX(byte (&myBuffer)[12]){
   // {11110, x_max} is given by buffer[8] + buffer[9]<<8
   // so y_max is (buffer[10] + buffer[11]<<8) - 15<<9
   long x_max = (myBuffer[10] + (myBuffer[11]<<8)) - (15<<8);
-  //Serial.print("x_max ");
-  //Serial.println(x_max);  
   
   long x_min = (myBuffer[6] + (myBuffer[7]<<8));
-  //Serial.print("x_min ");
-  //Serial.println(x_min);
   
   return x_min + (x_max - x_min)/2;
 }
@@ -90,21 +78,9 @@ void uartToDistanceLoop(){
     // Read 4 bytes at the same time
     
     SerialPort.readBytes(myBuffer, 12);
-    /*
-    for (int i = 0; i < 12; i++){
-      Serial.print(myBuffer[i], HEX);
-      Serial.print(" ");
-    }
-    Serial.println();
-    */
+
     long pixel_box_height =  getBoxHeightInPixels(myBuffer);
     long pixel_center_x = getPixelCenterX(myBuffer);
-    /*
-    Serial.println("-----------------");
-    Serial.println(myBuffer[0]);
-    Serial.println(pixel_box_height);
-    Serial.println(convertDistanceCm(pixel_box_height));
-    */
 
     if (currentState != WAITING && currentState != SEND_DISTANCES){
       if (takeReading(pixel_center_x, pixel_box_height)){
@@ -122,7 +98,7 @@ void uartToDistanceLoop(){
           // Transition to the next state based on some condition or event
           currentState = LOOKING_FOR_1ST_BALL;
           // Turn on light for the first ball
-//          client.publish("esp/redball", "ON");
+          MQTTclient.publish("red_beacon", "ON");
         }
         break;
           
@@ -134,8 +110,8 @@ void uartToDistanceLoop(){
           // Transition to the next state based on some condition or event
           currentState = LOOKING_FOR_2ND_BALL;
           // Turn on light for the second ball
-//          client.publish("esp/redball", "OFF");
-//          client.publish("esp/blueball", "ON");
+          MQTTclient.publish("red_beacon", "OFF");
+          MQTTclient.publish("blue_beacon", "ON");
         }
         break;
           
@@ -147,8 +123,8 @@ void uartToDistanceLoop(){
           // Transition to the next state based on some condition or event
           currentState = LOOKING_FOR_3RD_BALL;
           // Turn on light for the third ball
-//          client.publish("esp/blueball", "OFF");
-//          client.publish("esp/yellowball", "ON");
+          MQTTclient.publish("blue_beacon", "OFF");
+          MQTTclient.publish("yellow_beacon", "ON");
         }
         break;
           
@@ -159,14 +135,14 @@ void uartToDistanceLoop(){
           distance = 0;
           // Transition to the next state based on some condition or event
           currentState = SEND_DISTANCES;
-//          client.publish("esp/yellowball", "OFF");
+          MQTTclient.publish("yellow_beacon", "OFF");
         }
         break;
         
       case SEND_DISTANCES:
         currentState = WAITING;
         // perform calculation 
-//        client.publish("esp/localise", red_dist, blue_dist, yellow_dist);
+        //MQTTclient.publish("esp/localise", red_dist, blue_dist, yellow_dist);
         break;
     }
 
