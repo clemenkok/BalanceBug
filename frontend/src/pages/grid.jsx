@@ -13,10 +13,10 @@ export const GridPage = () => {
     const fetchMatrix = async () => {
       try {
         const matrix = [];
-        for (let i = 0; i < 35; i++) {
-          const row = Array(35).fill([0, 0, 0, 0, 0]);
+        for (let i = 0; i < 50; i++) {
+          const row = Array(50).fill([0, 0, 0, 0, 0]);
           matrix.push(row);
-        }
+        } 
         const response = await axios.get(process.env.REACT_APP_MATRIX);
         console.log(response.data.tile_info);
         let updatedTileInfo = response.data.tile_info;
@@ -33,7 +33,7 @@ export const GridPage = () => {
       }
     };
 
-    const pollingInterval = setInterval(fetchMatrix, 3000); // Poll every 3 seconds
+    const pollingInterval = setInterval(fetchMatrix, 1000); // Poll every 3 seconds
 
     return () => {
       clearInterval(pollingInterval); // Clean up the interval on component unmount
@@ -41,31 +41,29 @@ export const GridPage = () => {
   }, []);
 
   const start = () => {
-    /*
-    axios.post(process.env.REACT_APP_START)
+    axios
+      .get(process.env.REACT_APP_START)
       .then((response) => {
         // Handle the API response data
         console.log(response.data);
       })
       .catch((error) => {
         // Handle any errors
-        console.error('Error:', error);
+        console.error("Error:", error);
       });
-      */
   };
 
   const stop = () => {
-    /*
-    axios.post(process.env.REACT_APP_STOP)
+    axios
+      .get(process.env.REACT_APP_STOP)
       .then((response) => {
         // Handle the API response data
         console.log(response.data);
       })
       .catch((error) => {
         // Handle any errors
-        console.error('Error:', error);
+        console.error("Error:", error);
       });
-      */
   };
 
   return (
@@ -104,18 +102,18 @@ export const GridPage = () => {
                       width: "13px",
                       height: "13px",
                       borderTop: side[0]
-                        ? "2px solid black"
+                        ? "3px solid white"
                         : "1px solid white",
                       borderBottom: side[1]
-                        ? "2px solid black"
+                        ? "3px solid white"
                         : "1px solid white",
                       borderLeft: side[2]
-                        ? "2px solid black"
+                        ? "3px solid white"
                         : "1px solid white",
                       borderRight: side[3]
-                        ? "2px solid black"
+                        ? "3px solid white"
                         : "1px solid white",
-                      backgroundColor: side[4] ? "Yellow" : "WhiteSmoke",
+                      backgroundColor: side[4] ? "Red" : "Black",
                     }}
                   />
                 ))}
