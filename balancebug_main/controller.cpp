@@ -11,11 +11,14 @@ double veloSetpoint, veloInput, veloOutput;
 // input is not error. input is the measured output from the plant
 // output is what is fed into the plant
 
-double rollKp = 0.53;   // Pitch angle proportional gain
-double rollKi = 0.01;   // Pitch angle integral gain
+// TUNE THIS FIRST
+double rollKp = 9;   // Pitch angle proportional gain 7.5
+double rollKi = 6;   // Pitch angle integral gain 0.82
 double rollKd = 0;   // Pitch angle derivative gain
 
+
 double veloKp = 0;
+double accumulatedError = 0;
 /*Best Roll Tuning Trials so far
 Rate: According to Loop
 kp: 0.53;
@@ -35,7 +38,7 @@ PID veloPID(&veloInput, &veloOutput, &veloSetpoint, veloKp, 0, 0, DIRECT);
 //const float length = 0.16; // length of robot
 
 void controllerSetup(){
-    rollSetpoint = 0;
+    rollSetpoint = -58;
     veloSetpoint = 0;
 
     // turn PID ON
@@ -64,6 +67,12 @@ void updateRollInput(double newInput){
 double computeVeloControllerOutput(){
     veloPID.Compute();
     return veloOutput;
+}
+
+double getError(){
+    double error = &rollSetpoint - &rollInput;
+    accumulatedError += error;
+    return accumulatedError;
 }
 
 void setVeloSetpoint(double newSetpoint){
