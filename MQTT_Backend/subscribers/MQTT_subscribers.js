@@ -4,7 +4,7 @@ const { client } = new (require("../services/mqtt_service"))();
 
 // MQTT is not request-response based (it is a message queue)! So server-side delays (e.g. DB writes) do not hold up board-side processing!
 function subscribe() {
-    let topics = ['deadreckoning_data', 'initaited_localisation'];
+    let topics = ['deadreckoning_data', 'initaited_localisation', 'red_beacon', 'blue_beacon', 'yellow_beacon', 'localise'];
     client.subscribe(topics);
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -69,6 +69,32 @@ function subscribe() {
 
         // TODO: Update the map
 
+
+    });
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    client.on('message', (red_beacon, payload) => {
+        // TODO: processing when we have been notified that red_beacon is to turn on
+        console.log('Received Message:', red_beacon, payload.toString());
+
+    });
+
+    client.on('message', (blue_beacon, payload) => {
+        // TODO: processing when we have been notified that red_beacon is to turn on
+        console.log('Received Message:', blue_beacon, payload.toString());
+
+    });
+
+    client.on('message', (yellow_beacon, payload) => {
+        // TODO: processing when we have been notified that red_beacon is to turn on
+        console.log('Received Message:', yellow_beacon, payload.toString());
+
+    });
+
+    client.on('message', (localise, payload) => {
+        // TODO: processing when we have been notified that red_beacon is to turn on
+        console.log('Received Message:', localise, payload.toString());
 
     });
 
