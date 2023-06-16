@@ -1,13 +1,9 @@
 #ifndef KEEPMQTTALIVE_H
 #define KEEPMQTTALIVE_H
 
-#include <WiFi.h>
 #include <Arduino.h>
+#include <WiFi.h>
 #include <PubSubClient.h>
-
-extern WiFiClient wifiClient;
-extern PubSubClient MQTTclient;
-extern SemaphoreHandle_t sema_keepMQTTAlive;
 
 // function to connect to MQTT Broker
 void connectToMQTT();
