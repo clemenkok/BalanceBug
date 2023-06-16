@@ -10,13 +10,19 @@ export const GridPage = () => {
   const [matrix, setMatrix] = useState([]);
 
   useEffect(() => {
+    // const fetchMatrix = async () => {
+    //   const response = await axios.get("http://localhost:8000/myfkingtest");
+    //   console.log(response.data.tile_info);
+    // }
+
+
     const fetchMatrix = async () => {
       try {
         const matrix = [];
-        for (let i = 0; i < 50; i++) {
-          const row = Array(50).fill([0, 0, 0, 0, 0]);
+        for (let i = 0; i < 35; i++) {
+          const row = Array(35).fill([0, 0, 0, 0, 0]);
           matrix.push(row);
-        } 
+        }
         const response = await axios.get(process.env.REACT_APP_MATRIX);
         console.log(response.data.tile_info);
         let updatedTileInfo = response.data.tile_info;
