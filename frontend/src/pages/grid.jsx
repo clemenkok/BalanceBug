@@ -11,27 +11,33 @@ export const GridPage = () => {
 
   useEffect(() => {
     const fetchMatrix = async () => {
-      try {
-        const matrix = [];
-        for (let i = 0; i < 35; i++) {
-          const row = Array(35).fill([0, 0, 0, 0, 0]);
-          matrix.push(row);
-        }
-        const response = await axios.get(process.env.REACT_APP_MATRIX);
-        console.log(response.data.tile_info);
-        let updatedTileInfo = response.data.tile_info;
-        let newGlobalX = response.data.tile_num[0];
-        let newGlobalY = response.data.tile_num[1];
+      const response = await axios.get("http://localhost:8000/myfkingtest");
+      console.log(response.data.tile_info);
+    }
 
-        matrix[newGlobalX][newGlobalY] = updatedTileInfo;
 
-        // Log the updated array
-        console.log("Updated Array:", matrix);
-        setMatrix(matrix);
-      } catch (error) {
-        console.error("Error fetching matrix:", error);
-      }
-    };
+    // const fetchMatrix = async () => {
+    //   try {
+    //     const matrix = [];
+    //     for (let i = 0; i < 60; i++) {
+    //       const row = Array(60).fill([0, 0, 0, 0, 0]);
+    //       matrix.push(row);
+    //     }
+    //     const response = await axios.get(process.env.REACT_APP_MATRIX);
+    //     console.log(response.data.tile_info);
+    //     let updatedTileInfo = response.data.tile_info;
+    //     let newGlobalX = response.data.tile_num[0];
+    //     let newGlobalY = response.data.tile_num[1];
+
+    //     matrix[newGlobalX][newGlobalY] = updatedTileInfo;
+
+    //     // Log the updated array
+    //     console.log("Updated Array:", matrix);
+    //     setMatrix(matrix);
+    //   } catch (error) {
+    //     console.error("Error fetching matrix:", error);
+    //   }
+    //};
 
     const pollingInterval = setInterval(fetchMatrix, 3000); // Poll every 3 seconds
 
