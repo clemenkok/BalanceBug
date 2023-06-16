@@ -34,14 +34,14 @@ export class GridPage extends React.Component {
         let newGlobalX = response.data.tile_num[0];
         let newGlobalY = response.data.tile_num[1];
   
-        let copy = JSON.parse(JSON.stringify(this.state.matrix));
+        //let copy = JSON.parse(JSON.stringify(this.state.matrix));
 
-        copy[newGlobalX][newGlobalY] = updatedTileInfo;
-  
-        // Log the updated array
-        console.log("Updated Array:", copy[0][0]);
-        this.setState({matrix:copy});
+        this.state.matrix[newGlobalX][newGlobalY] = updatedTileInfo;
         
+        // Log the updated array
+        console.log("Updated Array:", this.state.matrix[0][0]);
+        
+        this.forceUpdate()
   
       } catch (error) {
         console.error("Error fetching matrix:", error);
