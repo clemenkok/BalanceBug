@@ -5,6 +5,8 @@ import "../index.css";
 import "../App.css";
 import { NavBar } from "../components/nav-bar";
 
+// TODO: When start key in initial coordinates
+
 export class GridPage extends React.Component {
   constructor() {
     super();
