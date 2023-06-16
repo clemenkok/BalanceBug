@@ -6,23 +6,23 @@ import "../index.css";
 import "../App.css";
 import { NavBar } from "../components/nav-bar";
 
+// TODO: Mount component so it saves the state and updates upon new poll
+
 export const GridPage = () => {
-  const [matrix, setMatrix] = useState([]);
+  const generateInitialArray = () => {
+    const matrix = [];
+    for (let i = 0; i < 48; i++) {
+      const row = Array(73).fill([0, 0, 0, 0, 0]);
+      matrix.push(row);
+    }
+    return matrix;
+  };
+
+  const [matrix, setMatrix] = useState(generateInitialArray);
 
   useEffect(() => {
-    // const fetchMatrix = async () => {
-    //   const response = await axios.get("http://localhost:8000/myfkingtest");
-    //   console.log(response.data.tile_info);
-    // }
-
-
     const fetchMatrix = async () => {
       try {
-        const matrix = [];
-        for (let i = 0; i < 35; i++) {
-          const row = Array(35).fill([0, 0, 0, 0, 0]);
-          matrix.push(row);
-        }
         const response = await axios.get(process.env.REACT_APP_MATRIX);
         console.log(response.data.tile_info);
         let updatedTileInfo = response.data.tile_info;
@@ -44,7 +44,7 @@ export const GridPage = () => {
     return () => {
       clearInterval(pollingInterval); // Clean up the interval on component unmount
     };
-  }, []);
+  }, [matrix]);
 
   const start = () => {
     axios
@@ -107,19 +107,19 @@ export const GridPage = () => {
                     style={{
                       width: "13px",
                       height: "13px",
-                      borderTop: side[0]
+                      backgroundColor: side[0] ? "Red" : "Black",
+                      borderTop: side[1]
                         ? "3px solid white"
                         : "1px solid white",
-                      borderBottom: side[1]
+                      borderBottom: side[2]
                         ? "3px solid white"
                         : "1px solid white",
-                      borderLeft: side[2]
+                      borderLeft: side[3]
                         ? "3px solid white"
                         : "1px solid white",
-                      borderRight: side[3]
+                      borderRight: side[4]
                         ? "3px solid white"
                         : "1px solid white",
-                      backgroundColor: side[4] ? "Red" : "Black",
                     }}
                   />
                 ))}

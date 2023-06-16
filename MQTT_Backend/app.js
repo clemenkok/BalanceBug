@@ -12,7 +12,6 @@ const subscribers = require('./subscribers/MQTT_subscribers.js');
 const publishers = require('./publishers/MQTT_publishers.js');
 
 subscribers.subscribe(); // we immediately connect to the MQTT broker and start subscribing to all topics
-publishers.start_rover(); // a proxy to start the rover (in actuality, it will be done by the rover frontend)
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -25,7 +24,7 @@ const cors = require("cors");
 const app = express();
 
 const corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:3000"
 };
 
 app.use(cors(corsOptions));
@@ -45,6 +44,18 @@ app.get("/", (req , res) => {
   res.json({ message: "test." });
 });
 
+// route to send a message to start the rover
+app.get("/start_rover", (req, res) => {
+  publishers.start_rover();
+  res.json({message: "sent to rover"});
+});
+
+// route to send a message to start the rover
+app.get("/stop_rover", (req, res) => {
+  publishers.stop_rover();
+  res.json({message: "sent to rover"});
+});
+
 // all_info routes (an API route to manipulate data inside the all_info table -> triggered when the user saves the map)
 require("./routes/all_info.routes.js")(app);
 require("./routes/map_info.routes.js")(app);
@@ -56,11 +67,11 @@ module.exports = app;
 //commented out and placed in index.js so that i can do unit test
 
 // // set port, listen for requests
-// const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}.`);
-// });
+app.listen(PORT, () => {
+   console.log(`Server is running on port ${PORT}.`);
+ });
 
 
 

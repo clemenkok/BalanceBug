@@ -1,7 +1,7 @@
 module.exports = app => {
     const live_database = require("../controllers/live_database.controllers.js");
   
-    const router = require("express").Router();
+    var router = require("express").Router();
   
     // Retrieve a single tile info with id
     // There could be some difference between the raw data stream from the ESP32 and

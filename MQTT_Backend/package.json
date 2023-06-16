@@ -2,10 +2,10 @@
   "name": "mqtt_backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "build": "babel index.js -d dist",
-    "start": "node --experimental-modules index.js",
+    "build": "babel app.js -d dist",
+    "start": "node app.js",
     "test": "mocha --reporter spec"
   },
   "author": "",
@@ -22,7 +22,8 @@
     "request": "^2.88.2",
     "rimraf": "^5.0.1",
     "save-dev": "^0.0.1-security",
-    "sequelize": "^6.32.0"
+    "sequelize": "^6.32.0",
+    "body-parser": "^1.20.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.5",
