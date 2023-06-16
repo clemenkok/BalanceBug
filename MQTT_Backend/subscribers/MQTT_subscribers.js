@@ -1,4 +1,5 @@
 const { client } = new (require("../services/mqtt_service"))();
+const { rover, mazeMap, caseA } = require('../services/mapping')
 // const db = require("../models");
 // const Live_database = db.live_database;
 
@@ -13,10 +14,22 @@ function subscribe() {
     client.on('message', (deadreckoning_data, payload) => {
         // TODO: processing when we receive deadreckoning data from ESP32 (convert distance travelled, wall data, angle -> tile_info and tile_num: @Yomna)
         console.log('Received Message:', deadreckoning_data, payload.toString());
-
         // Placeholder Data
-        let tile_info = [1, 0, 0, 0, 1];
+        let tile_info = [0, 0, 0, 0, 0];
         let tile_num = [0, 0];
+        if(deadreckoning_data === topics[0]){
+            let data = payload.toString().split(',');
+
+            // extract data
+            let x = parseFloat(data[0]);
+            let y = parseFloat(data[1]);
+            let bearing = parseFloat(data[2]);
+            let leftWall = (data[3] === '1');
+            let rightWall = (data[4] === '1');
+            tile = caseA(mazeMap, rover, x, y, bearing, leftWall, rightWall)
+            tile_num = tile[0]
+            tile_info = tile[1]
+        }
 
         // updates global 35x35 map in memory. TODO: relook at parsing JSON data from ESP32
         global.globalMap[tile_num[0]][tile_num[1]] = tile_info;
