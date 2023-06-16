@@ -1,5 +1,7 @@
 #include "uartToDistance.h"
 #include <HardwareSerial.h>
+#include <stdio.h>
+#include <cstring>
 
 #define BAUDRATE 115200
 #define RX_PIN 3
@@ -81,12 +83,17 @@ void uartToDistanceLoop(void *parameters)
 {
   for (;;)
   { // Serial.println("function is running");
-    if (SerialPort.available() > 0)
+    if (SerialPort.available() > 11)
     {
       // The serial data comes in one byte at a time
       // Read 4 bytes at the same time
 
       SerialPort.readBytes(myBuffer, 12);
+      for (int i = 0; i < 12; i++){
+        Serial.print(myBuffer[i], HEX);
+        Serial.print(" ");
+      }
+      Serial.println();
 
       long pixel_box_height = getBoxHeightInPixels(myBuffer);
       long pixel_center_x = getPixelCenterX(myBuffer);
@@ -97,7 +104,9 @@ void uartToDistanceLoop(void *parameters)
         {
           distance = convertDistanceCm(pixel_box_height);
           // move the state machine forward
-          change_state = true;
+          if (currentState == LOOKING_FOR_1ST_BALL && myBuffer[0] == 1) change_state = true;
+          else if (currentState == LOOKING_FOR_2ND_BALL && myBuffer[0] == 2) change_state = true;
+          else if (currentState == LOOKING_FOR_3RD_BALL && myBuffer[0] == 3) change_state = true;
         }
       }
       Serial.println(currentState);
@@ -157,8 +166,18 @@ void uartToDistanceLoop(void *parameters)
 
       case SEND_DISTANCES:
         currentState = WAITING;
+        char distance_payload[24];
+        char red_str[8];
+        std::sprintf(red_str, "%d", red_dist);
+        char blue_str[8];
+        std::sprintf(blue_str, "%d", blue_dist);
+        char yellow_str[8];
+        std::sprintf(yellow_str, "%d", yellow_dist);
+        std::strcat(distance_payload, red_str);
+        std::strcat(distance_payload, blue_str);
+        std::strcat(distance_payload, yellow_str);
         // perform calculation
-        // MQTTclient.publish("esp/localise", red_dist, blue_dist, yellow_dist);
+        MQTTclient.publish("localise",  distance_payload );
         break;
       }
     }

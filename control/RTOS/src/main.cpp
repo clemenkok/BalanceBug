@@ -8,7 +8,7 @@ void setup()
 
   // Setup function for UART to Distance
   uartToDistanceSetup();
-  // Serial.begin(115200);
+  Serial.begin(115200);
 
   // Keep Alive can mess with MQTT Publish, requiring us to use a semaphore.
   sema_keepMQTTAlive = xSemaphoreCreateBinary();
