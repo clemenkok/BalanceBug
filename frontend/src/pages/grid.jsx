@@ -18,11 +18,13 @@ export const GridPage = () => {
 
     const fetchMatrix = async () => {
       try {
-        const matrix = [];
-        for (let i = 0; i < 60; i++) {
-          const row = Array(60).fill([0, 0, 0, 0, 0]);
-          matrix.push(row);
-        }
+        // const matrix = [];
+        // for (let i = 0; i < 60; i++) {
+        //   const row = Array(60).fill([0, 0, 0, 0, 0]);
+        //   matrix.push(row);
+        // }
+
+        const matrix = Array(70).fill(Array(48).fill([1, 1, 1, 1, 0]));
         const response = await axios.get(process.env.REACT_APP_MATRIX);
         console.log(response.data.tile_info);
         let updatedTileInfo = response.data.tile_info;
