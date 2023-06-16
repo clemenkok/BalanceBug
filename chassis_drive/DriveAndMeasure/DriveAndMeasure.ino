@@ -46,7 +46,7 @@ double Kd = 0.0;   // Derivative gain
 // Define the input, output, and setpoint variables
 double PIDinput = 0.0;       // Current position
 double PIDoutput = 0.0;      // Control output
-double setpoint = 80.0;  // Desired position
+double setpoint = 70.0;  // Desired position
 
 // calibration variables
 bool newCalibrate = false; // change depedning on whether we want to calibrate
@@ -54,16 +54,16 @@ int VMax = 0;
 int VMin = 0;
 int LFMax, LFMin, RFMax, RFMin, FMax, FMin;
 int ldrLVal, ldrRVal, ldrFVal;
-int oldLMax = 598;
-int oldLMin = 173;
-int oldRMax = 640;
-int oldRMin = 308;
-int oldFMax = 637;
-int oldFMin = 336;
+int oldLMax = 559;
+int oldLMin = 122;
+int oldRMax = 689;
+int oldRMin = 325;
+int oldFMax = 651;
+int oldFMin = 219;
 
 int count = 0;
-int brightThr = 70;
-int turnDur = 2000;
+int brightThr = 75;
+int turnDur = 1700;
 int curDur = 0;
 int cruiseSpeed = 90;
 int speedL = 0, speedR = 0;
@@ -221,7 +221,7 @@ void setup() {
   delay(3000);
   digitalWrite(ledPinL, LOW);
   digitalWrite(ledPinR, LOW);
-  delay(1000);
+  delay(2000);
 
   // initiate calibration loop
   VMax = 0;
@@ -254,6 +254,13 @@ void setup() {
     Serial.println(FMax);
     Serial.print("FMin: ");
     Serial.println(FMin);
+
+    digitalWrite(ledPinL, HIGH);
+    digitalWrite(ledPinR, HIGH);
+    delay(5000);
+    digitalWrite(ledPinL, LOW);
+    digitalWrite(ledPinR, LOW);
+    delay(2000);
   }
   else{
     LFMax = oldLMax;
@@ -405,6 +412,12 @@ void loop() {
     Serial.print(leftWall);
     Serial.print(", ");
     Serial.println(rightWall);
+
+    Serial.print("speed L, R: ");
+    Serial.print(speedL);
+    Serial.print(", ");
+    Serial.println(speedR);
+
 
     count = 0;
   }
