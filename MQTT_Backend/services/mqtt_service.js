@@ -7,7 +7,7 @@ module.exports = class mqttService {
 
   constructor() {
     const protocol = 'mqtt';
-    const host = '100.24.18.69'; // MQTT Broker IP Address, i.e. EC2 Public IP 
+    const host = '3.85.227.153'; // MQTT Broker IP Address, i.e. EC2 Public IP 
     const port = '1883'; // Assigned port for MQTT
     const clientId = `mqtt_${Math.random().toString(16).slice(3)}`; // Random name for device/server
 

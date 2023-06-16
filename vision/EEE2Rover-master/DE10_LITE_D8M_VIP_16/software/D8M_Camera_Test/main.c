@@ -1,3 +1,4 @@
+// mine
 
 
 #include <stdio.h>
@@ -22,9 +23,9 @@
 
 #define EXPOSURE_INIT 0x002000
 #define EXPOSURE_STEP 0x100
-#define GAIN_INIT 0x080
+#define GAIN_INIT 0x0c0
 #define GAIN_STEP 0x040
-#define DEFAULT_LEVEL 3
+#define DEFAULT_LEVEL 2
 
 #define MIPI_REG_PHYClkCtl		0x0056
 #define MIPI_REG_PHYData0Ctl	0x0058
@@ -186,11 +187,11 @@ int main()
         alt_u8  manual_focus_step = 10;
         alt_u16  current_focus = 300;
     	int boundingBoxColour = 0;
-    	//alt_u32 exposureTime = EXPOSURE_INIT;
-    	//alt_u16 gain = GAIN_INIT;
+    	alt_u32 exposureTime = EXPOSURE_INIT;
+    	alt_u16 gain = GAIN_INIT;
 
-        //OV8865SetExposure(exposureTime);
-        //OV8865SetGain(gain);
+        OV8865SetExposure(exposureTime);
+        OV8865SetGain(gain);
         Focus_Init();
 
         FILE* ser = fopen("/dev/uart_0", "rb+");
@@ -266,7 +267,6 @@ int main()
        boundingBoxColour = ((boundingBoxColour + 1) & 0xff);
        IOWR(0x42000, EEE_IMGPROC_BBCOL, (boundingBoxColour << 8) | (0xff - boundingBoxColour));
 
-       /*
        //Process input commands
        int in = getchar();
        switch (in) {
@@ -302,7 +302,7 @@ int main()
         	   printf("\nFocus = %x ",current_focus);
        	   	   break;}
        }
-        */
+
 
 	   //Main loop delay
 	   usleep(10000);

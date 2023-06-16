@@ -1,0 +1,8 @@
+.map {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto; /* Center the SVG element */
+  }
+  

@@ -66,7 +66,7 @@ input                         mode;
 parameter IMAGE_W = 11'd640;
 parameter IMAGE_H = 11'd480;
 parameter MESSAGE_BUF_MAX = 256;
-parameter MSG_INTERVAL = 6;
+parameter MSG_INTERVAL = 60;
 parameter BB_COL_DEFAULT = 24'h00ff00;
 
 
@@ -111,76 +111,58 @@ rgb_to_hsv rgb_hsv(
 	.s(saturation)
 );
 
-/*
-// only write to the buffer if there has been 54 things written in it
-SAT_SHIFT_REG sat_shift(
-	.clk(clk),
-	.shift(in_valid),
-	.sr_in(saturation),
-	.sr_out(saturation_out)
-);
-*/
 
-/*
-// Detect red areas
-wire red_detect;
-assign red_detect = ~red[7] & ~green[7] & blue[7];
-*/
-
-// for blue, use hue range of 190 to 250, threshold = (207533, 273070)
-// saturation of 70% to 100%, threshold = (45875, 65535)
-// value of 70% to 100%, threshold = (180, 255)
-wire red_detect;
-//assign red_detect = (~|hue[31:19]) & (hue[18] | (hue[17] & hue[16])) & saturation[15] & value[7];
-assign red_detect = (hue > 207533) & (hue < 273070) & saturation_out & (value > 180);
-// Find boundary of cursor box
+reg color_detect;
+reg [26:0] color_id;
 
 // Highlight detected areas
-wire [23:0] red_high;
+reg [23:0] color_high;
 assign grey = green[7:1] + red[7:2] + blue[7:2]; //Grey = green/2 + red/4 + blue/4
-
-
-//assign red_high  =  red_detect ? {8'h0, 8'h0, 8'hff} : {grey, grey, grey};
-//assign red_high  =  red_detect ? {8'hff, 8'hff, 8'h00} : {grey, grey, grey};
-assign red_high  =  red_detect ? {8'h0, 8'h0, 8'hff} : {grey, grey, grey};
-
 
 // Show bounding box
 wire [23:0] new_image;
 wire bb_active;
 assign bb_active = (x == left) | (x == right) | (y == top) | (y == bottom);
-assign new_image = bb_active ? bb_col : red_high;
+assign new_image = bb_active ? bb_col : color_high;
 
-
-/*
 // State machine to change between colors for detection on consecutive frames
 reg [1:0] curr_color; // 0 for red, 1 for blue, 2 for yellow
 reg [1:0] next_color;
 
+//color_detect = (hue > 0) & (hue < 32768) & saturation_out & (value > 64);
+//color_high  =  color_detect ? {8'hff, 8'h00, 8'h00} : {grey, grey, grey};
+
+
 always@(*) begin
 	case(curr_color)
-		2'b0: begin // curr color is red
+		2'b0: begin // curr color is red 0 to 20
 			next_color = 2'b1;
-			red_detect = red[7] & ~green[7] & ~blue[7];
-			red_high  =  red_detect ? {8'hff, 8'h00, 8'h00} : {grey, grey, grey};
+			color_detect = (hue > 0) & (hue < 21845) & saturation_out & (value > 128);
+			color_high  =  color_detect ? {8'hff, 8'h00, 8'h00} : {grey, grey, grey};
+			color_id = 1;
 		end
 		2'b1: begin // curr color is blue
+			// for blue, use hue range of 160 to 250, threshold = (207533, 273070)
+			// saturation of 70% to 100%, threshold = (45875, 65535)
+			// value of 70% to 100%, threshold = (180, 255)
 			next_color = 2'b10;
-			red_detect = ~red[7] & ~green[7] & blue[7];
-			red_high  =  red_detect ? {8'h00, 8'h00, 8'hff} : {grey, grey, grey};
+			color_detect = (hue > 174765) & (hue < 273070) & saturation_out & (value > 180);
+			color_high  =  color_detect ? {8'h00, 8'h00, 8'hff} : {grey, grey, grey};
+			color_id = 2;
 		end
-		2'b10: begin // curr color is yellow
+		2'b10: begin // curr color is yellow 20 to 70
 			next_color = 2'b0;
-			red_detect = red[7] & green[7] & ~blue[7];
-			red_high  =  red_detect ? {8'hff, 8'hff, 8'h00} : {grey, grey, grey};
+			color_detect = (hue > 21845) & (hue < 76459) & saturation_out & (value > 180);
+			color_high  =  color_detect ? {8'hff, 8'hff, 8'h00} : {grey, grey, grey};
+			color_id = 3;
 		end
 	endcase
 end
 
 always@(posedge sop) begin
-	curr_color = next_color;
+	if (frame_count == 0) curr_color = next_color;
 end
-*/
+
 
 
 // GAUSSIAN BLUR
@@ -265,7 +247,7 @@ end
 //Find first and last red pixels
 reg [10:0] x_min, y_min, x_max, y_max;
 always@(posedge clk) begin
-	if (red_detect & in_valid) begin	//Update bounds when the pixel is red
+	if (color_detect & in_valid) begin	//Update bounds when the pixel is red
 		if (x < x_min) x_min <= x;
 		if (x > x_max) x_max <= x;
 		if (y < y_min) y_min <= y;
@@ -324,7 +306,8 @@ always@(*) begin	//Write words to FIFO as state machine advances
 			msg_buf_wr = 1'b0;
 		end
 		2'b01: begin
-			msg_buf_in = `RED_BOX_MSG_ID;	//Message ID
+			//msg_buf_in = `RED_BOX_MSG_ID;	//Message ID
+			msg_buf_in = {5'b10100, color_id};
 			msg_buf_wr = 1'b1;
 		end
 		2'b10: begin
@@ -332,7 +315,7 @@ always@(*) begin	//Write words to FIFO as state machine advances
 			msg_buf_wr = 1'b1;
 		end
 		2'b11: begin
-			msg_buf_in = {5'b0, x_max, 5'b0, y_max}; //Bottom right coordinate
+			msg_buf_in = {5'b11110, x_max, 5'b11110, y_max}; //Bottom right coordinate
 			msg_buf_wr = 1'b1;
 		end
 	endcase

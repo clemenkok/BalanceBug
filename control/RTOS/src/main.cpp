@@ -1,9 +1,13 @@
 #include <Arduino.h>
 #include "keepMQTTAlive.h"
 #include "publishDeadreckoningData.h"
+#include "uartToDistance.h"
 
 void setup()
 {
+
+  // Setup function for UART to Distance
+  uartToDistanceSetup();
   Serial.begin(115200);
 
   // Keep Alive can mess with MQTT Publish, requiring us to use a semaphore.
@@ -22,6 +26,7 @@ void setup()
   );
 
   // task to obtain data from sensors, and publish to MQTT topic
+  // NOTE: Tasks within the same "state" should not be in separate tasks
   xTaskCreatePinnedToCore(
       publishDeadreckoningData,
       "Publish Deadreckoning Data",
@@ -29,10 +34,17 @@ void setup()
       NULL,
       4,
       NULL,
-      CONFIG_ARDUINO_RUNNING_CORE
-  );
+      CONFIG_ARDUINO_RUNNING_CORE);
 
-  // TODO: Research about Symmetric Multiprocessing and how we can use 1 core to do control, permanently
+  // Beacon UART to distance
+  xTaskCreatePinnedToCore(
+      uartToDistanceLoop,
+      "Beacon UART to Distance",
+      20000,
+      NULL,
+      5,
+      NULL,
+      CONFIG_ARDUINO_RUNNING_CORE);
 }
 
 void loop()

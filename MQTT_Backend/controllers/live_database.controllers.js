@@ -7,6 +7,7 @@ exports.findOne = (req, res) => {
     order: [["createdAt", "DESC"]],
   })
     .then((data) => {
+      //console.log(data)
       res.send(data);
     })
     .catch((err) => {
@@ -20,20 +21,26 @@ exports.findOne = (req, res) => {
 
 // Test function.
 exports.create = (req, res) => {
+
+  if (!req.body.tile_num) {
+    res.status(400).send({
+      message: "Content can not be empty."
+    });
+    return;
+  }
   const live_database = {
-    tile_num: req.body.tile_info,
-    tile_info: res.body.tile_num,
+    tile_info: req.body.tile_info,
+    tile_num: req.body.tile_num
   };
 
   Live_database.create(live_database)
     .then((data) => {
-      console.log("added tile data to database:" + data);
+      res.send(data);
     })
     .catch((err) => {
-      console.log({
+      res.status(500).send({
         message:
-          err.message ||
-          "Some error occurred while creating the live_database Table.",
+          err.message || "Some error occurred while creating the live_database Table."
       });
     });
 };

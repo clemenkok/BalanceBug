@@ -6,7 +6,7 @@ function circle([pos_x, pos_y]) {
     Math.sqrt(Math.pow(pos_x - x[0], 2) + Math.pow(pos_y - x[1], 2));
 }
 
-export default function nlsr(x, y, initialValues) {
+function nlsr(x, y, initialValues) {
   return levenbergMarquardt({ x, y }, circle, { initialValues });
 }
 
@@ -24,3 +24,7 @@ const initialValues = [2, -1]; // i.e., y = x
 //   parameterError: 6.787132159723697e-11
 //   iterations: 2
 // }
+
+module.exports = {
+  nlsr
+}

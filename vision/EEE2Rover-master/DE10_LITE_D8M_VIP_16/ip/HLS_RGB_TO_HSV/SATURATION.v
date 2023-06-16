@@ -279,6 +279,5 @@ module SATURATION(r, g, b, s);
         endcase
     end
 
-
-        assign s = (min < min_threshold);
+        assign s = (min <= min_threshold);
 endmodule

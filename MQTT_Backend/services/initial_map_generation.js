@@ -10,7 +10,7 @@ module.exports = function generate_initial_map(matrix) {
         }
     }
 
-    console.log(matrix);
+    //console.log(matrix);
     return matrix;
     
 }
