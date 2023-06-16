@@ -1,5 +1,5 @@
-#include "keepMQTTAlive.h"
 #include <Arduino.h>
+#include "publishDeadreckoningData.h"
 
 void publishDeadreckoningData(void *parameters)
 {
