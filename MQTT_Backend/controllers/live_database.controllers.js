@@ -7,6 +7,7 @@ exports.findOne = (req, res) => {
     order: [["createdAt", "DESC"]],
   })
     .then((data) => {
+      //console.log(data)
       res.send(data);
     })
     .catch((err) => {
@@ -20,6 +21,7 @@ exports.findOne = (req, res) => {
 
 // Test function.
 exports.create = (req, res) => {
+
   if (!req.body.tile_num) {
     res.status(400).send({
       message: "Content can not be empty."

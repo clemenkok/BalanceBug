@@ -8,45 +8,92 @@ import { NavBar } from "../components/nav-bar";
 
 // TODO: Mount component so it saves the state and updates upon new poll
 
-export const GridPage = () => {
-  const generateInitialArray = () => {
-    const matrix = [];
+
+export class GridPage extends React.Component {
+
+  constructor() {
+    super();
+    let temp = [];
     for (let i = 0; i < 48; i++) {
       const row = Array(73).fill([0, 0, 0, 0, 0]);
-      matrix.push(row);
+      temp.push(row);
     }
-    return matrix;
-  };
+    
+    //const [matrix, setMatrix] = useState(temp);
+    this.state = {} 
+    this.state.matrix= temp
+   
+  }
 
-  const [matrix, setMatrix] = useState(generateInitialArray);
-
-  useEffect(() => {
+  componentDidMount(){
     const fetchMatrix = async () => {
       try {
-        const response = await axios.get(process.env.REACT_APP_MATRIX);
-        console.log(response.data.tile_info);
+        const response = await axios.get("http://localhost:8080/api/live_database/latest");
+        console.log(response.data);
         let updatedTileInfo = response.data.tile_info;
         let newGlobalX = response.data.tile_num[0];
         let newGlobalY = response.data.tile_num[1];
+  
+        let copy = JSON.parse(JSON.stringify(this.state.matrix));
 
-        matrix[newGlobalX][newGlobalY] = updatedTileInfo;
-
+        copy[newGlobalX][newGlobalY] = updatedTileInfo;
+  
         // Log the updated array
-        console.log("Updated Array:", matrix);
-        setMatrix(matrix);
+        console.log("Updated Array:", copy[0][0]);
+        this.setState({matrix:copy});
+        
+  
       } catch (error) {
         console.error("Error fetching matrix:", error);
       }
     };
+  
+    setInterval(fetchMatrix, 1000); // Poll every 3 seconds
+   
+    
+    //  axios.get("http://localhost:8080/api/live_database/latest").then( (response) => {
 
-    const pollingInterval = setInterval(fetchMatrix, 1000); // Poll every 3 seconds
+    //  console.log(response.data);
+    //  let updatedTileInfo = response.data.tile_info;
+    //  let newGlobalX = response.data.tile_num[0];
+    //  let newGlobalY = response.data.tile_num[1];
 
-    return () => {
-      clearInterval(pollingInterval); // Clean up the interval on component unmount
-    };
-  }, [matrix]);
+    //  let copy = JSON.parse(JSON.stringify(this.state.matrix));
 
-  const start = () => {
+    //  copy[newGlobalX][newGlobalY] = updatedTileInfo;
+
+    //  this.setState({matrix:copy});
+    //  // Log the updated array
+    //  console.log("Updated Array:", this.state.matrix[1][1]);
+
+    //}
+    
+  }
+        
+        
+  
+
+ 
+
+
+  // useEffect(() => {
+
+  //   // const response = axios.get("http://localhost:8080/api/live_database/latest").then( (response) => {
+  //   //   console.log('sadasdhbas');
+  //   //   console.log(response.data);
+  //   // });
+
+  //   // let x = JSON.parse(JSON.stringify(matrix));
+  //   // setMatrix(x);
+  //   // console.log(x);
+
+    
+  //   return () => {
+  //     //clearInterval(pollingInterval); // Clean up the interval on component unmount
+  //   };
+  // }, [matrix]);
+
+  start = () => {
     axios
       .get(process.env.REACT_APP_START)
       .then((response) => {
@@ -59,7 +106,7 @@ export const GridPage = () => {
       });
   };
 
-  const stop = () => {
+  stop = () => {
     axios
       .get(process.env.REACT_APP_STOP)
       .then((response) => {
@@ -72,19 +119,19 @@ export const GridPage = () => {
       });
   };
 
-  return (
+  render() { return(
     <div>
       <NavBar />
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="flex space-x-2 mb-5">
           <button
-            onClick={start}
+            onClick={this.start}
             className="bg-dark-purple hover:bg-gray-800 text-white font-fira-code py-4 px-6 rounded-full transform transition-all duration-300 scale-100 hover:scale-110"
           >
             START
           </button>
           <button
-            onClick={stop}
+            onClick={this.stop}
             className="bg-dark-purple hover:bg-gray-800 text-white font-fira-code py-4 px-6 rounded-full transform transition-all duration-300 scale-100 hover:scale-110"
           >
             STOP
@@ -99,9 +146,15 @@ export const GridPage = () => {
             className="w-full appearance-none bg-gray-300 h-3 outline-none focus:outline-none"
           />
           <div>
-            {matrix.map((row, rowIndex) => (
+            {this.state.matrix.map(function (row, rowIndex) {
+
+              //console.log(matrix)
+              return (
               <div key={rowIndex} className="flex">
-                {row.map((side, colIndex) => (
+                {row.map(function (side, colIndex){
+                  
+                  //console.log(side)
+                  return (
                   <div
                     key={colIndex}
                     style={{
@@ -122,12 +175,30 @@ export const GridPage = () => {
                         : "1px solid white",
                     }}
                   />
-                ))}
+                )
+              
+              })}
               </div>
-            ))}
+
+
+
+
+
+
+
+            )}
+            
+            
+            
+            )}
           </div>
         </div>
       </div>
     </div>
-  );
+  )
+            } 
+
+
+
+
 };
