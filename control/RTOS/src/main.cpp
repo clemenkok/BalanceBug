@@ -11,12 +11,14 @@ unsigned long lastMsg = 0;
 char msg[MSG_BUFFER_SIZE];
 int value = 0;
 
+extern current_x, current_y;
+
 // Print messages from subscribed topics
 // Include a semaphore to guard against race conditions in the event where multiple tasks
 // access the same data
 void callback(char *topic, byte *payload, unsigned int length)
 {
-
+    
     // Handle the received message payload
     String receivedPayload = "";
     for (int i = 0; i < length; i++)
@@ -24,12 +26,27 @@ void callback(char *topic, byte *payload, unsigned int length)
         receivedPayload += (char)payload[i];
     }
 
+    /*
     // Check if the received payload matches a specific condition
     if (receivedPayload == "1")
     {
         // Call the corresponding function or execute the desired code
         Serial.println("Execute Function");
     }
+    */
+   
+    // if first letter of the payload is an A, then we know it is the coord update
+    if (receivedPayload[0] == "A"){
+        String coordStr = receivedPayload.substr(1);
+        String delimiter = ",";
+        String x_coord = coordStr.substr(0, coordStr.find(delimiter));
+        String y_coord = coordStr.substr(coordStr.find(delimiter));
+
+        current_x = std::stod(x_coord);
+        current_y = std::stod(y_coord);
+    }
+
+
 }
 
 void setup()

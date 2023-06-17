@@ -17,15 +17,27 @@ enum State
   LOOKING_FOR_1ST_BALL,
   LOOKING_FOR_2ND_BALL,
   LOOKING_FOR_3RD_BALL,
-  SEND_DISTANCES
+  SEND_DISTANCES,
+  WAITING_FOR_COORDS
 };
 
+// need to subscribe topic
+// 1) Receive new coordinates
+
 State currentState = WAITING;
-bool change_state = true;
-int distance = 0;
+
+// state controllers
+bool start_localisation = false; // controlled by main rover state control
+bool change_state = false;
+
 int red_dist;
 int blue_dist;
 int yellow_dist;
+
+double current_x = 0; // current robot x coord
+double current_y = 0;
+
+float localisation_coords_received = false;
 
 void uartToDistanceSetup()
 {
@@ -98,6 +110,8 @@ void uartToDistanceLoop(void *parameters)
       long pixel_box_height = getBoxHeightInPixels(myBuffer);
       long pixel_center_x = getPixelCenterX(myBuffer);
 
+      int distance;
+
       if (currentState != WAITING && currentState != SEND_DISTANCES)
       {
         if (takeReading(pixel_center_x, pixel_box_height))
@@ -114,7 +128,7 @@ void uartToDistanceLoop(void *parameters)
       switch (currentState)
       {
       case WAITING:
-        if (change_state)
+        if (start_localisation)
         {
           change_state = false;
           // Transition to the next state based on some condition or event
@@ -165,21 +179,45 @@ void uartToDistanceLoop(void *parameters)
         break;
 
       case SEND_DISTANCES:
-        currentState = WAITING;
+        // the payload is a string of the form "red_dist blue_dist yellow_dist current_x current_y"
+        // current_x and current_y is the current coordinates based on deadreckoning
+        // and they are to be updated after trilateration is performed.
+        // current_x and current_y helps act as a initial guess for more accurate linear regression
+        currentState = WAITING_FOR_COORDS;
         char distance_payload[24];
+
         char red_str[8];
         std::sprintf(red_str, "%d", red_dist);
         char blue_str[8];
         std::sprintf(blue_str, "%d", blue_dist);
         char yellow_str[8];
         std::sprintf(yellow_str, "%d", yellow_dist);
+        char current_x_str[8];
+        std::sprintf(current_x_str, "%.2f", current_x);
+        char current_y_str[8];
+        std::sprintf(current_y_str, "%.2f", current_y);
+
+
         std::strcat(distance_payload, red_str);
+        std::strcat(distance_payload, " ");
         std::strcat(distance_payload, blue_str);
+        std::strcat(distance_payload, " ");
         std::strcat(distance_payload, yellow_str);
+        std::strcat(distance_payload, " ");
+        std::strcat(distance_payload, current_x_str);
+        std::strcat(distance_payload, " ");
+        std::strcat(distance_payload, current_y_str);
+
         // perform calculation
         MQTTclient.publish("localise",  distance_payload );
         break;
+
+      case WAITING_FOR_COORDS:
+        if (localisation_coords_received){
+          currentState = WAITING;
+        }
       }
+
     }
     vTaskDelay(250 / portTICK_PERIOD_MS); // prevent interfering with watchdog counter
   }

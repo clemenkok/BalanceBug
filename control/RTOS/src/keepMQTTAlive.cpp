@@ -32,8 +32,8 @@ void connectToMQTT()
   }
 
   // SUBSCRIBED TOPICS GO HERE (JUST COPY AND PASTE BELOW)
-  MQTTclient.subscribe("hello123"); // added subscribe upon connection. TO EXECUTE FN: go to callback
-  
+  MQTTclient.subscribe("rover_current_coords"); // added subscribe upon connection. TO EXECUTE FN: go to callback
+
   Serial.println("MQTT Connected");
 }
 

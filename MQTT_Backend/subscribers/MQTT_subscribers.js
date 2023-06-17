@@ -1,5 +1,7 @@
 const { client } = new (require("../services/mqtt_service"))();
 const { rover, mazeMap, caseA } = require("../services/mapping");
+const { trilateration } = require("../services/trilateration");
+const { update_rover_coords } = require("../publishers/MQTT_publishers")
 // const db = require("../models");
 // const Live_database = db.live_database;
 
@@ -7,7 +9,7 @@ const { rover, mazeMap, caseA } = require("../services/mapping");
 function subscribe() {
   let topics = [
     "deadreckoning_data",
-    "initaited_localisation",
+    //"initiated_localisation",
     "red_beacon",
     "blue_beacon",
     "yellow_beacon",
@@ -65,14 +67,15 @@ function subscribe() {
   });
 
   /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
-
+  /*
   client.on("message", (initiated_localisation, payload) => {
     // TODO: processing when we have been notified that localisation is happening from ESP32
     console.log(
       "Received Message:",
       initiated_localisation,
       payload.toString()
-    );
+  );
+  
 
     // TODO: turn on beacon 1
     client.publish(
@@ -95,6 +98,7 @@ function subscribe() {
 
     // TODO: Update the map
   });
+  */
 
   /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -116,6 +120,35 @@ function subscribe() {
   client.on("message", (localise, payload) => {
     // TODO: processing when we have been notified that red_beacon is to turn on
     console.log("Received Message:", localise, payload.toString());
+    const payloadStrArray = payload.toString().split(" ");
+    const distanceArray = payloadStrArray.slice(0, 3).map(parseInt);
+    const  current_x = parseFloat(payloadStrArray[3]);
+    const current_y = parseFloat(payloadStrArray[4]);
+    
+    // Hardcode the beacon x and y positions
+    //        red       blue      yellow    rover rotate in clockwise direction
+    const x = [[70, 0],[130, 70],[130, 0]]
+    const trilateration_result = JSON.parse(trilateration(x, distanceArray, [current_x, current_y]));
+    const result_coordinates_x = parseFloat(trilateration_result.parameterValues[0]);
+    const result_coordinates_y = parseFloat(trilateration_result.parameterValues[1]);
+    // send back to the esp32
+    update_rover_coords(result_coordinates_x, result_coordinates_y);
+
+
+    /*
+    // Input points (x,y) 
+    const x = [[0, 0],[0, 2],[2, 2]] an array of (x, y) coordinates that are the center of the circle
+    const y = [1, 1.5, 2];  // the distance of the beacons from the rover
+
+    // Parameter values to use for first iteration
+    const initialValues = [2, -1]; // i.e., y = x
+    // {
+    //   parameterValues: [1.9999986750084096, -1.9999943899435104]
+    //   parameterError: 6.787132159723697e-11
+    //   iterations: 2
+    // }
+    */
+
   });
 }
 

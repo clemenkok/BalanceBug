@@ -20,7 +20,19 @@ function stop_rover() {
   });
 }
 
+// this payload has the first letter A
+function update_rover_coords(result_coordinates_x, result_coordinates_y){
+  payloadString = result_coordinates_x.toString() + "," + result_coordinates_y.toString();
+  client.publish("rover_current_coords", payloadString, { qos: 0, retain: false }, (error) => {
+    console.log("Rover coordinates sent to esp32");
+    if (error) {
+      console.error(error);
+    }
+  });
+}
+
 module.exports = {
   start_rover,
   stop_rover,
+  update_rover_coords
 };
