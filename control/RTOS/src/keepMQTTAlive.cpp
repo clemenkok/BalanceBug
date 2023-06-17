@@ -11,7 +11,7 @@ SemaphoreHandle_t sema_keepMQTTAlive;
 #define MQTT_USERNAME "BalanceBug"
 #define MQTT_PASSWORD "123"
 
-const char *MQTT_SERVER = "3.85.227.153";
+const char *MQTT_SERVER = "54.82.4.231";
 uint16_t MQTT_PORT = 1883;
 
 WiFiClient wifiClient;
@@ -30,6 +30,10 @@ void connectToMQTT()
     Serial.println("connecting to MQTT");
     vTaskDelay(250 / portTICK_PERIOD_MS); // task runs approx every 250 mS
   }
+
+  // SUBSCRIBED TOPICS GO HERE (JUST COPY AND PASTE BELOW)
+  MQTTclient.subscribe("hello123"); // added subscribe upon connection. TO EXECUTE FN: go to callback
+  
   Serial.println("MQTT Connected");
 }
 
