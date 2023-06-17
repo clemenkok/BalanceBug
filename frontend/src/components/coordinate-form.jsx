@@ -1,18 +1,34 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { BsFillCheckSquareFill } from "react-icons/bs";
 
 export const CoordinateForm = () => {
   const [x, setX] = useState("");
   const [y, setY] = useState("");
+
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle the form submission logic here
     // For example, you can pass the x and y values to a parent component or make an API call
     console.log("Submitted:", x, y);
+
+    try {
+      axios.post(process.env.REACT_APP_START, { x: x, y: y });
+    } catch (error) {
+      console.error("Error sending start coordinates", error);
+    }
+    setSuccess(true);
   };
 
   const handleStop = (e) => {
     e.preventDefault();
+    try {
+      axios.post(process.env.REACT_APP_STOP, { stop: "1" });
+    } catch (error) {
+      console.error("Error sending stop", error);
+    }
   };
 
   return (
@@ -44,7 +60,8 @@ export const CoordinateForm = () => {
       <button
         type="submit"
         className="bg-blue-500 hover:bg-blue-600 text-white rounded py-2 px-4"
-      value = "start">
+        value="start"
+      >
         Start
       </button>
       <button
@@ -54,8 +71,12 @@ export const CoordinateForm = () => {
       >
         Stop
       </button>
+      {success && (
+        <p className="flex items-center gap-1 mb-5 font-semibold text-green-500">
+          <BsFillCheckSquareFill /> Form has been submitted successfully
+        </p>
+      )}
     </form>
-  
   );
 };
 

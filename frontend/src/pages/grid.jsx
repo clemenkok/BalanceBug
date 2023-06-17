@@ -25,9 +25,7 @@ export class GridPage extends React.Component {
   componentDidMount() {
     const fetchMatrix = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:8080/api/live_database/latest"
-        );
+        const response = await axios.get(process.env.REACT_APP_MATRIX);
         console.log(response.data);
         let updatedTileInfo = response.data.tile_info;
         let newGlobalX = response.data.tile_num[0];
