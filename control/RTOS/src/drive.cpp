@@ -468,7 +468,9 @@ void driftCorrection(){
         std::strcat(deadreckoning_payload, ",");
         std::strcat(deadreckoning_payload, right_wall_str);
         
+        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
         MQTTclient.publish("deadreckoning_data",  deadreckoning_payload );
+        xSemaphoreGive(sema_keepMQTTAlive);
     }
     // after all the dead reckoning data has been drift corrected and published
     // start driving again

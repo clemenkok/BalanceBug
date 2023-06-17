@@ -3,7 +3,7 @@
 #include "uartToDistance.h"
 #include "roverStateControl.h"
 
-// SemaphoreHandle_t messageSemaphore;
+extern SemaphoreHandle_t sema_keepMQTTAlive;
 
 // for MQTT Subscribe
 unsigned long lastMsg = 0;
@@ -59,8 +59,8 @@ void setup()
     Serial.begin(115200);
 
     // Keep Alive can mess with MQTT Publish, requiring us to use a semaphore.
-    // sema_keepMQTTAlive = xSemaphoreCreateBinary();
-    // xSemaphoreGive(sema_keepMQTTAlive);
+    sema_keepMQTTAlive = xSemaphoreCreateBinary();
+    xSemaphoreGive(sema_keepMQTTAlive);
 
     MQTTclient.setCallback(callback);
 

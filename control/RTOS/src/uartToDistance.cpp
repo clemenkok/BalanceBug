@@ -1,9 +1,9 @@
 #include "uartToDistance.h"
 #include <HardwareSerial.h>
-//#include <cstdio>
+// #include <cstdio>
 #include <cstring>
-//#include <iostream>
-//#include <string>
+// #include <iostream>
+// #include <string>
 #include "drive.h"
 #include "roverStateControl.h"
 
@@ -44,7 +44,7 @@ void uartToDistanceSetup()
 {
   SerialPort.begin(BAUDRATE, SERIAL_8N1, RX_PIN, TX_PIN);
 }
- 
+
 long getBoxHeightInPixels(unsigned char (&myBuffer)[12])
 {
   // myBuffer[0] is
@@ -92,141 +92,155 @@ bool takeReading(long pixel_center_x, long pixel_box_height)
   return 190 < pixel_center_x < 230;
 }
 
-void setStartLocalisationTrue(){
+void setStartLocalisationTrue()
+{
   start_localisation = true;
 }
 
 void uartToDistanceLoop()
 {
-    // make the rover turn clockwise if it is looking for ball
-    if (currentState == LOOKING_FOR_1ST_BALL || currentState == LOOKING_FOR_2ND_BALL || currentState == LOOKING_FOR_3RD_BALL ){
-      spinClockwise();
-    }
+  // make the rover turn clockwise if it is looking for ball
+  if (currentState == LOOKING_FOR_1ST_BALL || currentState == LOOKING_FOR_2ND_BALL || currentState == LOOKING_FOR_3RD_BALL)
+  {
+    spinClockwise();
+  }
 
-    if (SerialPort.available() > 11)
+  if (SerialPort.available() > 11)
+  {
+    // The serial data comes in one byte at a time
+    // Read 4 bytes at the same time
+
+    SerialPort.readBytes(myBuffer, 12);
+    for (int i = 0; i < 12; i++)
     {
-      // The serial data comes in one byte at a time
-      // Read 4 bytes at the same time
-
-      SerialPort.readBytes(myBuffer, 12);
-      for (int i = 0; i < 12; i++){
-        Serial.print(myBuffer[i], HEX);
-        Serial.print(" ");
-      }
-      Serial.println();
-
-      long pixel_box_height = getBoxHeightInPixels(myBuffer);
-      long pixel_center_x = getPixelCenterX(myBuffer);
-
-      int distance;
-
-      if (currentState != WAITING && currentState != SEND_DISTANCES)
-      {
-        if (takeReading(pixel_center_x, pixel_box_height))
-        {
-          distance = convertDistanceCm(pixel_box_height);
-          // move the state machine forward
-          if (currentState == LOOKING_FOR_1ST_BALL && myBuffer[0] == 1) change_state = true;
-          else if (currentState == LOOKING_FOR_2ND_BALL && myBuffer[0] == 2) change_state = true;
-          else if (currentState == LOOKING_FOR_3RD_BALL && myBuffer[0] == 3) change_state = true;
-        }
-      }
-      Serial.println(currentState);
-
-      switch (currentState)
-      {
-      case WAITING:
-        if (start_localisation)
-        {
-          change_state = false;
-          // Transition to the next state based on some condition or event
-          currentState = LOOKING_FOR_1ST_BALL;
-          // Turn on light for the first ball
-          MQTTclient.publish("red_beacon", "ON");
-          start_localisation = false;
-        }
-        break;
-
-      case LOOKING_FOR_1ST_BALL:
-        if (change_state)
-        {
-          change_state = false;
-          red_dist = distance;
-          distance = 0;
-          // Transition to the next state based on some condition or event
-          currentState = LOOKING_FOR_2ND_BALL;
-          // Turn on light for the second ball
-          MQTTclient.publish("red_beacon", "OFF");
-          MQTTclient.publish("blue_beacon", "ON");
-        }
-        break;
-
-      case LOOKING_FOR_2ND_BALL:
-        if (change_state)
-        {
-          change_state = false;
-          blue_dist = distance;
-          distance = 0;
-          // Transition to the next state based on some condition or event
-          currentState = LOOKING_FOR_3RD_BALL;
-          // Turn on light for the third ball
-          MQTTclient.publish("blue_beacon", "OFF");
-          MQTTclient.publish("yellow_beacon", "ON");
-        }
-        break;
-
-      case LOOKING_FOR_3RD_BALL:
-        if (change_state)
-        {
-          change_state = false;
-          yellow_dist = distance;
-          distance = 0;
-          // Transition to the next state based on some condition or event
-          currentState = SEND_DISTANCES;
-          MQTTclient.publish("yellow_beacon", "OFF");
-
-          // once found looking for third ball, stop spinning
-          stopSpinClockwise();
-        }
-        break;
-
-      case SEND_DISTANCES:
-        // the payload is a string of the form "red_dist blue_dist yellow_dist current_x current_y"
-        // current_x and current_y is the current coordinates based on deadreckoning
-        // and they are to be updated after trilateration is performed.
-        // current_x and current_y helps act as a initial guess for more accurate linear regression
-        currentState = WAITING;
-        char distance_payload[50] = {0};
-
-        char red_str[8];
-        std::sprintf(red_str, "%d", red_dist);
-        char blue_str[8];
-        std::sprintf(blue_str, "%d", blue_dist);
-        char yellow_str[8];
-        std::sprintf(yellow_str, "%d", yellow_dist);
-        char current_x_str[8];
-        std::sprintf(current_x_str, "%.2f", current_x);
-        char current_y_str[8];
-        std::sprintf(current_y_str, "%.2f", current_y);
-
-
-        std::strcat(distance_payload, red_str);
-        std::strcat(distance_payload, " ");
-        std::strcat(distance_payload, blue_str);
-        std::strcat(distance_payload, " ");
-        std::strcat(distance_payload, yellow_str);
-        std::strcat(distance_payload, " ");
-        std::strcat(distance_payload, current_x_str);
-        std::strcat(distance_payload, " ");
-        std::strcat(distance_payload, current_y_str);
-
-        // perform calculation
-        MQTTclient.publish("localise",  distance_payload );
-        // make the rover wait
-        startRoverWait();
-        break;
-      }
-
+      Serial.print(myBuffer[i], HEX);
+      Serial.print(" ");
     }
+    Serial.println();
+
+    long pixel_box_height = getBoxHeightInPixels(myBuffer);
+    long pixel_center_x = getPixelCenterX(myBuffer);
+
+    int distance;
+
+    if (currentState != WAITING && currentState != SEND_DISTANCES)
+    {
+      if (takeReading(pixel_center_x, pixel_box_height))
+      {
+        distance = convertDistanceCm(pixel_box_height);
+        // move the state machine forward
+        if (currentState == LOOKING_FOR_1ST_BALL && myBuffer[0] == 1)
+          change_state = true;
+        else if (currentState == LOOKING_FOR_2ND_BALL && myBuffer[0] == 2)
+          change_state = true;
+        else if (currentState == LOOKING_FOR_3RD_BALL && myBuffer[0] == 3)
+          change_state = true;
+      }
+    }
+    Serial.println(currentState);
+
+    switch (currentState)
+    {
+    case WAITING:
+      if (start_localisation)
+      {
+        change_state = false;
+        // Transition to the next state based on some condition or event
+        currentState = LOOKING_FOR_1ST_BALL;
+        // Turn on light for the first ball
+
+        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY); // take semaphore from keepMQTTAlive to prevent conflicts
+        MQTTclient.publish("red_beacon", "ON");
+        xSemaphoreGive(sema_keepMQTTAlive); // return Semaphore to keepMQTTAlive
+        start_localisation = false;
+      }
+      break;
+
+    case LOOKING_FOR_1ST_BALL:
+      if (change_state)
+      {
+        change_state = false;
+        red_dist = distance;
+        distance = 0;
+        // Transition to the next state based on some condition or event
+        currentState = LOOKING_FOR_2ND_BALL;
+        // Turn on light for the second ball
+        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
+        MQTTclient.publish("red_beacon", "OFF");
+        MQTTclient.publish("blue_beacon", "ON");
+        xSemaphoreGive(sema_keepMQTTAlive);
+      }
+      break;
+
+    case LOOKING_FOR_2ND_BALL:
+      if (change_state)
+      {
+        change_state = false;
+        blue_dist = distance;
+        distance = 0;
+        // Transition to the next state based on some condition or event
+        currentState = LOOKING_FOR_3RD_BALL;
+        // Turn on light for the third ball
+        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
+        MQTTclient.publish("blue_beacon", "OFF");
+        MQTTclient.publish("yellow_beacon", "ON");
+        xSemaphoreGive(sema_keepMQTTAlive);
+      }
+      break;
+
+    case LOOKING_FOR_3RD_BALL:
+      if (change_state)
+      {
+        change_state = false;
+        yellow_dist = distance;
+        distance = 0;
+        // Transition to the next state based on some condition or event
+        currentState = SEND_DISTANCES;
+        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
+        MQTTclient.publish("yellow_beacon", "OFF");
+        xSemaphoreGive(sema_keepMQTTAlive);
+
+        // once found looking for third ball, stop spinning
+        stopSpinClockwise();
+      }
+      break;
+
+    case SEND_DISTANCES:
+      // the payload is a string of the form "red_dist blue_dist yellow_dist current_x current_y"
+      // current_x and current_y is the current coordinates based on deadreckoning
+      // and they are to be updated after trilateration is performed.
+      // current_x and current_y helps act as a initial guess for more accurate linear regression
+      currentState = WAITING;
+      char distance_payload[50] = {0};
+
+      char red_str[8];
+      std::sprintf(red_str, "%d", red_dist);
+      char blue_str[8];
+      std::sprintf(blue_str, "%d", blue_dist);
+      char yellow_str[8];
+      std::sprintf(yellow_str, "%d", yellow_dist);
+      char current_x_str[8];
+      std::sprintf(current_x_str, "%.2f", current_x);
+      char current_y_str[8];
+      std::sprintf(current_y_str, "%.2f", current_y);
+
+      std::strcat(distance_payload, red_str);
+      std::strcat(distance_payload, " ");
+      std::strcat(distance_payload, blue_str);
+      std::strcat(distance_payload, " ");
+      std::strcat(distance_payload, yellow_str);
+      std::strcat(distance_payload, " ");
+      std::strcat(distance_payload, current_x_str);
+      std::strcat(distance_payload, " ");
+      std::strcat(distance_payload, current_y_str);
+
+      // perform calculation
+      xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
+      MQTTclient.publish("localise", distance_payload);
+      xSemaphoreGive(sema_keepMQTTAlive);
+      // make the rover wait
+      startRoverWait();
+      break;
+    }
+  }
 }
- 

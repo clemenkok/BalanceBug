@@ -6,6 +6,7 @@
 
 extern WiFiClient wifiClient;
 extern PubSubClient MQTTclient;
+extern SemaphoreHandle_t sema_keepMQTTAlive;
 
 void calibrate(int& VMax, int& VMin, int sensorPin, int testNo);
 void driveSetup();

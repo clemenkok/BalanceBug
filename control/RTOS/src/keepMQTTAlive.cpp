@@ -3,7 +3,7 @@
 #include <WiFi.h>
 
 // semaphore declaration to prevent conflicts
-// SemaphoreHandle_t sema_keepMQTTAlive;
+SemaphoreHandle_t sema_keepMQTTAlive;
 
 // configs
 #define WIFI_NETWORK "myhotspot"
@@ -88,7 +88,9 @@ void keepMQTTAlive(void *parameters)
       log_i("MQTT keep alive found MQTT status %s WiFi status %s", String(wifiClient.connected()), String(WiFi.status()));
       if (!(WiFi.status() == WL_CONNECTED))
       {
+        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY); // while MQTTclient.loop() is running no other mqtt operations should be in process
         connectToWiFi();
+        xSemaphoreGive(sema_keepMQTTAlive);
       }
       connectToMQTT();
     }
