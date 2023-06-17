@@ -1,8 +1,8 @@
 #include "controller.hpp"
 #include <PID_v1.h>
 
-double rollSetpoint, rollInput, rollOutput;
-double veloSetpoint, veloInput, veloOutput;
+double rollInput, rollOutput;
+double veloInput, veloOutput;
 // input is roll angle
 // setpoint is roll angle
 // output is motor speed in radians per sec
@@ -11,11 +11,19 @@ double veloSetpoint, veloInput, veloOutput;
 // input is not error. input is the measured output from the plant
 // output is what is fed into the plant
 
-// TUNE THIS FIRST
-double rollKp = 9;   // Pitch angle proportional gain 7.5
-double rollKi = 6;   // Pitch angle integral gain 0.82
-double rollKd = 0;   // Pitch angle derivative gain
+//set points
+//rollSetpoint = -58; //setpoint without battery
+double rollSetpoint = -60.578; //setpoint with battery
+double veloSetpoint = 0;
 
+
+// TUNE THIS FIRST
+double rollKp = 37;   // Pitch angle proportional gain 7.5
+double rollKi = 37;   // Pitch angle integral gain 0.82
+double rollKd = 9;   // Pi38h angle derivative gain
+
+int RollPIDsampletime = 60;
+int velPIDsampletime = 10;
 
 double veloKp = 0;
 double accumulatedError = 0;
@@ -38,8 +46,9 @@ PID veloPID(&veloInput, &veloOutput, &veloSetpoint, veloKp, 0, 0, DIRECT);
 //const float length = 0.16; // length of robot
 
 void controllerSetup(){
-    rollSetpoint = -58;
-    veloSetpoint = 0;
+    //Determines how often the PID algorithm evaluates
+    rollPID.SetSampleTime(RollPIDsampletime);
+    veloPID.SetSampleTime(velPIDsampletime);
 
     // turn PID ON
     rollPID.SetMode(AUTOMATIC);
