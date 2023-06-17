@@ -91,6 +91,8 @@ A Linter (ESLint) has been installed to fix JavaScript bugs in development inste
 
 The architectural style that we use to interface between the frontend anc backend of our system is RESTful API. A quick tutorial on how to set one up. The gist is that a RESTful API is a URL that we can access to send data to an endpoint. It can take place as GET, POST, UPDATE, DELETE, PUT, PATCH. We will most likely use GET and POST.  
 
+NOTE: Axios fetches from the `live_databases` table using a counter that increases once every fetch (we poll every 500ms). It does this by matching to the id inside the table, which is automatically added and increases by 1 each time a new record is added. NOTE, don't DELETE from the table else there will be a lag in between newly added records and the counter. The counter also increases by 0.5 due to the fact that `ComponentDidMount()` runs twice.  
+
 MQTT is used to connect the IoT devices to the backend server.  
 
 ### System Architecture

@@ -6,7 +6,7 @@ import "../App.css";
 import { NavBar } from "../components/nav-bar";
 import { CoordinateForm } from "../components/coordinate-form";
 
-// TODO: When start key in initial coordinates
+// Add a counter and findByPK on that counter.
 
 export class GridPage extends React.Component {
   constructor() {
@@ -18,33 +18,49 @@ export class GridPage extends React.Component {
     }
 
     //const [matrix, setMatrix] = useState(temp);
-    this.state = {};
+    this.state = {
+      counter: 1,
+    };
     this.state.matrix = temp;
   }
+
+  handlePoll = () => {
+    this.setState((prevState) => ({
+      counter: prevState.counter + 0.5,
+    }));
+  };
 
   componentDidMount() {
     const fetchMatrix = async () => {
       try {
-        const response = await axios.get(process.env.REACT_APP_MATRIX);
+        this.handlePoll();
+        console.log("counter is", this.state.counter);
+        const response = await axios.get(process.env.REACT_APP_MATRIX, {
+          params: {
+            counter_val: this.state.counter
+          },
+        });
         console.log(response.data);
         let updatedTileInfo = response.data.tile_info;
         let newGlobalX = response.data.tile_num[0];
         let newGlobalY = response.data.tile_num[1];
 
-        //let copy = JSON.parse(JSON.stringify(this.state.matrix));
+        this.setState((prevState) => {
+          const matrixCopy = [...prevState.matrix]; // Create a copy of the matrix
+          matrixCopy[newGlobalX][newGlobalY] = updatedTileInfo; // Update the copy
 
-        this.state.matrix[newGlobalX][newGlobalY] = updatedTileInfo;
+          // Log the updated array
+          console.log("Updated Array:", matrixCopy[0][0]);
 
-        // Log the updated array
-        console.log("Updated Array:", this.state.matrix[0][0]);
+          return { matrix: matrixCopy }; // Update the state with the modified copy - this works
+        });
 
         this.forceUpdate();
       } catch (error) {
         console.error("Error fetching matrix:", error);
       }
     };
-
-    setInterval(fetchMatrix, 1000); // Poll every 3 seconds
+    setInterval(fetchMatrix, 3000); // Poll every 0.5 seconds
   }
 
   start = () => {
