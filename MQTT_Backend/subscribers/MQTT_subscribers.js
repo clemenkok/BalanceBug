@@ -1,7 +1,7 @@
 const { client } = new (require("../services/mqtt_service"))();
 const { rover, mazeMap, caseA } = require("../services/mapping");
 const { trilateration } = require("../services/trilateration");
-const { update_rover_coords } = require("../publishers/MQTT_publishers")
+const { update_rover_coords } = require("../publishers/MQTT_publishers");
 // const db = require("../models");
 // const Live_database = db.live_database;
 
@@ -21,7 +21,7 @@ function subscribe() {
 
   // Handler function that is called when deadreckoning data comes in
   client.on("message", (deadreckoning_data, payload) => {
-    // TODO: processing when we receive deadreckoning data from ESP32 (convert distance travelled, wall data, angle -> tile_info and tile_num: @Yomna)
+    // processing when we receive deadreckoning data from ESP32 (convert distance travelled, wall data, angle -> tile_info and tile_num: @Yomna)
     console.log("Received Message:", deadreckoning_data, payload.toString());
     // Placeholder Data
     let tile_info = [0, 0, 0, 0, 0];
@@ -122,18 +122,27 @@ function subscribe() {
     console.log("Received Message:", localise, payload.toString());
     const payloadStrArray = payload.toString().split(" ");
     const distanceArray = payloadStrArray.slice(0, 3).map(parseInt);
-    const  current_x = parseFloat(payloadStrArray[3]);
+    const current_x = parseFloat(payloadStrArray[3]);
     const current_y = parseFloat(payloadStrArray[4]);
-    
+
     // Hardcode the beacon x and y positions
     //        red       blue      yellow    rover rotate in clockwise direction
-    const x = [[70, 0],[130, 70],[130, 0]]
-    const trilateration_result = JSON.parse(trilateration(x, distanceArray, [current_x, current_y]));
-    const result_coordinates_x = parseFloat(trilateration_result.parameterValues[0]);
-    const result_coordinates_y = parseFloat(trilateration_result.parameterValues[1]);
+    const x = [
+      [70, 0],
+      [130, 70],
+      [130, 0],
+    ];
+    const trilateration_result = JSON.parse(
+      trilateration(x, distanceArray, [current_x, current_y])
+    );
+    const result_coordinates_x = parseFloat(
+      trilateration_result.parameterValues[0]
+    );
+    const result_coordinates_y = parseFloat(
+      trilateration_result.parameterValues[1]
+    );
     // send back to the esp32
     update_rover_coords(result_coordinates_x, result_coordinates_y);
-
 
     /*
     // Input points (x,y) 
@@ -148,7 +157,6 @@ function subscribe() {
     //   iterations: 2
     // }
     */
-
   });
 }
 
