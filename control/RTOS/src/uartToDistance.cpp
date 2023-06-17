@@ -2,6 +2,7 @@
 #include <HardwareSerial.h>
 #include <stdio.h>
 #include <cstring>
+#include "drive.h"
 
 #define BAUDRATE 115200
 #define RX_PIN 3
@@ -11,20 +12,19 @@ HardwareSerial SerialPort(2);
 // String msg_buf;
 unsigned char myBuffer[12];
 
-enum State
+enum LocalisationState
 {
   WAITING,
   LOOKING_FOR_1ST_BALL,
   LOOKING_FOR_2ND_BALL,
   LOOKING_FOR_3RD_BALL,
-  SEND_DISTANCES,
-  WAITING_FOR_COORDS
+  SEND_DISTANCES
 };
 
 // need to subscribe topic
 // 1) Receive new coordinates
 
-State currentState = WAITING;
+LocalisationState currentState = WAITING;
 
 // state controllers
 bool start_localisation = false; // controlled by main rover state control
@@ -36,8 +36,6 @@ int yellow_dist;
 
 double current_x = 0; // current robot x coord
 double current_y = 0;
-
-float localisation_coords_received = false;
 
 void uartToDistanceSetup()
 {
@@ -91,10 +89,17 @@ bool takeReading(long pixel_center_x, long pixel_box_height)
   return 190 < pixel_center_x < 230;
 }
 
-void uartToDistanceLoop(void *parameters)
+void setStartLocalisationTrue(){
+  start_localisation = true;
+}
+
+void uartToDistanceLoop()
 {
-  for (;;)
-  { // Serial.println("function is running");
+    // make the rover turn clockwise if it is looking for ball
+    if (currentState == LOOKING_FOR_1ST_BALL || currentState == LOOKING_FOR_2ND_BALL || currentState == LOOKING_FOR_3RD_BALL ){
+      spinClockwise();
+    }
+
     if (SerialPort.available() > 11)
     {
       // The serial data comes in one byte at a time
@@ -135,6 +140,7 @@ void uartToDistanceLoop(void *parameters)
           currentState = LOOKING_FOR_1ST_BALL;
           // Turn on light for the first ball
           MQTTclient.publish("red_beacon", "ON");
+          start_localisation = false;
         }
         break;
 
@@ -175,6 +181,9 @@ void uartToDistanceLoop(void *parameters)
           // Transition to the next state based on some condition or event
           currentState = SEND_DISTANCES;
           MQTTclient.publish("yellow_beacon", "OFF");
+
+          // once found looking for third ball, stop spinning
+          stopSpinningClockwise();
         }
         break;
 
@@ -183,7 +192,7 @@ void uartToDistanceLoop(void *parameters)
         // current_x and current_y is the current coordinates based on deadreckoning
         // and they are to be updated after trilateration is performed.
         // current_x and current_y helps act as a initial guess for more accurate linear regression
-        currentState = WAITING_FOR_COORDS;
+        currentState = WAITING;
         char distance_payload[24];
 
         char red_str[8];
@@ -210,17 +219,11 @@ void uartToDistanceLoop(void *parameters)
 
         // perform calculation
         MQTTclient.publish("localise",  distance_payload );
+        // make the rover wait
+        startRoverWait();
         break;
-
-      case WAITING_FOR_COORDS:
-        if (localisation_coords_received){
-          currentState = WAITING;
-        }
       }
 
     }
-    vTaskDelay(250 / portTICK_PERIOD_MS); // prevent interfering with watchdog counter
-  }
-  vTaskDelete(NULL);
 }
  
