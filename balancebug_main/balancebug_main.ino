@@ -3,11 +3,14 @@
 #include "controller.hpp"
 
 #define INTERVAL_MS_PRINT 200
-#define OUTER_VELO_LOOP_ON 1
+#define OUTER_VELO_LOOP_ON 0
 
 // LPF Vars
 LowPassFilter wheelSpeedFilter = LowPassFilter(0.001, millis()); // Tf = 1ms (filter time constant)
 double filteredWheelSpeed = 0;
+
+LowPassFilter rollFilter = LowPassFilter(0.25, millis()); // Tf = 1ms (filter time constant)
+double filteredRoll = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -50,16 +53,34 @@ void loop() {
     double veloControllerOutput = computeVeloControllerOutput();
     setRollSetpoint(veloControllerOutput);
   }
-  
-  // update the roll PID
+  // if (currentMillis - lastPrintMillis > INTERVAL_MS_PRINT){
+  //   // update the roll PID
+  //   filteredRoll = rollFilter(getRoll(), millis());
+  //   updateRollInput(filteredRoll);
+  //   double motorSpeedAngularVelo = computeRollControllerOutput(); //
+  //   Serial.println(filteredRoll);
+  //   setMotorSpeedAngularVelo(-motorSpeedAngularVelo, 1);
+  //   setMotorSpeedAngularVelo(-motorSpeedAngularVelo, 2);
+  // }
+
+  filteredRoll = rollFilter(getRoll(), millis());
+  //updateRollInput(filteredRoll);
   updateRollInput(getRoll());
-  double motorSpeedAngularVelo = computeRollControllerOutput();
-  //Serial.println(getRoll());
+  double motorSpeedAngularVelo = computeRollControllerOutput(); //
+  //Serial.println(filteredRoll);
+  Serial.println(getRoll());
+  //Serial.println(getError());
+
+  
   setMotorSpeedAngularVelo(motorSpeedAngularVelo, 1);
+  //Serial.println(motorSpeedAngularVelo);
   setMotorSpeedAngularVelo(motorSpeedAngularVelo, 2);
+
   runstepperMotors();
+  //delay(10);
 
   // put the current wheel speed into the LPF
-  filteredWheelSpeed = wheelSpeedFilter(getMotorSpeedInSteps(), millis());
+  //filteredWheelSpeed = wheelSpeedFilter(getMotorSpeedInSteps(), millis());
+  
   
 }

@@ -7,7 +7,7 @@
 #define STEP_PIN2 33 
 #define DIR_PIN2 25
 
-#define STEPS_PER_REV 200
+#define STEPS_PER_REV 200*16
 
 // Create an instance of AccelStepper
 AccelStepper stepper1(1, STEP_PIN1, DIR_PIN1);
@@ -28,13 +28,15 @@ void stepperMotorSetup() {
   stepper2.setMaxSpeed(1001);     // Set the maximum speed in steps per second
   
   // Set the initial speed
-  stepper1.setSpeed(50);         // Set the constant speed in steps per second
-  stepper2.setSpeed(-50);         // Set the constant speed in steps per second
+  stepper1.setSpeed(100);         // Set the constant speed in steps per second
+  stepper2.setSpeed(-100);         // Set the constant speed in steps per second
+
 }
 
 void setMotorSpeedAngularVelo(double angularVelo, int motorNumber){
   if (motorNumber == 1){
     stepper1.setSpeed(angularVeloToStepSpeed(angularVelo));
+    //Serial.println(-angularVeloToStepSpeed(angularVelo));
   }
   else if (motorNumber == 2){
     stepper2.setSpeed(-angularVeloToStepSpeed(angularVelo));

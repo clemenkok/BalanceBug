@@ -8,6 +8,7 @@ void updateRollInput(double newInput);
 double computeVeloControllerOutput();
 void setVeloSetpoint(double newSetpoint);
 void updateVeloInput(double newInput);
+double getError();
 
 class LowPassFilter
 {
