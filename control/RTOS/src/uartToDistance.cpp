@@ -1,8 +1,11 @@
 #include "uartToDistance.h"
 #include <HardwareSerial.h>
-#include <stdio.h>
+//#include <cstdio>
 #include <cstring>
+//#include <iostream>
+//#include <string>
 #include "drive.h"
+#include "roverStateControl.h"
 
 #define BAUDRATE 115200
 #define RX_PIN 3
@@ -27,7 +30,7 @@ enum LocalisationState
 LocalisationState currentState = WAITING;
 
 // state controllers
-bool start_localisation = false; // controlled by main rover state control
+bool start_localisation = true; // controlled by main rover state control
 bool change_state = false;
 
 int red_dist;
@@ -183,7 +186,7 @@ void uartToDistanceLoop()
           MQTTclient.publish("yellow_beacon", "OFF");
 
           // once found looking for third ball, stop spinning
-          stopSpinningClockwise();
+          stopSpinClockwise();
         }
         break;
 
@@ -193,7 +196,7 @@ void uartToDistanceLoop()
         // and they are to be updated after trilateration is performed.
         // current_x and current_y helps act as a initial guess for more accurate linear regression
         currentState = WAITING;
-        char distance_payload[24];
+        char distance_payload[50] = {0};
 
         char red_str[8];
         std::sprintf(red_str, "%d", red_dist);

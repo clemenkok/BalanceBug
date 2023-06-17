@@ -2,6 +2,9 @@
 #include <AccelStepper.h>
 #include <PID_v1.h>
 #include "roverStateControl.h"
+#include <cstring>
+//#include <cmath>
+#include <math.h>
 
 const double PIVAL = 3.1415927;
 #define WHEELBASE 14;
@@ -63,8 +66,8 @@ int loop_count = 0;
 bool transmitDataToCloud = false;;
 const int ARRAY_SIZE = 30;
 int dataIndex = 0;
-double prevLocalisation[2] = [0,0];
-double currLocalisation[2] = [0,0];
+double prevLocalisation[2] = {0.0};
+double currLocalisation[2] = {0.0};
 
 double posXArr[ARRAY_SIZE] = {0.0};
 double posYArr[ARRAY_SIZE] = {0.0};
@@ -415,7 +418,8 @@ void updatePosition(unsigned long positionElapsedTime) {
 }
 
 void updateLocalisation(double new_x, double new_y){
-    prevLocalisation = currLocalisation;
+    prevLocalisation[0] = currLocalisation[0];
+    prevLocalisation[1] = currLocalisation[1];
     currLocalisation[0] = new_x;
     currLocalisation[1] = new_y;
 
@@ -427,10 +431,10 @@ void driftCorrection(){
     // this only happens after localisation is done and the prev and curr localization are updated
 
     // before sending data to the topic, we need to drift-correct the data
-    double a[2] = [prevLocalisation[0]-currLocalisation[0], prevLocalisation[1]-currLocalisation[1]];
-    double m[2] = [posXArr[0]-posXArr[ARRAY_SIZE-1], posYArr[0]-posYArr[ARRAY_SIZE-1]];
-    double magnitude_a = sqrt(sq(a[0]), sq(a[1]));
-    double magnitude_b = sqrt(sq(m[0]), sq(m[1]));
+    double a[2] = {prevLocalisation[0]-currLocalisation[0], prevLocalisation[1]-currLocalisation[1]};
+    double m[2] = {posXArr[0]-posXArr[ARRAY_SIZE-1], posYArr[0]-posYArr[ARRAY_SIZE-1]};
+    double magnitude_a = sqrt(sq(a[0]) + sq(a[1]));
+    double magnitude_b = sqrt(sq(m[0]) + sq(m[1]));
     double alpha = atan2(a[1], a[0]) - atan2(m[1], m[0]);
     double beta = magnitude_a / magnitude_b;
 

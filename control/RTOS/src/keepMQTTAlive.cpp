@@ -3,7 +3,7 @@
 #include <WiFi.h>
 
 // semaphore declaration to prevent conflicts
-SemaphoreHandle_t sema_keepMQTTAlive;
+// SemaphoreHandle_t sema_keepMQTTAlive;
 
 // configs
 #define WIFI_NETWORK "myhotspot"
@@ -11,7 +11,7 @@ SemaphoreHandle_t sema_keepMQTTAlive;
 #define MQTT_USERNAME "BalanceBug"
 #define MQTT_PASSWORD "123"
 
-const char *MQTT_SERVER = "54.82.4.231";
+const char *MQTT_SERVER = "35.173.232.18";
 uint16_t MQTT_PORT = 1883;
 
 WiFiClient wifiClient;
@@ -81,9 +81,7 @@ void keepMQTTAlive(void *parameters)
     // check for a is-connected and if the WiFi 'thinks' its connected, found checking on both is more realible than just a single check
     if ((wifiClient.connected()) && (WiFi.status() == WL_CONNECTED))
     {
-      xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY); // while MQTTclient.loop() is running no other mqtt operations should be in process
       MQTTclient.loop();
-      xSemaphoreGive(sema_keepMQTTAlive);
     }
     else
     {

@@ -8,7 +8,7 @@ enum RoverState{
     ROVERWAIT
 };
 
-RoverState roverCurrState = DRIVE;
+RoverState roverCurrState = LOCALISE;
 
 bool end_localisation = false;
 bool end_drive = false;
@@ -22,7 +22,7 @@ void startRoverWait(){
 
 void startLocalise(){
     roverCurrState = LOCALISE;
-    setStartLocalisationTrue()
+    setStartLocalisationTrue();
 }
 
 void roverSetup(){

@@ -68,9 +68,9 @@ function subscribe() {
       // Hardcode the beacon x and y positions
       //        red       blue      yellow    rover rotate in clockwise direction
       const x = [
-        [70, 0],
-        [130, 70],
-        [130, 0],
+        [93, 54],
+        [93, 0],
+        [0, 54],
       ];
       // error here. Need to stringify before parsing
       const trilateration_result = JSON.parse(
@@ -83,6 +83,7 @@ function subscribe() {
         trilateration_result.parameterValues[1]
       );
       // send back to the esp32
+      console.log(result_coordinates_x, result_coordinates_y);
       update_rover_coords(result_coordinates_x, result_coordinates_y);
     }
   });
