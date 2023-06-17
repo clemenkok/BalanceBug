@@ -33,6 +33,8 @@
     "chai": "^4.3.7",
     "chai-http": "^4.4.0",
     "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "jest": "^26.4.2",
     "mocha": "^10.2.0",
     "qawolf": "1.7.0",
