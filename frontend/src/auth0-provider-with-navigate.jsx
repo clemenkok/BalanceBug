@@ -29,7 +29,7 @@ export const Auth0ProviderWithNavigate = ({ children }) => {
       useRefreshTokens={true}
       cacheLocation="localstorage"
     >
-      { children }
+      {children}
     </Auth0Provider>
   );
 };

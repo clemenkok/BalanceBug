@@ -22,10 +22,10 @@ export const HistoryPage = () => {
             Search
           </button>
         </div>
-        
-      <div className="flex flex-col items-center justify-center h-screen pt-16">
-        <Auth0Features/>
-      </div>
+
+        <div className="flex flex-col items-center justify-center h-screen pt-16">
+          <Auth0Features />
+        </div>
       </div>
     </div>
   );

@@ -31,22 +31,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route
-        path="/history"
-        element={< HistoryPage />}
-      />
-      <Route
-        path="/search"
-        element={< SearchPage />}
-      />
-      <Route
-        path="/gridmonitoring"
-        element={< GridMonitoringPage />}
-      />
-      <Route
-        path="/grid"
-        element={< GridPage />}
-      />
+      <Route path="/history" element={<HistoryPage />} />
+      <Route path="/search" element={<SearchPage />} />
+      <Route path="/gridmonitoring" element={<GridMonitoringPage />} />
+      <Route path="/grid" element={<GridPage />} />
       <Route path="/callback" element={<CallbackPage />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>

@@ -4,6 +4,7 @@ import axios from "axios";
 import "../index.css";
 import "../App.css";
 import { NavBar } from "../components/nav-bar";
+import { CoordinateForm } from "../components/coordinate-form";
 
 // TODO: When start key in initial coordinates
 
@@ -78,62 +79,58 @@ export class GridPage extends React.Component {
     return (
       <div>
         <NavBar />
-        <div className="flex flex-col items-center justify-center h-screen">
-          <div className="flex space-x-2 mb-5">
-            <button
-              onClick={this.start}
-              className="bg-dark-purple hover:bg-gray-800 text-white font-fira-code py-4 px-6 rounded-full transform transition-all duration-300 scale-100 hover:scale-110"
-            >
-              START
-            </button>
-            <button
-              onClick={this.stop}
-              className="bg-dark-purple hover:bg-gray-800 text-white font-fira-code py-4 px-6 rounded-full transform transition-all duration-300 scale-100 hover:scale-110"
-            >
-              STOP
-            </button>
+        <div className="min-h-screen flex">
+          <div className="w-1/3 p-8">
+            <CoordinateForm />
           </div>
-          <div className="text-center">
-            <input
-              type="range"
-              min="0"
-              max="100"
-              step="1"
-              className="w-full appearance-none bg-gray-300 h-3 outline-none focus:outline-none"
-            />
+          <div className="flex flex-col items-center justify-center h-screen">
             <div>
-              {this.state.matrix.map(function (row, rowIndex) {
-                //console.log(matrix)
-                return (
-                  <div key={rowIndex} className="flex">
-                    {row.map(function (side, colIndex) {
-                      //console.log(side)
-                      return (
-                        <div
-                          key={colIndex}
-                          style={{
-                            width: "10px",
-                            height: "10px",
-                            backgroundColor: side[0] ? "Red" : "Black",
-                            borderTop: side[1]
-                              ? "3px solid white"
-                              : "1px solid white",
-                            borderBottom: side[2]
-                              ? "3px solid white"
-                              : "1px solid white",
-                            borderLeft: side[3]
-                              ? "3px solid white"
-                              : "1px solid white",
-                            borderRight: side[4]
-                              ? "3px solid white"
-                              : "1px solid white",
-                          }}
-                        />
-                      );
-                    })}
-                  </div>
-                );
-              })}
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                className="w-full appearance-none bg-gray-300 h-3 outline-none focus:outline-none slider"
+              />
+              <div className="p-4">
+                {this.state.matrix.map(function (row, rowIndex) {
+                  return (
+                    <div key={rowIndex} className="flex">
+                      {row.map(function (side, colIndex) {
+                        return (
+                          <div
+                            key={colIndex}
+                            style={{
+                              width: "10px",
+                              height: "10px",
+                              backgroundColor: side[0] ? "Red" : "Black",
+                              borderTop: side[1]
+                                ? "3px solid white"
+                                : "1px solid white",
+                              borderBottom: side[2]
+                                ? "3px solid white"
+                                : "1px solid white",
+                              borderLeft: side[3]
+                                ? "3px solid white"
+                                : "1px solid white",
+                              borderRight: side[4]
+                                ? "3px solid white"
+                                : "1px solid white",
+                            }}
+                          />
+                        );
+                      })}
+                    </div>
+                  );
+                })}
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                step="1"
+                className="w-full appearance-none bg-gray-300 h-3 outline-none focus:outline-none"
+              />
             </div>
           </div>
         </div>
