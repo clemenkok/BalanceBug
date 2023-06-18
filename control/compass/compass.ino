@@ -104,68 +104,68 @@
 
 
 
-// // --------------------------------------
-// // i2c_scanner
-// //
-// // Modified from https://playground.arduino.cc/Main/I2cScanner/
-// // --------------------------------------
+// // // --------------------------------------
+// // // i2c_scanner
+// // //
+// // // Modified from https://playground.arduino.cc/Main/I2cScanner/
+// // // --------------------------------------
 
- #include <Wire.h>
+//  #include <Wire.h>
 
- // Set I2C bus to use: Wire, Wire1, etc.
- #define WIRE Wire
- void setup() {
-   WIRE.begin();
-   WIRE.setWireTimeout(1000000, true);
+//  // Set I2C bus to use: Wire, Wire1, etc.
+//  #define WIRE Wire
+//  void setup() {
+//    WIRE.begin();
+//    WIRE.setTimeout(1000000, true);
 
-   Serial.begin(115200);
-   while (!Serial)
-      delay(10);
-   Serial.println("\nI2C Scanner");
- }
+//    Serial.begin(115200);
+//    while (!Serial)
+//       delay(10);
+//    Serial.println("\nI2C Scanner");
+//  }
 
 
- void loop() {
-   byte error, address;
-   int nDevices;
+//  void loop() {
+//    byte error, address;
+//    int nDevices;
 
-   Serial.println("Scanning...");
+//    Serial.println("Scanning...");
 
-   nDevices = 0;
-   for(address = 1; address < 127; address++ ) 
-   {
-     // The i2c_scanner uses the return value of
-     // the Write.endTransmisstion to see if
-     // a device did acknowledge to the address.
-     Serial.println(address);
-     WIRE.beginTransmission(address);
-     error = WIRE.endTransmission();
+//    nDevices = 0;
+//    for(address = 1; address < 127; address++ ) 
+//    {
+//      // The i2c_scanner uses the return value of
+//      // the Write.endTransmisstion to see if
+//      // a device did acknowledge to the address.
+//      Serial.println(address);
+//      WIRE.beginTransmission(address);
+//      error = WIRE.endTransmission();
 
-     if (error == 0)
-     {
-       Serial.print("I2C device found at address 0x");
-       if (address<16) 
-         Serial.print("0");
-       Serial.print(address,HEX);
-       Serial.println("  !");
+//      if (error == 0)
+//      {
+//        Serial.print("I2C device found at address 0x");
+//        if (address<16) 
+//          Serial.print("0");
+//        Serial.print(address,HEX);
+//        Serial.println("  !");
 
-       nDevices++;
-     }
-     else if (error==4) 
-     {
-       Serial.print("Unknown error at address 0x");
-       if (address<16) 
-         Serial.print("0");
-       Serial.println(address,HEX);
-     }    
-   }
-   if (nDevices == 0)
-     Serial.println("No I2C devices found\n");
-   else
-     Serial.println("done\n");
+//        nDevices++;
+//      }
+//      else if (error==4) 
+//      {
+//        Serial.print("Unknown error at address 0x");
+//        if (address<16) 
+//          Serial.print("0");
+//        Serial.println(address,HEX);
+//      }    
+//    }
+//    if (nDevices == 0)
+//      Serial.println("No I2C devices found\n");
+//    else
+//      Serial.println("done\n");
 
-   delay(5000);           // wait 5 seconds for next scan
- }
+//    delay(5000);           // wait 5 seconds for next scan
+//  }
 
 
 
@@ -249,30 +249,30 @@
 
 
 
-//
-///*
-//* LAB: 17
-//* Name: ESP32 I2C Scanner
-//* Author: Khaled Magdy
-//* For More Info Visit: www.DeepBlueMbedded.com
-//*/
-// 
-//#include <Wire.h>
-// 
-//#define I2C_Freq 100000
-//#define SDA_0 21
-//#define SCL_0 22
-//
-//TwoWire I2C_0 = TwoWire(0);
-// 
-//void setup()
-//{
+
+// /*
+// * LAB: 17
+// * Name: ESP32 I2C Scanner
+// * Author: Khaled Magdy
+// * For More Info Visit: www.DeepBlueMbedded.com
+// */
+  
+// #include <Wire.h>
+
+// #define I2C_Freq 100000
+// #define SDA_0 21
+// #define SCL_0 22
+
+// TwoWire I2C_0 = TwoWire(0);
+
+// void setup()
+// {
 //  Serial.begin(115200);
 //  I2C_0.begin(SDA_0 , SCL_0 , I2C_Freq);
-//}
-// 
-//void loop()
-//{
+// }
+
+// void loop()
+// {
 //  byte error, address;
 //  int nDevices;
 //  Serial.println("Scanning...");
@@ -306,8 +306,7 @@
 //  else
 //    Serial.println("done\n");
 //  delay(5000);           // wait 5 seconds for next scan
-//}
-//
+// }
 
 
 
@@ -315,6 +314,167 @@
 
 
 
+
+
+
+
+
+// // my fucking new compass easy code
+
+// #include <Wire.h>
+// // QMC5883L Compass Library
+// #include <QMC5883LCompass.h>
+
+// QMC5883LCompass compass;
+
+// void setup() {
+//   // Initialize the serial port.
+//   Serial.begin(115200);
+//   // Initialize I2C.
+//   Wire.begin();
+//   // Initialize the Compass.
+//   compass.init();
+// }
+
+// void loop() {
+//   int x, y, z;
+
+//   // Read compass values
+//   compass.read();
+
+//   x = compass.getX();
+//   y = compass.getY();
+//   z = compass.getZ();
+
+//   Serial.print("X: ");
+//   Serial.print(x);
+//   Serial.print("   Y: ");
+//   Serial.print(y);
+//   Serial.print("   Z: ");
+//   Serial.println(z);
+
+//   delay(300);
+// }
+
+
+
+
+
+
+
+
+
+
+
+// // my fucking new compass harder code
+
+
+// #include <Arduino.h>
+// #include <Wire.h>
+// #include "HMC5883L_Simple.h"
+
+// // Create a compass
+// HMC5883L_Simple Compass;
+
+// void setup()
+// {
+//   Serial.begin(115200);
+//   Wire.begin();
+    
+//   // Magnetic Declination is the correction applied according to your present location
+//   // in order to get True North from Magnetic North, it varies from place to place.
+//   // 
+//   // The declination for your area can be obtained from http://www.magnetic-declination.com/
+//   // Take the "Magnetic Declination" line that it gives you in the information, 
+//   //
+//   // Examples:
+//   //   Christchurch, 23° 35' EAST
+//   //   Wellington  , 22° 14' EAST
+//   //   Dunedin     , 25° 8'  EAST
+//   //   Auckland    , 19° 30' EAST
+//   //    
+//   Compass.SetDeclination(0, 43, 'E');  
+  
+//   // The device can operate in SINGLE (default) or CONTINUOUS mode
+//   //   SINGLE simply means that it takes a reading when you request one
+//   //   CONTINUOUS means that it is always taking readings
+//   // for most purposes, SINGLE is what you want.
+//   Compass.SetSamplingMode(COMPASS_SINGLE);
+  
+//   // The scale can be adjusted to one of several levels, you can probably leave it at the default.
+//   // Essentially this controls how sensitive the device is.
+//   //   Options are 088, 130 (default), 190, 250, 400, 470, 560, 810
+//   // Specify the option as COMPASS_SCALE_xxx
+//   // Lower values are more sensitive, higher values are less sensitive.
+//   // The default is probably just fine, it works for me.  If it seems very noisy
+//   // (jumping around), incrase the scale to a higher one.
+//   Compass.SetScale(COMPASS_SCALE_130);
+  
+//   // The compass has 3 axes, but two of them must be close to parallel to the earth's surface to read it, 
+//   // (we do not compensate for tilt, that's a complicated thing) - just like a real compass has a floating 
+//   // needle you can imagine the digital compass does too.
+//   //
+//   // To allow you to mount the compass in different ways you can specify the orientation:
+//   //   COMPASS_HORIZONTAL_X_NORTH (default), the compass is oriented horizontally, top-side up. when pointing North the X silkscreen arrow will point North
+//   //   COMPASS_HORIZONTAL_Y_NORTH, top-side up, Y is the needle,when pointing North the Y silkscreen arrow will point North
+//   //   COMPASS_VERTICAL_X_EAST,    vertically mounted (tall) looking at the top side, when facing North the X silkscreen arrow will point East
+//   //   COMPASS_VERTICAL_Y_WEST,    vertically mounted (wide) looking at the top side, when facing North the Y silkscreen arrow will point West  
+//   Compass.SetOrientation(COMPASS_HORIZONTAL_X_NORTH);
+  
+// }
+
+// // Our main program loop.
+// void loop()
+// {
+//    float heading = Compass.GetHeadingDegrees();
+   
+//    Serial.print("Heading: \t");
+//    Serial.println( heading );   
+//    delay(500);
+// }
+
+
+
+
+
+
+
+
+
+
+//fuck 3
+#include <QMC5883L.h>
+#include <Wire.h>
+
+QMC5883L compass;
+
+#define DECLINATION 60
+
+void setup()
+{
+	Wire.begin();
+  Serial.begin(115200);
+  Serial.println("QMC5883L Compass Demo");
+	Serial.println("Turn compass in all directions to calibrate....");
+
+
+	compass.init();
+	compass.setSamplingRate(50);
+
+}
+
+void loop()
+{
+	int heading = compass.readHeading();
+	if(heading==0) {
+		/* Still calibrating, so measure but don't print */
+    Serial.println("calibrating this fuck");
+	} else {
+    int temp = heading + DECLINATION;
+    temp = temp>360? temp-360 : temp;
+		Serial.println(temp);
+	}
+}
 
 
 
