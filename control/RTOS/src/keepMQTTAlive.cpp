@@ -12,7 +12,7 @@
 #define MQTT_USERNAME "BalanceBug"
 #define MQTT_PASSWORD "123"
 
-const char *MQTT_SERVER = "54.234.145.73";
+const char *MQTT_SERVER = "3.92.255.40";
 uint16_t MQTT_PORT = 1883;
 
 WiFiClient wifiClient;
@@ -88,7 +88,7 @@ void keepMQTTAlive(void *parameters)
   MQTTclient.setKeepAlive(90); // setting keep alive to 90 seconds makes for a very reliable connection, must be set before the 1st connection is made.
   for (;;)
   {
-    printStackSpaceMQTT();
+    // printStackSpaceMQTT();
     // check for a is-connected and if the WiFi 'thinks' its connected, found checking on both is more realible than just a single check
     if ((wifiClient.connected()) && (WiFi.status() == WL_CONNECTED))
     {

@@ -42,7 +42,7 @@ void printStackSpaceRover() {
 void roverStateLoop(void *parameters)
 {
   for (;;){
-    printStackSpaceRover();
+    // printStackSpaceRover();
     switch (roverCurrState){
         case DRIVE:
             driveLoop();

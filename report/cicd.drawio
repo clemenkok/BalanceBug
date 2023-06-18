@@ -1,0 +1,82 @@
+<mxfile host="65bd71144e">
+    <diagram id="QF8F_s90aJ_QsUEK4Dxs" name="Page-1">
+        <mxGraphModel dx="1997" dy="916" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="-170" y="20" width="1410" height="680" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://foundations.projectpythia.org/_images/GitHub-logo.png;" vertex="1" parent="1">
+                    <mxGeometry x="160" y="336.75" width="129.56" height="73" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.invicti.com/statics/img/drive/h2jfrvzrbyh1yff2n3wfu2hkqqps6x_uvqo.png;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="340" width="130" height="66.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#000000;fontColor=#000000;" edge="1" parent="1" source="8" target="26">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="AWS Cloud" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.aws_cloud;labelBackgroundColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="700" y="343.25" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=classic;html=1;strokeColor=#000000;fontColor=#000000;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="6">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="380" as="sourcePoint"/>
+                        <mxPoint x="510" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="" style="endArrow=classic;html=1;strokeColor=#000000;fontColor=#000000;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="6" target="8">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="369.5600000000002" y="384.94301878420356" as="sourcePoint"/>
+                        <mxPoint x="440" y="383.25" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="Build and Test" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="379.75" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Deploys" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="595" y="379.75" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Developer" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.user;labelBackgroundColor=#FFFFFF;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="-30" y="348.25" width="47.5" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="endArrow=classic;html=1;strokeColor=#000000;fontColor=#000000;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="29.999999999999943" y="376.5" as="sourcePoint"/>
+                        <mxPoint x="170.44" y="376.4999999999999" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="Commit" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="70.44" y="383" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Build Test&lt;br&gt;Unit Test&lt;br&gt;Integration Test&lt;br&gt;Secrets Management" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="425" y="425" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Terraform (Infrastructure-as-Code)" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=none;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://boxboat.com/2020/02/04/writing-a-custom-terraform-provider/featured.png;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="900" y="150" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;strokeColor=#000000;fontColor=#000000;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="22" target="8">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="190" as="sourcePoint"/>
+                        <mxPoint x="540" y="190" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="820" y="195"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" value="Re-deploy upon Git Commit" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#FFFFFF;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://cdn.invicti.com/statics/img/drive/h2jfrvzrbyh1yff2n3wfu2hkqqps6x_uvqo.png;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="570" y="120" width="130" height="66.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="CloudWatch&lt;br&gt;Monitoring" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;labelBackgroundColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="910" y="343.25" width="58" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="Development" style="swimlane;labelBackgroundColor=#FFFFFF;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="-70" y="293.75" width="660" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Operations" style="swimlane;labelBackgroundColor=#FFFFFF;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="790" y="100" width="280" height="400" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
