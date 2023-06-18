@@ -1,9 +1,10 @@
 #include <Arduino.h>
 #include <PubSubClient.h>
 #include <WiFi.h>
+#include <esp_task_wdt.h>
 
 // semaphore declaration to prevent conflicts
-SemaphoreHandle_t sema_keepMQTTAlive;
+// SemaphoreHandle_t sema_keepMQTTAlive;
 
 // configs
 #define WIFI_NETWORK "myhotspot"
@@ -11,7 +12,7 @@ SemaphoreHandle_t sema_keepMQTTAlive;
 #define MQTT_USERNAME "BalanceBug"
 #define MQTT_PASSWORD "123"
 
-const char *MQTT_SERVER = "35.173.232.18";
+const char *MQTT_SERVER = "54.234.145.73";
 uint16_t MQTT_PORT = 1883;
 
 WiFiClient wifiClient;
@@ -60,9 +61,10 @@ void WiFiEvent(WiFiEvent_t event)
 void connectToWiFi()
 {
   Serial.println("connect to wifi");
+  WiFi.disconnect();
   while (WiFi.status() != WL_CONNECTED)
   {
-    WiFi.disconnect();
+    // WiFi.disconnect();
     WiFi.begin(WIFI_NETWORK, WIFI_PASSWORD);
     log_i(" waiting on wifi connection");
     vTaskDelay(4000 / portTICK_PERIOD_MS);
@@ -71,6 +73,14 @@ void connectToWiFi()
   WiFi.onEvent(WiFiEvent);
 }
 
+void printStackSpaceMQTT() {
+  UBaseType_t freeStack = uxTaskGetStackHighWaterMark(NULL) * sizeof(StackType_t);
+  Serial.print("Free Stack Space (keepMQTTAlive): ");
+  Serial.print(freeStack);
+  Serial.println(" bytes");
+}
+
+
 // task that connects to and keeps MQTT connection alive through intermittent checks
 void keepMQTTAlive(void *parameters)
 {
@@ -78,19 +88,20 @@ void keepMQTTAlive(void *parameters)
   MQTTclient.setKeepAlive(90); // setting keep alive to 90 seconds makes for a very reliable connection, must be set before the 1st connection is made.
   for (;;)
   {
+    printStackSpaceMQTT();
     // check for a is-connected and if the WiFi 'thinks' its connected, found checking on both is more realible than just a single check
     if ((wifiClient.connected()) && (WiFi.status() == WL_CONNECTED))
     {
+      // xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
       MQTTclient.loop();
+      // xSemaphoreGive(sema_keepMQTTAlive);
     }
     else
     {
       log_i("MQTT keep alive found MQTT status %s WiFi status %s", String(wifiClient.connected()), String(WiFi.status()));
       if (!(WiFi.status() == WL_CONNECTED))
       {
-        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY); // while MQTTclient.loop() is running no other mqtt operations should be in process
         connectToWiFi();
-        xSemaphoreGive(sema_keepMQTTAlive);
       }
       connectToMQTT();
     }

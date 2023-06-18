@@ -6,7 +6,6 @@
 
 extern WiFiClient wifiClient;
 extern PubSubClient MQTTclient;
-extern SemaphoreHandle_t sema_keepMQTTAlive;
 
 void uartToDistanceSetup();
 long getBoxHeightInPixels(unsigned char (&myBuffer)[12]);

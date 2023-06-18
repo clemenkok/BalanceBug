@@ -6,6 +6,6 @@ void roverStateLoop(void *parameters);
 void startDrive();
 void startRoverWait();
 void startLocalise();
-
+void printStackSpaceRover();
 
 #endif

@@ -1,6 +1,7 @@
 #include "roverStateControl.h"
 #include "uartToDistance.h"
 #include "drive.h"
+#include <esp_task_wdt.h>
 
 enum RoverState{
     DRIVE,
@@ -30,9 +31,18 @@ void roverSetup(){
     driveSetup();
 }
 
+// print out remaining stack space
+void printStackSpaceRover() {
+  UBaseType_t freeStack = uxTaskGetStackHighWaterMark(NULL) * sizeof(StackType_t);
+  Serial.print("Free Stack Space (roverStateControl): ");
+  Serial.print(freeStack);
+  Serial.println(" bytes");
+}
+
 void roverStateLoop(void *parameters)
 {
   for (;;){
+    printStackSpaceRover();
     switch (roverCurrState){
         case DRIVE:
             driveLoop();

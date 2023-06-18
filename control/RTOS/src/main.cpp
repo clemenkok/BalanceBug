@@ -2,6 +2,7 @@
 #include "keepMQTTAlive.h"
 #include "uartToDistance.h"
 #include "roverStateControl.h"
+#include "drive.h"
 
 extern SemaphoreHandle_t sema_keepMQTTAlive;
 
@@ -45,6 +46,8 @@ void callback(char *topic, byte *payload, unsigned int length)
         current_y = y_coord.toDouble();
         Serial.println(current_x);
         Serial.println(current_y);
+        // have to add a function
+        updateLocalisation(current_x, current_y);
     }
 
 
@@ -53,14 +56,14 @@ void callback(char *topic, byte *payload, unsigned int length)
 void setup()
 {
 
-    // Setup function for UART to Distance
-    uartToDistanceSetup();
+    // Setup function for Rover Control Task
+    roverSetup();
 
     Serial.begin(115200);
 
     // Keep Alive can mess with MQTT Publish, requiring us to use a semaphore.
-    sema_keepMQTTAlive = xSemaphoreCreateBinary();
-    xSemaphoreGive(sema_keepMQTTAlive);
+    // sema_keepMQTTAlive = xSemaphoreCreateBinary();
+    // xSemaphoreGive(sema_keepMQTTAlive);
 
     MQTTclient.setCallback(callback);
 

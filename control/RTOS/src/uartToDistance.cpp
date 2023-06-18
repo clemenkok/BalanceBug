@@ -149,9 +149,7 @@ void uartToDistanceLoop()
         currentState = LOOKING_FOR_1ST_BALL;
         // Turn on light for the first ball
 
-        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY); // take semaphore from keepMQTTAlive to prevent conflicts
         MQTTclient.publish("red_beacon", "ON");
-        xSemaphoreGive(sema_keepMQTTAlive); // return Semaphore to keepMQTTAlive
         start_localisation = false;
       }
       break;
@@ -165,10 +163,8 @@ void uartToDistanceLoop()
         // Transition to the next state based on some condition or event
         currentState = LOOKING_FOR_2ND_BALL;
         // Turn on light for the second ball
-        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
         MQTTclient.publish("red_beacon", "OFF");
         MQTTclient.publish("blue_beacon", "ON");
-        xSemaphoreGive(sema_keepMQTTAlive);
       }
       break;
 
@@ -181,10 +177,8 @@ void uartToDistanceLoop()
         // Transition to the next state based on some condition or event
         currentState = LOOKING_FOR_3RD_BALL;
         // Turn on light for the third ball
-        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
         MQTTclient.publish("blue_beacon", "OFF");
         MQTTclient.publish("yellow_beacon", "ON");
-        xSemaphoreGive(sema_keepMQTTAlive);
       }
       break;
 
@@ -196,9 +190,7 @@ void uartToDistanceLoop()
         distance = 0;
         // Transition to the next state based on some condition or event
         currentState = SEND_DISTANCES;
-        xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
         MQTTclient.publish("yellow_beacon", "OFF");
-        xSemaphoreGive(sema_keepMQTTAlive);
 
         // once found looking for third ball, stop spinning
         stopSpinClockwise();
@@ -235,9 +227,7 @@ void uartToDistanceLoop()
       std::strcat(distance_payload, current_y_str);
 
       // perform calculation
-      xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
       MQTTclient.publish("localise", distance_payload);
-      xSemaphoreGive(sema_keepMQTTAlive);
       // make the rover wait
       startRoverWait();
       break;
