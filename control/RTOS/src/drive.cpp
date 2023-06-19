@@ -11,16 +11,16 @@ const double PIVAL = 3.1415927;
 
 // esp32 pins
 const int ledPinL = 27; // 2 pins for 2 LEDs
-const int ledPinR = 33;
-const int ldrLPin = 26; // pin for left front LED
+const int ledPinR = 26;
+const int ldrLPin = 33; // pin for left front LED
 const int ldrRPin = 35; // pin for right front LED
 const int ldrFPin = 32; // pin for front LED
 
 // Define stepper motor connections
-const int stepPinR = 16;
-const int dirPinR = 4;
-const int stepPinL = 15;
-const int dirPinL = 2;
+const int stepPinR = 16; // 9 ON ESP BOARD
+const int dirPinR = 4; // 11
+const int stepPinL = 15; // 12
+const int dirPinL = 2; // 13 
 
 // Define the constants for PID control
 double Kp = 1.5;   // Proportional gain
@@ -470,7 +470,9 @@ void driftCorrection(){
         std::strcat(deadreckoning_payload, ",");
         std::strcat(deadreckoning_payload, right_wall_str);
         
+        xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("deadreckoning_data",  deadreckoning_payload );
+        xSemaphoreGive(mutex_v);
     }
     // after all the dead reckoning data has been drift corrected and published
     // start driving again
@@ -502,7 +504,7 @@ void collectData(){
 
 void spinClockwise(){
     stepperL.setSpeed(50);
-    stepperR.setSpeed(-50);
+    stepperR.setSpeed(50);
     stepperL.runSpeed();
     stepperR.runSpeed();
 }

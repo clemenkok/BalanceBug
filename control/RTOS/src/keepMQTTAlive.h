@@ -17,5 +17,6 @@ void connectToWiFi();
 // task that checks for MQTT connection status intermittently
 void keepMQTTAlive(void *parameters);
 void printStackSpaceMQTT();
+void wifiSetup();
 
 #endif

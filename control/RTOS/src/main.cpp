@@ -4,15 +4,13 @@
 #include "roverStateControl.h"
 #include "drive.h"
 
-extern SemaphoreHandle_t sema_keepMQTTAlive;
-
 // for MQTT Subscribe
 unsigned long lastMsg = 0;
 #define MSG_BUFFER_SIZE (50)
 char msg[MSG_BUFFER_SIZE];
 int value = 0;
 
-// extern SemaphoreHandle_t sema_keepMQTTAlive;
+extern SemaphoreHandle_t mutex_v;
 extern double current_x, current_y;
 
 // Print messages from subscribed topics
@@ -27,14 +25,14 @@ void callback(char *topic, byte *payload, unsigned int length)
         receivedPayload += (char)payload[i];
     }
 
-    /*
+    
     // Check if the received payload matches a specific condition
     if (receivedPayload == "1")
     {
         // Call the corresponding function or execute the desired code
         Serial.println("Execute Function");
     }
-    */
+    
    
     // if first letter of the payload is an A, then we know it is the coord update
     if (receivedPayload[0] == 'A'){
@@ -58,16 +56,16 @@ void setup()
 
     // Setup function for Rover Control Task
     roverSetup();
-
+    
     Serial.begin(115200);
 
     // Keep Alive can mess with MQTT Publish, requiring us to use a semaphore.
-    // sema_keepMQTTAlive = xSemaphoreCreateBinary();
-    // xSemaphoreGive(sema_keepMQTTAlive);
+    mutex_v = xSemaphoreCreateMutex();
+    // xSemaphoreGive(mutex_v); - This makes...no sense.
 
     MQTTclient.setCallback(callback);
 
-    // task to connect to, and periodically check on MQTT/Wi-Fi
+     // task to connect to, and periodically check on MQTT/Wi-Fi
     xTaskCreatePinnedToCore(        // This pins the task to a fixed core
         keepMQTTAlive,              // Function to be called
         "Keep MQTT Alive",          // Name of task * for debugging *
@@ -86,7 +84,7 @@ void setup()
         NULL,
         5,
         NULL,
-        CONFIG_ARDUINO_RUNNING_CORE);
+        CONFIG_ARDUINO_RUNNING_CORE);  
 }
 
 void loop()
