@@ -33,7 +33,7 @@ double PIDoutput = 0.0; // Control output
 double setpoint = 80.0; // Desired position
 
 // calibration variables
-bool newCalibrate = false;
+bool newCalibrate = true;
 int LMax, LMin, RMax, RMin, FMax, FMin;
 int ldrLVal, ldrRVal, ldrFVal;
 int oldLMax = 2352;
@@ -202,6 +202,7 @@ void driveLoop()
         if (driftCorrectSendIndex == ARRAY_SIZE-1){
             driftCorrectSendIndex = 0;
             driftCorrect = false;
+            startDrive();
         } else{
             driftCorrectSendIndex += 1;
         }

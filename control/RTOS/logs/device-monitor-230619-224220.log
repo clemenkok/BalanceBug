@@ -1,0 +1,5300 @@
+22:42:22.184 > ets Jun  8 2016 00:22:57
+22:42:22.184 > 
+22:42:22.184 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+22:42:22.184 > configsip: 0, SPIWP:0xee
+22:42:22.184 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+22:42:22.184 > mode:DIO, clock div:2
+22:42:22.184 > load:0x3fff0030,len:1184
+22:42:22.184 > load:0x40078000,len:13192
+22:42:22.184 > load:0x40080400,len:3028
+22:42:22.184 > entry 0x400805e4
+22:42:43.821 > connect to wifi
+22:42:43.968 > wifi connecting
+22:42:44.131 > Curr Drive State
+22:42:44.131 > 3
+22:42:44.131 > Transmit Data To Cloud
+22:42:44.131 > 1
+22:42:44.131 > 90, -90, 0.14, -0.00, 337.54, 1, 0
+22:42:44.138 > Data Index
+22:42:44.138 > 1
+22:42:44.432 > Curr Drive State
+22:42:44.432 > 3
+22:42:44.432 > Transmit Data To Cloud
+22:42:44.432 > 1
+22:42:44.432 > 90, -90, 0.14, -0.00, 313.81, 1, 0
+22:42:44.438 > Data Index
+22:42:44.438 > 2
+22:42:44.732 > Curr Drive State
+22:42:44.733 > 3
+22:42:44.733 > Transmit Data To Cloud
+22:42:44.733 > 1
+22:42:44.733 > 90, -90, 0.14, -0.00, 290.16, 1, 0
+22:42:44.738 > Data Index
+22:42:44.738 > 3
+22:42:45.032 > Curr Drive State
+22:42:45.033 > 3
+22:42:45.033 > Transmit Data To Cloud
+22:42:45.033 > 1
+22:42:45.033 > 90, -90, 0.14, -0.00, 266.52, 1, 0
+22:42:45.037 > Data Index
+22:42:45.037 > 4
+22:42:45.332 > Curr Drive State
+22:42:45.332 > 3
+22:42:45.332 > Transmit Data To Cloud
+22:42:45.332 > 1
+22:42:45.332 > 90, -90, 0.14, -0.00, 242.87, 1, 0
+22:42:45.336 > Data Index
+22:42:45.336 > 5
+22:42:45.633 > Curr Drive State
+22:42:45.637 > 3
+22:42:45.637 > Transmit Data To Cloud
+22:42:45.637 > 1
+22:42:45.637 > 90, -90, 0.14, -0.00, 219.22, 1, 0
+22:42:45.637 > Data Index
+22:42:45.637 > 6
+22:42:45.932 > Curr Drive State
+22:42:45.932 > 3
+22:42:45.932 > Transmit Data To Cloud
+22:42:45.932 > 1
+22:42:45.932 > 90, -90, 0.14, -0.00, 195.58, 1, 0
+22:42:45.937 > Data Index
+22:42:45.937 > 7
+22:42:46.232 > Curr Drive State
+22:42:46.233 > 3
+22:42:46.233 > Transmit Data To Cloud
+22:42:46.233 > 1
+22:42:46.233 > 90, -90, 0.14, -0.00, 171.93, 1, 0
+22:42:46.238 > Data Index
+22:42:46.238 > 8
+22:42:46.532 > Curr Drive State
+22:42:46.532 > 3
+22:42:46.532 > Transmit Data To Cloud
+22:42:46.532 > 1
+22:42:46.532 > 90, -90, 0.14, -0.00, 148.28, 1, 0
+22:42:46.537 > Data Index
+22:42:46.537 > 9
+22:42:46.832 > Curr Drive State
+22:42:46.833 > 3
+22:42:46.833 > Transmit Data To Cloud
+22:42:46.833 > 1
+22:42:46.833 > 90, -90, 0.14, -0.00, 124.64, 1, 0
+22:42:46.837 > Data Index
+22:42:46.837 > 10
+22:42:47.130 > Curr Drive State
+22:42:47.130 > 3
+22:42:47.130 > Transmit Data To Cloud
+22:42:47.130 > 1
+22:42:47.130 > 90, -90, 0.14, -0.00, 101.15, 1, 0
+22:42:47.135 > Data Index
+22:42:47.135 > 11
+22:42:47.430 > Curr Drive State
+22:42:47.430 > 3
+22:42:47.430 > Transmit Data To Cloud
+22:42:47.430 > 1
+22:42:47.430 > 90, -90, 0.14, -0.00, 77.50, 1, 0
+22:42:47.436 > Data Index
+22:42:47.436 > 12
+22:42:47.730 > Curr Drive State
+22:42:47.730 > 3
+22:42:47.730 > Transmit Data To Cloud
+22:42:47.730 > 1
+22:42:47.730 > 90, -90, 0.14, -0.00, 53.85, 1, 0
+22:42:47.735 > Data Index
+22:42:47.735 > 13
+22:42:47.969 > Connected to WiFi
+22:42:47.970 > I was disconnected
+22:42:48.028 > Curr Drive State
+22:42:48.028 > 3
+22:42:48.028 > Transmit Data To Cloud
+22:42:48.028 > 1
+22:42:48.028 > 90, -90, 0.14, -0.00, 30.36, 1, 0
+22:42:48.033 > Data Index
+22:42:48.033 > 14
+22:42:48.326 > Curr Drive State
+22:42:48.326 > 3
+22:42:48.326 > Transmit Data To Cloud
+22:42:48.326 > 1
+22:42:48.326 > 90, -90, 0.14, -0.00, 6.95, 1, 0
+22:42:48.330 > Data Index
+22:42:48.330 > 15
+22:42:48.414 > connecting to MQTT
+22:42:48.625 > Curr Drive State
+22:42:48.626 > 3
+22:42:48.626 > Transmit Data To Cloud
+22:42:48.626 > 1
+22:42:48.626 > 90, -90, 0.14, -0.00, 343.31, 1, 0
+22:42:48.631 > Data Index
+22:42:48.631 > 16
+22:42:48.671 > MQTT Connected
+22:42:48.924 > Curr Drive State
+22:42:48.925 > 3
+22:42:48.925 > Transmit Data To Cloud
+22:42:48.925 > 1
+22:42:48.925 > 90, -90, 0.14, -0.00, 319.74, 1, 0
+22:42:48.929 > Data Index
+22:42:48.929 > 17
+22:42:49.225 > Curr Drive State
+22:42:49.225 > 3
+22:42:49.225 > Transmit Data To Cloud
+22:42:49.225 > 1
+22:42:49.225 > 90, -90, 0.14, -0.00, 296.09, 1, 0
+22:42:49.229 > Data Index
+22:42:49.229 > 18
+22:42:49.523 > Curr Drive State
+22:42:49.523 > 3
+22:42:49.523 > Transmit Data To Cloud
+22:42:49.523 > 1
+22:42:49.523 > 90, -90, 0.14, -0.00, 272.52, 1, 0
+22:42:49.528 > Data Index
+22:42:49.528 > 19
+22:42:49.824 > Curr Drive State
+22:42:49.824 > 3
+22:42:49.824 > Transmit Data To Cloud
+22:42:49.824 > 1
+22:42:49.824 > 90, -90, 0.14, -0.00, 248.88, 1, 0
+22:42:49.829 > Data Index
+22:42:49.829 > 20
+22:42:50.124 > Curr Drive State
+22:42:50.124 > 3
+22:42:50.124 > Transmit Data To Cloud
+22:42:50.124 > 1
+22:42:50.124 > 90, -90, 0.14, -0.00, 225.23, 1, 0
+22:42:50.128 > Data Index
+22:42:50.128 > 21
+22:42:50.423 > Curr Drive State
+22:42:50.424 > 3
+22:42:50.424 > Transmit Data To Cloud
+22:42:50.424 > 1
+22:42:50.424 > 90, -90, 0.14, -0.00, 201.58, 1, 0
+22:42:50.429 > Data Index
+22:42:50.429 > 22
+22:42:50.723 > Curr Drive State
+22:42:50.723 > 3
+22:42:50.723 > Transmit Data To Cloud
+22:42:50.723 > 1
+22:42:50.723 > 90, -90, 0.14, -0.00, 177.94, 1, 0
+22:42:50.728 > Data Index
+22:42:50.728 > 23
+22:42:51.023 > Curr Drive State
+22:42:51.023 > 3
+22:42:51.023 > Transmit Data To Cloud
+22:42:51.023 > 1
+22:42:51.023 > 90, -90, 0.14, -0.00, 154.29, 1, 0
+22:42:51.028 > Data Index
+22:42:51.028 > 24
+22:42:51.323 > Curr Drive State
+22:42:51.323 > 3
+22:42:51.323 > Transmit Data To Cloud
+22:42:51.323 > 1
+22:42:51.323 > 90, -90, 0.14, -0.00, 130.64, 1, 0
+22:42:51.328 > Data Index
+22:42:51.328 > 25
+22:42:51.623 > Curr Drive State
+22:42:51.623 > 3
+22:42:51.623 > Transmit Data To Cloud
+22:42:51.623 > 1
+22:42:51.623 > 90, -90, 0.14, -0.00, 107.00, 1, 0
+22:42:51.628 > Data Index
+22:42:51.628 > 26
+22:42:51.923 > Curr Drive State
+22:42:51.923 > 3
+22:42:51.923 > Transmit Data To Cloud
+22:42:51.923 > 1
+22:42:51.923 > 90, -90, 0.14, -0.00, 83.35, 1, 0
+22:42:51.928 > Data Index
+22:42:51.928 > 27
+22:42:52.221 > Curr Drive State
+22:42:52.222 > 3
+22:42:52.222 > Transmit Data To Cloud
+22:42:52.222 > 1
+22:42:52.222 > 90, -90, 0.14, -0.00, 59.86, 1, 0
+22:42:52.226 > Data Index
+22:42:52.226 > 28
+22:42:52.522 > Curr Drive State
+22:42:52.522 > 3
+22:42:52.522 > Transmit Data To Cloud
+22:42:52.522 > 1
+22:42:52.522 > 90, -90, 0.14, -0.00, 36.21, 1, 0
+22:42:52.527 > Data Index
+22:42:52.527 > 29
+22:42:52.821 > Curr Drive State
+22:42:52.821 > 3
+22:42:52.821 > Transmit Data To Cloud
+22:42:52.821 > 1
+22:42:52.821 > 90, -90, 0.14, -0.00, 12.57, 1, 0
+22:42:52.826 > Data Index
+22:42:52.826 > 30
+22:42:53.120 > Curr Drive State
+22:42:53.121 > 3
+22:42:53.121 > Transmit Data To Cloud
+22:42:53.121 > 1
+22:42:53.121 > 90, -90, 0.14, -0.00, 348.92, 1, 0
+22:42:53.126 > Finished collecting 30 pos points
+22:42:53.126 > Before Serial Flush
+22:42:53.131 > After Serial Flush
+22:42:53.135 > Inside Uart to Dist Loop
+22:42:53.140 > Inside Uart to Dist Loop
+22:42:53.145 > Inside Uart to Dist Loop
+22:42:53.150 > Inside Uart to Dist Loop
+22:42:53.156 > Inside Uart to Dist Loop
+22:42:53.160 > Inside Uart to Dist Loop
+22:42:53.165 > Inside Uart to Dist Loop
+22:42:53.170 > Inside Uart to Dist Loop
+22:42:53.176 > Inside Uart to Dist Loop
+22:42:53.181 > Inside Uart to Dist Loop
+22:42:53.186 > Inside Uart to Dist Loop
+22:42:53.191 > Inside Uart to Dist Loop
+22:42:53.196 > Inside Uart to Dist Loop
+22:42:53.201 > Inside Uart to Dist Loop
+22:42:53.206 > Inside Uart to Dist Loop
+22:42:53.211 > Inside Uart to Dist Loop
+22:42:53.216 > Inside Uart to Dist Loop
+22:42:53.221 > Inside Uart to Dist Loop
+22:42:53.226 > Inside Uart to Dist Loop
+22:42:53.231 > Inside Uart to Dist Loop
+22:42:53.237 > Inside Uart to Dist Loop
+22:42:53.241 > Inside Uart to Dist Loop
+22:42:53.245 > Inside Uart to Dist Loop
+22:42:53.251 > Inside Uart to Dist Loop
+22:42:53.256 > Inside Uart to Dist Loop
+22:42:53.261 > Inside Uart to Dist Loop
+22:42:53.266 > Inside Uart to Dist Loop
+22:42:53.272 > Inside Uart to Dist Loop
+22:42:53.276 > Inside Uart to Dist Loop
+22:42:53.281 > Inside Uart to Dist Loop
+22:42:53.286 > Inside Uart to Dist Loop
+22:42:53.291 > Inside Uart to Dist Loop
+22:42:53.296 > Inside Uart to Dist Loop
+22:42:53.301 > Inside Uart to Dist Loop
+22:42:53.306 > Inside Uart to Dist Loop
+22:42:53.311 > Inside Uart to Dist Loop
+22:42:53.316 > Inside Uart to Dist Loop
+22:42:53.321 > Inside Uart to Dist Loop
+22:42:53.326 > Inside Uart to Dist Loop
+22:42:53.331 > Inside Uart to Dist Loop
+22:42:53.336 > Inside Uart to Dist Loop
+22:42:53.341 > Inside Uart to Dist Loop
+22:42:53.346 > Inside Uart to Dist Loop
+22:42:53.351 > Inside Uart to Dist Loop
+22:42:53.356 > Inside Uart to Dist Loop
+22:42:53.361 > Inside Uart to Dist Loop
+22:42:53.366 > Inside Uart to Dist Loop
+22:42:53.371 > Inside Uart to Dist Loop
+22:42:53.377 > Inside Uart to Dist Loop
+22:42:53.381 > Inside Uart to Dist Loop
+22:42:53.387 > Inside Uart to Dist Loop
+22:42:53.392 > Inside Uart to Dist Loop
+22:42:53.396 > Inside Uart to Dist Loop
+22:42:53.402 > Inside Uart to Dist Loop
+22:42:53.407 > Inside Uart to Dist Loop
+22:42:53.411 > Inside Uart to Dist Loop
+22:42:53.416 > Inside Uart to Dist Loop
+22:42:53.422 > Inside Uart to Dist Loop
+22:42:53.427 > Inside Uart to Dist Loop
+22:42:53.432 > Inside Uart to Dist Loop
+22:42:53.437 > Inside Uart to Dist Loop
+22:42:53.442 > Inside Uart to Dist Loop
+22:42:53.447 > Inside Uart to Dist Loop
+22:42:53.451 > Inside Uart to Dist Loop
+22:42:53.456 > Inside Uart to Dist Loop
+22:42:53.461 > Inside Uart to Dist Loop
+22:42:53.466 > Inside Uart to Dist Loop
+22:42:53.471 > Inside Uart to Dist Loop
+22:42:53.476 > Inside Uart to Dist Loop
+22:42:53.481 > Inside Uart to Dist Loop
+22:42:53.486 > Inside Uart to Dist Loop
+22:42:53.492 > Inside Uart to Dist Loop
+22:42:53.496 > Inside Uart to Dist Loop
+22:42:53.501 > Inside Uart to Dist Loop
+22:42:53.506 > Inside Uart to Dist Loop
+22:42:53.511 > Inside Uart to Dist Loop
+22:42:53.516 > Inside Uart to Dist Loop
+22:42:53.521 > Inside Uart to Dist Loop
+22:42:53.526 > Inside Uart to Dist Loop
+22:42:53.531 > Inside Uart to Dist Loop
+22:42:53.536 > Inside Uart to Dist Loop
+22:42:53.541 > Inside Uart to Dist Loop
+22:42:53.546 > Inside Uart to Dist Loop
+22:42:53.552 > Inside Uart to Dist Loop
+22:42:53.556 > Inside Uart to Dist Loop
+22:42:53.561 > Inside Uart to Dist Loop
+22:42:53.566 > Inside Uart to Dist Loop
+22:42:53.571 > Inside Uart to Dist Loop
+22:42:53.577 > Inside Uart to Dist Loop
+22:42:53.582 > Inside Uart to Dist Loop
+22:42:53.587 > Inside Uart to Dist Loop
+22:42:53.592 > Inside Uart to Dist Loop
+22:42:53.597 > Inside Uart to Dist Loop
+22:42:53.601 > Inside Uart to Dist Loop
+22:42:53.606 > Inside Uart to Dist Loop
+22:42:53.611 > Inside Uart to Dist Loop
+22:42:53.616 > Inside Uart to Dist Loop
+22:42:53.622 > Inside Uart to Dist Loop
+22:42:53.626 > Inside Uart to Dist Loop
+22:42:53.631 > Inside Uart to Dist Loop
+22:42:53.636 > Inside Uart to Dist Loop
+22:42:53.642 > Inside Uart to Dist Loop
+22:42:53.646 > Inside Uart to Dist Loop
+22:42:53.652 > Inside Uart to Dist Loop
+22:42:53.656 > Inside Uart to Dist Loop
+22:42:53.661 > Inside Uart to Dist Loop
+22:42:53.666 > Inside Uart to Dist Loop
+22:42:53.672 > Inside Uart to Dist Loop
+22:42:53.676 > Inside Uart to Dist Loop
+22:42:53.681 > Inside Uart to Dist Loop
+22:42:53.686 > Inside Uart to Dist Loop
+22:42:53.691 > Inside Uart to Dist Loop
+22:42:53.696 > Inside Uart to Dist Loop
+22:42:53.702 > Inside Uart to Dist Loop
+22:42:53.706 > Inside Uart to Dist Loop
+22:42:53.711 > Inside Uart to Dist Loop
+22:42:53.716 > Inside Uart to Dist Loop
+22:42:53.721 > Inside Uart to Dist Loop
+22:42:53.726 > Inside Uart to Dist Loop
+22:42:53.731 > Inside Uart to Dist Loop
+22:42:53.737 > Inside Uart to Dist Loop
+22:42:53.742 > Inside Uart to Dist Loop
+22:42:53.747 > Inside Uart to Dist Loop
+22:42:53.751 > Inside Uart to Dist Loop
+22:42:53.756 > Inside Uart to Dist Loop
+22:42:53.761 > Inside Uart to Dist Loop
+22:42:53.766 > Inside Uart to Dist Loop
+22:42:53.772 > Inside Uart to Dist Loop
+22:42:53.776 > Inside Uart to Dist Loop
+22:42:53.781 > Inside Uart to Dist Loop
+22:42:53.786 > Inside Uart to Dist Loop
+22:42:53.792 > Inside Uart to Dist Loop
+22:42:53.796 > Inside Uart to Dist Loop
+22:42:53.801 > Inside Uart to Dist Loop
+22:42:53.806 > Inside Uart to Dist Loop
+22:42:53.811 > Inside Uart to Dist Loop
+22:42:53.816 > Inside Uart to Dist Loop
+22:42:53.822 > Inside Uart to Dist Loop
+22:42:53.826 > Inside Uart to Dist Loop
+22:42:53.831 > Inside Uart to Dist Loop
+22:42:53.836 > Inside Uart to Dist Loop
+22:42:53.841 > Inside Uart to Dist Loop
+22:42:53.846 > Inside Uart to Dist Loop
+22:42:53.851 > Inside Uart to Dist Loop
+22:42:53.856 > Inside Uart to Dist Loop
+22:42:53.861 > Inside Uart to Dist Loop
+22:42:53.866 > Inside Uart to Dist Loop
+22:42:53.872 > Inside Uart to Dist Loop
+22:42:53.876 > Inside Uart to Dist Loop
+22:42:53.881 > Inside Uart to Dist Loop
+22:42:53.886 > Inside Uart to Dist Loop
+22:42:53.892 > Inside Uart to Dist Loop
+22:42:53.896 > Inside Uart to Dist Loop
+22:42:53.902 > Inside Uart to Dist Loop
+22:42:53.907 > Inside Uart to Dist Loop
+22:42:53.911 > Inside Uart to Dist Loop
+22:42:53.916 > Inside Uart to Dist Loop
+22:42:53.921 > Inside Uart to Dist Loop
+22:42:53.926 > Inside Uart to Dist Loop
+22:42:53.931 > Inside Uart to Dist Loop
+22:42:53.937 > Inside Uart to Dist Loop
+22:42:53.941 > Inside Uart to Dist Loop
+22:42:53.946 > Inside Uart to Dist Loop
+22:42:53.951 > Inside Uart to Dist Loop
+22:42:53.957 > Inside Uart to Dist Loop
+22:42:53.961 > Inside Uart to Dist Loop
+22:42:53.966 > Inside Uart to Dist Loop
+22:42:53.971 > Inside Uart to Dist Loop
+22:42:53.977 > Inside Uart to Dist Loop
+22:42:53.981 > Inside Uart to Dist Loop
+22:42:53.987 > Inside Uart to Dist Loop
+22:42:53.992 > Inside Uart to Dist Loop
+22:42:53.996 > Inside Uart to Dist Loop
+22:42:54.001 > Inside Uart to Dist Loop
+22:42:54.006 > Inside Uart to Dist Loop
+22:42:54.011 > Inside Uart to Dist Loop
+22:42:54.016 > Inside Uart to Dist Loop
+22:42:54.022 > Inside Uart to Dist Loop
+22:42:54.027 > Inside Uart to Dist Loop
+22:42:54.031 > Inside Uart to Dist Loop
+22:42:54.037 > Inside Uart to Dist Loop
+22:42:54.042 > Inside Uart to Dist Loop
+22:42:54.047 > Inside Uart to Dist Loop
+22:42:54.052 > Inside Uart to Dist Loop
+22:42:54.057 > Inside Uart to Dist Loop
+22:42:54.061 > Inside Uart to Dist Loop
+22:42:54.066 > Inside Uart to Dist Loop
+22:42:54.072 > Inside Uart to Dist Loop
+22:42:54.077 > Inside Uart to Dist Loop
+22:42:54.081 > Inside Uart to Dist Loop
+22:42:54.087 > Inside Uart to Dist Loop
+22:42:54.091 > Inside Uart to Dist Loop
+22:42:54.096 > Inside Uart to Dist Loop
+22:42:54.101 > Inside Uart to Dist Loop
+22:42:54.106 > Inside Uart to Dist Loop
+22:42:54.111 > Inside Uart to Dist Loop
+22:42:54.116 > Inside Uart to Dist Loop
+22:42:54.122 > Inside Uart to Dist Loop
+22:42:54.126 > Inside Uart to Dist Loop
+22:42:54.131 > Inside Uart to Dist Loop
+22:42:54.137 > Inside Uart to Dist Loop
+22:42:54.142 > Inside Uart to Dist Loop
+22:42:54.146 > Inside Uart to Dist Loop
+22:42:54.151 > Inside Uart to Dist Loop
+22:42:54.156 > Inside Uart to Dist Loop
+22:42:54.161 > Inside Uart to Dist Loop
+22:42:54.166 > Inside Uart to Dist Loop
+22:42:54.171 > Inside Uart to Dist Loop
+22:42:54.176 > Inside Uart to Dist Loop
+22:42:54.181 > Inside Uart to Dist Loop
+22:42:54.186 > Inside Uart to Dist Loop
+22:42:54.191 > Inside Uart to Dist Loop
+22:42:54.196 > Inside Uart to Dist Loop
+22:42:54.201 > Inside Uart to Dist Loop
+22:42:54.206 > Inside Uart to Dist Loop
+22:42:54.211 > Inside Uart to Dist Loop
+22:42:54.216 > Inside Uart to Dist Loop
+22:42:54.221 > Inside Uart to Dist Loop
+22:42:54.226 > Inside Uart to Dist Loop
+22:42:54.231 > Inside Uart to Dist Loop
+22:42:54.236 > Inside Uart to Dist Loop
+22:42:54.241 > Inside Uart to Dist Loop
+22:42:54.246 > Inside Uart to Dist Loop
+22:42:54.251 > Inside Uart to Dist Loop
+22:42:54.256 > Inside Uart to Dist Loop
+22:42:54.261 > Inside Uart to Dist Loop
+22:42:54.266 > Inside Uart to Dist Loop
+22:42:54.271 > Inside Uart to Dist Loop
+22:42:54.276 > Inside Uart to Dist Loop
+22:42:54.281 > Inside Uart to Dist Loop
+22:42:54.286 > Inside Uart to Dist Loop
+22:42:54.291 > Inside Uart to Dist Loop
+22:42:54.296 > Inside Uart to Dist Loop
+22:42:54.301 > Inside Uart to Dist Loop
+22:42:54.306 > Inside Uart to Dist Loop
+22:42:54.311 > Inside Uart to Dist Loop
+22:42:54.316 > Inside Uart to Dist Loop
+22:42:54.322 > Inside Uart to Dist Loop
+22:42:54.326 > Inside Uart to Dist Loop
+22:42:54.331 > Inside Uart to Dist Loop
+22:42:54.336 > Inside Uart to Dist Loop
+22:42:54.342 > Inside Uart to Dist Loop
+22:42:54.346 > Inside Uart to Dist Loop
+22:42:54.351 > Inside Uart to Dist Loop
+22:42:54.356 > Inside Uart to Dist Loop
+22:42:54.361 > Inside Uart to Dist Loop
+22:42:54.367 > Inside Uart to Dist Loop
+22:42:54.371 > Inside Uart to Dist Loop
+22:42:54.377 > Inside Uart to Dist Loop
+22:42:54.381 > Inside Uart to Dist Loop
+22:42:54.387 > Inside Uart to Dist Loop
+22:42:54.392 > Inside Uart to Dist Loop
+22:42:54.396 > Inside Uart to Dist Loop
+22:42:54.401 > Inside Uart to Dist Loop
+22:42:54.406 > Inside Uart to Dist Loop
+22:42:54.411 > Inside Uart to Dist Loop
+22:42:54.416 > Inside Uart to Dist Loop
+22:42:54.421 > Inside Uart to Dist Loop
+22:42:54.427 > Inside Uart to Dist Loop
+22:42:54.431 > Inside Uart to Dist Loop
+22:42:54.437 > Inside Uart to Dist Loop
+22:42:54.442 > Inside Uart to Dist Loop
+22:42:54.446 > Inside Uart to Dist Loop
+22:42:54.451 > Inside Uart to Dist Loop
+22:42:54.456 > Inside Uart to Dist Loop
+22:42:54.461 > Inside Uart to Dist Loop
+22:42:54.466 > Inside Uart to Dist Loop
+22:42:54.472 > Inside Uart to Dist Loop
+22:42:54.476 > Inside Uart to Dist Loop
+22:42:54.481 > Inside Uart to Dist Loop
+22:42:54.486 > Inside Uart to Dist Loop
+22:42:54.492 > Inside Uart to Dist Loop
+22:42:54.496 > Inside Uart to Dist Loop
+22:42:54.502 > Inside Uart to Dist Loop
+22:42:54.506 > Inside Uart to Dist Loop
+22:42:54.511 > Inside Uart to Dist Loop
+22:42:54.516 > Inside Uart to Dist Loop
+22:42:54.521 > Inside Uart to Dist Loop
+22:42:54.526 > Inside Uart to Dist Loop
+22:42:54.531 > Inside Uart to Dist Loop
+22:42:54.537 > Inside Uart to Dist Loop
+22:42:54.542 > Inside Uart to Dist Loop
+22:42:54.546 > Inside Uart to Dist Loop
+22:42:54.551 > Inside Uart to Dist Loop
+22:42:54.556 > Inside Uart to Dist Loop
+22:42:54.561 > Inside Uart to Dist Loop
+22:42:54.566 > Inside Uart to Dist Loop
+22:42:54.572 > Inside Uart to Dist Loop
+22:42:54.576 > Inside Uart to Dist Loop
+22:42:54.581 > Inside Uart to Dist Loop
+22:42:54.587 > Inside Uart to Dist Loop
+22:42:54.592 > Inside Uart to Dist Loop
+22:42:54.596 > Inside Uart to Dist Loop
+22:42:54.602 > Inside Uart to Dist Loop
+22:42:54.606 > Inside Uart to Dist Loop
+22:42:54.611 > Inside Uart to Dist Loop
+22:42:54.616 > Inside Uart to Dist Loop
+22:42:54.622 > Inside Uart to Dist Loop
+22:42:54.626 > Inside Uart to Dist Loop
+22:42:54.631 > Inside Uart to Dist Loop
+22:42:54.636 > Inside Uart to Dist Loop
+22:42:54.642 > Inside Uart to Dist Loop
+22:42:54.646 > Inside Uart to Dist Loop
+22:42:54.652 > Inside Uart to Dist Loop
+22:42:54.656 > Inside Uart to Dist Loop
+22:42:54.661 > Inside Uart to Dist Loop
+22:42:54.666 > Inside Uart to Dist Loop
+22:42:54.671 > Inside Uart to Dist Loop
+22:42:54.676 > Inside Uart to Dist Loop
+22:42:54.681 > Inside Uart to Dist Loop
+22:42:54.686 > Inside Uart to Dist Loop
+22:42:54.692 > Inside Uart to Dist Loop
+22:42:54.696 > Inside Uart to Dist Loop
+22:42:54.701 > Inside Uart to Dist Loop
+22:42:54.707 > Inside Uart to Dist Loop
+22:42:54.711 > Inside Uart to Dist Loop
+22:42:54.716 > Inside Uart to Dist Loop
+22:42:54.721 > Inside Uart to Dist Loop
+22:42:54.726 > Inside Uart to Dist Loop
+22:42:54.731 > Inside Uart to Dist Loop
+22:42:54.736 > Inside Uart to Dist Loop
+22:42:54.741 > Inside Uart to Dist Loop
+22:42:54.746 > Inside Uart to Dist Loop
+22:42:54.752 > Inside Uart to Dist Loop
+22:42:54.756 > Inside Uart to Dist Loop
+22:42:54.761 > Inside Uart to Dist Loop
+22:42:54.766 > Inside Uart to Dist Loop
+22:42:54.772 > Inside Uart to Dist Loop
+22:42:54.777 > Inside Uart to Dist Loop
+22:42:54.781 > Inside Uart to Dist Loop
+22:42:54.787 > Inside Uart to Dist Loop
+22:42:54.792 > Inside Uart to Dist Loop
+22:42:54.796 > Inside Uart to Dist Loop
+22:42:54.801 > Inside Uart to Dist Loop
+22:42:54.806 > Inside Uart to Dist Loop
+22:42:54.811 > Inside Uart to Dist Loop
+22:42:54.816 > Inside Uart to Dist Loop
+22:42:54.821 > Inside Uart to Dist Loop
+22:42:54.825 > Inside Uart to Dist Loop
+22:42:54.831 > Inside Uart to Dist Loop
+22:42:54.835 > Inside Uart to Dist Loop
+22:42:54.841 > Inside Uart to Dist Loop
+22:42:54.846 > Inside Uart to Dist Loop
+22:42:54.851 > Inside Uart to Dist Loop
+22:42:54.856 > Inside Uart to Dist Loop
+22:42:54.861 > Inside Uart to Dist Loop
+22:42:54.866 > Inside Uart to Dist Loop
+22:42:54.871 > Inside Uart to Dist Loop
+22:42:54.876 > Inside Uart to Dist Loop
+22:42:54.881 > Inside Uart to Dist Loop
+22:42:54.886 > Inside Uart to Dist Loop
+22:42:54.891 > Inside Uart to Dist Loop
+22:42:54.896 > Inside Uart to Dist Loop
+22:42:54.901 > Inside Uart to Dist Loop
+22:42:54.907 > Inside Uart to Dist Loop
+22:42:54.911 > Inside Uart to Dist Loop
+22:42:54.916 > Inside Uart to Dist Loop
+22:42:54.922 > Inside Uart to Dist Loop
+22:42:54.926 > Inside Uart to Dist Loop
+22:42:54.931 > Inside Uart to Dist Loop
+22:42:54.936 > Inside Uart to Dist Loop
+22:42:54.942 > Inside Uart to Dist Loop
+22:42:54.946 > Inside Uart to Dist Loop
+22:42:54.952 > Inside Uart to Dist Loop
+22:42:54.957 > Inside Uart to Dist Loop
+22:42:54.961 > Inside Uart to Dist Loop
+22:42:54.966 > Inside Uart to Dist Loop
+22:42:54.972 > Inside Uart to Dist Loop
+22:42:54.977 > Inside Uart to Dist Loop
+22:42:54.981 > Inside Uart to Dist Loop
+22:42:54.987 > Inside Uart to Dist Loop
+22:42:54.992 > Inside Uart to Dist Loop
+22:42:54.997 > Inside Uart to Dist Loop
+22:42:55.002 > Inside Uart to Dist Loop
+22:42:55.007 > Inside Uart to Dist Loop
+22:42:55.011 > Inside Uart to Dist Loop
+22:42:55.016 > Inside Uart to Dist Loop
+22:42:55.022 > Inside Uart to Dist Loop
+22:42:55.026 > Inside Uart to Dist Loop
+22:42:55.031 > Inside Uart to Dist Loop
+22:42:55.036 > Inside Uart to Dist Loop
+22:42:55.041 > Inside Uart to Dist Loop
+22:42:55.046 > Inside Uart to Dist Loop
+22:42:55.052 > Inside Uart to Dist Loop
+22:42:55.056 > Inside Uart to Dist Loop
+22:42:55.061 > Inside Uart to Dist Loop
+22:42:55.066 > Inside Uart to Dist Loop
+22:42:55.071 > Inside Uart to Dist Loop
+22:42:55.076 > Inside Uart to Dist Loop
+22:42:55.081 > Inside Uart to Dist Loop
+22:42:55.086 > Inside Uart to Dist Loop
+22:42:55.091 > Inside Uart to Dist Loop
+22:42:55.096 > Inside Uart to Dist Loop
+22:42:55.101 > Inside Uart to Dist Loop
+22:42:55.106 > Inside Uart to Dist Loop
+22:42:55.111 > Inside Uart to Dist Loop
+22:42:55.116 > Inside Uart to Dist Loop
+22:42:55.121 > Inside Uart to Dist Loop
+22:42:55.127 > Inside Uart to Dist Loop
+22:42:55.131 > Inside Uart to Dist Loop
+22:42:55.137 > Inside Uart to Dist Loop
+22:42:55.141 > Inside Uart to Dist Loop
+22:42:55.146 > Inside Uart to Dist Loop
+22:42:55.151 > Inside Uart to Dist Loop
+22:42:55.157 > Inside Uart to Dist Loop
+22:42:55.161 > Inside Uart to Dist Loop
+22:42:55.166 > Inside Uart to Dist Loop
+22:42:55.171 > Inside Uart to Dist Loop
+22:42:55.176 > Inside Uart to Dist Loop
+22:42:55.182 > Inside Uart to Dist Loop
+22:42:55.186 > Inside Uart to Dist Loop
+22:42:55.192 > Inside Uart to Dist Loop
+22:42:55.196 > Inside Uart to Dist Loop
+22:42:55.202 > Inside Uart to Dist Loop
+22:42:55.207 > Inside Uart to Dist Loop
+22:42:55.211 > Inside Uart to Dist Loop
+22:42:55.216 > Inside Uart to Dist Loop
+22:42:55.222 > Inside Uart to Dist Loop
+22:42:55.226 > Inside Uart to Dist Loop
+22:42:55.231 > Inside Uart to Dist Loop
+22:42:55.236 > Inside Uart to Dist Loop
+22:42:55.242 > Inside Uart to Dist Loop
+22:42:55.246 > Inside Uart to Dist Loop
+22:42:55.252 > Inside Uart to Dist Loop
+22:42:55.256 > Inside Uart to Dist Loop
+22:42:55.261 > Inside Uart to Dist Loop
+22:42:55.266 > Inside Uart to Dist Loop
+22:42:55.272 > Inside Uart to Dist Loop
+22:42:55.276 > Inside Uart to Dist Loop
+22:42:55.281 > Inside Uart to Dist Loop
+22:42:55.286 > Inside Uart to Dist Loop
+22:42:55.291 > Inside Uart to Dist Loop
+22:42:55.296 > Inside Uart to Dist Loop
+22:42:55.301 > Inside Uart to Dist Loop
+22:42:55.306 > Inside Uart to Dist Loop
+22:42:55.311 > Inside Uart to Dist Loop
+22:42:55.316 > Inside Uart to Dist Loop
+22:42:55.321 > Inside Uart to Dist Loop
+22:42:55.326 > Inside Uart to Dist Loop
+22:42:55.331 > Inside Uart to Dist Loop
+22:42:55.337 > Inside Uart to Dist Loop
+22:42:55.342 > Inside Uart to Dist Loop
+22:42:55.346 > Inside Uart to Dist Loop
+22:42:55.351 > Inside Uart to Dist Loop
+22:42:55.356 > Inside Uart to Dist Loop
+22:42:55.361 > Inside Uart to Dist Loop
+22:42:55.366 > Inside Uart to Dist Loop
+22:42:55.371 > Inside Uart to Dist Loop
+22:42:55.376 > Inside Uart to Dist Loop
+22:42:55.381 > Inside Uart to Dist Loop
+22:42:55.386 > Inside Uart to Dist Loop
+22:42:55.391 > Inside Uart to Dist Loop
+22:42:55.396 > Inside Uart to Dist Loop
+22:42:55.401 > Inside Uart to Dist Loop
+22:42:55.406 > Inside Uart to Dist Loop
+22:42:55.411 > Inside Uart to Dist Loop
+22:42:55.416 > Inside Uart to Dist Loop
+22:42:55.421 > Inside Uart to Dist Loop
+22:42:55.426 > Inside Uart to Dist Loop
+22:42:55.431 > Inside Uart to Dist Loop
+22:42:55.437 > Inside Uart to Dist Loop
+22:42:55.442 > Inside Uart to Dist Loop
+22:42:55.446 > Inside Uart to Dist Loop
+22:42:55.451 > Inside Uart to Dist Loop
+22:42:55.457 > Inside Uart to Dist Loop
+22:42:55.461 > Inside Uart to Dist Loop
+22:42:55.466 > Inside Uart to Dist Loop
+22:42:55.471 > Inside Uart to Dist Loop
+22:42:55.477 > Inside Uart to Dist Loop
+22:42:55.481 > Inside Uart to Dist Loop
+22:42:55.486 > Inside Uart to Dist Loop
+22:42:55.491 > Inside Uart to Dist Loop
+22:42:55.496 > Inside Uart to Dist Loop
+22:42:55.502 > Inside Uart to Dist Loop
+22:42:55.506 > Inside Uart to Dist Loop
+22:42:55.511 > Inside Uart to Dist Loop
+22:42:55.516 > Inside Uart to Dist Loop
+22:42:55.521 > Inside Uart to Dist Loop
+22:42:55.527 > Inside Uart to Dist Loop
+22:42:55.531 > Inside Uart to Dist Loop
+22:42:55.536 > Inside Uart to Dist Loop
+22:42:55.541 > Inside Uart to Dist Loop
+22:42:55.546 > Inside Uart to Dist Loop
+22:42:55.552 > Inside Uart to Dist Loop
+22:42:55.556 > Inside Uart to Dist Loop
+22:42:55.561 > Inside Uart to Dist Loop
+22:42:55.566 > Inside Uart to Dist Loop
+22:42:55.572 > Inside Uart to Dist Loop
+22:42:55.577 > Inside Uart to Dist Loop
+22:42:55.581 > Inside Uart to Dist Loop
+22:42:55.587 > Inside Uart to Dist Loop
+22:42:55.592 > Inside Uart to Dist Loop
+22:42:55.597 > Inside Uart to Dist Loop
+22:42:55.602 > Inside Uart to Dist Loop
+22:42:55.607 > Inside Uart to Dist Loop
+22:42:55.611 > Inside Uart to Dist Loop
+22:42:55.616 > Inside Uart to Dist Loop
+22:42:55.622 > Inside Uart to Dist Loop
+22:42:55.627 > Inside Uart to Dist Loop
+22:42:55.631 > Inside Uart to Dist Loop
+22:42:55.637 > Inside Uart to Dist Loop
+22:42:55.642 > Inside Uart to Dist Loop
+22:42:55.646 > Inside Uart to Dist Loop
+22:42:55.652 > Inside Uart to Dist Loop
+22:42:55.657 > Inside Uart to Dist Loop
+22:42:55.661 > Inside Uart to Dist Loop
+22:42:55.666 > Inside Uart to Dist Loop
+22:42:55.671 > Inside Uart to Dist Loop
+22:42:55.676 > Inside Uart to Dist Loop
+22:42:55.681 > Inside Uart to Dist Loop
+22:42:55.687 > Inside Uart to Dist Loop
+22:42:55.691 > Inside Uart to Dist Loop
+22:42:55.696 > Inside Uart to Dist Loop
+22:42:55.702 > Inside Uart to Dist Loop
+22:42:55.706 > Inside Uart to Dist Loop
+22:42:55.711 > Inside Uart to Dist Loop
+22:42:55.716 > Inside Uart to Dist Loop
+22:42:55.721 > Inside Uart to Dist Loop
+22:42:55.727 > Inside Uart to Dist Loop
+22:42:55.731 > Inside Uart to Dist Loop
+22:42:55.737 > Inside Uart to Dist Loop
+22:42:55.742 > Inside Uart to Dist Loop
+22:42:55.746 > Inside Uart to Dist Loop
+22:42:55.751 > Inside Uart to Dist Loop
+22:42:55.757 > Inside Uart to Dist Loop
+22:42:55.761 > Inside Uart to Dist Loop
+22:42:55.767 > Inside Uart to Dist Loop
+22:42:55.772 > Inside Uart to Dist Loop
+22:42:55.777 > Inside Uart to Dist Loop
+22:42:55.781 > Inside Uart to Dist Loop
+22:42:55.787 > Inside Uart to Dist Loop
+22:42:55.792 > Inside Uart to Dist Loop
+22:42:55.796 > Inside Uart to Dist Loop
+22:42:55.801 > Inside Uart to Dist Loop
+22:42:55.807 > Inside Uart to Dist Loop
+22:42:55.811 > Inside Uart to Dist Loop
+22:42:55.816 > Inside Uart to Dist Loop
+22:42:55.821 > Inside Uart to Dist Loop
+22:42:55.827 > Inside Uart to Dist Loop
+22:42:55.832 > Inside Uart to Dist Loop
+22:42:55.837 > Inside Uart to Dist Loop
+22:42:55.842 > Inside Uart to Dist Loop
+22:42:55.846 > Inside Uart to Dist Loop
+22:42:55.851 > Inside Uart to Dist Loop
+22:42:55.856 > Inside Uart to Dist Loop
+22:42:55.861 > Inside Uart to Dist Loop
+22:42:55.867 > Inside Uart to Dist Loop
+22:42:55.872 > Inside Uart to Dist Loop
+22:42:55.877 > Inside Uart to Dist Loop
+22:42:55.881 > Inside Uart to Dist Loop
+22:42:55.886 > Inside Uart to Dist Loop
+22:42:55.891 > Inside Uart to Dist Loop
+22:42:55.896 > Inside Uart to Dist Loop
+22:42:55.902 > Inside Uart to Dist Loop
+22:42:55.906 > Inside Uart to Dist Loop
+22:42:55.911 > Inside Uart to Dist Loop
+22:42:55.916 > Inside Uart to Dist Loop
+22:42:55.921 > Inside Uart to Dist Loop
+22:42:55.926 > Inside Uart to Dist Loop
+22:42:55.931 > Inside Uart to Dist Loop
+22:42:55.937 > Inside Uart to Dist Loop
+22:42:55.942 > Inside Uart to Dist Loop
+22:42:55.947 > Inside Uart to Dist Loop
+22:42:55.952 > Inside Uart to Dist Loop
+22:42:55.957 > Inside Uart to Dist Loop
+22:42:55.961 > Inside Uart to Dist Loop
+22:42:55.967 > Inside Uart to Dist Loop
+22:42:55.972 > Inside Uart to Dist Loop
+22:42:55.977 > Inside Uart to Dist Loop
+22:42:55.981 > Inside Uart to Dist Loop
+22:42:55.987 > Inside Uart to Dist Loop
+22:42:55.992 > Inside Uart to Dist Loop
+22:42:55.996 > Inside Uart to Dist Loop
+22:42:56.001 > Inside Uart to Dist Loop
+22:42:56.007 > Inside Uart to Dist Loop
+22:42:56.011 > Inside Uart to Dist Loop
+22:42:56.016 > Inside Uart to Dist Loop
+22:42:56.022 > Inside Uart to Dist Loop
+22:42:56.027 > Inside Uart to Dist Loop
+22:42:56.032 > Inside Uart to Dist Loop
+22:42:56.037 > Inside Uart to Dist Loop
+22:42:56.041 > Inside Uart to Dist Loop
+22:42:56.046 > Inside Uart to Dist Loop
+22:42:56.051 > Inside Uart to Dist Loop
+22:42:56.057 > Inside Uart to Dist Loop
+22:42:56.061 > Inside Uart to Dist Loop
+22:42:56.066 > Inside Uart to Dist Loop
+22:42:56.071 > Inside Uart to Dist Loop
+22:42:56.077 > Inside Uart to Dist Loop
+22:42:56.081 > Inside Uart to Dist Loop
+22:42:56.087 > Inside Uart to Dist Loop
+22:42:56.091 > Inside Uart to Dist Loop
+22:42:56.096 > Inside Uart to Dist Loop
+22:42:56.101 > Inside Uart to Dist Loop
+22:42:56.106 > Inside Uart to Dist Loop
+22:42:56.110 > Inside Uart to Dist Loop
+22:42:56.116 > Inside Uart to Dist Loop
+22:42:56.121 > Inside Uart to Dist Loop
+22:42:56.127 > Inside Uart to Dist Loop
+22:42:56.131 > Inside Uart to Dist Loop
+22:42:56.137 > Inside Uart to Dist Loop
+22:42:56.141 > Inside Uart to Dist Loop
+22:42:56.146 > Inside Uart to Dist Loop
+22:42:56.151 > Inside Uart to Dist Loop
+22:42:56.157 > Inside Uart to Dist Loop
+22:42:56.161 > Inside Uart to Dist Loop
+22:42:56.166 > Inside Uart to Dist Loop
+22:42:56.171 > Inside Uart to Dist Loop
+22:42:56.177 > Inside Uart to Dist Loop
+22:42:56.181 > Inside Uart to Dist Loop
+22:42:56.186 > Inside Uart to Dist Loop
+22:42:56.191 > Inside Uart to Dist Loop
+22:42:56.196 > Inside Uart to Dist Loop
+22:42:56.202 > Inside Uart to Dist Loop
+22:42:56.206 > Inside Uart to Dist Loop
+22:42:56.211 > Inside Uart to Dist Loop
+22:42:56.216 > Inside Uart to Dist Loop
+22:42:56.221 > Inside Uart to Dist Loop
+22:42:56.226 > Inside Uart to Dist Loop
+22:42:56.231 > Inside Uart to Dist Loop
+22:42:56.236 > Inside Uart to Dist Loop
+22:42:56.242 > Inside Uart to Dist Loop
+22:42:56.246 > Inside Uart to Dist Loop
+22:42:56.251 > Inside Uart to Dist Loop
+22:42:56.256 > Inside Uart to Dist Loop
+22:42:56.261 > Inside Uart to Dist Loop
+22:42:56.266 > Inside Uart to Dist Loop
+22:42:56.272 > Inside Uart to Dist Loop
+22:42:56.277 > Inside Uart to Dist Loop
+22:42:56.281 > Inside Uart to Dist Loop
+22:42:56.287 > Inside Uart to Dist Loop
+22:42:56.292 > Inside Uart to Dist Loop
+22:42:56.296 > Inside Uart to Dist Loop
+22:42:56.302 > Inside Uart to Dist Loop
+22:42:56.307 > Inside Uart to Dist Loop
+22:42:56.311 > Inside Uart to Dist Loop
+22:42:56.316 > Inside Uart to Dist Loop
+22:42:56.322 > Inside Uart to Dist Loop
+22:42:56.327 > Inside Uart to Dist Loop
+22:42:56.331 > Inside Uart to Dist Loop
+22:42:56.337 > Inside Uart to Dist Loop
+22:42:56.341 > Inside Uart to Dist Loop
+22:42:56.346 > Inside Uart to Dist Loop
+22:42:56.352 > Inside Uart to Dist Loop
+22:42:56.357 > Inside Uart to Dist Loop
+22:42:56.361 > Inside Uart to Dist Loop
+22:42:56.366 > Inside Uart to Dist Loop
+22:42:56.371 > Inside Uart to Dist Loop
+22:42:56.376 > Inside Uart to Dist Loop
+22:42:56.381 > Inside Uart to Dist Loop
+22:42:56.387 > Inside Uart to Dist Loop
+22:42:56.392 > Inside Uart to Dist Loop
+22:42:56.396 > Inside Uart to Dist Loop
+22:42:56.401 > Inside Uart to Dist Loop
+22:42:56.406 > Inside Uart to Dist Loop
+22:42:56.410 > Inside Uart to Dist Loop
+22:42:56.416 > Inside Uart to Dist Loop
+22:42:56.420 > Inside Uart to Dist Loop
+22:42:56.426 > Inside Uart to Dist Loop
+22:42:56.430 > Inside Uart to Dist Loop
+22:42:56.437 > Inside Uart to Dist Loop
+22:42:56.442 > Inside Uart to Dist Loop
+22:42:56.446 > Inside Uart to Dist Loop
+22:42:56.452 > Inside Uart to Dist Loop
+22:42:56.457 > Inside Uart to Dist Loop
+22:42:56.461 > Inside Uart to Dist Loop
+22:42:56.467 > Inside Uart to Dist Loop
+22:42:56.472 > Inside Uart to Dist Loop
+22:42:56.476 > Inside Uart to Dist Loop
+22:42:56.481 > Inside Uart to Dist Loop
+22:42:56.486 > Inside Uart to Dist Loop
+22:42:56.492 > Inside Uart to Dist Loop
+22:42:56.497 > Inside Uart to Dist Loop
+22:42:56.502 > Inside Uart to Dist Loop
+22:42:56.507 > Inside Uart to Dist Loop
+22:42:56.511 > Inside Uart to Dist Loop
+22:42:56.517 > Inside Uart to Dist Loop
+22:42:56.522 > Inside Uart to Dist Loop
+22:42:56.527 > Inside Uart to Dist Loop
+22:42:56.531 > Inside Uart to Dist Loop
+22:42:56.537 > Inside Uart to Dist Loop
+22:42:56.542 > Inside Uart to Dist Loop
+22:42:56.545 > Inside Uart to Dist Loop
+22:42:56.551 > Inside Uart to Dist Loop
+22:42:56.557 > Inside Uart to Dist Loop
+22:42:56.561 > Inside Uart to Dist Loop
+22:42:56.566 > Inside Uart to Dist Loop
+22:42:56.571 > Inside Uart to Dist Loop
+22:42:56.577 > Inside Uart to Dist Loop
+22:42:56.581 > Inside Uart to Dist Loop
+22:42:56.587 > Inside Uart to Dist Loop
+22:42:56.592 > Inside Uart to Dist Loop
+22:42:56.596 > Inside Uart to Dist Loop
+22:42:56.602 > Inside Uart to Dist Loop
+22:42:56.606 > Inside Uart to Dist Loop
+22:42:56.611 > Inside Uart to Dist Loop
+22:42:56.616 > Inside Uart to Dist Loop
+22:42:56.622 > Inside Uart to Dist Loop
+22:42:56.627 > Inside Uart to Dist Loop
+22:42:56.632 > Inside Uart to Dist Loop
+22:42:56.637 > Inside Uart to Dist Loop
+22:42:56.642 > Inside Uart to Dist Loop
+22:42:56.647 > Inside Uart to Dist Loop
+22:42:56.651 > Inside Uart to Dist Loop
+22:42:56.656 > Inside Uart to Dist Loop
+22:42:56.661 > Inside Uart to Dist Loop
+22:42:56.667 > Inside Uart to Dist Loop
+22:42:56.672 > Inside Uart to Dist Loop
+22:42:56.677 > Inside Uart to Dist Loop
+22:42:56.681 > Inside Uart to Dist Loop
+22:42:56.687 > Inside Uart to Dist Loop
+22:42:56.692 > Inside Uart to Dist Loop
+22:42:56.696 > Inside Uart to Dist Loop
+22:42:56.702 > Inside Uart to Dist Loop
+22:42:56.706 > Inside Uart to Dist Loop
+22:42:56.711 > Inside Uart to Dist Loop
+22:42:56.717 > Inside Uart to Dist Loop
+22:42:56.722 > Inside Uart to Dist Loop
+22:42:56.727 > Inside Uart to Dist Loop
+22:42:56.731 > Inside Uart to Dist Loop
+22:42:56.737 > Inside Uart to Dist Loop
+22:42:56.741 > Inside Uart to Dist Loop
+22:42:56.746 > Inside Uart to Dist Loop
+22:42:56.751 > Inside Uart to Dist Loop
+22:42:56.757 > Inside Uart to Dist Loop
+22:42:56.761 > Inside Uart to Dist Loop
+22:42:56.767 > Inside Uart to Dist Loop
+22:42:56.772 > Inside Uart to Dist Loop
+22:42:56.777 > Inside Uart to Dist Loop
+22:42:56.781 > Inside Uart to Dist Loop
+22:42:56.787 > Inside Uart to Dist Loop
+22:42:56.791 > Inside Uart to Dist Loop
+22:42:56.796 > Inside Uart to Dist Loop
+22:42:56.802 > Inside Uart to Dist Loop
+22:42:56.807 > Inside Uart to Dist Loop
+22:42:56.811 > Inside Uart to Dist Loop
+22:42:56.816 > Inside Uart to Dist Loop
+22:42:56.822 > Inside Uart to Dist Loop
+22:42:56.827 > Inside Uart to Dist Loop
+22:42:56.831 > Inside Uart to Dist Loop
+22:42:56.836 > Inside Uart to Dist Loop
+22:42:56.841 > Inside Uart to Dist Loop
+22:42:56.846 > Inside Uart to Dist Loop
+22:42:56.851 > Inside Uart to Dist Loop
+22:42:56.856 > Inside Uart to Dist Loop
+22:42:56.861 > Inside Uart to Dist Loop
+22:42:56.866 > Inside Uart to Dist Loop
+22:42:56.871 > Inside Uart to Dist Loop
+22:42:56.877 > Inside Uart to Dist Loop
+22:42:56.881 > Inside Uart to Dist Loop
+22:42:56.886 > Inside Uart to Dist Loop
+22:42:56.891 > Inside Uart to Dist Loop
+22:42:56.896 > Inside Uart to Dist Loop
+22:42:56.901 > Inside Uart to Dist Loop
+22:42:56.906 > Inside Uart to Dist Loop
+22:42:56.911 > Inside Uart to Dist Loop
+22:42:56.916 > Inside Uart to Dist Loop
+22:42:56.921 > Inside Uart to Dist Loop
+22:42:56.926 > Inside Uart to Dist Loop
+22:42:56.931 > Inside Uart to Dist Loop
+22:42:56.936 > Inside Uart to Dist Loop
+22:42:56.942 > Inside Uart to Dist Loop
+22:42:56.946 > Inside Uart to Dist Loop
+22:42:56.951 > Inside Uart to Dist Loop
+22:42:56.956 > Inside Uart to Dist Loop
+22:42:56.961 > Inside Uart to Dist Loop
+22:42:56.966 > Inside Uart to Dist Loop
+22:42:56.971 > Inside Uart to Dist Loop
+22:42:56.977 > Inside Uart to Dist Loop
+22:42:56.981 > Inside Uart to Dist Loop
+22:42:56.986 > Inside Uart to Dist Loop
+22:42:56.991 > Inside Uart to Dist Loop
+22:42:56.996 > Inside Uart to Dist Loop
+22:42:57.001 > Inside Uart to Dist Loop
+22:42:57.006 > Inside Uart to Dist Loop
+22:42:57.011 > Inside Uart to Dist Loop
+22:42:57.016 > Inside Uart to Dist Loop
+22:42:57.021 > Inside Uart to Dist Loop
+22:42:57.026 > Inside Uart to Dist Loop
+22:42:57.031 > Inside Uart to Dist Loop
+22:42:57.036 > Inside Uart to Dist Loop
+22:42:57.041 > Inside Uart to Dist Loop
+22:42:57.046 > Inside Uart to Dist Loop
+22:42:57.051 > Inside Uart to Dist Loop
+22:42:57.055 > Inside Uart to Dist Loop
+22:42:57.061 > Inside Uart to Dist Loop
+22:42:57.066 > Inside Uart to Dist Loop
+22:42:57.071 > Inside Uart to Dist Loop
+22:42:57.076 > Inside Uart to Dist Loop
+22:42:57.081 > Inside Uart to Dist Loop
+22:42:57.086 > Inside Uart to Dist Loop
+22:42:57.091 > Inside Uart to Dist Loop
+22:42:57.096 > Inside Uart to Dist Loop
+22:42:57.101 > Inside Uart to Dist Loop
+22:42:57.106 > Inside Uart to Dist Loop
+22:42:57.111 > Inside Uart to Dist Loop
+22:42:57.116 > Inside Uart to Dist Loop
+22:42:57.121 > Inside Uart to Dist Loop
+22:42:57.126 > Inside Uart to Dist Loop
+22:42:57.131 > Inside Uart to Dist Loop
+22:42:57.137 > Inside Uart to Dist Loop
+22:42:57.142 > Inside Uart to Dist Loop
+22:42:57.146 > Inside Uart to Dist Loop
+22:42:57.151 > Inside Uart to Dist Loop
+22:42:57.157 > Inside Uart to Dist Loop
+22:42:57.161 > Inside Uart to Dist Loop
+22:42:57.165 > Inside Uart to Dist Loop
+22:42:57.170 > Inside Uart to Dist Loop
+22:42:57.175 > Inside Uart to Dist Loop
+22:42:57.180 > Inside Uart to Dist Loop
+22:42:57.185 > Inside Uart to Dist Loop
+22:42:57.190 > Inside Uart to Dist Loop
+22:42:57.195 > Inside Uart to Dist Loop
+22:42:57.202 > Inside Uart to Dist Loop
+22:42:57.205 > Inside Uart to Dist Loop
+22:42:57.211 > Inside Uart to Dist Loop
+22:42:57.216 > Inside Uart to Dist Loop
+22:42:57.221 > Inside Uart to Dist Loop
+22:42:57.226 > Inside Uart to Dist Loop
+22:42:57.231 > Inside Uart to Dist Loop
+22:42:57.236 > Inside Uart to Dist Loop
+22:42:57.241 > Inside Uart to Dist Loop
+22:42:57.246 > Inside Uart to Dist Loop
+22:42:57.251 > Inside Uart to Dist Loop
+22:42:57.256 > Inside Uart to Dist Loop
+22:42:57.260 > Inside Uart to Dist Loop
+22:42:57.266 > Inside Uart to Dist Loop
+22:42:57.271 > Inside Uart to Dist Loop
+22:42:57.276 > Inside Uart to Dist Loop
+22:42:57.281 > Inside Uart to Dist Loop
+22:42:57.286 > Inside Uart to Dist Loop
+22:42:57.291 > Inside Uart to Dist Loop
+22:42:57.296 > Inside Uart to Dist Loop
+22:42:57.301 > Inside Uart to Dist Loop
+22:42:57.306 > Inside Uart to Dist Loop
+22:42:57.311 > Inside Uart to Dist Loop
+22:42:57.316 > Inside Uart to Dist Loop
+22:42:57.321 > Inside Uart to Dist Loop
+22:42:57.326 > Inside Uart to Dist Loop
+22:42:57.331 > Inside Uart to Dist Loop
+22:42:57.336 > Inside Uart to Dist Loop
+22:42:57.342 > Inside Uart to Dist Loop
+22:42:57.346 > Inside Uart to Dist Loop
+22:42:57.352 > Inside Uart to Dist Loop
+22:42:57.357 > Inside Uart to Dist Loop
+22:42:57.361 > Inside Uart to Dist Loop
+22:42:57.367 > Inside Uart to Dist Loop
+22:42:57.371 > Inside Uart to Dist Loop
+22:42:57.376 > Inside Uart to Dist Loop
+22:42:57.381 > Inside Uart to Dist Loop
+22:42:57.387 > Inside Uart to Dist Loop
+22:42:57.392 > Inside Uart to Dist Loop
+22:42:57.396 > Inside Uart to Dist Loop
+22:42:57.402 > Inside Uart to Dist Loop
+22:42:57.407 > Inside Uart to Dist Loop
+22:42:57.418 > Inside Uart to Dist Loop
+22:42:57.418 > SPin CLockwise
+22:42:57.418 > Curr Localise State
+22:42:57.418 > 1
+22:42:57.424 > Inside Uart to Dist Loop
+22:42:57.424 > SPin CLockwise
+22:42:57.424 > Curr Localise State
+22:42:57.429 > 1
+22:42:57.429 > Inside Uart to Dist Loop
+22:42:57.429 > SPin CLockwise
+22:42:57.429 > Curr Localise State
+22:42:57.434 > 1
+22:42:57.434 > Inside Uart to Dist Loop
+22:42:57.434 > SPin CLockwise
+22:42:57.434 > Curr Localise State
+22:42:57.440 > 1
+22:42:57.440 > Inside Uart to Dist Loop
+22:42:57.440 > SPin CLockwise
+22:42:57.440 > Curr Localise State
+22:42:57.445 > 1
+22:42:57.445 > Inside Uart to Dist Loop
+22:42:57.445 > SPin CLockwise
+22:42:57.445 > Curr Localise State
+22:42:57.451 > 1
+22:42:57.451 > Inside Uart to Dist Loop
+22:42:57.451 > SPin CLockwise
+22:42:57.451 > Curr Localise State
+22:42:57.456 > 1
+22:42:57.456 > Inside Uart to Dist Loop
+22:42:57.456 > SPin CLockwise
+22:42:57.456 > Curr Localise State
+22:42:57.462 > 1
+22:42:57.462 > Inside Uart to Dist Loop
+22:42:57.462 > SPin CLockwise
+22:42:57.462 > Curr Localise State
+22:42:57.468 > 1
+22:42:57.468 > Inside Uart to Dist Loop
+22:42:57.468 > SPin CLockwise
+22:42:57.468 > Curr Localise State
+22:42:57.472 > 1
+22:42:57.480 > Inside Uart to Dist Loop
+22:42:57.480 > SPin CLockwise
+22:42:57.480 > Curr Localise State
+22:42:57.480 > 1
+22:42:57.486 > Inside Uart to Dist Loop
+22:42:57.486 > SPin CLockwise
+22:42:57.486 > Curr Localise State
+22:42:57.491 > 1
+22:42:57.491 > Inside Uart to Dist Loop
+22:42:57.491 > SPin CLockwise
+22:42:57.491 > Curr Localise State
+22:42:57.497 > 1
+22:42:57.497 > Inside Uart to Dist Loop
+22:42:57.497 > SPin CLockwise
+22:42:57.497 > Curr Localise State
+22:42:57.502 > 1
+22:42:57.502 > Inside Uart to Dist Loop
+22:42:57.502 > SPin CLockwise
+22:42:57.502 > Curr Localise State
+22:42:57.508 > 1
+22:42:57.508 > Inside Uart to Dist Loop
+22:42:57.508 > SPin CLockwise
+22:42:57.508 > Curr Localise State
+22:42:57.513 > 1
+22:42:57.513 > Inside Uart to Dist Loop
+22:42:57.513 > SPin CLockwise
+22:42:57.513 > Curr Localise State
+22:42:57.518 > 1
+22:42:57.518 > Inside Uart to Dist Loop
+22:42:57.518 > SPin CLockwise
+22:42:57.518 > Curr Localise State
+22:42:57.525 > 1
+22:42:57.525 > Inside Uart to Dist Loop
+22:42:57.525 > SPin CLockwise
+22:42:57.525 > Curr Localise State
+22:42:57.527 > 1
+22:42:57.536 > Inside Uart to Dist Loop
+22:42:57.536 > SPin CLockwise
+22:42:57.536 > Curr Localise State
+22:42:57.536 > 1
+22:42:57.542 > Inside Uart to Dist Loop
+22:42:57.542 > SPin CLockwise
+22:42:57.542 > Curr Localise State
+22:42:57.547 > 1
+22:42:57.547 > Inside Uart to Dist Loop
+22:42:57.547 > SPin CLockwise
+22:42:57.547 > Curr Localise State
+22:42:57.553 > 1
+22:42:57.553 > Inside Uart to Dist Loop
+22:42:57.553 > SPin CLockwise
+22:42:57.553 > Curr Localise State
+22:42:57.558 > 1
+22:42:57.558 > Inside Uart to Dist Loop
+22:42:57.558 > SPin CLockwise
+22:42:57.558 > Curr Localise State
+22:42:57.564 > 1
+22:42:57.564 > Inside Uart to Dist Loop
+22:42:57.564 > SPin CLockwise
+22:42:57.564 > Curr Localise State
+22:42:57.569 > 1
+22:42:57.569 > Inside Uart to Dist Loop
+22:42:57.569 > SPin CLockwise
+22:42:57.569 > Curr Localise State
+22:42:57.575 > 1
+22:42:57.575 > Inside Uart to Dist Loop
+22:42:57.575 > SPin CLockwise
+22:42:57.575 > Curr Localise State
+22:42:57.580 > 1
+22:42:57.580 > Inside Uart to Dist Loop
+22:42:57.580 > SPin CLockwise
+22:42:57.580 > Curr Localise State
+22:42:57.583 > 1
+22:42:57.592 > Inside Uart to Dist Loop
+22:42:57.592 > SPin CLockwise
+22:42:57.592 > Curr Localise State
+22:42:57.592 > 1
+22:42:57.597 > Inside Uart to Dist Loop
+22:42:57.597 > SPin CLockwise
+22:42:57.597 > Curr Localise State
+22:42:57.604 > 1
+22:42:57.604 > Inside Uart to Dist Loop
+22:42:57.604 > SPin CLockwise
+22:42:57.604 > Curr Localise State
+22:42:57.609 > 1
+22:42:57.609 > Inside Uart to Dist Loop
+22:42:57.609 > SPin CLockwise
+22:42:57.609 > Curr Localise State
+22:42:57.614 > 1
+22:42:57.614 > Inside Uart to Dist Loop
+22:42:57.614 > SPin CLockwise
+22:42:57.614 > Curr Localise State
+22:42:57.619 > 1
+22:42:57.619 > Inside Uart to Dist Loop
+22:42:57.619 > SPin CLockwise
+22:42:57.619 > Curr Localise State
+22:42:57.626 > 1
+22:42:57.626 > Inside Uart to Dist Loop
+22:42:57.626 > SPin CLockwise
+22:42:57.626 > Curr Localise State
+22:42:57.630 > 1
+22:42:57.630 > Inside Uart to Dist Loop
+22:42:57.630 > SPin CLockwise
+22:42:57.630 > Curr Localise State
+22:42:57.636 > 1
+22:42:57.636 > Inside Uart to Dist Loop
+22:42:57.636 > SPin CLockwise
+22:42:57.636 > Curr Localise State
+22:42:57.639 > 1
+22:42:57.648 > Inside Uart to Dist Loop
+22:42:57.648 > SPin CLockwise
+22:42:57.648 > Curr Localise State
+22:42:57.648 > 1
+22:42:57.653 > Inside Uart to Dist Loop
+22:42:57.653 > SPin CLockwise
+22:42:57.653 > Curr Localise State
+22:42:57.659 > 1
+22:42:57.659 > Inside Uart to Dist Loop
+22:42:57.659 > SPin CLockwise
+22:42:57.659 > Curr Localise State
+22:42:57.664 > 1
+22:42:57.664 > Inside Uart to Dist Loop
+22:42:57.664 > SPin CLockwise
+22:42:57.664 > Curr Localise State
+22:42:57.671 > 1
+22:42:57.671 > Inside Uart to Dist Loop
+22:42:57.671 > SPin CLockwise
+22:42:57.671 > Curr Localise State
+22:42:57.676 > 1
+22:42:57.676 > Inside Uart to Dist Loop
+22:42:57.676 > SPin CLockwise
+22:42:57.676 > Curr Localise State
+22:42:57.681 > 1
+22:42:57.681 > Inside Uart to Dist Loop
+22:42:57.681 > SPin CLockwise
+22:42:57.681 > Curr Localise State
+22:42:57.687 > 1
+22:42:57.687 > Inside Uart to Dist Loop
+22:42:57.687 > SPin CLockwise
+22:42:57.687 > Curr Localise State
+22:42:57.692 > 1
+22:42:57.692 > Inside Uart to Dist Loop
+22:42:57.692 > SPin CLockwise
+22:42:57.692 > Curr Localise State
+22:42:57.696 > 1
+22:42:57.704 > Inside Uart to Dist Loop
+22:42:57.704 > SPin CLockwise
+22:42:57.704 > Curr Localise State
+22:42:57.704 > 1
+22:42:57.709 > Inside Uart to Dist Loop
+22:42:57.709 > SPin CLockwise
+22:42:57.709 > Curr Localise State
+22:42:57.715 > 1
+22:42:57.715 > Inside Uart to Dist Loop
+22:42:57.715 > SPin CLockwise
+22:42:57.715 > Curr Localise State
+22:42:57.721 > 1
+22:42:57.721 > Inside Uart to Dist Loop
+22:42:57.721 > SPin CLockwise
+22:42:57.721 > Curr Localise State
+22:42:57.726 > 1
+22:42:57.726 > Inside Uart to Dist Loop
+22:42:57.726 > SPin CLockwise
+22:42:57.726 > Curr Localise State
+22:42:57.732 > 1
+22:42:57.732 > Inside Uart to Dist Loop
+22:42:57.732 > SPin CLockwise
+22:42:57.732 > Curr Localise State
+22:42:57.737 > 1
+22:42:57.737 > Inside Uart to Dist Loop
+22:42:57.737 > SPin CLockwise
+22:42:57.737 > Curr Localise State
+22:42:57.743 > 1
+22:42:57.743 > Inside Uart to Dist Loop
+22:42:57.743 > SPin CLockwise
+22:42:57.743 > Curr Localise State
+22:42:57.748 > 1
+22:42:57.748 > Inside Uart to Dist Loop
+22:42:57.748 > SPin CLockwise
+22:42:57.748 > Curr Localise State
+22:42:57.752 > 1
+22:42:57.760 > Inside Uart to Dist Loop
+22:42:57.760 > SPin CLockwise
+22:42:57.760 > Curr Localise State
+22:42:57.760 > 1
+22:42:57.765 > Inside Uart to Dist Loop
+22:42:57.765 > SPin CLockwise
+22:42:57.765 > Curr Localise State
+22:42:57.771 > 1
+22:42:57.771 > Inside Uart to Dist Loop
+22:42:57.771 > SPin CLockwise
+22:42:57.771 > Curr Localise State
+22:42:57.777 > 1
+22:42:57.777 > Inside Uart to Dist Loop
+22:42:57.777 > SPin CLockwise
+22:42:57.777 > Curr Localise State
+22:42:57.782 > 1
+22:42:57.782 > Inside Uart to Dist Loop
+22:42:57.782 > SPin CLockwise
+22:42:57.782 > Curr Localise State
+22:42:57.788 > 1
+22:42:57.788 > Inside Uart to Dist Loop
+22:42:57.788 > SPin CLockwise
+22:42:57.788 > Curr Localise State
+22:42:57.793 > 1
+22:42:57.793 > Inside Uart to Dist Loop
+22:42:57.793 > SPin CLockwise
+22:42:57.793 > Curr Localise State
+22:42:57.798 > 1
+22:42:57.798 > Inside Uart to Dist Loop
+22:42:57.798 > SPin CLockwise
+22:42:57.798 > Curr Localise State
+22:42:57.805 > 1
+22:42:57.805 > Inside Uart to Dist Loop
+22:42:57.805 > SPin CLockwise
+22:42:57.805 > Curr Localise State
+22:42:57.808 > 1
+22:42:57.816 > Inside Uart to Dist Loop
+22:42:57.816 > SPin CLockwise
+22:42:57.816 > Curr Localise State
+22:42:57.816 > 1
+22:42:57.822 > Inside Uart to Dist Loop
+22:42:57.822 > SPin CLockwise
+22:42:57.822 > Curr Localise State
+22:42:57.827 > 1
+22:42:57.827 > Inside Uart to Dist Loop
+22:42:57.827 > SPin CLockwise
+22:42:57.827 > Curr Localise State
+22:42:57.832 > 1
+22:42:57.832 > Inside Uart to Dist Loop
+22:42:57.832 > SPin CLockwise
+22:42:57.832 > Curr Localise State
+22:42:57.838 > 1
+22:42:57.838 > Inside Uart to Dist Loop
+22:42:57.838 > SPin CLockwise
+22:42:57.838 > Curr Localise State
+22:42:57.844 > 1
+22:42:57.844 > Inside Uart to Dist Loop
+22:42:57.844 > SPin CLockwise
+22:42:57.844 > Curr Localise State
+22:42:57.849 > 1
+22:42:57.849 > Inside Uart to Dist Loop
+22:42:57.849 > SPin CLockwise
+22:42:57.849 > Curr Localise State
+22:42:57.855 > 1
+22:42:57.855 > Inside Uart to Dist Loop
+22:42:57.855 > SPin CLockwise
+22:42:57.855 > Curr Localise State
+22:42:57.860 > 1
+22:42:57.860 > Inside Uart to Dist Loop
+22:42:57.860 > SPin CLockwise
+22:42:57.860 > Curr Localise State
+22:42:57.863 > 1
+22:42:57.872 > Inside Uart to Dist Loop
+22:42:57.872 > SPin CLockwise
+22:42:57.872 > Curr Localise State
+22:42:57.872 > 1
+22:42:57.878 > Inside Uart to Dist Loop
+22:42:57.878 > SPin CLockwise
+22:42:57.878 > Curr Localise State
+22:42:57.883 > 1
+22:42:57.883 > Inside Uart to Dist Loop
+22:42:57.883 > SPin CLockwise
+22:42:57.883 > Curr Localise State
+22:42:57.889 > 1
+22:42:57.889 > Inside Uart to Dist Loop
+22:42:57.889 > SPin CLockwise
+22:42:57.889 > Curr Localise State
+22:42:57.894 > 1
+22:42:57.894 > Inside Uart to Dist Loop
+22:42:57.894 > SPin CLockwise
+22:42:57.894 > Curr Localise State
+22:42:57.899 > 1
+22:42:57.899 > Inside Uart to Dist Loop
+22:42:57.899 > SPin CLockwise
+22:42:57.899 > Curr Localise State
+22:42:57.906 > 1
+22:42:57.906 > Inside Uart to Dist Loop
+22:42:57.906 > SPin CLockwise
+22:42:57.906 > Curr Localise State
+22:42:57.914 > 1
+22:42:57.914 > Inside Uart to Dist Loop
+22:42:57.914 > SPin CLockwise
+22:42:57.914 > Curr Localise State
+22:42:57.916 > 1
+22:42:57.916 > Inside Uart to Dist Loop
+22:42:57.916 > SPin CLockwise
+22:42:57.916 > Curr Localise State
+22:42:57.920 > 1
+22:42:57.927 > Inside Uart to Dist Loop
+22:42:57.928 > SPin CLockwise
+22:42:57.928 > Curr Localise State
+22:42:57.928 > 1
+22:42:57.933 > Inside Uart to Dist Loop
+22:42:57.933 > SPin CLockwise
+22:42:57.933 > Curr Localise State
+22:42:57.939 > 1
+22:42:57.939 > Inside Uart to Dist Loop
+22:42:57.939 > SPin CLockwise
+22:42:57.939 > Curr Localise State
+22:42:57.944 > 1
+22:42:57.944 > Inside Uart to Dist Loop
+22:42:57.944 > SPin CLockwise
+22:42:57.944 > Curr Localise State
+22:42:57.950 > 1
+22:42:57.950 > Inside Uart to Dist Loop
+22:42:57.950 > SPin CLockwise
+22:42:57.950 > Curr Localise State
+22:42:57.956 > 1
+22:42:57.956 > Inside Uart to Dist Loop
+22:42:57.956 > SPin CLockwise
+22:42:57.956 > Curr Localise State
+22:42:57.961 > 1
+22:42:57.961 > Inside Uart to Dist Loop
+22:42:57.961 > SPin CLockwise
+22:42:57.961 > Curr Localise State
+22:42:57.967 > 1
+22:42:57.967 > Inside Uart to Dist Loop
+22:42:57.967 > SPin CLockwise
+22:42:57.967 > Curr Localise State
+22:42:57.972 > 1
+22:42:57.972 > Inside Uart to Dist Loop
+22:42:57.972 > SPin CLockwise
+22:42:57.972 > Curr Localise State
+22:42:57.976 > 1
+22:42:57.984 > Inside Uart to Dist Loop
+22:42:57.985 > SPin CLockwise
+22:42:57.985 > Curr Localise State
+22:42:57.985 > 1
+22:42:57.990 > Inside Uart to Dist Loop
+22:42:57.990 > SPin CLockwise
+22:42:57.990 > Curr Localise State
+22:42:57.995 > 1
+22:42:57.995 > Inside Uart to Dist Loop
+22:42:57.995 > SPin CLockwise
+22:42:57.995 > Curr Localise State
+22:42:58.001 > 1
+22:42:58.001 > Inside Uart to Dist Loop
+22:42:58.001 > SPin CLockwise
+22:42:58.001 > Curr Localise State
+22:42:58.006 > 1
+22:42:58.006 > Inside Uart to Dist Loop
+22:42:58.006 > SPin CLockwise
+22:42:58.006 > Curr Localise State
+22:42:58.011 > 1
+22:42:58.011 > Inside Uart to Dist Loop
+22:42:58.011 > SPin CLockwise
+22:42:58.011 > Curr Localise State
+22:42:58.017 > 1
+22:42:58.017 > Inside Uart to Dist Loop
+22:42:58.017 > SPin CLockwise
+22:42:58.017 > Curr Localise State
+22:42:58.023 > 1
+22:42:58.023 > Inside Uart to Dist Loop
+22:42:58.023 > SPin CLockwise
+22:42:58.023 > Curr Localise State
+22:42:58.027 > 1
+22:42:58.027 > Inside Uart to Dist Loop
+22:42:58.027 > SPin CLockwise
+22:42:58.027 > Curr Localise State
+22:42:58.032 > 1
+22:42:58.040 > Inside Uart to Dist Loop
+22:42:58.040 > SPin CLockwise
+22:42:58.040 > Curr Localise State
+22:42:58.040 > 1
+22:42:58.045 > Inside Uart to Dist Loop
+22:42:58.045 > SPin CLockwise
+22:42:58.045 > Curr Localise State
+22:42:58.051 > 1
+22:42:58.051 > Inside Uart to Dist Loop
+22:42:58.051 > SPin CLockwise
+22:42:58.051 > Curr Localise State
+22:42:58.057 > 1
+22:42:58.057 > Inside Uart to Dist Loop
+22:42:58.057 > SPin CLockwise
+22:42:58.057 > Curr Localise State
+22:42:58.062 > 1
+22:42:58.062 > Inside Uart to Dist Loop
+22:42:58.062 > SPin CLockwise
+22:42:58.062 > Curr Localise State
+22:42:58.068 > 1
+22:42:58.068 > Inside Uart to Dist Loop
+22:42:58.068 > SPin CLockwise
+22:42:58.068 > Curr Localise State
+22:42:58.074 > 1
+22:42:58.074 > Inside Uart to Dist Loop
+22:42:58.074 > SPin CLockwise
+22:42:58.074 > Curr Localise State
+22:42:58.079 > 1
+22:42:58.079 > Inside Uart to Dist Loop
+22:42:58.079 > SPin CLockwise
+22:42:58.079 > Curr Localise State
+22:42:58.084 > 1
+22:42:58.084 > Inside Uart to Dist Loop
+22:42:58.084 > SPin CLockwise
+22:42:58.084 > Curr Localise State
+22:42:58.088 > 1
+22:42:58.096 > Inside Uart to Dist Loop
+22:42:58.096 > SPin CLockwise
+22:42:58.096 > Curr Localise State
+22:42:58.096 > 1
+22:42:58.102 > Inside Uart to Dist Loop
+22:42:58.102 > SPin CLockwise
+22:42:58.102 > Curr Localise State
+22:42:58.107 > 1
+22:42:58.107 > Inside Uart to Dist Loop
+22:42:58.107 > SPin CLockwise
+22:42:58.107 > Curr Localise State
+22:42:58.112 > 1
+22:42:58.112 > Inside Uart to Dist Loop
+22:42:58.112 > SPin CLockwise
+22:42:58.112 > Curr Localise State
+22:42:58.118 > 1
+22:42:58.118 > Inside Uart to Dist Loop
+22:42:58.118 > SPin CLockwise
+22:42:58.118 > Curr Localise State
+22:42:58.123 > 1
+22:42:58.123 > Inside Uart to Dist Loop
+22:42:58.123 > SPin CLockwise
+22:42:58.123 > Curr Localise State
+22:42:58.129 > 1
+22:42:58.129 > Inside Uart to Dist Loop
+22:42:58.129 > SPin CLockwise
+22:42:58.129 > Curr Localise State
+22:42:58.134 > 1
+22:42:58.134 > Inside Uart to Dist Loop
+22:42:58.134 > SPin CLockwise
+22:42:58.134 > Curr Localise State
+22:42:58.139 > 1
+22:42:58.139 > Inside Uart to Dist Loop
+22:42:58.139 > SPin CLockwise
+22:42:58.139 > Curr Localise State
+22:42:58.143 > 1
+22:42:58.151 > Inside Uart to Dist Loop
+22:42:58.151 > SPin CLockwise
+22:42:58.151 > Curr Localise State
+22:42:58.151 > 1
+22:42:58.156 > Inside Uart to Dist Loop
+22:42:58.156 > SPin CLockwise
+22:42:58.156 > Curr Localise State
+22:42:58.162 > 1
+22:42:58.162 > Inside Uart to Dist Loop
+22:42:58.162 > SPin CLockwise
+22:42:58.162 > Curr Localise State
+22:42:58.168 > 1
+22:42:58.168 > Inside Uart to Dist Loop
+22:42:58.168 > SPin CLockwise
+22:42:58.168 > Curr Localise State
+22:42:58.174 > 1
+22:42:58.174 > Inside Uart to Dist Loop
+22:42:58.174 > SPin CLockwise
+22:42:58.174 > Curr Localise State
+22:42:58.179 > 1
+22:42:58.179 > Inside Uart to Dist Loop
+22:42:58.179 > SPin CLockwise
+22:42:58.179 > Curr Localise State
+22:42:58.185 > 1
+22:42:58.185 > Inside Uart to Dist Loop
+22:42:58.185 > SPin CLockwise
+22:42:58.185 > Curr Localise State
+22:42:58.191 > 1
+22:42:58.191 > Inside Uart to Dist Loop
+22:42:58.191 > SPin CLockwise
+22:42:58.191 > Curr Localise State
+22:42:58.196 > 1
+22:42:58.196 > Inside Uart to Dist Loop
+22:42:58.196 > SPin CLockwise
+22:42:58.196 > Curr Localise State
+22:42:58.199 > 1
+22:42:58.208 > Inside Uart to Dist Loop
+22:42:58.208 > SPin CLockwise
+22:42:58.208 > Curr Localise State
+22:42:58.208 > 1
+22:42:58.213 > Inside Uart to Dist Loop
+22:42:58.213 > SPin CLockwise
+22:42:58.213 > Curr Localise State
+22:42:58.219 > 1
+22:42:58.219 > Inside Uart to Dist Loop
+22:42:58.219 > SPin CLockwise
+22:42:58.219 > Curr Localise State
+22:42:58.225 > 1
+22:42:58.225 > Inside Uart to Dist Loop
+22:42:58.225 > SPin CLockwise
+22:42:58.225 > Curr Localise State
+22:42:58.230 > 1
+22:42:58.230 > Inside Uart to Dist Loop
+22:42:58.230 > SPin CLockwise
+22:42:58.230 > Curr Localise State
+22:42:58.236 > 1
+22:42:58.236 > Inside Uart to Dist Loop
+22:42:58.236 > SPin CLockwise
+22:42:58.236 > Curr Localise State
+22:42:58.242 > 1
+22:42:58.242 > Inside Uart to Dist Loop
+22:42:58.242 > SPin CLockwise
+22:42:58.242 > Curr Localise State
+22:42:58.247 > 1
+22:42:58.247 > Inside Uart to Dist Loop
+22:42:58.247 > SPin CLockwise
+22:42:58.247 > Curr Localise State
+22:42:58.253 > 1
+22:42:58.253 > Inside Uart to Dist Loop
+22:42:58.253 > SPin CLockwise
+22:42:58.253 > Curr Localise State
+22:42:58.256 > 1
+22:42:58.264 > Inside Uart to Dist Loop
+22:42:58.264 > SPin CLockwise
+22:42:58.264 > Curr Localise State
+22:42:58.264 > 1
+22:42:58.269 > Inside Uart to Dist Loop
+22:42:58.269 > SPin CLockwise
+22:42:58.269 > Curr Localise State
+22:42:58.275 > 1
+22:42:58.275 > Inside Uart to Dist Loop
+22:42:58.275 > SPin CLockwise
+22:42:58.275 > Curr Localise State
+22:42:58.281 > 1
+22:42:58.281 > Inside Uart to Dist Loop
+22:42:58.281 > SPin CLockwise
+22:42:58.281 > Curr Localise State
+22:42:58.286 > 1
+22:42:58.286 > Inside Uart to Dist Loop
+22:42:58.286 > SPin CLockwise
+22:42:58.286 > Curr Localise State
+22:42:58.291 > 1
+22:42:58.291 > Inside Uart to Dist Loop
+22:42:58.291 > SPin CLockwise
+22:42:58.291 > Curr Localise State
+22:42:58.297 > 1
+22:42:58.297 > Inside Uart to Dist Loop
+22:42:58.297 > SPin CLockwise
+22:42:58.297 > Curr Localise State
+22:42:58.303 > 1
+22:42:58.303 > Inside Uart to Dist Loop
+22:42:58.303 > SPin CLockwise
+22:42:58.303 > Curr Localise State
+22:42:58.309 > 1
+22:42:58.309 > Inside Uart to Dist Loop
+22:42:58.309 > SPin CLockwise
+22:42:58.309 > Curr Localise State
+22:42:58.312 > 1
+22:42:58.320 > Inside Uart to Dist Loop
+22:42:58.320 > SPin CLockwise
+22:42:58.320 > Curr Localise State
+22:42:58.320 > 1
+22:42:58.325 > Inside Uart to Dist Loop
+22:42:58.325 > SPin CLockwise
+22:42:58.325 > Curr Localise State
+22:42:58.330 > 1
+22:42:58.330 > Inside Uart to Dist Loop
+22:42:58.330 > SPin CLockwise
+22:42:58.330 > Curr Localise State
+22:42:58.337 > 1
+22:42:58.337 > Inside Uart to Dist Loop
+22:42:58.337 > SPin CLockwise
+22:42:58.337 > Curr Localise State
+22:42:58.342 > 1
+22:42:58.342 > Inside Uart to Dist Loop
+22:42:58.342 > SPin CLockwise
+22:42:58.342 > Curr Localise State
+22:42:58.347 > 1
+22:42:58.347 > Inside Uart to Dist Loop
+22:42:58.347 > SPin CLockwise
+22:42:58.347 > Curr Localise State
+22:42:58.354 > 1
+22:42:58.354 > Inside Uart to Dist Loop
+22:42:58.354 > SPin CLockwise
+22:42:58.354 > Curr Localise State
+22:42:58.359 > 1
+22:42:58.359 > Inside Uart to Dist Loop
+22:42:58.359 > SPin CLockwise
+22:42:58.359 > Curr Localise State
+22:42:58.364 > 1
+22:42:58.364 > Inside Uart to Dist Loop
+22:42:58.364 > SPin CLockwise
+22:42:58.364 > Curr Localise State
+22:42:58.367 > 1
+22:42:58.376 > Inside Uart to Dist Loop
+22:42:58.376 > SPin CLockwise
+22:42:58.376 > Curr Localise State
+22:42:58.376 > 1
+22:42:58.381 > Inside Uart to Dist Loop
+22:42:58.381 > SPin CLockwise
+22:42:58.381 > Curr Localise State
+22:42:58.387 > 1
+22:42:58.387 > Inside Uart to Dist Loop
+22:42:58.387 > SPin CLockwise
+22:42:58.387 > Curr Localise State
+22:42:58.392 > 1
+22:42:58.392 > Inside Uart to Dist Loop
+22:42:58.392 > SPin CLockwise
+22:42:58.392 > Curr Localise State
+22:42:58.398 > 1
+22:42:58.398 > Inside Uart to Dist Loop
+22:42:58.398 > SPin CLockwise
+22:42:58.398 > Curr Localise State
+22:42:58.404 > 1
+22:42:58.404 > Inside Uart to Dist Loop
+22:42:58.404 > SPin CLockwise
+22:42:58.404 > Curr Localise State
+22:42:58.408 > 1
+22:42:58.408 > Inside Uart to Dist Loop
+22:42:58.408 > SPin CLockwise
+22:42:58.408 > Curr Localise State
+22:42:58.415 > 1
+22:42:58.415 > Inside Uart to Dist Loop
+22:42:58.415 > SPin CLockwise
+22:42:58.415 > Curr Localise State
+22:42:58.420 > 1
+22:42:58.420 > Inside Uart to Dist Loop
+22:42:58.420 > SPin CLockwise
+22:42:58.420 > Curr Localise State
+22:42:58.423 > 1
+22:42:58.432 > Inside Uart to Dist Loop
+22:42:58.432 > SPin CLockwise
+22:42:58.432 > Curr Localise State
+22:42:58.432 > 1
+22:42:58.437 > Inside Uart to Dist Loop
+22:42:58.437 > SPin CLockwise
+22:42:58.437 > Curr Localise State
+22:42:58.442 > 1
+22:42:58.442 > Inside Uart to Dist Loop
+22:42:58.442 > SPin CLockwise
+22:42:58.442 > Curr Localise State
+22:42:58.449 > 1
+22:42:58.449 > Inside Uart to Dist Loop
+22:42:58.449 > SPin CLockwise
+22:42:58.449 > Curr Localise State
+22:42:58.454 > 1
+22:42:58.454 > Inside Uart to Dist Loop
+22:42:58.454 > SPin CLockwise
+22:42:58.454 > Curr Localise State
+22:42:58.459 > 1
+22:42:58.459 > Inside Uart to Dist Loop
+22:42:58.459 > SPin CLockwise
+22:42:58.459 > Curr Localise State
+22:42:58.465 > 1
+22:42:58.465 > Inside Uart to Dist Loop
+22:42:58.465 > SPin CLockwise
+22:42:58.465 > Curr Localise State
+22:42:58.471 > 1
+22:42:58.471 > Inside Uart to Dist Loop
+22:42:58.471 > SPin CLockwise
+22:42:58.471 > Curr Localise State
+22:42:58.476 > 1
+22:42:58.476 > Inside Uart to Dist Loop
+22:42:58.476 > SPin CLockwise
+22:42:58.476 > Curr Localise State
+22:42:58.479 > 1
+22:42:58.488 > Inside Uart to Dist Loop
+22:42:58.488 > SPin CLockwise
+22:42:58.488 > Curr Localise State
+22:42:58.488 > 1
+22:42:58.493 > Inside Uart to Dist Loop
+22:42:58.493 > SPin CLockwise
+22:42:58.493 > Curr Localise State
+22:42:58.499 > 1
+22:42:58.499 > Inside Uart to Dist Loop
+22:42:58.499 > SPin CLockwise
+22:42:58.499 > Curr Localise State
+22:42:58.505 > 1
+22:42:58.505 > Inside Uart to Dist Loop
+22:42:58.505 > SPin CLockwise
+22:42:58.505 > Curr Localise State
+22:42:58.510 > 1
+22:42:58.510 > Inside Uart to Dist Loop
+22:42:58.510 > SPin CLockwise
+22:42:58.510 > Curr Localise State
+22:42:58.516 > 1
+22:42:58.516 > Inside Uart to Dist Loop
+22:42:58.516 > SPin CLockwise
+22:42:58.516 > Curr Localise State
+22:42:58.521 > 1
+22:42:58.521 > Inside Uart to Dist Loop
+22:42:58.521 > SPin CLockwise
+22:42:58.521 > Curr Localise State
+22:42:58.527 > 1
+22:42:58.527 > Inside Uart to Dist Loop
+22:42:58.527 > SPin CLockwise
+22:42:58.527 > Curr Localise State
+22:42:58.532 > 1
+22:42:58.532 > Inside Uart to Dist Loop
+22:42:58.532 > SPin CLockwise
+22:42:58.532 > Curr Localise State
+22:42:58.535 > 1
+22:42:58.543 > Inside Uart to Dist Loop
+22:42:58.543 > SPin CLockwise
+22:42:58.543 > Curr Localise State
+22:42:58.543 > 1
+22:42:58.549 > Inside Uart to Dist Loop
+22:42:58.549 > SPin CLockwise
+22:42:58.549 > Curr Localise State
+22:42:58.555 > 1
+22:42:58.555 > Inside Uart to Dist Loop
+22:42:58.555 > SPin CLockwise
+22:42:58.555 > Curr Localise State
+22:42:58.560 > 1
+22:42:58.560 > Inside Uart to Dist Loop
+22:42:58.560 > SPin CLockwise
+22:42:58.560 > Curr Localise State
+22:42:58.566 > 1
+22:42:58.566 > Inside Uart to Dist Loop
+22:42:58.566 > SPin CLockwise
+22:42:58.566 > Curr Localise State
+22:42:58.572 > 1
+22:42:58.572 > Inside Uart to Dist Loop
+22:42:58.572 > SPin CLockwise
+22:42:58.572 > Curr Localise State
+22:42:58.577 > 1
+22:42:58.577 > Inside Uart to Dist Loop
+22:42:58.577 > SPin CLockwise
+22:42:58.577 > Curr Localise State
+22:42:58.583 > 1
+22:42:58.583 > Inside Uart to Dist Loop
+22:42:58.583 > SPin CLockwise
+22:42:58.583 > Curr Localise State
+22:42:58.589 > 1
+22:42:58.589 > Inside Uart to Dist Loop
+22:42:58.589 > SPin CLockwise
+22:42:58.589 > Curr Localise State
+22:42:58.592 > 1
+22:42:58.600 > Inside Uart to Dist Loop
+22:42:58.600 > SPin CLockwise
+22:42:58.600 > Curr Localise State
+22:42:58.600 > 1
+22:42:58.606 > Inside Uart to Dist Loop
+22:42:58.606 > SPin CLockwise
+22:42:58.606 > Curr Localise State
+22:42:58.611 > 1
+22:42:58.611 > Inside Uart to Dist Loop
+22:42:58.611 > SPin CLockwise
+22:42:58.611 > Curr Localise State
+22:42:58.616 > 1
+22:42:58.616 > Inside Uart to Dist Loop
+22:42:58.616 > SPin CLockwise
+22:42:58.616 > Curr Localise State
+22:42:58.622 > 1
+22:42:58.622 > Inside Uart to Dist Loop
+22:42:58.622 > SPin CLockwise
+22:42:58.622 > Curr Localise State
+22:42:58.627 > 1
+22:42:58.627 > Inside Uart to Dist Loop
+22:42:58.627 > SPin CLockwise
+22:42:58.627 > Curr Localise State
+22:42:58.633 > 1
+22:42:58.633 > Inside Uart to Dist Loop
+22:42:58.633 > SPin CLockwise
+22:42:58.633 > Curr Localise State
+22:42:58.639 > 1
+22:42:58.639 > Inside Uart to Dist Loop
+22:42:58.639 > SPin CLockwise
+22:42:58.639 > Curr Localise State
+22:42:58.644 > 1
+22:42:58.644 > Inside Uart to Dist Loop
+22:42:58.644 > SPin CLockwise
+22:42:58.644 > Curr Localise State
+22:42:58.647 > 1
+22:42:58.655 > Inside Uart to Dist Loop
+22:42:58.655 > SPin CLockwise
+22:42:58.655 > Curr Localise State
+22:42:58.655 > 1
+22:42:58.661 > Inside Uart to Dist Loop
+22:42:58.661 > SPin CLockwise
+22:42:58.661 > Curr Localise State
+22:42:58.667 > 1
+22:42:58.667 > Inside Uart to Dist Loop
+22:42:58.667 > SPin CLockwise
+22:42:58.667 > Curr Localise State
+22:42:58.673 > 1
+22:42:58.673 > Inside Uart to Dist Loop
+22:42:58.673 > SPin CLockwise
+22:42:58.673 > Curr Localise State
+22:42:58.678 > 1
+22:42:58.678 > Inside Uart to Dist Loop
+22:42:58.678 > SPin CLockwise
+22:42:58.678 > Curr Localise State
+22:42:58.684 > 1
+22:42:58.684 > Inside Uart to Dist Loop
+22:42:58.684 > SPin CLockwise
+22:42:58.684 > Curr Localise State
+22:42:58.689 > 1
+22:42:58.689 > Inside Uart to Dist Loop
+22:42:58.689 > SPin CLockwise
+22:42:58.689 > Curr Localise State
+22:42:58.694 > 1
+22:42:58.694 > Inside Uart to Dist Loop
+22:42:58.694 > SPin CLockwise
+22:42:58.694 > Curr Localise State
+22:42:58.700 > 1
+22:42:58.700 > Inside Uart to Dist Loop
+22:42:58.700 > SPin CLockwise
+22:42:58.700 > Curr Localise State
+22:42:58.704 > 1
+22:42:58.711 > Inside Uart to Dist Loop
+22:42:58.711 > SPin CLockwise
+22:42:58.711 > Curr Localise State
+22:42:58.711 > 1
+22:42:58.717 > Inside Uart to Dist Loop
+22:42:58.717 > SPin CLockwise
+22:42:58.717 > Curr Localise State
+22:42:58.723 > 1
+22:42:58.723 > Inside Uart to Dist Loop
+22:42:58.723 > SPin CLockwise
+22:42:58.723 > Curr Localise State
+22:42:58.728 > 1
+22:42:58.728 > Inside Uart to Dist Loop
+22:42:58.728 > SPin CLockwise
+22:42:58.728 > Curr Localise State
+22:42:58.733 > 1
+22:42:58.733 > Inside Uart to Dist Loop
+22:42:58.733 > SPin CLockwise
+22:42:58.733 > Curr Localise State
+22:42:58.740 > 1
+22:42:58.740 > Inside Uart to Dist Loop
+22:42:58.740 > SPin CLockwise
+22:42:58.740 > Curr Localise State
+22:42:58.745 > 1
+22:42:58.745 > Inside Uart to Dist Loop
+22:42:58.745 > SPin CLockwise
+22:42:58.745 > Curr Localise State
+22:42:58.751 > 1
+22:42:58.751 > Inside Uart to Dist Loop
+22:42:58.751 > SPin CLockwise
+22:42:58.751 > Curr Localise State
+22:42:58.757 > 1
+22:42:58.757 > Inside Uart to Dist Loop
+22:42:58.757 > SPin CLockwise
+22:42:58.757 > Curr Localise State
+22:42:58.760 > 1
+22:42:58.768 > Inside Uart to Dist Loop
+22:42:58.768 > SPin CLockwise
+22:42:58.768 > Curr Localise State
+22:42:58.768 > 1
+22:42:58.773 > Inside Uart to Dist Loop
+22:42:58.773 > SPin CLockwise
+22:42:58.773 > Curr Localise State
+22:42:58.779 > 1
+22:42:58.779 > Inside Uart to Dist Loop
+22:42:58.779 > SPin CLockwise
+22:42:58.779 > Curr Localise State
+22:42:58.785 > 1
+22:42:58.785 > Inside Uart to Dist Loop
+22:42:58.785 > SPin CLockwise
+22:42:58.785 > Curr Localise State
+22:42:58.790 > 1
+22:42:58.790 > Inside Uart to Dist Loop
+22:42:58.790 > SPin CLockwise
+22:42:58.790 > Curr Localise State
+22:42:58.796 > 1
+22:42:58.796 > Inside Uart to Dist Loop
+22:42:58.796 > SPin CLockwise
+22:42:58.796 > Curr Localise State
+22:42:58.802 > 1
+22:42:58.802 > Inside Uart to Dist Loop
+22:42:58.802 > SPin CLockwise
+22:42:58.802 > Curr Localise State
+22:42:58.807 > 1
+22:42:58.807 > Inside Uart to Dist Loop
+22:42:58.807 > SPin CLockwise
+22:42:58.807 > Curr Localise State
+22:42:58.812 > 1
+22:42:58.812 > Inside Uart to Dist Loop
+22:42:58.812 > SPin CLockwise
+22:42:58.812 > Curr Localise State
+22:42:58.816 > 1
+22:42:58.824 > Inside Uart to Dist Loop
+22:42:58.824 > SPin CLockwise
+22:42:58.824 > Curr Localise State
+22:42:58.824 > 1
+22:42:58.829 > Inside Uart to Dist Loop
+22:42:58.829 > SPin CLockwise
+22:42:58.829 > Curr Localise State
+22:42:58.836 > 1
+22:42:58.836 > Inside Uart to Dist Loop
+22:42:58.836 > SPin CLockwise
+22:42:58.836 > Curr Localise State
+22:42:58.841 > 1
+22:42:58.841 > Inside Uart to Dist Loop
+22:42:58.841 > SPin CLockwise
+22:42:58.841 > Curr Localise State
+22:42:58.846 > 1
+22:42:58.846 > Inside Uart to Dist Loop
+22:42:58.846 > SPin CLockwise
+22:42:58.846 > Curr Localise State
+22:42:58.852 > 1
+22:42:58.852 > Inside Uart to Dist Loop
+22:42:58.852 > SPin CLockwise
+22:42:58.852 > Curr Localise State
+22:42:58.858 > 1
+22:42:58.858 > Inside Uart to Dist Loop
+22:42:58.858 > SPin CLockwise
+22:42:58.858 > Curr Localise State
+22:42:58.863 > 1
+22:42:58.863 > Inside Uart to Dist Loop
+22:42:58.863 > SPin CLockwise
+22:42:58.863 > Curr Localise State
+22:42:58.868 > 1
+22:42:58.868 > Inside Uart to Dist Loop
+22:42:58.868 > SPin CLockwise
+22:42:58.868 > Curr Localise State
+22:42:58.873 > 1
+22:42:58.880 > Inside Uart to Dist Loop
+22:42:58.880 > SPin CLockwise
+22:42:58.880 > Curr Localise State
+22:42:58.880 > 1
+22:42:58.886 > Inside Uart to Dist Loop
+22:42:58.886 > SPin CLockwise
+22:42:58.886 > Curr Localise State
+22:42:58.890 > 1
+22:42:58.890 > Inside Uart to Dist Loop
+22:42:58.890 > SPin CLockwise
+22:42:58.890 > Curr Localise State
+22:42:58.896 > 1
+22:42:58.896 > Inside Uart to Dist Loop
+22:42:58.896 > SPin CLockwise
+22:42:58.896 > Curr Localise State
+22:42:58.903 > 1
+22:42:58.903 > Inside Uart to Dist Loop
+22:42:58.903 > SPin CLockwise
+22:42:58.903 > Curr Localise State
+22:42:58.908 > 1
+22:42:58.908 > Inside Uart to Dist Loop
+22:42:58.908 > SPin CLockwise
+22:42:58.908 > Curr Localise State
+22:42:58.914 > 1
+22:42:58.914 > Inside Uart to Dist Loop
+22:42:58.914 > SPin CLockwise
+22:42:58.914 > Curr Localise State
+22:42:58.919 > 1
+22:42:58.919 > Inside Uart to Dist Loop
+22:42:58.919 > SPin CLockwise
+22:42:58.919 > Curr Localise State
+22:42:58.925 > 1
+22:42:58.925 > Inside Uart to Dist Loop
+22:42:58.925 > SPin CLockwise
+22:42:58.925 > Curr Localise State
+22:42:58.927 > 1
+22:42:58.936 > Inside Uart to Dist Loop
+22:42:58.936 > SPin CLockwise
+22:42:58.936 > Curr Localise State
+22:42:58.936 > 1
+22:42:58.942 > Inside Uart to Dist Loop
+22:42:58.942 > SPin CLockwise
+22:42:58.942 > Curr Localise State
+22:42:58.947 > 1
+22:42:58.947 > Inside Uart to Dist Loop
+22:42:58.947 > SPin CLockwise
+22:42:58.947 > Curr Localise State
+22:42:58.953 > 1
+22:42:58.953 > Inside Uart to Dist Loop
+22:42:58.953 > SPin CLockwise
+22:42:58.953 > Curr Localise State
+22:42:58.958 > 1
+22:42:58.958 > Inside Uart to Dist Loop
+22:42:58.958 > SPin CLockwise
+22:42:58.958 > Curr Localise State
+22:42:58.964 > 1
+22:42:58.964 > Inside Uart to Dist Loop
+22:42:58.964 > SPin CLockwise
+22:42:58.964 > Curr Localise State
+22:42:58.969 > 1
+22:42:58.969 > Inside Uart to Dist Loop
+22:42:58.969 > SPin CLockwise
+22:42:58.969 > Curr Localise State
+22:42:58.975 > 1
+22:42:58.975 > Inside Uart to Dist Loop
+22:42:58.975 > SPin CLockwise
+22:42:58.975 > Curr Localise State
+22:42:58.980 > 1
+22:42:58.980 > Inside Uart to Dist Loop
+22:42:58.980 > SPin CLockwise
+22:42:58.980 > Curr Localise State
+22:42:58.983 > 1
+22:42:58.992 > Inside Uart to Dist Loop
+22:42:58.993 > SPin CLockwise
+22:42:58.993 > Curr Localise State
+22:42:58.993 > 1
+22:42:58.998 > Inside Uart to Dist Loop
+22:42:58.998 > SPin CLockwise
+22:42:58.998 > Curr Localise State
+22:42:59.003 > 1
+22:42:59.003 > Inside Uart to Dist Loop
+22:42:59.003 > SPin CLockwise
+22:42:59.003 > Curr Localise State
+22:42:59.009 > 1
+22:42:59.009 > Inside Uart to Dist Loop
+22:42:59.009 > SPin CLockwise
+22:42:59.009 > Curr Localise State
+22:42:59.014 > 1
+22:42:59.014 > Inside Uart to Dist Loop
+22:42:59.014 > SPin CLockwise
+22:42:59.014 > Curr Localise State
+22:42:59.020 > 1
+22:42:59.020 > Inside Uart to Dist Loop
+22:42:59.020 > SPin CLockwise
+22:42:59.020 > Curr Localise State
+22:42:59.025 > 1
+22:42:59.025 > Inside Uart to Dist Loop
+22:42:59.025 > SPin CLockwise
+22:42:59.025 > Curr Localise State
+22:42:59.031 > 1
+22:42:59.031 > Inside Uart to Dist Loop
+22:42:59.031 > SPin CLockwise
+22:42:59.031 > Curr Localise State
+22:42:59.037 > 1
+22:42:59.037 > Inside Uart to Dist Loop
+22:42:59.037 > SPin CLockwise
+22:42:59.037 > Curr Localise State
+22:42:59.040 > 1
+22:42:59.047 > Inside Uart to Dist Loop
+22:42:59.048 > SPin CLockwise
+22:42:59.048 > Curr Localise State
+22:42:59.048 > 1
+22:42:59.054 > Inside Uart to Dist Loop
+22:42:59.054 > SPin CLockwise
+22:42:59.054 > Curr Localise State
+22:42:59.060 > 1
+22:42:59.060 > Inside Uart to Dist Loop
+22:42:59.060 > SPin CLockwise
+22:42:59.060 > Curr Localise State
+22:42:59.065 > 1
+22:42:59.065 > Inside Uart to Dist Loop
+22:42:59.065 > SPin CLockwise
+22:42:59.065 > Curr Localise State
+22:42:59.070 > 1
+22:42:59.070 > Inside Uart to Dist Loop
+22:42:59.070 > SPin CLockwise
+22:42:59.070 > Curr Localise State
+22:42:59.075 > 1
+22:42:59.075 > Inside Uart to Dist Loop
+22:42:59.075 > SPin CLockwise
+22:42:59.075 > Curr Localise State
+22:42:59.081 > 1
+22:42:59.081 > Inside Uart to Dist Loop
+22:42:59.081 > SPin CLockwise
+22:42:59.081 > Curr Localise State
+22:42:59.088 > 1
+22:42:59.088 > Inside Uart to Dist Loop
+22:42:59.088 > SPin CLockwise
+22:42:59.088 > Curr Localise State
+22:42:59.092 > 1
+22:42:59.092 > Inside Uart to Dist Loop
+22:42:59.092 > SPin CLockwise
+22:42:59.092 > Curr Localise State
+22:42:59.096 > 1
+22:42:59.104 > Inside Uart to Dist Loop
+22:42:59.105 > SPin CLockwise
+22:42:59.105 > Curr Localise State
+22:42:59.105 > 1
+22:42:59.110 > Inside Uart to Dist Loop
+22:42:59.110 > SPin CLockwise
+22:42:59.110 > Curr Localise State
+22:42:59.115 > 1
+22:42:59.115 > Inside Uart to Dist Loop
+22:42:59.115 > SPin CLockwise
+22:42:59.115 > Curr Localise State
+22:42:59.121 > 1
+22:42:59.121 > Inside Uart to Dist Loop
+22:42:59.121 > SPin CLockwise
+22:42:59.121 > Curr Localise State
+22:42:59.126 > 1
+22:42:59.126 > Inside Uart to Dist Loop
+22:42:59.126 > SPin CLockwise
+22:42:59.126 > Curr Localise State
+22:42:59.131 > 1
+22:42:59.131 > Inside Uart to Dist Loop
+22:42:59.131 > SPin CLockwise
+22:42:59.131 > Curr Localise State
+22:42:59.137 > 1
+22:42:59.137 > Inside Uart to Dist Loop
+22:42:59.137 > SPin CLockwise
+22:42:59.137 > Curr Localise State
+22:42:59.144 > 1
+22:42:59.144 > Inside Uart to Dist Loop
+22:42:59.144 > SPin CLockwise
+22:42:59.144 > Curr Localise State
+22:42:59.149 > 1
+22:42:59.149 > Inside Uart to Dist Loop
+22:42:59.149 > SPin CLockwise
+22:42:59.149 > Curr Localise State
+22:42:59.152 > 1
+22:42:59.160 > Inside Uart to Dist Loop
+22:42:59.161 > SPin CLockwise
+22:42:59.161 > Curr Localise State
+22:42:59.161 > 1
+22:42:59.166 > Inside Uart to Dist Loop
+22:42:59.166 > SPin CLockwise
+22:42:59.166 > Curr Localise State
+22:42:59.171 > 1
+22:42:59.171 > Inside Uart to Dist Loop
+22:42:59.171 > SPin CLockwise
+22:42:59.171 > Curr Localise State
+22:42:59.177 > 1
+22:42:59.177 > Inside Uart to Dist Loop
+22:42:59.177 > SPin CLockwise
+22:42:59.177 > Curr Localise State
+22:42:59.182 > 1
+22:42:59.182 > Inside Uart to Dist Loop
+22:42:59.182 > SPin CLockwise
+22:42:59.182 > Curr Localise State
+22:42:59.188 > 1
+22:42:59.188 > Inside Uart to Dist Loop
+22:42:59.188 > SPin CLockwise
+22:42:59.188 > Curr Localise State
+22:42:59.193 > 1
+22:42:59.193 > Inside Uart to Dist Loop
+22:42:59.193 > SPin CLockwise
+22:42:59.193 > Curr Localise State
+22:42:59.198 > 1
+22:42:59.198 > Inside Uart to Dist Loop
+22:42:59.198 > SPin CLockwise
+22:42:59.198 > Curr Localise State
+22:42:59.205 > 1
+22:42:59.205 > Inside Uart to Dist Loop
+22:42:59.205 > SPin CLockwise
+22:42:59.205 > Curr Localise State
+22:42:59.208 > 1
+22:42:59.215 > Inside Uart to Dist Loop
+22:42:59.216 > SPin CLockwise
+22:42:59.216 > Curr Localise State
+22:42:59.216 > 1
+22:42:59.221 > Inside Uart to Dist Loop
+22:42:59.221 > SPin CLockwise
+22:42:59.221 > Curr Localise State
+22:42:59.227 > 1
+22:42:59.227 > Inside Uart to Dist Loop
+22:42:59.227 > SPin CLockwise
+22:42:59.227 > Curr Localise State
+22:42:59.233 > 1
+22:42:59.233 > Inside Uart to Dist Loop
+22:42:59.233 > SPin CLockwise
+22:42:59.233 > Curr Localise State
+22:42:59.238 > 1
+22:42:59.238 > Inside Uart to Dist Loop
+22:42:59.238 > SPin CLockwise
+22:42:59.238 > Curr Localise State
+22:42:59.244 > 1
+22:42:59.244 > Inside Uart to Dist Loop
+22:42:59.244 > SPin CLockwise
+22:42:59.244 > Curr Localise State
+22:42:59.250 > 1
+22:42:59.250 > Inside Uart to Dist Loop
+22:42:59.250 > SPin CLockwise
+22:42:59.250 > Curr Localise State
+22:42:59.255 > 1
+22:42:59.255 > Inside Uart to Dist Loop
+22:42:59.255 > SPin CLockwise
+22:42:59.255 > Curr Localise State
+22:42:59.260 > 1
+22:42:59.260 > Inside Uart to Dist Loop
+22:42:59.260 > SPin CLockwise
+22:42:59.260 > Curr Localise State
+22:42:59.264 > 1
+22:42:59.272 > Inside Uart to Dist Loop
+22:42:59.273 > SPin CLockwise
+22:42:59.273 > Curr Localise State
+22:42:59.273 > 1
+22:42:59.277 > Inside Uart to Dist Loop
+22:42:59.277 > SPin CLockwise
+22:42:59.277 > Curr Localise State
+22:42:59.283 > 1
+22:42:59.283 > Inside Uart to Dist Loop
+22:42:59.283 > SPin CLockwise
+22:42:59.283 > Curr Localise State
+22:42:59.288 > 1
+22:42:59.288 > Inside Uart to Dist Loop
+22:42:59.288 > SPin CLockwise
+22:42:59.288 > Curr Localise State
+22:42:59.294 > 1
+22:42:59.294 > Inside Uart to Dist Loop
+22:42:59.294 > SPin CLockwise
+22:42:59.294 > Curr Localise State
+22:42:59.300 > 1
+22:42:59.300 > Inside Uart to Dist Loop
+22:42:59.300 > SPin CLockwise
+22:42:59.300 > Curr Localise State
+22:42:59.306 > 1
+22:42:59.306 > Inside Uart to Dist Loop
+22:42:59.306 > SPin CLockwise
+22:42:59.306 > Curr Localise State
+22:42:59.311 > 1
+22:42:59.311 > Inside Uart to Dist Loop
+22:42:59.311 > SPin CLockwise
+22:42:59.311 > Curr Localise State
+22:42:59.316 > 1
+22:42:59.316 > Inside Uart to Dist Loop
+22:42:59.316 > SPin CLockwise
+22:42:59.316 > Curr Localise State
+22:42:59.320 > 1
+22:42:59.327 > Inside Uart to Dist Loop
+22:42:59.328 > SPin CLockwise
+22:42:59.328 > Curr Localise State
+22:42:59.328 > 1
+22:42:59.333 > Inside Uart to Dist Loop
+22:42:59.333 > SPin CLockwise
+22:42:59.333 > Curr Localise State
+22:42:59.339 > 1
+22:42:59.339 > Inside Uart to Dist Loop
+22:42:59.339 > SPin CLockwise
+22:42:59.339 > Curr Localise State
+22:42:59.344 > 1
+22:42:59.344 > Inside Uart to Dist Loop
+22:42:59.344 > SPin CLockwise
+22:42:59.344 > Curr Localise State
+22:42:59.351 > 1
+22:42:59.351 > Inside Uart to Dist Loop
+22:42:59.351 > SPin CLockwise
+22:42:59.351 > Curr Localise State
+22:42:59.356 > 1
+22:42:59.356 > Inside Uart to Dist Loop
+22:42:59.356 > SPin CLockwise
+22:42:59.356 > Curr Localise State
+22:42:59.361 > 1
+22:42:59.361 > Inside Uart to Dist Loop
+22:42:59.361 > SPin CLockwise
+22:42:59.361 > Curr Localise State
+22:42:59.367 > 1
+22:42:59.367 > Inside Uart to Dist Loop
+22:42:59.367 > SPin CLockwise
+22:42:59.367 > Curr Localise State
+22:42:59.372 > 1
+22:42:59.372 > Inside Uart to Dist Loop
+22:42:59.372 > SPin CLockwise
+22:42:59.372 > Curr Localise State
+22:42:59.375 > 1
+22:42:59.384 > Inside Uart to Dist Loop
+22:42:59.384 > SPin CLockwise
+22:42:59.384 > Curr Localise State
+22:42:59.384 > 1
+22:42:59.390 > Inside Uart to Dist Loop
+22:42:59.390 > SPin CLockwise
+22:42:59.390 > Curr Localise State
+22:42:59.395 > 1
+22:42:59.395 > Inside Uart to Dist Loop
+22:42:59.395 > SPin CLockwise
+22:42:59.395 > Curr Localise State
+22:42:59.400 > 1
+22:42:59.400 > Inside Uart to Dist Loop
+22:42:59.400 > SPin CLockwise
+22:42:59.400 > Curr Localise State
+22:42:59.406 > 1
+22:42:59.406 > Inside Uart to Dist Loop
+22:42:59.406 > SPin CLockwise
+22:42:59.406 > Curr Localise State
+22:42:59.411 > 1
+22:42:59.411 > Inside Uart to Dist Loop
+22:42:59.411 > SPin CLockwise
+22:42:59.411 > Curr Localise State
+22:42:59.417 > 1
+22:42:59.417 > Inside Uart to Dist Loop
+22:42:59.417 > SPin CLockwise
+22:42:59.417 > Curr Localise State
+22:42:59.422 > 1
+22:42:59.422 > Inside Uart to Dist Loop
+22:42:59.422 > SPin CLockwise
+22:42:59.422 > Curr Localise State
+22:42:59.428 > 1
+22:42:59.428 > Inside Uart to Dist Loop
+22:42:59.428 > SPin CLockwise
+22:42:59.428 > Curr Localise State
+22:42:59.432 > 1
+22:42:59.439 > Inside Uart to Dist Loop
+22:42:59.439 > SPin CLockwise
+22:42:59.439 > Curr Localise State
+22:42:59.439 > 1
+22:42:59.445 > Inside Uart to Dist Loop
+22:42:59.445 > SPin CLockwise
+22:42:59.445 > Curr Localise State
+22:42:59.450 > 1
+22:42:59.450 > Inside Uart to Dist Loop
+22:42:59.450 > SPin CLockwise
+22:42:59.450 > Curr Localise State
+22:42:59.457 > 1
+22:42:59.457 > Inside Uart to Dist Loop
+22:42:59.457 > SPin CLockwise
+22:42:59.457 > Curr Localise State
+22:42:59.462 > 1
+22:42:59.462 > Inside Uart to Dist Loop
+22:42:59.462 > SPin CLockwise
+22:42:59.462 > Curr Localise State
+22:42:59.467 > 1
+22:42:59.467 > Inside Uart to Dist Loop
+22:42:59.467 > SPin CLockwise
+22:42:59.467 > Curr Localise State
+22:42:59.473 > 1
+22:42:59.473 > Inside Uart to Dist Loop
+22:42:59.473 > SPin CLockwise
+22:42:59.473 > Curr Localise State
+22:42:59.478 > 1
+22:42:59.478 > Inside Uart to Dist Loop
+22:42:59.478 > SPin CLockwise
+22:42:59.478 > Curr Localise State
+22:42:59.484 > 1
+22:42:59.484 > Inside Uart to Dist Loop
+22:42:59.484 > SPin CLockwise
+22:42:59.484 > Curr Localise State
+22:42:59.488 > 1
+22:42:59.496 > Inside Uart to Dist Loop
+22:42:59.496 > SPin CLockwise
+22:42:59.496 > Curr Localise State
+22:42:59.496 > 1
+22:42:59.502 > Inside Uart to Dist Loop
+22:42:59.502 > SPin CLockwise
+22:42:59.502 > Curr Localise State
+22:42:59.507 > 1
+22:42:59.507 > Inside Uart to Dist Loop
+22:42:59.507 > SPin CLockwise
+22:42:59.507 > Curr Localise State
+22:42:59.512 > 1
+22:42:59.512 > Inside Uart to Dist Loop
+22:42:59.512 > SPin CLockwise
+22:42:59.512 > Curr Localise State
+22:42:59.518 > 1
+22:42:59.518 > Inside Uart to Dist Loop
+22:42:59.518 > SPin CLockwise
+22:42:59.518 > Curr Localise State
+22:42:59.524 > 1
+22:42:59.524 > Inside Uart to Dist Loop
+22:42:59.524 > SPin CLockwise
+22:42:59.524 > Curr Localise State
+22:42:59.529 > 1
+22:42:59.529 > Inside Uart to Dist Loop
+22:42:59.529 > SPin CLockwise
+22:42:59.529 > Curr Localise State
+22:42:59.535 > 1
+22:42:59.535 > Inside Uart to Dist Loop
+22:42:59.535 > SPin CLockwise
+22:42:59.535 > Curr Localise State
+22:42:59.540 > 1
+22:42:59.540 > Inside Uart to Dist Loop
+22:42:59.540 > SPin CLockwise
+22:42:59.540 > Curr Localise State
+22:42:59.543 > 1
+22:42:59.552 > Inside Uart to Dist Loop
+22:42:59.553 > SPin CLockwise
+22:42:59.553 > Curr Localise State
+22:42:59.553 > 1
+22:42:59.558 > Inside Uart to Dist Loop
+22:42:59.558 > SPin CLockwise
+22:42:59.558 > Curr Localise State
+22:42:59.563 > 1
+22:42:59.563 > Inside Uart to Dist Loop
+22:42:59.563 > SPin CLockwise
+22:42:59.563 > Curr Localise State
+22:42:59.568 > 1
+22:42:59.568 > Inside Uart to Dist Loop
+22:42:59.568 > SPin CLockwise
+22:42:59.568 > Curr Localise State
+22:42:59.574 > 1
+22:42:59.574 > Inside Uart to Dist Loop
+22:42:59.574 > SPin CLockwise
+22:42:59.574 > Curr Localise State
+22:42:59.579 > 1
+22:42:59.579 > Inside Uart to Dist Loop
+22:42:59.579 > SPin CLockwise
+22:42:59.579 > Curr Localise State
+22:42:59.586 > 1
+22:42:59.586 > Inside Uart to Dist Loop
+22:42:59.586 > SPin CLockwise
+22:42:59.586 > Curr Localise State
+22:42:59.591 > 1
+22:42:59.591 > Inside Uart to Dist Loop
+22:42:59.591 > SPin CLockwise
+22:42:59.591 > Curr Localise State
+22:42:59.596 > 1
+22:42:59.596 > Inside Uart to Dist Loop
+22:42:59.596 > SPin CLockwise
+22:42:59.596 > Curr Localise State
+22:42:59.600 > 1
+22:42:59.608 > Inside Uart to Dist Loop
+22:42:59.608 > SPin CLockwise
+22:42:59.608 > Curr Localise State
+22:42:59.608 > 1
+22:42:59.613 > Inside Uart to Dist Loop
+22:42:59.613 > SPin CLockwise
+22:42:59.613 > Curr Localise State
+22:42:59.618 > 1
+22:42:59.618 > Inside Uart to Dist Loop
+22:42:59.618 > SPin CLockwise
+22:42:59.618 > Curr Localise State
+22:42:59.625 > 1
+22:42:59.625 > Inside Uart to Dist Loop
+22:42:59.625 > SPin CLockwise
+22:42:59.625 > Curr Localise State
+22:42:59.630 > 1
+22:42:59.630 > Inside Uart to Dist Loop
+22:42:59.630 > SPin CLockwise
+22:42:59.630 > Curr Localise State
+22:42:59.635 > 1
+22:42:59.635 > Inside Uart to Dist Loop
+22:42:59.635 > SPin CLockwise
+22:42:59.635 > Curr Localise State
+22:42:59.641 > 1
+22:42:59.641 > Inside Uart to Dist Loop
+22:42:59.641 > SPin CLockwise
+22:42:59.641 > Curr Localise State
+22:42:59.647 > 1
+22:42:59.647 > Inside Uart to Dist Loop
+22:42:59.647 > SPin CLockwise
+22:42:59.647 > Curr Localise State
+22:42:59.652 > 1
+22:42:59.652 > Inside Uart to Dist Loop
+22:42:59.652 > SPin CLockwise
+22:42:59.652 > Curr Localise State
+22:42:59.656 > 1
+22:42:59.664 > Inside Uart to Dist Loop
+22:42:59.664 > SPin CLockwise
+22:42:59.664 > Curr Localise State
+22:42:59.664 > 1
+22:42:59.670 > Inside Uart to Dist Loop
+22:42:59.670 > SPin CLockwise
+22:42:59.670 > Curr Localise State
+22:42:59.675 > 1
+22:42:59.675 > Inside Uart to Dist Loop
+22:42:59.675 > SPin CLockwise
+22:42:59.675 > Curr Localise State
+22:42:59.680 > 1
+22:42:59.680 > Inside Uart to Dist Loop
+22:42:59.680 > SPin CLockwise
+22:42:59.680 > Curr Localise State
+22:42:59.686 > 1
+22:42:59.686 > Inside Uart to Dist Loop
+22:42:59.686 > SPin CLockwise
+22:42:59.686 > Curr Localise State
+22:42:59.692 > 1
+22:42:59.692 > Inside Uart to Dist Loop
+22:42:59.692 > SPin CLockwise
+22:42:59.692 > Curr Localise State
+22:42:59.697 > 1
+22:42:59.697 > Inside Uart to Dist Loop
+22:42:59.697 > SPin CLockwise
+22:42:59.697 > Curr Localise State
+22:42:59.703 > 1
+22:42:59.703 > Inside Uart to Dist Loop
+22:42:59.703 > SPin CLockwise
+22:42:59.703 > Curr Localise State
+22:42:59.708 > 1
+22:42:59.708 > Inside Uart to Dist Loop
+22:42:59.708 > SPin CLockwise
+22:42:59.708 > Curr Localise State
+22:42:59.711 > 1
+22:42:59.720 > Inside Uart to Dist Loop
+22:42:59.721 > SPin CLockwise
+22:42:59.721 > Curr Localise State
+22:42:59.721 > 1
+22:42:59.726 > Inside Uart to Dist Loop
+22:42:59.726 > SPin CLockwise
+22:42:59.726 > Curr Localise State
+22:42:59.731 > 1
+22:42:59.731 > Inside Uart to Dist Loop
+22:42:59.731 > SPin CLockwise
+22:42:59.731 > Curr Localise State
+22:42:59.737 > 1
+22:42:59.737 > Inside Uart to Dist Loop
+22:42:59.737 > SPin CLockwise
+22:42:59.737 > Curr Localise State
+22:42:59.741 > 1
+22:42:59.741 > Inside Uart to Dist Loop
+22:42:59.741 > SPin CLockwise
+22:42:59.741 > Curr Localise State
+22:42:59.747 > 1
+22:42:59.747 > Inside Uart to Dist Loop
+22:42:59.747 > SPin CLockwise
+22:42:59.747 > Curr Localise State
+22:42:59.754 > 1
+22:42:59.754 > Inside Uart to Dist Loop
+22:42:59.754 > SPin CLockwise
+22:42:59.754 > Curr Localise State
+22:42:59.758 > 1
+22:42:59.758 > Inside Uart to Dist Loop
+22:42:59.758 > SPin CLockwise
+22:42:59.758 > Curr Localise State
+22:42:59.764 > 1
+22:42:59.764 > Inside Uart to Dist Loop
+22:42:59.764 > SPin CLockwise
+22:42:59.764 > Curr Localise State
+22:42:59.768 > 1
+22:42:59.776 > Inside Uart to Dist Loop
+22:42:59.776 > SPin CLockwise
+22:42:59.776 > Curr Localise State
+22:42:59.776 > 1
+22:42:59.781 > Inside Uart to Dist Loop
+22:42:59.781 > SPin CLockwise
+22:42:59.781 > Curr Localise State
+22:42:59.787 > 1
+22:42:59.787 > Inside Uart to Dist Loop
+22:42:59.787 > SPin CLockwise
+22:42:59.787 > Curr Localise State
+22:42:59.793 > 1
+22:42:59.793 > Inside Uart to Dist Loop
+22:42:59.793 > SPin CLockwise
+22:42:59.793 > Curr Localise State
+22:42:59.798 > 1
+22:42:59.798 > Inside Uart to Dist Loop
+22:42:59.798 > SPin CLockwise
+22:42:59.798 > Curr Localise State
+22:42:59.804 > 1
+22:42:59.804 > Inside Uart to Dist Loop
+22:42:59.804 > SPin CLockwise
+22:42:59.804 > Curr Localise State
+22:42:59.809 > 1
+22:42:59.809 > Inside Uart to Dist Loop
+22:42:59.809 > SPin CLockwise
+22:42:59.809 > Curr Localise State
+22:42:59.814 > 1
+22:42:59.814 > Inside Uart to Dist Loop
+22:42:59.814 > SPin CLockwise
+22:42:59.814 > Curr Localise State
+22:42:59.820 > 1
+22:42:59.820 > Inside Uart to Dist Loop
+22:42:59.820 > SPin CLockwise
+22:42:59.820 > Curr Localise State
+22:42:59.824 > 1
+22:42:59.832 > Inside Uart to Dist Loop
+22:42:59.832 > SPin CLockwise
+22:42:59.832 > Curr Localise State
+22:42:59.832 > 1
+22:42:59.838 > Inside Uart to Dist Loop
+22:42:59.838 > SPin CLockwise
+22:42:59.838 > Curr Localise State
+22:42:59.843 > 1
+22:42:59.843 > Inside Uart to Dist Loop
+22:42:59.843 > SPin CLockwise
+22:42:59.843 > Curr Localise State
+22:42:59.849 > 1
+22:42:59.849 > Inside Uart to Dist Loop
+22:42:59.849 > SPin CLockwise
+22:42:59.849 > Curr Localise State
+22:42:59.854 > 1
+22:42:59.854 > Inside Uart to Dist Loop
+22:42:59.854 > SPin CLockwise
+22:42:59.854 > Curr Localise State
+22:42:59.859 > 1
+22:42:59.859 > Inside Uart to Dist Loop
+22:42:59.859 > SPin CLockwise
+22:42:59.859 > Curr Localise State
+22:42:59.865 > 1
+22:42:59.865 > Inside Uart to Dist Loop
+22:42:59.865 > SPin CLockwise
+22:42:59.865 > Curr Localise State
+22:42:59.871 > 1
+22:42:59.871 > Inside Uart to Dist Loop
+22:42:59.871 > SPin CLockwise
+22:42:59.871 > Curr Localise State
+22:42:59.876 > 1
+22:42:59.876 > Inside Uart to Dist Loop
+22:42:59.876 > SPin CLockwise
+22:42:59.876 > Curr Localise State
+22:42:59.879 > 1
+22:42:59.887 > Inside Uart to Dist Loop
+22:42:59.887 > SPin CLockwise
+22:42:59.887 > Curr Localise State
+22:42:59.887 > 1
+22:42:59.893 > Inside Uart to Dist Loop
+22:42:59.893 > SPin CLockwise
+22:42:59.893 > Curr Localise State
+22:42:59.899 > 1
+22:42:59.899 > Inside Uart to Dist Loop
+22:42:59.899 > SPin CLockwise
+22:42:59.899 > Curr Localise State
+22:42:59.905 > 1
+22:42:59.905 > Inside Uart to Dist Loop
+22:42:59.905 > SPin CLockwise
+22:42:59.905 > Curr Localise State
+22:42:59.910 > 1
+22:42:59.910 > Inside Uart to Dist Loop
+22:42:59.910 > SPin CLockwise
+22:42:59.910 > Curr Localise State
+22:42:59.916 > 1
+22:42:59.916 > Inside Uart to Dist Loop
+22:42:59.916 > SPin CLockwise
+22:42:59.916 > Curr Localise State
+22:42:59.922 > 1
+22:42:59.922 > Inside Uart to Dist Loop
+22:42:59.922 > SPin CLockwise
+22:42:59.922 > Curr Localise State
+22:42:59.927 > 1
+22:42:59.927 > Inside Uart to Dist Loop
+22:42:59.927 > SPin CLockwise
+22:42:59.927 > Curr Localise State
+22:42:59.933 > 1
+22:42:59.933 > Inside Uart to Dist Loop
+22:42:59.933 > SPin CLockwise
+22:42:59.933 > Curr Localise State
+22:42:59.936 > 1
+22:42:59.944 > Inside Uart to Dist Loop
+22:42:59.944 > SPin CLockwise
+22:42:59.944 > Curr Localise State
+22:42:59.944 > 1
+22:42:59.949 > Inside Uart to Dist Loop
+22:42:59.949 > SPin CLockwise
+22:42:59.949 > Curr Localise State
+22:42:59.955 > 1
+22:42:59.955 > Inside Uart to Dist Loop
+22:42:59.955 > SPin CLockwise
+22:42:59.955 > Curr Localise State
+22:42:59.960 > 1
+22:42:59.960 > Inside Uart to Dist Loop
+22:42:59.960 > SPin CLockwise
+22:42:59.960 > Curr Localise State
+22:42:59.966 > 1
+22:42:59.966 > Inside Uart to Dist Loop
+22:42:59.966 > SPin CLockwise
+22:42:59.966 > Curr Localise State
+22:42:59.971 > 1
+22:42:59.971 > Inside Uart to Dist Loop
+22:42:59.971 > SPin CLockwise
+22:42:59.971 > Curr Localise State
+22:42:59.977 > 1
+22:42:59.977 > Inside Uart to Dist Loop
+22:42:59.977 > SPin CLockwise
+22:42:59.977 > Curr Localise State
+22:42:59.983 > 1
+22:42:59.983 > Inside Uart to Dist Loop
+22:42:59.983 > SPin CLockwise
+22:42:59.983 > Curr Localise State
+22:42:59.989 > 1
+22:42:59.989 > Inside Uart to Dist Loop
+22:42:59.989 > SPin CLockwise
+22:42:59.989 > Curr Localise State
+22:42:59.992 > 1
+22:43:00.000 > Inside Uart to Dist Loop
+22:43:00.000 > SPin CLockwise
+22:43:00.000 > Curr Localise State
+22:43:00.000 > 1
+22:43:00.006 > Inside Uart to Dist Loop
+22:43:00.006 > SPin CLockwise
+22:43:00.006 > Curr Localise State
+22:43:00.011 > 1
+22:43:00.011 > Inside Uart to Dist Loop
+22:43:00.011 > SPin CLockwise
+22:43:00.011 > Curr Localise State
+22:43:00.016 > 1
+22:43:00.016 > Inside Uart to Dist Loop
+22:43:00.016 > SPin CLockwise
+22:43:00.016 > Curr Localise State
+22:43:00.022 > 1
+22:43:00.022 > Inside Uart to Dist Loop
+22:43:00.022 > SPin CLockwise
+22:43:00.022 > Curr Localise State
+22:43:00.027 > 1
+22:43:00.027 > Inside Uart to Dist Loop
+22:43:00.027 > SPin CLockwise
+22:43:00.027 > Curr Localise State
+22:43:00.033 > 1
+22:43:00.033 > Inside Uart to Dist Loop
+22:43:00.033 > SPin CLockwise
+22:43:00.033 > Curr Localise State
+22:43:00.038 > 1
+22:43:00.038 > Inside Uart to Dist Loop
+22:43:00.038 > SPin CLockwise
+22:43:00.038 > Curr Localise State
+22:43:00.044 > 1
+22:43:00.044 > Inside Uart to Dist Loop
+22:43:00.044 > SPin CLockwise
+22:43:00.044 > Curr Localise State
+22:43:00.047 > 1
+22:43:00.055 > Inside Uart to Dist Loop
+22:43:00.056 > SPin CLockwise
+22:43:00.056 > Curr Localise State
+22:43:00.056 > 1
+22:43:00.061 > Inside Uart to Dist Loop
+22:43:00.061 > SPin CLockwise
+22:43:00.061 > Curr Localise State
+22:43:00.067 > 1
+22:43:00.067 > Inside Uart to Dist Loop
+22:43:00.067 > SPin CLockwise
+22:43:00.067 > Curr Localise State
+22:43:00.072 > 1
+22:43:00.072 > Inside Uart to Dist Loop
+22:43:00.072 > SPin CLockwise
+22:43:00.072 > Curr Localise State
+22:43:00.077 > 1
+22:43:00.077 > Inside Uart to Dist Loop
+22:43:00.077 > SPin CLockwise
+22:43:00.077 > Curr Localise State
+22:43:00.084 > 1
+22:43:00.084 > Inside Uart to Dist Loop
+22:43:00.084 > SPin CLockwise
+22:43:00.084 > Curr Localise State
+22:43:00.090 > 1
+22:43:00.090 > Inside Uart to Dist Loop
+22:43:00.090 > SPin CLockwise
+22:43:00.090 > Curr Localise State
+22:43:00.095 > 1
+22:43:00.095 > Inside Uart to Dist Loop
+22:43:00.095 > SPin CLockwise
+22:43:00.095 > Curr Localise State
+22:43:00.100 > 1
+22:43:00.100 > Inside Uart to Dist Loop
+22:43:00.100 > SPin CLockwise
+22:43:00.100 > Curr Localise State
+22:43:00.104 > 1
+22:43:00.111 > Inside Uart to Dist Loop
+22:43:00.112 > SPin CLockwise
+22:43:00.112 > Curr Localise State
+22:43:00.112 > 1
+22:43:00.118 > Inside Uart to Dist Loop
+22:43:00.118 > SPin CLockwise
+22:43:00.118 > Curr Localise State
+22:43:00.123 > 1
+22:43:00.123 > Inside Uart to Dist Loop
+22:43:00.123 > SPin CLockwise
+22:43:00.123 > Curr Localise State
+22:43:00.128 > 1
+22:43:00.128 > Inside Uart to Dist Loop
+22:43:00.128 > SPin CLockwise
+22:43:00.128 > Curr Localise State
+22:43:00.135 > 1
+22:43:00.135 > Inside Uart to Dist Loop
+22:43:00.135 > SPin CLockwise
+22:43:00.135 > Curr Localise State
+22:43:00.140 > 1
+22:43:00.140 > Inside Uart to Dist Loop
+22:43:00.140 > SPin CLockwise
+22:43:00.140 > Curr Localise State
+22:43:00.145 > 1
+22:43:00.145 > Inside Uart to Dist Loop
+22:43:00.145 > SPin CLockwise
+22:43:00.145 > Curr Localise State
+22:43:00.151 > 1
+22:43:00.151 > Inside Uart to Dist Loop
+22:43:00.151 > SPin CLockwise
+22:43:00.151 > Curr Localise State
+22:43:00.157 > 1
+22:43:00.157 > Inside Uart to Dist Loop
+22:43:00.157 > SPin CLockwise
+22:43:00.157 > Curr Localise State
+22:43:00.160 > 1
+22:43:00.168 > Inside Uart to Dist Loop
+22:43:00.168 > SPin CLockwise
+22:43:00.168 > Curr Localise State
+22:43:00.168 > 1
+22:43:00.173 > Inside Uart to Dist Loop
+22:43:00.173 > SPin CLockwise
+22:43:00.173 > Curr Localise State
+22:43:00.178 > 1
+22:43:00.178 > Inside Uart to Dist Loop
+22:43:00.178 > SPin CLockwise
+22:43:00.178 > Curr Localise State
+22:43:00.185 > 1
+22:43:00.185 > Inside Uart to Dist Loop
+22:43:00.185 > SPin CLockwise
+22:43:00.185 > Curr Localise State
+22:43:00.190 > 1
+22:43:00.190 > Inside Uart to Dist Loop
+22:43:00.190 > SPin CLockwise
+22:43:00.190 > Curr Localise State
+22:43:00.195 > 1
+22:43:00.195 > Inside Uart to Dist Loop
+22:43:00.195 > SPin CLockwise
+22:43:00.195 > Curr Localise State
+22:43:00.202 > 1
+22:43:00.202 > Inside Uart to Dist Loop
+22:43:00.202 > SPin CLockwise
+22:43:00.202 > Curr Localise State
+22:43:00.206 > 1
+22:43:00.206 > Inside Uart to Dist Loop
+22:43:00.206 > SPin CLockwise
+22:43:00.206 > Curr Localise State
+22:43:00.212 > 1
+22:43:00.212 > Inside Uart to Dist Loop
+22:43:00.212 > SPin CLockwise
+22:43:00.212 > Curr Localise State
+22:43:00.216 > 1
+22:43:00.223 > Inside Uart to Dist Loop
+22:43:00.224 > SPin CLockwise
+22:43:00.224 > Curr Localise State
+22:43:00.224 > 1
+22:43:00.229 > Inside Uart to Dist Loop
+22:43:00.229 > SPin CLockwise
+22:43:00.229 > Curr Localise State
+22:43:00.235 > 1
+22:43:00.235 > Inside Uart to Dist Loop
+22:43:00.235 > SPin CLockwise
+22:43:00.235 > Curr Localise State
+22:43:00.240 > 1
+22:43:00.240 > Inside Uart to Dist Loop
+22:43:00.240 > SPin CLockwise
+22:43:00.240 > Curr Localise State
+22:43:00.246 > 1
+22:43:00.246 > Inside Uart to Dist Loop
+22:43:00.246 > SPin CLockwise
+22:43:00.246 > Curr Localise State
+22:43:00.251 > 1
+22:43:00.251 > Inside Uart to Dist Loop
+22:43:00.251 > SPin CLockwise
+22:43:00.251 > Curr Localise State
+22:43:00.257 > 1
+22:43:00.257 > Inside Uart to Dist Loop
+22:43:00.257 > SPin CLockwise
+22:43:00.257 > Curr Localise State
+22:43:00.262 > 1
+22:43:00.262 > Inside Uart to Dist Loop
+22:43:00.262 > SPin CLockwise
+22:43:00.262 > Curr Localise State
+22:43:00.268 > 1
+22:43:00.268 > Inside Uart to Dist Loop
+22:43:00.268 > SPin CLockwise
+22:43:00.268 > Curr Localise State
+22:43:00.271 > 1
+22:43:00.279 > Inside Uart to Dist Loop
+22:43:00.280 > SPin CLockwise
+22:43:00.280 > Curr Localise State
+22:43:00.280 > 1
+22:43:00.285 > Inside Uart to Dist Loop
+22:43:00.285 > SPin CLockwise
+22:43:00.285 > Curr Localise State
+22:43:00.291 > 1
+22:43:00.291 > Inside Uart to Dist Loop
+22:43:00.291 > SPin CLockwise
+22:43:00.291 > Curr Localise State
+22:43:00.296 > 1
+22:43:00.296 > Inside Uart to Dist Loop
+22:43:00.296 > SPin CLockwise
+22:43:00.296 > Curr Localise State
+22:43:00.302 > 1
+22:43:00.302 > Inside Uart to Dist Loop
+22:43:00.302 > SPin CLockwise
+22:43:00.302 > Curr Localise State
+22:43:00.307 > 1
+22:43:00.307 > Inside Uart to Dist Loop
+22:43:00.307 > SPin CLockwise
+22:43:00.307 > Curr Localise State
+22:43:00.313 > 1
+22:43:00.313 > Inside Uart to Dist Loop
+22:43:00.313 > SPin CLockwise
+22:43:00.313 > Curr Localise State
+22:43:00.318 > 1
+22:43:00.318 > Inside Uart to Dist Loop
+22:43:00.318 > SPin CLockwise
+22:43:00.318 > Curr Localise State
+22:43:00.324 > 1
+22:43:00.324 > Inside Uart to Dist Loop
+22:43:00.324 > SPin CLockwise
+22:43:00.324 > Curr Localise State
+22:43:00.327 > 1
+22:43:00.335 > Inside Uart to Dist Loop
+22:43:00.335 > SPin CLockwise
+22:43:00.335 > Curr Localise State
+22:43:00.335 > 1
+22:43:00.341 > Inside Uart to Dist Loop
+22:43:00.341 > SPin CLockwise
+22:43:00.341 > Curr Localise State
+22:43:00.347 > 1
+22:43:00.347 > Inside Uart to Dist Loop
+22:43:00.347 > SPin CLockwise
+22:43:00.347 > Curr Localise State
+22:43:00.352 > 1
+22:43:00.352 > Inside Uart to Dist Loop
+22:43:00.352 > SPin CLockwise
+22:43:00.352 > Curr Localise State
+22:43:00.357 > 1
+22:43:00.357 > Inside Uart to Dist Loop
+22:43:00.357 > SPin CLockwise
+22:43:00.357 > Curr Localise State
+22:43:00.363 > 1
+22:43:00.363 > Inside Uart to Dist Loop
+22:43:00.363 > SPin CLockwise
+22:43:00.363 > Curr Localise State
+22:43:00.369 > 1
+22:43:00.369 > Inside Uart to Dist Loop
+22:43:00.369 > SPin CLockwise
+22:43:00.369 > Curr Localise State
+22:43:00.375 > 1
+22:43:00.375 > Inside Uart to Dist Loop
+22:43:00.375 > SPin CLockwise
+22:43:00.375 > Curr Localise State
+22:43:00.380 > 1
+22:43:00.380 > Inside Uart to Dist Loop
+22:43:00.380 > SPin CLockwise
+22:43:00.380 > Curr Localise State
+22:43:00.384 > 1
+22:43:00.392 > Inside Uart to Dist Loop
+22:43:00.392 > SPin CLockwise
+22:43:00.392 > Curr Localise State
+22:43:00.392 > 1
+22:43:00.397 > Inside Uart to Dist Loop
+22:43:00.397 > SPin CLockwise
+22:43:00.397 > Curr Localise State
+22:43:00.403 > 1
+22:43:00.403 > Inside Uart to Dist Loop
+22:43:00.403 > SPin CLockwise
+22:43:00.403 > Curr Localise State
+22:43:00.409 > 1
+22:43:00.409 > Inside Uart to Dist Loop
+22:43:00.409 > SPin CLockwise
+22:43:00.409 > Curr Localise State
+22:43:00.414 > 1
+22:43:00.414 > Inside Uart to Dist Loop
+22:43:00.414 > SPin CLockwise
+22:43:00.414 > Curr Localise State
+22:43:00.420 > 1
+22:43:00.420 > Inside Uart to Dist Loop
+22:43:00.420 > SPin CLockwise
+22:43:00.420 > Curr Localise State
+22:43:00.425 > 1
+22:43:00.425 > Inside Uart to Dist Loop
+22:43:00.425 > SPin CLockwise
+22:43:00.425 > Curr Localise State
+22:43:00.431 > 1
+22:43:00.431 > Inside Uart to Dist Loop
+22:43:00.431 > SPin CLockwise
+22:43:00.431 > Curr Localise State
+22:43:00.436 > 1
+22:43:00.436 > Inside Uart to Dist Loop
+22:43:00.436 > SPin CLockwise
+22:43:00.436 > Curr Localise State
+22:43:00.439 > 1
+22:43:00.448 > Inside Uart to Dist Loop
+22:43:00.448 > SPin CLockwise
+22:43:00.448 > Curr Localise State
+22:43:00.448 > 1
+22:43:00.454 > Inside Uart to Dist Loop
+22:43:00.454 > SPin CLockwise
+22:43:00.454 > Curr Localise State
+22:43:00.460 > 1
+22:43:00.460 > Inside Uart to Dist Loop
+22:43:00.460 > SPin CLockwise
+22:43:00.460 > Curr Localise State
+22:43:00.465 > 1
+22:43:00.465 > Inside Uart to Dist Loop
+22:43:00.465 > SPin CLockwise
+22:43:00.465 > Curr Localise State
+22:43:00.470 > 1
+22:43:00.470 > Inside Uart to Dist Loop
+22:43:00.470 > SPin CLockwise
+22:43:00.470 > Curr Localise State
+22:43:00.476 > 1
+22:43:00.476 > Inside Uart to Dist Loop
+22:43:00.476 > SPin CLockwise
+22:43:00.476 > Curr Localise State
+22:43:00.481 > 1
+22:43:00.481 > Inside Uart to Dist Loop
+22:43:00.481 > SPin CLockwise
+22:43:00.481 > Curr Localise State
+22:43:00.487 > 1
+22:43:00.487 > Inside Uart to Dist Loop
+22:43:00.487 > SPin CLockwise
+22:43:00.487 > Curr Localise State
+22:43:00.492 > 1
+22:43:00.492 > Inside Uart to Dist Loop
+22:43:00.492 > SPin CLockwise
+22:43:00.492 > Curr Localise State
+22:43:00.496 > 1
+22:43:00.504 > Inside Uart to Dist Loop
+22:43:00.504 > SPin CLockwise
+22:43:00.504 > Curr Localise State
+22:43:00.504 > 1
+22:43:00.509 > Inside Uart to Dist Loop
+22:43:00.509 > SPin CLockwise
+22:43:00.509 > Curr Localise State
+22:43:00.515 > 1
+22:43:00.515 > Inside Uart to Dist Loop
+22:43:00.515 > SPin CLockwise
+22:43:00.515 > Curr Localise State
+22:43:00.521 > 1
+22:43:00.521 > Inside Uart to Dist Loop
+22:43:00.521 > SPin CLockwise
+22:43:00.521 > Curr Localise State
+22:43:00.526 > 1
+22:43:00.526 > Inside Uart to Dist Loop
+22:43:00.526 > SPin CLockwise
+22:43:00.526 > Curr Localise State
+22:43:00.532 > 1
+22:43:00.532 > Inside Uart to Dist Loop
+22:43:00.532 > SPin CLockwise
+22:43:00.532 > Curr Localise State
+22:43:00.537 > 1
+22:43:00.537 > Inside Uart to Dist Loop
+22:43:00.537 > SPin CLockwise
+22:43:00.537 > Curr Localise State
+22:43:00.543 > 1
+22:43:00.543 > Inside Uart to Dist Loop
+22:43:00.543 > SPin CLockwise
+22:43:00.543 > Curr Localise State
+22:43:00.548 > 1
+22:43:00.548 > Inside Uart to Dist Loop
+22:43:00.548 > SPin CLockwise
+22:43:00.548 > Curr Localise State
+22:43:00.551 > 1
+22:43:00.559 > Inside Uart to Dist Loop
+22:43:00.560 > SPin CLockwise
+22:43:00.560 > Curr Localise State
+22:43:00.560 > 1
+22:43:00.565 > Inside Uart to Dist Loop
+22:43:00.565 > SPin CLockwise
+22:43:00.565 > Curr Localise State
+22:43:00.572 > 1
+22:43:00.572 > Inside Uart to Dist Loop
+22:43:00.572 > SPin CLockwise
+22:43:00.572 > Curr Localise State
+22:43:00.577 > 1
+22:43:00.577 > Inside Uart to Dist Loop
+22:43:00.577 > SPin CLockwise
+22:43:00.577 > Curr Localise State
+22:43:00.582 > 1
+22:43:00.582 > Inside Uart to Dist Loop
+22:43:00.582 > SPin CLockwise
+22:43:00.582 > Curr Localise State
+22:43:00.588 > 1
+22:43:00.588 > Inside Uart to Dist Loop
+22:43:00.588 > SPin CLockwise
+22:43:00.588 > Curr Localise State
+22:43:00.594 > 1
+22:43:00.594 > Inside Uart to Dist Loop
+22:43:00.594 > SPin CLockwise
+22:43:00.594 > Curr Localise State
+22:43:00.599 > 1
+22:43:00.599 > Inside Uart to Dist Loop
+22:43:00.599 > SPin CLockwise
+22:43:00.599 > Curr Localise State
+22:43:00.605 > 1
+22:43:00.605 > Inside Uart to Dist Loop
+22:43:00.605 > SPin CLockwise
+22:43:00.605 > Curr Localise State
+22:43:00.609 > 1
+22:43:00.616 > Inside Uart to Dist Loop
+22:43:00.616 > SPin CLockwise
+22:43:00.616 > Curr Localise State
+22:43:00.616 > 1
+22:43:00.622 > Inside Uart to Dist Loop
+22:43:00.622 > SPin CLockwise
+22:43:00.622 > Curr Localise State
+22:43:00.630 > 1
+22:43:00.630 > Inside Uart to Dist Loop
+22:43:00.630 > SPin CLockwise
+22:43:00.630 > Curr Localise State
+22:43:00.633 > 1
+22:43:00.633 > Inside Uart to Dist Loop
+22:43:00.633 > SPin CLockwise
+22:43:00.633 > Curr Localise State
+22:43:00.638 > 1
+22:43:00.638 > Inside Uart to Dist Loop
+22:43:00.638 > SPin CLockwise
+22:43:00.638 > Curr Localise State
+22:43:00.644 > 1
+22:43:00.644 > Inside Uart to Dist Loop
+22:43:00.644 > SPin CLockwise
+22:43:00.644 > Curr Localise State
+22:43:00.649 > 1
+22:43:00.649 > Inside Uart to Dist Loop
+22:43:00.649 > SPin CLockwise
+22:43:00.649 > Curr Localise State
+22:43:00.655 > 1
+22:43:00.655 > Inside Uart to Dist Loop
+22:43:00.655 > SPin CLockwise
+22:43:00.655 > Curr Localise State
+22:43:00.661 > 1
+22:43:00.661 > Inside Uart to Dist Loop
+22:43:00.661 > SPin CLockwise
+22:43:00.661 > Curr Localise State
+22:43:00.664 > 1
+22:43:00.672 > Inside Uart to Dist Loop
+22:43:00.672 > SPin CLockwise
+22:43:00.672 > Curr Localise State
+22:43:00.672 > 1
+22:43:00.678 > Inside Uart to Dist Loop
+22:43:00.678 > SPin CLockwise
+22:43:00.678 > Curr Localise State
+22:43:00.683 > 1
+22:43:00.683 > Inside Uart to Dist Loop
+22:43:00.683 > SPin CLockwise
+22:43:00.683 > Curr Localise State
+22:43:00.689 > 1
+22:43:00.689 > Inside Uart to Dist Loop
+22:43:00.689 > SPin CLockwise
+22:43:00.689 > Curr Localise State
+22:43:00.694 > 1
+22:43:00.694 > Inside Uart to Dist Loop
+22:43:00.694 > SPin CLockwise
+22:43:00.694 > Curr Localise State
+22:43:00.700 > 1
+22:43:00.700 > Inside Uart to Dist Loop
+22:43:00.700 > SPin CLockwise
+22:43:00.700 > Curr Localise State
+22:43:00.706 > 1
+22:43:00.706 > Inside Uart to Dist Loop
+22:43:00.706 > SPin CLockwise
+22:43:00.706 > Curr Localise State
+22:43:00.711 > 1
+22:43:00.711 > Inside Uart to Dist Loop
+22:43:00.711 > SPin CLockwise
+22:43:00.711 > Curr Localise State
+22:43:00.717 > 1
+22:43:00.717 > Inside Uart to Dist Loop
+22:43:00.717 > SPin CLockwise
+22:43:00.717 > Curr Localise State
+22:43:00.719 > 1
+22:43:00.728 > Inside Uart to Dist Loop
+22:43:00.728 > SPin CLockwise
+22:43:00.728 > Curr Localise State
+22:43:00.728 > 1
+22:43:00.733 > Inside Uart to Dist Loop
+22:43:00.733 > SPin CLockwise
+22:43:00.733 > Curr Localise State
+22:43:00.740 > 1
+22:43:00.740 > Inside Uart to Dist Loop
+22:43:00.740 > SPin CLockwise
+22:43:00.740 > Curr Localise State
+22:43:00.744 > 1
+22:43:00.744 > Inside Uart to Dist Loop
+22:43:00.744 > SPin CLockwise
+22:43:00.744 > Curr Localise State
+22:43:00.750 > 1
+22:43:00.750 > Inside Uart to Dist Loop
+22:43:00.750 > SPin CLockwise
+22:43:00.750 > Curr Localise State
+22:43:00.756 > 1
+22:43:00.756 > Inside Uart to Dist Loop
+22:43:00.756 > SPin CLockwise
+22:43:00.756 > Curr Localise State
+22:43:00.761 > 1
+22:43:00.761 > Inside Uart to Dist Loop
+22:43:00.761 > SPin CLockwise
+22:43:00.761 > Curr Localise State
+22:43:00.766 > 1
+22:43:00.766 > Inside Uart to Dist Loop
+22:43:00.766 > SPin CLockwise
+22:43:00.766 > Curr Localise State
+22:43:00.773 > 1
+22:43:00.773 > Inside Uart to Dist Loop
+22:43:00.773 > SPin CLockwise
+22:43:00.773 > Curr Localise State
+22:43:00.776 > 1
+22:43:00.784 > Inside Uart to Dist Loop
+22:43:00.784 > SPin CLockwise
+22:43:00.784 > Curr Localise State
+22:43:00.784 > 1
+22:43:00.790 > Inside Uart to Dist Loop
+22:43:00.790 > SPin CLockwise
+22:43:00.790 > Curr Localise State
+22:43:00.795 > 1
+22:43:00.795 > Inside Uart to Dist Loop
+22:43:00.795 > SPin CLockwise
+22:43:00.795 > Curr Localise State
+22:43:00.801 > 1
+22:43:00.801 > Inside Uart to Dist Loop
+22:43:00.801 > SPin CLockwise
+22:43:00.801 > Curr Localise State
+22:43:00.806 > 1
+22:43:00.806 > Inside Uart to Dist Loop
+22:43:00.806 > SPin CLockwise
+22:43:00.806 > Curr Localise State
+22:43:00.812 > 1
+22:43:00.812 > Inside Uart to Dist Loop
+22:43:00.812 > SPin CLockwise
+22:43:00.812 > Curr Localise State
+22:43:00.818 > 1
+22:43:00.818 > Inside Uart to Dist Loop
+22:43:00.818 > SPin CLockwise
+22:43:00.818 > Curr Localise State
+22:43:00.823 > 1
+22:43:00.823 > Inside Uart to Dist Loop
+22:43:00.823 > SPin CLockwise
+22:43:00.823 > Curr Localise State
+22:43:00.828 > 1
+22:43:00.828 > Inside Uart to Dist Loop
+22:43:00.828 > SPin CLockwise
+22:43:00.828 > Curr Localise State
+22:43:00.832 > 1
+22:43:00.840 > Inside Uart to Dist Loop
+22:43:00.841 > SPin CLockwise
+22:43:00.841 > Curr Localise State
+22:43:00.841 > 1
+22:43:00.845 > Inside Uart to Dist Loop
+22:43:00.845 > SPin CLockwise
+22:43:00.845 > Curr Localise State
+22:43:00.852 > 1
+22:43:00.852 > Inside Uart to Dist Loop
+22:43:00.852 > SPin CLockwise
+22:43:00.852 > Curr Localise State
+22:43:00.856 > 1
+22:43:00.856 > Inside Uart to Dist Loop
+22:43:00.856 > SPin CLockwise
+22:43:00.856 > Curr Localise State
+22:43:00.862 > 1
+22:43:00.862 > Inside Uart to Dist Loop
+22:43:00.862 > SPin CLockwise
+22:43:00.862 > Curr Localise State
+22:43:00.867 > 1
+22:43:00.867 > Inside Uart to Dist Loop
+22:43:00.867 > SPin CLockwise
+22:43:00.867 > Curr Localise State
+22:43:00.873 > 1
+22:43:00.873 > Inside Uart to Dist Loop
+22:43:00.873 > SPin CLockwise
+22:43:00.873 > Curr Localise State
+22:43:00.878 > 1
+22:43:00.878 > Inside Uart to Dist Loop
+22:43:00.878 > SPin CLockwise
+22:43:00.878 > Curr Localise State
+22:43:00.884 > 1
+22:43:00.884 > Inside Uart to Dist Loop
+22:43:00.884 > SPin CLockwise
+22:43:00.884 > Curr Localise State
+22:43:00.888 > 1
+22:43:00.895 > Inside Uart to Dist Loop
+22:43:00.896 > SPin CLockwise
+22:43:00.896 > Curr Localise State
+22:43:00.896 > 1
+22:43:00.901 > Inside Uart to Dist Loop
+22:43:00.901 > SPin CLockwise
+22:43:00.901 > Curr Localise State
+22:43:00.907 > 1
+22:43:00.907 > Inside Uart to Dist Loop
+22:43:00.907 > SPin CLockwise
+22:43:00.907 > Curr Localise State
+22:43:00.912 > 1
+22:43:00.912 > Inside Uart to Dist Loop
+22:43:00.912 > SPin CLockwise
+22:43:00.912 > Curr Localise State
+22:43:00.919 > 1
+22:43:00.919 > Inside Uart to Dist Loop
+22:43:00.919 > SPin CLockwise
+22:43:00.919 > Curr Localise State
+22:43:00.923 > 1
+22:43:00.923 > Inside Uart to Dist Loop
+22:43:00.923 > SPin CLockwise
+22:43:00.923 > Curr Localise State
+22:43:00.929 > 1
+22:43:00.929 > Inside Uart to Dist Loop
+22:43:00.929 > SPin CLockwise
+22:43:00.929 > Curr Localise State
+22:43:00.935 > 1
+22:43:00.935 > Inside Uart to Dist Loop
+22:43:00.935 > SPin CLockwise
+22:43:00.935 > Curr Localise State
+22:43:00.941 > 1
+22:43:00.941 > Inside Uart to Dist Loop
+22:43:00.941 > SPin CLockwise
+22:43:00.941 > Curr Localise State
+22:43:00.944 > 1
+22:43:00.952 > Inside Uart to Dist Loop
+22:43:00.952 > SPin CLockwise
+22:43:00.952 > Curr Localise State
+22:43:00.952 > 1
+22:43:00.958 > Inside Uart to Dist Loop
+22:43:00.958 > SPin CLockwise
+22:43:00.958 > Curr Localise State
+22:43:00.963 > 1
+22:43:00.963 > Inside Uart to Dist Loop
+22:43:00.963 > SPin CLockwise
+22:43:00.963 > Curr Localise State
+22:43:00.969 > 1
+22:43:00.969 > Inside Uart to Dist Loop
+22:43:00.969 > SPin CLockwise
+22:43:00.969 > Curr Localise State
+22:43:00.974 > 1
+22:43:00.974 > Inside Uart to Dist Loop
+22:43:00.974 > SPin CLockwise
+22:43:00.974 > Curr Localise State
+22:43:00.979 > 1
+22:43:00.979 > Inside Uart to Dist Loop
+22:43:00.979 > SPin CLockwise
+22:43:00.979 > Curr Localise State
+22:43:00.985 > 1
+22:43:00.985 > Inside Uart to Dist Loop
+22:43:00.985 > SPin CLockwise
+22:43:00.985 > Curr Localise State
+22:43:00.991 > 1
+22:43:00.991 > Inside Uart to Dist Loop
+22:43:00.991 > SPin CLockwise
+22:43:00.991 > Curr Localise State
+22:43:00.995 > 1
+22:43:00.995 > Inside Uart to Dist Loop
+22:43:00.995 > SPin CLockwise
+22:43:00.995 > Curr Localise State
+22:43:01.000 > 1
+22:43:01.008 > Inside Uart to Dist Loop
+22:43:01.008 > SPin CLockwise
+22:43:01.008 > Curr Localise State
+22:43:01.008 > 1
+22:43:01.013 > Inside Uart to Dist Loop
+22:43:01.013 > SPin CLockwise
+22:43:01.013 > Curr Localise State
+22:43:01.019 > 1
+22:43:01.019 > Inside Uart to Dist Loop
+22:43:01.019 > SPin CLockwise
+22:43:01.019 > Curr Localise State
+22:43:01.024 > 1
+22:43:01.024 > Inside Uart to Dist Loop
+22:43:01.024 > SPin CLockwise
+22:43:01.024 > Curr Localise State
+22:43:01.030 > 1
+22:43:01.030 > Inside Uart to Dist Loop
+22:43:01.030 > SPin CLockwise
+22:43:01.030 > Curr Localise State
+22:43:01.035 > 1
+22:43:01.035 > Inside Uart to Dist Loop
+22:43:01.035 > SPin CLockwise
+22:43:01.035 > Curr Localise State
+22:43:01.041 > 1
+22:43:01.041 > Inside Uart to Dist Loop
+22:43:01.041 > SPin CLockwise
+22:43:01.041 > Curr Localise State
+22:43:01.047 > 1
+22:43:01.047 > Inside Uart to Dist Loop
+22:43:01.047 > SPin CLockwise
+22:43:01.047 > Curr Localise State
+22:43:01.052 > 1
+22:43:01.052 > Inside Uart to Dist Loop
+22:43:01.052 > SPin CLockwise
+22:43:01.052 > Curr Localise State
+22:43:01.056 > 1
+22:43:01.063 > Inside Uart to Dist Loop
+22:43:01.064 > SPin CLockwise
+22:43:01.064 > Curr Localise State
+22:43:01.064 > 1
+22:43:01.069 > Inside Uart to Dist Loop
+22:43:01.069 > SPin CLockwise
+22:43:01.069 > Curr Localise State
+22:43:01.075 > 1
+22:43:01.075 > Inside Uart to Dist Loop
+22:43:01.075 > SPin CLockwise
+22:43:01.075 > Curr Localise State
+22:43:01.080 > 1
+22:43:01.080 > Inside Uart to Dist Loop
+22:43:01.080 > SPin CLockwise
+22:43:01.080 > Curr Localise State
+22:43:01.087 > 1
+22:43:01.087 > Inside Uart to Dist Loop
+22:43:01.087 > SPin CLockwise
+22:43:01.087 > Curr Localise State
+22:43:01.091 > 1
+22:43:01.091 > Inside Uart to Dist Loop
+22:43:01.091 > SPin CLockwise
+22:43:01.091 > Curr Localise State
+22:43:01.097 > 1
+22:43:01.097 > Inside Uart to Dist Loop
+22:43:01.097 > SPin CLockwise
+22:43:01.097 > Curr Localise State
+22:43:01.102 > 1
+22:43:01.102 > Inside Uart to Dist Loop
+22:43:01.102 > SPin CLockwise
+22:43:01.102 > Curr Localise State
+22:43:01.108 > 1
+22:43:01.108 > Inside Uart to Dist Loop
+22:43:01.108 > SPin CLockwise
+22:43:01.108 > Curr Localise State
+22:43:01.111 > 1
+22:43:01.119 > Inside Uart to Dist Loop
+22:43:01.120 > SPin CLockwise
+22:43:01.120 > Curr Localise State
+22:43:01.120 > 1
+22:43:01.126 > Inside Uart to Dist Loop
+22:43:01.126 > SPin CLockwise
+22:43:01.126 > Curr Localise State
+22:43:01.131 > 1
+22:43:01.131 > Inside Uart to Dist Loop
+22:43:01.131 > SPin CLockwise
+22:43:01.131 > Curr Localise State
+22:43:01.137 > 1
+22:43:01.137 > Inside Uart to Dist Loop
+22:43:01.137 > SPin CLockwise
+22:43:01.137 > Curr Localise State
+22:43:01.142 > 1
+22:43:01.142 > Inside Uart to Dist Loop
+22:43:01.142 > SPin CLockwise
+22:43:01.142 > Curr Localise State
+22:43:01.147 > 1
+22:43:01.147 > Inside Uart to Dist Loop
+22:43:01.147 > SPin CLockwise
+22:43:01.147 > Curr Localise State
+22:43:01.153 > 1
+22:43:01.153 > Inside Uart to Dist Loop
+22:43:01.153 > SPin CLockwise
+22:43:01.153 > Curr Localise State
+22:43:01.159 > 1
+22:43:01.159 > Inside Uart to Dist Loop
+22:43:01.159 > SPin CLockwise
+22:43:01.159 > Curr Localise State
+22:43:01.164 > 1
+22:43:01.164 > Inside Uart to Dist Loop
+22:43:01.164 > SPin CLockwise
+22:43:01.164 > Curr Localise State
+22:43:01.167 > 1
+22:43:01.176 > Inside Uart to Dist Loop
+22:43:01.176 > SPin CLockwise
+22:43:01.176 > Curr Localise State
+22:43:01.176 > 1
+22:43:01.181 > Inside Uart to Dist Loop
+22:43:01.181 > SPin CLockwise
+22:43:01.181 > Curr Localise State
+22:43:01.186 > 1
+22:43:01.186 > Inside Uart to Dist Loop
+22:43:01.186 > SPin CLockwise
+22:43:01.186 > Curr Localise State
+22:43:01.193 > 1
+22:43:01.193 > Inside Uart to Dist Loop
+22:43:01.193 > SPin CLockwise
+22:43:01.193 > Curr Localise State
+22:43:01.198 > 1
+22:43:01.198 > Inside Uart to Dist Loop
+22:43:01.198 > SPin CLockwise
+22:43:01.198 > Curr Localise State
+22:43:01.204 > 1
+22:43:01.204 > Inside Uart to Dist Loop
+22:43:01.204 > SPin CLockwise
+22:43:01.204 > Curr Localise State
+22:43:01.209 > 1
+22:43:01.209 > Inside Uart to Dist Loop
+22:43:01.209 > SPin CLockwise
+22:43:01.209 > Curr Localise State
+22:43:01.215 > 1
+22:43:01.215 > Inside Uart to Dist Loop
+22:43:01.215 > SPin CLockwise
+22:43:01.215 > Curr Localise State
+22:43:01.220 > 1
+22:43:01.220 > Inside Uart to Dist Loop
+22:43:01.220 > SPin CLockwise
+22:43:01.220 > Curr Localise State
+22:43:01.223 > 1
+22:43:01.232 > Inside Uart to Dist Loop
+22:43:01.232 > SPin CLockwise
+22:43:01.232 > Curr Localise State
+22:43:01.232 > 1
+22:43:01.238 > Inside Uart to Dist Loop
+22:43:01.238 > SPin CLockwise
+22:43:01.238 > Curr Localise State
+22:43:01.243 > 1
+22:43:01.243 > Inside Uart to Dist Loop
+22:43:01.243 > SPin CLockwise
+22:43:01.243 > Curr Localise State
+22:43:01.248 > 1
+22:43:01.248 > Inside Uart to Dist Loop
+22:43:01.248 > SPin CLockwise
+22:43:01.248 > Curr Localise State
+22:43:01.255 > 1
+22:43:01.255 > Inside Uart to Dist Loop
+22:43:01.255 > SPin CLockwise
+22:43:01.255 > Curr Localise State
+22:43:01.260 > 1
+22:43:01.260 > Inside Uart to Dist Loop
+22:43:01.260 > SPin CLockwise
+22:43:01.260 > Curr Localise State
+22:43:01.266 > 1
+22:43:01.266 > Inside Uart to Dist Loop
+22:43:01.266 > SPin CLockwise
+22:43:01.266 > Curr Localise State
+22:43:01.271 > 1
+22:43:01.271 > Inside Uart to Dist Loop
+22:43:01.271 > SPin CLockwise
+22:43:01.271 > Curr Localise State
+22:43:01.276 > 1
+22:43:01.276 > Inside Uart to Dist Loop
+22:43:01.276 > SPin CLockwise
+22:43:01.276 > Curr Localise State
+22:43:01.279 > 1
+22:43:01.288 > Inside Uart to Dist Loop
+22:43:01.289 > SPin CLockwise
+22:43:01.289 > Curr Localise State
+22:43:01.289 > 1
+22:43:01.294 > Inside Uart to Dist Loop
+22:43:01.294 > SPin CLockwise
+22:43:01.294 > Curr Localise State
+22:43:01.299 > 1
+22:43:01.299 > Inside Uart to Dist Loop
+22:43:01.299 > SPin CLockwise
+22:43:01.299 > Curr Localise State
+22:43:01.305 > 1
+22:43:01.305 > Inside Uart to Dist Loop
+22:43:01.305 > SPin CLockwise
+22:43:01.305 > Curr Localise State
+22:43:01.310 > 1
+22:43:01.310 > Inside Uart to Dist Loop
+22:43:01.310 > SPin CLockwise
+22:43:01.310 > Curr Localise State
+22:43:01.315 > 1
+22:43:01.315 > Inside Uart to Dist Loop
+22:43:01.315 > SPin CLockwise
+22:43:01.315 > Curr Localise State
+22:43:01.322 > 1
+22:43:01.322 > Inside Uart to Dist Loop
+22:43:01.322 > SPin CLockwise
+22:43:01.322 > Curr Localise State
+22:43:01.327 > 1
+22:43:01.327 > Inside Uart to Dist Loop
+22:43:01.327 > SPin CLockwise
+22:43:01.327 > Curr Localise State
+22:43:01.332 > 1
+22:43:01.332 > Inside Uart to Dist Loop
+22:43:01.332 > SPin CLockwise
+22:43:01.332 > Curr Localise State
+22:43:01.336 > 1
+22:43:01.343 > Inside Uart to Dist Loop
+22:43:01.343 > SPin CLockwise
+22:43:01.343 > Curr Localise State
+22:43:01.343 > 1
+22:43:01.349 > Inside Uart to Dist Loop
+22:43:01.349 > SPin CLockwise
+22:43:01.349 > Curr Localise State
+22:43:01.354 > 1
+22:43:01.354 > Inside Uart to Dist Loop
+22:43:01.354 > SPin CLockwise
+22:43:01.354 > Curr Localise State
+22:43:01.361 > 1
+22:43:01.361 > Inside Uart to Dist Loop
+22:43:01.361 > SPin CLockwise
+22:43:01.361 > Curr Localise State
+22:43:01.367 > 1
+22:43:01.367 > Inside Uart to Dist Loop
+22:43:01.367 > SPin CLockwise
+22:43:01.367 > Curr Localise State
+22:43:01.372 > 1
+22:43:01.372 > Inside Uart to Dist Loop
+22:43:01.372 > SPin CLockwise
+22:43:01.372 > Curr Localise State
+22:43:01.377 > 1
+22:43:01.377 > Inside Uart to Dist Loop
+22:43:01.377 > SPin CLockwise
+22:43:01.377 > Curr Localise State
+22:43:01.383 > 1
+22:43:01.383 > Inside Uart to Dist Loop
+22:43:01.383 > SPin CLockwise
+22:43:01.383 > Curr Localise State
+22:43:01.388 > 1
+22:43:01.388 > Inside Uart to Dist Loop
+22:43:01.388 > SPin CLockwise
+22:43:01.388 > Curr Localise State
+22:43:01.392 > 1
+22:43:01.400 > Inside Uart to Dist Loop
+22:43:01.400 > SPin CLockwise
+22:43:01.400 > Curr Localise State
+22:43:01.400 > 1
+22:43:01.405 > Inside Uart to Dist Loop
+22:43:01.405 > SPin CLockwise
+22:43:01.405 > Curr Localise State
+22:43:01.411 > 1
+22:43:01.411 > Inside Uart to Dist Loop
+22:43:01.411 > SPin CLockwise
+22:43:01.411 > Curr Localise State
+22:43:01.417 > 1
+22:43:01.417 > Inside Uart to Dist Loop
+22:43:01.417 > SPin CLockwise
+22:43:01.417 > Curr Localise State
+22:43:01.422 > 1
+22:43:01.422 > Inside Uart to Dist Loop
+22:43:01.422 > SPin CLockwise
+22:43:01.422 > Curr Localise State
+22:43:01.427 > 1
+22:43:01.427 > Inside Uart to Dist Loop
+22:43:01.427 > SPin CLockwise
+22:43:01.427 > Curr Localise State
+22:43:01.433 > 1
+22:43:01.433 > Inside Uart to Dist Loop
+22:43:01.433 > SPin CLockwise
+22:43:01.433 > Curr Localise State
+22:43:01.438 > 1
+22:43:01.438 > Inside Uart to Dist Loop
+22:43:01.438 > SPin CLockwise
+22:43:01.438 > Curr Localise State
+22:43:01.444 > 1
+22:43:01.444 > Inside Uart to Dist Loop
+22:43:01.444 > SPin CLockwise
+22:43:01.444 > Curr Localise State
+22:43:01.447 > 1
+22:43:01.456 > Inside Uart to Dist Loop
+22:43:01.456 > SPin CLockwise
+22:43:01.456 > Curr Localise State
+22:43:01.456 > 1
+22:43:01.461 > Inside Uart to Dist Loop
+22:43:01.461 > SPin CLockwise
+22:43:01.461 > Curr Localise State
+22:43:01.467 > 1
+22:43:01.467 > Inside Uart to Dist Loop
+22:43:01.467 > SPin CLockwise
+22:43:01.467 > Curr Localise State
+22:43:01.473 > 1
+22:43:01.473 > Inside Uart to Dist Loop
+22:43:01.473 > SPin CLockwise
+22:43:01.473 > Curr Localise State
+22:43:01.478 > 1
+22:43:01.478 > Inside Uart to Dist Loop
+22:43:01.478 > SPin CLockwise
+22:43:01.478 > Curr Localise State
+22:43:01.483 > 1
+22:43:01.483 > Inside Uart to Dist Loop
+22:43:01.483 > SPin CLockwise
+22:43:01.483 > Curr Localise State
+22:43:01.489 > 1
+22:43:01.489 > Inside Uart to Dist Loop
+22:43:01.489 > SPin CLockwise
+22:43:01.489 > Curr Localise State
+22:43:01.494 > 1
+22:43:01.494 > Inside Uart to Dist Loop
+22:43:01.494 > SPin CLockwise
+22:43:01.494 > Curr Localise State
+22:43:01.500 > 1
+22:43:01.500 > Inside Uart to Dist Loop
+22:43:01.500 > SPin CLockwise
+22:43:01.500 > Curr Localise State
+22:43:01.503 > 1
+22:43:01.512 > Inside Uart to Dist Loop
+22:43:01.512 > SPin CLockwise
+22:43:01.512 > Curr Localise State
+22:43:01.512 > 1
+22:43:01.517 > Inside Uart to Dist Loop
+22:43:01.517 > SPin CLockwise
+22:43:01.517 > Curr Localise State
+22:43:01.523 > 1
+22:43:01.523 > Inside Uart to Dist Loop
+22:43:01.523 > SPin CLockwise
+22:43:01.523 > Curr Localise State
+22:43:01.528 > 1
+22:43:01.528 > Inside Uart to Dist Loop
+22:43:01.528 > SPin CLockwise
+22:43:01.528 > Curr Localise State
+22:43:01.534 > 1
+22:43:01.534 > Inside Uart to Dist Loop
+22:43:01.534 > SPin CLockwise
+22:43:01.534 > Curr Localise State
+22:43:01.539 > 1
+22:43:01.539 > Inside Uart to Dist Loop
+22:43:01.539 > SPin CLockwise
+22:43:01.539 > Curr Localise State
+22:43:01.545 > 1
+22:43:01.545 > Inside Uart to Dist Loop
+22:43:01.545 > SPin CLockwise
+22:43:01.545 > Curr Localise State
+22:43:01.551 > 1
+22:43:01.551 > Inside Uart to Dist Loop
+22:43:01.551 > SPin CLockwise
+22:43:01.551 > Curr Localise State
+22:43:01.556 > 1
+22:43:01.556 > Inside Uart to Dist Loop
+22:43:01.556 > SPin CLockwise
+22:43:01.556 > Curr Localise State
+22:43:01.559 > 1
+22:43:01.568 > Inside Uart to Dist Loop
+22:43:01.568 > SPin CLockwise
+22:43:01.568 > Curr Localise State
+22:43:01.568 > 1
+22:43:01.573 > Inside Uart to Dist Loop
+22:43:01.573 > SPin CLockwise
+22:43:01.573 > Curr Localise State
+22:43:01.579 > 1
+22:43:01.579 > Inside Uart to Dist Loop
+22:43:01.579 > SPin CLockwise
+22:43:01.579 > Curr Localise State
+22:43:01.584 > 1
+22:43:01.584 > Inside Uart to Dist Loop
+22:43:01.584 > SPin CLockwise
+22:43:01.584 > Curr Localise State
+22:43:01.590 > 1
+22:43:01.590 > Inside Uart to Dist Loop
+22:43:01.590 > SPin CLockwise
+22:43:01.590 > Curr Localise State
+22:43:01.595 > 1
+22:43:01.595 > Inside Uart to Dist Loop
+22:43:01.595 > SPin CLockwise
+22:43:01.595 > Curr Localise State
+22:43:01.601 > 1
+22:43:01.601 > Inside Uart to Dist Loop
+22:43:01.601 > SPin CLockwise
+22:43:01.601 > Curr Localise State
+22:43:01.606 > 1
+22:43:01.606 > Inside Uart to Dist Loop
+22:43:01.606 > SPin CLockwise
+22:43:01.606 > Curr Localise State
+22:43:01.612 > 1
+22:43:01.612 > Inside Uart to Dist Loop
+22:43:01.612 > SPin CLockwise
+22:43:01.612 > Curr Localise State
+22:43:01.615 > 1
+22:43:01.624 > Inside Uart to Dist Loop
+22:43:01.624 > SPin CLockwise
+22:43:01.624 > Curr Localise State
+22:43:01.624 > 1
+22:43:01.629 > Inside Uart to Dist Loop
+22:43:01.629 > SPin CLockwise
+22:43:01.629 > Curr Localise State
+22:43:01.635 > 1
+22:43:01.635 > Inside Uart to Dist Loop
+22:43:01.635 > SPin CLockwise
+22:43:01.635 > Curr Localise State
+22:43:01.641 > 1
+22:43:01.641 > Inside Uart to Dist Loop
+22:43:01.641 > SPin CLockwise
+22:43:01.641 > Curr Localise State
+22:43:01.646 > 1
+22:43:01.646 > Inside Uart to Dist Loop
+22:43:01.646 > SPin CLockwise
+22:43:01.646 > Curr Localise State
+22:43:01.652 > 1
+22:43:01.652 > Inside Uart to Dist Loop
+22:43:01.652 > SPin CLockwise
+22:43:01.652 > Curr Localise State
+22:43:01.657 > 1
+22:43:01.657 > Inside Uart to Dist Loop
+22:43:01.657 > SPin CLockwise
+22:43:01.657 > Curr Localise State
+22:43:01.663 > 1
+22:43:01.663 > Inside Uart to Dist Loop
+22:43:01.663 > SPin CLockwise
+22:43:01.663 > Curr Localise State
+22:43:01.669 > 1
+22:43:01.669 > Inside Uart to Dist Loop
+22:43:01.669 > SPin CLockwise
+22:43:01.669 > Curr Localise State
+22:43:01.672 > 1
+22:43:01.679 > Inside Uart to Dist Loop
+22:43:01.680 > SPin CLockwise
+22:43:01.680 > Curr Localise State
+22:43:01.680 > 1
+22:43:01.685 > Inside Uart to Dist Loop
+22:43:01.685 > SPin CLockwise
+22:43:01.685 > Curr Localise State
+22:43:01.692 > 1
+22:43:01.692 > Inside Uart to Dist Loop
+22:43:01.692 > SPin CLockwise
+22:43:01.692 > Curr Localise State
+22:43:01.696 > 1
+22:43:01.696 > Inside Uart to Dist Loop
+22:43:01.696 > SPin CLockwise
+22:43:01.696 > Curr Localise State
+22:43:01.702 > 1
+22:43:01.702 > Inside Uart to Dist Loop
+22:43:01.702 > SPin CLockwise
+22:43:01.702 > Curr Localise State
+22:43:01.708 > 1
+22:43:01.708 > Inside Uart to Dist Loop
+22:43:01.708 > SPin CLockwise
+22:43:01.708 > Curr Localise State
+22:43:01.713 > 1
+22:43:01.713 > Inside Uart to Dist Loop
+22:43:01.713 > SPin CLockwise
+22:43:01.713 > Curr Localise State
+22:43:01.719 > 1
+22:43:01.719 > Inside Uart to Dist Loop
+22:43:01.719 > SPin CLockwise
+22:43:01.719 > Curr Localise State
+22:43:01.724 > 1
+22:43:01.724 > Inside Uart to Dist Loop
+22:43:01.724 > SPin CLockwise
+22:43:01.724 > Curr Localise State
+22:43:01.727 > 1
+22:43:01.736 > Inside Uart to Dist Loop
+22:43:01.736 > SPin CLockwise
+22:43:01.736 > Curr Localise State
+22:43:01.736 > 1
+22:43:01.741 > Inside Uart to Dist Loop
+22:43:01.741 > SPin CLockwise
+22:43:01.741 > Curr Localise State
+22:43:01.746 > 1
+22:43:01.746 > Inside Uart to Dist Loop
+22:43:01.746 > SPin CLockwise
+22:43:01.746 > Curr Localise State
+22:43:01.753 > 1
+22:43:01.753 > Inside Uart to Dist Loop
+22:43:01.753 > SPin CLockwise
+22:43:01.753 > Curr Localise State
+22:43:01.758 > 1
+22:43:01.758 > Inside Uart to Dist Loop
+22:43:01.758 > SPin CLockwise
+22:43:01.758 > Curr Localise State
+22:43:01.764 > 1
+22:43:01.764 > Inside Uart to Dist Loop
+22:43:01.764 > SPin CLockwise
+22:43:01.764 > Curr Localise State
+22:43:01.770 > 1
+22:43:01.770 > Inside Uart to Dist Loop
+22:43:01.770 > SPin CLockwise
+22:43:01.770 > Curr Localise State
+22:43:01.775 > 1
+22:43:01.775 > Inside Uart to Dist Loop
+22:43:01.775 > SPin CLockwise
+22:43:01.775 > Curr Localise State
+22:43:01.780 > 1
+22:43:01.780 > Inside Uart to Dist Loop
+22:43:01.780 > SPin CLockwise
+22:43:01.780 > Curr Localise State
+22:43:01.784 > 1
+22:43:01.792 > Inside Uart to Dist Loop
+22:43:01.792 > SPin CLockwise
+22:43:01.792 > Curr Localise State
+22:43:01.792 > 1
+22:43:01.798 > Inside Uart to Dist Loop
+22:43:01.798 > SPin CLockwise
+22:43:01.798 > Curr Localise State
+22:43:01.804 > 1
+22:43:01.804 > Inside Uart to Dist Loop
+22:43:01.804 > SPin CLockwise
+22:43:01.804 > Curr Localise State
+22:43:01.809 > 1
+22:43:01.809 > Inside Uart to Dist Loop
+22:43:01.809 > SPin CLockwise
+22:43:01.809 > Curr Localise State
+22:43:01.814 > 1
+22:43:01.814 > Inside Uart to Dist Loop
+22:43:01.814 > SPin CLockwise
+22:43:01.814 > Curr Localise State
+22:43:01.820 > 1
+22:43:01.820 > Inside Uart to Dist Loop
+22:43:01.820 > SPin CLockwise
+22:43:01.820 > Curr Localise State
+22:43:01.825 > 1
+22:43:01.825 > Inside Uart to Dist Loop
+22:43:01.825 > SPin CLockwise
+22:43:01.825 > Curr Localise State
+22:43:01.831 > 1
+22:43:01.831 > Inside Uart to Dist Loop
+22:43:01.831 > SPin CLockwise
+22:43:01.831 > Curr Localise State
+22:43:01.837 > 1
+22:43:01.837 > Inside Uart to Dist Loop
+22:43:01.837 > SPin CLockwise
+22:43:01.837 > Curr Localise State
+22:43:01.839 > 1
+22:43:01.847 > Inside Uart to Dist Loop
+22:43:01.848 > SPin CLockwise
+22:43:01.848 > Curr Localise State
+22:43:01.848 > 1
+22:43:01.853 > Inside Uart to Dist Loop
+22:43:01.853 > SPin CLockwise
+22:43:01.853 > Curr Localise State
+22:43:01.859 > 1
+22:43:01.859 > Inside Uart to Dist Loop
+22:43:01.859 > SPin CLockwise
+22:43:01.859 > Curr Localise State
+22:43:01.864 > 1
+22:43:01.864 > Inside Uart to Dist Loop
+22:43:01.864 > SPin CLockwise
+22:43:01.864 > Curr Localise State
+22:43:01.871 > 1
+22:43:01.871 > Inside Uart to Dist Loop
+22:43:01.871 > SPin CLockwise
+22:43:01.871 > Curr Localise State
+22:43:01.876 > 1
+22:43:01.876 > Inside Uart to Dist Loop
+22:43:01.876 > SPin CLockwise
+22:43:01.876 > Curr Localise State
+22:43:01.881 > 1
+22:43:01.881 > Inside Uart to Dist Loop
+22:43:01.881 > SPin CLockwise
+22:43:01.881 > Curr Localise State
+22:43:01.886 > 1
+22:43:01.886 > Inside Uart to Dist Loop
+22:43:01.886 > SPin CLockwise
+22:43:01.886 > Curr Localise State
+22:43:01.892 > 1
+22:43:01.892 > Inside Uart to Dist Loop
+22:43:01.892 > SPin CLockwise
+22:43:01.892 > Curr Localise State
+22:43:01.895 > 1
+22:43:01.903 > Inside Uart to Dist Loop
+22:43:01.903 > SPin CLockwise
+22:43:01.903 > Curr Localise State
+22:43:01.903 > 1
+22:43:01.909 > Inside Uart to Dist Loop
+22:43:01.909 > SPin CLockwise
+22:43:01.909 > Curr Localise State
+22:43:01.915 > 1
+22:43:01.915 > Inside Uart to Dist Loop
+22:43:01.915 > SPin CLockwise
+22:43:01.915 > Curr Localise State
+22:43:01.920 > 1
+22:43:01.920 > Inside Uart to Dist Loop
+22:43:01.920 > SPin CLockwise
+22:43:01.920 > Curr Localise State
+22:43:01.926 > 1
+22:43:01.926 > Inside Uart to Dist Loop
+22:43:01.926 > SPin CLockwise
+22:43:01.926 > Curr Localise State
+22:43:01.931 > 1
+22:43:01.931 > Inside Uart to Dist Loop
+22:43:01.931 > SPin CLockwise
+22:43:01.931 > Curr Localise State
+22:43:01.938 > 1
+22:43:01.938 > Inside Uart to Dist Loop
+22:43:01.938 > SPin CLockwise
+22:43:01.938 > Curr Localise State
+22:43:01.943 > 1
+22:43:01.943 > Inside Uart to Dist Loop
+22:43:01.943 > SPin CLockwise
+22:43:01.943 > Curr Localise State
+22:43:01.948 > 1
+22:43:01.948 > Inside Uart to Dist Loop
+22:43:01.948 > SPin CLockwise
+22:43:01.948 > Curr Localise State
+22:43:01.952 > 1
+22:43:01.960 > Inside Uart to Dist Loop
+22:43:01.960 > SPin CLockwise
+22:43:01.960 > Curr Localise State
+22:43:01.960 > 1
+22:43:01.966 > Inside Uart to Dist Loop
+22:43:01.966 > SPin CLockwise
+22:43:01.966 > Curr Localise State
+22:43:01.972 > 1
+22:43:01.972 > Inside Uart to Dist Loop
+22:43:01.972 > SPin CLockwise
+22:43:01.972 > Curr Localise State
+22:43:01.977 > 1
+22:43:01.977 > Inside Uart to Dist Loop
+22:43:01.977 > SPin CLockwise
+22:43:01.977 > Curr Localise State
+22:43:01.982 > 1
+22:43:01.982 > Inside Uart to Dist Loop
+22:43:01.982 > SPin CLockwise
+22:43:01.982 > Curr Localise State
+22:43:01.988 > 1
+22:43:01.988 > Inside Uart to Dist Loop
+22:43:01.988 > SPin CLockwise
+22:43:01.988 > Curr Localise State
+22:43:01.993 > 1
+22:43:01.993 > Inside Uart to Dist Loop
+22:43:01.993 > SPin CLockwise
+22:43:01.993 > Curr Localise State
+22:43:01.999 > 1
+22:43:01.999 > Inside Uart to Dist Loop
+22:43:01.999 > SPin CLockwise
+22:43:01.999 > Curr Localise State
+22:43:02.004 > 1
+22:43:02.004 > Inside Uart to Dist Loop
+22:43:02.004 > SPin CLockwise
+22:43:02.004 > Curr Localise State
+22:43:02.008 > 1
+22:43:02.015 > Inside Uart to Dist Loop
+22:43:02.015 > SPin CLockwise
+22:43:02.015 > Curr Localise State
+22:43:02.015 > 1
+22:43:02.021 > Inside Uart to Dist Loop
+22:43:02.021 > SPin CLockwise
+22:43:02.021 > Curr Localise State
+22:43:02.027 > 1
+22:43:02.027 > Inside Uart to Dist Loop
+22:43:02.027 > SPin CLockwise
+22:43:02.027 > Curr Localise State
+22:43:02.032 > 1
+22:43:02.032 > Inside Uart to Dist Loop
+22:43:02.032 > SPin CLockwise
+22:43:02.032 > Curr Localise State
+22:43:02.037 > 1
+22:43:02.037 > Inside Uart to Dist Loop
+22:43:02.037 > SPin CLockwise
+22:43:02.037 > Curr Localise State
+22:43:02.043 > 1
+22:43:02.043 > Inside Uart to Dist Loop
+22:43:02.043 > SPin CLockwise
+22:43:02.043 > Curr Localise State
+22:43:02.049 > 1
+22:43:02.049 > Inside Uart to Dist Loop
+22:43:02.049 > SPin CLockwise
+22:43:02.049 > Curr Localise State
+22:43:02.054 > 1
+22:43:02.054 > Inside Uart to Dist Loop
+22:43:02.054 > SPin CLockwise
+22:43:02.054 > Curr Localise State
+22:43:02.060 > 1
+22:43:02.060 > Inside Uart to Dist Loop
+22:43:02.060 > SPin CLockwise
+22:43:02.060 > Curr Localise State
+22:43:02.063 > 1
+22:43:02.071 > Inside Uart to Dist Loop
+22:43:02.071 > SPin CLockwise
+22:43:02.071 > Curr Localise State
+22:43:02.071 > 1
+22:43:02.077 > Inside Uart to Dist Loop
+22:43:02.077 > SPin CLockwise
+22:43:02.077 > Curr Localise State
+22:43:02.083 > 1
+22:43:02.083 > Inside Uart to Dist Loop
+22:43:02.083 > SPin CLockwise
+22:43:02.083 > Curr Localise State
+22:43:02.088 > 1
+22:43:02.088 > Inside Uart to Dist Loop
+22:43:02.088 > SPin CLockwise
+22:43:02.088 > Curr Localise State
+22:43:02.094 > 1
+22:43:02.094 > Inside Uart to Dist Loop
+22:43:02.094 > SPin CLockwise
+22:43:02.094 > Curr Localise State
+22:43:02.099 > 1
+22:43:02.099 > Inside Uart to Dist Loop
+22:43:02.099 > SPin CLockwise
+22:43:02.099 > Curr Localise State
+22:43:02.105 > 1
+22:43:02.105 > Inside Uart to Dist Loop
+22:43:02.105 > SPin CLockwise
+22:43:02.105 > Curr Localise State
+22:43:02.110 > 1
+22:43:02.110 > Inside Uart to Dist Loop
+22:43:02.110 > SPin CLockwise
+22:43:02.110 > Curr Localise State
+22:43:02.116 > 1
+22:43:02.116 > Inside Uart to Dist Loop
+22:43:02.116 > SPin CLockwise
+22:43:02.116 > Curr Localise State
+22:43:02.119 > 1
+22:43:02.127 > Inside Uart to Dist Loop
+22:43:02.127 > SPin CLockwise
+22:43:02.127 > Curr Localise State
+22:43:02.127 > 1
+22:43:02.133 > Inside Uart to Dist Loop
+22:43:02.133 > SPin CLockwise
+22:43:02.133 > Curr Localise State
+22:43:02.139 > 1
+22:43:02.139 > Inside Uart to Dist Loop
+22:43:02.139 > SPin CLockwise
+22:43:02.139 > Curr Localise State
+22:43:02.144 > 1
+22:43:02.144 > Inside Uart to Dist Loop
+22:43:02.144 > SPin CLockwise
+22:43:02.144 > Curr Localise State
+22:43:02.150 > 1
+22:43:02.150 > Inside Uart to Dist Loop
+22:43:02.150 > SPin CLockwise
+22:43:02.150 > Curr Localise State
+22:43:02.155 > 1
+22:43:02.155 > Inside Uart to Dist Loop
+22:43:02.155 > SPin CLockwise
+22:43:02.155 > Curr Localise State
+22:43:02.161 > 1
+22:43:02.161 > Inside Uart to Dist Loop
+22:43:02.161 > SPin CLockwise
+22:43:02.161 > Curr Localise State
+22:43:02.166 > 1
+22:43:02.166 > Inside Uart to Dist Loop
+22:43:02.166 > SPin CLockwise
+22:43:02.166 > Curr Localise State
+22:43:02.172 > 1
+22:43:02.172 > Inside Uart to Dist Loop
+22:43:02.172 > SPin CLockwise
+22:43:02.172 > Curr Localise State
+22:43:02.176 > 1
+22:43:02.184 > Inside Uart to Dist Loop
+22:43:02.185 > SPin CLockwise
+22:43:02.185 > Curr Localise State
+22:43:02.185 > 1
+22:43:02.189 > Inside Uart to Dist Loop
+22:43:02.189 > SPin CLockwise
+22:43:02.189 > Curr Localise State
+22:43:02.194 > 1
+22:43:02.194 > Inside Uart to Dist Loop
+22:43:02.194 > SPin CLockwise
+22:43:02.194 > Curr Localise State
+22:43:02.200 > 1
+22:43:02.200 > Inside Uart to Dist Loop
+22:43:02.200 > SPin CLockwise
+22:43:02.200 > Curr Localise State
+22:43:02.207 > 1
+22:43:02.207 > Inside Uart to Dist Loop
+22:43:02.207 > SPin CLockwise
+22:43:02.207 > Curr Localise State
+22:43:02.212 > 1
+22:43:02.212 > Inside Uart to Dist Loop
+22:43:02.212 > SPin CLockwise
+22:43:02.212 > Curr Localise State
+22:43:02.218 > 1
+22:43:02.218 > Inside Uart to Dist Loop
+22:43:02.218 > SPin CLockwise
+22:43:02.218 > Curr Localise State
+22:43:02.223 > 1
+22:43:02.223 > Inside Uart to Dist Loop
+22:43:02.223 > SPin CLockwise
+22:43:02.223 > Curr Localise State
+22:43:02.228 > 1
+22:43:02.228 > Inside Uart to Dist Loop
+22:43:02.228 > SPin CLockwise
+22:43:02.228 > Curr Localise State
+22:43:02.232 > 1
+22:43:02.240 > Inside Uart to Dist Loop
+22:43:02.240 > SPin CLockwise
+22:43:02.240 > Curr Localise State
+22:43:02.240 > 1
+22:43:02.245 > Inside Uart to Dist Loop
+22:43:02.245 > SPin CLockwise
+22:43:02.245 > Curr Localise State
+22:43:02.252 > 1
+22:43:02.252 > Inside Uart to Dist Loop
+22:43:02.252 > SPin CLockwise
+22:43:02.252 > Curr Localise State
+22:43:02.257 > 1
+22:43:02.257 > Inside Uart to Dist Loop
+22:43:02.257 > SPin CLockwise
+22:43:02.257 > Curr Localise State
+22:43:02.261 > 1
+22:43:02.261 > Inside Uart to Dist Loop
+22:43:02.261 > SPin CLockwise
+22:43:02.261 > Curr Localise State
+22:43:02.267 > 1
+22:43:02.267 > Inside Uart to Dist Loop
+22:43:02.267 > SPin CLockwise
+22:43:02.267 > Curr Localise State
+22:43:02.274 > 1
+22:43:02.274 > Inside Uart to Dist Loop
+22:43:02.274 > SPin CLockwise
+22:43:02.274 > Curr Localise State
+22:43:02.279 > 1
+22:43:02.279 > Inside Uart to Dist Loop
+22:43:02.279 > SPin CLockwise
+22:43:02.279 > Curr Localise State
+22:43:02.285 > 1
+22:43:02.285 > Inside Uart to Dist Loop
+22:43:02.285 > SPin CLockwise
+22:43:02.285 > Curr Localise State
+22:43:02.288 > 1
+22:43:02.295 > Inside Uart to Dist Loop
+22:43:02.296 > SPin CLockwise
+22:43:02.296 > Curr Localise State
+22:43:02.296 > 1
+22:43:02.301 > Inside Uart to Dist Loop
+22:43:02.301 > SPin CLockwise
+22:43:02.301 > Curr Localise State
+22:43:02.307 > 1
+22:43:02.307 > Inside Uart to Dist Loop
+22:43:02.307 > SPin CLockwise
+22:43:02.307 > Curr Localise State
+22:43:02.317 > 1
+22:43:02.317 > Inside Uart to Dist Loop
+22:43:02.317 > SPin CLockwise
+22:43:02.317 > Curr Localise State
+22:43:02.319 > 1
+22:43:02.319 > Inside Uart to Dist Loop
+22:43:02.319 > SPin CLockwise
+22:43:02.319 > Curr Localise State
+22:43:02.324 > 1
+22:43:02.324 > Inside Uart to Dist Loop
+22:43:02.324 > SPin CLockwise
+22:43:02.324 > Curr Localise State
+22:43:02.329 > 1
+22:43:02.329 > Inside Uart to Dist Loop
+22:43:02.329 > SPin CLockwise
+22:43:02.329 > Curr Localise State
+22:43:02.335 > 1
+22:43:02.335 > Inside Uart to Dist Loop
+22:43:02.335 > SPin CLockwise
+22:43:02.335 > Curr Localise State
+22:43:02.340 > 1
+22:43:02.340 > Inside Uart to Dist Loop
+22:43:02.340 > SPin CLockwise
+22:43:02.340 > Curr Localise State
+22:43:02.344 > 1
+22:43:02.351 > Inside Uart to Dist Loop
+22:43:02.352 > SPin CLockwise
+22:43:02.352 > Curr Localise State
+22:43:02.352 > 1
+22:43:02.357 > Inside Uart to Dist Loop
+22:43:02.357 > SPin CLockwise
+22:43:02.357 > Curr Localise State
+22:43:02.363 > 1
+22:43:02.363 > Inside Uart to Dist Loop
+22:43:02.363 > SPin CLockwise
+22:43:02.363 > Curr Localise State
+22:43:02.369 > 1
+22:43:02.369 > Inside Uart to Dist Loop
+22:43:02.369 > SPin CLockwise
+22:43:02.369 > Curr Localise State
+22:43:02.374 > 1
+22:43:02.374 > Inside Uart to Dist Loop
+22:43:02.374 > SPin CLockwise
+22:43:02.374 > Curr Localise State
+22:43:02.380 > 1
+22:43:02.380 > Inside Uart to Dist Loop
+22:43:02.380 > SPin CLockwise
+22:43:02.380 > Curr Localise State
+22:43:02.386 > 1
+22:43:02.386 > Inside Uart to Dist Loop
+22:43:02.386 > SPin CLockwise
+22:43:02.386 > Curr Localise State
+22:43:02.391 > 1
+22:43:02.391 > Inside Uart to Dist Loop
+22:43:02.391 > SPin CLockwise
+22:43:02.391 > Curr Localise State
+22:43:02.396 > 1
+22:43:02.396 > Inside Uart to Dist Loop
+22:43:02.396 > SPin CLockwise
+22:43:02.396 > Curr Localise State
+22:43:02.400 > 1
+22:43:02.408 > Inside Uart to Dist Loop
+22:43:02.409 > SPin CLockwise
+22:43:02.409 > Curr Localise State
+22:43:02.409 > 1
+22:43:02.413 > Inside Uart to Dist Loop
+22:43:02.413 > SPin CLockwise
+22:43:02.413 > Curr Localise State
+22:43:02.420 > 1
+22:43:02.420 > Inside Uart to Dist Loop
+22:43:02.420 > SPin CLockwise
+22:43:02.420 > Curr Localise State
+22:43:02.425 > 1
+22:43:02.425 > Inside Uart to Dist Loop
+22:43:02.425 > SPin CLockwise
+22:43:02.425 > Curr Localise State
+22:43:02.429 > 1
+22:43:02.429 > Inside Uart to Dist Loop
+22:43:02.429 > SPin CLockwise
+22:43:02.429 > Curr Localise State
+22:43:02.436 > 1
+22:43:02.436 > Inside Uart to Dist Loop
+22:43:02.436 > SPin CLockwise
+22:43:02.436 > Curr Localise State
+22:43:02.441 > 1
+22:43:02.441 > Inside Uart to Dist Loop
+22:43:02.441 > SPin CLockwise
+22:43:02.441 > Curr Localise State
+22:43:02.447 > 1
+22:43:02.447 > Inside Uart to Dist Loop
+22:43:02.447 > SPin CLockwise
+22:43:02.447 > Curr Localise State
+22:43:02.452 > 1
+22:43:02.452 > Inside Uart to Dist Loop
+22:43:02.452 > SPin CLockwise
+22:43:02.452 > Curr Localise State
+22:43:02.456 > 1
+22:43:02.464 > Inside Uart to Dist Loop
+22:43:02.464 > SPin CLockwise
+22:43:02.464 > Curr Localise State
+22:43:02.464 > 1
+22:43:02.470 > Inside Uart to Dist Loop
+22:43:02.470 > SPin CLockwise
+22:43:02.470 > Curr Localise State
+22:43:02.475 > 1
+22:43:02.475 > Inside Uart to Dist Loop
+22:43:02.475 > SPin CLockwise
+22:43:02.475 > Curr Localise State
+22:43:02.480 > 1
+22:43:02.480 > Inside Uart to Dist Loop
+22:43:02.480 > SPin CLockwise
+22:43:02.480 > Curr Localise State
+22:43:02.487 > 1
+22:43:02.487 > Inside Uart to Dist Loop
+22:43:02.487 > SPin CLockwise
+22:43:02.487 > Curr Localise State
+22:43:02.492 > 1
+22:43:02.492 > Inside Uart to Dist Loop
+22:43:02.492 > SPin CLockwise
+22:43:02.492 > Curr Localise State
+22:43:02.497 > 1
+22:43:02.497 > Inside Uart to Dist Loop
+22:43:02.497 > SPin CLockwise
+22:43:02.497 > Curr Localise State
+22:43:02.503 > 1
+22:43:02.503 > Inside Uart to Dist Loop
+22:43:02.503 > SPin CLockwise
+22:43:02.503 > Curr Localise State
+22:43:02.508 > 1
+22:43:02.508 > Inside Uart to Dist Loop
+22:43:02.508 > SPin CLockwise
+22:43:02.508 > Curr Localise State
+22:43:02.511 > 1
+22:43:02.520 > Inside Uart to Dist Loop
+22:43:02.520 > SPin CLockwise
+22:43:02.520 > Curr Localise State
+22:43:02.520 > 1
+22:43:02.526 > Inside Uart to Dist Loop
+22:43:02.526 > SPin CLockwise
+22:43:02.526 > Curr Localise State
+22:43:02.531 > 1
+22:43:02.531 > Inside Uart to Dist Loop
+22:43:02.531 > SPin CLockwise
+22:43:02.531 > Curr Localise State
+22:43:02.536 > 1
+22:43:02.536 > Inside Uart to Dist Loop
+22:43:02.536 > SPin CLockwise
+22:43:02.536 > Curr Localise State
+22:43:02.542 > 1
+22:43:02.542 > Inside Uart to Dist Loop
+22:43:02.542 > SPin CLockwise
+22:43:02.542 > Curr Localise State
+22:43:02.548 > 1
+22:43:02.548 > Inside Uart to Dist Loop
+22:43:02.548 > SPin CLockwise
+22:43:02.548 > Curr Localise State
+22:43:02.553 > 1
+22:43:02.553 > Inside Uart to Dist Loop
+22:43:02.553 > SPin CLockwise
+22:43:02.553 > Curr Localise State
+22:43:02.559 > 1
+22:43:02.559 > Inside Uart to Dist Loop
+22:43:02.559 > SPin CLockwise
+22:43:02.559 > Curr Localise State
+22:43:02.564 > 1
+22:43:02.564 > Inside Uart to Dist Loop
+22:43:02.564 > SPin CLockwise
+22:43:02.564 > Curr Localise State
+22:43:02.567 > 1
+22:43:02.575 > Inside Uart to Dist Loop
+22:43:02.575 > SPin CLockwise
+22:43:02.575 > Curr Localise State
+22:43:02.575 > 1
+22:43:02.581 > Inside Uart to Dist Loop
+22:43:02.581 > SPin CLockwise
+22:43:02.581 > Curr Localise State
+22:43:02.587 > 1
+22:43:02.587 > Inside Uart to Dist Loop
+22:43:02.587 > SPin CLockwise
+22:43:02.587 > Curr Localise State
+22:43:02.593 > 1
+22:43:02.593 > Inside Uart to Dist Loop
+22:43:02.593 > SPin CLockwise
+22:43:02.593 > Curr Localise State
+22:43:02.598 > 1
+22:43:02.598 > Inside Uart to Dist Loop
+22:43:02.598 > SPin CLockwise
+22:43:02.598 > Curr Localise State
+22:43:02.604 > 1
+22:43:02.604 > Inside Uart to Dist Loop
+22:43:02.604 > SPin CLockwise
+22:43:02.604 > Curr Localise State
+22:43:02.609 > 1
+22:43:02.609 > Inside Uart to Dist Loop
+22:43:02.609 > SPin CLockwise
+22:43:02.609 > Curr Localise State
+22:43:02.614 > 1
+22:43:02.614 > Inside Uart to Dist Loop
+22:43:02.614 > SPin CLockwise
+22:43:02.614 > Curr Localise State
+22:43:02.621 > 1
+22:43:02.621 > Inside Uart to Dist Loop
+22:43:02.621 > SPin CLockwise
+22:43:02.621 > Curr Localise State
+22:43:02.624 > 1
+22:43:02.632 > Inside Uart to Dist Loop
+22:43:02.632 > SPin CLockwise
+22:43:02.632 > Curr Localise State
+22:43:02.632 > 1
+22:43:02.638 > Inside Uart to Dist Loop
+22:43:02.638 > SPin CLockwise
+22:43:02.638 > Curr Localise State
+22:43:02.643 > 1
+22:43:02.643 > Inside Uart to Dist Loop
+22:43:02.643 > SPin CLockwise
+22:43:02.643 > Curr Localise State
+22:43:02.648 > 1
+22:43:02.648 > Inside Uart to Dist Loop
+22:43:02.648 > SPin CLockwise
+22:43:02.648 > Curr Localise State
+22:43:02.654 > 1
+22:43:02.654 > Inside Uart to Dist Loop
+22:43:02.654 > SPin CLockwise
+22:43:02.654 > Curr Localise State
+22:43:02.660 > 1
+22:43:02.660 > Inside Uart to Dist Loop
+22:43:02.660 > SPin CLockwise
+22:43:02.660 > Curr Localise State
+22:43:02.665 > 1
+22:43:02.665 > Inside Uart to Dist Loop
+22:43:02.665 > SPin CLockwise
+22:43:02.665 > Curr Localise State
+22:43:02.671 > 1
+22:43:02.671 > Inside Uart to Dist Loop
+22:43:02.671 > SPin CLockwise
+22:43:02.671 > Curr Localise State
+22:43:02.676 > 1
+22:43:02.676 > Inside Uart to Dist Loop
+22:43:02.676 > SPin CLockwise
+22:43:02.676 > Curr Localise State
+22:43:02.679 > 1
+22:43:02.688 > Inside Uart to Dist Loop
+22:43:02.688 > SPin CLockwise
+22:43:02.688 > Curr Localise State
+22:43:02.688 > 1
+22:43:02.693 > Inside Uart to Dist Loop
+22:43:02.693 > SPin CLockwise
+22:43:02.693 > Curr Localise State
+22:43:02.699 > 1
+22:43:02.699 > Inside Uart to Dist Loop
+22:43:02.699 > SPin CLockwise
+22:43:02.699 > Curr Localise State
+22:43:02.705 > 1
+22:43:02.705 > Inside Uart to Dist Loop
+22:43:02.705 > SPin CLockwise
+22:43:02.705 > Curr Localise State
+22:43:02.710 > 1
+22:43:02.710 > Inside Uart to Dist Loop
+22:43:02.710 > SPin CLockwise
+22:43:02.710 > Curr Localise State
+22:43:02.716 > 1
+22:43:02.716 > Inside Uart to Dist Loop
+22:43:02.716 > SPin CLockwise
+22:43:02.716 > Curr Localise State
+22:43:02.721 > 1
+22:43:02.721 > Inside Uart to Dist Loop
+22:43:02.721 > SPin CLockwise
+22:43:02.721 > Curr Localise State
+22:43:02.727 > 1
+22:43:02.727 > Inside Uart to Dist Loop
+22:43:02.727 > SPin CLockwise
+22:43:02.727 > Curr Localise State
+22:43:02.732 > 1
+22:43:02.732 > Inside Uart to Dist Loop
+22:43:02.732 > SPin CLockwise
+22:43:02.732 > Curr Localise State
+22:43:02.736 > 1
+22:43:02.744 > Inside Uart to Dist Loop
+22:43:02.744 > SPin CLockwise
+22:43:02.744 > Curr Localise State
+22:43:02.744 > 1
+22:43:02.750 > Inside Uart to Dist Loop
+22:43:02.750 > SPin CLockwise
+22:43:02.750 > Curr Localise State
+22:43:02.755 > 1
+22:43:02.755 > Inside Uart to Dist Loop
+22:43:02.755 > SPin CLockwise
+22:43:02.755 > Curr Localise State
+22:43:02.761 > 1
+22:43:02.761 > Inside Uart to Dist Loop
+22:43:02.761 > SPin CLockwise
+22:43:02.761 > Curr Localise State
+22:43:02.766 > 1
+22:43:02.766 > Inside Uart to Dist Loop
+22:43:02.766 > SPin CLockwise
+22:43:02.766 > Curr Localise State
+22:43:02.771 > 1
+22:43:02.771 > Inside Uart to Dist Loop
+22:43:02.771 > SPin CLockwise
+22:43:02.771 > Curr Localise State
+22:43:02.777 > 1
+22:43:02.777 > Inside Uart to Dist Loop
+22:43:02.777 > SPin CLockwise
+22:43:02.777 > Curr Localise State
+22:43:02.783 > 1
+22:43:02.783 > Inside Uart to Dist Loop
+22:43:02.783 > SPin CLockwise
+22:43:02.783 > Curr Localise State
+22:43:02.788 > 1
+22:43:02.788 > Inside Uart to Dist Loop
+22:43:02.788 > SPin CLockwise
+22:43:02.788 > Curr Localise State
+22:43:02.792 > 1
+22:43:02.800 > Inside Uart to Dist Loop
+22:43:02.800 > SPin CLockwise
+22:43:02.800 > Curr Localise State
+22:43:02.800 > 1
+22:43:02.806 > Inside Uart to Dist Loop
+22:43:02.806 > SPin CLockwise
+22:43:02.806 > Curr Localise State
+22:43:02.811 > 1
+22:43:02.811 > Inside Uart to Dist Loop
+22:43:02.811 > SPin CLockwise
+22:43:02.811 > Curr Localise State
+22:43:02.817 > 1
+22:43:02.817 > Inside Uart to Dist Loop
+22:43:02.817 > SPin CLockwise
+22:43:02.817 > Curr Localise State
+22:43:02.822 > 1
+22:43:02.822 > Inside Uart to Dist Loop
+22:43:02.822 > SPin CLockwise
+22:43:02.822 > Curr Localise State
+22:43:02.828 > 1
+22:43:02.828 > Inside Uart to Dist Loop
+22:43:02.828 > SPin CLockwise
+22:43:02.828 > Curr Localise State
+22:43:02.833 > 1
+22:43:02.833 > Inside Uart to Dist Loop
+22:43:02.833 > SPin CLockwise
+22:43:02.833 > Curr Localise State
+22:43:02.839 > 1
+22:43:02.839 > Inside Uart to Dist Loop
+22:43:02.839 > SPin CLockwise
+22:43:02.839 > Curr Localise State
+22:43:02.844 > 1
+22:43:02.844 > Inside Uart to Dist Loop
+22:43:02.844 > SPin CLockwise
+22:43:02.844 > Curr Localise State
+22:43:02.847 > 1
+22:43:02.855 > Inside Uart to Dist Loop
+22:43:02.856 > SPin CLockwise
+22:43:02.856 > Curr Localise State
+22:43:02.856 > 1
+22:43:02.861 > Inside Uart to Dist Loop
+22:43:02.861 > SPin CLockwise
+22:43:02.861 > Curr Localise State
+22:43:02.867 > 1
+22:43:02.867 > Inside Uart to Dist Loop
+22:43:02.867 > SPin CLockwise
+22:43:02.867 > Curr Localise State
+22:43:02.872 > 1
+22:43:02.872 > Inside Uart to Dist Loop
+22:43:02.872 > SPin CLockwise
+22:43:02.872 > Curr Localise State
+22:43:02.878 > 1
+22:43:02.878 > Inside Uart to Dist Loop
+22:43:02.878 > SPin CLockwise
+22:43:02.878 > Curr Localise State
+22:43:02.884 > 1
+22:43:02.884 > Inside Uart to Dist Loop
+22:43:02.884 > SPin CLockwise
+22:43:02.884 > Curr Localise State
+22:43:02.889 > 1
+22:43:02.889 > Inside Uart to Dist Loop
+22:43:02.889 > SPin CLockwise
+22:43:02.889 > Curr Localise State
+22:43:02.895 > 1
+22:43:02.895 > Inside Uart to Dist Loop
+22:43:02.895 > SPin CLockwise
+22:43:02.895 > Curr Localise State
+22:43:02.901 > 1
+22:43:02.901 > Inside Uart to Dist Loop
+22:43:02.901 > SPin CLockwise
+22:43:02.901 > Curr Localise State
+22:43:02.904 > 1
+22:43:02.911 > Inside Uart to Dist Loop
+22:43:02.912 > SPin CLockwise
+22:43:02.912 > Curr Localise State
+22:43:02.912 > 1
+22:43:02.918 > Inside Uart to Dist Loop
+22:43:02.918 > SPin CLockwise
+22:43:02.918 > Curr Localise State
+22:43:02.923 > 1
+22:43:02.923 > Inside Uart to Dist Loop
+22:43:02.923 > SPin CLockwise
+22:43:02.923 > Curr Localise State
+22:43:02.928 > 1
+22:43:02.928 > Inside Uart to Dist Loop
+22:43:02.928 > SPin CLockwise
+22:43:02.928 > Curr Localise State
+22:43:02.934 > 1
+22:43:02.934 > Inside Uart to Dist Loop
+22:43:02.934 > SPin CLockwise
+22:43:02.934 > Curr Localise State
+22:43:02.940 > 1
+22:43:02.940 > Inside Uart to Dist Loop
+22:43:02.940 > SPin CLockwise
+22:43:02.940 > Curr Localise State
+22:43:02.945 > 1
+22:43:02.945 > Inside Uart to Dist Loop
+22:43:02.945 > SPin CLockwise
+22:43:02.945 > Curr Localise State
+22:43:02.951 > 1
+22:43:02.951 > Inside Uart to Dist Loop
+22:43:02.951 > SPin CLockwise
+22:43:02.951 > Curr Localise State
+22:43:02.956 > 1
+22:43:02.956 > Inside Uart to Dist Loop
+22:43:02.956 > SPin CLockwise
+22:43:02.956 > Curr Localise State
+22:43:02.959 > 1
+22:43:02.968 > Inside Uart to Dist Loop
+22:43:02.969 > SPin CLockwise
+22:43:02.969 > Curr Localise State
+22:43:02.969 > 1
+22:43:02.974 > Inside Uart to Dist Loop
+22:43:02.974 > SPin CLockwise
+22:43:02.974 > Curr Localise State
+22:43:02.979 > 1
+22:43:02.979 > Inside Uart to Dist Loop
+22:43:02.979 > SPin CLockwise
+22:43:02.979 > Curr Localise State
+22:43:02.985 > 1
+22:43:02.985 > Inside Uart to Dist Loop
+22:43:02.985 > SPin CLockwise
+22:43:02.985 > Curr Localise State
+22:43:02.990 > 1
+22:43:02.990 > Inside Uart to Dist Loop
+22:43:02.990 > SPin CLockwise
+22:43:02.990 > Curr Localise State
+22:43:03.006 > 1
+22:43:03.006 > Inside Uart to Dist Loop
+22:43:03.006 > SPin CLockwise
+22:43:03.006 > Curr Localise State
+22:43:03.006 > 1
+22:43:03.006 > Inside Uart to Dist Loop
+22:43:03.006 > SPin CLockwise
+22:43:03.006 > Curr Localise State
+22:43:03.011 > 1
+22:43:03.011 > Inside Uart to Dist Loop
+22:43:03.011 > SPin CLockwise
+22:43:03.011 > Curr Localise State
+22:43:03.012 > 1
+22:43:03.012 > Inside Uart to Dist Loop
+22:43:03.012 > SPin CLockwise
+22:43:03.012 > Curr Localise State
+22:43:03.015 > 1
+22:43:03.024 > Inside Uart to Dist Loop
+22:43:03.024 > SPin CLockwise
+22:43:03.024 > Curr Localise State
+22:43:03.024 > 1
+22:43:03.029 > Inside Uart to Dist Loop
+22:43:03.029 > SPin CLockwise
+22:43:03.029 > Curr Localise State
+22:43:03.035 > 1
+22:43:03.035 > Inside Uart to Dist Loop
+22:43:03.035 > SPin CLockwise
+22:43:03.035 > Curr Localise State
+22:43:03.040 > 1
+22:43:03.040 > Inside Uart to Dist Loop
+22:43:03.040 > SPin CLockwise
+22:43:03.040 > Curr Localise State
+22:43:03.046 > 1
+22:43:03.046 > Inside Uart to Dist Loop
+22:43:03.046 > SPin CLockwise
+22:43:03.046 > Curr Localise State
+22:43:03.052 > 1
+22:43:03.052 > Inside Uart to Dist Loop
+22:43:03.052 > SPin CLockwise
+22:43:03.052 > Curr Localise State
+22:43:03.057 > 1
+22:43:03.057 > Inside Uart to Dist Loop
+22:43:03.057 > SPin CLockwise
+22:43:03.057 > Curr Localise State
+22:43:03.063 > 1
+22:43:03.063 > Inside Uart to Dist Loop
+22:43:03.063 > SPin CLockwise
+22:43:03.063 > Curr Localise State
+22:43:03.068 > 1
+22:43:03.068 > Inside Uart to Dist Loop
+22:43:03.068 > SPin CLockwise
+22:43:03.068 > Curr Localise State
+22:43:03.072 > 1
+22:43:03.080 > Inside Uart to Dist Loop
+22:43:03.080 > SPin CLockwise
+22:43:03.080 > Curr Localise State
+22:43:03.080 > 1
+22:43:03.085 > Inside Uart to Dist Loop
+22:43:03.085 > SPin CLockwise
+22:43:03.085 > Curr Localise State
+22:43:03.090 > 1
+22:43:03.090 > Inside Uart to Dist Loop
+22:43:03.090 > SPin CLockwise
+22:43:03.090 > Curr Localise State
+22:43:03.096 > 1
+22:43:03.096 > Inside Uart to Dist Loop
+22:43:03.096 > SPin CLockwise
+22:43:03.096 > Curr Localise State
+22:43:03.102 > 1
+22:43:03.102 > Inside Uart to Dist Loop
+22:43:03.102 > SPin CLockwise
+22:43:03.102 > Curr Localise State
+22:43:03.107 > 1
+22:43:03.107 > Inside Uart to Dist Loop
+22:43:03.107 > SPin CLockwise
+22:43:03.107 > Curr Localise State
+22:43:03.113 > 1
+22:43:03.113 > Inside Uart to Dist Loop
+22:43:03.113 > SPin CLockwise
+22:43:03.113 > Curr Localise State
+22:43:03.119 > 1
+22:43:03.119 > Inside Uart to Dist Loop
+22:43:03.119 > SPin CLockwise
+22:43:03.119 > Curr Localise State
+22:43:03.124 > 1
+22:43:03.124 > Inside Uart to Dist Loop
+22:43:03.124 > SPin CLockwise
+22:43:03.124 > Curr Localise State
+22:43:03.126 > 1
+22:43:03.136 > Inside Uart to Dist Loop
+22:43:03.137 > SPin CLockwise
+22:43:03.137 > Curr Localise State
+22:43:03.137 > 1
+22:43:03.142 > Inside Uart to Dist Loop
+22:43:03.142 > SPin CLockwise
+22:43:03.142 > Curr Localise State
+22:43:03.147 > 1
+22:43:03.147 > Inside Uart to Dist Loop
+22:43:03.147 > SPin CLockwise
+22:43:03.147 > Curr Localise State
+22:43:03.152 > 1
+22:43:03.152 > Inside Uart to Dist Loop
+22:43:03.152 > SPin CLockwise
+22:43:03.152 > Curr Localise State
+22:43:03.152 > 1
+22:43:03.152 > Inside Uart to Dist Loop
+22:43:03.152 > SPin CLockwise
+22:43:03.152 > Curr Localise State
+22:43:03.164 > 1
+22:43:03.164 > Inside Uart to Dist Loop
+22:43:03.164 > SPin CLockwise
+22:43:03.164 > Curr Localise State
+22:43:03.169 > 1
+22:43:03.169 > Inside Uart to Dist Loop
+22:43:03.169 > SPin CLockwise
+22:43:03.169 > Curr Localise State
+22:43:03.174 > 1
+22:43:03.174 > Inside Uart to Dist Loop
+22:43:03.174 > SPin CLockwise
+22:43:03.174 > Curr Localise State
+22:43:03.180 > 1
+22:43:03.180 > Inside Uart to Dist Loop
+22:43:03.180 > SPin CLockwise
+22:43:03.180 > Curr Localise State
+22:43:03.183 > 1
+22:43:03.191 > Inside Uart to Dist Loop
+22:43:03.191 > SPin CLockwise
+22:43:03.191 > Curr Localise State
+22:43:03.191 > 1
+22:43:03.197 > Inside Uart to Dist Loop
+22:43:03.197 > SPin CLockwise
+22:43:03.197 > Curr Localise State
+22:43:03.203 > 1
+22:43:03.203 > Inside Uart to Dist Loop
+22:43:03.203 > SPin CLockwise
+22:43:03.203 > Curr Localise State
+22:43:03.208 > 1
+22:43:03.208 > Inside Uart to Dist Loop
+22:43:03.208 > SPin CLockwise
+22:43:03.208 > Curr Localise State
+22:43:03.213 > 1
+22:43:03.213 > Inside Uart to Dist Loop
+22:43:03.213 > SPin CLockwise
+22:43:03.213 > Curr Localise State
+22:43:03.219 > 1
+22:43:03.219 > Inside Uart to Dist Loop
+22:43:03.219 > SPin CLockwise
+22:43:03.219 > Curr Localise State
+22:43:03.225 > 1
+22:43:03.225 > Inside Uart to Dist Loop
+22:43:03.225 > SPin CLockwise
+22:43:03.225 > Curr Localise State
+22:43:03.231 > 1
+22:43:03.231 > Inside Uart to Dist Loop
+22:43:03.231 > SPin CLockwise
+22:43:03.231 > Curr Localise State
+22:43:03.236 > 1
+22:43:03.236 > Inside Uart to Dist Loop
+22:43:03.236 > SPin CLockwise
+22:43:03.236 > Curr Localise State
+22:43:03.240 > 1
+22:43:03.248 > Inside Uart to Dist Loop
+22:43:03.248 > SPin CLockwise
+22:43:03.248 > Curr Localise State
+22:43:03.248 > 1
+22:43:03.253 > Inside Uart to Dist Loop
+22:43:03.253 > SPin CLockwise
+22:43:03.253 > Curr Localise State
+22:43:03.259 > 1
+22:43:03.259 > Inside Uart to Dist Loop
+22:43:03.259 > SPin CLockwise
+22:43:03.259 > Curr Localise State
+22:43:03.265 > 1
+22:43:03.265 > Inside Uart to Dist Loop
+22:43:03.265 > SPin CLockwise
+22:43:03.265 > Curr Localise State
+22:43:03.270 > 1
+22:43:03.270 > Inside Uart to Dist Loop
+22:43:03.270 > SPin CLockwise
+22:43:03.270 > Curr Localise State
+22:43:03.275 > 1
+22:43:03.275 > Inside Uart to Dist Loop
+22:43:03.275 > SPin CLockwise
+22:43:03.275 > Curr Localise State
+22:43:03.281 > 1
+22:43:03.281 > Inside Uart to Dist Loop
+22:43:03.281 > SPin CLockwise
+22:43:03.281 > Curr Localise State
+22:43:03.287 > 1
+22:43:03.287 > Inside Uart to Dist Loop
+22:43:03.287 > SPin CLockwise
+22:43:03.287 > Curr Localise State
+22:43:03.292 > 1
+22:43:03.292 > Inside Uart to Dist Loop
+22:43:03.292 > SPin CLockwise
+22:43:03.292 > Curr Localise State
+22:43:03.296 > 1
+22:43:03.304 > Inside Uart to Dist Loop
+22:43:03.304 > SPin CLockwise
+22:43:03.304 > Curr Localise State
+22:43:03.304 > 1
+22:43:03.309 > Inside Uart to Dist Loop
+22:43:03.309 > SPin CLockwise
+22:43:03.309 > Curr Localise State
+22:43:03.315 > 1
+22:43:03.315 > Inside Uart to Dist Loop
+22:43:03.315 > SPin CLockwise
+22:43:03.315 > Curr Localise State
+22:43:03.320 > 1
+22:43:03.320 > Inside Uart to Dist Loop
+22:43:03.320 > SPin CLockwise
+22:43:03.320 > Curr Localise State
+22:43:03.326 > 1
+22:43:03.326 > Inside Uart to Dist Loop
+22:43:03.326 > SPin CLockwise
+22:43:03.326 > Curr Localise State
+22:43:03.332 > 1
+22:43:03.332 > Inside Uart to Dist Loop
+22:43:03.332 > SPin CLockwise
+22:43:03.332 > Curr Localise State
+22:43:03.337 > 1
+22:43:03.337 > Inside Uart to Dist Loop
+22:43:03.337 > SPin CLockwise
+22:43:03.337 > Curr Localise State
+22:43:03.343 > 1
+22:43:03.343 > Inside Uart to Dist Loop
+22:43:03.343 > SPin CLockwise
+22:43:03.343 > Curr Localise State
+22:43:03.348 > 1
+22:43:03.348 > Inside Uart to Dist Loop
+22:43:03.348 > SPin CLockwise
+22:43:03.348 > Curr Localise State
+22:43:03.351 > 1
+22:43:03.360 > Inside Uart to Dist Loop
+22:43:03.360 > SPin CLockwise
+22:43:03.360 > Curr Localise State
+22:43:03.360 > 1
+22:43:03.365 > Inside Uart to Dist Loop
+22:43:03.365 > SPin CLockwise
+22:43:03.365 > Curr Localise State
+22:43:03.371 > 1
+22:43:03.371 > Inside Uart to Dist Loop
+22:43:03.371 > SPin CLockwise
+22:43:03.371 > Curr Localise State
+22:43:03.376 > 1
+22:43:03.376 > Inside Uart to Dist Loop
+22:43:03.376 > SPin CLockwise
+22:43:03.376 > Curr Localise State
+22:43:03.383 > 1
+22:43:03.383 > Inside Uart to Dist Loop
+22:43:03.383 > SPin CLockwise
+22:43:03.383 > Curr Localise State
+22:43:03.387 > 1
+22:43:03.387 > Inside Uart to Dist Loop
+22:43:03.387 > SPin CLockwise
+22:43:03.387 > Curr Localise State
+22:43:03.392 > 1
+22:43:03.392 > Inside Uart to Dist Loop
+22:43:03.392 > SPin CLockwise
+22:43:03.392 > Curr Localise State
+22:43:03.399 > 1
+22:43:03.399 > Inside Uart to Dist Loop
+22:43:03.399 > SPin CLockwise
+22:43:03.399 > Curr Localise State
+22:43:03.405 > 1
+22:43:03.405 > Inside Uart to Dist Loop
+22:43:03.405 > SPin CLockwise
+22:43:03.405 > Curr Localise State
+22:43:03.408 > 1
+22:43:03.416 > Inside Uart to Dist Loop
+22:43:03.416 > SPin CLockwise
+22:43:03.416 > Curr Localise State
+22:43:03.416 > 1
+22:43:03.422 > Inside Uart to Dist Loop
+22:43:03.422 > SPin CLockwise
+22:43:03.422 > Curr Localise State
+22:43:03.427 > 1
+22:43:03.427 > Inside Uart to Dist Loop
+22:43:03.427 > SPin CLockwise
+22:43:03.427 > Curr Localise State
+22:43:03.433 > 1
+22:43:03.433 > Inside Uart to Dist Loop
+22:43:03.433 > SPin CLockwise
+22:43:03.433 > Curr Localise State
+22:43:03.438 > 1
+22:43:03.438 > Inside Uart to Dist Loop
+22:43:03.438 > SPin CLockwise
+22:43:03.438 > Curr Localise State
+22:43:03.444 > 1
+22:43:03.444 > Inside Uart to Dist Loop
+22:43:03.444 > SPin CLockwise
+22:43:03.444 > Curr Localise State
+22:43:03.449 > 1
+22:43:03.449 > Inside Uart to Dist Loop
+22:43:03.449 > SPin CLockwise
+22:43:03.449 > Curr Localise State
+22:43:03.455 > 1
+22:43:03.455 > Inside Uart to Dist Loop
+22:43:03.455 > SPin CLockwise
+22:43:03.455 > Curr Localise State
+22:43:03.460 > 1
+22:43:03.460 > Inside Uart to Dist Loop
+22:43:03.460 > SPin CLockwise
+22:43:03.460 > Curr Localise State
+22:43:03.463 > 1
+22:43:03.472 > Inside Uart to Dist Loop
+22:43:03.473 > SPin CLockwise
+22:43:03.473 > Curr Localise State
+22:43:03.473 > 1
+22:43:03.477 > Inside Uart to Dist Loop
+22:43:03.477 > SPin CLockwise
+22:43:03.477 > Curr Localise State
+22:43:03.483 > 1
+22:43:03.483 > Inside Uart to Dist Loop
+22:43:03.483 > SPin CLockwise
+22:43:03.483 > Curr Localise State
+22:43:03.489 > 1
+22:43:03.489 > Inside Uart to Dist Loop
+22:43:03.489 > SPin CLockwise
+22:43:03.489 > Curr Localise State
+22:43:03.493 > 1
+22:43:03.493 > Inside Uart to Dist Loop
+22:43:03.493 > SPin CLockwise
+22:43:03.493 > Curr Localise State
+22:43:03.500 > 1
+22:43:03.500 > Inside Uart to Dist Loop
+22:43:03.500 > SPin CLockwise
+22:43:03.500 > Curr Localise State
+22:43:03.505 > 1
+22:43:03.505 > Inside Uart to Dist Loop
+22:43:03.505 > SPin CLockwise
+22:43:03.505 > Curr Localise State
+22:43:03.510 > 1
+22:43:03.510 > Inside Uart to Dist Loop
+22:43:03.510 > SPin CLockwise
+22:43:03.510 > Curr Localise State
+22:43:03.516 > 1
+22:43:03.516 > Inside Uart to Dist Loop
+22:43:03.516 > SPin CLockwise
+22:43:03.516 > Curr Localise State
+22:43:03.520 > 1
+22:43:03.527 > Inside Uart to Dist Loop
+22:43:03.527 > SPin CLockwise
+22:43:03.527 > Curr Localise State
+22:43:03.527 > 1
+22:43:03.534 > Inside Uart to Dist Loop
+22:43:03.534 > SPin CLockwise
+22:43:03.534 > Curr Localise State
+22:43:03.539 > 1
+22:43:03.539 > Inside Uart to Dist Loop
+22:43:03.539 > SPin CLockwise
+22:43:03.539 > Curr Localise State
+22:43:03.543 > 1
+22:43:03.543 > Inside Uart to Dist Loop
+22:43:03.543 > SPin CLockwise
+22:43:03.543 > Curr Localise State
+22:43:03.549 > 1
+22:43:03.549 > Inside Uart to Dist Loop
+22:43:03.549 > SPin CLockwise
+22:43:03.549 > Curr Localise State
+22:43:03.555 > 1
+22:43:03.555 > Inside Uart to Dist Loop
+22:43:03.555 > SPin CLockwise
+22:43:03.555 > Curr Localise State
+22:43:03.560 > 1
+22:43:03.560 > Inside Uart to Dist Loop
+22:43:03.560 > SPin CLockwise
+22:43:03.560 > Curr Localise State
+22:43:03.567 > 1
+22:43:03.567 > Inside Uart to Dist Loop
+22:43:03.567 > SPin CLockwise
+22:43:03.567 > Curr Localise State
+22:43:03.572 > 1
+22:43:03.572 > Inside Uart to Dist Loop
+22:43:03.572 > SPin CLockwise
+22:43:03.572 > Curr Localise State
+22:43:03.576 > 1
+22:43:03.584 > Inside Uart to Dist Loop
+22:43:03.584 > SPin CLockwise
+22:43:03.584 > Curr Localise State
+22:43:03.584 > 1
+22:43:03.589 > Inside Uart to Dist Loop
+22:43:03.589 > SPin CLockwise
+22:43:03.589 > Curr Localise State
+22:43:03.593 > 1
+22:43:03.593 > Inside Uart to Dist Loop
+22:43:03.593 > SPin CLockwise
+22:43:03.593 > Curr Localise State
+22:43:03.601 > 1
+22:43:03.601 > Inside Uart to Dist Loop
+22:43:03.601 > SPin CLockwise
+22:43:03.601 > Curr Localise State
+22:43:03.607 > 1
+22:43:03.607 > Inside Uart to Dist Loop
+22:43:03.607 > SPin CLockwise
+22:43:03.607 > Curr Localise State
+22:43:03.610 > 1
+22:43:03.610 > Inside Uart to Dist Loop
+22:43:03.610 > SPin CLockwise
+22:43:03.610 > Curr Localise State
+22:43:03.617 > 1
+22:43:03.617 > Inside Uart to Dist Loop
+22:43:03.617 > SPin CLockwise
+22:43:03.617 > Curr Localise State
+22:43:03.623 > 1
+22:43:03.623 > Inside Uart to Dist Loop
+22:43:03.623 > SPin CLockwise
+22:43:03.623 > Curr Localise State
+22:43:03.626 > 1
+22:43:03.626 > Inside Uart to Dist Loop
+22:43:03.626 > SPin CLockwise
+22:43:03.626 > Curr Localise State
+22:43:03.632 > 1
+22:43:03.640 > Inside Uart to Dist Loop
+22:43:03.640 > SPin CLockwise
+22:43:03.640 > Curr Localise State
+22:43:03.640 > 1
+22:43:03.645 > Inside Uart to Dist Loop
+22:43:03.645 > SPin CLockwise
+22:43:03.645 > Curr Localise State
+22:43:03.651 > 1
+22:43:03.651 > Inside Uart to Dist Loop
+22:43:03.651 > SPin CLockwise
+22:43:03.651 > Curr Localise State
+22:43:03.657 > 1
+22:43:03.657 > Inside Uart to Dist Loop
+22:43:03.657 > SPin CLockwise
+22:43:03.657 > Curr Localise State
+22:43:03.662 > 1
+22:43:03.662 > Inside Uart to Dist Loop
+22:43:03.662 > SPin CLockwise
+22:43:03.662 > Curr Localise State
+22:43:03.667 > 1
+22:43:03.667 > Inside Uart to Dist Loop
+22:43:03.667 > SPin CLockwise
+22:43:03.667 > Curr Localise State
+22:43:03.673 > 1
+22:43:03.673 > Inside Uart to Dist Loop
+22:43:03.673 > SPin CLockwise
+22:43:03.673 > Curr Localise State
+22:43:03.679 > 1
+22:43:03.679 > Inside Uart to Dist Loop
+22:43:03.679 > SPin CLockwise
+22:43:03.679 > Curr Localise State
+22:43:03.685 > 1
+22:43:03.685 > Inside Uart to Dist Loop
+22:43:03.685 > SPin CLockwise
+22:43:03.685 > Curr Localise State
+22:43:03.688 > 1
+22:43:03.695 > Inside Uart to Dist Loop
+22:43:03.695 > SPin CLockwise
+22:43:03.695 > Curr Localise State
+22:43:03.695 > 1
+22:43:03.702 > Inside Uart to Dist Loop
+22:43:03.702 > SPin CLockwise
+22:43:03.702 > Curr Localise State
+22:43:03.707 > 1
+22:43:03.707 > Inside Uart to Dist Loop
+22:43:03.707 > SPin CLockwise
+22:43:03.707 > Curr Localise State
+22:43:03.712 > 1
+22:43:03.712 > Inside Uart to Dist Loop
+22:43:03.712 > SPin CLockwise
+22:43:03.712 > Curr Localise State
+22:43:03.718 > 1
+22:43:03.718 > Inside Uart to Dist Loop
+22:43:03.718 > SPin CLockwise
+22:43:03.718 > Curr Localise State
+22:43:03.723 > 1
+22:43:03.723 > Inside Uart to Dist Loop
+22:43:03.723 > SPin CLockwise
+22:43:03.723 > Curr Localise State
+22:43:03.728 > 1
+22:43:03.728 > Inside Uart to Dist Loop
+22:43:03.728 > SPin CLockwise
+22:43:03.728 > Curr Localise State
+22:43:03.735 > 1
+22:43:03.735 > Inside Uart to Dist Loop
+22:43:03.735 > SPin CLockwise
+22:43:03.735 > Curr Localise State
+22:43:03.741 > 1
+22:43:03.741 > Inside Uart to Dist Loop
+22:43:03.741 > SPin CLockwise
+22:43:03.741 > Curr Localise State
+22:43:03.743 > 1
+22:43:03.752 > Inside Uart to Dist Loop
+22:43:03.752 > SPin CLockwise
+22:43:03.752 > Curr Localise State
+22:43:03.752 > 1
+22:43:03.758 > Inside Uart to Dist Loop
+22:43:03.758 > SPin CLockwise
+22:43:03.758 > Curr Localise State
+22:43:03.763 > 1
+22:43:03.763 > Inside Uart to Dist Loop
+22:43:03.763 > SPin CLockwise
+22:43:03.763 > Curr Localise State
+22:43:03.769 > 1
+22:43:03.769 > Inside Uart to Dist Loop
+22:43:03.769 > SPin CLockwise
+22:43:03.769 > Curr Localise State
+22:43:03.774 > 1
+22:43:03.774 > Inside Uart to Dist Loop
+22:43:03.774 > SPin CLockwise
+22:43:03.774 > Curr Localise State
+22:43:03.779 > 1
+22:43:03.779 > Inside Uart to Dist Loop
+22:43:03.779 > SPin CLockwise
+22:43:03.779 > Curr Localise State
+22:43:03.786 > 1
+22:43:03.786 > Inside Uart to Dist Loop
+22:43:03.786 > SPin CLockwise
+22:43:03.786 > Curr Localise State
+22:43:03.791 > 1
+22:43:03.791 > Inside Uart to Dist Loop
+22:43:03.791 > SPin CLockwise
+22:43:03.791 > Curr Localise State
+22:43:03.796 > 1
+22:43:03.796 > Inside Uart to Dist Loop
+22:43:03.796 > SPin CLockwise
+22:43:03.796 > Curr Localise State
+22:43:03.799 > 1
+22:43:03.808 > Inside Uart to Dist Loop
+22:43:03.808 > SPin CLockwise
+22:43:03.808 > Curr Localise State
+22:43:03.808 > 1
+22:43:03.813 > Inside Uart to Dist Loop
+22:43:03.813 > SPin CLockwise
+22:43:03.813 > Curr Localise State
+22:43:03.819 > 1
+22:43:03.819 > Inside Uart to Dist Loop
+22:43:03.819 > SPin CLockwise
+22:43:03.819 > Curr Localise State
+22:43:03.824 > 1
+22:43:03.824 > Inside Uart to Dist Loop
+22:43:03.824 > SPin CLockwise
+22:43:03.824 > Curr Localise State
+22:43:03.830 > 1
+22:43:03.830 > Inside Uart to Dist Loop
+22:43:03.830 > SPin CLockwise
+22:43:03.830 > Curr Localise State
+22:43:03.836 > 1
+22:43:03.836 > Inside Uart to Dist Loop
+22:43:03.836 > SPin CLockwise
+22:43:03.836 > Curr Localise State
+22:43:03.841 > 1
+22:43:03.841 > Inside Uart to Dist Loop
+22:43:03.841 > SPin CLockwise
+22:43:03.841 > Curr Localise State
+22:43:03.847 > 1
+22:43:03.847 > Inside Uart to Dist Loop
+22:43:03.847 > SPin CLockwise
+22:43:03.847 > Curr Localise State
+22:43:03.853 > 1
+22:43:03.853 > Inside Uart to Dist Loop
+22:43:03.853 > SPin CLockwise
+22:43:03.853 > Curr Localise State
+22:43:03.856 > 1
+22:43:03.864 > Inside Uart to Dist Loop
+22:43:03.864 > SPin CLockwise
+22:43:03.864 > Curr Localise State
+22:43:03.864 > 1
+22:43:03.870 > Inside Uart to Dist Loop
+22:43:03.870 > SPin CLockwise
+22:43:03.870 > Curr Localise State
+22:43:03.875 > 1
+22:43:03.875 > Inside Uart to Dist Loop
+22:43:03.875 > SPin CLockwise
+22:43:03.875 > Curr Localise State
+22:43:03.881 > 1
+22:43:03.881 > Inside Uart to Dist Loop
+22:43:03.881 > SPin CLockwise
+22:43:03.881 > Curr Localise State
+22:43:03.886 > 1
+22:43:03.886 > Inside Uart to Dist Loop
+22:43:03.886 > SPin CLockwise
+22:43:03.886 > Curr Localise State
+22:43:03.892 > 1
+22:43:03.892 > Inside Uart to Dist Loop
+22:43:03.892 > SPin CLockwise
+22:43:03.892 > Curr Localise State
+22:43:03.897 > 1
+22:43:03.897 > Inside Uart to Dist Loop
+22:43:03.897 > SPin CLockwise
+22:43:03.897 > Curr Localise State
+22:43:03.902 > 1
+22:43:03.902 > Inside Uart to Dist Loop
+22:43:03.902 > SPin CLockwise
+22:43:03.902 > Curr Localise State
+22:43:03.909 > 1
+22:43:03.909 > Inside Uart to Dist Loop
+22:43:03.909 > SPin CLockwise
+22:43:03.909 > Curr Localise State
+22:43:03.910 > 1
+22:43:03.920 > Inside Uart to Dist Loop
+22:43:03.920 > SPin CLockwise
+22:43:03.920 > Curr Localise State
+22:43:03.920 > 1
+22:43:03.926 > Inside Uart to Dist Loop
+22:43:03.926 > SPin CLockwise
+22:43:03.926 > Curr Localise State
+22:43:03.930 > 1
+22:43:03.930 > Inside Uart to Dist Loop
+22:43:03.930 > SPin CLockwise
+22:43:03.930 > Curr Localise State
+22:43:03.937 > 1
+22:43:03.937 > Inside Uart to Dist Loop
+22:43:03.937 > SPin CLockwise
+22:43:03.937 > Curr Localise State
+22:43:03.942 > 1
+22:43:03.942 > Inside Uart to Dist Loop
+22:43:03.942 > SPin CLockwise
+22:43:03.942 > Curr Localise State
+22:43:03.948 > 1
+22:43:03.948 > Inside Uart to Dist Loop
+22:43:03.948 > SPin CLockwise
+22:43:03.948 > Curr Localise State
+22:43:03.953 > 1
+22:43:03.953 > Inside Uart to Dist Loop
+22:43:03.953 > SPin CLockwise
+22:43:03.953 > Curr Localise State
+22:43:03.959 > 1
+22:43:03.959 > Inside Uart to Dist Loop
+22:43:03.959 > SPin CLockwise
+22:43:03.959 > Curr Loc

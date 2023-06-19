@@ -19,7 +19,7 @@ export class GridPage extends React.Component {
 
     //const [matrix, setMatrix] = useState(temp);
     this.state = {
-      counter: 1,
+      counter: 36,
     };
     this.state.matrix = temp;
   }
