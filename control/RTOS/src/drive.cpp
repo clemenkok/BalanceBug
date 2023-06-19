@@ -17,10 +17,10 @@ const int ldrRPin = 35; // pin for right front LED
 const int ldrFPin = 32; // pin for front LED
 
 // Define stepper motor connections
-const int stepPinR = 16;
-const int dirPinR = 4;
-const int stepPinL = 15;
-const int dirPinL = 2;
+const int stepPinR = 16; // 9 ON ESP
+const int dirPinR = 4; // 11
+const int stepPinL = 15; // 12
+const int dirPinL = 2; // 13 
 
 // Define the constants for PID control
 double Kp = 1.5;   // Proportional gain
@@ -470,7 +470,9 @@ void driftCorrection(){
         std::strcat(deadreckoning_payload, ",");
         std::strcat(deadreckoning_payload, right_wall_str);
         
+        xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("deadreckoning_data",  deadreckoning_payload );
+        xSemaphoreGive(mutex_v);
     }
     // after all the dead reckoning data has been drift corrected and published
     // start driving again

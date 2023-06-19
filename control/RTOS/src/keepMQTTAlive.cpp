@@ -1,10 +1,9 @@
 #include <Arduino.h>
 #include <PubSubClient.h>
 #include <WiFi.h>
-#include <esp_task_wdt.h>
 
 // semaphore declaration to prevent conflicts
-// SemaphoreHandle_t sema_keepMQTTAlive;
+SemaphoreHandle_t mutex_v;
 
 // configs
 #define WIFI_NETWORK "myhotspot"
@@ -12,7 +11,7 @@
 #define MQTT_USERNAME "BalanceBug"
 #define MQTT_PASSWORD "123"
 
-const char *MQTT_SERVER = "3.92.255.40";
+const char *MQTT_SERVER = "52.91.64.67";
 uint16_t MQTT_PORT = 1883;
 
 WiFiClient wifiClient;
@@ -66,6 +65,7 @@ void connectToWiFi()
   {
     // WiFi.disconnect();
     WiFi.begin(WIFI_NETWORK, WIFI_PASSWORD);
+    Serial.println("wifi connecting");
     log_i(" waiting on wifi connection");
     vTaskDelay(4000 / portTICK_PERIOD_MS);
   }
@@ -73,16 +73,16 @@ void connectToWiFi()
   WiFi.onEvent(WiFiEvent);
 }
 
-void printStackSpaceMQTT() {
+void printStackSpaceMQTT()
+{
   UBaseType_t freeStack = uxTaskGetStackHighWaterMark(NULL) * sizeof(StackType_t);
   Serial.print("Free Stack Space (keepMQTTAlive): ");
   Serial.print(freeStack);
   Serial.println(" bytes");
 }
 
-
 // task that connects to and keeps MQTT connection alive through intermittent checks
-void keepMQTTAlive(void *parameters)
+void keepMQTTAlive()
 {
   // setting must be set before a MQTT connection is made
   MQTTclient.setKeepAlive(90); // setting keep alive to 90 seconds makes for a very reliable connection, must be set before the 1st connection is made.
@@ -92,9 +92,10 @@ void keepMQTTAlive(void *parameters)
     // check for a is-connected and if the WiFi 'thinks' its connected, found checking on both is more realible than just a single check
     if ((wifiClient.connected()) && (WiFi.status() == WL_CONNECTED))
     {
-      // xSemaphoreTake(sema_keepMQTTAlive, portMAX_DELAY);
+      xSemaphoreTake(mutex_v, portMAX_DELAY);
       MQTTclient.loop();
-      // xSemaphoreGive(sema_keepMQTTAlive);
+      xSemaphoreGive(mutex_v);
+      // MQTTclient.publish("alive_topic", "Alive"); // NEW ADDITION - MONITOR ESP32 status via CLI
     }
     else
     {
