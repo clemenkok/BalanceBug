@@ -78,7 +78,13 @@ function updatePosition(rover, x, y, bearing, leftWall, rightWall) {
 
     // convert to grid coordinates
     rover.grid_x = Math.ceil(rover.x / grid_resolution);
+    if(rover.grid_x === grid_dimensions[0]){
+        rover.grid_x = rover.grid_x - 1;
+    }
     rover.grid_y = Math.ceil(rover.y / grid_resolution);
+    if(rover.grid_y === grid_dimensions[1]){
+        rover.grid_y = rover.grid_y - 1;
+    }
 }
 
 function appxBearing(bearing) {
@@ -143,6 +149,8 @@ function funcCaseA(maze, rover, xcoord, ycoord, degree, leftWall, rightWall){
     x = rover.grid_x;
     y = rover.grid_y;
     let bearings = appxBearing(bearing);
+    console.log(x);
+    console.log(y);
     wallMapping = {0: [[4, 2, -1], [2, 4, 1]], 90: [[1, 3, -1], [3, 1, 1]], 
                     180: [[2, 4, 1], [4, 2, -1]], 270: [[3, 1, 1], [1, 3, -1]]}
     // console.log("Bearings: "+ bearings)
@@ -180,5 +188,7 @@ function funcCaseA(maze, rover, xcoord, ycoord, degree, leftWall, rightWall){
     }
     return [tile_num, tile_info]
 }
-
-module.exports = { Maze, Rover, funcCaseA };
+let mazeMap = new Maze();
+let rover = new Rover();
+mazeMap.createGrid();
+module.exports = { mazeMap, rover, funcCaseA };

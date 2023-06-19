@@ -56,8 +56,12 @@ void setup()
 
     // Setup function for Rover Control Task
     roverSetup();
-    
+        
     Serial.begin(115200);
+
+    
+
+    //connectionSetup();
 
     // Keep Alive can mess with MQTT Publish, requiring us to use a semaphore.
     mutex_v = xSemaphoreCreateMutex();

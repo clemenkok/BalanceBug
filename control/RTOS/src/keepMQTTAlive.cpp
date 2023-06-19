@@ -33,7 +33,7 @@ void connectToMQTT()
 
   // SUBSCRIBED TOPICS GO HERE (JUST COPY AND PASTE BELOW)
   MQTTclient.subscribe("rover_current_coords"); // added subscribe upon connection. TO EXECUTE FN: go to callback
-  MQTTclient.subscribe("test_topic"); // added subscribe upon connection. TO EXECUTE FN: go to callback
+  MQTTclient.subscribe("test_topic");           // added subscribe upon connection. TO EXECUTE FN: go to callback
 
   Serial.println("MQTT Connected");
 }
@@ -82,6 +82,13 @@ void printStackSpaceMQTT()
   Serial.println(" bytes");
 }
 
+// called in setup()
+void connectionSetup()
+{
+  connectToWiFi();
+  connectToMQTT();
+}
+
 // task that connects to and keeps MQTT connection alive through intermittent checks
 void keepMQTTAlive(void *parameters)
 {
@@ -105,7 +112,11 @@ void keepMQTTAlive(void *parameters)
       {
         connectToWiFi();
       }
-      connectToMQTT();
+      if (!MQTTclient.connected()) // WE dont want to reconnect after end of other tasks
+      {
+        Serial.println("I was disconnected");
+        connectToMQTT();
+      }
     }
     vTaskDelay(250 / portTICK_PERIOD_MS); // task runs approx every 250 ms
   }

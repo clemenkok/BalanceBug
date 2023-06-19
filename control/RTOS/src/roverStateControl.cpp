@@ -10,7 +10,7 @@ enum RoverState
     ROVERWAIT
 };
 
-RoverState roverCurrState = LOCALISE;
+RoverState roverCurrState = DRIVE;
 
 bool end_localisation = false;
 bool end_drive = false;
@@ -28,6 +28,10 @@ void startLocalise()
 {
     roverCurrState = LOCALISE;
     setStartLocalisationTrue();
+    // flush the uart serial port
+    Serial.println("Before Serial Flush");
+    SerialPort.flush();
+    Serial.println("After Serial Flush");
 }
 
 void roverSetup()

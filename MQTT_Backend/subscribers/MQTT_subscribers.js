@@ -1,5 +1,5 @@
 const { client } = new (require('../services/mqtt_service'))();
-const { Rover, Maze, funcCaseA } = require('../services/mapping');
+const { mazeMap, rover, funcCaseA } = require('../services/mapping');
 const { trilateration } = require('../services/trilateration');
 const { update_rover_coords } = require('../publishers/MQTT_publishers');
 const db = require("../models");
@@ -29,9 +29,6 @@ function subscribe() {
       let bearing = parseFloat(data[2]);
       let leftWall = data[3] === '1';
       let rightWall = data[4] === '1';
-
-      const mazeMap = new Maze();
-      const rover = new Rover();
 
       let tile = funcCaseA(mazeMap, rover, x, y, bearing, leftWall, rightWall);
       tile_num = tile[0];
