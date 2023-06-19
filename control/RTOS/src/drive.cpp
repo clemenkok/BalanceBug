@@ -528,8 +528,12 @@ void driftCorrection()
     
     for (int j = 1; j < ARRAY_SIZE; j++)
     {
-        posXArr[j] = prevLocalisation[0] + beta * (cos(alpha) * (posXArr[j] - prevLocalisation[0]) - sin(alpha) * (posYArr[j] - prevLocalisation[1]));
-        posYArr[j] = prevLocalisation[1] + beta * (sin(alpha) * (posXArr[j] - prevLocalisation[0]) + cos(alpha) * (posYArr[j] - prevLocalisation[1]));
+        //posXArr[j] = prevLocalisation[0] + beta * (cos(alpha) * (posXArr[j] - prevLocalisation[0]) - sin(alpha) * (posYArr[j] - prevLocalisation[1]));
+        //posYArr[j] = prevLocalisation[1] + beta * (sin(alpha) * (posXArr[j] - prevLocalisation[0]) + cos(alpha) * (posYArr[j] - prevLocalisation[1]));
+        double tempPosX = posXArr[j];
+        double tempPosY = posYArr[j];
+        posXArr[j] = prevLocalisation[0] + beta * (cos(alpha) * (tempPosX - posXArr[0]) - sin(alpha) * (tempPosY - posYArr[0]));
+        posYArr[j] = prevLocalisation[1] + beta * (sin(alpha) * (tempPosX - posXArr[0]) + cos(alpha) * (tempPosY - posYArr[0]));
     }
     Serial.println("Reached before Mutex");
 
