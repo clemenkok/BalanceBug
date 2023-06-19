@@ -106,7 +106,7 @@ void roverStateLoop(void *parameters)
             }
         } */
 
-        vTaskDelay(250 / portTICK_PERIOD_MS); // prevent interfering with watchdog counter
+        vTaskDelay(5 / portTICK_PERIOD_MS); // prevent interfering with watchdog counter
     }
     vTaskDelete(NULL);
 }

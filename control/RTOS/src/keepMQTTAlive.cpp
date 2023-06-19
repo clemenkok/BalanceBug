@@ -6,7 +6,7 @@
 SemaphoreHandle_t mutex_v;
 
 // configs
-#define WIFI_NETWORK "myhotspot"
+#define WIFI_NETWORK "myhotspot2"
 #define WIFI_PASSWORD "racemicracemate"
 #define MQTT_USERNAME "BalanceBug"
 #define MQTT_PASSWORD "123"
@@ -33,6 +33,7 @@ void connectToMQTT()
 
   // SUBSCRIBED TOPICS GO HERE (JUST COPY AND PASTE BELOW)
   MQTTclient.subscribe("rover_current_coords"); // added subscribe upon connection. TO EXECUTE FN: go to callback
+  MQTTclient.subscribe("test_topic"); // added subscribe upon connection. TO EXECUTE FN: go to callback
 
   Serial.println("MQTT Connected");
 }
@@ -82,7 +83,7 @@ void printStackSpaceMQTT()
 }
 
 // task that connects to and keeps MQTT connection alive through intermittent checks
-void keepMQTTAlive()
+void keepMQTTAlive(void *parameters)
 {
   // setting must be set before a MQTT connection is made
   MQTTclient.setKeepAlive(90); // setting keep alive to 90 seconds makes for a very reliable connection, must be set before the 1st connection is made.

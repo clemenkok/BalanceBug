@@ -1,9 +1,9 @@
 const { client } = new (require('../services/mqtt_service'))();
-const { rover, mazeMap, caseA } = require('../services/mapping');
+const { Rover, Maze, funcCaseA } = require('../services/mapping');
 const { trilateration } = require('../services/trilateration');
 const { update_rover_coords } = require('../publishers/MQTT_publishers');
-// const db = require("../models");
-// const Live_database = db.live_database;
+const db = require("../models");
+const Live_database = db.live_database;
 
 function subscribe() {
   // subscribing to an array of topics may cause unintended side effects
@@ -29,13 +29,33 @@ function subscribe() {
       let bearing = parseFloat(data[2]);
       let leftWall = data[3] === '1';
       let rightWall = data[4] === '1';
-      let tile = caseA(mazeMap, rover, x, y, bearing, leftWall, rightWall);
+
+      const mazeMap = new Maze();
+      const rover = new Rover();
+
+      let tile = funcCaseA(mazeMap, rover, x, y, bearing, leftWall, rightWall);
       tile_num = tile[0];
       tile_info = tile[1];
       // }
 
       // updates global 35x35 map in memory.
       global.globalMap[tile_num[0]][tile_num[1]] = tile_info;
+
+      const live_database = {
+        tile_num: tile_num,
+        tile_info: tile_info
+    };
+
+    Live_database.create(live_database)
+        .then(data => {
+            console.log("added tile data to database:" + data);
+        })
+        .catch(err => {
+            console.log({
+                message:
+                    err.message || "Some error occurred while creating the live_database Table."
+            });
+        });
     }
 
     /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -68,9 +88,9 @@ function subscribe() {
       // Hardcode the beacon x and y positions
       //        red       blue      yellow    rover rotate in clockwise direction
       const x = [
-        [93, 54],
-        [93, 0],
-        [0, 54],
+        [225, 350],
+        [225, 0],
+        [0, 350],
       ];
       // error here. Need to stringify before parsing
       const trilateration_result = JSON.parse(

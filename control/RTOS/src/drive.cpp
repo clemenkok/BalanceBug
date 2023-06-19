@@ -11,13 +11,13 @@ const double PIVAL = 3.1415927;
 
 // esp32 pins
 const int ledPinL = 27; // 2 pins for 2 LEDs
-const int ledPinR = 33;
-const int ldrLPin = 26; // pin for left front LED
+const int ledPinR = 26;
+const int ldrLPin = 33; // pin for left front LED
 const int ldrRPin = 35; // pin for right front LED
 const int ldrFPin = 32; // pin for front LED
 
 // Define stepper motor connections
-const int stepPinR = 16; // 9 ON ESP
+const int stepPinR = 16; // 9 ON ESP BOARD
 const int dirPinR = 4; // 11
 const int stepPinL = 15; // 12
 const int dirPinL = 2; // 13 
@@ -504,7 +504,7 @@ void collectData(){
 
 void spinClockwise(){
     stepperL.setSpeed(50);
-    stepperR.setSpeed(-50);
+    stepperR.setSpeed(50);
     stepperL.runSpeed();
     stepperR.runSpeed();
 }

@@ -25,14 +25,14 @@ void callback(char *topic, byte *payload, unsigned int length)
         receivedPayload += (char)payload[i];
     }
 
-    /*
+    
     // Check if the received payload matches a specific condition
     if (receivedPayload == "1")
     {
         // Call the corresponding function or execute the desired code
         Serial.println("Execute Function");
     }
-    */
+    
    
     // if first letter of the payload is an A, then we know it is the coord update
     if (receivedPayload[0] == 'A'){
@@ -65,7 +65,7 @@ void setup()
 
     MQTTclient.setCallback(callback);
 
-    /* // task to connect to, and periodically check on MQTT/Wi-Fi
+     // task to connect to, and periodically check on MQTT/Wi-Fi
     xTaskCreatePinnedToCore(        // This pins the task to a fixed core
         keepMQTTAlive,              // Function to be called
         "Keep MQTT Alive",          // Name of task * for debugging *
@@ -84,7 +84,7 @@ void setup()
         NULL,
         5,
         NULL,
-        CONFIG_ARDUINO_RUNNING_CORE);  */
+        CONFIG_ARDUINO_RUNNING_CORE);  
 }
 
 void loop()

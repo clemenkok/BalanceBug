@@ -131,7 +131,7 @@ function updateBorder(maze, x, y, border, neighbourBorder, delta) {
     }    
 }
 
-function caseA(maze, rover, xcoord, ycoord, degree, leftWall, rightWall){
+function funcCaseA(maze, rover, xcoord, ycoord, degree, leftWall, rightWall){
     // TO-DO: check breakdown of json packet
     let x = xcoord;
     let y = ycoord;
@@ -181,8 +181,4 @@ function caseA(maze, rover, xcoord, ycoord, degree, leftWall, rightWall){
     return [tile_num, tile_info]
 }
 
-
-const mazeMap = new Maze()
-const rover = new Rover()
-
-module.exports = { rover, mazeMap, caseA };
+module.exports = { Maze, Rover, funcCaseA };

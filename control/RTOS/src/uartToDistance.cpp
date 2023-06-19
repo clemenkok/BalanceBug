@@ -103,6 +103,7 @@ void uartToDistanceLoop()
   if (currentState == LOOKING_FOR_1ST_BALL || currentState == LOOKING_FOR_2ND_BALL || currentState == LOOKING_FOR_3RD_BALL)
   {
     spinClockwise();
+    //Serial.println("SPin CLockwise");
   }
 
   if (SerialPort.available() > 11)
@@ -111,12 +112,14 @@ void uartToDistanceLoop()
     // Read 4 bytes at the same time
 
     SerialPort.readBytes(myBuffer, 12);
+    /*
     for (int i = 0; i < 12; i++)
     {
       Serial.print(myBuffer[i], HEX);
       Serial.print(" ");
     }
     Serial.println();
+    */
 
     long pixel_box_height = getBoxHeightInPixels(myBuffer);
     long pixel_center_x = getPixelCenterX(myBuffer);
@@ -137,7 +140,7 @@ void uartToDistanceLoop()
           change_state = true;
       }
     }
-    Serial.println(currentState);
+    //Serial.println(currentState);
 
     switch (currentState)
     {

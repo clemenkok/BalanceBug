@@ -26,7 +26,7 @@ export class GridPage extends React.Component {
 
   handlePoll = () => {
     this.setState((prevState) => ({
-      counter: prevState.counter + 0.5,
+      counter: prevState.counter + 1,
     }));
   };
 
