@@ -30,7 +30,7 @@ enum LocalisationState
 LocalisationState currentState = WAITING;
 
 // state controllers
-bool start_localisation = true; // controlled by main rover state control
+bool start_localisation = false; // controlled by main rover state control
 bool change_state = false;
 
 int red_dist;
@@ -99,11 +99,14 @@ void setStartLocalisationTrue()
 
 void uartToDistanceLoop()
 {
+  Serial.println("Inside Uart to Dist Loop");
   // make the rover turn clockwise if it is looking for ball
   if (currentState == LOOKING_FOR_1ST_BALL || currentState == LOOKING_FOR_2ND_BALL || currentState == LOOKING_FOR_3RD_BALL)
   {
     spinClockwise();
-    //Serial.println("SPin CLockwise");
+    Serial.println("SPin CLockwise");
+    Serial.println("Curr Localise State");
+    Serial.println(currentState);
   }
 
   if (SerialPort.available() > 11)
