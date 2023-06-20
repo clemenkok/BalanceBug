@@ -92,7 +92,7 @@ var enteringwallnone = false; //means the option just get swtiched to none
 var allloops = [];
 var currentloop = [];
 
-// Add 3 dots for 0, 50 and 100%
+// Add 3 dots for 0, 50 and 100% for testing
 svG
   .selectAll("whatever")
   .data(data)
@@ -104,7 +104,11 @@ svG
   .attr("cy", function (d) {
     return y(d.y);
   })
-  .attr("r", 2);
+  .attr("r", 2)
+  .attr("opacity", "0")
+
+
+
 
 function addball() {
   console.log("addball");
@@ -603,13 +607,19 @@ function detectclosedloop(currentpos) {
       //from chatgpt
       //To calculate the area of a shape formed by a set of data points using D3.js, you can use the Shoelace formula (also known as Gauss's area formula or the surveyor's formula). The Shoelace formula calculates the signed area of a polygon defined by its vertices.
 
-      currentloop.push(currentloop[0]);
 
-      //fix the format for d3.polygonArea
+      
+      
+      //fix the format for d3.polygonArea (starting from i to the end of the array because i is the index of the collided point)
       let temp = [];
-      for (let i = 0; i < currentloop.length; i++) {
-        temp.push([currentloop[i].x, currentloop[i].y]);
+      //temp stores the loop but currentloop stores some points that are not in the loop
+      for (let j = i; j < currentloop.length; j++) {  
+        temp.push([currentloop[j].x, currentloop[j].y]);
       }
+      console.log("currentloop", currentloop)
+      console.log("temp", temp) 
+      //temp.push(temp[0]);
+
 
       let looparea = d3.polygonArea(temp);
       console.log(`closed loop detected with area ${looparea}`);
@@ -632,7 +642,7 @@ function detectclosedloop(currentpos) {
           .append("g")
           .attr("id", "polygons")
           .selectAll("polygon")
-          .data([currentloop])
+          .data([currentloop.slice(i)]) //starting from i as the reason discussed above
           .enter()
           .append("polygon")
           .attr("points", function (d) {
@@ -1007,7 +1017,7 @@ function findUnexploredPart() {
     .attr("x", x(mazeregion.topleft[0] + columnwidth * closestregion[0] + 10)) // X-coordinate of the text position
     .attr("y", y(mazeregion.topleft[1] - rowheight * closestregion[1] - 10)) // Y-coordinate of the text position
     //.attr("display", checkboxshowpointsingrid.checked ? "block" : "none")
-    .text("visit me bitch") // Text content
+    .text("unexplored area") // Text content
     .style("font-size", "15px") // Set the font size
     .style("font-color", "orange");
 }
