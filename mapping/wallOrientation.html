@@ -71,11 +71,43 @@
             rover.y = y;
             rover.bearing = bearing;
 
-            // rounding
+            // by ceiling
+            // rover.grid_x = Math.ceil(rover.x / grid_resolution);
+            // rover.grid_y = Math.ceil(rover.y / grid_resolution);
+
+            // rounding instead
             rover.grid_x = Math.round(rover.x / grid_resolution);
             rover.grid_y = Math.round(rover.y / grid_resolution);
             
         }
+
+        // function appxBearing(bearing) {
+        //     // i want to approximate each bearing i get into one of the following sets:
+        //     // [0], [0, 90], [90], [90, 180], [180], [180, 270], [270], [270, 0], [0]
+        //     // this means i want to divide the 360 bearing into 8 sectors, each being 45 degrees
+        //     // at each of the 45 degree increment, i want to have a 45 degree range for it with that number at the center
+        //     // for example, at 45 degrees, any bearing number within the range 22.5-67.5 will fall into that
+
+        //     var sectors = {
+        //         22.5: [0], 
+        //         // 67.5: [0, 90],
+        //         112.5: [90], 
+        //         // 157.5: [90, 180], 
+        //         202.5: [180], 
+        //         // 247.5: [180, 270], 
+        //         292.5: [270], 
+        //         // 337.5: [270, 0],
+        //         382.5: [0]
+        //     };
+            
+        //     for (var sector in sectors) {
+        //         if (bearing < sector) {
+        //             return sectors[sector];
+        //         }
+        //     }
+                
+        //     return [0];
+        // }
 
         function updateBorder(maze, x, y, border, neighbourBorder, delta) {
             // mark border as wall
@@ -112,24 +144,76 @@
                         neighbourBorder = 3;
                         delta = -1;
                         updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
+                        // if (maze.grid[prevX][prevY][3] && maze.grid[prevX][prevY][4]){ // case C
+                        //     // mark top wall of prev cell
+                        //     border = 1;
+                        //     neighbourBorder = 3;
+                        //     delta = -1;
+                        //     updateBorder(maze, prevCell[0], prevCell[1], border, neighbourBorder, delta); 
+                        //     maze.grid[x][y][1] = false;
+                        //     if(x-1 >= 0 && x-1 < grid_dimensions[1]){
+                        //         maze.grid[x-1][y][3] = false;
+                        //     }
+                        // }
+                        // if (!maze.grid[prevX][prevY][1] && maze.grid[prevX][prevY][4]){
+                        //     // mark top wall of prev cell
+                        //     border = 1;
+                        //     neighbourBorder = 3;
+                        //     delta = -1;
+                        //     updateBorder(maze, prevCell[0], prevCell[1], border, neighbourBorder, delta); 
+                        // }
             } else if (dy === -1 && dx === 0) {  // moving left
                 // mark bottom wall of curr cell
                 border = 3;
                 neighbourBorder = 1;
                 delta = 1;
                 updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
+                // if (maze.grid[prevX][prevY][1] && maze.grid[prevX][prevY][2]){ // case C
+                //     // mark bottom wall of prev cell
+                //     border = 3;
+                //     neighbourBorder = 1;
+                //     delta = 1;
+                //     updateBorder(maze, prevCell[0], prevCell[1], border, neighbourBorder, delta); 
+                //     maze.grid[prevX][prevY][1] = false;
+                //     if(prevX-1 >= 0 && prevX-1 < grid_dimensions[1]){
+                //         maze.grid[prevX-1][prevY][3] = false;
+                //     }
+                // }
+
             } else if (dx === 1 && dy === 0) {  // moving down
                 // mark right wall of curr cell
                 border = 2;
                 neighbourBorder = 4;
                 delta = 1;
-                updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta);
+                updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta);  
+                // if (maze.grid[prevX][prevY][1] && maze.grid[prevX][prevY][4]){ // case D
+                //     // mark right wall of prev cell
+                //     border = 2;
+                //     neighbourBorder = 4;
+                //     delta = 1;
+                //     updateBorder(maze, prevCell[0], prevCell[1], border, neighbourBorder, delta);
+                //     maze.grid[prevX][prevY][4] = false;
+                //     if(prevY-1 >= 0 && prevY-1 < grid_dimensions[1]){
+                //         maze.grid[prevX][prevY-1][2] = false;
+                //     }
+                // }
             } else if (dx === -1 && dy === 0) {  // moving up
                 // mark left wall of curr cell
                 border = 4;
                 neighbourBorder = 2;
                 delta = -1;
-                updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
+                updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta);  
+                // if (maze.grid[prevX][prevY][2] && maze.grid[prevX][prevY][3]){ // case B
+                //     // mark left wall of prev cell
+                //     border = 4;
+                //     neighbourBorder = 2;
+                //     delta = -1;
+                //     updateBorder(maze, prevCell[0], prevCell[1], border, neighbourBorder, delta); 
+                //     maze.grid[prevX][prevY][2] = false;
+                //     if(prevY+1 >= 0 && prevY+1 < grid_dimensions[1]){
+                //         maze.grid[prevX][prevY+1][4] = false;
+                //     }
+                // }
             } else if (dx === -1 && dy === -1){ // moving up-left
                 // mark left wall of prev cell
                 border = 4;
@@ -140,7 +224,12 @@
                 border = 3;
                 neighbourBorder = 1;
                 delta = 1;
-                updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta);
+                updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
+                // // mark left wall of curr cell
+                // border = 4;
+                // neighbourBorder = 2;
+                // delta = -1;
+                // updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta);  
             } else if (dx === -1 && dy === 1){ // moving up-right
                 // mark top wall of prev cell
                 border = 1;
@@ -184,6 +273,92 @@
             }  
         }
         
+        function rightWallFollowing(maze, prevCell, currCell){
+            let dx = currCell[0] - prevCell[0];
+            let dy = currCell[1] - prevCell[1];
+            let x = currCell[0];
+            let y = currCell[1];
+            let prevX = prevCell[0];
+            let prevY = prevCell[1];
+            if (dy === 1 && dx === 0) {  // moving right
+                // mark bottom wall of curr cell
+                border = 3;
+                neighbourBorder = 1;
+                delta = 1;
+                updateBorder(maze, x, y, border, neighbourBorder, delta); 
+            } else if (dy === -1 && dx === 0) {  // moving left
+                // mark top wall of curr cell
+                border = 1;
+                neighbourBorder = 3;
+                delta = -1;
+                updateBorder(maze, x, y, border, neighbourBorder, delta); 
+            } else if (dx === 1 && dy === 0) {  // moving down
+                // mark left wall of curr cell
+                border = 4;
+                neighbourBorder = 2;
+                delta = -1;
+                updateBorder(maze, x, y, border, neighbourBorder, delta); 
+            } else if (dx === -1 && dy === 0) {  // moving up
+                // mark right wall of curr cell
+                border = 2;
+                neighbourBorder = 4;
+                delta = 1;
+                updateBorder(maze, x, y, border, neighbourBorder, delta);   
+            } else if (dx === -1 && dy === -1){ // moving up-left
+                // mark top wall of prev cell
+                border = 1;
+                neighbourBorder = 3;
+                delta = -1;
+                updateBorder(maze, prevX, prevY, border, neighbourBorder, delta); 
+                // mark right wall of curr cell
+                border = 2;
+                neighbourBorder = 4;
+                delta = 1;
+                updateBorder(maze, x, y, border, neighbourBorder, delta);  
+                // CHECK
+                if(maze.grid[prevX][prevY][3]){
+                    // mark right wall of prev cell
+                    border = 2;
+                    neighbourBorder = 4;
+                    delta = 1;
+                    updateBorder(maze, prevX, prevY, border, neighbourBorder, delta); 
+                }
+            } else if (dx === -1 && dy === 1){ // moving up-right
+                // mark right wall of prev cell
+                border = 2;
+                neighbourBorder = 4;
+                delta = 1;
+                updateBorder(maze, prevX, prevY, border, neighbourBorder, delta); 
+                // mark bottom wall of curr cell
+                border = 3;
+                neighbourBorder = 1;
+                delta = 1;
+                updateBorder(maze, x, y, border, neighbourBorder, delta); 
+            } else if (dx === 1 && dy === -1){ // moving down-left
+                // mark left wall of prev cell
+                border = 4;
+                neighbourBorder = 2;
+                delta = -1;
+                updateBorder(maze, prevX, prevY, border, neighbourBorder, delta); 
+                // mark top wall of curr cell
+                border = 1;
+                neighbourBorder = 3;
+                delta = -1;
+                updateBorder(maze, x, y, border, neighbourBorder, delta); 
+            } else if (dx === 1 && dy === 1){ // moving down-right
+                // mark bottom wall of prev cell
+                border = 3;
+                neighbourBorder = 1;
+                delta = 1;
+                updateBorder(maze, prevX, prevY, border, neighbourBorder, delta); 
+                // mark left wall of curr cell
+                border = 4;
+                neighbourBorder = 2;
+                delta = -1;
+                updateBorder(maze, x, y, border, neighbourBorder, delta); 
+            }  
+        }
+        
         function cleanPath(maze, path, following){
             let pathLength = path.length;
             console.log(pathLength);
@@ -191,47 +366,133 @@
             let currCell;
             let dx;
             let dy;
-            for(let j = 1; j < pathLength; j++){
-                prevCell = path[j-1];
-                currCell = path[j];
-                x = currCell[0];
-                y = currCell[1];
-                prevX = prevCell[0];
-                prevY = prevCell[1];
-                dx = currCell[0] - prevCell[0];
-                dy = currCell[1] - prevCell[1];
-                if (dy === 1 && dx === 0) {  // moving right
-                    maze.grid[prevX][prevY][2] = false;
-                    maze.grid[x][y][4] = false;
-                    maze.grid[x][y][3] = false;
-                    if(x+1 < grid_dimensions[0]){
-                        maze.grid[x+1][y][1] = false;
-                    }
-                } else if (dy === -1 && dx === 0) {  // moving left
-                    maze.grid[prevX][prevY][4] = false;
-                    maze.grid[x][y][2] = false;
-                    maze.grid[x][y][1] = false;
-                    if(x-1>=0){
-                        maze.grid[x-1][y][3] = false;
-                    }
-                } else if (dx === 1 && dy === 0) {  // moving down
-                    maze.grid[prevX][prevY][3] = false;
-                    maze.grid[x][y][1] = false;
-                    maze.grid[x][y][4] = false;
-                    if(y-1>=0){
-                        maze.grid[x][y-1][2] = false;
-                    }
-                } else if (dx === -1 && dy === 0) {  // moving up
-                    maze.grid[prevX][prevY][1] = false;
-                    maze.grid[x][y][3] = false;
-                    maze.grid[x][y][2] = false;
-                    if(y+1 < grid_dimensions[1]){
-                        maze.grid[x][y+1][4] = false;
-                    }
+            let visitedAmount = {};
+            if (following === "left") {
+                // maze.grid[path[0][0]][path[0][1]][2] = true;
+                // maze.grid[path[0][0]][path[0][1]+1][4] = true;
+                for(let j = 1; j < pathLength; j++){
+                    prevCell = path[j-1];
+                    currCell = path[j];
+                    x = currCell[0];
+                    y = currCell[1];
+                    prevX = prevCell[0];
+                    prevY = prevCell[1];
+                    dx = currCell[0] - prevCell[0];
+                    dy = currCell[1] - prevCell[1];
+                    if (dy === 1 && dx === 0) {  // moving right
+                        maze.grid[prevX][prevY][2] = false;
+                        maze.grid[x][y][4] = false;
+                        maze.grid[x][y][3] = false;
+                        if (x+1 < grid_dimensions[0]){
+                            maze.grid[x+1][y][1] = false;
+                        }
+                    } else if (dy === -1 && dx === 0) {  // moving left
+                        maze.grid[prevX][prevY][4] = false;
+                        maze.grid[x][y][2] = false;
+                        maze.grid[x][y][1] = false;
+                        if (x-1>=0){
+                            maze.grid[x-1][y][3] = false;
+                        }
+                    } else if (dx === 1 && dy === 0) {  // moving down
+                        maze.grid[prevX][prevY][3] = false;
+                        maze.grid[x][y][1] = false;
+                        maze.grid[x][y][4] = false;
+                        if (y-1>=0){
+                            maze.grid[x][y-1][2] = false;
+                        }
+                    } else if (dx === -1 && dy === 0) {  // moving up
+                        maze.grid[prevX][prevY][1] = false;
+                        maze.grid[x][y][3] = false;
+                        maze.grid[x][y][2] = false;
+                        if (y+1 < grid_dimensions[1]){
+                            maze.grid[x][y+1][4] = false;
+                        }
+                    } else if (dx === -1 && dy === -1){ // moving up-left
+                        maze.grid[x][y][2] = false;
+                        if (y+1 < grid_dimensions[1]) {
+                            maze.grid[x][y+1][4] = false;
+                        }
+                    } else if (dx === -1 && dy === 1){ // moving up-right
+                        maze.grid[x][y][3] = false;
+                        if (x+1 < grid_dimensions[0]) {
+                            maze.grid[x+1][y][1] = false;
+                        }
+                    } else if (dx === 1 && dy === -1){ // moving down-left
+                        maze.grid[x][y][1] = false;
+                        if (x-1 >= 0) {
+                            maze.grid[x-1][y][3] = false;
+                        }
+                    } else if (dx === 1 && dy === 1){ // moving down-right
+                        maze.grid[x][y][4] = false;
+                        if (y-1 >= 0) {
+                            maze.grid[x][y-1][2] = false;
+                        }
+                    } 
+                }
+            } else if (following === "right") {
+                maze.grid[path[0][0]][path[0][1]][4] = true;
+                maze.grid[path[0][0]][path[0][1]-1][2] = true;
+                for(let j = 1; j < pathLength; j++){
+                    prevCell = path[j-1];
+                    currCell = path[j];
+                    x = currCell[0];
+                    y = currCell[1];
+                    prevX = prevCell[0];
+                    prevY = prevCell[1];
+                    dx = currCell[0] - prevCell[0];
+                    dy = currCell[1] - prevCell[1];
+                    if (dy === 1 && dx === 0) {  // moving right
+                        maze.grid[prevX][prevY][2] = false;
+                        maze.grid[x][y][4] = false;
+                        maze.grid[x][y][1] = false;
+                        if (x-1 >= 0){
+                            maze.grid[x-1][y][3] = false;
+                        }
+                    } else if (dy === -1 && dx === 0) {  // moving left
+                        maze.grid[prevX][prevY][4] = false;
+                        maze.grid[x][y][2] = false;
+                        maze.grid[x][y][3] = false;
+                        if (x+1 < grid_dimensions[0]){
+                            maze.grid[x+1][y][1] = false;
+                        }
+                    } else if (dx === 1 && dy === 0) {  // moving down
+                        maze.grid[prevX][prevY][3] = false;
+                        maze.grid[x][y][1] = false;
+                        maze.grid[x][y][2] = false;
+                        if (y+1 < grid_dimensions[1]){
+                            maze.grid[x][y+1][4] = false;
+                        }
+                    } else if (dx === -1 && dy === 0) {  // moving up
+                        maze.grid[prevX][prevY][1] = false;
+                        maze.grid[x][y][3] = false;
+                        maze.grid[x][y][4] = false;
+                        if (y-1>=0){
+                            maze.grid[x][y-1][2] = false;
+                        }
+                    } else if (dx === -1 && dy === -1){ // moving up-left
+                        maze.grid[x][y][3] = false;
+                        if (x+1 < grid_dimensions[0]) {
+                            maze.grid[x+1][y][1] = false;
+                        }
+                    } else if (dx === -1 && dy === 1){ // moving up-right
+                        maze.grid[x][y][4] = false;
+                        if (y-1 >= 0) {
+                            maze.grid[x][y-1][2] = false;
+                        }
+                    } else if (dx === 1 && dy === -1){ // moving down-left
+                        maze.grid[x][y][2] = false;
+                        if (y+1 < grid_dimensions[1]) {
+                            maze.grid[x][y+1][4] = false;
+                        }
+                    } else if (dx === 1 && dy === 1){ // moving down-right
+                        maze.grid[x][y][1] = false;
+                        if (x-1 >= 0) {
+                            maze.grid[x-1][y][3] = false;
+                        }
+                    } 
                 }
             }
         }
-
         // case a
         function caseA(maze, rover, xcoord, ycoord, degree, leftWall, rightWall){
             let x = xcoord;
@@ -272,6 +533,13 @@
             let prevY = prevCell[1];
             let dx = currCell[0] - prevCell[0];
             let dy = currCell[1] - prevCell[1];
+            let ddx = currCell[0] - prevPrevCell[0];
+            let ddy = currCell[1] - prevPrevCell[1];
+            let pddx = prevCell[0] - prevPrevPrevCell[0];
+            let pddy = prevCell[1] - prevPrevPrevCell[1];
+            ddRange = [[-1, -1], [-1, 1], [1, -1], [1, 1]];
+            diagonal = (ddx === 1 && (ddy === 1 || ddy === -1)) || (ddx === -1 && (ddy === 1 || ddy === -1))
+            prevDiagonal = (pddx === 1 && (pddy === 1 || pddy === -1)) || (pddx === -1 && (pddy === 1 || pddy === -1))
             if(!maze.grid[x][y][0]){
                 maze.grid[x][y][0] = true
             }
@@ -280,13 +548,6 @@
             if (currCell !== [0, 0] || prevNEcurr || prevPrevNEcurr){
                 if (leftWall){
                     leftWallFollowing(maze, prevCell, currCell);
-                    let ddx = currCell[0] - prevPrevCell[0];
-                    let ddy = currCell[1] - prevPrevCell[1];
-                    let pddx = prevCell[0] - prevPrevPrevCell[0];
-                    let pddy = prevCell[1] - prevPrevPrevCell[1];
-                    ddRange = [[-1, -1], [-1, 1], [1, -1], [1, 1]];
-                    diagonal = (ddx === 1 && (ddy === 1 || ddy === -1)) || (ddx === -1 && (ddy === 1 || ddy === -1))
-                    prevDiagonal = (pddx === 1 && (pddy === 1 || pddy === -1)) || (pddx === -1 && (pddy === 1 || pddy === -1))
                     if (diagonal){
                         // console.log(createdDiagonals.some(arr => JSON.stringify(arr) === JSON.stringify([prevCell, prevPrevPrevCell])));
                         if (!createdDiagonals.some(arr => JSON.stringify(arr) === JSON.stringify([prevCell, prevPrevPrevCell]))) {
@@ -306,12 +567,10 @@
                             createdDiagonals.push([currCell, prevPrevCell]);
                         }
                     } 
-                    if (!(createdDiagonals.some(arr => JSON.stringify(arr) === JSON.stringify([currCell, prevPrevCell])) && createdDiagonals.some(arr => JSON.stringify(arr) === JSON.stringify([prevCell, prevPrevPrevCell])))) {
+                    // if (!(createdDiagonals.some(arr => JSON.stringify(arr) === JSON.stringify([currCell, prevPrevCell])) && createdDiagonals.some(arr => JSON.stringify(arr) === JSON.stringify([prevCell, prevPrevPrevCell])))) {
                         let prevGrid = [4, 1, 2, 3];
                         let pPx = prevPrevCell[0];
                         let pPy = prevPrevCell[1];
-                        let pPPx = prevPrevPrevCell[0];
-                        let pPPy = prevPrevPrevCell[1];
                         for (let i = 1; i <= 4; i++){
                             // console.log(`"Previous border for ${i}: "`)
                             if (maze.grid[prevX][prevY][i] && maze.grid[pPx][pPy][prevGrid[i-1]]){
@@ -327,81 +586,63 @@
                                 }
                             }
                         }
-                    }
+                    // }
                 } else if (rightWall) {
-                    if (dy === 1 && dx === 0) {  // moving right
-                        // mark bottom wall of curr cell
-                        border = 3;
-                        neighbourBorder = 1;
-                        delta = 1;
-                        updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
-                    } else if (dy === -1 && dx === 0) {  // moving left
-                        // mark top wall of curr cell
-                        border = 1;
-                        neighbourBorder = 3;
-                        delta = -1;
-                        updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
-                    } else if (dx === 1 && dy === 0) {  // moving down
-                        // mark left wall of curr cell
-                        border = 4;
-                        neighbourBorder = 2;
-                        delta = -1;
-                        updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
-                    } else if (dx === -1 && dy === 0) {  // moving up
-                        // mark right wall of curr cell
-                        border = 2;
-                        neighbourBorder = 4;
-                        delta = 1;
-                        updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta);   
-                    } else if (dx === -1 && dy === -1){ // moving up-left
-                        // mark top wall of prev cell
-                        border = 1;
-                        neighbourBorder = 3;
-                        delta = -1;
-                        updateBorder(maze, prevCell[0], prevCell[1], border, neighbourBorder, delta); 
-                        // mark right wall of curr cell
-                        border = 2;
-                        neighbourBorder = 4;
-                        delta = 1;
-                        updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta);  
-                    } else if (dx === -1 && dy === 1){ // moving up-right
-                        // mark right wall of prev cell
-                        border = 2;
-                        neighbourBorder = 4;
-                        delta = 1;
-                        updateBorder(maze, prevCell[0], prevCell[1], border, neighbourBorder, delta); 
-                        // mark bottom wall of curr cell
-                        border = 3;
-                        neighbourBorder = 1;
-                        delta = 1;
-                        updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
-                    } else if (dx === 1 && dy === -1){ // moving down-left
-                        // mark left wall of prev cell
-                        border = 4;
-                        neighbourBorder = 2;
-                        delta = -1;
-                        updateBorder(maze, prevCell[0], prevCell[1], border, neighbourBorder, delta); 
-                        // mark top wall of curr cell
-                        border = 1;
-                        neighbourBorder = 3;
-                        delta = -1;
-                        updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
-                    } else if (dx === 1 && dy === 1){ // moving down-right
-                        // mark bottom wall of prev cell
-                        border = 3;
-                        neighbourBorder = 1;
-                        delta = 1;
-                        updateBorder(maze, prevCell[0], prevCell[1], border, neighbourBorder, delta); 
-                        // mark left wall of curr cell
-                        border = 4;
-                        neighbourBorder = 2;
-                        delta = -1;
-                        updateBorder(maze, currCell[0], currCell[1], border, neighbourBorder, delta); 
-                    }  
+                    rightWallFollowing(maze, prevCell, currCell);
+                    if (diagonal){
+                        if (!createdDiagonals.some(arr => JSON.stringify(arr) === JSON.stringify([prevCell, prevPrevPrevCell]))) {
+                            for (let i = 1; i <= 4; i++){
+                                maze.grid[prevX][prevY][i] = false;
+                                if (i === 1 && prevX-1 >= 0){
+                                    maze.grid[prevX-1][prevY][3] = false;
+                                } else if (i === 2 && prevY+1 < grid_dimensions[1]){
+                                    maze.grid[prevX][prevY+1][4] = false;
+                                } else if (i === 3 && prevX+1 < grid_dimensions[0]){
+                                    maze.grid[prevX+1][prevY][1] = false;
+                                } else if (i === 4 && prevY-1 >= 0){
+                                    maze.grid[prevX][prevY-1][2] = false;
+                                }
+                            }
+                        }
+                        rightWallFollowing(maze, prevPrevCell, currCell);
+                        createdDiagonals.push([currCell, prevPrevCell]);
+                    }
+                    // if (!(createdDiagonals.some(arr => JSON.stringify(arr) === JSON.stringify([currCell, prevPrevCell])) && createdDiagonals.some(arr => JSON.stringify(arr) === JSON.stringify([prevCell, prevPrevPrevCell])))) {
+                        let prevGrid = [2, 3, 4, 1];
+                        let pPx = prevPrevCell[0];
+                        let pPy = prevPrevCell[1];
+                        for (let i = 1; i <= 4; i++){
+                            // console.log(`"Previous border for ${i}: "`)
+                            if (maze.grid[prevX][prevY][i] && maze.grid[pPx][pPy][prevGrid[i-1]]){
+                                maze.grid[pPx][pPy][i] = true;
+                                if (i === 1 && pPx-1 >= 0){
+                                    maze.grid[pPx-1][pPy][3] = true;
+                                } else if (i === 2 && pPy+1 < grid_dimensions[1]){
+                                    maze.grid[pPx][pPy+1][4] = true;
+                                } else if (i === 3 && pPx+1 < grid_dimensions[0]){
+                                    maze.grid[pPx+1][pPy][1] = true;
+                                } else if (i === 4 && pPy-1 >= 0){
+                                    maze.grid[pPx][pPy-1][2] = true;
+                                }
+                            }
+                        }
+                    // }
                 }
             }
         }
 
+let mazeGrid = [
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]],
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]],
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]],
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]],
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]],
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]],
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]],
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]],
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]],
+            [[false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false], [false, false, false, false, false]]
+        ]
 
         function drawMaze(maze) {
             const canvas = document.createElement("canvas");
@@ -448,12 +689,15 @@
                 }
                 }
             }
+
+            // Append the canvas to the document body
+            
             document.body.appendChild(canvas);
         }
 
-
-
+    // newMaze = smoothMaze(mazeMap);
     drawMaze(mazeMap.grid);
+    // drawMaze(newMaze.grid);
   </script>
 </body>
 </html>
