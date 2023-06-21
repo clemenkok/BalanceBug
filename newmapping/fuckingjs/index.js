@@ -95,7 +95,7 @@ var enteringwallnone = false; //means the option just get swtiched to none
 var allloops = [];
 var currentloop = [];
 
-// Add 3 dots for 0, 50 and 100%
+// Add 3 dots for 0, 50 and 100% for testing
 svG
   .selectAll("whatever")
   .data(data)
@@ -107,7 +107,8 @@ svG
   .attr("cy", function (d) {
     return y(d.y);
   })
-  .attr("r", 2);
+  .attr("r", 2)
+  .attr("opacity", "0");
 
 function addball() {
   console.log("addball");
@@ -297,10 +298,12 @@ function ReceivednewBall(msg) {
 
   isFirst = false; // not the first time anymore
 
-  detectclosedloop({
-    x: _x,
-    y: _y,
-  });
+  if (followingwall != "none") {
+    detectclosedloop({
+      x: _x,
+      y: _y,
+    });
+  }
 }
 
 socket.on("sendyouball", (msg) => ReceivednewBall(msg));
@@ -371,7 +374,7 @@ const generatePoints = (n) => {
   return Array.from(Array(n)).map((_) => getRandomPoint());
 };
 
-const numClusters = 100;
+const numClusters = 200;
 const centroids = generatePoints(numClusters);
 const color = d3.scaleOrdinal(d3.schemeCategory10); // 10 different colors for 10 different numbers
 
@@ -517,7 +520,50 @@ function connnectcluster() {
     currentcluster = temp;
   }
 
-  console.log(clusterconnections);
+  console.log("cluster connections", clusterconnections);
+  // console.log("cluster connections" , JSON.stringify(clusterconnections))
+  // console.log("all centroids" , centroids);
+  // console.log("all centroids" , JSON.stringify(centroids));
+
+  //Apply ASTAR here
+  let clustercoords = [];
+  //loop through anclustercoords to prepare the correct data structure
+  for (var i = 0; i < centroids.length; i++) {
+    clustercoords[i] = [centroids[i].x, centroids[i].y];
+  }
+  let textboxstartcluster = document.getElementById("textboxstartcluster");
+  let textboxendcluster = document.getElementById("textboxendcluster");
+
+  let path = astar.search(
+    clusterconnections,
+    clustercoords,
+    Number(textboxstartcluster.value),
+    Number(textboxendcluster.value)
+  );
+
+  //remove all the lines with class astarline
+  d3.selectAll(".astarline").remove();
+
+  //loop through the path and draw lines
+  for (var i = 0; i < path.length - 1; i++) {
+    let start = path[i];
+    let end = path[i + 1];
+    let startx = centroids[start].x;
+    let starty = centroids[start].y;
+    let endx = centroids[end].x;
+    let endy = centroids[end].y;
+
+    //draw a line
+    svG
+      .append("line")
+      .attr("class", "astarline")
+      .style("stroke", "green")
+      .style("stroke-width", 4)
+      .attr("x1", x(startx))
+      .attr("y1", y(starty))
+      .attr("x2", x(endx))
+      .attr("y2", y(endy));
+  }
 }
 
 function resetcount() {
@@ -606,13 +652,15 @@ function detectclosedloop(currentpos) {
       //from chatgpt
       //To calculate the area of a shape formed by a set of data points using D3.js, you can use the Shoelace formula (also known as Gauss's area formula or the surveyor's formula). The Shoelace formula calculates the signed area of a polygon defined by its vertices.
 
-      currentloop.push(currentloop[0]);
-
-      //fix the format for d3.polygonArea
+      //fix the format for d3.polygonArea (starting from i to the end of the array because i is the index of the collided point)
       let temp = [];
-      for (let i = 0; i < currentloop.length; i++) {
-        temp.push([currentloop[i].x, currentloop[i].y]);
+      //temp stores the loop but currentloop stores some points that are not in the loop
+      for (let j = i; j < currentloop.length; j++) {
+        temp.push([currentloop[j].x, currentloop[j].y]);
       }
+      console.log("currentloop", currentloop);
+      console.log("temp", temp);
+      //temp.push(temp[0]);
 
       let looparea = d3.polygonArea(temp);
       console.log(`closed loop detected with area ${looparea}`);
@@ -635,7 +683,7 @@ function detectclosedloop(currentpos) {
           .append("g")
           .attr("id", "polygons")
           .selectAll("polygon")
-          .data([currentloop])
+          .data([currentloop.slice(i)]) //starting from i as the reason discussed above
           .enter()
           .append("polygon")
           .attr("points", function (d) {
@@ -783,9 +831,19 @@ checkboxshowclosedlooppolygons.addEventListener("change", function () {
   }
 });
 
+var checkboxshowdatapoints = document.getElementById("checkboxshowdatapoints");
+checkboxshowdatapoints.addEventListener("change", function () {
+  var datapoints = document.getElementsByClassName("mydatapoint");
 
-
-
+  //loop through all datapoints
+  for (var i = 0; i < datapoints.length; i++) {
+    if (checkboxshowdatapoints.checked) {
+      datapoints[i].style.display = "block";
+    } else {
+      datapoints[i].style.display = "none";
+    }
+  }
+});
 
 // Maze Bound *****************************************************
 
@@ -1010,7 +1068,7 @@ function findUnexploredPart() {
     .attr("x", x(mazeregion.topleft[0] + columnwidth * closestregion[0] + 10)) // X-coordinate of the text position
     .attr("y", y(mazeregion.topleft[1] - rowheight * closestregion[1] - 10)) // Y-coordinate of the text position
     //.attr("display", checkboxshowpointsingrid.checked ? "block" : "none")
-    .text("visit me bitch") // Text content
+    .text("unexplored area") // Text content
     .style("font-size", "15px") // Set the font size
     .style("font-color", "orange");
 }
@@ -1089,3 +1147,171 @@ d3.select("#status")
 function changeStatus(status) {
   document.getElementById("status").innerHTML = status;
 }
+
+// A Star Algorithm ***************************************************** VErSION 1 (works)
+
+// the data needs to be in the following structure to work
+
+// clusters = {
+//   0: [2],
+//   1: [2],
+//   2: [0, 1, 3],
+//   3: [2],
+// };
+// clustercoords = [
+//   [0, 5],
+//   [-5, 0],
+//   [0, 0],
+//   [5, 0],
+// ];
+
+var astar = {
+  init: function (clusters) {
+    grid = {};
+
+    //loop through all clusters and create ASTAR data for them
+    for (var i = 0; i < Object.keys(clusters).length; i++) {
+      grid[i] = {
+        f: 99999999,
+        g: 99999999,
+        h: 99999999,
+        debug: "",
+        parent: null,
+      };
+    }
+
+    return grid;
+    //console.log(grid);
+
+    // for(var x = 0; x < grid.length; x++) {
+    //   for(var y = ; y < grid[x].length; y++) {
+    //     grid[x][y].f = ;
+    //     grid[x][y].g = ;
+    //     grid[x][y].h = ;
+    //     grid[x][y].debug = "";
+    //     grid[x][y].parent = null;
+    //   }
+    // }
+  },
+  search: function (clusters, clustercoords, start, end) {
+    //start and end are numbers (0123)
+
+    let grid = astar.init(clusters);
+
+    var openList = [];
+    var closedList = [];
+    openList.push(start);
+
+    while (openList.length > 0) {
+      // Grab the lowest f(x) to process next
+      var lowInd = 0;
+      for (var i = 0; i < openList.length; i++) {
+        if (grid[openList[i]].f < grid[openList[lowInd]].f) {
+          lowInd = i;
+        }
+      }
+
+      var currentNode = openList[lowInd];
+
+      // End case -- result has been found, return the traced path
+      if (clustercoords[currentNode] == clustercoords[end]) {
+        var curr = currentNode;
+        var ret = [];
+        //let last = curr;
+        while (grid[curr].parent != null) {
+          //console.log(curr)
+          if (ret.includes(curr)) break;
+          ret.push(curr);
+          // if (grid[curr].parent == last) break;
+          // last = curr;
+          curr = grid[curr].parent;
+        }
+        ret = ret.reverse();
+        ret.unshift(start);
+        return ret;
+      }
+
+      // Normal case -- move currentNode from open to closed, process each of its neighbors
+      //remove currentNode from openList
+      openList = openList.filter(
+        (openlistitem) => openlistitem !== currentNode
+      );
+      // openList.removeGraphNode(currentNode);
+      closedList.push(currentNode);
+      var neighbors = astar.neighbors(clusters, currentNode);
+
+      for (var i = 0; i < neighbors.length; i++) {
+        var neighbor = neighbors[i];
+
+        if (closedList.includes(neighbor)) {
+          //|| neighbor.isWall()) { my neighbor cant be a wall
+          // not a valid node to process, skip to next neighbor
+          continue;
+        }
+
+        //distance between this neighbour and currentNode
+        var d = astar.heuristic(
+          clustercoords[currentNode],
+          clustercoords[neighbor]
+        );
+        // g score is the shortest distance from start to current node, we need to check if
+        //   the path we have arrived at this neighbor is the shortest one we have seen yet
+        //var gScore = currentNode.g + 1; // 1 is the distance from a node to it's neighbor
+        var gScore = grid[currentNode].g + d; // we are using d in our case, nvm i think is wrong
+        var gScoreIsBest = false;
+
+        if (!openList.includes(neighbor)) {
+          // This the the first time we have arrived at this node, it must be the best
+          // Also, we need to take the h (heuristic) score since we haven't done so yet
+
+          gScoreIsBest = true;
+          grid[neighbor].h = astar.heuristic(
+            clustercoords[neighbor],
+            clustercoords[end]
+          );
+          openList.push(neighbor);
+        } else if (gScore < grid[neighbor].g) {
+          // We have already seen the node, but last time it had a worse g (distance from start)
+          gScoreIsBest = true;
+        }
+
+        if (gScoreIsBest) {
+          //&& !grid[currentNode].parent == neighbor
+          //console.log(currentNode, grid[currentNode].parent, neighbor, grid[currentNode].parent == neighbor )
+          // Found an optimal (so far) path to this node.   Store info on how we got here and
+          //  just how good it really is...
+          if (grid[currentNode].parent != neighbor)
+            grid[neighbor].parent = currentNode;
+          //grid[neighbor].parent.push(currentNode)
+          grid[neighbor].g = gScore;
+          grid[neighbor].f = grid[neighbor].g + grid[neighbor].h;
+          grid[neighbor].debug =
+            "F: " +
+            grid[neighbor].f +
+            "<br />G: " +
+            grid[neighbor].g +
+            "<br />H: " +
+            grid[neighbor].h;
+        }
+      }
+    }
+
+    // No result was found -- empty array signifies failure to find path
+    return [];
+  },
+  heuristic: function (pos0, pos1) {
+    // This is the Manhattan distance
+    // var d1 = Math.abs(pos1.x - pos0.x);
+    // var d2 = Math.abs(pos1.y - pos0.y);
+
+    //console.log(pos1, pos0);
+
+    // This is the Euclidean distance
+    return Math.sqrt(
+      Math.pow(pos1[0] - pos0[0], 2) + Math.pow(pos1[1] - pos0[1], 2)
+    );
+  },
+  neighbors: function (clusters, node) {
+    return clusters[node];
+  },
+};
