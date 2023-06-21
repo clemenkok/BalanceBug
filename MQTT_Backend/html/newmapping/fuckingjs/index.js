@@ -307,7 +307,7 @@ function ReceivednewBall(msg) {
 }
 
 socket.on("sendyouball", (msg) => ReceivednewBall(msg));
-socket.on("rover_current_coords", (msg) => console.log("rover_current_coords", msg));
+socket.on("rover_current_coords", (msg) => ReceivednewBall(msg));
 
 /// for my fucking button
 
@@ -494,6 +494,8 @@ function cleardatapoints() {
   d3.selectAll(".mydatapoint").remove();
   d3.selectAll(".scatterline").remove();
   d3.selectAll(".wallline").remove();
+
+  //Clear allmyfuckingpoints and allloops currentloop stuff??? not yet
 }
 
 let clusterconnections = {};
