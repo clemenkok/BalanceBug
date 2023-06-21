@@ -1,0 +1,25 @@
+16:51:16.151 > ets Jun  8 2016 00:22:57
+16:51:16.151 > 
+16:51:16.151 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+16:51:16.151 > configsip: 0, SPIWP:0xee
+16:51:16.151 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+16:51:16.151 > mode:DIO, clock div:2
+16:51:16.151 > load:0x3fff0030,len:1184
+16:51:16.151 > load:0x40078000,len:13192
+16:51:16.151 > load:0x40080400,len:3028
+16:51:16.151 > entry 0x400805e4
+16:51:16.151 > start drive setup
+16:51:18.824 > entering testcase 0
+16:51:18.824 > getting calibration values...
+16:51:18.919 > 1522
+16:51:18.919 > getting calibration values...
+16:51:19.022 > 1834
+16:51:19.022 > getting calibration values...
+16:51:19.116 > 1679
+16:51:19.116 > getting calibration values...
+16:51:19.226 > 1613
+16:51:19.226 > getting calibration values...
+16:51:19.322 > 1636
+16:51:19.322 > getting calibration values...
+16:51:19.416 > 1889
+16:51:19.416 > getting calibration values...
