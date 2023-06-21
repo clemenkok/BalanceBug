@@ -1,0 +1,1793 @@
+11:48:18.351 > ets Jun  8 2016 00:22:57
+11:48:18.351 > 
+11:48:18.351 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+11:48:18.351 > configsip: 0, SPIWP:0xee
+11:48:18.351 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+11:48:18.351 > mode:DIO, clock div:2
+11:48:18.351 > load:0x3fff0030,len:1184
+11:48:18.351 > load:0x40078000,len:13192
+11:48:18.351 > load:0x40080400,len:3028
+11:48:18.351 > entry 0x400805e4
+11:48:18.351 > E (363) esp_core_dump_flash: Core dum�D�х�check failed:
+11:48:18.351 > Calculated checksum='c2df5da1'
+11:48:18.351 > Image checksum='ffffffff'
+11:48:39.586 > connect to wifi
+11:48:39.600 > [ 22572][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.608 > [ 22578][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.617 > [ 22588][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.624 > [ 22595][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.632 > [ 22605][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.640 > [ 22611][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.640 > [ 22617][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.649 > [ 22623][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.657 > [ 22629][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.657 > [ 22635][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.665 > [ 22641][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.673 > [ 22647][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.681 > [ 22653][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.689 > [ 22659][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.697 > [ 22665][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.697 > [ 22671][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.705 > [ 22677][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.713 > [ 22683][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.713 > [ 22689][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.729 > [ 22695][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.729 > [ 22702][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.737 > [ 22711][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.745 > wifi connecting
+11:48:39.745 > [ 22717][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.753 > [ 22724][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.762 > [ 22730][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.770 > [ 22736][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.776 > [ 22742][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.780 > [ 22748][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.780 > [ 22754][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.787 > [ 22760][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.797 > [ 22766][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.803 > [ 22772][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.814 > [ 22779][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.820 > [ 22785][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.820 > [ 22791][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.828 > [ 22798][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.836 > [ 22804][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.836 > [ 22810][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.852 > [ 22817][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.852 > [ 22823][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.860 > [ 22829][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.868 > [ 22836][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.876 > [ 22842][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.876 > [ 22848][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.884 > [ 22855][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.892 > [ 22861][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.900 > [ 22867][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.908 > [ 22874][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.908 > [ 22880][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.916 > [ 22886][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.924 > [ 22893][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.924 > Curr Drive State
+11:48:39.932 > 2
+11:48:39.932 > Transmit Data To Cloud
+11:48:39.932 > 1
+11:48:39.932 > 120, 60, 3.07, -0.23, 351.75, 1, 0
+11:48:39.940 > Data Index
+11:48:39.940 > 1
+11:48:39.940 > [ 22910][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.948 > [ 22916][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.953 > [ 22922][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.959 > [ 22928][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.964 > [ 22934][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.976 > [ 22940][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.980 > [ 22946][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.982 > [ 22952][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.988 > [ 22958][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.996 > [ 22965][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:39.996 > [ 22971][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.004 > [ 22977][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.013 > [ 22984][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.021 > [ 22990][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.029 > [ 22996][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.037 > [ 23003][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.037 > [ 23009][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.045 > [ 23015][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.053 > [ 23022][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.061 > [ 23028][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.069 > [ 23034][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.069 > [ 23041][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.077 > [ 23047][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.085 > [ 23053][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.093 > [ 23060][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.093 > [ 23066][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.109 > [ 23072][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.109 > [ 23079][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.117 > [ 23085][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.125 > [ 23092][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.127 > [ 23098][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.133 > [ 23104][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.141 > [ 23111][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.149 > [ 23117][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.157 > [ 23123][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.157 > [ 23129][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.165 > [ 23136][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.173 > [ 23142][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.181 > [ 23149][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.181 > [ 23155][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.195 > [ 23161][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.198 > [ 23167][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.206 > [ 23174][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.214 > [ 23180][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.214 > [ 23187][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.222 > [ 23193][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.230 > [ 23199][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.239 > [ 23205][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.246 > [ 23212][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.246 > [ 23218][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.254 > Curr Drive State
+11:48:40.254 > 2
+11:48:40.254 > Transmit Data To Cloud
+11:48:40.263 > 1
+11:48:40.263 > 90, 90, 6.14, -0.86, 347.64, 1, 0
+11:48:40.263 > Data Index
+11:48:40.263 > 2
+11:48:40.263 > [ 23235][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.270 > [ 23241][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.279 > [ 23247][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.286 > [ 23253][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.286 > [ 23259][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.294 > [ 23265][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.302 > [ 23271][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.302 > [ 23277][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.318 > [ 23284][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.318 > [ 23290][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.326 > [ 23296][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.334 > [ 23303][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.342 > [ 23309][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.342 > [ 23315][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.350 > [ 23322][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.359 > [ 23328][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.366 > [ 23334][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.375 > [ 23341][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.375 > [ 23347][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.382 > [ 23353][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.391 > [ 23360][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.391 > [ 23366][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.407 > [ 23372][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.414 > [ 23379][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.414 > [ 23385][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.422 > [ 23391][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.430 > [ 23398][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.430 > [ 23404][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.439 > [ 23410][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.447 > [ 23417][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.455 > [ 23423][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.464 > [ 23429][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.464 > [ 23436][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.475 > [ 23442][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.481 > [ 23448][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.487 > [ 23455][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.495 > [ 23461][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.503 > [ 23468][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.503 > [ 23474][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.511 > [ 23480][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.519 > [ 23486][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.519 > [ 23493][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.527 > [ 23499][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.535 > [ 23506][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.543 > [ 23512][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.551 > [ 23518][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.559 > [ 23525][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.559 > [ 23531][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.569 > [ 23537][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.575 > [ 23544][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.586 > Curr Drive State
+11:48:40.586 > 2
+11:48:40.586 > Transmit Data To Cloud
+11:48:40.586 > 1
+11:48:40.586 > 103, 76, 9.18, -1.59, 344.64, 1, 0
+11:48:40.592 > Data Index
+11:48:40.592 > 3
+11:48:40.592 > [ 23561][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.592 > [ 23567][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.600 > [ 23573][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.608 > [ 23579][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.616 > [ 23585][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.625 > [ 23591][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.629 > [ 23597][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.636 > [ 23603][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.641 > [ 23609][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.641 > [ 23616][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.649 > [ 23622][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.657 > [ 23628][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.669 > [ 23634][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.673 > [ 23641][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.681 > [ 23647][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.681 > [ 23654][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.689 > [ 23660][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.697 > [ 23666][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.705 > [ 23673][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.714 > [ 23679][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.714 > [ 23685][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.722 > [ 23692][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.731 > [ 23698][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.731 > [ 23704][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.738 > [ 23711][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.747 > [ 23717][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.754 > [ 23723][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.762 > [ 23730][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.762 > [ 23736][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.770 > [ 23742][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.779 > [ 23749][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.787 > [ 23755][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.796 > [ 23761][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.803 > [ 23768][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.803 > [ 23774][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.812 > [ 23780][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.819 > [ 23787][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.819 > [ 23793][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.827 > [ 23799][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.835 > [ 23806][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.843 > [ 23812][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.851 > [ 23818][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.859 > [ 23825][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.859 > [ 23831][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.868 > [ 23837][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.875 > [ 23844][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.884 > [ 23850][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.892 > [ 23856][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.892 > [ 23863][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.900 > [ 23869][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.908 > Curr Drive State
+11:48:40.908 > 2
+11:48:40.908 > Transmit Data To Cloud
+11:48:40.908 > 1
+11:48:40.908 > 84, 96, 12.19, -2.46, 343.98, 1, 0
+11:48:40.908 > Data Index
+11:48:40.915 > 4
+11:48:40.915 > [ 23886][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.924 > [ 23892][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.924 > [ 23898][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.931 > [ 23904][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.940 > [ 23910][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.947 > [ 23916][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.947 > [ 23922][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.964 > [ 23928][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.964 > [ 23935][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.972 > [ 23941][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.981 > [ 23947][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.987 > [ 23954][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.988 > [ 23960][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:40.996 > [ 23966][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.005 > [ 23973][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.013 > [ 23979][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.013 > [ 23985][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.021 > [ 23992][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.029 > [ 23998][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.037 > [ 24004][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.037 > [ 24011][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.053 > [ 24017][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.053 > [ 24023][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.061 > [ 24030][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.069 > [ 24036][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.069 > [ 24042][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.077 > [ 24049][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.085 > [ 24055][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.093 > [ 24061][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.101 > [ 24068][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.109 > [ 24074][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.109 > [ 24080][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.117 > [ 24087][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.125 > [ 24093][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.125 > [ 24099][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.141 > [ 24106][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.141 > [ 24112][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.149 > [ 24118][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.157 > [ 24125][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.157 > [ 24131][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.165 > [ 24137][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.173 > [ 24144][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.181 > [ 24150][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.189 > [ 24156][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.197 > [ 24163][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.197 > [ 24169][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.205 > [ 24175][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.213 > [ 24182][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.213 > [ 24188][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.229 > [ 24194][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.237 > Curr Drive State
+11:48:41.237 > 2
+11:48:41.237 > Transmit Data To Cloud
+11:48:41.237 > 1
+11:48:41.237 > 87, 93, 15.21, -3.25, 346.38, 1, 0
+11:48:41.237 > Data Index
+11:48:41.237 > 5
+11:48:41.237 > [ 24212][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.245 > [ 24218][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.253 > [ 24224][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.261 > [ 24230][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.269 > [ 24236][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.269 > [ 24242][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.277 > [ 24248][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.285 > [ 24254][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.285 > [ 24260][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.293 > [ 24266][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.309 > [ 24273][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.309 > [ 24279][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.319 > [ 24285][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.326 > [ 24292][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.326 > [ 24298][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.334 > [ 24304][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.342 > [ 24311][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.350 > [ 24317][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.358 > [ 24323][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.358 > [ 24330][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.366 > [ 24336][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.374 > [ 24342][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.374 > [ 24349][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.382 > [ 24355][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.390 > [ 24361][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.398 > [ 24368][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.406 > [ 24374][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.414 > [ 24380][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.414 > [ 24387][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.422 > [ 24393][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.430 > [ 24399][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.438 > [ 24406][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.446 > [ 24412][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.446 > [ 24418][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.454 > [ 24425][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.462 > [ 24431][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.470 > [ 24437][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.471 > [ 24444][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.487 > [ 24450][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.492 > [ 24456][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.498 > [ 24463][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.503 > [ 24469][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.504 > [ 24475][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.511 > [ 24482][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.519 > [ 24488][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.527 > [ 24494][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.535 > [ 24501][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.543 > [ 24507][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.543 > [ 24513][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.556 > [ 24520][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.559 > Curr Drive State
+11:48:41.559 > 2
+11:48:41.559 > Transmit Data To Cloud
+11:48:41.559 > 1
+11:48:41.559 > 85, 94, 18.21, -4.13, 342.95, 1, 0
+11:48:41.567 > Data Index
+11:48:41.567 > 6
+11:48:41.567 > [ 24537][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.575 > [ 24543][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.575 > [ 24549][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.583 > [ 24555][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.591 > [ 24561][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.599 > [ 24567][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.607 > [ 24573][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.607 > [ 24579][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.615 > [ 24585][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.623 > [ 24592][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.631 > [ 24598][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.631 > [ 24604][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.639 > [ 24611][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.648 > [ 24617][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.656 > [ 24623][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.664 > [ 24630][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.665 > [ 24636][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.672 > [ 24643][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.680 > [ 24649][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.682 > [ 24655][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.697 > [ 24661][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.697 > [ 24668][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.705 > [ 24674][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.713 > [ 24681][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.713 > [ 24687][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.721 > [ 24693][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.729 > [ 24699][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.737 > [ 24706][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.745 > [ 24712][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.754 > [ 24719][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.754 > [ 24725][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.764 > [ 24731][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.770 > [ 24738][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.770 > [ 24744][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.786 > [ 24750][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.786 > [ 24757][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.794 > [ 24763][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.802 > [ 24769][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.802 > [ 24776][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.810 > [ 24782][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.818 > [ 24788][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.826 > [ 24795][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.834 > [ 24801][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.842 > [ 24807][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.842 > [ 24814][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.850 > [ 24820][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.858 > [ 24826][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.858 > [ 24833][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.874 > [ 24839][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.874 > [ 24845][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.882 > Curr Drive State
+11:48:41.882 > 2
+11:48:41.882 > Transmit Data To Cloud
+11:48:41.890 > 1
+11:48:41.890 > 82, 97, 21.21, -4.98, 345.48, 1, 0
+11:48:41.890 > Data Index
+11:48:41.890 > 7
+11:48:41.890 > [ 24863][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.898 > [ 24869][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.906 > [ 24875][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.914 > [ 24881][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.914 > [ 24887][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.922 > [ 24893][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.930 > [ 24899][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.930 > [ 24905][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.946 > [ 24911][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.946 > [ 24917][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.954 > [ 24924][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.962 > [ 24930][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.970 > [ 24936][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.971 > [ 24943][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.978 > [ 24949][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.987 > [ 24955][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:41.998 > [ 24962][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.003 > [ 24968][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.007 > [ 24974][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.011 > [ 24981][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.018 > [ 24987][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.018 > [ 24993][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.027 > [ 25000][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.035 > [ 25006][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.044 > [ 25012][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.051 > [ 25019][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.059 > [ 25025][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.059 > [ 25031][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.068 > [ 25038][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.076 > [ 25044][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.084 > [ 25050][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.092 > [ 25057][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.092 > [ 25063][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.101 > [ 25069][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.108 > [ 25076][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.108 > [ 25082][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.117 > [ 25088][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.125 > [ 25095][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.134 > [ 25101][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.142 > [ 25107][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.144 > [ 25114][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.150 > [ 25120][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.158 > [ 25126][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.159 > [ 25133][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.175 > [ 25139][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.175 > [ 25145][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.183 > [ 25152][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.191 > [ 25158][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.191 > [ 25164][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.199 > [ 25171][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.208 > Curr Drive State
+11:48:42.208 > 2
+11:48:42.208 > Transmit Data To Cloud
+11:48:42.208 > 1
+11:48:42.208 > 109, 70, 24.22, -5.78, 343.25, 1, 0
+11:48:42.215 > Data Index
+11:48:42.215 > 8
+11:48:42.215 > [ 25188][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.223 > [ 25194][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.223 > [ 25200][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.231 > [ 25206][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.247 > [ 25212][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.247 > [ 25218][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.255 > [ 25224][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.263 > [ 25230][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.263 > [ 25236][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.271 > [ 25243][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.279 > [ 25249][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.288 > [ 25255][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.296 > [ 25262][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.296 > [ 25268][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.304 > [ 25274][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.312 > [ 25281][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.320 > [ 25287][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.320 > [ 25293][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.336 > [ 25300][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.336 > [ 25306][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.344 > [ 25312][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.352 > [ 25319][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.352 > [ 25325][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.360 > [ 25331][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.369 > [ 25338][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.371 > [ 25344][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.384 > [ 25350][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.392 > [ 25357][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.395 > [ 25363][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.401 > [ 25370][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.409 > [ 25376][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.409 > [ 25382][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.417 > [ 25388][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.425 > [ 25395][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.433 > [ 25401][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.441 > [ 25408][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.441 > [ 25414][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.449 > [ 25420][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.457 > [ 25427][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.457 > [ 25433][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.474 > [ 25439][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.481 > [ 25446][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.481 > [ 25452][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.489 > [ 25458][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.497 > [ 25465][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.497 > [ 25471][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.509 > [ 25477][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.518 > [ 25484][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.521 > [ 25490][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.529 > [ 25496][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.537 > Curr Drive State
+11:48:42.537 > 2
+11:48:42.537 > Transmit Data To Cloud
+11:48:42.537 > 1
+11:48:42.537 > 87, 93, 27.19, -6.78, 340.95, 1, 0
+11:48:42.537 > Data Index
+11:48:42.545 > 9
+11:48:42.545 > [ 25513][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.553 > [ 25519][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.553 > [ 25525][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.561 > [ 25531][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.569 > [ 25537][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.569 > [ 25543][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.577 > [ 25549][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.593 > [ 25556][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.593 > [ 25562][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.601 > [ 25568][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.609 > [ 25574][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.609 > [ 25581][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.618 > [ 25587][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.625 > [ 25594][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.633 > [ 25600][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.641 > [ 25606][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.641 > [ 25613][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.649 > [ 25619][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.657 > [ 25625][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.657 > [ 25632][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.665 > [ 25638][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.673 > [ 25644][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.684 > [ 25651][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.689 > [ 25657][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.697 > [ 25663][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.697 > [ 25670][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.705 > [ 25676][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.714 > [ 25682][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.714 > [ 25689][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.730 > [ 25695][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.737 > [ 25701][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.737 > [ 25708][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.747 > [ 25714][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.754 > [ 25720][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.754 > [ 25727][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.762 > [ 25733][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.770 > [ 25739][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.778 > [ 25746][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.786 > [ 25752][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.786 > [ 25758][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.794 > [ 25765][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.804 > [ 25771][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.810 > [ 25777][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.818 > [ 25784][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.826 > [ 25790][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.826 > [ 25796][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.834 > [ 25803][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.842 > [ 25809][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.842 > [ 25815][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.850 > [ 25822][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.859 > Curr Drive State
+11:48:42.859 > 2
+11:48:42.859 > Transmit Data To Cloud
+11:48:42.859 > 1
+11:48:42.859 > 120, 60, 30.15, -7.75, 341.08, 1, 0
+11:48:42.866 > Data Index
+11:48:42.866 > 10
+11:48:42.866 > [ 25839][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.874 > [ 25845][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.874 > [ 25851][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.890 > [ 25857][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.890 > [ 25863][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.898 > [ 25869][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.906 > [ 25875][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.914 > [ 25881][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.914 > [ 25887][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.928 > [ 25894][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.931 > [ 25900][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.939 > [ 25906][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.947 > [ 25913][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.947 > [ 25919][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.955 > [ 25925][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.963 > [ 25932][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.971 > [ 25938][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.979 > [ 25944][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.987 > [ 25951][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.988 > [ 25957][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:42.995 > [ 25963][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.003 > [ 25970][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.003 > [ 25976][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.011 > [ 25983][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.025 > [ 25989][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.031 > [ 25995][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.037 > [ 26001][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.039 > [ 26008][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.046 > [ 26014][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.054 > [ 26021][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.054 > [ 26027][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.070 > [ 26033][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.071 > [ 26040][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.079 > [ 26046][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.087 > [ 26052][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.087 > [ 26059][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.095 > [ 26065][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.103 > [ 26071][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.111 > [ 26078][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.119 > [ 26084][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.119 > [ 26090][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.127 > [ 26097][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.135 > [ 26103][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.135 > [ 26109][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.143 > [ 26116][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.151 > [ 26122][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.160 > [ 26128][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.167 > [ 26135][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.175 > [ 26141][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.175 > [ 26147][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.184 > Curr Drive State
+11:48:43.184 > 2
+11:48:43.192 > Transmit Data To Cloud
+11:48:43.192 > 1
+11:48:43.192 > 120, 60, 33.07, -8.91, 335.15, 1, 0
+11:48:43.192 > Data Index
+11:48:43.192 > 11
+11:48:43.192 > [ 26165][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.199 > [ 26171][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.208 > [ 26177][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.208 > [ 26183][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.215 > [ 26189][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.223 > [ 26195][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.231 > [ 26201][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.241 > [ 26207][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.241 > [ 26213][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.248 > [ 26219][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.256 > [ 26226][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.264 > [ 26232][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.264 > [ 26238][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.280 > [ 26245][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.280 > [ 26251][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.288 > [ 26257][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.296 > [ 26264][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.304 > [ 26270][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.304 > [ 26276][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.312 > [ 26283][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.320 > [ 26289][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.328 > [ 26295][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.337 > [ 26302][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.337 > [ 26308][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.344 > [ 26314][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.352 > [ 26321][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.352 > [ 26327][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.368 > [ 26333][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.368 > [ 26340][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.376 > [ 26346][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.384 > [ 26352][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.392 > [ 26359][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.392 > [ 26365][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.400 > [ 26371][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.408 > [ 26378][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.416 > [ 26384][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.424 > [ 26390][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.424 > [ 26397][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.432 > [ 26403][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.440 > [ 26410][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.440 > [ 26416][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.456 > [ 26422][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.464 > [ 26428][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.464 > [ 26435][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.472 > [ 26441][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.480 > [ 26448][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.480 > [ 26454][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.488 > [ 26460][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.504 > [ 26466][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.505 > [ 26473][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.514 > Curr Drive State
+11:48:43.514 > 2
+11:48:43.514 > Transmit Data To Cloud
+11:48:43.514 > 1
+11:48:43.521 > 120, 60, 35.80, -10.44, 326.61, 1, 0
+11:48:43.521 > Data Index
+11:48:43.521 > 12
+11:48:43.521 > [ 26490][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.531 > [ 26496][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.537 > [ 26502][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.537 > [ 26508][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.545 > [ 26514][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.553 > [ 26520][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.553 > [ 26526][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.561 > [ 26532][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.577 > [ 26539][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.577 > [ 26545][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.585 > [ 26551][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.585 > [ 26558][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.593 > [ 26564][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.601 > [ 26570][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.609 > [ 26577][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.617 > [ 26583][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.625 > [ 26589][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.625 > [ 26596][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.633 > [ 26602][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.641 > [ 26608][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.641 > [ 26615][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.649 > [ 26621][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.657 > [ 26627][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.665 > [ 26634][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.673 > [ 26640][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.681 > [ 26646][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.681 > [ 26653][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.690 > [ 26659][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.697 > [ 26665][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.697 > [ 26672][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.713 > [ 26678][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.721 > [ 26685][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.721 > [ 26691][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.729 > [ 26697][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.729 > [ 26703][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.737 > [ 26710][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.746 > Connected to WiFi
+11:48:43.746 > I was disconnected[ 26716][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.754 > 
+11:48:43.754 > [ 26729][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.762 > [ 26736][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.770 > [ 26742][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.778 > [ 26748][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.786 > [ 26754][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.786 > [ 26760][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.794 > [ 26766][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.803 > [ 26772][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.809 > [ 26778][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.812 > [ 26784][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.818 > [ 26790][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.826 > [ 26796][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.834 > [ 26802][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.842 > Curr Drive State
+11:48:43.842 > 2
+11:48:43.842 > Transmit Data To Cloud
+11:48:43.842 > 1
+11:48:43.842 > 118, 61, 38.33, -12.36, 320.78, 1, 0
+11:48:43.842 > Data Index
+11:48:43.850 > 13
+11:48:43.850 > [ 26819][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.858 > [ 26825][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.858 > [ 26831][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.867 > [ 26837][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.875 > [ 26843][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.875 > [ 26849][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.883 > [ 26855][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.891 > [ 26861][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.903 > [ 26868][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.907 > [ 26874][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.907 > [ 26880][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.915 > [ 26887][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.923 > [ 26893][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.923 > [ 26900][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.939 > [ 26906][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.947 > [ 26912][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.947 > [ 26919][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.955 > [ 26925][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.963 > [ 26931][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.963 > [ 26938][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.971 > [ 26944][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.987 > [ 26950][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.987 > [ 26957][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:43.995 > [ 26963][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.003 > [ 26969][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.003 > [ 26976][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.012 > [ 26982][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.020 > [ 26988][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.031 > [ 26995][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.037 > [ 27001][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.043 > [ 27007][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.044 > [ 27014][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.052 > [ 27020][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.052 > [ 27027][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.060 > [ 27033][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.076 > [ 27039][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.077 > [ 27045][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.084 > [ 27052][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.092 > [ 27058][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.092 > [ 27064][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.100 > [ 27071][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.108 > [ 27077][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.116 > [ 27083][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.124 > [ 27090][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.124 > [ 27096][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.132 > [ 27102][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.140 > [ 27109][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.148 > [ 27115][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.148 > [ 27121][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.164 > [ 27128][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.164 > Curr Drive State
+11:48:44.164 > 2
+11:48:44.164 > Transmit Data To Cloud
+11:48:44.164 > 1
+11:48:44.164 > 120, 60, 40.69, -14.40, 318.59, 1, 0
+11:48:44.173 > Data Index
+11:48:44.173 > 14
+11:48:44.173 > [ 27145][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.180 > [ 27151][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.188 > [ 27157][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.196 > [ 27163][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.196 > [ 27169][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.204 > [ 27175][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.213 > [ 27181][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.220 > [ 27187][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.220 > [ 27194][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.236 > [ 27200][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.236 > [ 27206][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.245 > [ 27213][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.253 > [ 27219][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.253 > [ 27225][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.260 > [ 27232][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.269 > [ 27238][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.276 > [ 27244][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.290 > [ 27251][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.293 > [ 27257][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.293 > [ 27263][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.301 > [ 27270][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.309 > [ 27276][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.309 > [ 27282][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.317 > [ 27289][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.325 > [ 27295][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.333 > [ 27301][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.341 > [ 27308][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.341 > [ 27314][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.354 > [ 27320][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.357 > [ 27327][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.357 > [ 27333][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.375 > [ 27339][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.381 > [ 27346][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.387 > [ 27352][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.390 > [ 27358][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.397 > [ 27365][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.397 > [ 27371][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.406 > [ 27377][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.416 > [ 27384][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.422 > [ 27390][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.430 > [ 27396][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.430 > [ 27403][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.438 > [ 27409][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.446 > [ 27415][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.446 > [ 27422][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.464 > [ 27428][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.470 > [ 27434][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.476 > [ 27441][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.479 > [ 27447][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.486 > [ 27453][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.492 > Curr Drive State
+11:48:44.496 > 2
+11:48:44.496 > Transmit Data To Cloud
+11:48:44.496 > 1
+11:48:44.496 > 99, 81, 42.93, -16.59, 314.15, 1, 0
+11:48:44.503 > Data Index
+11:48:44.503 > 15
+11:48:44.503 > [ 27471][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.503 > [ 27477][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.514 > [ 27483][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.519 > [ 27489][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.519 > [ 27495][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.535 > [ 27501][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.540 > [ 27507][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.544 > [ 27513][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.553 > [ 27519][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.559 > [ 27525][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.564 > [ 27532][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.567 > [ 27538][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.575 > [ 27545][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.583 > [ 27551][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.592 > [ 27557][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.592 > [ 27564][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.600 > [ 27570][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.608 > [ 27576][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.608 > [ 27583][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.624 > [ 27589][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.624 > [ 27595][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.632 > [ 27602][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.640 > [ 27608][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.648 > [ 27614][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.648 > [ 27621][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.656 > [ 27627][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.664 > [ 27633][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.672 > [ 27640][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.680 > [ 27646][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.688 > [ 27652][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.688 > [ 27659][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.696 > [ 27665][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.704 > [ 27671][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.712 > [ 27678][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.720 > [ 27684][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.720 > [ 27690][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.728 > [ 27697][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.736 > [ 27703][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.736 > [ 27709][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.744 > [ 27716][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.752 > [ 27722][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.760 > [ 27728][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.768 > [ 27735][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.776 > [ 27741][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.776 > [ 27747][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.784 > [ 27754][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.792 > [ 27760][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.792 > [ 27766][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.808 > [ 27773][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.808 > [ 27779][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.816 > Curr Drive State
+11:48:44.816 > 2
+11:48:44.816 > Transmit Data To Cloud
+11:48:44.824 > 1
+11:48:44.824 > 120, 60, 45.12, -18.81, 313.64, 1, 0
+11:48:44.824 > Data Index
+11:48:44.824 > 16
+11:48:44.824 > [ 27796][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.832 > [ 27802][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.840 > [ 27808][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.848 > [ 27814][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.848 > [ 27820][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.859 > [ 27826][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.864 > [ 27832][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.870 > [ 27839][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.880 > [ 27845][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.884 > [ 27851][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.888 > [ 27857][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.896 > [ 27864][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.904 > [ 27870][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.904 > [ 27877][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.912 > [ 27883][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.920 > [ 27889][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.928 > [ 27896][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.936 > [ 27902][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.936 > [ 27908][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.944 > [ 27915][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.952 > [ 27921][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.960 > [ 27927][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.968 > [ 27934][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.976 > [ 27940][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.976 > [ 27946][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.984 > [ 27953][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.992 > [ 27959][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:44.992 > [ 27965][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.000 > [ 27972][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.008 > [ 27978][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.016 > [ 27984][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.024 > [ 27991][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.024 > [ 27997][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.037 > [ 28003][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.043 > [ 28010][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.044 > [ 28016][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.060 > [ 28022][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.065 > [ 28029][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.070 > [ 28035][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.075 > [ 28041][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.075 > [ 28048][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.083 > [ 28054][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.091 > [ 28060][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.103 > [ 28067][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.107 > [ 28073][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.107 > [ 28079][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.115 > [ 28086][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.123 > [ 28092][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.123 > [ 28098][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.131 > [ 28105][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.148 > Curr Drive State
+11:48:45.148 > 2
+11:48:45.148 > Transmit Data To Cloud
+11:48:45.148 > 1
+11:48:45.148 > 99, 81, 47.26, -21.10, 312.66, 1, 0
+11:48:45.148 > Data Index
+11:48:45.148 > 17
+11:48:45.148 > [ 28122][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.156 > [ 28128][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.164 > [ 28134][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.172 > [ 28140][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.180 > [ 28146][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.180 > [ 28152][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.188 > [ 28158][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.197 > [ 28164][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.204 > [ 28170][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.204 > [ 28177][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.212 > [ 28183][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.220 > [ 28189][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.229 > [ 28196][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.237 > [ 28202][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.237 > [ 28208][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.245 > [ 28215][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.253 > [ 28221][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.253 > [ 28228][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.269 > [ 28233][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.269 > [ 28240][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.277 > [ 28246][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.285 > [ 28253][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.285 > [ 28259][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.293 > [ 28266][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.301 > [ 28272][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.311 > [ 28278][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.317 > [ 28285][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.325 > [ 28291][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.325 > [ 28297][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.333 > [ 28304][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.341 > [ 28310][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.341 > [ 28316][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.357 > [ 28323][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.357 > [ 28329][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.365 > [ 28335][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.374 > [ 28342][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.374 > [ 28348][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.382 > [ 28354][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.390 > [ 28361][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.398 > [ 28367][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.406 > [ 28373][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.414 > [ 28380][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.414 > [ 28386][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.422 > [ 28392][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.430 > [ 28399][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.430 > [ 28405][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.446 > [ 28411][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.454 > [ 28418][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.454 > [ 28424][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.462 > [ 28430][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.470 > Curr Drive State
+11:48:45.470 > 2
+11:48:45.470 > Transmit Data To Cloud
+11:48:45.470 > 1
+11:48:45.470 > 73, 106, 49.36, -23.42, 312.86, 1, 0
+11:48:45.470 > Data Index
+11:48:45.478 > 18
+11:48:45.478 > [ 28448][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.486 > [ 28454][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.486 > [ 28460][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.494 > [ 28466][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.502 > [ 28472][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.502 > [ 28478][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.518 > [ 28484][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.526 > [ 28490][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.526 > [ 28496][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.534 > [ 28502][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.542 > [ 28509][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.542 > [ 28515][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.550 > [ 28521][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.558 > [ 28528][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.571 > [ 28534][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.576 > [ 28541][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.580 > [ 28547][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.582 > [ 28553][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.590 > [ 28559][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.598 > [ 28566][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.606 > [ 28572][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.614 > [ 28579][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.617 > [ 28585][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.622 > [ 28591][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.631 > [ 28598][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.637 > [ 28604][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.639 > [ 28610][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.652 > [ 28617][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.655 > [ 28623][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.663 > [ 28629][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.663 > [ 28636][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.671 > [ 28642][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.679 > [ 28648][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.679 > [ 28655][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.696 > [ 28661][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.696 > [ 28667][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.704 > [ 28674][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.712 > [ 28680][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.716 > [ 28686][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.723 > [ 28693][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.732 > [ 28699][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.737 > [ 28705][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.748 > [ 28712][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.752 > [ 28718][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.759 > [ 28724][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.764 > [ 28731][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.769 > [ 28737][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.769 > [ 28743][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.778 > [ 28750][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.785 > [ 28756][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.793 > Curr Drive State
+11:48:45.793 > 2
+11:48:45.793 > Transmit Data To Cloud
+11:48:45.793 > 1
+11:48:45.801 > 102, 78, 51.53, -25.67, 313.88, 1, 0
+11:48:45.801 > Data Index
+11:48:45.801 > 19
+11:48:45.801 > [ 28773][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.809 > [ 28779][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.817 > [ 28785][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.825 > [ 28791][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.825 > [ 28797][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.833 > [ 28803][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.841 > [ 28809][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.841 > [ 28816][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.850 > [ 28822][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.863 > [ 28828][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.866 > [ 28835][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.875 > [ 28841][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.881 > [ 28847][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.887 > [ 28854][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.893 > [ 28860][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.898 > [ 28866][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.905 > [ 28873][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.913 > [ 28879][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.921 > [ 28885][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.921 > [ 28892][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.929 > [ 28898][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.937 > [ 28904][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.937 > [ 28911][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.953 > [ 28917][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.953 > [ 28923][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.961 > [ 28930][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.969 > [ 28936][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.969 > [ 28942][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.977 > [ 28949][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.985 > [ 28955][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:45.993 > [ 28961][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.001 > [ 28968][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.009 > [ 28974][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.009 > [ 28980][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.017 > [ 28987][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.025 > [ 28993][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.025 > [ 28999][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.041 > [ 29006][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.041 > [ 29012][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.054 > [ 29018][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.057 > [ 29025][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.057 > [ 29031][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.065 > [ 29037][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.074 > [ 29044][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.087 > [ 29050][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.092 > [ 29056][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.097 > [ 29063][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.097 > [ 29069][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.105 > [ 29075][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.114 > [ 29082][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.114 > Curr Drive State
+11:48:46.121 > 2
+11:48:46.121 > Transmit Data To Cloud
+11:48:46.121 > 1
+11:48:46.121 > 96, 84, 53.63, -27.99, 310.55, 1, 0
+11:48:46.130 > Data Index
+11:48:46.130 > 20
+11:48:46.130 > [ 29099][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.138 > [ 29105][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.138 > [ 29111][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.145 > [ 29117][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.153 > [ 29123][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.162 > [ 29129][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.170 > [ 29135][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.170 > [ 29141][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.177 > [ 29147][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.185 > [ 29154][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.185 > [ 29160][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.202 > [ 29166][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.202 > [ 29173][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.210 > [ 29179][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.218 > [ 29185][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.226 > [ 29192][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.228 > [ 29198][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.234 > [ 29204][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.242 > [ 29211][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.250 > [ 29217][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.258 > [ 29223][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.258 > [ 29230][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.266 > [ 29236][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.274 > [ 29242][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.274 > [ 29249][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.282 > [ 29255][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.290 > [ 29262][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.298 > [ 29268][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.306 > [ 29274][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.314 > [ 29280][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.314 > [ 29287][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.323 > [ 29293][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.330 > [ 29300][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.338 > [ 29306][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.347 > [ 29312][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.354 > [ 29319][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.354 > [ 29325][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.362 > [ 29331][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.370 > [ 29338][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.370 > [ 29344][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.387 > [ 29350][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.388 > [ 29357][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.395 > [ 29363][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.403 > [ 29369][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.403 > [ 29376][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.411 > [ 29382][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.419 > [ 29388][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.427 > [ 29395][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.435 > [ 29401][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.443 > [ 29407][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.443 > Curr Drive State
+11:48:46.443 > 2
+11:48:46.443 > Transmit Data To Cloud
+11:48:46.451 > 1
+11:48:46.451 > 75, 105, 55.65, -30.39, 309.75, 1, 0
+11:48:46.451 > Data Index
+11:48:46.459 > 21
+11:48:46.459 > [ 29425][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.459 > [ 29431][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.468 > [ 29437][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.475 > [ 29443][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.475 > [ 29449][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.483 > [ 29455][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.491 > [ 29461][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.499 > [ 29467][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.507 > [ 29473][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.515 > [ 29479][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.515 > [ 29486][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.523 > [ 29492][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.531 > [ 29498][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.537 > [ 29505][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.543 > [ 29511][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.551 > [ 29518][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.559 > [ 29524][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.559 > [ 29530][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.567 > [ 29537][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.575 > [ 29543][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.575 > [ 29549][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.591 > [ 29556][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.591 > [ 29562][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.603 > [ 29568][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.609 > [ 29575][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.615 > [ 29581][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.615 > [ 29587][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.623 > [ 29594][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.631 > [ 29600][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.639 > [ 29606][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.647 > [ 29613][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.647 > [ 29619][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.655 > [ 29625][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.665 > [ 29632][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.665 > [ 29638][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.679 > [ 29644][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.687 > [ 29651][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.687 > [ 29657][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.695 > [ 29663][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.703 > [ 29670][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.703 > [ 29676][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.714 > [ 29682][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.720 > [ 29689][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.728 > [ 29695][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.736 > [ 29701][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.736 > [ 29708][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.744 > [ 29714][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.752 > [ 29720][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.752 > [ 29727][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.760 > [ 29733][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.776 > Curr Drive State
+11:48:46.776 > 2
+11:48:46.776 > Transmit Data To Cloud
+11:48:46.776 > 1
+11:48:46.776 > 106, 73, 57.67, -32.76, 309.38, 1, 0
+11:48:46.776 > Data Index
+11:48:46.776 > 22
+11:48:46.776 > [ 29750][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.784 > [ 29756][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.792 > [ 29762][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.804 > [ 29768][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.808 > [ 29774][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.808 > [ 29780][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.816 > [ 29786][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.824 > [ 29793][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.824 > [ 29799][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.832 > [ 29805][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.848 > [ 29812][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.848 > [ 29818][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.856 > [ 29824][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.864 > [ 29831][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.864 > [ 29837][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.872 > [ 29843][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.880 > [ 29850][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.888 > [ 29856][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.896 > [ 29862][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.904 > [ 29869][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.904 > [ 29875][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.912 > [ 29881][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.920 > [ 29888][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.920 > [ 29894][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.936 > [ 29900][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.936 > [ 29907][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.944 > [ 29913][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.952 > [ 29919][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.952 > [ 29926][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.960 > [ 29932][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.968 > [ 29938][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.976 > [ 29945][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.984 > [ 29951][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.992 > [ 29957][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:46.992 > [ 29964][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.000 > [ 29970][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.008 > [ 29976][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.008 > [ 29983][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.024 > [ 29989][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.032 > [ 29995][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.032 > [ 30002][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.040 > [ 30008][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.047 > [ 30014][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.048 > [ 30021][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.056 > [ 30027][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.064 > [ 30033][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.072 > [ 30040][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.080 > [ 30046][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.080 > [ 30052][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.088 > [ 30059][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.097 > Curr Drive State
+11:48:47.104 > 2
+11:48:47.104 > Transmit Data To Cloud
+11:48:47.104 > 1
+11:48:47.104 > 93, 87, 59.58, -35.24, 306.54, 1, 0
+11:48:47.104 > Data Index
+11:48:47.104 > 23
+11:48:47.104 > [ 30076][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.114 > [ 30082][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.120 > [ 30088][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.126 > [ 30094][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.129 > [ 30100][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.137 > [ 30106][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.145 > [ 30112][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.153 > [ 30118][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.153 > [ 30124][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.161 > [ 30131][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.169 > [ 30137][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.169 > [ 30143][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.185 > [ 30150][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.185 > [ 30156][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.193 > [ 30162][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.202 > [ 30169][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.209 > [ 30175][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.209 > [ 30181][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.218 > [ 30188][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.226 > [ 30194][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.234 > [ 30200][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.242 > [ 30207][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.242 > [ 30213][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.254 > [ 30219][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.258 > [ 30226][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.258 > [ 30232][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.266 > [ 30238][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.274 > [ 30245][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.288 > [ 30251][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.291 > [ 30258][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.291 > [ 30264][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.299 > [ 30270][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.307 > [ 30276][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.307 > [ 30283][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.323 > [ 30289][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.331 > [ 30296][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.331 > [ 30302][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.339 > [ 30308][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.347 > [ 30315][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.348 > [ 30321][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.355 > [ 30327][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.364 > [ 30334][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.372 > [ 30340][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.380 > [ 30346][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.380 > [ 30353][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.388 > [ 30359][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.396 > [ 30365][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.404 > [ 30372][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.408 > [ 30378][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.416 > [ 30385][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.424 > Curr Drive State
+11:48:47.424 > 2
+11:48:47.424 > Transmit Data To Cloud
+11:48:47.424 > 1
+11:48:47.424 > 76, 103, 61.47, -37.74, 308.22, 1, 0
+11:48:47.424 > Data Index
+11:48:47.424 > 24
+11:48:47.424 > [ 30402][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.440 > [ 30408][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.448 > [ 30414][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.448 > [ 30420][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.456 > [ 30426][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.464 > [ 30432][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.464 > [ 30438][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.472 > [ 30444][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.480 > [ 30450][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.488 > [ 30456][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.496 > [ 30463][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.504 > [ 30469][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.504 > [ 30476][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.512 > [ 30482][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.520 > [ 30488][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.528 > [ 30494][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.536 > [ 30501][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.536 > [ 30507][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.544 > [ 30513][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.552 > [ 30520][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.560 > [ 30526][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.560 > [ 30533][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.576 > [ 30539][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.576 > [ 30545][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.584 > [ 30552][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.592 > [ 30558][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.592 > [ 30564][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.600 > [ 30571][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.608 > [ 30577][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.616 > [ 30583][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.624 > [ 30590][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.624 > [ 30596][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.637 > [ 30602][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.642 > [ 30609][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.648 > [ 30615][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.648 > [ 30621][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.664 > [ 30628][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.664 > [ 30634][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.672 > [ 30640][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.680 > [ 30647][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.680 > [ 30653][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.688 > [ 30659][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.696 > [ 30666][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.704 > [ 30672][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.712 > [ 30678][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.720 > [ 30685][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.720 > [ 30691][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.728 > [ 30697][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.736 > [ 30704][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.736 > [ 30710][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.744 > Curr Drive State
+11:48:47.752 > 2
+11:48:47.752 > Transmit Data To Cloud
+11:48:47.752 > 1
+11:48:47.752 > 102, 78, 63.41, -40.19, 307.09, 1, 0
+11:48:47.760 > Data Index
+11:48:47.760 > 25
+11:48:47.760 > [ 30727][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.760 > [ 30733][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.768 > [ 30739][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.776 > [ 30745][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.784 > [ 30751][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.793 > [ 30757][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.793 > [ 30763][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.801 > [ 30769][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.809 > [ 30776][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.809 > [ 30782][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.816 > [ 30788][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.825 > [ 30795][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.832 > [ 30801][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.841 > [ 30808][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.841 > [ 30814][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.848 > [ 30820][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.857 > [ 30827][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.864 > [ 30833][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.872 > [ 30839][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.880 > [ 30846][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.880 > [ 30852][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.888 > [ 30858][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.897 > [ 30865][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.897 > [ 30871][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.904 > [ 30877][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.921 > [ 30884][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.921 > [ 30890][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.928 > [ 30896][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.937 > [ 30903][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.937 > [ 30909][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.944 > [ 30915][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.952 > [ 30922][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.960 > [ 30928][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.969 > [ 30934][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.976 > [ 30941][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.978 > [ 30947][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.985 > [ 30953][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.989 > [ 30960][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:47.993 > [ 30966][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.008 > [ 30972][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.015 > [ 30979][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.020 > [ 30985][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.020 > [ 30991][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.031 > [ 30998][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.035 > [ 31004][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.035 > [ 31011][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.051 > [ 31017][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.059 > [ 31023][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.059 > [ 31029][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.067 > [ 31036][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.075 > Curr Drive State
+11:48:48.075 > 2
+11:48:48.075 > Transmit Data To Cloud
+11:48:48.075 > 1
+11:48:48.075 > 90, 90, 65.23, -42.74, 304.67, 1, 0
+11:48:48.075 > Data Index
+11:48:48.083 > 26
+11:48:48.083 > [ 31053][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.091 > [ 31059][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.091 > [ 31065][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.099 > [ 31071][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.107 > [ 31077][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.107 > [ 31083][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.123 > [ 31089][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.131 > [ 31095][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.131 > [ 31101][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.142 > [ 31108][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.147 > [ 31114][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.153 > [ 31120][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.156 > [ 31127][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.165 > [ 31133][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.171 > [ 31139][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.179 > [ 31146][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.187 > [ 31152][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.187 > [ 31158][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.195 > [ 31165][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.203 > [ 31171][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.203 > [ 31177][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.220 > [ 31184][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.220 > [ 31190][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.228 > [ 31196][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.236 > [ 31203][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.236 > [ 31209][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.244 > [ 31215][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.253 > [ 31222][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.260 > [ 31228][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.268 > [ 31234][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.276 > [ 31241][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.276 > [ 31247][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.284 > [ 31253][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.292 > [ 31260][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.292 > [ 31266][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.309 > [ 31273][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.309 > [ 31279][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.316 > [ 31285][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.325 > [ 31292][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.325 > [ 31298][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.332 > [ 31305][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.341 > [ 31311][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.348 > [ 31317][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.356 > [ 31323][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.364 > [ 31330][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.369 > [ 31336][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.373 > [ 31342][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.381 > [ 31349][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.381 > [ 31355][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.397 > [ 31361][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.397 > Curr Drive State
+11:48:48.397 > 2
+11:48:48.397 > Transmit Data To Cloud
+11:48:48.397 > 1
+11:48:48.397 > 73, 106, 67.07, -45.26, 308.15, 1, 0
+11:48:48.405 > Data Index
+11:48:48.405 > 27
+11:48:48.405 > [ 31379][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.413 > [ 31385][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.421 > [ 31391][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.429 > [ 31397][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.429 > [ 31403][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.437 > [ 31409][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.445 > [ 31415][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.453 > [ 31421][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.453 > [ 31427][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.469 > [ 31433][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.469 > [ 31440][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.477 > [ 31446][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.485 > [ 31452][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.493 > [ 31459][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.494 > [ 31465][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.504 > [ 31471][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.512 > [ 31478][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.520 > [ 31484][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.520 > [ 31490][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.528 > [ 31497][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.536 > [ 31503][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.536 > [ 31509][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.544 > [ 31516][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.560 > [ 31522][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.560 > [ 31528][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.568 > [ 31535][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.576 > [ 31541][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.576 > [ 31548][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.588 > [ 31554][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.592 > [ 31560][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.601 > [ 31566][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.609 > [ 31573][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.609 > [ 31579][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.617 > [ 31586][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.625 > [ 31592][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.625 > [ 31598][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.633 > [ 31605][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.641 > [ 31611][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.654 > [ 31617][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.659 > [ 31624][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.665 > [ 31630][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.665 > [ 31636][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.673 > [ 31643][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.681 > [ 31649][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.681 > [ 31655][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.697 > [ 31662][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.697 > [ 31668][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.705 > [ 31674][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.713 > [ 31681][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.721 > [ 31687][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.721 > Curr Drive State
+11:48:48.729 > 2
+11:48:48.729 > Transmit Data To Cloud
+11:48:48.729 > 1
+11:48:48.729 > 100, 79, 68.98, -47.72, 306.66, 1, 0
+11:48:48.737 > Data Index
+11:48:48.737 > 28
+11:48:48.737 > [ 31704][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.737 > [ 31710][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.745 > [ 31716][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.753 > [ 31722][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.753 > [ 31728][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.769 > [ 31734][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.769 > [ 31740][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.778 > [ 31746][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.785 > [ 31753][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.785 > [ 31759][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.793 > [ 31765][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.801 > [ 31772][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.810 > [ 31778][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.818 > [ 31784][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.826 > [ 31791][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.826 > [ 31797][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.834 > [ 31803][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.842 > [ 31810][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.842 > [ 31816][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.858 > [ 31823][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.858 > [ 31829][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.866 > [ 31835][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.874 > [ 31841][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.874 > [ 31848][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.882 > [ 31854][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.890 > [ 31861][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.898 > [ 31867][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.906 > [ 31873][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.914 > [ 31880][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.914 > [ 31886][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.922 > [ 31892][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.930 > [ 31899][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.938 > [ 31905][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.946 > [ 31911][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.954 > [ 31918][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.954 > [ 31924][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.962 > [ 31930][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.970 > [ 31937][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.970 > [ 31943][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.978 > [ 31949][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.986 > [ 31956][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:48.994 > [ 31962][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.002 > [ 31968][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.002 > [ 31975][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.010 > [ 31981][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.018 > [ 31987][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.026 > [ 31994][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.034 > [ 32000][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.042 > [ 32006][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.042 > [ 32013][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.050 > Curr Drive State
+11:48:49.050 > 2
+11:48:49.050 > Transmit Data To Cloud
+11:48:49.058 > 1
+11:48:49.058 > 81, 99, 70.86, -50.23, 308.17, 1, 0
+11:48:49.058 > Data Index
+11:48:49.058 > 29
+11:48:49.058 > [ 32030][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.066 > [ 32036][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.074 > [ 32042][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.074 > [ 32048][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.086 > [ 32054][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.090 > [ 32060][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.098 > [ 32066][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.106 > [ 32072][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.114 > [ 32078][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.114 > [ 32085][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.122 > [ 32091][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.131 > [ 32097][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.137 > [ 32104][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.138 > [ 32110][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.146 > [ 32116][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.154 > [ 32123][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.164 > [ 32129][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.170 > [ 32135][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.174 > [ 32142][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.178 > [ 32148][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.186 > [ 32154][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.186 > [ 32161][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.202 > [ 32167][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.202 > [ 32173][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.211 > [ 32180][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.219 > [ 32186][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.219 > [ 32192][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.227 > [ 32199][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.235 > [ 32205][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.243 > [ 32211][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.252 > [ 32218][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.259 > [ 32224][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.259 > [ 32230][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.267 > [ 32237][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.275 > [ 32243][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.275 > [ 32250][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.291 > [ 32256][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.291 > [ 32262][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.304 > [ 32268][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.308 > [ 32275][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.308 > [ 32281][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.316 > [ 32288][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.325 > [ 32294][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.333 > [ 32300][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.341 > [ 32307][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.341 > [ 32313][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.349 > [ 32319][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.357 > [ 32326][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.357 > [ 32332][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.365 > [ 32338][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.381 > Curr Drive State
+11:48:49.381 > 2
+11:48:49.381 > Transmit Data To Cloud
+11:48:49.381 > 1
+11:48:49.381 > 97, 82, 72.82, -52.68, 308.24, 1, 0
+11:48:49.386 > Data Index
+11:48:49.386 > 30
+11:48:49.386 > [ 32356][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.390 > [ 32362][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.397 > [ 32368][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.406 > [ 32374][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.414 > [ 32380][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.414 > [ 32386][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.424 > [ 32392][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.430 > [ 32398][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.430 > [ 32404][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.438 > [ 32410][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.446 > [ 32417][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.454 > [ 32423][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.462 > [ 32429][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.470 > [ 32436][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.474 > [ 32442][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.478 > [ 32448][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.487 > [ 32455][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.495 > [ 32461][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.502 > [ 32467][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.508 > [ 32474][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.510 > [ 32480][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.518 > [ 32486][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.518 > [ 32493][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.531 > [ 32499][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.542 > [ 32505][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.543 > [ 32512][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.552 > [ 32518][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.559 > [ 32524][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.559 > [ 32531][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.567 > [ 32537][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.575 > [ 32543][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.585 > [ 32550][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.592 > [ 32556][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.592 > [ 32562][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.600 > [ 32569][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.608 > [ 32575][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.608 > [ 32581][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.617 > [ 32588][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.624 > [ 32594][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.632 > [ 32600][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.640 > [ 32607][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.648 > [ 32613][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.648 > [ 32619][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.656 > [ 32626][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.664 > [ 32632][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.664 > [ 32638][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.681 > [ 32645][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.687 > [ 32651][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.688 > [ 32657][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.696 > [ 32664][E][WMath.cpp:78] map(): map(): Invalid input range, min == max
+11:48:49.704 > Curr Drive State
+11:48:49.704 > 2
+11:48:49.704 > Transmit Data To Cloud
+11:48:49.704 > 1
+11:48:49.704 > 85, 94, 74.70, -55.16, 307.10, 1, 0
+11:48:49.712 > Finished collecting 30 pos points
+11:48:59.049 > connecting to MQTT
+11:49:14.383 > connecting to MQTT
+11:49:29.760 > connecting to MQTT
+11:49:45.122 > connecting to MQTT
+11:50:00.453 > connecting to MQTT
+11:50:15.763 > connecting to MQTT
+11:50:31.095 > connecting to MQTT
+11:50:46.584 > connecting to MQTT
+11:51:01.927 > connecting to MQTT

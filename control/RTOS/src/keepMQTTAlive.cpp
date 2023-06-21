@@ -11,7 +11,7 @@ SemaphoreHandle_t mutex_v;
 #define MQTT_USERNAME "BalanceBug"
 #define MQTT_PASSWORD "123"
 
-const char *MQTT_SERVER = "52.91.64.67";
+const char *MQTT_SERVER = "54.204.201.39";
 uint16_t MQTT_PORT = 1883;
 
 WiFiClient wifiClient;
@@ -102,6 +102,7 @@ void keepMQTTAlive(void *parameters)
     {
       xSemaphoreTake(mutex_v, portMAX_DELAY);
       MQTTclient.loop();
+      MQTTclient.publish("keep_alive", "ESP32 connected to MQTT");
       xSemaphoreGive(mutex_v);
       // MQTTclient.publish("alive_topic", "Alive"); // NEW ADDITION - MONITOR ESP32 status via CLI
     }

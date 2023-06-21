@@ -1,3 +1,6 @@
+// This file runs on the frontend 
+// TODO: Integrate into React
+
 //region of the maze
 var mazeregion = {
   topleft: [0, 180],

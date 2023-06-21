@@ -130,6 +130,10 @@ void driveSetup()
     // initiate calibration
     if (newCalibrate)
     {
+/*         xSemaphoreTake(mutex_v, portMAX_DELAY);
+        MQTTclient.publish("echo", "starting calibration");
+        xSemaphoreGive(mutex_v); */
+
         int testNo = 0;
         calibrate(LMax, LMin, ldrLPin, testNo);
         Serial.print("LMax: ");
@@ -153,7 +157,11 @@ void driveSetup()
     }
     else
     {
-        Serial.println("Use old calibration");
+         Serial.println("Use old calibration");
+/*         xSemaphoreTake(mutex_v, portMAX_DELAY);
+        MQTTclient.publish("echo", "use old calibration"); 
+        xSemaphoreGive(mutex_v);  */
+
         LMax = oldLMax;
         LMin = oldLMin;
         RMax = oldRMax;
@@ -197,7 +205,7 @@ void driveLoop()
 
         xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("deadreckoning_data", deadreckoning_payload);
-        xSemaphoreGive(mutex_v);
+        xSemaphoreGive(mutex_v); 
 
         if (driftCorrectSendIndex == ARRAY_SIZE-1){
             driftCorrectSendIndex = 0;
@@ -220,9 +228,22 @@ void driveLoop()
         ldrFVal = constrain(ldrFVal, FMin, FMax);
 
         // apply the calibration to the sensor reading (scale it from 0 - 100)
+        if (LMin != LMax){
         ldrLVal = map(ldrLVal, LMin, LMax, 0, 100);
+        }
+
+        if (RMin != RMax){
         ldrRVal = map(ldrRVal, RMin, RMax, 0, 100);
+        }
+
+        if (FMin != FMax){
         ldrFVal = map(ldrFVal, FMin, FMax, 0, 100);
+        }
+
+/*         xSemaphoreTake(mutex_v, portMAX_DELAY);
+        MQTTclient.publish("echo", "done with calibration");
+        xSemaphoreGive(mutex_v); */
+
 
         thetaDeg = thetaRad / PIVAL * 180.0;
         // Serial.println("Curr Drive State");
@@ -594,6 +615,10 @@ void collectData()
 
         dataIndex = 0;
         Serial.println("Finished collecting 30 pos points");
+
+        xSemaphoreTake(mutex_v, portMAX_DELAY);
+        MQTTclient.publish("echo", "finished 30 pos points");
+        xSemaphoreGive(mutex_v);
         startLocalise();
     }
     else

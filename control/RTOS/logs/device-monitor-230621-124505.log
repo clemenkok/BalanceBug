@@ -1,0 +1,4433 @@
+12:45:06.949 > ets Jun  8 2016 00:22:57
+12:45:06.949 > 
+12:45:06.949 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+12:45:06.949 > configsip: 0, SPIWP:0xee
+12:45:06.949 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+12:45:06.949 > mode:DIO, clock div:2
+12:45:06.949 > load:0x3fff0030,len:1184
+12:45:06.949 > load:0x40078000,len:13192
+12:45:06.949 > load:0x40080400,len:3028
+12:45:06.949 > entry 0x400805e4
+12:45:06.949 > start drive setup
+12:45:09.709 > entering testcase 0
+12:45:09.709 > getting calibration values...
+12:45:09.806 > 422
+12:45:09.806 > getting calibration values...
+12:45:09.903 > 220
+12:45:09.903 > getting calibration values...
+12:45:10.008 > 214
+12:45:10.008 > getting calibration values...
+12:45:10.104 > 214
+12:45:10.104 > getting calibration values...
+12:45:10.209 > 221
+12:45:10.209 > getting calibration values...
+12:45:10.308 > 225
+12:45:10.308 > getting calibration values...
+12:45:10.404 > 223
+12:45:10.404 > getting calibration values...
+12:45:10.503 > 222
+12:45:10.503 > getting calibration values...
+12:45:10.609 > 223
+12:45:10.609 > getting calibration values...
+12:45:10.709 > 210
+12:45:10.710 > getting calibration values...
+12:45:10.802 > 213
+12:45:10.810 > getting calibration values...
+12:45:10.907 > 221
+12:45:10.907 > getting calibration values...
+12:45:11.003 > 234
+12:45:11.003 > getting calibration values...
+12:45:11.107 > 224
+12:45:11.107 > getting calibration values...
+12:45:11.204 > 214
+12:45:11.204 > getting calibration values...
+12:45:11.308 > 219
+12:45:11.308 > getting calibration values...
+12:45:11.410 > 210
+12:45:11.410 > getting calibration values...
+12:45:11.510 > 223
+12:45:11.510 > getting calibration values...
+12:45:11.609 > 215
+12:45:11.609 > getting calibration values...
+12:45:11.705 > 219
+12:45:11.705 > getting calibration values...
+12:45:11.802 > 220
+12:45:11.810 > getting calibration values...
+12:45:11.908 > 230
+12:45:11.908 > getting calibration values...
+12:45:12.005 > 226
+12:45:12.005 > getting calibration values...
+12:45:12.102 > 211
+12:45:12.110 > getting calibration values...
+12:45:12.208 > 215
+12:45:12.208 > getting calibration values...
+12:45:12.304 > 226
+12:45:12.304 > getting calibration values...
+12:45:12.403 > 216
+12:45:12.403 > getting calibration values...
+12:45:12.504 > 208
+12:45:12.504 > getting calibration values...
+12:45:12.603 > 225
+12:45:12.603 > getting calibration values...
+12:45:12.709 > 215
+12:45:12.709 > getting calibration values...
+12:45:12.808 > 223
+12:45:12.808 > getting calibration values...
+12:45:12.904 > 207
+12:45:12.904 > getting calibration values...
+12:45:13.006 > 207
+12:45:13.006 > getting calibration values...
+12:45:13.104 > 216
+12:45:13.104 > getting calibration values...
+12:45:13.207 > 204
+12:45:15.207 > LMax: 422
+12:45:15.207 > LMin: 204
+12:45:15.207 > entering testcase 1
+12:45:15.207 > getting calibration values...
+12:45:15.304 > 0
+12:45:15.304 > getting calibration values...
+12:45:15.404 > 0
+12:45:15.404 > getting calibration values...
+12:45:15.507 > 0
+12:45:15.507 > getting calibration values...
+12:45:15.604 > 0
+12:45:15.604 > getting calibration values...
+12:45:15.706 > 0
+12:45:15.706 > getting calibration values...
+12:45:15.806 > 0
+12:45:15.806 > getting calibration values...
+12:45:15.906 > 0
+12:45:15.906 > getting calibration values...
+12:45:16.006 > 0
+12:45:16.006 > getting calibration values...
+12:45:16.105 > 0
+12:45:16.105 > getting calibration values...
+12:45:16.206 > 0
+12:45:16.206 > getting calibration values...
+12:45:16.309 > 0
+12:45:16.310 > getting calibration values...
+12:45:16.407 > 0
+12:45:16.407 > getting calibration values...
+12:45:16.507 > 0
+12:45:16.507 > getting calibration values...
+12:45:16.606 > 0
+12:45:16.606 > getting calibration values...
+12:45:16.704 > 0
+12:45:16.704 > getting calibration values...
+12:45:16.807 > 0
+12:45:16.807 > getting calibration values...
+12:45:16.906 > 0
+12:45:16.906 > getting calibration values...
+12:45:17.003 > 0
+12:45:17.003 > getting calibration values...
+12:45:17.109 > 0
+12:45:17.109 > getting calibration values...
+12:45:17.208 > 0
+12:45:17.208 > getting calibration values...
+12:45:17.304 > 0
+12:45:17.304 > getting calibration values...
+12:45:17.410 > 0
+12:45:17.410 > getting calibration values...
+12:45:17.508 > 0
+12:45:17.508 > getting calibration values...
+12:45:17.604 > 0
+12:45:17.604 > getting calibration values...
+12:45:17.709 > 0
+12:45:17.709 > getting calibration values...
+12:45:17.805 > 0
+12:45:17.805 > getting calibration values...
+12:45:17.904 > 0
+12:45:17.904 > getting calibration values...
+12:45:18.008 > 0
+12:45:18.008 > getting calibration values...
+12:45:18.105 > 0
+12:45:18.105 > getting calibration values...
+12:45:18.203 > 0
+12:45:18.203 > getting calibration values...
+12:45:18.309 > 0
+12:45:18.309 > getting calibration values...
+12:45:18.408 > 0
+12:45:18.408 > getting calibration values...
+12:45:18.504 > 0
+12:45:18.504 > getting calibration values...
+12:45:18.602 > 0
+12:45:18.610 > getting calibration values...
+12:45:18.700 > 0
+12:45:20.710 > RMax: 0
+12:45:20.710 > RMin: 0
+12:45:20.710 > entering testcase 2
+12:45:20.710 > getting calibration values...
+12:45:20.810 > 564
+12:45:20.810 > getting calibration values...
+12:45:20.906 > 307
+12:45:20.906 > getting calibration values...
+12:45:21.004 > 313
+12:45:21.004 > getting calibration values...
+12:45:21.103 > 329
+12:45:21.103 > getting calibration values...
+12:45:21.206 > 311
+12:45:21.206 > getting calibration values...
+12:45:21.303 > 327
+12:45:21.303 > getting calibration values...
+12:45:21.407 > 322
+12:45:21.407 > getting calibration values...
+12:45:21.505 > 318
+12:45:21.505 > getting calibration values...
+12:45:21.604 > 320
+12:45:21.604 > getting calibration values...
+12:45:21.705 > 320
+12:45:21.705 > getting calibration values...
+12:45:21.804 > 326
+12:45:21.804 > getting calibration values...
+12:45:21.907 > 326
+12:45:21.907 > getting calibration values...
+12:45:22.005 > 321
+12:45:22.005 > getting calibration values...
+12:45:22.104 > 320
+12:45:22.104 > getting calibration values...
+12:45:22.203 > 320
+12:45:22.203 > getting calibration values...
+12:45:22.304 > 318
+12:45:22.304 > getting calibration values...
+12:45:22.409 > 337
+12:45:22.409 > getting calibration values...
+12:45:22.506 > 329
+12:45:22.506 > getting calibration values...
+12:45:22.603 > 317
+12:45:22.603 > getting calibration values...
+12:45:22.704 > 325
+12:45:22.704 > getting calibration values...
+12:45:22.808 > 320
+12:45:22.808 > getting calibration values...
+12:45:22.908 > 308
+12:45:22.908 > getting calibration values...
+12:45:23.005 > 321
+12:45:23.005 > getting calibration values...
+12:45:23.103 > 313
+12:45:23.103 > getting calibration values...
+12:45:23.206 > 321
+12:45:23.206 > getting calibration values...
+12:45:23.304 > 323
+12:45:23.304 > getting calibration values...
+12:45:23.402 > 324
+12:45:23.410 > getting calibration values...
+12:45:23.507 > 319
+12:45:23.507 > getting calibration values...
+12:45:23.603 > 327
+12:45:23.603 > getting calibration values...
+12:45:23.705 > 331
+12:45:23.705 > getting calibration values...
+12:45:23.802 > 323
+12:45:23.810 > getting calibration values...
+12:45:23.909 > 327
+12:45:23.910 > getting calibration values...
+12:45:24.005 > 329
+12:45:24.005 > getting calibration values...
+12:45:24.103 > 325
+12:45:24.103 > getting calibration values...
+12:45:24.205 > 320
+12:45:26.203 > FMax: 564
+12:45:26.203 > FMin: 307
+12:45:28.207 > connect to wifi
+12:45:28.338 > wifi connecting
+12:45:28.519 > Curr Drive State
+12:45:28.519 > 2
+12:45:28.519 > Transmit Data To Cloud
+12:45:28.519 > 1
+12:45:28.519 > 91, 88, 2.93, -0.10, 357.23, 1, 0
+12:45:28.519 > Data Index
+12:45:28.519 > 1
+12:45:28.817 > Curr Drive State
+12:45:28.817 > 2
+12:45:28.817 > Transmit Data To Cloud
+12:45:28.817 > 1
+12:45:28.817 > 99, 81, 5.81, -0.29, 355.17, 1, 0
+12:45:28.825 > Data Index
+12:45:28.825 > 2
+12:45:29.118 > Curr Drive State
+12:45:29.118 > 2
+12:45:29.118 > Transmit Data To Cloud
+12:45:29.118 > 1
+12:45:29.118 > 97, 82, 8.67, -0.59, 353.18, 1, 0
+12:45:29.125 > Data Index
+12:45:29.125 > 3
+12:45:29.419 > Curr Drive State
+12:45:29.419 > 2
+12:45:29.419 > Transmit Data To Cloud
+12:45:29.419 > 1
+12:45:29.419 > 94, 85, 11.52, -0.97, 351.82, 1, 0
+12:45:29.419 > Data Index
+12:45:29.419 > 4
+12:45:29.714 > Curr Drive State
+12:45:29.714 > 2
+12:45:29.714 > Transmit Data To Cloud
+12:45:29.714 > 1
+12:45:29.714 > 94, 85, 14.37, -1.44, 349.83, 1, 0
+12:45:29.722 > Data Index
+12:45:29.722 > 5
+12:45:30.021 > Curr Drive State
+12:45:30.021 > 2
+12:45:30.021 > Transmit Data To Cloud
+12:45:30.021 > 1
+12:45:30.021 > 105, 75, 17.19, -2.00, 347.24, 1, 0
+12:45:30.023 > Data Index
+12:45:30.023 > 6
+12:45:30.320 > Curr Drive State
+12:45:30.320 > 2
+12:45:30.320 > Transmit Data To Cloud
+12:45:30.320 > 1
+12:45:30.320 > 94, 85, 19.97, -2.69, 345.34, 1, 0
+12:45:30.321 > Data Index
+12:45:30.321 > 7
+12:45:30.619 > Curr Drive State
+12:45:30.620 > 2
+12:45:30.620 > Transmit Data To Cloud
+12:45:30.620 > 1
+12:45:30.620 > 96, 84, 22.76, -3.45, 344.08, 1, 0
+12:45:30.622 > Data Index
+12:45:30.622 > 8
+12:45:30.921 > Curr Drive State
+12:45:30.926 > 2
+12:45:30.926 > Transmit Data To Cloud
+12:45:30.926 > 1
+12:45:30.926 > 102, 78, 25.52, -4.30, 341.71, 1, 0
+12:45:30.926 > Data Index
+12:45:30.926 > 9
+12:45:31.220 > Curr Drive State
+12:45:31.220 > 2
+12:45:31.220 > Transmit Data To Cloud
+12:45:31.220 > 1
+12:45:31.220 > 97, 82, 28.24, -5.26, 339.66, 1, 0
+12:45:31.220 > Data Index
+12:45:31.220 > 10
+12:45:31.521 > Curr Drive State
+12:45:31.521 > 2
+12:45:31.521 > Transmit Data To Cloud
+12:45:31.521 > 1
+12:45:31.521 > 100, 79, 30.91, -6.31, 337.60, 1, 0
+12:45:31.523 > Data Index
+12:45:31.523 > 11
+12:45:31.814 > Curr Drive State
+12:45:31.822 > 2
+12:45:31.822 > Transmit Data To Cloud
+12:45:31.822 > 1
+12:45:31.822 > 87, 93, 33.54, -7.47, 335.19, 1, 0
+12:45:31.822 > Data Index
+12:45:31.822 > 12
+12:45:32.121 > Curr Drive State
+12:45:32.122 > 2
+12:45:32.122 > Transmit Data To Cloud
+12:45:32.122 > 1
+12:45:32.122 > 105, 75, 36.13, -8.72, 332.66, 1, 0
+12:45:32.126 > Data Index
+12:45:32.126 > 13
+12:45:32.354 > wifi connecting
+12:45:32.420 > Curr Drive State
+12:45:32.420 > 2
+12:45:32.420 > Transmit Data To Cloud
+12:45:32.420 > 1
+12:45:32.420 > 96, 84, 38.67, -10.14, 329.65, 1, 0
+12:45:32.428 > Data Index
+12:45:32.428 > 14
+12:45:32.723 > Curr Drive State
+12:45:32.723 > 2
+12:45:32.723 > Transmit Data To Cloud
+12:45:32.723 > 1
+12:45:32.723 > 105, 75, 41.12, -11.65, 326.51, 1, 0
+12:45:32.723 > Data Index
+12:45:32.723 > 15
+12:45:33.022 > Curr Drive State
+12:45:33.022 > 2
+12:45:33.022 > Transmit Data To Cloud
+12:45:33.022 > 1
+12:45:33.022 > 105, 75, 43.48, -13.32, 323.23, 1, 0
+12:45:33.024 > Data Index
+12:45:33.024 > 16
+12:45:33.317 > Curr Drive State
+12:45:33.317 > 2
+12:45:33.317 > Transmit Data To Cloud
+12:45:33.317 > 1
+12:45:33.317 > 97, 82, 45.73, -15.12, 319.83, 1, 0
+12:45:33.325 > Data Index
+12:45:33.325 > 17
+12:45:33.620 > Curr Drive State
+12:45:33.620 > 2
+12:45:33.620 > Transmit Data To Cloud
+12:45:33.620 > 1
+12:45:33.620 > 102, 78, 47.90, -17.02, 317.48, 1, 0
+12:45:33.628 > Data Index
+12:45:33.628 > 18
+12:45:33.921 > Curr Drive State
+12:45:33.921 > 2
+12:45:33.921 > Transmit Data To Cloud
+12:45:33.921 > 1
+12:45:33.921 > 102, 78, 49.97, -19.03, 314.33, 1, 0
+12:45:33.928 > Data Index
+12:45:33.928 > 19
+12:45:34.219 > Curr Drive State
+12:45:34.219 > 2
+12:45:34.219 > Transmit Data To Cloud
+12:45:34.219 > 1
+12:45:34.219 > 97, 82, 51.93, -21.14, 311.91, 1, 0
+12:45:34.226 > Data Index
+12:45:34.226 > 20
+12:45:34.519 > Curr Drive State
+12:45:34.519 > 2
+12:45:34.519 > Transmit Data To Cloud
+12:45:34.519 > 1
+12:45:34.519 > 97, 82, 53.82, -23.31, 310.07, 1, 0
+12:45:34.527 > Data Index
+12:45:34.527 > 21
+12:45:34.820 > Curr Drive State
+12:45:34.820 > 2
+12:45:34.820 > Transmit Data To Cloud
+12:45:34.820 > 1
+12:45:34.820 > 103, 76, 55.62, -25.57, 306.91, 1, 0
+12:45:34.829 > Data Index
+12:45:34.829 > 22
+12:45:35.123 > Curr Drive State
+12:45:35.123 > 2
+12:45:35.123 > Transmit Data To Cloud
+12:45:35.123 > 1
+12:45:35.123 > 102, 78, 57.29, -27.94, 303.57, 1, 0
+12:45:35.129 > Data Index
+12:45:35.129 > 23
+12:45:35.421 > Curr Drive State
+12:45:35.421 > 2
+12:45:35.421 > Transmit Data To Cloud
+12:45:35.421 > 1
+12:45:35.421 > 100, 79, 58.80, -30.38, 300.23, 1, 0
+12:45:35.429 > Data Index
+12:45:35.429 > 24
+12:45:35.720 > Curr Drive State
+12:45:35.720 > 2
+12:45:35.720 > Transmit Data To Cloud
+12:45:35.720 > 1
+12:45:35.720 > 102, 78, 60.18, -32.92, 297.13, 1, 0
+12:45:35.729 > Data Index
+12:45:35.729 > 25
+12:45:36.020 > Curr Drive State
+12:45:36.020 > 2
+12:45:36.020 > Transmit Data To Cloud
+12:45:36.020 > 1
+12:45:36.020 > 102, 78, 61.45, -35.50, 295.99, 1, 0
+12:45:36.028 > Data Index
+12:45:36.028 > 26
+12:45:36.319 > Curr Drive State
+12:45:36.319 > 2
+12:45:36.319 > Transmit Data To Cloud
+12:45:36.319 > 1
+12:45:36.319 > 106, 73, 62.64, -38.12, 292.94, 1, 0
+12:45:36.330 > Data Index
+12:45:36.330 > 27
+12:45:36.369 > wifi connecting
+12:45:36.623 > Curr Drive State
+12:45:36.623 > 2
+12:45:36.623 > Transmit Data To Cloud
+12:45:36.623 > 1
+12:45:36.623 > 103, 76, 63.67, -40.83, 288.93, 1, 0
+12:45:36.632 > Data Index
+12:45:36.632 > 28
+12:45:36.921 > Curr Drive State
+12:45:36.921 > 2
+12:45:36.921 > Transmit Data To Cloud
+12:45:36.921 > 1
+12:45:36.921 > 103, 76, 64.51, -43.57, 285.65, 1, 0
+12:45:36.929 > Data Index
+12:45:36.929 > 29
+12:45:37.226 > Curr Drive State
+12:45:37.227 > 2
+12:45:37.227 > Transmit Data To Cloud
+12:45:37.227 > 1
+12:45:37.227 > 102, 78, 65.22, -46.37, 283.21, 1, 0
+12:45:37.232 > Data Index
+12:45:37.232 > 30
+12:45:37.520 > Curr Drive State
+12:45:37.528 > 2
+12:45:37.528 > Transmit Data To Cloud
+12:45:37.528 > 1
+12:45:37.528 > 103, 76, 65.79, -49.19, 279.90, 1, 0
+12:45:37.533 > Finished collecting 30 pos points
+12:45:37.533 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:45:37.536 > 2.93,-0.10,357.23,1,0
+12:45:37.545 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:45:37.545 > 5.81,-0.29,355.17,1,0
+12:45:37.546 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:45:37.553 > 8.67,-0.59,353.18,1,0
+12:45:37.553 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:45:37.553 > 11.52,-0.97,351.82,1,0
+12:45:37.562 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:45:37.562 > 14.37,-1.44,349.83,1,0
+12:45:37.569 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:45:37.577 > 17.19,-2.00,347.24,1,0
+12:45:37.578 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:45:37.578 > 19.97,-2.69,345.34,1,0
+12:45:37.578 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:45:37.585 > 22.76,-3.45,344.08,1,0
+12:45:37.585 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:45:37.595 > 25.52,-4.30,341.71,1,0
+12:45:37.595 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:45:37.595 > 28.24,-5.26,339.66,1,0
+12:45:37.601 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:45:37.601 > 30.91,-6.31,337.60,1,0
+12:45:37.612 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:45:37.612 > 33.54,-7.47,335.19,1,0
+12:45:37.612 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:45:37.618 > 36.13,-8.72,332.66,1,0
+12:45:37.629 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:45:37.629 > 38.67,-10.14,329.65,1,0
+12:45:37.634 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:45:37.642 > 41.12,-11.65,326.51,1,0
+12:45:37.642 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:45:37.642 > 43.48,-13.32,323.23,1,0
+12:45:37.642 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:45:37.650 > 45.73,-15.12,319.83,1,0
+12:45:37.650 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:45:37.658 > 47.90,-17.02,317.48,1,0
+12:45:37.658 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:45:37.658 > 49.97,-19.03,314.33,1,0
+12:45:37.666 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:45:37.674 > 51.93,-21.14,311.91,1,0
+12:45:37.674 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:45:37.674 > 53.82,-23.31,310.07,1,0
+12:45:37.682 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:45:37.682 > 55.62,-25.57,306.91,1,0
+12:45:37.690 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:45:37.698 > 57.29,-27.94,303.57,1,0
+12:45:37.698 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:45:37.706 > 58.80,-30.38,300.23,1,0
+12:45:37.706 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:45:37.706 > 60.18,-32.92,297.13,1,0
+12:45:37.706 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:45:37.714 > 61.45,-35.50,295.99,1,0
+12:45:37.722 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:45:37.722 > 62.64,-38.12,292.94,1,0
+12:45:37.722 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:45:37.735 > 63.67,-40.83,288.93,1,0
+12:45:37.735 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:45:37.739 > 64.51,-43.57,285.65,1,0
+12:45:37.747 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:45:37.747 > 65.22,-46.37,283.21,1,0
+12:45:38.046 > Curr Drive State
+12:45:38.046 > 2
+12:45:38.046 > Transmit Data To Cloud
+12:45:38.046 > 1
+12:45:38.046 > 100, 79, 66.09, -54.19, 268.64, 1, 0
+12:45:38.053 > Data Index
+12:45:38.053 > 1
+12:45:38.341 > Curr Drive State
+12:45:38.341 > 2
+12:45:38.341 > Transmit Data To Cloud
+12:45:38.341 > 1
+12:45:38.341 > 97, 82, 65.95, -57.06, 266.24, 1, 0
+12:45:38.349 > Data Index
+12:45:38.349 > 2
+12:45:38.646 > Curr Drive State
+12:45:38.646 > 2
+12:45:38.646 > Transmit Data To Cloud
+12:45:38.646 > 1
+12:45:38.646 > 103, 76, 65.69, -59.93, 263.32, 1, 0
+12:45:38.654 > Data Index
+12:45:38.654 > 3
+12:45:38.950 > Curr Drive State
+12:45:38.950 > 2
+12:45:38.950 > Transmit Data To Cloud
+12:45:38.950 > 1
+12:45:38.950 > 103, 76, 65.26, -62.79, 259.75, 1, 0
+12:45:38.950 > Data Index
+12:45:38.950 > 4
+12:45:39.246 > Curr Drive State
+12:45:39.246 > 2
+12:45:39.246 > Transmit Data To Cloud
+12:45:39.246 > 1
+12:45:39.246 > 103, 76, 64.69, -65.61, 257.01, 1, 0
+12:45:39.254 > Data Index
+12:45:39.254 > 5
+12:45:39.545 > Curr Drive State
+12:45:39.545 > 2
+12:45:39.545 > Transmit Data To Cloud
+12:45:39.545 > 1
+12:45:39.545 > 103, 76, 63.98, -68.40, 254.13, 1, 0
+12:45:39.552 > Data Index
+12:45:39.552 > 6
+12:45:39.846 > Curr Drive State
+12:45:39.846 > 2
+12:45:39.846 > Transmit Data To Cloud
+12:45:39.846 > 1
+12:45:39.846 > 108, 72, 63.10, -71.14, 250.37, 1, 0
+12:45:39.854 > Data Index
+12:45:39.854 > 7
+12:45:40.146 > Curr Drive State
+12:45:40.146 > 2
+12:45:40.146 > Transmit Data To Cloud
+12:45:40.146 > 1
+12:45:40.146 > 102, 78, 62.03, -73.81, 246.29, 1, 0
+12:45:40.154 > Data Index
+12:45:40.154 > 8
+12:45:40.375 > wifi connecting
+12:45:40.447 > Curr Drive State
+12:45:40.447 > 2
+12:45:40.447 > Transmit Data To Cloud
+12:45:40.447 > 1
+12:45:40.447 > 103, 76, 60.80, -76.44, 243.74, 1, 0
+12:45:40.455 > Data Index
+12:45:40.455 > 9
+12:45:40.750 > Curr Drive State
+12:45:40.752 > 2
+12:45:40.752 > Transmit Data To Cloud
+12:45:40.752 > 1
+12:45:40.752 > 102, 78, 59.45, -78.98, 240.24, 1, 0
+12:45:40.752 > Data Index
+12:45:40.752 > 10
+12:45:41.048 > Curr Drive State
+12:45:41.048 > 2
+12:45:41.048 > Transmit Data To Cloud
+12:45:41.048 > 1
+12:45:41.048 > 102, 78, 57.94, -81.43, 236.96, 1, 0
+12:45:41.056 > Data Index
+12:45:41.056 > 11
+12:45:41.348 > Curr Drive State
+12:45:41.348 > 2
+12:45:41.348 > Transmit Data To Cloud
+12:45:41.348 > 1
+12:45:41.348 > 102, 78, 56.30, -83.80, 233.67, 1, 0
+12:45:41.356 > Data Index
+12:45:41.356 > 12
+12:45:41.647 > Curr Drive State
+12:45:41.647 > 2
+12:45:41.647 > Transmit Data To Cloud
+12:45:41.647 > 1
+12:45:41.647 > 103, 76, 54.52, -86.07, 230.22, 1, 0
+12:45:41.656 > Data Index
+12:45:41.656 > 13
+12:45:41.946 > Curr Drive State
+12:45:41.946 > 2
+12:45:41.946 > Transmit Data To Cloud
+12:45:41.946 > 1
+12:45:41.946 > 102, 78, 52.62, -88.22, 226.83, 1, 0
+12:45:41.954 > Data Index
+12:45:41.954 > 14
+12:45:42.246 > Curr Drive State
+12:45:42.246 > 2
+12:45:42.246 > Transmit Data To Cloud
+12:45:42.246 > 1
+12:45:42.246 > 102, 78, 50.58, -90.27, 223.81, 1, 0
+12:45:42.254 > Data Index
+12:45:42.254 > 15
+12:45:42.552 > Curr Drive State
+12:45:42.552 > 2
+12:45:42.552 > Transmit Data To Cloud
+12:45:42.552 > 1
+12:45:42.552 > 103, 76, 48.45, -92.19, 220.12, 1, 0
+12:45:42.556 > Data Index
+12:45:42.556 > 16
+12:45:42.852 > Curr Drive State
+12:45:42.852 > 2
+12:45:42.852 > Transmit Data To Cloud
+12:45:42.852 > 1
+12:45:42.852 > 103, 76, 46.19, -93.97, 216.57, 1, 0
+12:45:42.854 > Data Index
+12:45:42.854 > 17
+12:45:43.147 > Curr Drive State
+12:45:43.147 > 2
+12:45:43.147 > Transmit Data To Cloud
+12:45:43.147 > 1
+12:45:43.147 > 108, 72, 43.81, -95.58, 211.86, 1, 0
+12:45:43.155 > Data Index
+12:45:43.155 > 18
+12:45:43.446 > Curr Drive State
+12:45:43.446 > 2
+12:45:43.446 > Transmit Data To Cloud
+12:45:43.446 > 1
+12:45:43.446 > 103, 76, 41.32, -97.01, 208.13, 1, 0
+12:45:43.454 > Data Index
+12:45:43.454 > 19
+12:45:43.751 > Curr Drive State
+12:45:43.751 > 2
+12:45:43.751 > Transmit Data To Cloud
+12:45:43.751 > 1
+12:45:43.751 > 111, 69, 38.73, -98.27, 203.80, 1, 0
+12:45:43.752 > Data Index
+12:45:43.752 > 20
+12:45:44.047 > Curr Drive State
+12:45:44.047 > 2
+12:45:44.047 > Transmit Data To Cloud
+12:45:44.047 > 1
+12:45:44.047 > 103, 76, 36.05, -99.33, 199.56, 1, 0
+12:45:44.055 > Data Index
+12:45:44.055 > 21
+12:45:44.350 > Curr Drive State
+12:45:44.350 > 2
+12:45:44.350 > Transmit Data To Cloud
+12:45:44.350 > 1
+12:45:44.350 > 97, 82, 33.32, -100.22, 196.90, 1, 0
+12:45:44.353 > Data Index
+12:45:44.353 > 22
+12:45:44.393 > wifi connecting
+12:45:44.645 > Curr Drive State
+12:45:44.645 > 2
+12:45:44.645 > Transmit Data To Cloud
+12:45:44.645 > 1
+12:45:44.645 > 106, 73, 30.55, -101.00, 193.92, 1, 0
+12:45:44.651 > Data Index
+12:45:44.651 > 23
+12:45:44.945 > Curr Drive State
+12:45:44.945 > 2
+12:45:44.945 > Transmit Data To Cloud
+12:45:44.945 > 1
+12:45:44.945 > 111, 69, 27.72, -101.55, 188.30, 1, 0
+12:45:44.952 > Data Index
+12:45:44.952 > 24
+12:45:45.248 > Curr Drive State
+12:45:45.248 > 2
+12:45:45.248 > Transmit Data To Cloud
+12:45:45.248 > 1
+12:45:45.248 > 94, 85, 24.85, -101.87, 185.08, 1, 0
+12:45:45.256 > Data Index
+12:45:45.256 > 25
+12:45:45.546 > Curr Drive State
+12:45:45.546 > 2
+12:45:45.546 > Transmit Data To Cloud
+12:45:45.546 > 1
+12:45:45.546 > 105, 75, 21.98, -102.07, 182.58, 1, 0
+12:45:45.554 > Data Index
+12:45:45.554 > 26
+12:45:45.848 > Curr Drive State
+12:45:45.848 > 2
+12:45:45.848 > Transmit Data To Cloud
+12:45:45.848 > 1
+12:45:45.848 > 114, 66, 19.10, -102.09, 178.22, 1, 0
+12:45:45.856 > Data Index
+12:45:45.856 > 27
+12:45:46.151 > Curr Drive State
+12:45:46.151 > 2
+12:45:46.151 > Transmit Data To Cloud
+12:45:46.151 > 1
+12:45:46.151 > 102, 78, 16.22, -101.85, 173.03, 1, 0
+12:45:46.156 > Data Index
+12:45:46.156 > 28
+12:45:46.450 > Curr Drive State
+12:45:46.451 > 2
+12:45:46.451 > Transmit Data To Cloud
+12:45:46.451 > 1
+12:45:46.451 > 102, 78, 13.37, -101.43, 170.55, 1, 0
+12:45:46.452 > Data Index
+12:45:46.452 > 29
+12:45:46.751 > Curr Drive State
+12:45:46.751 > 2
+12:45:46.751 > Transmit Data To Cloud
+12:45:46.751 > 1
+12:45:46.751 > 106, 73, 10.54, -100.87, 166.92, 1, 0
+12:45:46.756 > Data Index
+12:45:46.756 > 30
+12:45:47.052 > Curr Drive State
+12:45:47.052 > 2
+12:45:47.052 > Transmit Data To Cloud
+12:45:47.052 > 1
+12:45:47.052 > 103, 76, 7.76, -100.12, 163.14, 1, 0
+12:45:47.052 > Finished collecting 30 pos points
+12:45:47.052 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:45:47.062 > 66.09,-54.19,268.64,1,0
+12:45:47.068 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:45:47.068 > 65.95,-57.06,266.24,1,0
+12:45:47.068 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:45:47.079 > 65.69,-59.93,263.32,1,0
+12:45:47.085 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:45:47.085 > 65.26,-62.79,259.75,1,0
+12:45:47.085 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:45:47.096 > 64.69,-65.61,257.01,1,0
+12:45:47.096 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:45:47.101 > 63.98,-68.40,254.13,1,0
+12:45:47.101 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:45:47.109 > 63.10,-71.14,250.37,1,0
+12:45:47.109 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:45:47.109 > 62.03,-73.81,246.29,1,0
+12:45:47.117 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:45:47.117 > 60.80,-76.44,243.74,1,0
+12:45:47.125 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:45:47.125 > 59.45,-78.98,240.24,1,0
+12:45:47.125 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:45:47.133 > 57.94,-81.43,236.96,1,0
+12:45:47.141 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:45:47.141 > 56.30,-83.80,233.67,1,0
+12:45:47.149 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:45:47.149 > 54.52,-86.07,230.22,1,0
+12:45:47.149 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:45:47.157 > 52.62,-88.22,226.83,1,0
+12:45:47.157 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:45:47.165 > 50.58,-90.27,223.81,1,0
+12:45:47.165 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:45:47.165 > 48.45,-92.19,220.12,1,0
+12:45:47.173 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:45:47.173 > 46.19,-93.97,216.57,1,0
+12:45:47.181 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:45:47.181 > 43.81,-95.58,211.86,1,0
+12:45:47.181 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:45:47.189 > 41.32,-97.01,208.13,1,0
+12:45:47.197 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:45:47.197 > 38.73,-98.27,203.80,1,0
+12:45:47.205 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:45:47.213 > 36.05,-99.33,199.56,1,0
+12:45:47.213 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:45:47.213 > 33.32,-100.22,196.90,1,0
+12:45:47.213 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:45:47.221 > 30.55,-101.00,193.92,1,0
+12:45:47.221 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:45:47.229 > 27.72,-101.55,188.30,1,0
+12:45:47.231 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:45:47.231 > 24.85,-101.87,185.08,1,0
+12:45:47.237 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:45:47.245 > 21.98,-102.07,182.58,1,0
+12:45:47.253 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:45:47.253 > 19.10,-102.09,178.22,1,0
+12:45:47.253 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:45:47.261 > 16.22,-101.85,173.03,1,0
+12:45:47.261 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:45:47.269 > 13.37,-101.43,170.55,1,0
+12:45:47.269 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:45:47.282 > 10.54,-100.87,166.92,1,0
+12:45:47.570 > Curr Drive State
+12:45:47.570 > 2
+12:45:47.570 > Transmit Data To Cloud
+12:45:47.570 > 1
+12:45:47.570 > 103, 76, 3.16, -98.15, 152.58, 1, 0
+12:45:47.578 > Data Index
+12:45:47.578 > 1
+12:45:47.872 > Curr Drive State
+12:45:47.872 > 2
+12:45:47.872 > Transmit Data To Cloud
+12:45:47.872 > 1
+12:45:47.872 > 114, 66, 0.65, -96.73, 147.86, 1, 0
+12:45:47.872 > Data Index
+12:45:47.872 > 2
+12:45:48.171 > Curr Drive State
+12:45:48.171 > 2
+12:45:48.171 > Transmit Data To Cloud
+12:45:48.171 > 1
+12:45:48.171 > 106, 73, -1.72, -95.11, 143.54, 1, 0
+12:45:48.171 > Data Index
+12:45:48.171 > 3
+12:45:48.397 > wifi connecting
+12:45:48.470 > Curr Drive State
+12:45:48.470 > 2
+12:45:48.470 > Transmit Data To Cloud
+12:45:48.470 > 1
+12:45:48.470 > 103, 76, -3.99, -93.31, 139.77, 1, 0
+12:45:48.478 > Data Index
+12:45:48.478 > 4
+12:45:48.772 > Curr Drive State
+12:45:48.772 > 2
+12:45:48.772 > Transmit Data To Cloud
+12:45:48.772 > 1
+12:45:48.772 > 103, 76, -6.13, -91.38, 136.36, 1, 0
+12:45:48.779 > Data Index
+12:45:48.779 > 5
+12:45:49.069 > Curr Drive State
+12:45:49.069 > 2
+12:45:49.069 > Transmit Data To Cloud
+12:45:49.069 > 1
+12:45:49.069 > 93, 87, -8.14, -89.31, 132.42, 1, 0
+12:45:49.079 > Data Index
+12:45:49.079 > 6
+12:45:49.375 > Curr Drive State
+12:45:49.375 > 2
+12:45:49.375 > Transmit Data To Cloud
+12:45:49.375 > 1
+12:45:49.375 > 114, 66, -10.00, -87.11, 127.83, 1, 0
+12:45:49.380 > Data Index
+12:45:49.380 > 7
+12:45:49.670 > Curr Drive State
+12:45:49.670 > 2
+12:45:49.670 > Transmit Data To Cloud
+12:45:49.670 > 1
+12:45:49.670 > 103, 76, -11.67, -84.77, 123.84, 1, 0
+12:45:49.679 > Data Index
+12:45:49.679 > 8
+12:45:49.970 > Curr Drive State
+12:45:49.970 > 2
+12:45:49.970 > Transmit Data To Cloud
+12:45:49.970 > 1
+12:45:49.970 > 106, 73, -13.20, -82.33, 120.05, 1, 0
+12:45:49.978 > Data Index
+12:45:49.978 > 9
+12:45:50.271 > Curr Drive State
+12:45:50.271 > 2
+12:45:50.271 > Transmit Data To Cloud
+12:45:50.271 > 1
+12:45:50.271 > 106, 73, -14.54, -79.78, 115.45, 1, 0
+12:45:50.279 > Data Index
+12:45:50.279 > 10
+12:45:50.570 > Curr Drive State
+12:45:50.570 > 2
+12:45:50.570 > Transmit Data To Cloud
+12:45:50.570 > 1
+12:45:50.570 > 103, 76, -15.68, -77.15, 111.73, 1, 0
+12:45:50.580 > Data Index
+12:45:50.580 > 11
+12:45:50.873 > Curr Drive State
+12:45:50.873 > 2
+12:45:50.873 > Transmit Data To Cloud
+12:45:50.873 > 1
+12:45:50.873 > 105, 75, -16.66, -74.42, 108.12, 1, 0
+12:45:50.881 > Data Index
+12:45:50.881 > 12
+12:45:51.170 > Curr Drive State
+12:45:51.170 > 2
+12:45:51.170 > Transmit Data To Cloud
+12:45:51.170 > 1
+12:45:51.170 > 105, 75, -17.46, -71.65, 103.78, 1, 0
+12:45:51.178 > Data Index
+12:45:51.178 > 13
+12:45:51.474 > Curr Drive State
+12:45:51.474 > 2
+12:45:51.474 > Transmit Data To Cloud
+12:45:51.474 > 1
+12:45:51.474 > 114, 66, -18.05, -68.84, 100.01, 1, 0
+12:45:51.482 > Data Index
+12:45:51.482 > 14
+12:45:51.772 > Curr Drive State
+12:45:51.772 > 2
+12:45:51.772 > Transmit Data To Cloud
+12:45:51.772 > 1
+12:45:51.772 > 111, 69, -18.44, -65.99, 96.40, 1, 0
+12:45:51.782 > Data Index
+12:45:51.782 > 15
+12:45:52.069 > Curr Drive State
+12:45:52.077 > 2
+12:45:52.077 > Transmit Data To Cloud
+12:45:52.077 > 1
+12:45:52.077 > 108, 72, -18.63, -63.10, 91.69, 1, 0
+12:45:52.079 > Data Index
+12:45:52.079 > 16
+12:45:52.372 > Curr Drive State
+12:45:52.372 > 2
+12:45:52.372 > Transmit Data To Cloud
+12:45:52.372 > 1
+12:45:52.372 > 103, 76, -18.60, -60.22, 87.61, 1, 0
+12:45:52.382 > Data Index
+12:45:52.382 > 17
+12:45:52.416 > wifi connecting
+12:45:52.674 > Curr Drive State
+12:45:52.674 > 2
+12:45:52.674 > Transmit Data To Cloud
+12:45:52.674 > 1
+12:45:52.674 > 106, 73, -18.38, -57.33, 83.40, 1, 0
+12:45:52.682 > Data Index
+12:45:52.682 > 18
+12:45:52.979 > Curr Drive State
+12:45:52.979 > 2
+12:45:52.979 > Transmit Data To Cloud
+12:45:52.979 > 1
+12:45:52.979 > 106, 73, -17.92, -54.49, 78.66, 1, 0
+12:45:52.979 > Data Index
+12:45:52.979 > 19
+12:45:53.278 > Curr Drive State
+12:45:53.279 > 2
+12:45:53.279 > Transmit Data To Cloud
+12:45:53.279 > 1
+12:45:53.279 > 105, 75, -17.25, -51.69, 74.56, 1, 0
+12:45:53.284 > Data Index
+12:45:53.284 > 20
+12:45:53.572 > Curr Drive State
+12:45:53.572 > 2
+12:45:53.572 > Transmit Data To Cloud
+12:45:53.572 > 1
+12:45:53.572 > 103, 76, -16.35, -48.95, 69.51, 1, 0
+12:45:53.580 > Data Index
+12:45:53.580 > 21
+12:45:53.878 > Curr Drive State
+12:45:53.878 > 2
+12:45:53.878 > Transmit Data To Cloud
+12:45:53.878 > 1
+12:45:53.878 > 103, 76, -15.26, -46.30, 65.96, 1, 0
+12:45:53.884 > Data Index
+12:45:53.884 > 22
+12:45:54.178 > Curr Drive State
+12:45:54.179 > 2
+12:45:54.179 > Transmit Data To Cloud
+12:45:54.179 > 1
+12:45:54.179 > 106, 73, -13.99, -43.72, 61.72, 1, 0
+12:45:54.179 > Data Index
+12:45:54.179 > 23
+12:45:54.479 > Curr Drive State
+12:45:54.479 > 2
+12:45:54.479 > Transmit Data To Cloud
+12:45:54.479 > 1
+12:45:54.479 > 105, 75, -12.53, -41.23, 57.72, 1, 0
+12:45:54.482 > Data Index
+12:45:54.482 > 24
+12:45:54.779 > Curr Drive State
+12:45:54.779 > 2
+12:45:54.779 > Transmit Data To Cloud
+12:45:54.779 > 1
+12:45:54.779 > 103, 76, -10.91, -38.85, 53.85, 1, 0
+12:45:54.779 > Data Index
+12:45:54.779 > 25
+12:45:55.079 > Curr Drive State
+12:45:55.079 > 2
+12:45:55.079 > Transmit Data To Cloud
+12:45:55.079 > 1
+12:45:55.079 > 105, 75, -9.10, -36.57, 49.15, 1, 0
+12:45:55.079 > Data Index
+12:45:55.079 > 26
+12:45:55.379 > Curr Drive State
+12:45:55.379 > 2
+12:45:55.379 > Transmit Data To Cloud
+12:45:55.379 > 1
+12:45:55.379 > 99, 81, -7.14, -34.46, 45.26, 1, 0
+12:45:55.379 > Data Index
+12:45:55.379 > 27
+12:45:55.679 > Curr Drive State
+12:45:55.679 > 2
+12:45:55.679 > Transmit Data To Cloud
+12:45:55.679 > 1
+12:45:55.679 > 103, 76, -5.05, -32.47, 42.11, 1, 0
+12:45:55.685 > Data Index
+12:45:55.685 > 28
+12:45:55.979 > Curr Drive State
+12:45:55.979 > 2
+12:45:55.979 > Transmit Data To Cloud
+12:45:55.979 > 1
+12:45:55.979 > 112, 67, -2.86, -30.62, 38.10, 1, 0
+12:45:55.986 > Data Index
+12:45:55.986 > 29
+12:45:56.278 > Curr Drive State
+12:45:56.278 > 2
+12:45:56.278 > Transmit Data To Cloud
+12:45:56.278 > 1
+12:45:56.278 > 103, 76, -0.51, -28.96, 33.14, 1, 0
+12:45:56.278 > Data Index
+12:45:56.278 > 30
+12:45:56.428 > wifi connecting
+12:45:56.579 > Curr Drive State
+12:45:56.579 > 2
+12:45:56.579 > Transmit Data To Cloud
+12:45:56.579 > 1
+12:45:56.579 > 111, 69, 1.96, -27.47, 28.42, 1, 0
+12:45:56.586 > Finished collecting 30 pos points
+12:45:56.586 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:45:56.595 > 3.16,-98.15,152.58,1,0
+12:45:56.595 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:45:56.595 > 0.65,-96.73,147.86,1,0
+12:45:56.611 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:45:56.611 > -1.72,-95.11,143.54,1,0
+12:45:56.613 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:45:56.619 > -3.99,-93.31,139.77,1,0
+12:45:56.619 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:45:56.627 > -6.13,-91.38,136.36,1,0
+12:45:56.627 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:45:56.629 > -8.14,-89.31,132.42,1,0
+12:45:56.629 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:45:56.636 > -10.00,-87.11,127.83,1,0
+12:45:56.644 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:45:56.644 > -11.67,-84.77,123.84,1,0
+12:45:56.645 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:45:56.652 > -13.20,-82.33,120.05,1,0
+12:45:56.652 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:45:56.660 > -14.54,-79.78,115.45,1,0
+12:45:56.661 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:45:56.668 > -15.68,-77.15,111.73,1,0
+12:45:56.668 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:45:56.679 > -16.66,-74.42,108.12,1,0
+12:45:56.679 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:45:56.685 > -17.46,-71.65,103.78,1,0
+12:45:56.685 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:45:56.690 > -18.05,-68.84,100.01,1,0
+12:45:56.690 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:45:56.696 > -18.44,-65.99,96.40,1,0
+12:45:56.702 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:45:56.702 > -18.63,-63.10,91.69,1,0
+12:45:56.702 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:45:56.712 > -18.60,-60.22,87.61,1,0
+12:45:56.718 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:45:56.718 > -18.38,-57.33,83.40,1,0
+12:45:56.726 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:45:56.731 > -17.92,-54.49,78.66,1,0
+12:45:56.731 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:45:56.737 > -17.25,-51.69,74.56,1,0
+12:45:56.737 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:45:56.738 > -16.35,-48.95,69.51,1,0
+12:45:56.738 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:45:56.746 > -15.26,-46.30,65.96,1,0
+12:45:56.754 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:45:56.754 > -13.99,-43.72,61.72,1,0
+12:45:56.754 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:45:56.762 > -12.53,-41.23,57.72,1,0
+12:45:56.762 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:45:56.770 > -10.91,-38.85,53.85,1,0
+12:45:56.778 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:45:56.778 > -9.10,-36.57,49.15,1,0
+12:45:56.780 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:45:56.786 > -7.14,-34.46,45.26,1,0
+12:45:56.786 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:45:56.794 > -5.05,-32.47,42.11,1,0
+12:45:56.794 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:45:56.794 > -2.86,-30.62,38.10,1,0
+12:45:56.794 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:45:56.802 > -0.51,-28.96,33.14,1,0
+12:45:57.096 > Curr Drive State
+12:45:57.096 > 2
+12:45:57.096 > Transmit Data To Cloud
+12:45:57.096 > 1
+12:45:57.096 > 109, 70, 6.59, -25.60, 17.10, 1, 0
+12:45:57.104 > Data Index
+12:45:57.104 > 1
+12:45:57.396 > Curr Drive State
+12:45:57.396 > 2
+12:45:57.396 > Transmit Data To Cloud
+12:45:57.396 > 1
+12:45:57.396 > 106, 73, 9.36, -24.85, 13.00, 1, 0
+12:45:57.405 > Data Index
+12:45:57.405 > 2
+12:45:57.703 > Curr Drive State
+12:45:57.703 > 2
+12:45:57.703 > Transmit Data To Cloud
+12:45:57.703 > 1
+12:45:57.703 > 103, 76, 12.19, -24.30, 9.94, 1, 0
+12:45:57.708 > Data Index
+12:45:57.708 > 3
+12:45:57.996 > Curr Drive State
+12:45:57.996 > 2
+12:45:57.996 > Transmit Data To Cloud
+12:45:57.996 > 1
+12:45:57.996 > 103, 76, 15.04, -23.89, 6.40, 1, 0
+12:45:58.004 > Data Index
+12:45:58.004 > 4
+12:45:58.296 > Curr Drive State
+12:45:58.304 > 2
+12:45:58.304 > Transmit Data To Cloud
+12:45:58.304 > 1
+12:45:58.304 > 108, 72, 17.91, -23.67, 2.32, 1, 0
+12:45:58.304 > Data Index
+12:45:58.304 > 5
+12:45:58.594 > Curr Drive State
+12:45:58.603 > 2
+12:45:58.603 > Transmit Data To Cloud
+12:45:58.603 > 1
+12:45:58.603 > 103, 76, 20.77, -23.67, 358.11, 1, 0
+12:45:58.603 > Data Index
+12:45:58.603 > 6
+12:45:58.904 > Curr Drive State
+12:45:58.904 > 2
+12:45:58.904 > Transmit Data To Cloud
+12:45:58.904 > 1
+12:45:58.904 > 103, 76, 23.66, -23.86, 354.54, 1, 0
+12:45:58.904 > Data Index
+12:45:58.904 > 7
+12:45:59.197 > Curr Drive State
+12:45:59.205 > 2
+12:45:59.205 > Transmit Data To Cloud
+12:45:59.205 > 1
+12:45:59.205 > 105, 75, 26.51, -24.23, 350.80, 1, 0
+12:45:59.205 > Data Index
+12:45:59.205 > 8
+12:45:59.502 > Curr Drive State
+12:45:59.502 > 2
+12:45:59.502 > Transmit Data To Cloud
+12:45:59.502 > 1
+12:45:59.502 > 76, 103, 29.34, -24.80, 347.10, 1, 0
+12:45:59.502 > Data Index
+12:45:59.502 > 9
+12:45:59.803 > Curr Drive State
+12:45:59.803 > 2
+12:45:59.803 > Transmit Data To Cloud
+12:45:59.803 > 1
+12:45:59.803 > 115, 64, 32.14, -25.48, 344.19, 1, 0
+12:45:59.803 > Data Index
+12:45:59.803 > 10
+12:46:00.103 > Curr Drive State
+12:46:00.103 > 2
+12:46:00.103 > Transmit Data To Cloud
+12:46:00.103 > 1
+12:46:00.103 > 103, 76, 34.86, -26.41, 339.01, 1, 0
+12:46:00.103 > Data Index
+12:46:00.103 > 11
+12:46:00.404 > Curr Drive State
+12:46:00.404 > 2
+12:46:00.404 > Transmit Data To Cloud
+12:46:00.404 > 1
+12:46:00.404 > 108, 72, 37.51, -27.53, 334.97, 1, 0
+12:46:00.404 > Data Index
+12:46:00.404 > 12
+12:46:00.436 > wifi connecting
+12:46:00.700 > Curr Drive State
+12:46:00.700 > 2
+12:46:00.700 > Transmit Data To Cloud
+12:46:00.700 > 1
+12:46:00.700 > 58, 121, 40.06, -28.86, 330.64, 1, 0
+12:46:00.707 > Data Index
+12:46:00.707 > 13
+12:46:00.997 > Curr Drive State
+12:46:01.004 > 2
+12:46:01.004 > Transmit Data To Cloud
+12:46:01.004 > 1
+12:46:01.004 > 58, 121, 42.64, -30.12, 335.03, 1, 0
+12:46:01.004 > Data Index
+12:46:01.004 > 14
+12:46:01.300 > Curr Drive State
+12:46:01.300 > 2
+12:46:01.300 > Transmit Data To Cloud
+12:46:01.300 > 1
+12:46:01.300 > 60, 120, 45.32, -31.17, 339.28, 1, 0
+12:46:01.308 > Data Index
+12:46:01.308 > 15
+12:46:01.602 > Curr Drive State
+12:46:01.602 > 2
+12:46:01.602 > Transmit Data To Cloud
+12:46:01.602 > 1
+12:46:01.602 > 60, 120, 48.07, -32.04, 343.41, 1, 0
+12:46:01.608 > Data Index
+12:46:01.608 > 16
+12:46:01.902 > Curr Drive State
+12:46:01.902 > 2
+12:46:01.902 > Transmit Data To Cloud
+12:46:01.902 > 1
+12:46:01.902 > 105, 75, 50.88, -32.69, 347.51, 1, 0
+12:46:01.902 > Data Index
+12:46:01.902 > 17
+12:46:02.203 > Curr Drive State
+12:46:02.203 > 2
+12:46:02.203 > Transmit Data To Cloud
+12:46:02.203 > 1
+12:46:02.203 > 58, 121, 53.73, -33.13, 355.27, 1, 0
+12:46:02.206 > Data Index
+12:46:02.206 > 18
+12:46:02.497 > Curr Drive State
+12:46:02.497 > 2
+12:46:02.497 > Transmit Data To Cloud
+12:46:02.497 > 1
+12:46:02.497 > 60, 120, 56.61, -33.15, 3.30, 1, 0
+12:46:02.505 > Data Index
+12:46:02.505 > 19
+12:46:02.803 > Curr Drive State
+12:46:02.803 > 2
+12:46:02.803 > Transmit Data To Cloud
+12:46:02.803 > 1
+12:46:02.803 > 60, 120, 59.48, -32.77, 11.45, 1, 0
+12:46:02.805 > Data Index
+12:46:02.805 > 20
+12:46:03.095 > Curr Drive State
+12:46:03.103 > 2
+12:46:03.103 > Transmit Data To Cloud
+12:46:03.103 > 1
+12:46:03.103 > 97, 82, 62.25, -32.02, 16.70, 1, 0
+12:46:03.103 > Data Index
+12:46:03.103 > 21
+12:46:03.399 > Curr Drive State
+12:46:03.399 > 2
+12:46:03.399 > Transmit Data To Cloud
+12:46:03.399 > 1
+12:46:03.399 > 60, 120, 64.97, -31.06, 23.06, 1, 0
+12:46:03.407 > Data Index
+12:46:03.407 > 22
+12:46:03.703 > Curr Drive State
+12:46:03.703 > 2
+12:46:03.703 > Transmit Data To Cloud
+12:46:03.703 > 1
+12:46:03.703 > 61, 118, 67.53, -29.75, 30.73, 1, 0
+12:46:03.703 > Data Index
+12:46:03.703 > 23
+12:46:03.997 > Curr Drive State
+12:46:03.997 > 2
+12:46:03.997 > Transmit Data To Cloud
+12:46:03.997 > 1
+12:46:03.997 > 60, 120, 69.90, -28.10, 38.56, 1, 0
+12:46:04.006 > Data Index
+12:46:04.006 > 24
+12:46:04.296 > Curr Drive State
+12:46:04.296 > 2
+12:46:04.296 > Transmit Data To Cloud
+12:46:04.296 > 1
+12:46:04.296 > 100, 79, 72.03, -26.16, 44.61, 1, 0
+12:46:04.304 > Data Index
+12:46:04.304 > 25
+12:46:04.442 > Connected to WiFi
+12:46:04.442 > I was disconnected
+12:46:04.603 > Curr Drive State
+12:46:04.603 > 2
+12:46:04.603 > Transmit Data To Cloud
+12:46:04.603 > 1
+12:46:04.603 > 61, 118, 74.01, -24.07, 49.71, 1, 0
+12:46:04.603 > Data Index
+12:46:04.603 > 26
+12:46:04.903 > Curr Drive State
+12:46:04.903 > 2
+12:46:04.903 > Transmit Data To Cloud
+12:46:04.903 > 1
+12:46:04.903 > 103, 76, 75.71, -21.75, 56.01, 1, 0
+12:46:04.903 > Data Index
+12:46:04.903 > 27
+12:46:05.143 > connecting to MQTT
+12:46:05.198 > Curr Drive State
+12:46:05.198 > 2
+12:46:05.198 > Transmit Data To Cloud
+12:46:05.198 > 1
+12:46:05.198 > 103, 76, 77.25, -19.31, 60.24, 1, 0
+12:46:05.204 > Data Index
+12:46:05.204 > 28
+12:46:05.395 > MQTT Connected
+12:46:05.503 > Curr Drive State
+12:46:05.503 > 2
+12:46:05.503 > Transmit Data To Cloud
+12:46:05.503 > 1
+12:46:05.503 > 75, 105, 78.63, -16.79, 64.39, 1, 0
+12:46:05.503 > Data Index
+12:46:05.503 > 29
+12:46:05.803 > Curr Drive State
+12:46:05.803 > 2
+12:46:05.803 > Transmit Data To Cloud
+12:46:05.803 > 1
+12:46:05.803 > 114, 66, 79.74, -14.13, 69.86, 1, 0
+12:46:05.806 > Data Index
+12:46:05.806 > 30
+12:46:06.096 > Curr Drive State
+12:46:06.096 > 2
+12:46:06.096 > Transmit Data To Cloud
+12:46:06.096 > 1
+12:46:06.096 > 102, 78, 80.72, -11.42, 72.66, 1, 0
+12:46:06.105 > Finished collecting 30 pos points
+12:46:06.105 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:46:06.113 > 6.59,-25.60,17.10,1,0
+12:46:06.113 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:46:06.113 > 9.36,-24.85,13.00,1,0
+12:46:06.121 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:46:06.129 > 12.19,-24.30,9.94,1,0
+12:46:06.129 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:46:06.137 > 15.04,-23.89,6.40,1,0
+12:46:06.137 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:46:06.137 > 17.91,-23.67,2.32,1,0
+12:46:06.137 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:46:06.145 > 20.77,-23.67,358.11,1,0
+12:46:06.153 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:46:06.153 > 23.66,-23.86,354.54,1,0
+12:46:06.161 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:46:06.161 > 26.51,-24.23,350.80,1,0
+12:46:06.161 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:46:06.169 > 29.34,-24.80,347.10,1,0
+12:46:06.169 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:46:06.178 > 32.14,-25.48,344.19,1,0
+12:46:06.178 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:46:06.178 > 34.86,-26.41,339.01,1,0
+12:46:06.185 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:46:06.185 > 37.51,-27.53,334.97,1,0
+12:46:06.195 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:46:06.201 > 40.06,-28.86,330.64,1,0
+12:46:06.201 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:46:06.206 > 42.64,-30.12,335.03,1,0
+12:46:06.214 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:46:06.214 > 45.32,-31.17,339.28,1,0
+12:46:06.214 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:46:06.222 > 48.07,-32.04,343.41,1,0
+12:46:06.222 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:46:06.230 > 50.88,-32.69,347.51,1,0
+12:46:06.230 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:46:06.230 > 53.73,-33.13,355.27,1,0
+12:46:06.230 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:46:06.238 > 56.61,-33.15,3.30,1,0
+12:46:06.246 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:46:06.246 > 59.48,-32.77,11.45,1,0
+12:46:06.254 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:46:06.254 > 62.25,-32.02,16.70,1,0
+12:46:06.254 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:46:06.262 > 64.97,-31.06,23.06,1,0
+12:46:06.270 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:46:06.270 > 67.53,-29.75,30.73,1,0
+12:46:06.278 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:46:06.278 > 69.90,-28.10,38.56,1,0
+12:46:06.278 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:46:06.288 > 72.03,-26.16,44.61,1,0
+12:46:06.288 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:46:06.292 > 74.01,-24.07,49.71,1,0
+12:46:06.292 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:46:06.295 > 75.71,-21.75,56.01,1,0
+12:46:06.305 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:46:06.305 > 77.25,-19.31,60.24,1,0
+12:46:06.311 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:46:06.311 > 78.63,-16.79,64.39,1,0
+12:46:06.311 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:46:06.320 > 79.74,-14.13,69.86,1,0
+12:46:06.606 > Curr Drive State
+12:46:06.614 > 2
+12:46:06.614 > Transmit Data To Cloud
+12:46:06.614 > 1
+12:46:06.614 > 60, 120, 82.06, -6.69, 76.12, 1, 0
+12:46:06.614 > Data Index
+12:46:06.614 > 1
+12:46:06.912 > Curr Drive State
+12:46:06.912 > 2
+12:46:06.912 > Transmit Data To Cloud
+12:46:06.912 > 1
+12:46:06.912 > 60, 120, 82.65, -3.87, 79.85, 1, 0
+12:46:06.919 > Data Index
+12:46:06.919 > 2
+12:46:07.207 > Curr Drive State
+12:46:07.215 > 2
+12:46:07.215 > Transmit Data To Cloud
+12:46:07.215 > 1
+12:46:07.215 > 60, 120, 83.04, -1.01, 84.01, 1, 0
+12:46:07.215 > Data Index
+12:46:07.215 > 3
+12:46:07.512 > Curr Drive State
+12:46:07.512 > 2
+12:46:07.512 > Transmit Data To Cloud
+12:46:07.512 > 1
+12:46:07.512 > 105, 75, 83.26, 1.87, 84.23, 1, 0
+12:46:07.519 > Data Index
+12:46:07.519 > 4
+12:46:07.813 > Curr Drive State
+12:46:07.813 > 2
+12:46:07.813 > Transmit Data To Cloud
+12:46:07.813 > 1
+12:46:07.813 > 91, 88, 83.50, 4.73, 85.09, 1, 0
+12:46:07.813 > Data Index
+12:46:07.813 > 5
+12:46:08.114 > Curr Drive State
+12:46:08.114 > 2
+12:46:08.114 > Transmit Data To Cloud
+12:46:08.114 > 1
+12:46:08.114 > 54, 126, 83.65, 7.62, 88.81, 1, 0
+12:46:08.117 > Data Index
+12:46:08.117 > 6
+12:46:08.415 > Curr Drive State
+12:46:08.415 > 2
+12:46:08.415 > Transmit Data To Cloud
+12:46:08.415 > 1
+12:46:08.415 > 61, 118, 83.61, 10.50, 91.35, 1, 0
+12:46:08.419 > Data Index
+12:46:08.419 > 7
+12:46:08.713 > Curr Drive State
+12:46:08.713 > 2
+12:46:08.713 > Transmit Data To Cloud
+12:46:08.713 > 1
+12:46:08.713 > 60, 120, 83.42, 13.37, 94.74, 1, 0
+12:46:08.713 > Data Index
+12:46:08.713 > 8
+12:46:09.012 > Curr Drive State
+12:46:09.012 > 2
+12:46:09.012 > Transmit Data To Cloud
+12:46:09.012 > 1
+12:46:09.012 > 61, 118, 83.05, 16.22, 98.55, 1, 0
+12:46:09.020 > Data Index
+12:46:09.020 > 9
+12:46:09.312 > Curr Drive State
+12:46:09.312 > 2
+12:46:09.312 > Transmit Data To Cloud
+12:46:09.312 > 1
+12:46:09.312 > 60, 120, 82.48, 19.05, 102.47, 1, 0
+12:46:09.320 > Data Index
+12:46:09.320 > 10
+12:46:09.613 > Curr Drive State
+12:46:09.613 > 2
+12:46:09.613 > Transmit Data To Cloud
+12:46:09.613 > 1
+12:46:09.613 > 108, 72, 81.73, 21.83, 104.53, 1, 0
+12:46:09.613 > Data Index
+12:46:09.613 > 11
+12:46:09.915 > Curr Drive State
+12:46:09.915 > 2
+12:46:09.915 > Transmit Data To Cloud
+12:46:09.915 > 1
+12:46:09.915 > 60, 120, 80.93, 24.61, 109.39, 1, 0
+12:46:09.919 > Data Index
+12:46:09.919 > 12
+12:46:10.212 > Curr Drive State
+12:46:10.212 > 2
+12:46:10.212 > Transmit Data To Cloud
+12:46:10.212 > 1
+12:46:10.212 > 60, 120, 79.83, 27.27, 113.39, 1, 0
+12:46:10.220 > Data Index
+12:46:10.220 > 13
+12:46:10.515 > Curr Drive State
+12:46:10.515 > 2
+12:46:10.515 > Transmit Data To Cloud
+12:46:10.515 > 1
+12:46:10.515 > 63, 117, 78.55, 29.85, 117.22, 1, 0
+12:46:10.519 > Data Index
+12:46:10.519 > 14
+12:46:10.815 > Curr Drive State
+12:46:10.815 > 2
+12:46:10.815 > Transmit Data To Cloud
+12:46:10.815 > 1
+12:46:10.815 > 61, 118, 77.10, 32.34, 120.43, 1, 0
+12:46:10.819 > Data Index
+12:46:10.819 > 15
+12:46:11.113 > Curr Drive State
+12:46:11.113 > 2
+12:46:11.113 > Transmit Data To Cloud
+12:46:11.113 > 1
+12:46:11.113 > 60, 120, 75.50, 34.74, 124.44, 1, 0
+12:46:11.113 > Data Index
+12:46:11.113 > 16
+12:46:11.414 > Curr Drive State
+12:46:11.414 > 2
+12:46:11.414 > Transmit Data To Cloud
+12:46:11.414 > 1
+12:46:11.414 > 105, 75, 73.73, 37.02, 128.67, 1, 0
+12:46:11.414 > Data Index
+12:46:11.414 > 17
+12:46:11.711 > Curr Drive State
+12:46:11.711 > 2
+12:46:11.711 > Transmit Data To Cloud
+12:46:11.711 > 1
+12:46:11.711 > 105, 75, 71.81, 39.16, 132.63, 1, 0
+12:46:11.719 > Data Index
+12:46:11.719 > 18
+12:46:12.013 > Curr Drive State
+12:46:12.013 > 2
+12:46:12.013 > Transmit Data To Cloud
+12:46:12.013 > 1
+12:46:12.013 > 105, 75, 69.75, 41.19, 136.45, 1, 0
+12:46:12.021 > Data Index
+12:46:12.021 > 19
+12:46:12.314 > Curr Drive State
+12:46:12.314 > 2
+12:46:12.314 > Transmit Data To Cloud
+12:46:12.314 > 1
+12:46:12.314 > 102, 78, 67.55, 43.06, 140.75, 1, 0
+12:46:12.322 > Data Index
+12:46:12.322 > 20
+12:46:12.611 > Curr Drive State
+12:46:12.611 > 2
+12:46:12.611 > Transmit Data To Cloud
+12:46:12.611 > 1
+12:46:12.611 > 103, 76, 65.25, 44.77, 144.85, 1, 0
+12:46:12.620 > Data Index
+12:46:12.620 > 21
+12:46:12.915 > Curr Drive State
+12:46:12.916 > 2
+12:46:12.916 > Transmit Data To Cloud
+12:46:12.916 > 1
+12:46:12.916 > 105, 75, 62.82, 46.32, 148.72, 1, 0
+12:46:12.919 > Data Index
+12:46:12.919 > 22
+12:46:13.213 > Curr Drive State
+12:46:13.213 > 2
+12:46:13.213 > Transmit Data To Cloud
+12:46:13.213 > 1
+12:46:13.213 > 102, 78, 60.29, 47.72, 152.84, 1, 0
+12:46:13.221 > Data Index
+12:46:13.221 > 23
+12:46:13.515 > Curr Drive State
+12:46:13.515 > 2
+12:46:13.515 > Transmit Data To Cloud
+12:46:13.515 > 1
+12:46:13.515 > 103, 76, 57.68, 48.91, 157.39, 1, 0
+12:46:13.519 > Data Index
+12:46:13.519 > 24
+12:46:13.812 > Curr Drive State
+12:46:13.812 > 2
+12:46:13.812 > Transmit Data To Cloud
+12:46:13.812 > 1
+12:46:13.812 > 103, 76, 54.98, 49.92, 161.35, 1, 0
+12:46:13.820 > Data Index
+12:46:13.820 > 25
+12:46:14.109 > Curr Drive State
+12:46:14.109 > 2
+12:46:14.109 > Transmit Data To Cloud
+12:46:14.109 > 1
+12:46:14.109 > 103, 76, 52.23, 50.76, 164.64, 1, 0
+12:46:14.117 > Data Index
+12:46:14.117 > 26
+12:46:14.411 > Curr Drive State
+12:46:14.411 > 2
+12:46:14.411 > Transmit Data To Cloud
+12:46:14.411 > 1
+12:46:14.411 > 102, 78, 49.42, 51.44, 168.91, 1, 0
+12:46:14.419 > Data Index
+12:46:14.419 > 27
+12:46:14.715 > Curr Drive State
+12:46:14.715 > 2
+12:46:14.715 > Transmit Data To Cloud
+12:46:14.715 > 1
+12:46:14.715 > 102, 78, 46.58, 51.90, 173.39, 1, 0
+12:46:14.720 > Data Index
+12:46:14.720 > 28
+12:46:15.011 > Curr Drive State
+12:46:15.011 > 2
+12:46:15.011 > Transmit Data To Cloud
+12:46:15.011 > 1
+12:46:15.011 > 103, 76, 43.73, 52.31, 172.35, 1, 0
+12:46:15.019 > Data Index
+12:46:15.019 > 29
+12:46:15.314 > Curr Drive State
+12:46:15.314 > 2
+12:46:15.314 > Transmit Data To Cloud
+12:46:15.314 > 1
+12:46:15.314 > 100, 79, 40.87, 52.62, 176.63, 1, 0
+12:46:15.314 > Data Index
+12:46:15.314 > 30
+12:46:15.614 > Curr Drive State
+12:46:15.614 > 2
+12:46:15.614 > Transmit Data To Cloud
+12:46:15.614 > 1
+12:46:15.614 > 103, 76, 38.00, 52.82, 177.72, 1, 0
+12:46:15.619 > Finished collecting 30 pos points
+12:46:15.619 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:46:15.619 > 82.06,-6.69,76.12,1,0
+12:46:15.630 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:46:15.630 > 82.65,-3.87,79.85,1,0
+12:46:15.636 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:46:15.642 > 83.04,-1.01,84.01,1,0
+12:46:15.642 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:46:15.646 > 83.26,1.87,84.23,1,0
+12:46:15.646 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:46:15.652 > 83.50,4.73,85.09,1,0
+12:46:15.652 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:46:15.652 > 83.65,7.62,88.81,1,0
+12:46:15.652 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:46:15.665 > 83.61,10.50,91.35,1,0
+12:46:15.668 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:46:15.668 > 83.42,13.37,94.74,1,0
+12:46:15.668 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:46:15.680 > 83.05,16.22,98.55,1,0
+12:46:15.680 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:46:15.686 > 82.48,19.05,102.47,1,0
+12:46:15.694 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:46:15.694 > 81.73,21.83,104.53,1,0
+12:46:15.700 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:46:15.701 > 80.93,24.61,109.39,1,0
+12:46:15.701 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:46:15.709 > 79.83,27.27,113.39,1,0
+12:46:15.709 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:46:15.709 > 78.55,29.85,117.22,1,0
+12:46:15.709 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:46:15.717 > 77.10,32.34,120.43,1,0
+12:46:15.725 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:46:15.725 > 75.50,34.74,124.44,1,0
+12:46:15.733 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:46:15.736 > 73.73,37.02,128.67,1,0
+12:46:15.736 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:46:15.741 > 71.81,39.16,132.63,1,0
+12:46:15.741 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:46:15.749 > 69.75,41.19,136.45,1,0
+12:46:15.757 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:46:15.757 > 67.55,43.06,140.75,1,0
+12:46:15.757 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:46:15.765 > 65.25,44.77,144.85,1,0
+12:46:15.765 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:46:15.773 > 62.82,46.32,148.72,1,0
+12:46:15.773 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:46:15.773 > 60.29,47.72,152.84,1,0
+12:46:15.773 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:46:15.781 > 57.68,48.91,157.39,1,0
+12:46:15.792 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:46:15.792 > 54.98,49.92,161.35,1,0
+12:46:15.792 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:46:15.797 > 52.23,50.76,164.64,1,0
+12:46:15.797 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:46:15.806 > 49.42,51.44,168.91,1,0
+12:46:15.806 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:46:15.813 > 46.58,51.90,173.39,1,0
+12:46:15.822 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:46:15.822 > 43.73,52.31,172.35,1,0
+12:46:15.822 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:46:15.829 > 40.87,52.62,176.63,1,0
+12:46:16.125 > Curr Drive State
+12:46:16.125 > 2
+12:46:16.125 > Transmit Data To Cloud
+12:46:16.125 > 1
+12:46:16.125 > 103, 76, 33.10, 53.25, 171.67, 1, 0
+12:46:16.133 > Data Index
+12:46:16.133 > 1
+12:46:16.426 > Curr Drive State
+12:46:16.426 > 2
+12:46:16.426 > Transmit Data To Cloud
+12:46:16.426 > 1
+12:46:16.426 > 61, 118, 30.23, 53.56, 175.64, 1, 0
+12:46:16.434 > Data Index
+12:46:16.434 > 2
+12:46:16.728 > Curr Drive State
+12:46:16.728 > 2
+12:46:16.728 > Transmit Data To Cloud
+12:46:16.728 > 1
+12:46:16.728 > 60, 120, 27.35, 53.67, 179.34, 1, 0
+12:46:16.728 > Data Index
+12:46:16.728 > 3
+12:46:17.023 > Curr Drive State
+12:46:17.023 > 2
+12:46:17.023 > Transmit Data To Cloud
+12:46:17.023 > 1
+12:46:17.023 > 54, 126, 24.47, 53.57, 183.71, 1, 0
+12:46:17.030 > Data Index
+12:46:17.030 > 4
+12:46:17.324 > Curr Drive State
+12:46:17.324 > 2
+12:46:17.324 > Transmit Data To Cloud
+12:46:17.324 > 1
+12:46:17.324 > 60, 120, 21.61, 53.25, 187.87, 1, 0
+12:46:17.332 > Data Index
+12:46:17.332 > 5
+12:46:17.628 > Curr Drive State
+12:46:17.629 > 2
+12:46:17.629 > Transmit Data To Cloud
+12:46:17.629 > 1
+12:46:17.629 > 61, 118, 18.77, 52.73, 191.65, 1, 0
+12:46:17.629 > Data Index
+12:46:17.629 > 6
+12:46:17.927 > Curr Drive State
+12:46:17.929 > 2
+12:46:17.929 > Transmit Data To Cloud
+12:46:17.929 > 1
+12:46:17.929 > 58, 121, 15.98, 52.02, 195.66, 1, 0
+12:46:17.934 > Data Index
+12:46:17.934 > 7
+12:46:18.229 > Curr Drive State
+12:46:18.229 > 2
+12:46:18.229 > Transmit Data To Cloud
+12:46:18.229 > 1
+12:46:18.229 > 57, 123, 13.25, 51.10, 199.98, 1, 0
+12:46:18.229 > Data Index
+12:46:18.229 > 8
+12:46:18.528 > Curr Drive State
+12:46:18.528 > 2
+12:46:18.528 > Transmit Data To Cloud
+12:46:18.528 > 1
+12:46:18.528 > 63, 117, 10.61, 49.98, 204.15, 1, 0
+12:46:18.528 > Data Index
+12:46:18.528 > 9
+12:46:18.825 > Curr Drive State
+12:46:18.830 > 2
+12:46:18.830 > Transmit Data To Cloud
+12:46:18.830 > 1
+12:46:18.830 > 93, 87, 8.01, 48.68, 206.57, 1, 0
+12:46:18.830 > Data Index
+12:46:18.830 > 10
+12:46:19.129 > Curr Drive State
+12:46:19.129 > 2
+12:46:19.129 > Transmit Data To Cloud
+12:46:19.129 > 1
+12:46:19.129 > 103, 76, 5.46, 47.33, 207.91, 1, 0
+12:46:19.135 > Data Index
+12:46:19.135 > 11
+12:46:19.429 > Curr Drive State
+12:46:19.429 > 2
+12:46:19.429 > Transmit Data To Cloud
+12:46:19.429 > 1
+12:46:19.429 > 60, 120, 2.94, 45.94, 210.10, 1, 0
+12:46:19.435 > Data Index
+12:46:19.435 > 12
+12:46:19.728 > Curr Drive State
+12:46:19.728 > 2
+12:46:19.728 > Transmit Data To Cloud
+12:46:19.728 > 1
+12:46:19.728 > 61, 118, 0.54, 44.34, 216.49, 1, 0
+12:46:19.736 > Data Index
+12:46:19.736 > 13
+12:46:20.030 > Curr Drive State
+12:46:20.030 > 2
+12:46:20.030 > Transmit Data To Cloud
+12:46:20.030 > 1
+12:46:20.030 > 57, 123, -1.68, 42.49, 222.42, 1, 0
+12:46:20.030 > Data Index
+12:46:20.030 > 14
+12:46:20.323 > Curr Drive State
+12:46:20.323 > 2
+12:46:20.323 > Transmit Data To Cloud
+12:46:20.323 > 1
+12:46:20.323 > 60, 120, -3.65, 40.40, 230.67, 1, 0
+12:46:20.331 > Data Index
+12:46:20.331 > 15
+12:46:20.628 > Curr Drive State
+12:46:20.628 > 2
+12:46:20.628 > Transmit Data To Cloud
+12:46:20.628 > 1
+12:46:20.628 > 67, 112, -5.35, 38.07, 234.40, 1, 0
+12:46:20.631 > Data Index
+12:46:20.631 > 16
+12:46:20.929 > Curr Drive State
+12:46:20.929 > 2
+12:46:20.929 > Transmit Data To Cloud
+12:46:20.929 > 1
+12:46:20.929 > 60, 120, -6.98, 35.67, 237.34, 1, 0
+12:46:20.929 > Data Index
+12:46:20.929 > 17
+12:46:21.227 > Curr Drive State
+12:46:21.227 > 2
+12:46:21.227 > Transmit Data To Cloud
+12:46:21.227 > 1
+12:46:21.227 > 94, 85, -8.36, 33.15, 243.04, 1, 0
+12:46:21.235 > Data Index
+12:46:21.235 > 18
+12:46:21.525 > Curr Drive State
+12:46:21.525 > 2
+12:46:21.525 > Transmit Data To Cloud
+12:46:21.525 > 1
+12:46:21.525 > 105, 75, -9.50, 30.50, 247.92, 1, 0
+12:46:21.532 > Data Index
+12:46:21.532 > 19
+12:46:21.830 > Curr Drive State
+12:46:21.830 > 2
+12:46:21.830 > Transmit Data To Cloud
+12:46:21.830 > 1
+12:46:21.830 > 103, 76, -10.47, 27.79, 251.18, 1, 0
+12:46:21.830 > Data Index
+12:46:21.830 > 20
+12:46:22.127 > Curr Drive State
+12:46:22.127 > 2
+12:46:22.127 > Transmit Data To Cloud
+12:46:22.127 > 1
+12:46:22.127 > 60, 120, -11.28, 25.03, 257.21, 1, 0
+12:46:22.135 > Data Index
+12:46:22.135 > 21
+12:46:22.424 > Curr Drive State
+12:46:22.424 > 2
+12:46:22.424 > Transmit Data To Cloud
+12:46:22.424 > 1
+12:46:22.424 > 60, 120, -11.67, 22.17, 266.57, 1, 0
+12:46:22.432 > Data Index
+12:46:22.432 > 22
+12:46:22.731 > Curr Drive State
+12:46:22.731 > 2
+12:46:22.731 > Transmit Data To Cloud
+12:46:22.731 > 1
+12:46:22.731 > 69, 111, -11.66, 19.30, 273.17, 1, 0
+12:46:22.734 > Data Index
+12:46:22.734 > 23
+12:46:23.023 > Curr Drive State
+12:46:23.031 > 2
+12:46:23.031 > Transmit Data To Cloud
+12:46:23.031 > 1
+12:46:23.031 > 61, 118, -11.35, 16.44, 279.31, 1, 0
+12:46:23.031 > Data Index
+12:46:23.031 > 24
+12:46:23.327 > Curr Drive State
+12:46:23.327 > 2
+12:46:23.327 > Transmit Data To Cloud
+12:46:23.327 > 1
+12:46:23.327 > 55, 124, -10.66, 13.65, 288.13, 1, 0
+12:46:23.335 > Data Index
+12:46:23.335 > 25
+12:46:23.625 > Curr Drive State
+12:46:23.625 > 2
+12:46:23.625 > Transmit Data To Cloud
+12:46:23.625 > 1
+12:46:23.625 > 103, 76, -9.61, 10.98, 293.15, 1, 0
+12:46:23.633 > Data Index
+12:46:23.633 > 26
+12:46:23.929 > Curr Drive State
+12:46:23.929 > 2
+12:46:23.929 > Transmit Data To Cloud
+12:46:23.929 > 1
+12:46:23.929 > 100, 79, -8.44, 8.35, 295.59, 1, 0
+12:46:23.929 > Data Index
+12:46:23.929 > 27
+12:46:24.224 > Curr Drive State
+12:46:24.232 > 2
+12:46:24.232 > Transmit Data To Cloud
+12:46:24.232 > 1
+12:46:24.232 > 93, 87, -7.10, 5.80, 300.94, 1, 0
+12:46:24.232 > Data Index
+12:46:24.232 > 28
+12:46:24.530 > Curr Drive State
+12:46:24.530 > 2
+12:46:24.530 > Transmit Data To Cloud
+12:46:24.530 > 1
+12:46:24.530 > 94, 85, -5.51, 3.40, 306.41, 1, 0
+12:46:24.530 > Data Index
+12:46:24.530 > 29
+12:46:24.826 > Curr Drive State
+12:46:24.826 > 2
+12:46:24.826 > Transmit Data To Cloud
+12:46:24.826 > 1
+12:46:24.826 > 94, 85, -3.75, 1.13, 310.32, 1, 0
+12:46:24.834 > Data Index
+12:46:24.834 > 30
+12:46:25.128 > Curr Drive State
+12:46:25.128 > 2
+12:46:25.128 > Transmit Data To Cloud
+12:46:25.128 > 1
+12:46:25.128 > 100, 79, -1.92, -1.10, 308.40, 1, 0
+12:46:25.136 > Finished collecting 30 pos points
+12:46:25.136 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:46:25.144 > 33.10,53.25,171.67,1,0
+12:46:25.144 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:46:25.144 > 30.23,53.56,175.64,1,0
+12:46:25.152 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:46:25.160 > 27.35,53.67,179.34,1,0
+12:46:25.160 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:46:25.165 > 24.47,53.57,183.71,1,0
+12:46:25.165 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:46:25.168 > 21.61,53.25,187.87,1,0
+12:46:25.178 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:46:25.178 > 18.77,52.73,191.65,1,0
+12:46:25.185 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:46:25.185 > 15.98,52.02,195.66,1,0
+12:46:25.185 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:46:25.195 > 13.25,51.10,199.98,1,0
+12:46:25.195 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:46:25.201 > 10.61,49.98,204.15,1,0
+12:46:25.201 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:46:25.201 > 8.01,48.68,206.57,1,0
+12:46:25.201 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:46:25.213 > 5.46,47.33,207.91,1,0
+12:46:25.218 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:46:25.218 > 2.94,45.94,210.10,1,0
+12:46:25.223 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:46:25.228 > 0.54,44.34,216.49,1,0
+12:46:25.228 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:46:25.234 > -1.68,42.49,222.42,1,0
+12:46:25.234 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:46:25.242 > -3.65,40.40,230.67,1,0
+12:46:25.244 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:46:25.244 > -5.35,38.07,234.40,1,0
+12:46:25.253 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:46:25.259 > -6.98,35.67,237.34,1,0
+12:46:25.259 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:46:25.261 > -8.36,33.15,243.04,1,0
+12:46:25.261 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:46:25.267 > -9.50,30.50,247.92,1,0
+12:46:25.267 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:46:25.275 > -10.47,27.79,251.18,1,0
+12:46:25.283 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:46:25.283 > -11.28,25.03,257.21,1,0
+12:46:25.283 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:46:25.291 > -11.67,22.17,266.57,1,0
+12:46:25.291 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:46:25.299 > -11.66,19.30,273.17,1,0
+12:46:25.300 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:46:25.308 > -11.35,16.44,279.31,1,0
+12:46:25.308 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:46:25.316 > -10.66,13.65,288.13,1,0
+12:46:25.316 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:46:25.324 > -9.61,10.98,293.15,1,0
+12:46:25.324 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:46:25.324 > -8.44,8.35,295.59,1,0
+12:46:25.324 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:46:25.332 > -7.10,5.80,300.94,1,0
+12:46:25.340 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:46:25.340 > -5.51,3.40,306.41,1,0
+12:46:25.340 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:46:25.348 > -3.75,1.13,310.32,1,0
+12:46:25.642 > Curr Drive State
+12:46:25.642 > 2
+12:46:25.642 > Transmit Data To Cloud
+12:46:25.642 > 1
+12:46:25.642 > 64, 115, 1.21, -4.89, 311.60, 1, 0
+12:46:25.645 > Data Index
+12:46:25.645 > 1
+12:46:25.944 > Curr Drive State
+12:46:25.945 > 2
+12:46:25.945 > Transmit Data To Cloud
+12:46:25.945 > 1
+12:46:25.945 > 100, 79, 3.19, -6.99, 312.46, 1, 0
+12:46:25.946 > Data Index
+12:46:25.946 > 2
+12:46:26.241 > Curr Drive State
+12:46:26.244 > 2
+12:46:26.244 > Transmit Data To Cloud
+12:46:26.244 > 1
+12:46:26.244 > 105, 75, 5.25, -9.01, 316.76, 1, 0
+12:46:26.249 > Data Index
+12:46:26.249 > 3
+12:46:26.543 > Curr Drive State
+12:46:26.543 > 2
+12:46:26.543 > Transmit Data To Cloud
+12:46:26.543 > 1
+12:46:26.543 > 64, 115, 7.37, -10.95, 318.59, 1, 0
+12:46:26.543 > Data Index
+12:46:26.543 > 4
+12:46:26.843 > Curr Drive State
+12:46:26.843 > 2
+12:46:26.843 > Transmit Data To Cloud
+12:46:26.843 > 1
+12:46:26.843 > 54, 126, 9.61, -12.76, 322.68, 1, 0
+12:46:26.843 > Data Index
+12:46:26.843 > 5
+12:46:27.141 > Curr Drive State
+12:46:27.141 > 2
+12:46:27.141 > Transmit Data To Cloud
+12:46:27.141 > 1
+12:46:27.141 > 55, 124, 11.99, -14.36, 328.15, 1, 0
+12:46:27.141 > Data Index
+12:46:27.141 > 6
+12:46:27.438 > Curr Drive State
+12:46:27.438 > 2
+12:46:27.438 > Transmit Data To Cloud
+12:46:27.438 > 1
+12:46:27.438 > 75, 105, 14.51, -15.76, 331.87, 1, 0
+12:46:27.446 > Data Index
+12:46:27.446 > 7
+12:46:27.737 > Curr Drive State
+12:46:27.737 > 2
+12:46:27.737 > Transmit Data To Cloud
+12:46:27.737 > 1
+12:46:27.737 > 60, 120, 17.09, -17.06, 333.76, 1, 0
+12:46:27.745 > Data Index
+12:46:27.745 > 8
+12:46:28.042 > Curr Drive State
+12:46:28.042 > 2
+12:46:28.042 > Transmit Data To Cloud
+12:46:28.042 > 1
+12:46:28.042 > 51, 129, 19.73, -18.20, 338.49, 1, 0
+12:46:28.046 > Data Index
+12:46:28.046 > 9
+12:46:28.336 > Curr Drive State
+12:46:28.336 > 2
+12:46:28.336 > Transmit Data To Cloud
+12:46:28.336 > 1
+12:46:28.336 > 106, 73, 22.46, -19.08, 342.00, 1, 0
+12:46:28.344 > Data Index
+12:46:28.344 > 10
+12:46:28.640 > Curr Drive State
+12:46:28.640 > 2
+12:46:28.640 > Transmit Data To Cloud
+12:46:28.640 > 1
+12:46:28.640 > 66, 114, 25.16, -20.09, 338.05, 1, 0
+12:46:28.640 > Data Index
+12:46:28.640 > 11
+12:46:28.937 > Curr Drive State
+12:46:28.937 > 2
+12:46:28.937 > Transmit Data To Cloud
+12:46:28.937 > 1
+12:46:28.937 > 103, 76, 27.87, -21.08, 339.55, 1, 0
+12:46:28.945 > Data Index
+12:46:28.945 > 12
+12:46:29.237 > Curr Drive State
+12:46:29.237 > 2
+12:46:29.237 > Transmit Data To Cloud
+12:46:29.237 > 1
+12:46:29.237 > 57, 123, 30.59, -22.04, 341.96, 1, 0
+12:46:29.245 > Data Index
+12:46:29.245 > 13
+12:46:29.537 > Curr Drive State
+12:46:29.537 > 2
+12:46:29.537 > Transmit Data To Cloud
+12:46:29.537 > 1
+12:46:29.537 > 114, 66, 33.37, -22.79, 344.54, 1, 0
+12:46:29.550 > Data Index
+12:46:29.550 > 14
+12:46:29.835 > Curr Drive State
+12:46:29.835 > 2
+12:46:29.835 > Transmit Data To Cloud
+12:46:29.835 > 1
+12:46:29.835 > 58, 121, 36.15, -23.56, 346.97, 1, 0
+12:46:29.845 > Data Index
+12:46:29.845 > 15
+12:46:30.139 > Curr Drive State
+12:46:30.139 > 2
+12:46:30.139 > Transmit Data To Cloud
+12:46:30.139 > 1
+12:46:30.139 > 63, 117, 38.99, -24.02, 352.16, 1, 0
+12:46:30.147 > Data Index
+12:46:30.147 > 16
+12:46:30.438 > Curr Drive State
+12:46:30.438 > 2
+12:46:30.438 > Transmit Data To Cloud
+12:46:30.438 > 1
+12:46:30.438 > 106, 73, 41.85, -24.25, 356.00, 1, 0
+12:46:30.446 > Data Index
+12:46:30.446 > 17
+12:46:30.738 > Curr Drive State
+12:46:30.738 > 2
+12:46:30.738 > Transmit Data To Cloud
+12:46:30.738 > 1
+12:46:30.738 > 103, 76, 44.73, -24.32, 359.01, 1, 0
+12:46:30.745 > Data Index
+12:46:30.745 > 18
+12:46:31.040 > Curr Drive State
+12:46:31.040 > 2
+12:46:31.040 > Transmit Data To Cloud
+12:46:31.040 > 1
+12:46:31.040 > 93, 87, 47.62, -24.39, 359.71, 1, 0
+12:46:31.040 > Data Index
+12:46:31.040 > 19
+12:46:31.339 > Curr Drive State
+12:46:31.339 > 2
+12:46:31.339 > Transmit Data To Cloud
+12:46:31.339 > 1
+12:46:31.339 > 94, 85, 50.49, -24.19, 6.19, 1, 0
+12:46:31.339 > Data Index
+12:46:31.339 > 20
+12:46:31.637 > Curr Drive State
+12:46:31.637 > 2
+12:46:31.637 > Transmit Data To Cloud
+12:46:31.637 > 1
+12:46:31.637 > 61, 118, 53.37, -23.99, 3.88, 1, 0
+12:46:31.645 > Data Index
+12:46:31.645 > 21
+12:46:31.936 > Curr Drive State
+12:46:31.943 > 2
+12:46:31.943 > Transmit Data To Cloud
+12:46:31.943 > 1
+12:46:31.943 > 58, 121, 56.23, -23.67, 9.39, 1, 0
+12:46:31.943 > Data Index
+12:46:31.943 > 22
+12:46:32.240 > Curr Drive State
+12:46:32.240 > 2
+12:46:32.240 > Transmit Data To Cloud
+12:46:32.240 > 1
+12:46:32.240 > 102, 78, 59.06, -23.15, 9.49, 1, 0
+12:46:32.240 > Data Index
+12:46:32.240 > 23
+12:46:32.539 > Curr Drive State
+12:46:32.539 > 2
+12:46:32.539 > Transmit Data To Cloud
+12:46:32.539 > 1
+12:46:32.539 > 93, 87, 61.92, -22.79, 5.56, 1, 0
+12:46:32.547 > Data Index
+12:46:32.547 > 24
+12:46:32.837 > Curr Drive State
+12:46:32.837 > 2
+12:46:32.837 > Transmit Data To Cloud
+12:46:32.837 > 1
+12:46:32.837 > 58, 121, 64.77, -22.45, 8.05, 1, 0
+12:46:32.845 > Data Index
+12:46:32.845 > 25
+12:46:33.135 > Curr Drive State
+12:46:33.135 > 2
+12:46:33.135 > Transmit Data To Cloud
+12:46:33.135 > 1
+12:46:33.135 > 49, 130, 67.61, -21.93, 12.37, 1, 0
+12:46:33.143 > Data Index
+12:46:33.143 > 26
+12:46:33.434 > Curr Drive State
+12:46:33.441 > 2
+12:46:33.441 > Transmit Data To Cloud
+12:46:33.441 > 1
+12:46:33.441 > 63, 117, 70.38, -21.12, 19.64, 1, 0
+12:46:33.441 > Data Index
+12:46:33.441 > 27
+12:46:33.741 > Curr Drive State
+12:46:33.741 > 2
+12:46:33.741 > Transmit Data To Cloud
+12:46:33.741 > 1
+12:46:33.741 > 60, 120, 73.08, -20.09, 20.67, 1, 0
+12:46:33.741 > Data Index
+12:46:33.741 > 28
+12:46:34.036 > Curr Drive State
+12:46:34.036 > 2
+12:46:34.036 > Transmit Data To Cloud
+12:46:34.036 > 1
+12:46:34.036 > 57, 123, 75.72, -18.93, 26.88, 1, 0
+12:46:34.044 > Data Index
+12:46:34.044 > 29
+12:46:34.339 > Curr Drive State
+12:46:34.339 > 2
+12:46:34.339 > Transmit Data To Cloud
+12:46:34.339 > 1
+12:46:34.339 > 78, 102, 78.20, -17.49, 30.90, 1, 0
+12:46:34.339 > Data Index
+12:46:34.339 > 30
+12:46:34.638 > Curr Drive State
+12:46:34.638 > 2
+12:46:34.638 > Transmit Data To Cloud
+12:46:34.638 > 1
+12:46:34.638 > 61, 118, 80.61, -15.90, 36.37, 1, 0
+12:46:34.646 > Finished collecting 30 pos points
+12:46:34.646 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:46:34.646 > 1.21,-4.89,311.60,1,0
+12:46:34.655 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:46:34.655 > 3.19,-6.99,312.46,1,0
+12:46:34.662 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:46:34.662 > 5.25,-9.01,316.76,1,0
+12:46:34.662 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:46:34.670 > 7.37,-10.95,318.59,1,0
+12:46:34.670 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:46:34.678 > 9.61,-12.76,322.68,1,0
+12:46:34.687 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:46:34.687 > 11.99,-14.36,328.15,1,0
+12:46:34.694 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:46:34.694 > 14.51,-15.76,331.87,1,0
+12:46:34.694 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:46:34.703 > 17.09,-17.06,333.76,1,0
+12:46:34.703 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:46:34.711 > 19.73,-18.20,338.49,1,0
+12:46:34.711 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:46:34.711 > 22.46,-19.08,342.00,1,0
+12:46:34.720 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:46:34.720 > 25.16,-20.09,338.05,1,0
+12:46:34.727 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:46:34.727 > 27.87,-21.08,339.55,1,0
+12:46:34.727 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:46:34.735 > 30.59,-22.04,341.96,1,0
+12:46:34.744 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:46:34.744 > 33.37,-22.79,344.54,1,0
+12:46:34.752 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:46:34.752 > 36.15,-23.56,346.97,1,0
+12:46:34.752 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:46:34.761 > 38.99,-24.02,352.16,1,0
+12:46:34.761 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:46:34.768 > 41.85,-24.25,356.00,1,0
+12:46:34.768 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:46:34.768 > 44.73,-24.32,359.01,1,0
+12:46:34.778 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:46:34.778 > 47.62,-24.39,359.71,1,0
+12:46:34.785 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:46:34.785 > 50.49,-24.19,6.19,1,0
+12:46:34.785 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:46:34.795 > 53.37,-23.99,3.88,1,0
+12:46:34.801 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:46:34.801 > 56.23,-23.67,9.39,1,0
+12:46:34.809 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:46:34.811 > 59.06,-23.15,9.49,1,0
+12:46:34.811 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:46:34.818 > 61.92,-22.79,5.56,1,0
+12:46:34.818 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:46:34.826 > 64.77,-22.45,8.05,1,0
+12:46:34.826 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:46:34.828 > 67.61,-21.93,12.37,1,0
+12:46:34.828 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:46:34.834 > 70.38,-21.12,19.64,1,0
+12:46:34.843 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:46:34.843 > 73.08,-20.09,20.67,1,0
+12:46:34.844 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:46:34.851 > 75.72,-18.93,26.88,1,0
+12:46:34.851 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:46:34.860 > 78.20,-17.49,30.90,1,0
+12:46:35.163 > Curr Drive State
+12:46:35.163 > 2
+12:46:35.163 > Transmit Data To Cloud
+12:46:35.163 > 1
+12:46:35.163 > 114, 66, 84.49, -12.71, 40.71, 1, 0
+12:46:35.168 > Data Index
+12:46:35.168 > 1
+12:46:35.462 > Curr Drive State
+12:46:35.462 > 2
+12:46:35.462 > Transmit Data To Cloud
+12:46:35.462 > 1
+12:46:35.462 > 103, 76, 86.56, -10.71, 45.33, 1, 0
+12:46:35.468 > Data Index
+12:46:35.468 > 2
+12:46:35.756 > Curr Drive State
+12:46:35.756 > 2
+12:46:35.756 > Transmit Data To Cloud
+12:46:35.756 > 1
+12:46:35.756 > 60, 120, 88.59, -8.66, 48.23, 1, 0
+12:46:35.764 > Data Index
+12:46:35.764 > 3
+12:46:36.062 > Curr Drive State
+12:46:36.062 > 2
+12:46:36.062 > Transmit Data To Cloud
+12:46:36.062 > 1
+12:46:36.062 > 109, 70, 90.49, -6.50, 48.57, 1, 0
+12:46:36.062 > Data Index
+12:46:36.062 > 4
+12:46:36.363 > Curr Drive State
+12:46:36.363 > 2
+12:46:36.363 > Transmit Data To Cloud
+12:46:36.363 > 1
+12:46:36.363 > 105, 75, 92.29, -4.25, 52.95, 1, 0
+12:46:36.363 > Data Index
+12:46:36.363 > 5
+12:46:36.662 > Curr Drive State
+12:46:36.662 > 2
+12:46:36.662 > Transmit Data To Cloud
+12:46:36.662 > 1
+12:46:36.662 > 106, 73, 94.10, -2.02, 49.20, 1, 0
+12:46:36.669 > Data Index
+12:46:36.669 > 6
+12:46:36.962 > Curr Drive State
+12:46:36.963 > 2
+12:46:36.963 > Transmit Data To Cloud
+12:46:36.963 > 1
+12:46:36.963 > 106, 73, 95.90, 0.23, 52.23, 1, 0
+12:46:36.968 > Data Index
+12:46:36.968 > 7
+12:46:37.262 > Curr Drive State
+12:46:37.262 > 2
+12:46:37.262 > Transmit Data To Cloud
+12:46:37.262 > 1
+12:46:37.262 > 103, 76, 97.69, 2.48, 52.33, 1, 0
+12:46:37.262 > Data Index
+12:46:37.262 > 8
+12:46:37.560 > Curr Drive State
+12:46:37.562 > 2
+12:46:37.562 > Transmit Data To Cloud
+12:46:37.562 > 1
+12:46:37.562 > 102, 78, 99.37, 4.81, 56.61, 1, 0
+12:46:37.567 > Data Index
+12:46:37.567 > 9
+12:46:37.855 > Curr Drive State
+12:46:37.855 > 2
+12:46:37.855 > Transmit Data To Cloud
+12:46:37.855 > 1
+12:46:37.855 > 67, 112, 100.98, 7.20, 58.16, 1, 0
+12:46:37.863 > Data Index
+12:46:37.863 > 10
+12:46:38.159 > Curr Drive State
+12:46:38.162 > 2
+12:46:38.162 > Transmit Data To Cloud
+12:46:38.162 > 1
+12:46:38.162 > 103, 76, 102.34, 9.74, 64.46, 1, 0
+12:46:38.162 > Data Index
+12:46:38.162 > 11
+12:46:38.459 > Curr Drive State
+12:46:38.459 > 2
+12:46:38.459 > Transmit Data To Cloud
+12:46:38.459 > 1
+12:46:38.459 > 93, 87, 103.47, 12.38, 70.52, 1, 0
+12:46:38.467 > Data Index
+12:46:38.467 > 12
+12:46:38.757 > Curr Drive State
+12:46:38.757 > 2
+12:46:38.757 > Transmit Data To Cloud
+12:46:38.757 > 1
+12:46:38.757 > 64, 115, 104.45, 15.09, 71.92, 1, 0
+12:46:38.764 > Data Index
+12:46:38.764 > 13
+12:46:39.062 > Curr Drive State
+12:46:39.062 > 2
+12:46:39.062 > Transmit Data To Cloud
+12:46:39.062 > 1
+12:46:39.062 > 100, 79, 105.17, 17.88, 78.64, 1, 0
+12:46:39.062 > Data Index
+12:46:39.062 > 14
+12:46:39.361 > Curr Drive State
+12:46:39.361 > 2
+12:46:39.361 > Transmit Data To Cloud
+12:46:39.361 > 1
+12:46:39.361 > 94, 85, 105.78, 20.69, 79.80, 1, 0
+12:46:39.361 > Data Index
+12:46:39.361 > 15
+12:46:39.656 > Curr Drive State
+12:46:39.680 > 2
+12:46:39.680 > Transmit Data To Cloud
+12:46:39.680 > 1
+12:46:39.680 > 97, 82, 106.18, 23.54, 85.45, 1, 0
+12:46:39.680 > Data Index
+12:46:39.680 > 16
+12:46:39.954 > Curr Drive State
+12:46:39.962 > 2
+12:46:39.962 > Transmit Data To Cloud
+12:46:39.962 > 1
+12:46:39.962 > 63, 117, 106.36, 26.41, 89.60, 1, 0
+12:46:39.962 > Data Index
+12:46:39.962 > 17
+12:46:40.256 > Curr Drive State
+12:46:40.256 > 2
+12:46:40.256 > Transmit Data To Cloud
+12:46:40.256 > 1
+12:46:40.256 > 57, 123, 106.34, 29.31, 93.67, 1, 0
+12:46:40.264 > Data Index
+12:46:40.264 > 18
+12:46:40.562 > Curr Drive State
+12:46:40.562 > 2
+12:46:40.562 > Transmit Data To Cloud
+12:46:40.562 > 1
+12:46:40.562 > 55, 124, 106.01, 32.17, 100.60, 1, 0
+12:46:40.562 > Data Index
+12:46:40.562 > 19
+12:46:40.861 > Curr Drive State
+12:46:40.861 > 2
+12:46:40.861 > Transmit Data To Cloud
+12:46:40.861 > 1
+12:46:40.861 > 91, 88, 105.47, 35.00, 100.51, 1, 0
+12:46:40.868 > Data Index
+12:46:40.868 > 20
+12:46:41.160 > Curr Drive State
+12:46:41.160 > 2
+12:46:41.160 > Transmit Data To Cloud
+12:46:41.160 > 1
+12:46:41.160 > 102, 78, 104.97, 37.84, 100.26, 1, 0
+12:46:41.168 > Data Index
+12:46:41.168 > 21
+12:46:41.459 > Curr Drive State
+12:46:41.459 > 2
+12:46:41.459 > Transmit Data To Cloud
+12:46:41.459 > 1
+12:46:41.459 > 55, 124, 104.42, 40.66, 103.68, 1, 0
+12:46:41.467 > Data Index
+12:46:41.467 > 22
+12:46:41.757 > Curr Drive State
+12:46:41.757 > 2
+12:46:41.757 > Transmit Data To Cloud
+12:46:41.757 > 1
+12:46:41.757 > 61, 118, 103.66, 43.42, 106.25, 1, 0
+12:46:41.765 > Data Index
+12:46:41.765 > 23
+12:46:42.062 > Curr Drive State
+12:46:42.062 > 2
+12:46:42.062 > Transmit Data To Cloud
+12:46:42.062 > 1
+12:46:42.062 > 60, 120, 102.72, 46.15, 112.07, 1, 0
+12:46:42.068 > Data Index
+12:46:42.068 > 24
+12:46:42.361 > Curr Drive State
+12:46:42.361 > 2
+12:46:42.361 > Transmit Data To Cloud
+12:46:42.361 > 1
+12:46:42.361 > 52, 127, 101.51, 48.76, 118.53, 1, 0
+12:46:42.361 > Data Index
+12:46:42.361 > 25
+12:46:42.658 > Curr Drive State
+12:46:42.658 > 2
+12:46:42.658 > Transmit Data To Cloud
+12:46:42.658 > 1
+12:46:42.658 > 63, 117, 99.95, 51.17, 126.79, 1, 0
+12:46:42.666 > Data Index
+12:46:42.666 > 26
+12:46:42.958 > Curr Drive State
+12:46:42.958 > 2
+12:46:42.958 > Transmit Data To Cloud
+12:46:42.958 > 1
+12:46:42.958 > 111, 69, 98.19, 53.46, 125.27, 1, 0
+12:46:42.967 > Data Index
+12:46:42.967 > 27
+12:46:43.261 > Curr Drive State
+12:46:43.261 > 2
+12:46:43.261 > Transmit Data To Cloud
+12:46:43.261 > 1
+12:46:43.261 > 52, 127, 96.52, 55.81, 127.85, 1, 0
+12:46:43.264 > Data Index
+12:46:43.264 > 28
+12:46:43.563 > Curr Drive State
+12:46:43.563 > 2
+12:46:43.563 > Transmit Data To Cloud
+12:46:43.563 > 1
+12:46:43.563 > 55, 124, 94.57, 57.92, 137.24, 1, 0
+12:46:43.568 > Data Index
+12:46:43.568 > 29
+12:46:43.864 > Curr Drive State
+12:46:43.864 > 2
+12:46:43.864 > Transmit Data To Cloud
+12:46:43.864 > 1
+12:46:43.864 > 61, 118, 92.33, 59.74, 144.23, 1, 0
+12:46:43.869 > Data Index
+12:46:43.869 > 30
+12:46:44.158 > Curr Drive State
+12:46:44.158 > 2
+12:46:44.158 > Transmit Data To Cloud
+12:46:44.158 > 1
+12:46:44.158 > 57, 123, 89.90, 61.28, 150.29, 1, 0
+12:46:44.166 > Finished collecting 30 pos points
+12:46:44.166 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:46:44.174 > 84.49,-12.71,40.71,1,0
+12:46:44.180 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:46:44.180 > 86.56,-10.71,45.33,1,0
+12:46:44.183 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:46:44.191 > 88.59,-8.66,48.23,1,0
+12:46:44.191 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:46:44.191 > 90.49,-6.50,48.57,1,0
+12:46:44.199 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:46:44.199 > 92.29,-4.25,52.95,1,0
+12:46:44.208 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:46:44.208 > 94.10,-2.02,49.20,1,0
+12:46:44.208 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:46:44.218 > 95.90,0.23,52.23,1,0
+12:46:44.218 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:46:44.224 > 97.69,2.48,52.33,1,0
+12:46:44.224 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:46:44.224 > 99.37,4.81,56.61,1,0
+12:46:44.224 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:46:44.232 > 100.98,7.20,58.16,1,0
+12:46:44.240 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:46:44.240 > 102.34,9.74,64.46,1,0
+12:46:44.248 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:46:44.249 > 103.47,12.38,70.52,1,0
+12:46:44.249 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:46:44.256 > 104.45,15.09,71.92,1,0
+12:46:44.256 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:46:44.265 > 105.17,17.88,78.64,1,0
+12:46:44.273 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:46:44.273 > 105.78,20.69,79.80,1,0
+12:46:44.273 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:46:44.281 > 106.18,23.54,85.45,1,0
+12:46:44.281 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:46:44.289 > 106.36,26.41,89.60,1,0
+12:46:44.289 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:46:44.297 > 106.34,29.31,93.67,1,0
+12:46:44.297 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:46:44.297 > 106.01,32.17,100.60,1,0
+12:46:44.305 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:46:44.305 > 105.47,35.00,100.51,1,0
+12:46:44.313 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:46:44.313 > 104.97,37.84,100.26,1,0
+12:46:44.313 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:46:44.321 > 104.42,40.66,103.68,1,0
+12:46:44.329 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:46:44.329 > 103.66,43.42,106.25,1,0
+12:46:44.338 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:46:44.338 > 102.72,46.15,112.07,1,0
+12:46:44.338 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:46:44.345 > 101.51,48.76,118.53,1,0
+12:46:44.345 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:46:44.353 > 99.95,51.17,126.79,1,0
+12:46:44.353 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:46:44.353 > 98.19,53.46,125.27,1,0
+12:46:44.361 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:46:44.361 > 96.52,55.81,127.85,1,0
+12:46:44.369 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:46:44.377 > 94.57,57.92,137.24,1,0
+12:46:44.377 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:46:44.381 > 92.33,59.74,144.23,1,0
+12:46:44.680 > Curr Drive State
+12:46:44.680 > 2
+12:46:44.680 > Transmit Data To Cloud
+12:46:44.680 > 1
+12:46:44.680 > 106, 73, 85.40, 63.46, 156.76, 1, 0
+12:46:44.688 > Data Index
+12:46:44.688 > 1
+12:46:44.985 > Curr Drive State
+12:46:44.985 > 2
+12:46:44.985 > Transmit Data To Cloud
+12:46:44.985 > 1
+12:46:44.985 > 103, 76, 82.69, 64.42, 162.02, 1, 0
+12:46:44.986 > Data Index
+12:46:44.986 > 2
+12:46:45.280 > Curr Drive State
+12:46:45.280 > 2
+12:46:45.280 > Transmit Data To Cloud
+12:46:45.280 > 1
+12:46:45.280 > 112, 67, 79.96, 65.29, 160.52, 1, 0
+12:46:45.288 > Data Index
+12:46:45.288 > 3
+12:46:45.584 > Curr Drive State
+12:46:45.584 > 2
+12:46:45.584 > Transmit Data To Cloud
+12:46:45.584 > 1
+12:46:45.584 > 103, 76, 77.23, 66.17, 162.42, 1, 0
+12:46:45.590 > Data Index
+12:46:45.590 > 4
+12:46:45.884 > Curr Drive State
+12:46:45.884 > 2
+12:46:45.884 > Transmit Data To Cloud
+12:46:45.884 > 1
+12:46:45.884 > 102, 78, 74.46, 67.02, 164.30, 1, 0
+12:46:45.884 > Data Index
+12:46:45.884 > 5
+12:46:46.183 > Curr Drive State
+12:46:46.183 > 2
+12:46:46.183 > Transmit Data To Cloud
+12:46:46.183 > 1
+12:46:46.183 > 106, 73, 71.66, 67.71, 167.35, 1, 0
+12:46:46.183 > Data Index
+12:46:46.183 > 6
+12:46:46.484 > Curr Drive State
+12:46:46.484 > 2
+12:46:46.484 > Transmit Data To Cloud
+12:46:46.484 > 1
+12:46:46.484 > 103, 76, 68.83, 68.24, 171.33, 1, 0
+12:46:46.484 > Data Index
+12:46:46.484 > 7
+12:46:46.783 > Curr Drive State
+12:46:46.783 > 2
+12:46:46.783 > Transmit Data To Cloud
+12:46:46.783 > 1
+12:46:46.783 > 90, 90, 65.96, 68.53, 176.92, 1, 0
+12:46:46.783 > Data Index
+12:46:46.783 > 8
+12:46:47.085 > Curr Drive State
+12:46:47.085 > 2
+12:46:47.085 > Transmit Data To Cloud
+12:46:47.085 > 1
+12:46:47.085 > 103, 76, 63.08, 68.56, 181.65, 1, 0
+12:46:47.086 > Data Index
+12:46:47.086 > 9
+12:46:47.383 > Curr Drive State
+12:46:47.383 > 2
+12:46:47.383 > Transmit Data To Cloud
+12:46:47.383 > 1
+12:46:47.383 > 102, 78, 60.21, 68.38, 185.79, 1, 0
+12:46:47.383 > Data Index
+12:46:47.383 > 10
+12:46:47.683 > Curr Drive State
+12:46:47.683 > 2
+12:46:47.683 > Transmit Data To Cloud
+12:46:47.683 > 1
+12:46:47.683 > 79, 100, 57.37, 67.97, 192.34, 1, 0
+12:46:47.691 > Data Index
+12:46:47.691 > 11
+12:46:47.984 > Curr Drive State
+12:46:47.984 > 2
+12:46:47.984 > Transmit Data To Cloud
+12:46:47.984 > 1
+12:46:47.984 > 103, 76, 54.61, 67.17, 199.69, 1, 0
+12:46:47.987 > Data Index
+12:46:47.987 > 12
+12:46:48.279 > Curr Drive State
+12:46:48.279 > 2
+12:46:48.279 > Transmit Data To Cloud
+12:46:48.279 > 1
+12:46:48.279 > 117, 63, 51.89, 66.22, 197.94, 1, 0
+12:46:48.287 > Data Index
+12:46:48.287 > 13
+12:46:48.584 > Curr Drive State
+12:46:48.584 > 2
+12:46:48.584 > Transmit Data To Cloud
+12:46:48.584 > 1
+12:46:48.584 > 58, 121, 49.16, 65.31, 200.17, 1, 0
+12:46:48.584 > Data Index
+12:46:48.584 > 14
+12:46:48.878 > Curr Drive State
+12:46:48.878 > 2
+12:46:48.878 > Transmit Data To Cloud
+12:46:48.878 > 1
+12:46:48.878 > 60, 120, 46.50, 64.19, 206.16, 1, 0
+12:46:48.886 > Data Index
+12:46:48.886 > 15
+12:46:49.185 > Curr Drive State
+12:46:49.186 > 2
+12:46:49.186 > Transmit Data To Cloud
+12:46:49.186 > 1
+12:46:49.186 > 103, 76, 44.01, 62.75, 213.64, 1, 0
+12:46:49.190 > Data Index
+12:46:49.190 > 16
+12:46:49.480 > Curr Drive State
+12:46:49.486 > 2
+12:46:49.486 > Transmit Data To Cloud
+12:46:49.486 > 1
+12:46:49.486 > 109, 70, 41.56, 61.23, 209.84, 1, 0
+12:46:49.487 > Data Index
+12:46:49.487 > 17
+12:46:49.781 > Curr Drive State
+12:46:49.781 > 2
+12:46:49.781 > Transmit Data To Cloud
+12:46:49.781 > 1
+12:46:49.781 > 111, 69, 39.08, 59.77, 210.63, 1, 0
+12:46:49.789 > Data Index
+12:46:49.789 > 18
+12:46:50.080 > Curr Drive State
+12:46:50.080 > 2
+12:46:50.080 > Transmit Data To Cloud
+12:46:50.080 > 1
+12:46:50.080 > 60, 120, 36.61, 58.27, 213.82, 1, 0
+12:46:50.088 > Data Index
+12:46:50.088 > 19
+12:46:50.385 > Curr Drive State
+12:46:50.385 > 2
+12:46:50.385 > Transmit Data To Cloud
+12:46:50.385 > 1
+12:46:50.385 > 60, 120, 34.26, 56.59, 216.88, 1, 0
+12:46:50.385 > Data Index
+12:46:50.385 > 20
+12:46:50.685 > Curr Drive State
+12:46:50.685 > 2
+12:46:50.685 > Transmit Data To Cloud
+12:46:50.685 > 1
+12:46:50.685 > 49, 130, 32.02, 54.79, 221.67, 1, 0
+12:46:50.687 > Data Index
+12:46:50.687 > 21
+12:46:50.984 > Curr Drive State
+12:46:50.984 > 2
+12:46:50.984 > Transmit Data To Cloud
+12:46:50.984 > 1
+12:46:50.984 > 60, 120, 30.00, 52.74, 228.89, 1, 0
+12:46:50.988 > Data Index
+12:46:50.988 > 22
+12:46:51.282 > Curr Drive State
+12:46:51.282 > 2
+12:46:51.282 > Transmit Data To Cloud
+12:46:51.282 > 1
+12:46:51.282 > 64, 115, 28.20, 50.51, 234.12, 1, 0
+12:46:51.290 > Data Index
+12:46:51.290 > 23
+12:46:51.582 > Curr Drive State
+12:46:51.582 > 2
+12:46:51.582 > Transmit Data To Cloud
+12:46:51.582 > 1
+12:46:51.582 > 55, 124, 26.65, 48.08, 241.12, 1, 0
+12:46:51.582 > Data Index
+12:46:51.582 > 24
+12:46:51.877 > Curr Drive State
+12:46:51.885 > 2
+12:46:51.885 > Transmit Data To Cloud
+12:46:51.885 > 1
+12:46:51.885 > 52, 127, 25.47, 45.46, 250.57, 1, 0
+12:46:51.885 > Data Index
+12:46:51.885 > 25
+12:46:52.179 > Curr Drive State
+12:46:52.179 > 2
+12:46:52.179 > Transmit Data To Cloud
+12:46:52.179 > 1
+12:46:52.179 > 60, 120, 24.70, 42.69, 257.87, 1, 0
+12:46:52.187 > Data Index
+12:46:52.187 > 26
+12:46:52.478 > Curr Drive State
+12:46:52.478 > 2
+12:46:52.478 > Transmit Data To Cloud
+12:46:52.478 > 1
+12:46:52.478 > 57, 123, 24.26, 39.84, 264.64, 1, 0
+12:46:52.487 > Data Index
+12:46:52.487 > 27
+12:46:52.781 > Curr Drive State
+12:46:52.781 > 2
+12:46:52.781 > Transmit Data To Cloud
+12:46:52.781 > 1
+12:46:52.781 > 49, 130, 24.19, 36.97, 272.98, 1, 0
+12:46:52.789 > Data Index
+12:46:52.789 > 28
+12:46:53.080 > Curr Drive State
+12:46:53.085 > 2
+12:46:53.085 > Transmit Data To Cloud
+12:46:53.085 > 1
+12:46:53.085 > 58, 121, 24.58, 34.12, 281.95, 1, 0
+12:46:53.088 > Data Index
+12:46:53.088 > 29
+12:46:53.379 > Curr Drive State
+12:46:53.379 > 2
+12:46:53.379 > Transmit Data To Cloud
+12:46:53.379 > 1
+12:46:53.379 > 61, 118, 25.31, 31.34, 284.69, 1, 0
+12:46:53.387 > Data Index
+12:46:53.387 > 30
+12:46:53.678 > Curr Drive State
+12:46:53.678 > 2
+12:46:53.678 > Transmit Data To Cloud
+12:46:53.678 > 1
+12:46:53.678 > 49, 130, 26.14, 28.58, 289.36, 1, 0
+12:46:53.686 > Finished collecting 30 pos points
+12:46:53.686 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:46:53.694 > 85.40,63.46,156.76,1,0
+12:46:53.702 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:46:53.702 > 82.69,64.42,162.02,1,0
+12:46:53.702 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:46:53.713 > 79.96,65.29,160.52,1,0
+12:46:53.713 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:46:53.718 > 77.23,66.17,162.42,1,0
+12:46:53.718 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:46:53.718 > 74.46,67.02,164.30,1,0
+12:46:53.727 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:46:53.727 > 71.66,67.71,167.35,1,0
+12:46:53.735 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:46:53.743 > 68.83,68.24,171.33,1,0
+12:46:53.743 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:46:53.749 > 65.96,68.53,176.92,1,0
+12:46:53.749 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:46:53.755 > 63.08,68.56,181.65,1,0
+12:46:53.755 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:46:53.755 > 60.21,68.38,185.79,1,0
+12:46:53.755 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:46:53.763 > 57.37,67.97,192.34,1,0
+12:46:53.772 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:46:53.772 > 54.61,67.17,199.69,1,0
+12:46:53.777 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:46:53.783 > 51.89,66.22,197.94,1,0
+12:46:53.783 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:46:53.789 > 49.16,65.31,200.17,1,0
+12:46:53.795 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:46:53.795 > 46.50,64.19,206.16,1,0
+12:46:53.795 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:46:53.803 > 44.01,62.75,213.64,1,0
+12:46:53.803 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:46:53.811 > 41.56,61.23,209.84,1,0
+12:46:53.811 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:46:53.819 > 39.08,59.77,210.63,1,0
+12:46:53.819 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:46:53.819 > 36.61,58.27,213.82,1,0
+12:46:53.827 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:46:53.827 > 34.26,56.59,216.88,1,0
+12:46:53.835 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:46:53.835 > 32.02,54.79,221.67,1,0
+12:46:53.835 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:46:53.844 > 30.00,52.74,228.89,1,0
+12:46:53.844 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:46:53.852 > 28.20,50.51,234.12,1,0
+12:46:53.860 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:46:53.860 > 26.65,48.08,241.12,1,0
+12:46:53.860 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:46:53.868 > 25.47,45.46,250.57,1,0
+12:46:53.868 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:46:53.876 > 24.70,42.69,257.87,1,0
+12:46:53.876 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:46:53.878 > 24.26,39.84,264.64,1,0
+12:46:53.878 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:46:53.885 > 24.19,36.97,272.98,1,0
+12:46:53.894 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:46:53.894 > 24.58,34.12,281.95,1,0
+12:46:53.894 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:46:53.901 > 25.31,31.34,284.69,1,0
+12:46:54.196 > Curr Drive State
+12:46:54.196 > 2
+12:46:54.196 > Transmit Data To Cloud
+12:46:54.196 > 1
+12:46:54.196 > 112, 67, 27.50, 23.86, 282.72, 1, 0
+12:46:54.201 > Data Index
+12:46:54.201 > 1
+12:46:54.494 > Curr Drive State
+12:46:54.494 > 2
+12:46:54.494 > Transmit Data To Cloud
+12:46:54.494 > 1
+12:46:54.494 > 100, 79, 28.14, 21.07, 283.96, 1, 0
+12:46:54.494 > Data Index
+12:46:54.494 > 2
+12:46:54.797 > Curr Drive State
+12:46:54.797 > 2
+12:46:54.797 > Transmit Data To Cloud
+12:46:54.797 > 1
+12:46:54.797 > 117, 63, 28.96, 18.30, 287.16, 1, 0
+12:46:54.800 > Data Index
+12:46:54.800 > 3
+12:46:55.094 > Curr Drive State
+12:46:55.094 > 2
+12:46:55.094 > Transmit Data To Cloud
+12:46:55.094 > 1
+12:46:55.094 > 109, 70, 29.92, 15.58, 290.32, 1, 0
+12:46:55.102 > Data Index
+12:46:55.102 > 4
+12:46:55.395 > Curr Drive State
+12:46:55.395 > 2
+12:46:55.395 > Transmit Data To Cloud
+12:46:55.395 > 1
+12:46:55.395 > 96, 84, 30.77, 12.83, 284.91, 1, 0
+12:46:55.395 > Data Index
+12:46:55.395 > 5
+12:46:55.694 > Curr Drive State
+12:46:55.694 > 2
+12:46:55.694 > Transmit Data To Cloud
+12:46:55.694 > 1
+12:46:55.694 > 99, 81, 31.66, 10.10, 290.14, 1, 0
+12:46:55.702 > Data Index
+12:46:55.702 > 6
+12:46:55.995 > Curr Drive State
+12:46:55.995 > 2
+12:46:55.995 > Transmit Data To Cloud
+12:46:55.995 > 1
+12:46:55.995 > 103, 76, 32.62, 7.39, 289.56, 1, 0
+12:46:55.995 > Data Index
+12:46:55.995 > 7
+12:46:56.295 > Curr Drive State
+12:46:56.295 > 2
+12:46:56.295 > Transmit Data To Cloud
+12:46:56.295 > 1
+12:46:56.295 > 90, 90, 33.65, 4.71, 293.14, 1, 0
+12:46:56.295 > Data Index
+12:46:56.295 > 8
+12:46:56.595 > Curr Drive State
+12:46:56.595 > 2
+12:46:56.595 > Transmit Data To Cloud
+12:46:56.595 > 1
+12:46:56.595 > 88, 91, 34.95, 2.13, 300.43, 1, 0
+12:46:56.595 > Data Index
+12:46:56.595 > 9
+12:46:56.896 > Curr Drive State
+12:46:56.896 > 2
+12:46:56.896 > Transmit Data To Cloud
+12:46:56.896 > 1
+12:46:56.896 > 91, 88, 36.54, -0.27, 306.50, 1, 0
+12:46:56.901 > Data Index
+12:46:56.901 > 10
+12:46:57.195 > Curr Drive State
+12:46:57.195 > 2
+12:46:57.195 > Transmit Data To Cloud
+12:46:57.195 > 1
+12:46:57.195 > 64, 115, 38.18, -2.63, 303.19, 1, 0
+12:46:57.195 > Data Index
+12:46:57.195 > 11
+12:46:57.494 > Curr Drive State
+12:46:57.494 > 2
+12:46:57.494 > Transmit Data To Cloud
+12:46:57.494 > 1
+12:46:57.494 > 61, 118, 39.82, -5.00, 307.54, 1, 0
+12:46:57.494 > Data Index
+12:46:57.494 > 12
+12:46:57.794 > Curr Drive State
+12:46:57.794 > 2
+12:46:57.794 > Transmit Data To Cloud
+12:46:57.794 > 1
+12:46:57.794 > 73, 106, 41.75, -7.14, 316.32, 1, 0
+12:46:57.794 > Data Index
+12:46:57.794 > 13
+12:46:58.095 > Curr Drive State
+12:46:58.095 > 2
+12:46:58.095 > Transmit Data To Cloud
+12:46:58.095 > 1
+12:46:58.095 > 84, 96, 43.93, -9.00, 322.69, 1, 0
+12:46:58.097 > Data Index
+12:46:58.097 > 14
+12:46:58.389 > Curr Drive State
+12:46:58.389 > 2
+12:46:58.389 > Transmit Data To Cloud
+12:46:58.389 > 1
+12:46:58.389 > 70, 109, 46.22, -10.75, 324.73, 1, 0
+12:46:58.397 > Data Index
+12:46:58.397 > 15
+12:46:58.695 > Curr Drive State
+12:46:58.695 > 2
+12:46:58.695 > Transmit Data To Cloud
+12:46:58.695 > 1
+12:46:58.695 > 75, 105, 48.68, -12.24, 333.36, 1, 0
+12:46:58.700 > Data Index
+12:46:58.700 > 16
+12:46:58.997 > Curr Drive State
+12:46:58.998 > 2
+12:46:58.998 > Transmit Data To Cloud
+12:46:58.998 > 1
+12:46:58.998 > 61, 118, 51.32, -13.40, 339.64, 1, 0
+12:46:59.000 > Data Index
+12:46:59.000 > 17
+12:46:59.295 > Curr Drive State
+12:46:59.295 > 2
+12:46:59.295 > Transmit Data To Cloud
+12:46:59.295 > 1
+12:46:59.295 > 52, 127, 54.07, -14.28, 346.37, 1, 0
+12:46:59.300 > Data Index
+12:46:59.300 > 18
+12:46:59.595 > Curr Drive State
+12:46:59.595 > 2
+12:46:59.595 > Transmit Data To Cloud
+12:46:59.595 > 1
+12:46:59.595 > 51, 129, 56.89, -14.80, 352.15, 1, 0
+12:46:59.598 > Data Index
+12:46:59.598 > 19
+12:46:59.896 > Curr Drive State
+12:46:59.897 > 2
+12:46:59.897 > Transmit Data To Cloud
+12:46:59.897 > 1
+12:46:59.897 > 61, 118, 59.76, -14.98, 0.21, 1, 0
+12:46:59.897 > Data Index
+12:46:59.897 > 20
+12:47:00.196 > Curr Drive State
+12:47:00.196 > 2
+12:47:00.196 > Transmit Data To Cloud
+12:47:00.196 > 1
+12:47:00.196 > 58, 121, 62.63, -14.78, 7.62, 1, 0
+12:47:00.196 > Data Index
+12:47:00.196 > 21
+12:47:00.490 > Curr Drive State
+12:47:00.490 > 2
+12:47:00.490 > Transmit Data To Cloud
+12:47:00.490 > 1
+12:47:00.490 > 48, 132, 65.43, -14.15, 17.57, 1, 0
+12:47:00.498 > Data Index
+12:47:00.498 > 22
+12:47:00.791 > Curr Drive State
+12:47:00.796 > 2
+12:47:00.796 > Transmit Data To Cloud
+12:47:00.796 > 1
+12:47:00.796 > 55, 124, 68.08, -13.03, 27.37, 1, 0
+12:47:00.796 > Data Index
+12:47:00.796 > 23
+12:47:01.096 > Curr Drive State
+12:47:01.096 > 2
+12:47:01.096 > Transmit Data To Cloud
+12:47:01.096 > 1
+12:47:01.096 > 111, 69, 70.55, -11.56, 32.07, 1, 0
+12:47:01.101 > Data Index
+12:47:01.101 > 24
+12:47:01.390 > Curr Drive State
+12:47:01.390 > 2
+12:47:01.390 > Transmit Data To Cloud
+12:47:01.390 > 1
+12:47:01.390 > 69, 111, 72.94, -9.96, 37.16, 1, 0
+12:47:01.399 > Data Index
+12:47:01.399 > 25
+12:47:01.695 > Curr Drive State
+12:47:01.695 > 2
+12:47:01.695 > Transmit Data To Cloud
+12:47:01.695 > 1
+12:47:01.695 > 51, 129, 75.14, -8.09, 42.13, 1, 0
+12:47:01.700 > Data Index
+12:47:01.700 > 26
+12:47:01.992 > Curr Drive State
+12:47:01.992 > 2
+12:47:01.992 > Transmit Data To Cloud
+12:47:01.992 > 1
+12:47:01.992 > 61, 118, 77.11, -6.01, 49.91, 1, 0
+12:47:01.999 > Data Index
+12:47:01.999 > 27
+12:47:02.295 > Curr Drive State
+12:47:02.295 > 2
+12:47:02.295 > Transmit Data To Cloud
+12:47:02.295 > 1
+12:47:02.295 > 60, 120, 78.82, -3.69, 56.90, 1, 0
+12:47:02.301 > Data Index
+12:47:02.301 > 28
+12:47:02.594 > Curr Drive State
+12:47:02.594 > 2
+12:47:02.594 > Transmit Data To Cloud
+12:47:02.594 > 1
+12:47:02.594 > 90, 90, 80.25, -1.19, 63.21, 1, 0
+12:47:02.594 > Data Index
+12:47:02.594 > 29
+12:47:02.889 > Curr Drive State
+12:47:02.889 > 2
+12:47:02.889 > Transmit Data To Cloud
+12:47:02.889 > 1
+12:47:02.889 > 58, 121, 81.56, 1.37, 65.18, 1, 0
+12:47:02.897 > Data Index
+12:47:02.897 > 30
+12:47:03.191 > Curr Drive State
+12:47:03.191 > 2
+12:47:03.191 > Transmit Data To Cloud
+12:47:03.191 > 1
+12:47:03.191 > 61, 118, 82.72, 4.01, 67.13, 1, 0
+12:47:03.199 > Finished collecting 30 pos points
+12:47:03.199 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:47:03.205 > 27.50,23.86,282.72,1,0
+12:47:03.207 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:47:03.207 > 28.14,21.07,283.96,1,0
+12:47:03.215 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:47:03.220 > 28.96,18.30,287.16,1,0
+12:47:03.220 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:47:03.224 > 29.92,15.58,290.32,1,0
+12:47:03.232 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:47:03.232 > 30.77,12.83,284.91,1,0
+12:47:03.240 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:47:03.240 > 31.66,10.10,290.14,1,0
+12:47:03.240 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:47:03.250 > 32.62,7.39,289.56,1,0
+12:47:03.250 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:47:03.257 > 33.65,4.71,293.14,1,0
+12:47:03.257 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:47:03.257 > 34.95,2.13,300.43,1,0
+12:47:03.257 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:47:03.270 > 36.54,-0.27,306.50,1,0
+12:47:03.273 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:47:03.273 > 38.18,-2.63,303.19,1,0
+12:47:03.273 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:47:03.286 > 39.82,-5.00,307.54,1,0
+12:47:03.286 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:47:03.290 > 41.75,-7.14,316.32,1,0
+12:47:03.290 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:47:03.298 > 43.93,-9.00,322.69,1,0
+12:47:03.306 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:47:03.306 > 46.22,-10.75,324.73,1,0
+12:47:03.306 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:47:03.314 > 48.68,-12.24,333.36,1,0
+12:47:03.314 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:47:03.322 > 51.32,-13.40,339.64,1,0
+12:47:03.322 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:47:03.322 > 54.07,-14.28,346.37,1,0
+12:47:03.322 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:47:03.330 > 56.89,-14.80,352.15,1,0
+12:47:03.338 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:47:03.338 > 59.76,-14.98,0.21,1,0
+12:47:03.338 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:47:03.346 > 62.63,-14.78,7.62,1,0
+12:47:03.346 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:47:03.354 > 65.43,-14.15,17.57,1,0
+12:47:03.362 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:47:03.362 > 68.08,-13.03,27.37,1,0
+12:47:03.370 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:47:03.370 > 70.55,-11.56,32.07,1,0
+12:47:03.370 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:47:03.378 > 72.94,-9.96,37.16,1,0
+12:47:03.378 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:47:03.386 > 75.14,-8.09,42.13,1,0
+12:47:03.386 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:47:03.386 > 77.11,-6.01,49.91,1,0
+12:47:03.386 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:47:03.394 > 78.82,-3.69,56.90,1,0
+12:47:03.402 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:47:03.402 > 80.25,-1.19,63.21,1,0
+12:47:03.402 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:47:03.411 > 81.56,1.37,65.18,1,0
+12:47:03.702 > Curr Drive State
+12:47:03.702 > 2
+12:47:03.702 > Transmit Data To Cloud
+12:47:03.702 > 1
+12:47:03.702 > 82, 97, 84.35, 8.63, 74.48, 1, 0
+12:47:03.710 > Data Index
+12:47:03.710 > 1
+12:47:04.001 > Curr Drive State
+12:47:04.001 > 2
+12:47:04.001 > Transmit Data To Cloud
+12:47:04.001 > 1
+12:47:04.001 > 73, 106, 84.95, 11.45, 80.86, 1, 0
+12:47:04.009 > Data Index
+12:47:04.009 > 2
+12:47:04.299 > Curr Drive State
+12:47:04.299 > 2
+12:47:04.299 > Transmit Data To Cloud
+12:47:04.299 > 1
+12:47:04.299 > 79, 100, 85.23, 14.31, 87.06, 1, 0
+12:47:04.307 > Data Index
+12:47:04.307 > 3
+12:47:04.600 > Curr Drive State
+12:47:04.600 > 2
+12:47:04.600 > Transmit Data To Cloud
+12:47:04.600 > 1
+12:47:04.600 > 75, 105, 85.14, 17.19, 95.48, 1, 0
+12:47:04.610 > Data Index
+12:47:04.610 > 4
+12:47:04.902 > Curr Drive State
+12:47:04.902 > 2
+12:47:04.902 > Transmit Data To Cloud
+12:47:04.902 > 1
+12:47:04.902 > 82, 97, 84.68, 20.04, 101.93, 1, 0
+12:47:04.909 > Data Index
+12:47:04.909 > 5
+12:47:05.201 > Curr Drive State
+12:47:05.201 > 2
+12:47:05.201 > Transmit Data To Cloud
+12:47:05.201 > 1
+12:47:05.201 > 78, 102, 84.10, 22.86, 102.93, 1, 0
+12:47:05.209 > Data Index
+12:47:05.209 > 6
+12:47:05.505 > Curr Drive State
+12:47:05.508 > 2
+12:47:05.508 > Transmit Data To Cloud
+12:47:05.508 > 1
+12:47:05.508 > 54, 126, 83.35, 25.64, 106.80, 1, 0
+12:47:05.512 > Data Index
+12:47:05.512 > 7
+12:47:05.804 > Curr Drive State
+12:47:05.804 > 2
+12:47:05.804 > Transmit Data To Cloud
+12:47:05.804 > 1
+12:47:05.804 > 61, 118, 82.28, 28.31, 115.94, 1, 0
+12:47:05.804 > Data Index
+12:47:05.804 > 8
+12:47:06.102 > Curr Drive State
+12:47:06.102 > 2
+12:47:06.102 > Transmit Data To Cloud
+12:47:06.102 > 1
+12:47:06.102 > 60, 120, 81.00, 30.90, 118.39, 1, 0
+12:47:06.110 > Data Index
+12:47:06.110 > 9
+12:47:06.403 > Curr Drive State
+12:47:06.403 > 2
+12:47:06.403 > Transmit Data To Cloud
+12:47:06.403 > 1
+12:47:06.403 > 49, 130, 79.44, 33.31, 127.14, 1, 0
+12:47:06.411 > Data Index
+12:47:06.411 > 10
+12:47:06.702 > Curr Drive State
+12:47:06.702 > 2
+12:47:06.702 > Transmit Data To Cloud
+12:47:06.702 > 1
+12:47:06.702 > 49, 130, 77.50, 35.41, 138.02, 1, 0
+12:47:06.710 > Data Index
+12:47:06.710 > 11
+12:47:07.001 > Curr Drive State
+12:47:07.001 > 2
+12:47:07.001 > Transmit Data To Cloud
+12:47:07.001 > 1
+12:47:07.001 > 61, 118, 75.33, 37.30, 137.82, 1, 0
+12:47:07.010 > Data Index
+12:47:07.010 > 12
+12:47:07.301 > Curr Drive State
+12:47:07.301 > 2
+12:47:07.301 > Transmit Data To Cloud
+12:47:07.301 > 1
+12:47:07.301 > 60, 120, 73.10, 39.12, 143.86, 1, 0
+12:47:07.309 > Data Index
+12:47:07.309 > 13
+12:47:07.602 > Curr Drive State
+12:47:07.602 > 2
+12:47:07.602 > Transmit Data To Cloud
+12:47:07.602 > 1
+12:47:07.602 > 48, 132, 70.72, 40.75, 148.51, 1, 0
+12:47:07.611 > Data Index
+12:47:07.611 > 14
+12:47:07.900 > Curr Drive State
+12:47:07.900 > 2
+12:47:07.900 > Transmit Data To Cloud
+12:47:07.900 > 1
+12:47:07.900 > 64, 115, 68.13, 42.01, 158.56, 1, 0
+12:47:07.911 > Data Index
+12:47:07.911 > 15
+12:47:08.207 > Curr Drive State
+12:47:08.207 > 2
+12:47:08.207 > Transmit Data To Cloud
+12:47:08.207 > 1
+12:47:08.207 > 61, 118, 65.40, 42.90, 165.26, 1, 0
+12:47:08.210 > Data Index
+12:47:08.210 > 16
+12:47:08.505 > Curr Drive State
+12:47:08.505 > 2
+12:47:08.505 > Transmit Data To Cloud
+12:47:08.505 > 1
+12:47:08.505 > 63, 117, 62.59, 43.52, 169.79, 1, 0
+12:47:08.509 > Data Index
+12:47:08.509 > 17
+12:47:08.800 > Curr Drive State
+12:47:08.800 > 2
+12:47:08.800 > Transmit Data To Cloud
+12:47:08.800 > 1
+12:47:08.800 > 51, 129, 59.72, 43.80, 178.23, 1, 0
+12:47:08.810 > Data Index
+12:47:08.810 > 18
+12:47:09.101 > Curr Drive State
+12:47:09.101 > 2
+12:47:09.101 > Transmit Data To Cloud
+12:47:09.101 > 1
+12:47:09.101 > 57, 123, 56.83, 43.74, 182.94, 1, 0
+12:47:09.111 > Data Index
+12:47:09.111 > 19
+12:47:09.404 > Curr Drive State
+12:47:09.404 > 2
+12:47:09.404 > Transmit Data To Cloud
+12:47:09.404 > 1
+12:47:09.404 > 60, 120, 53.96, 43.45, 188.06, 1, 0
+12:47:09.410 > Data Index
+12:47:09.410 > 20
+12:47:09.703 > Curr Drive State
+12:47:09.703 > 2
+12:47:09.703 > Transmit Data To Cloud
+12:47:09.703 > 1
+12:47:09.703 > 49, 130, 51.13, 42.92, 192.71, 1, 0
+12:47:09.709 > Data Index
+12:47:09.709 > 21
+12:47:10.003 > Curr Drive State
+12:47:10.003 > 2
+12:47:10.003 > Transmit Data To Cloud
+12:47:10.003 > 1
+12:47:10.003 > 52, 127, 48.38, 42.12, 198.63, 1, 0
+12:47:10.011 > Data Index
+12:47:10.011 > 22
+12:47:10.304 > Curr Drive State
+12:47:10.304 > 2
+12:47:10.304 > Transmit Data To Cloud
+12:47:10.304 > 1
+12:47:10.304 > 61, 118, 45.71, 41.04, 203.99, 1, 0
+12:47:10.311 > Data Index
+12:47:10.311 > 23
+12:47:10.606 > Curr Drive State
+12:47:10.606 > 2
+12:47:10.606 > Transmit Data To Cloud
+12:47:10.606 > 1
+12:47:10.606 > 57, 123, 43.12, 39.78, 206.73, 1, 0
+12:47:10.606 > Data Index
+12:47:10.606 > 24
+12:47:10.904 > Curr Drive State
+12:47:10.904 > 2
+12:47:10.904 > Transmit Data To Cloud
+12:47:10.904 > 1
+12:47:10.904 > 48, 132, 40.63, 38.33, 212.16, 1, 0
+12:47:10.909 > Data Index
+12:47:10.909 > 25
+12:47:11.204 > Curr Drive State
+12:47:11.204 > 2
+12:47:11.204 > Transmit Data To Cloud
+12:47:11.204 > 1
+12:47:11.204 > 108, 72, 38.21, 36.77, 211.07, 1, 0
+12:47:11.209 > Data Index
+12:47:11.209 > 26
+12:47:11.504 > Curr Drive State
+12:47:11.504 > 2
+12:47:11.504 > Transmit Data To Cloud
+12:47:11.504 > 1
+12:47:11.504 > 103, 76, 35.78, 35.23, 214.12, 1, 0
+12:47:11.510 > Data Index
+12:47:11.510 > 27
+12:47:11.805 > Curr Drive State
+12:47:11.805 > 2
+12:47:11.805 > Transmit Data To Cloud
+12:47:11.805 > 1
+12:47:11.805 > 49, 130, 33.43, 33.57, 216.15, 1, 0
+12:47:11.811 > Data Index
+12:47:11.811 > 28
+12:47:12.103 > Curr Drive State
+12:47:12.103 > 2
+12:47:12.103 > Transmit Data To Cloud
+12:47:12.103 > 1
+12:47:12.103 > 52, 127, 31.22, 31.72, 221.23, 1, 0
+12:47:12.109 > Data Index
+12:47:12.109 > 29
+12:47:12.401 > Curr Drive State
+12:47:12.401 > 2
+12:47:12.401 > Transmit Data To Cloud
+12:47:12.401 > 1
+12:47:12.401 > 61, 118, 29.12, 29.76, 224.91, 1, 0
+12:47:12.410 > Data Index
+12:47:12.410 > 30
+12:47:12.702 > Curr Drive State
+12:47:12.702 > 2
+12:47:12.702 > Transmit Data To Cloud
+12:47:12.702 > 1
+12:47:12.702 > 105, 75, 27.17, 27.62, 227.82, 1, 0
+12:47:12.710 > Finished collecting 30 pos points
+12:47:12.710 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:47:12.719 > 84.35,8.63,74.48,1,0
+12:47:12.719 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:47:12.719 > 84.95,11.45,80.86,1,0
+12:47:12.727 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:47:12.735 > 85.23,14.31,87.06,1,0
+12:47:12.735 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:47:12.735 > 85.14,17.19,95.48,1,0
+12:47:12.735 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:47:12.744 > 84.68,20.04,101.93,1,0
+12:47:12.744 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:47:12.751 > 84.10,22.86,102.93,1,0
+12:47:12.759 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:47:12.761 > 83.35,25.64,106.80,1,0
+12:47:12.761 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:47:12.768 > 82.28,28.31,115.94,1,0
+12:47:12.768 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:47:12.777 > 81.00,30.90,118.39,1,0
+12:47:12.777 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:47:12.777 > 79.44,33.31,127.14,1,0
+12:47:12.777 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:47:12.784 > 77.50,35.41,138.02,1,0
+12:47:12.784 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:47:12.792 > 75.33,37.30,137.82,1,0
+12:47:12.792 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:47:12.792 > 73.10,39.12,143.86,1,0
+12:47:12.800 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:47:12.811 > 70.72,40.75,148.51,1,0
+12:47:12.811 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:47:12.817 > 68.13,42.01,158.56,1,0
+12:47:12.825 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:47:12.825 > 65.40,42.90,165.26,1,0
+12:47:12.827 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:47:12.834 > 62.59,43.52,169.79,1,0
+12:47:12.834 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:47:12.842 > 59.72,43.80,178.23,1,0
+12:47:12.842 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:47:12.843 > 56.83,43.74,182.94,1,0
+12:47:12.843 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:47:12.850 > 53.96,43.45,188.06,1,0
+12:47:12.858 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:47:12.858 > 51.13,42.92,192.71,1,0
+12:47:12.860 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:47:12.867 > 48.38,42.12,198.63,1,0
+12:47:12.867 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:47:12.867 > 45.71,41.04,203.99,1,0
+12:47:12.867 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:47:12.877 > 43.12,39.78,206.73,1,0
+12:47:12.885 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:47:12.885 > 40.63,38.33,212.16,1,0
+12:47:12.894 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:47:12.894 > 38.21,36.77,211.07,1,0
+12:47:12.894 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:47:12.901 > 35.78,35.23,214.12,1,0
+12:47:12.901 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:47:12.910 > 33.43,33.57,216.15,1,0
+12:47:12.910 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:47:12.914 > 31.22,31.72,221.23,1,0
+12:47:12.918 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:47:12.918 > 29.12,29.76,224.91,1,0
+12:47:13.217 > Curr Drive State
+12:47:13.217 > 2
+12:47:13.217 > Transmit Data To Cloud
+12:47:13.217 > 1
+12:47:13.217 > 60, 120, 23.81, 24.02, 230.17, 1, 0
+12:47:13.217 > Data Index
+12:47:13.217 > 1
+12:47:13.518 > Curr Drive State
+12:47:13.518 > 2
+12:47:13.518 > Transmit Data To Cloud
+12:47:13.518 > 1
+12:47:13.518 > 52, 127, 22.15, 21.69, 238.71, 1, 0
+12:47:13.521 > Data Index
+12:47:13.521 > 2
+12:47:13.810 > Curr Drive State
+12:47:13.810 > 2
+12:47:13.810 > Transmit Data To Cloud
+12:47:13.810 > 1
+12:47:13.810 > 49, 130, 20.76, 19.17, 245.42, 1, 0
+12:47:13.818 > Data Index
+12:47:13.818 > 3
+12:47:14.113 > Curr Drive State
+12:47:14.113 > 2
+12:47:14.113 > Transmit Data To Cloud
+12:47:14.113 > 1
+12:47:14.113 > 61, 118, 19.74, 16.48, 252.75, 1, 0
+12:47:14.121 > Data Index
+12:47:14.121 > 4
+12:47:14.412 > Curr Drive State
+12:47:14.412 > 2
+12:47:14.412 > Transmit Data To Cloud
+12:47:14.412 > 1
+12:47:14.412 > 60, 120, 18.95, 13.71, 256.84, 1, 0
+12:47:14.420 > Data Index
+12:47:14.420 > 5
+12:47:14.716 > Curr Drive State
+12:47:14.717 > 2
+12:47:14.717 > Transmit Data To Cloud
+12:47:14.717 > 1
+12:47:14.717 > 49, 130, 18.52, 10.87, 266.32, 1, 0
+12:47:14.722 > Data Index
+12:47:14.722 > 6
+12:47:15.012 > Curr Drive State
+12:47:15.012 > 2
+12:47:15.012 > Transmit Data To Cloud
+12:47:15.012 > 1
+12:47:15.012 > 52, 127, 18.57, 7.99, 275.61, 1, 0
+12:47:15.022 > Data Index
+12:47:15.022 > 7
+12:47:15.312 > Curr Drive State
+12:47:15.312 > 2
+12:47:15.312 > Transmit Data To Cloud
+12:47:15.312 > 1
+12:47:15.312 > 61, 118, 19.06, 5.16, 283.48, 1, 0
+12:47:15.320 > Data Index
+12:47:15.320 > 8
+12:47:15.614 > Curr Drive State
+12:47:15.614 > 2
+12:47:15.614 > Transmit Data To Cloud
+12:47:15.614 > 1
+12:47:15.614 > 54, 126, 19.88, 2.40, 290.03, 1, 0
+12:47:15.621 > Data Index
+12:47:15.621 > 9
+12:47:15.915 > Curr Drive State
+12:47:15.915 > 2
+12:47:15.915 > Transmit Data To Cloud
+12:47:15.915 > 1
+12:47:15.915 > 51, 129, 21.09, -0.19, 299.82, 1, 0
+12:47:15.919 > Data Index
+12:47:15.919 > 10
+12:47:16.210 > Curr Drive State
+12:47:16.210 > 2
+12:47:16.210 > Transmit Data To Cloud
+12:47:16.210 > 1
+12:47:16.210 > 60, 120, 22.69, -2.59, 307.42, 1, 0
+12:47:16.218 > Data Index
+12:47:16.218 > 11
+12:47:16.517 > Curr Drive State
+12:47:16.517 > 2
+12:47:16.517 > Transmit Data To Cloud
+12:47:16.517 > 1
+12:47:16.517 > 57, 123, 24.56, -4.80, 313.25, 1, 0
+12:47:16.517 > Data Index
+12:47:16.517 > 12
+12:47:16.812 > Curr Drive State
+12:47:16.812 > 2
+12:47:16.812 > Transmit Data To Cloud
+12:47:16.812 > 1
+12:47:16.812 > 49, 130, 26.68, -6.74, 322.17, 1, 0
+12:47:16.820 > Data Index
+12:47:16.820 > 13
+12:47:17.113 > Curr Drive State
+12:47:17.113 > 2
+12:47:17.113 > Transmit Data To Cloud
+12:47:17.113 > 1
+12:47:17.113 > 58, 121, 29.07, -8.35, 329.37, 1, 0
+12:47:17.121 > Data Index
+12:47:17.121 > 14
+12:47:17.415 > Curr Drive State
+12:47:17.415 > 2
+12:47:17.415 > Transmit Data To Cloud
+12:47:17.415 > 1
+12:47:17.415 > 60, 120, 31.61, -9.70, 334.55, 1, 0
+12:47:17.418 > Data Index
+12:47:17.418 > 15
+12:47:17.711 > Curr Drive State
+12:47:17.719 > 2
+12:47:17.719 > Transmit Data To Cloud
+12:47:17.719 > 1
+12:47:17.719 > 45, 135, 34.28, -10.79, 341.12, 1, 0
+12:47:17.719 > Data Index
+12:47:17.719 > 16
+12:47:18.017 > Curr Drive State
+12:47:18.017 > 2
+12:47:18.017 > Transmit Data To Cloud
+12:47:18.017 > 1
+12:47:18.017 > 52, 127, 37.07, -11.52, 348.97, 1, 0
+12:47:18.017 > Data Index
+12:47:18.017 > 17
+12:47:18.318 > Curr Drive State
+12:47:18.318 > 2
+12:47:18.318 > Transmit Data To Cloud
+12:47:18.318 > 1
+12:47:18.318 > 91, 88, 39.91, -11.97, 350.39, 1, 0
+12:47:18.318 > Data Index
+12:47:18.318 > 18
+12:47:18.617 > Curr Drive State
+12:47:18.617 > 2
+12:47:18.617 > Transmit Data To Cloud
+12:47:18.617 > 1
+12:47:18.617 > 57, 123, 42.78, -12.34, 354.94, 1, 0
+12:47:18.621 > Data Index
+12:47:18.621 > 19
+12:47:18.918 > Curr Drive State
+12:47:18.918 > 2
+12:47:18.918 > Transmit Data To Cloud
+12:47:18.918 > 1
+12:47:18.918 > 100, 79, 45.65, -12.46, 357.03, 1, 0
+12:47:18.918 > Data Index
+12:47:18.918 > 20
+12:47:19.214 > Curr Drive State
+12:47:19.214 > 2
+12:47:19.214 > Transmit Data To Cloud
+12:47:19.214 > 1
+12:47:19.214 > 55, 124, 48.53, -12.43, 4.47, 1, 0
+12:47:19.222 > Data Index
+12:47:19.222 > 21
+12:47:19.518 > Curr Drive State
+12:47:19.518 > 2
+12:47:19.518 > Transmit Data To Cloud
+12:47:19.518 > 1
+12:47:19.518 > 55, 124, 51.40, -12.07, 8.75, 1, 0
+12:47:19.519 > Data Index
+12:47:19.519 > 22
+12:47:19.818 > Curr Drive State
+12:47:19.818 > 2
+12:47:19.818 > Transmit Data To Cloud
+12:47:19.818 > 1
+12:47:19.818 > 105, 75, 54.21, -11.51, 10.35, 1, 0
+12:47:19.823 > Data Index
+12:47:19.823 > 23
+12:47:20.111 > Curr Drive State
+12:47:20.111 > 2
+12:47:20.111 > Transmit Data To Cloud
+12:47:20.111 > 1
+12:47:20.111 > 52, 127, 57.03, -10.89, 13.99, 1, 0
+12:47:20.119 > Data Index
+12:47:20.119 > 24
+12:47:20.411 > Curr Drive State
+12:47:20.411 > 2
+12:47:20.411 > Transmit Data To Cloud
+12:47:20.411 > 1
+12:47:20.411 > 60, 120, 59.79, -10.05, 17.63, 1, 0
+12:47:20.419 > Data Index
+12:47:20.419 > 25
+12:47:20.717 > Curr Drive State
+12:47:20.717 > 2
+12:47:20.717 > Transmit Data To Cloud
+12:47:20.717 > 1
+12:47:20.717 > 51, 129, 62.50, -9.06, 21.15, 1, 0
+12:47:20.719 > Data Index
+12:47:20.719 > 26
+12:47:21.017 > Curr Drive State
+12:47:21.017 > 2
+12:47:21.017 > Transmit Data To Cloud
+12:47:21.017 > 1
+12:47:21.017 > 49, 130, 65.17, -7.96, 23.14, 1, 0
+12:47:21.017 > Data Index
+12:47:21.017 > 27
+12:47:21.316 > Curr Drive State
+12:47:21.316 > 2
+12:47:21.316 > Transmit Data To Cloud
+12:47:21.316 > 1
+12:47:21.316 > 117, 63, 67.74, -6.68, 25.71, 1, 0
+12:47:21.316 > Data Index
+12:47:21.316 > 28
+12:47:21.618 > Curr Drive State
+12:47:21.618 > 2
+12:47:21.618 > Transmit Data To Cloud
+12:47:21.618 > 1
+12:47:21.618 > 109, 70, 70.36, -5.45, 23.60, 1, 0
+12:47:21.618 > Data Index
+12:47:21.618 > 29
+12:47:21.911 > Curr Drive State
+12:47:21.911 > 2
+12:47:21.911 > Transmit Data To Cloud
+12:47:21.911 > 1
+12:47:21.911 > 49, 130, 72.98, -4.27, 25.18, 1, 0
+12:47:21.921 > Data Index
+12:47:21.921 > 30
+12:47:22.210 > Curr Drive State
+12:47:22.218 > 2
+12:47:22.218 > Transmit Data To Cloud
+12:47:22.218 > 1
+12:47:22.218 > 55, 124, 75.48, -2.85, 30.80, 1, 0
+12:47:22.222 > Finished collecting 30 pos points
+12:47:22.222 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:47:22.229 > 23.81,24.02,230.17,1,0
+12:47:22.229 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:47:22.229 > 22.15,21.69,238.71,1,0
+12:47:22.238 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:47:22.246 > 20.76,19.17,245.42,1,0
+12:47:22.246 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:47:22.246 > 19.74,16.48,252.75,1,0
+12:47:22.246 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:47:22.252 > 18.95,13.71,256.84,1,0
+12:47:22.252 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:47:22.260 > 18.52,10.87,266.32,1,0
+12:47:22.260 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:47:22.268 > 18.57,7.99,275.61,1,0
+12:47:22.268 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:47:22.268 > 19.06,5.16,283.48,1,0
+12:47:22.277 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:47:22.285 > 19.88,2.40,290.03,1,0
+12:47:22.285 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:47:22.285 > 21.09,-0.19,299.82,1,0
+12:47:22.293 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:47:22.293 > 22.69,-2.59,307.42,1,0
+12:47:22.301 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:47:22.310 > 24.56,-4.80,313.25,1,0
+12:47:22.310 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:47:22.311 > 26.68,-6.74,322.17,1,0
+12:47:22.311 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:47:22.318 > 29.07,-8.35,329.37,1,0
+12:47:22.318 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:47:22.326 > 31.61,-9.70,334.55,1,0
+12:47:22.327 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:47:22.327 > 34.28,-10.79,341.12,1,0
+12:47:22.334 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:47:22.343 > 37.07,-11.52,348.97,1,0
+12:47:22.343 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:47:22.348 > 39.91,-11.97,350.39,1,0
+12:47:22.351 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:47:22.351 > 42.78,-12.34,354.94,1,0
+12:47:22.362 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:47:22.367 > 45.65,-12.46,357.03,1,0
+12:47:22.367 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:47:22.371 > 48.53,-12.43,4.47,1,0
+12:47:22.371 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:47:22.377 > 51.40,-12.07,8.75,1,0
+12:47:22.377 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:47:22.383 > 54.21,-11.51,10.35,1,0
+12:47:22.383 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:47:22.383 > 57.03,-10.89,13.99,1,0
+12:47:22.393 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:47:22.399 > 59.79,-10.05,17.63,1,0
+12:47:22.399 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:47:22.399 > 62.50,-9.06,21.15,1,0
+12:47:22.399 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:47:22.408 > 65.17,-7.96,23.14,1,0
+12:47:22.416 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:47:22.416 > 67.74,-6.68,25.71,1,0
+12:47:22.424 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:47:22.424 > 70.36,-5.45,23.60,1,0
+12:47:22.424 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:47:22.432 > 72.98,-4.27,25.18,1,0
+12:47:22.727 > Curr Drive State
+12:47:22.727 > 2
+12:47:22.727 > Transmit Data To Cloud
+12:47:22.727 > 1
+12:47:22.727 > 49, 130, 79.45, 0.11, 41.43, 1, 0
+12:47:22.735 > Data Index
+12:47:22.735 > 1
+12:47:23.027 > Curr Drive State
+12:47:23.027 > 2
+12:47:23.027 > Transmit Data To Cloud
+12:47:23.027 > 1
+12:47:23.027 > 60, 120, 81.45, 2.19, 49.43, 1, 0
+12:47:23.034 > Data Index
+12:47:23.034 > 2
+12:47:23.327 > Curr Drive State
+12:47:23.327 > 2
+12:47:23.327 > Transmit Data To Cloud
+12:47:23.327 > 1
+12:47:23.327 > 57, 123, 83.30, 4.39, 53.23, 1, 0
+12:47:23.335 > Data Index
+12:47:23.335 > 3
+12:47:23.627 > Curr Drive State
+12:47:23.627 > 2
+12:47:23.627 > Transmit Data To Cloud
+12:47:23.627 > 1
+12:47:23.627 > 48, 132, 84.81, 6.83, 63.50, 1, 0
+12:47:23.635 > Data Index
+12:47:23.635 > 4
+12:47:23.927 > Curr Drive State
+12:47:23.927 > 2
+12:47:23.927 > Transmit Data To Cloud
+12:47:23.927 > 1
+12:47:23.927 > 55, 124, 85.88, 9.50, 72.63, 1, 0
+12:47:23.934 > Data Index
+12:47:23.934 > 5
+12:47:24.231 > Curr Drive State
+12:47:24.231 > 2
+12:47:24.231 > Transmit Data To Cloud
+12:47:24.231 > 1
+12:47:24.231 > 57, 123, 86.82, 12.23, 70.36, 1, 0
+12:47:24.231 > Data Index
+12:47:24.231 > 6
+12:47:24.532 > Curr Drive State
+12:47:24.532 > 2
+12:47:24.532 > Transmit Data To Cloud
+12:47:24.532 > 1
+12:47:24.532 > 49, 130, 87.58, 15.01, 78.85, 1, 0
+12:47:24.533 > Data Index
+12:47:24.533 > 7
+12:47:24.827 > Curr Drive State
+12:47:24.827 > 2
+12:47:24.827 > Transmit Data To Cloud
+12:47:24.827 > 1
+12:47:24.827 > 51, 129, 88.03, 17.86, 84.73, 1, 0
+12:47:24.835 > Data Index
+12:47:24.835 > 8
+12:47:25.129 > Curr Drive State
+12:47:25.129 > 2
+12:47:25.129 > Transmit Data To Cloud
+12:47:25.129 > 1
+12:47:25.129 > 57, 123, 88.07, 20.74, 92.75, 1, 0
+12:47:25.137 > Data Index
+12:47:25.137 > 9
+12:47:25.432 > Curr Drive State
+12:47:25.432 > 2
+12:47:25.432 > Transmit Data To Cloud
+12:47:25.432 > 1
+12:47:25.432 > 51, 129, 87.88, 23.61, 96.52, 1, 0
+12:47:25.437 > Data Index
+12:47:25.437 > 10
+12:47:25.733 > Curr Drive State
+12:47:25.733 > 2
+12:47:25.733 > Transmit Data To Cloud
+12:47:25.733 > 1
+12:47:25.733 > 49, 130, 87.41, 26.45, 102.82, 1, 0
+12:47:25.733 > Data Index
+12:47:25.733 > 11
+12:47:26.032 > Curr Drive State
+12:47:26.032 > 2
+12:47:26.032 > Transmit Data To Cloud
+12:47:26.032 > 1
+12:47:26.032 > 60, 120, 86.66, 29.24, 107.61, 1, 0
+12:47:26.032 > Data Index
+12:47:26.032 > 12
+12:47:26.333 > Curr Drive State
+12:47:26.334 > 2
+12:47:26.334 > Transmit Data To Cloud
+12:47:26.334 > 1
+12:47:26.334 > 54, 126, 85.74, 31.98, 110.76, 1, 0
+12:47:26.334 > Data Index
+12:47:26.334 > 13
+12:47:26.631 > Curr Drive State
+12:47:26.631 > 2
+12:47:26.631 > Transmit Data To Cloud
+12:47:26.631 > 1
+12:47:26.631 > 114, 66, 84.58, 34.62, 116.24, 1, 0
+12:47:26.631 > Data Index
+12:47:26.631 > 14
+12:47:26.929 > Curr Drive State
+12:47:26.929 > 2
+12:47:26.929 > Transmit Data To Cloud
+12:47:26.929 > 1
+12:47:26.929 > 61, 118, 83.28, 37.18, 119.86, 1, 0
+12:47:26.938 > Data Index
+12:47:26.938 > 15
+12:47:27.227 > Curr Drive State
+12:47:27.227 > 2
+12:47:27.227 > Transmit Data To Cloud
+12:47:27.227 > 1
+12:47:27.227 > 67, 112, 81.78, 39.64, 119.44, 1, 0
+12:47:27.234 > Data Index
+12:47:27.234 > 16
+12:47:27.533 > Curr Drive State
+12:47:27.533 > 2
+12:47:27.533 > Transmit Data To Cloud
+12:47:27.533 > 1
+12:47:27.533 > 60, 120, 80.31, 42.11, 122.50, 1, 0
+12:47:27.538 > Data Index
+12:47:27.538 > 17
+12:47:27.833 > Curr Drive State
+12:47:27.833 > 2
+12:47:27.833 > Transmit Data To Cloud
+12:47:27.833 > 1
+12:47:27.833 > 58, 121, 78.63, 44.45, 128.22, 1, 0
+12:47:27.838 > Data Index
+12:47:27.838 > 18
+12:47:28.133 > Curr Drive State
+12:47:28.133 > 2
+12:47:28.133 > Transmit Data To Cloud
+12:47:28.133 > 1
+12:47:28.133 > 64, 115, 76.77, 46.66, 130.97, 1, 0
+12:47:28.133 > Data Index
+12:47:28.133 > 19
+12:47:28.427 > Curr Drive State
+12:47:28.427 > 2
+12:47:28.427 > Transmit Data To Cloud
+12:47:28.427 > 1
+12:47:28.427 > 60, 120, 74.86, 48.82, 131.94, 1, 0
+12:47:28.433 > Data Index
+12:47:28.433 > 20
+12:47:28.729 > Curr Drive State
+12:47:28.729 > 2
+12:47:28.729 > Transmit Data To Cloud
+12:47:28.729 > 1
+12:47:28.729 > 60, 120, 72.85, 50.89, 135.27, 1, 0
+12:47:28.735 > Data Index
+12:47:28.735 > 21
+12:47:29.028 > Curr Drive State
+12:47:29.028 > 2
+12:47:29.028 > Transmit Data To Cloud
+12:47:29.028 > 1
+12:47:29.028 > 60, 120, 70.74, 52.85, 137.93, 1, 0
+12:47:29.036 > Data Index
+12:47:29.036 > 22
+12:47:29.327 > Curr Drive State
+12:47:29.327 > 2
+12:47:29.327 > Transmit Data To Cloud
+12:47:29.327 > 1
+12:47:29.327 > 67, 112, 68.55, 54.72, 139.65, 1, 0
+12:47:29.336 > Data Index
+12:47:29.336 > 23
+12:47:29.631 > Curr Drive State
+12:47:29.631 > 2
+12:47:29.631 > Transmit Data To Cloud
+12:47:29.631 > 1
+12:47:29.631 > 49, 130, 66.30, 56.52, 142.13, 1, 0
+12:47:29.631 > Data Index
+12:47:29.631 > 24
+12:47:29.930 > Curr Drive State
+12:47:29.930 > 2
+12:47:29.930 > Transmit Data To Cloud
+12:47:29.930 > 1
+12:47:29.930 > 120, 60, 63.92, 58.16, 144.18, 1, 0
+12:47:29.938 > Data Index
+12:47:29.938 > 25
+12:47:30.226 > Curr Drive State
+12:47:30.226 > 2
+12:47:30.226 > Transmit Data To Cloud
+12:47:30.226 > 1
+12:47:30.226 > 97, 82, 61.54, 59.77, 148.38, 1, 0
+12:47:30.236 > Data Index
+12:47:30.236 > 26
+12:47:30.533 > Curr Drive State
+12:47:30.533 > 2
+12:47:30.533 > Transmit Data To Cloud
+12:47:30.533 > 1
+12:47:30.533 > 51, 129, 59.06, 61.24, 150.02, 1, 0
+12:47:30.535 > Data Index
+12:47:30.535 > 27
+12:47:30.829 > Curr Drive State
+12:47:30.829 > 2
+12:47:30.829 > Transmit Data To Cloud
+12:47:30.829 > 1
+12:47:30.829 > 48, 132, 56.46, 62.49, 156.19, 1, 0
+12:47:30.837 > Data Index
+12:47:30.837 > 28
+12:47:31.128 > Curr Drive State
+12:47:31.128 > 2
+12:47:31.128 > Transmit Data To Cloud
+12:47:31.128 > 1
+12:47:31.128 > 58, 121, 53.75, 63.46, 161.38, 1, 0
+12:47:31.138 > Data Index
+12:47:31.138 > 29
+12:47:31.433 > Curr Drive State
+12:47:31.434 > 2
+12:47:31.434 > Transmit Data To Cloud
+12:47:31.434 > 1
+12:47:31.434 > 58, 121, 50.98, 64.24, 164.43, 1, 0
+12:47:31.436 > Data Index
+12:47:31.436 > 30
+12:47:31.728 > Curr Drive State
+12:47:31.728 > 2
+12:47:31.728 > Transmit Data To Cloud
+12:47:31.728 > 1
+12:47:31.728 > 109, 70, 48.17, 64.83, 168.42, 1, 0
+12:47:31.736 > Finished collecting 30 pos points
+12:47:31.736 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:47:31.736 > 79.45,0.11,41.43,1,0
+12:47:31.744 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:47:31.744 > 81.45,2.19,49.43,1,0
+12:47:31.752 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:47:31.760 > 83.30,4.39,53.23,1,0
+12:47:31.760 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:47:31.760 > 84.81,6.83,63.50,1,0
+12:47:31.760 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:47:31.768 > 85.88,9.50,72.63,1,0
+12:47:31.768 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:47:31.777 > 86.82,12.23,70.36,1,0
+12:47:31.777 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:47:31.777 > 87.58,15.01,78.85,1,0
+12:47:31.784 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:47:31.784 > 88.03,17.86,84.73,1,0
+12:47:31.794 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:47:31.794 > 88.07,20.74,92.75,1,0
+12:47:31.800 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:47:31.804 > 87.88,23.61,96.52,1,0
+12:47:31.804 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:47:31.804 > 87.41,26.45,102.82,1,0
+12:47:31.804 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:47:31.812 > 86.66,29.24,107.61,1,0
+12:47:31.820 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:47:31.820 > 85.74,31.98,110.76,1,0
+12:47:31.828 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:47:31.836 > 84.58,34.62,116.24,1,0
+12:47:31.836 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:47:31.836 > 83.28,37.18,119.86,1,0
+12:47:31.836 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:47:31.844 > 81.78,39.64,119.44,1,0
+12:47:31.844 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:47:31.852 > 80.31,42.11,122.50,1,0
+12:47:31.860 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:47:31.860 > 78.63,44.45,128.22,1,0
+12:47:31.861 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:47:31.869 > 76.77,46.66,130.97,1,0
+12:47:31.869 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:47:31.869 > 74.86,48.82,131.94,1,0
+12:47:31.869 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:47:31.877 > 72.85,50.89,135.27,1,0
+12:47:31.886 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:47:31.886 > 70.74,52.85,137.93,1,0
+12:47:31.893 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:47:31.893 > 68.55,54.72,139.65,1,0
+12:47:31.893 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:47:31.903 > 66.30,56.52,142.13,1,0
+12:47:31.903 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:47:31.910 > 63.92,58.16,144.18,1,0
+12:47:31.910 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:47:31.918 > 61.54,59.77,148.38,1,0
+12:47:31.919 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:47:31.919 > 59.06,61.24,150.02,1,0
+12:47:31.926 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:47:31.934 > 56.46,62.49,156.19,1,0
+12:47:31.934 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:47:31.934 > 53.75,63.46,161.38,1,0
+12:47:31.934 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:47:31.942 > 50.98,64.24,164.43,1,0
+12:47:32.248 > Curr Drive State
+12:47:32.251 > 2
+12:47:32.251 > Transmit Data To Cloud
+12:47:32.251 > 1
+12:47:32.251 > 58, 121, 43.43, 66.23, 165.15, 1, 0
+12:47:32.251 > Data Index
+12:47:32.251 > 1
+12:47:32.544 > Curr Drive State
+12:47:32.544 > 2
+12:47:32.544 > Transmit Data To Cloud
+12:47:32.544 > 1
+12:47:32.544 > 61, 118, 40.64, 66.93, 169.32, 1, 0
+12:47:32.553 > Data Index
+12:47:32.553 > 2
+12:47:32.844 > Curr Drive State
+12:47:32.844 > 2
+12:47:32.844 > Transmit Data To Cloud
+12:47:32.844 > 1
+12:47:32.844 > 115, 64, 37.80, 67.40, 168.43, 1, 0
+12:47:32.852 > Data Index
+12:47:32.852 > 3
+12:47:33.144 > Curr Drive State
+12:47:33.144 > 2
+12:47:33.144 > Transmit Data To Cloud
+12:47:33.144 > 1
+12:47:33.144 > 58, 121, 34.97, 67.94, 170.01, 1, 0
+12:47:33.150 > Data Index
+12:47:33.150 > 4
+12:47:33.449 > Curr Drive State
+12:47:33.449 > 2
+12:47:33.449 > Transmit Data To Cloud
+12:47:33.449 > 1
+12:47:33.449 > 49, 130, 32.11, 68.36, 175.75, 1, 0
+12:47:33.449 > Data Index
+12:47:33.449 > 5
+12:47:33.748 > Curr Drive State
+12:47:33.748 > 2
+12:47:33.748 > Transmit Data To Cloud
+12:47:33.748 > 1
+12:47:33.748 > 64, 115, 29.23, 68.41, 182.12, 1, 0
+12:47:33.748 > Data Index
+12:47:33.748 > 6
+12:47:34.043 > Curr Drive State
+12:47:34.059 > 2
+12:47:34.059 > Transmit Data To Cloud
+12:47:34.059 > 1
+12:47:34.059 > 61, 118, 26.36, 68.30, 184.14, 1, 0
+12:47:34.059 > Data Index
+12:47:34.059 > 7
+12:47:34.343 > Curr Drive State
+12:47:34.343 > 2
+12:47:34.343 > Transmit Data To Cloud
+12:47:34.343 > 1
+12:47:34.343 > 54, 126, 23.50, 67.99, 189.53, 1, 0
+12:47:34.350 > Data Index
+12:47:34.350 > 8
+12:47:34.641 > Curr Drive State
+12:47:34.649 > 2
+12:47:34.649 > Transmit Data To Cloud
+12:47:34.649 > 1
+12:47:34.649 > 60, 120, 20.66, 67.48, 191.93, 1, 0
+12:47:34.649 > Data Index
+12:47:34.649 > 9
+12:47:34.948 > Curr Drive State
+12:47:34.948 > 2
+12:47:34.948 > Transmit Data To Cloud
+12:47:34.948 > 1
+12:47:34.948 > 63, 117, 17.83, 66.91, 189.81, 1, 0
+12:47:34.948 > Data Index
+12:47:34.948 > 10
+12:47:35.248 > Curr Drive State
+12:47:35.248 > 2
+12:47:35.248 > Transmit Data To Cloud
+12:47:35.248 > 1
+12:47:35.248 > 57, 123, 15.03, 66.23, 197.46, 1, 0
+12:47:35.253 > Data Index
+12:47:35.253 > 11
+12:47:35.543 > Curr Drive State
+12:47:35.543 > 2
+12:47:35.543 > Transmit Data To Cloud
+12:47:35.543 > 1
+12:47:35.543 > 49, 130, 12.31, 65.28, 201.87, 1, 0
+12:47:35.551 > Data Index
+12:47:35.551 > 12
+12:47:35.845 > Curr Drive State
+12:47:35.845 > 2
+12:47:35.845 > Transmit Data To Cloud
+12:47:35.845 > 1
+12:47:35.845 > 60, 120, 9.67, 64.11, 205.91, 1, 0
+12:47:35.853 > Data Index
+12:47:35.853 > 13
+12:47:36.145 > Curr Drive State
+12:47:36.145 > 2
+12:47:36.145 > Transmit Data To Cloud
+12:47:36.145 > 1
+12:47:36.145 > 55, 124, 7.14, 62.75, 211.16, 1, 0
+12:47:36.151 > Data Index
+12:47:36.151 > 14
+12:47:36.449 > Curr Drive State
+12:47:36.449 > 2
+12:47:36.449 > Transmit Data To Cloud
+12:47:36.449 > 1
+12:47:36.449 > 49, 130, 4.75, 61.16, 213.56, 1, 0
+12:47:36.449 > Data Index
+12:47:36.449 > 15
+12:47:36.747 > Curr Drive State
+12:47:36.747 > 2
+12:47:36.747 > Transmit Data To Cloud
+12:47:36.747 > 1
+12:47:36.747 > 112, 67, 2.41, 59.48, 214.95, 1, 0
+12:47:36.747 > Data Index
+12:47:36.747 > 16
+12:47:37.045 > Curr Drive State
+12:47:37.045 > 2
+12:47:37.045 > Transmit Data To Cloud
+12:47:37.045 > 1
+12:47:37.045 > 105, 75, -0.05, 57.96, 209.25, 1, 0
+12:47:37.053 > Data Index
+12:47:37.053 > 17
+12:47:37.343 > Curr Drive State
+12:47:37.343 > 2
+12:47:37.343 > Transmit Data To Cloud
+12:47:37.343 > 1
+12:47:37.343 > 109, 70, -2.52, 56.48, 209.37, 1, 0
+12:47:37.351 > Data Index
+12:47:37.351 > 18
+12:47:37.642 > Curr Drive State
+12:47:37.650 > 2
+12:47:37.650 > Transmit Data To Cloud
+12:47:37.650 > 1
+12:47:37.650 > 51, 129, -4.94, 54.92, 215.66, 1, 0
+12:47:37.655 > Data Index
+12:47:37.655 > 19
+12:47:37.949 > Curr Drive State
+12:47:37.949 > 2
+12:47:37.949 > Transmit Data To Cloud
+12:47:37.949 > 1
+12:47:37.949 > 60, 120, -7.20, 53.13, 220.20, 1, 0
+12:47:37.949 > Data Index
+12:47:37.949 > 20
+12:47:38.245 > Curr Drive State
+12:47:38.245 > 2
+12:47:38.245 > Transmit Data To Cloud
+12:47:38.245 > 1
+12:47:38.245 > 60, 120, -9.32, 51.18, 223.66, 1, 0
+12:47:38.253 > Data Index
+12:47:38.253 > 21
+12:47:38.543 > Curr Drive State
+12:47:38.543 > 2
+12:47:38.543 > Transmit Data To Cloud
+12:47:38.543 > 1
+12:47:38.543 > 99, 81, -11.40, 49.19, 222.18, 1, 0
+12:47:38.550 > Data Index
+12:47:38.550 > 22
+12:47:38.849 > Curr Drive State
+12:47:38.849 > 2
+12:47:38.849 > Transmit Data To Cloud
+12:47:38.849 > 1
+12:47:38.849 > 103, 76, -13.54, 47.26, 222.93, 1, 0
+12:47:38.852 > Data Index
+12:47:38.852 > 23
+12:47:39.147 > Curr Drive State
+12:47:39.147 > 2
+12:47:39.147 > Transmit Data To Cloud
+12:47:39.147 > 1
+12:47:39.147 > 63, 117, -15.63, 45.27, 224.25, 1, 0
+12:47:39.147 > Data Index
+12:47:39.147 > 24
+12:47:39.447 > Curr Drive State
+12:47:39.447 > 2
+12:47:39.447 > Transmit Data To Cloud
+12:47:39.447 > 1
+12:47:39.447 > 49, 130, -17.56, 43.12, 231.11, 1, 0
+12:47:39.447 > Data Index
+12:47:39.447 > 25
+12:47:39.747 > Curr Drive State
+12:47:39.747 > 2
+12:47:39.747 > Transmit Data To Cloud
+12:47:39.747 > 1
+12:47:39.747 > 51, 129, -19.22, 40.77, 236.06, 1, 0
+12:47:39.747 > Data Index
+12:47:39.747 > 26
+12:47:40.044 > Curr Drive State
+12:47:40.044 > 2
+12:47:40.044 > Transmit Data To Cloud
+12:47:40.044 > 1
+12:47:40.044 > 109, 70, -20.69, 38.28, 239.11, 1, 0
+12:47:40.052 > Data Index
+12:47:40.052 > 27
+12:47:40.343 > Curr Drive State
+12:47:40.343 > 2
+12:47:40.343 > Transmit Data To Cloud
+12:47:40.343 > 1
+12:47:40.343 > 64, 115, -22.12, 35.78, 244.14, 1, 0
+12:47:40.351 > Data Index
+12:47:40.351 > 28
+12:47:40.644 > Curr Drive State
+12:47:40.644 > 2
+12:47:40.644 > Transmit Data To Cloud
+12:47:40.644 > 1
+12:47:40.644 > 49, 130, -23.22, 33.14, 248.44, 1, 0
+12:47:40.653 > Data Index
+12:47:40.653 > 29
+12:47:40.942 > Curr Drive State
+12:47:40.942 > 2
+12:47:40.942 > Transmit Data To Cloud
+12:47:40.942 > 1
+12:47:40.942 > 54, 126, -24.08, 30.40, 253.25, 1, 0
+12:47:40.950 > Data Index
+12:47:40.950 > 30
+12:47:41.247 > Curr Drive State
+12:47:41.247 > 2
+12:47:41.247 > Transmit Data To Cloud
+12:47:41.247 > 1
+12:47:41.247 > 49, 130, -24.74, 27.59, 257.26, 1, 0
+12:47:41.247 > Finished collecting 30 pos points
+12:47:41.247 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:47:41.255 > 43.43,66.23,165.15,1,0
+12:47:41.263 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:47:41.263 > 40.64,66.93,169.32,1,0
+12:47:41.271 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:47:41.271 > 37.80,67.40,168.43,1,0
+12:47:41.271 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:47:41.279 > 34.97,67.94,170.01,1,0
+12:47:41.279 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:47:41.287 > 32.11,68.36,175.75,1,0
+12:47:41.295 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:47:41.295 > 29.23,68.41,182.12,1,0
+12:47:41.295 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:47:41.303 > 26.36,68.30,184.14,1,0
+12:47:41.303 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:47:41.311 > 23.50,67.99,189.53,1,0
+12:47:41.311 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:47:41.311 > 20.66,67.48,191.93,1,0
+12:47:41.311 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:47:41.319 > 17.83,66.91,189.81,1,0
+12:47:41.319 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:47:41.327 > 15.03,66.23,197.46,1,0
+12:47:41.335 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:47:41.335 > 12.31,65.28,201.87,1,0
+12:47:41.335 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:47:41.343 > 9.67,64.11,205.91,1,0
+12:47:41.343 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:47:41.351 > 7.14,62.75,211.16,1,0
+12:47:41.359 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:47:41.359 > 4.75,61.16,213.56,1,0
+12:47:41.359 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:47:41.367 > 2.41,59.48,214.95,1,0
+12:47:41.367 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:47:41.376 > -0.05,57.96,209.25,1,0
+12:47:41.376 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:47:41.376 > -2.52,56.48,209.37,1,0
+12:47:41.376 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:47:41.384 > -4.94,54.92,215.66,1,0
+12:47:41.384 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:47:41.394 > -7.20,53.13,220.20,1,0
+12:47:41.394 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:47:41.400 > -9.32,51.18,223.66,1,0
+12:47:41.400 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:47:41.410 > -11.40,49.19,222.18,1,0
+12:47:41.410 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:47:41.417 > -13.54,47.26,222.93,1,0
+12:47:41.417 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:47:41.417 > -15.63,45.27,224.25,1,0
+12:47:41.426 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:47:41.433 > -17.56,43.12,231.11,1,0
+12:47:41.433 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:47:41.441 > -19.22,40.77,236.06,1,0
+12:47:41.441 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:47:41.441 > -20.69,38.28,239.11,1,0
+12:47:41.441 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:47:41.449 > -22.12,35.78,244.14,1,0
+12:47:41.457 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:47:41.457 > -23.22,33.14,248.44,1,0
+12:47:41.457 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:47:41.465 > -24.08,30.40,253.25,1,0
+12:47:41.759 > Curr Drive State
+12:47:41.759 > 2
+12:47:41.759 > Transmit Data To Cloud
+12:47:41.759 > 1
+12:47:41.759 > 58, 121, -26.19, 22.89, 254.79, 1, 0
+12:47:41.763 > Data Index
+12:47:41.763 > 1
+12:47:42.056 > Curr Drive State
+12:47:42.056 > 2
+12:47:42.056 > Transmit Data To Cloud
+12:47:42.056 > 1
+12:47:42.056 > 49, 130, -27.03, 20.12, 254.11, 1, 0
+12:47:42.065 > Data Index
+12:47:42.065 > 2
+12:47:42.355 > Curr Drive State
+12:47:42.355 > 2
+12:47:42.355 > Transmit Data To Cloud
+12:47:42.355 > 1
+12:47:42.355 > 49, 130, -27.73, 17.33, 260.19, 1, 0
+12:47:42.363 > Data Index
+12:47:42.363 > 3
+12:47:42.654 > Curr Drive State
+12:47:42.654 > 2
+12:47:42.654 > Transmit Data To Cloud
+12:47:42.654 > 1
+12:47:42.654 > 58, 121, -28.15, 14.49, 264.64, 1, 0
+12:47:42.662 > Data Index
+12:47:42.662 > 4
+12:47:42.960 > Curr Drive State
+12:47:42.960 > 2
+12:47:42.960 > Transmit Data To Cloud
+12:47:42.960 > 1
+12:47:42.960 > 54, 126, -28.32, 11.62, 270.06, 1, 0
+12:47:42.960 > Data Index
+12:47:42.960 > 5
+12:47:43.260 > Curr Drive State
+12:47:43.260 > 2
+12:47:43.260 > Transmit Data To Cloud
+12:47:43.260 > 1
+12:47:43.260 > 49, 130, -28.18, 8.74, 277.08, 1, 0
+12:47:43.260 > Data Index
+12:47:43.260 > 6
+12:47:43.556 > Curr Drive State
+12:47:43.556 > 2
+12:47:43.556 > Transmit Data To Cloud
+12:47:43.556 > 1
+12:47:43.556 > 55, 124, -27.73, 5.90, 282.21, 1, 0
+12:47:43.564 > Data Index
+12:47:43.564 > 7
+12:47:43.854 > Curr Drive State
+12:47:43.854 > 2
+12:47:43.854 > Transmit Data To Cloud
+12:47:43.854 > 1
+12:47:43.854 > 66, 114, -27.05, 3.09, 286.01, 1, 0
+12:47:43.862 > Data Index
+12:47:43.862 > 8
+12:47:44.162 > Curr Drive State
+12:47:44.162 > 2
+12:47:44.162 > Transmit Data To Cloud
+12:47:44.162 > 1
+12:47:44.162 > 52, 127, -26.21, 0.33, 289.48, 1, 0
+12:47:44.162 > Data Index
+12:47:44.162 > 9
+12:47:44.460 > Curr Drive State
+12:47:44.460 > 2
+12:47:44.460 > Transmit Data To Cloud
+12:47:44.460 > 1
+12:47:44.460 > 52, 127, -25.17, -2.35, 294.29, 1, 0
+12:47:44.465 > Data Index
+12:47:44.465 > 10
+12:47:44.760 > Curr Drive State
+12:47:44.760 > 2
+12:47:44.760 > Transmit Data To Cloud
+12:47:44.760 > 1
+12:47:44.760 > 60, 120, -23.93, -4.95, 297.44, 1, 0
+12:47:44.760 > Data Index
+12:47:44.760 > 11
+12:47:45.061 > Curr Drive State
+12:47:45.061 > 2
+12:47:45.061 > Transmit Data To Cloud
+12:47:45.061 > 1
+12:47:45.061 > 60, 120, -22.55, -7.48, 300.23, 1, 0
+12:47:45.061 > Data Index
+12:47:45.061 > 12
+12:47:45.360 > Curr Drive State
+12:47:45.360 > 2
+12:47:45.360 > Transmit Data To Cloud
+12:47:45.360 > 1
+12:47:45.360 > 108, 72, -21.02, -9.92, 304.54, 1, 0
+12:47:45.368 > Data Index
+12:47:45.368 > 13
+12:47:45.659 > Curr Drive State
+12:47:45.659 > 2
+12:47:45.659 > Transmit Data To Cloud
+12:47:45.659 > 1
+12:47:45.659 > 60, 120, -19.44, -12.33, 305.01, 1, 0
+12:47:45.667 > Data Index
+12:47:45.667 > 14
+12:47:45.961 > Curr Drive State
+12:47:45.961 > 2
+12:47:45.961 > Transmit Data To Cloud
+12:47:45.961 > 1
+12:47:45.961 > 52, 127, -17.78, -14.69, 302.61, 1, 0
+12:47:45.961 > Data Index
+12:47:45.961 > 15
+12:47:46.254 > Curr Drive State
+12:47:46.254 > 2
+12:47:46.254 > Transmit Data To Cloud
+12:47:46.254 > 1
+12:47:46.254 > 57, 123, -16.15, -17.04, 306.94, 1, 0
+12:47:46.262 > Data Index
+12:47:46.262 > 16
+12:47:46.560 > Curr Drive State
+12:47:46.560 > 2
+12:47:46.560 > Transmit Data To Cloud
+12:47:46.560 > 1
+12:47:46.560 > 60, 120, -14.34, -19.31, 309.76, 1, 0
+12:47:46.568 > Data Index
+12:47:46.568 > 17
+12:47:46.862 > Curr Drive State
+12:47:46.863 > 2
+12:47:46.863 > Transmit Data To Cloud
+12:47:46.863 > 1
+12:47:46.863 > 58, 121, -12.47, -21.51, 311.48, 1, 0
+12:47:46.868 > Data Index
+12:47:46.868 > 18
+12:47:47.160 > Curr Drive State
+12:47:47.160 > 2
+12:47:47.160 > Transmit Data To Cloud
+12:47:47.160 > 1
+12:47:47.160 > 64, 115, -10.54, -23.64, 315.16, 1, 0
+12:47:47.166 > Data Index
+12:47:47.166 > 19
+12:47:47.463 > Curr Drive State
+12:47:47.463 > 2
+12:47:47.463 > Transmit Data To Cloud
+12:47:47.463 > 1
+12:47:47.463 > 109, 70, -8.41, -25.58, 316.51, 1, 0
+12:47:47.464 > Data Index
+12:47:47.464 > 20
+12:47:47.764 > Curr Drive State
+12:47:47.765 > 2
+12:47:47.765 > Transmit Data To Cloud
+12:47:47.765 > 1
+12:47:47.765 > 55, 124, -6.28, -27.53, 318.93, 1, 0
+12:47:47.766 > Data Index
+12:47:47.766 > 21
+12:47:48.057 > Curr Drive State
+12:47:48.057 > 2
+12:47:48.057 > Transmit Data To Cloud
+12:47:48.057 > 1
+12:47:48.057 > 48, 132, -4.01, -29.31, 323.73, 1, 0
+12:47:48.065 > Data Index
+12:47:48.065 > 22
+12:47:48.362 > Curr Drive State
+12:47:48.362 > 2
+12:47:48.362 > Transmit Data To Cloud
+12:47:48.362 > 1
+12:47:48.362 > 60, 120, -1.59, -30.88, 330.79, 1, 0
+12:47:48.362 > Data Index
+12:47:48.362 > 23
+12:47:48.662 > Curr Drive State
+12:47:48.662 > 2
+12:47:48.662 > Transmit Data To Cloud
+12:47:48.662 > 1
+12:47:48.662 > 55, 124, 0.99, -32.16, 334.78, 1, 0
+12:47:48.667 > Data Index
+12:47:48.667 > 24
+12:47:48.959 > Curr Drive State
+12:47:48.959 > 2
+12:47:48.959 > Transmit Data To Cloud
+12:47:48.959 > 1
+12:47:48.959 > 51, 129, 3.66, -33.24, 339.34, 1, 0
+12:47:48.959 > Data Index
+12:47:48.959 > 25
+12:47:49.250 > Curr Drive State
+12:47:49.250 > 2
+12:47:49.250 > Transmit Data To Cloud
+12:47:49.250 > 1
+12:47:49.250 > 51, 129, 6.42, -34.08, 344.49, 1, 0
+12:47:49.266 > Data Index
+12:47:49.266 > 26
+12:47:49.562 > Curr Drive State
+12:47:49.562 > 2
+12:47:49.562 > Transmit Data To Cloud
+12:47:49.562 > 1
+12:47:49.562 > 60, 120, 9.24, -34.68, 348.70, 1, 0
+12:47:49.562 > Data Index
+12:47:49.562 > 27
+12:47:49.863 > Curr Drive State
+12:47:49.864 > 2
+12:47:49.864 > Transmit Data To Cloud
+12:47:49.864 > 1
+12:47:49.864 > 49, 130, 12.07, -35.21, 351.49, 1, 0
+12:47:49.864 > Data Index
+12:47:49.864 > 28
+12:47:50.161 > Curr Drive State
+12:47:50.161 > 2
+12:47:50.161 > Transmit Data To Cloud
+12:47:50.161 > 1
+12:47:50.161 > 106, 73, 14.95, -35.53, 355.61, 1, 0
+12:47:50.161 > Data Index
+12:47:50.161 > 29
+12:47:50.459 > Curr Drive State
+12:47:50.459 > 2
+12:47:50.459 > Transmit Data To Cloud
+12:47:50.459 > 1
+12:47:50.459 > 60, 120, 17.82, -35.73, 356.16, 1, 0
+12:47:50.459 > Data Index
+12:47:50.459 > 30
+12:47:50.760 > Curr Drive State
+12:47:50.760 > 2
+12:47:50.760 > Transmit Data To Cloud
+12:47:50.760 > 1
+12:47:50.760 > 55, 124, 20.71, -35.75, 0.77, 1, 0
+12:47:50.760 > Finished collecting 30 pos points
+12:47:50.760 > driftCorrectSendIndex0 Mutex deadreckoning_payload
+12:47:50.777 > -26.19,22.89,254.79,1,0
+12:47:50.778 > driftCorrectSendIndex1 Mutex deadreckoning_payload
+12:47:50.778 > -27.03,20.12,254.11,1,0
+12:47:50.787 > driftCorrectSendIndex2 Mutex deadreckoning_payload
+12:47:50.792 > -27.73,17.33,260.19,1,0
+12:47:50.792 > driftCorrectSendIndex3 Mutex deadreckoning_payload
+12:47:50.792 > -28.15,14.49,264.64,1,0
+12:47:50.807 > driftCorrectSendIndex4 Mutex deadreckoning_payload
+12:47:50.807 > -28.32,11.62,270.06,1,0
+12:47:50.807 > driftCorrectSendIndex5 Mutex deadreckoning_payload
+12:47:50.807 > -28.18,8.74,277.08,1,0
+12:47:50.807 > driftCorrectSendIndex6 Mutex deadreckoning_payload
+12:47:50.823 > -27.73,5.90,282.21,1,0
+12:47:50.823 > driftCorrectSendIndex7 Mutex deadreckoning_payload
+12:47:50.823 > -27.05,3.09,286.01,1,0
+12:47:50.823 > driftCorrectSendIndex8 Mutex deadreckoning_payload
+12:47:50.823 > -26.21,0.33,289.48,1,0
+12:47:50.823 > driftCorrectSendIndex9 Mutex deadreckoning_payload
+12:47:50.839 > -25.17,-2.35,294.29,1,0
+12:47:50.839 > driftCorrectSendIndex10 Mutex deadreckoning_payload
+12:47:50.839 > -23.93,-4.95,297.44,1,0
+12:47:50.839 > driftCorrectSendIndex11 Mutex deadreckoning_payload
+12:47:50.854 > -22.55,-7.48,300.23,1,0
+12:47:50.854 > driftCorrectSendIndex12 Mutex deadreckoning_payload
+12:47:50.854 > -21.02,-9.92,304.54,1,0
+12:47:50.871 > driftCorrectSendIndex13 Mutex deadreckoning_payload
+12:47:50.871 > -19.44,-12.33,305.01,1,0
+12:47:50.871 > driftCorrectSendIndex14 Mutex deadreckoning_payload
+12:47:50.871 > -17.78,-14.69,302.61,1,0
+12:47:50.871 > driftCorrectSendIndex15 Mutex deadreckoning_payload
+12:47:50.886 > -16.15,-17.04,306.94,1,0
+12:47:50.886 > driftCorrectSendIndex16 Mutex deadreckoning_payload
+12:47:50.886 > -14.34,-19.31,309.76,1,0
+12:47:50.886 > driftCorrectSendIndex17 Mutex deadreckoning_payload
+12:47:50.886 > -12.47,-21.51,311.48,1,0
+12:47:50.902 > driftCorrectSendIndex18 Mutex deadreckoning_payload
+12:47:50.902 > -10.54,-23.64,315.16,1,0
+12:47:50.902 > driftCorrectSendIndex19 Mutex deadreckoning_payload
+12:47:50.902 > -8.41,-25.58,316.51,1,0
+12:47:50.917 > driftCorrectSendIndex20 Mutex deadreckoning_payload
+12:47:50.917 > -6.28,-27.53,318.93,1,0
+12:47:50.917 > driftCorrectSendIndex21 Mutex deadreckoning_payload
+12:47:50.933 > -4.01,-29.31,323.73,1,0
+12:47:50.933 > driftCorrectSendIndex22 Mutex deadreckoning_payload
+12:47:50.933 > -1.59,-30.88,330.79,1,0
+12:47:50.933 > driftCorrectSendIndex23 Mutex deadreckoning_payload
+12:47:50.933 > 0.99,-32.16,334.78,1,0
+12:47:50.933 > driftCorrectSendIndex24 Mutex deadreckoning_payload
+12:47:50.951 > 3.66,-33.24,339.34,1,0
+12:47:50.956 > driftCorrectSendIndex25 Mutex deadreckoning_payload
+12:47:50.956 > 6.42,-34.08,344.49,1,0
+12:47:50.960 > driftCorrectSendIndex26 Mutex deadreckoning_payload
+12:47:50.964 > 9.24,-34.68,348.70,1,0
+12:47:50.964 > driftCorrectSendIndex27 Mutex deadreckoning_payload
+12:47:50.964 > 12.07,-35.21,351.49,1,0
+12:47:50.980 > driftCorrectSendIndex28 Mutex deadreckoning_payload
+12:47:50.980 > 14.95,-35.53,355.61,1,0
+12:47:50.980 > driftCorrectSendIndex29 Mutex deadreckoning_payload
+12:47:50.980 > 17.82,-35.73,356.16,1,0
+12:47:51.286 > Curr Drive State
+12:47:51.286 > 2
+12:47:51.286 > Transmit Data To Cloud
+12:47:51.286 > 1
+12:47:51.286 > 51, 129, 25.73, -36.07, 359.00, 1, 0
+12:47:51.286 > Data Index
+12:47:51.286 > 1
+12:47:51.587 > Curr Drive State
+12:47:51.587 > 2
+12:47:51.587 > Transmit Data To Cloud
+12:47:51.587 > 1
+12:47:51.587 > 51, 129, 28.61, -36.07, 3.94, 1, 0
+12:47:51.587 > Data Index
+12:47:51.587 > 2
+12:47:51.884 > Curr Drive State
+12:47:51.884 > 2
+12:47:51.884 > Transmit Data To Cloud
+12:47:51.884 > 1
+12:47:51.884 > 51, 129, 31.48, -35.76, 10.16, 1, 0
+12:47:51.884 > Data Index
+12:47:51.884 > 3
+12:47:52.184 > Curr Drive State
+12:47:52.184 > 2
+12:47:52.184 > Transmit Data To Cloud
+12:47:52.184 > 1
+12:47:52.184 > 49, 130, 34.31, -35.19, 15.28, 1, 0
+12:47:52.184 > Data Index
+12:47:52.184 > 4
+12:47:52.483 > Curr Drive State
+12:47:52.483 > 2
+12:47:52.483 > Transmit Data To Cloud
+12:47:52.483 > 1
+12:47:52.483 > 49, 130, 37.05, -34.34, 21.10, 1, 0
+12:47:52.483 > Data Index
+12:47:52.483 > 5
+12:47:52.782 > Curr Drive State
+12:47:52.782 > 2
+12:47:52.782 > Transmit Data To Cloud
+12:47:52.782 > 1
+12:47:52.782 > 60, 120, 39.71, -33.23, 25.56, 1, 0
+12:47:52.782 > Data Index
+12:47:52.782 > 6
+12:47:53.080 > Curr Drive State
+12:47:53.080 > 2
+12:47:53.080 > Transmit Data To Cloud
+12:47:53.080 > 1
+12:47:53.080 > 64, 115, 42.34, -32.06, 22.64, 1, 0
+12:47:53.080 > Data Index
+12:47:53.080 > 7
