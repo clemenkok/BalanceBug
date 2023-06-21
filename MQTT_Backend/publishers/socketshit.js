@@ -135,6 +135,11 @@ module.exports.setupsocket = function (http) {
         fakecurrentcount++;
       }
     });
+
+    socket.on('closedloopdetected', (msg) => {
+        console.log('closed loop detected');      
+    });
+    
   });
 
   return io;

@@ -667,6 +667,7 @@ function detectclosedloop(currentpos) {
       console.log(`closed loop detected with area ${looparea}`);
       //alert(`closed loop detected with area ${looparea}`);
       changeStatus(`closed loop detected with area ${looparea}`);
+      socket.emit("closedloopdetected","asdigyasiudihuasdihuas")
 
       // draw the polygon and fill it with points which refers to unreachable points
       if (Math.abs(looparea) < maximumarea) {
