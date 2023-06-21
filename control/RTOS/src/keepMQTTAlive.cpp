@@ -119,7 +119,7 @@ void keepMQTTAlive(void *parameters)
         connectToMQTT();
       }
     }
-    vTaskDelay(250 / portTICK_PERIOD_MS); // task runs approx every 250 ms
+    vTaskDelay(500 / portTICK_PERIOD_MS); // task runs approx every 250 ms
   }
   vTaskDelete(NULL);
 }

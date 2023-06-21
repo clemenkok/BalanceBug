@@ -6,6 +6,8 @@
 // #include <cmath>
 #include <math.h>
 
+char str_curDur[50] = {0};
+
 const double PIVAL = 3.1415927;
 #define WHEELBASE 14;
 
@@ -23,31 +25,32 @@ const int stepPinL = 15; // 12
 const int dirPinL = 2;   // 13
 
 // Define the constants for PID control
-double Kp = 1.5; // Proportional gain
+double Kp = 1.7; // Proportional gain
 double Ki = 0.0; // Integral gain
 double Kd = 0.0; // Derivative gain
 
 // Define the input, output, and setpoint variables
 double PIDinput = 0.0;  // Current position
 double PIDoutput = 0.0; // Control output
-double setpoint = 80.0; // Desired position
+double setpoint = 75.0; // Desired position
 
 // calibration variables
-bool newCalibrate = true;
+bool newCalibrate = false;
 int LMax, LMin, RMax, RMin, FMax, FMin;
 int ldrLVal, ldrRVal, ldrFVal;
-int oldLMax = 2352;
-int oldLMin = 379;
-int oldRMax = 2411;
-int oldRMin = 491;
-int oldFMax = 2160;
-int oldFMin = 253;
+int oldLMax = 1766;
+int oldLMin = 307;
+int oldRMax = 374;
+int oldRMin = 277;
+int oldFMax = 1506;
+int oldFMin = 151;
 ///////////////////////////////////////////////
 
 int brightThr = 70;
-int darkThr = 30;
-int turnDur = 2000;
-int curDur = 0;
+int darkThr = -1;
+int turnDur = 1100;
+unsigned long turnEndTime = 0;
+unsigned long turnStartTime = 0;
 int cruiseSpeed = 90;
 int speedL = 0, speedR = 0;
 
@@ -116,7 +119,7 @@ void driveSetup()
     stepperR.setMaxSpeed(500);
 
     // Set the PID parameters
-    myPID.SetOutputLimits(-60, 60); // Adjust the output limits based on your motor control range
+    myPID.SetOutputLimits(-80, 80); // Adjust the output limits based on your motor control range
     myPID.SetMode(AUTOMATIC);
 
     // both LEDs turn on for 5s, before turning off to signal start of calibration
@@ -130,11 +133,18 @@ void driveSetup()
     // initiate calibration
     if (newCalibrate)
     {
-/*         xSemaphoreTake(mutex_v, portMAX_DELAY);
-        MQTTclient.publish("echo", "starting calibration");
-        xSemaphoreGive(mutex_v); */
+        /*         xSemaphoreTake(mutex_v, portMAX_DELAY);
+                MQTTclient.publish("echo", "starting calibration");
+                xSemaphoreGive(mutex_v); */
 
-        int testNo = 0;
+        int testNo = 2;
+        calibrate(FMax, FMin, ldrFPin, testNo);
+        Serial.print("FMax: ");
+        Serial.println(FMax);
+        Serial.print("FMin: ");
+        Serial.println(FMin);
+
+        testNo = 0;
         calibrate(LMax, LMin, ldrLPin, testNo);
         Serial.print("LMax: ");
         Serial.println(LMax);
@@ -147,20 +157,13 @@ void driveSetup()
         Serial.println(RMax);
         Serial.print("RMin: ");
         Serial.println(RMin);
-
-        testNo = 2;
-        calibrate(FMax, FMin, ldrFPin, testNo);
-        Serial.print("FMax: ");
-        Serial.println(FMax);
-        Serial.print("FMin: ");
-        Serial.println(FMin);
     }
     else
     {
-         Serial.println("Use old calibration");
-/*         xSemaphoreTake(mutex_v, portMAX_DELAY);
-        MQTTclient.publish("echo", "use old calibration"); 
-        xSemaphoreGive(mutex_v);  */
+        Serial.println("Use old calibration");
+        /*         xSemaphoreTake(mutex_v, portMAX_DELAY);
+                MQTTclient.publish("echo", "use old calibration");
+                xSemaphoreGive(mutex_v);  */
 
         LMax = oldLMax;
         LMin = oldLMin;
@@ -174,7 +177,8 @@ void driveSetup()
 
 void driveLoop()
 {
-    if (driftCorrect){
+    if (driftCorrect)
+    {
         Serial.print("driftCorrectSendIndex");
         Serial.print(driftCorrectSendIndex);
         Serial.print(" Mutex ");
@@ -205,17 +209,21 @@ void driveLoop()
 
         xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("deadreckoning_data", deadreckoning_payload);
-        xSemaphoreGive(mutex_v); 
+        xSemaphoreGive(mutex_v);
 
-        if (driftCorrectSendIndex == ARRAY_SIZE-1){
+        if (driftCorrectSendIndex == ARRAY_SIZE - 1)
+        {
             driftCorrectSendIndex = 0;
             driftCorrect = false;
             startDrive();
-        } else{
+        }
+        else
+        {
             driftCorrectSendIndex += 1;
         }
     }
-    else{
+    else
+    {
         transmitDataToCloud = false;
         // read the sensor:
         ldrLVal = analogRead(ldrLPin);
@@ -228,22 +236,24 @@ void driveLoop()
         ldrFVal = constrain(ldrFVal, FMin, FMax);
 
         // apply the calibration to the sensor reading (scale it from 0 - 100)
-        if (LMin != LMax){
-        ldrLVal = map(ldrLVal, LMin, LMax, 0, 100);
+        if (LMin != LMax)
+        {
+            ldrLVal = map(ldrLVal, LMin, LMax, 0, 100);
         }
 
-        if (RMin != RMax){
-        ldrRVal = map(ldrRVal, RMin, RMax, 0, 100);
+        if (RMin != RMax)
+        {
+            ldrRVal = map(ldrRVal, RMin, RMax, 0, 100);
         }
 
-        if (FMin != FMax){
-        ldrFVal = map(ldrFVal, FMin, FMax, 0, 100);
+        if (FMin != FMax)
+        {
+            ldrFVal = map(ldrFVal, FMin, FMax, 0, 100);
         }
 
-/*         xSemaphoreTake(mutex_v, portMAX_DELAY);
-        MQTTclient.publish("echo", "done with calibration");
-        xSemaphoreGive(mutex_v); */
-
+        /*         xSemaphoreTake(mutex_v, portMAX_DELAY);
+                MQTTclient.publish("echo", "done with calibration");
+                xSemaphoreGive(mutex_v); */
 
         thetaDeg = thetaRad / PIVAL * 180.0;
         // Serial.println("Curr Drive State");
@@ -252,10 +262,17 @@ void driveLoop()
         {
         case STOP:
             // dont move at all
+            /* xSemaphoreTake(mutex_v, portMAX_DELAY);
+            MQTTclient.publish("echo", "stop");
+            xSemaphoreGive(mutex_v); */
             speedL = 0;
             speedR = 0;
 
         case FOLLOW_WALL:
+
+            /* xSemaphoreTake(mutex_v, portMAX_DELAY);
+            MQTTclient.publish("echo", "follow wall");
+            xSemaphoreGive(mutex_v); */
             // follow left wall
             if (followLeft)
             {
@@ -266,7 +283,7 @@ void driveLoop()
                 {
                     // turn 90 deg to right
                     currDriveState = TURN_90_DEG;
-                    curDur = 0;
+                    turnStartTime = millis();
                 }
             }
 
@@ -279,7 +296,7 @@ void driveLoop()
                 {
                     // turn 90 deg to left
                     currDriveState = TURN_90_DEG;
-                    curDur = 0;
+                    turnStartTime = millis();
                 }
             }
 
@@ -307,9 +324,18 @@ void driveLoop()
 
             speedL = cruiseSpeed * polarity;
             speedR = -cruiseSpeed * polarity;
-            curDur++;
 
-            if (curDur >= turnDur)
+            /* str_curDur[8] = {0};
+            char char_curDur[8];
+            std::sprintf(char_curDur, "%d", curDur);
+            std::strcat(str_curDur, char_curDur); */
+            /* xSemaphoreTake(mutex_v, portMAX_DELAY);
+            MQTTclient.publish("echo", "turn 90");
+            xSemaphoreGive(mutex_v); */
+
+            turnEndTime = millis();
+
+            if (turnEndTime - turnStartTime >= turnDur)
             {
                 currDriveState = FOLLOW_WALL;
             }
@@ -318,6 +344,9 @@ void driveLoop()
 
         // case where rover is far from wall (dark spot)
         case LOOK_FOR_WALL:
+            /* xSemaphoreTake(mutex_v, portMAX_DELAY);
+            MQTTclient.publish("echo", "look for wall");
+            xSemaphoreGive(mutex_v); */
             // for now just move straight and see if hit a wall
             speedL = cruiseSpeed;
             speedR = cruiseSpeed;
@@ -330,7 +359,7 @@ void driveLoop()
                 currDriveState = TURN_90_DEG;
                 followLeft = true;
                 followRight = false;
-                curDur = 0;
+                turnStartTime = millis();
             }
 
             // if the left sees a wall close by
@@ -383,8 +412,8 @@ void driveLoop()
         }
         */
         transmitDataToCloud = (currDriveState == LOOK_FOR_WALL) ||
-                            (currDriveState == FOLLOW_WALL) ||
-                            (currDriveState == TURN_90_DEG);
+                              (currDriveState == FOLLOW_WALL) ||
+                              (currDriveState == TURN_90_DEG);
         // Serial.println("Transmit Data To Cloud");
         // Serial.println(transmitDataToCloud);
         if (loop_count >= 50 && transmitDataToCloud)
@@ -393,6 +422,13 @@ void driveLoop()
             Serial.println(currDriveState);
             Serial.println("Transmit Data To Cloud");
             Serial.println(transmitDataToCloud);
+            Serial.print("ldrL, R, F: ");
+            Serial.print(ldrLVal);
+            Serial.print(", ");
+            Serial.print(ldrRVal);
+            Serial.print(", ");
+            Serial.print(ldrFVal);
+            Serial.println("");
             Serial.print(speedL);
             Serial.print(", ");
             Serial.print(speedR);
@@ -471,6 +507,7 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
 void updatePosition(unsigned long positionElapsedTime)
 {
     // Compute time elapsed
+    //double delta_time = 5 / 1000.0; // time elapsed in seconds
     double delta_time = positionElapsedTime / 1000.0; // time elapsed in seconds
 
     // compute wheel speed in cm/s
@@ -547,11 +584,11 @@ void driftCorrection()
     double beta = magnitude_a / magnitude_b;
 
     driftCorrect = true;
-    
+
     for (int j = 1; j < ARRAY_SIZE; j++)
     {
-        //posXArr[j] = prevLocalisation[0] + beta * (cos(alpha) * (posXArr[j] - prevLocalisation[0]) - sin(alpha) * (posYArr[j] - prevLocalisation[1]));
-        //posYArr[j] = prevLocalisation[1] + beta * (sin(alpha) * (posXArr[j] - prevLocalisation[0]) + cos(alpha) * (posYArr[j] - prevLocalisation[1]));
+        // posXArr[j] = prevLocalisation[0] + beta * (cos(alpha) * (posXArr[j] - prevLocalisation[0]) - sin(alpha) * (posYArr[j] - prevLocalisation[1]));
+        // posYArr[j] = prevLocalisation[1] + beta * (sin(alpha) * (posXArr[j] - prevLocalisation[0]) + cos(alpha) * (posYArr[j] - prevLocalisation[1]));
         double tempPosX = posXArr[j];
         double tempPosY = posYArr[j];
         posXArr[j] = prevLocalisation[0] + beta * (cos(alpha) * (tempPosX - posXArr[0]) - sin(alpha) * (tempPosY - posYArr[0]));
@@ -596,12 +633,12 @@ void driftCorrection()
         // delay(50); // small delay in between each publish
         // xSemaphoreGive(mutex_v);
        // delay(50); // small delay in between each publish
-       
+
     }
     */
-    //xSemaphoreGive(mutex_v);
-    // after all the dead reckoning data has been drift corrected and published
-    // start driving again
+    // xSemaphoreGive(mutex_v);
+    //  after all the dead reckoning data has been drift corrected and published
+    //  start driving again
     startDrive();
 }
 
@@ -615,10 +652,11 @@ void collectData()
 
         dataIndex = 0;
         Serial.println("Finished collecting 30 pos points");
-
+        /*
         xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("echo", "finished 30 pos points");
         xSemaphoreGive(mutex_v);
+        */
         startLocalise();
     }
     else
