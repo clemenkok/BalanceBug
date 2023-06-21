@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<button id="button_testsocket" onclick="testsocket()">test socket</button>
+
+<button id="mybutton" onclick="addball()">Get raw data</button>
+<button id="mybutton2" onclick="addball()">Get blurred data</button>
+<button id="kmeanbutton" onclick="kmeanallmyfuckingpoints()">K mean</button>
+<button id="cleardatapointbutton" onclick="cleardatapoints()">
+  clear fucking points
+</button>
+<button id="connectclusterbutton" onclick="connnectcluster()">
+  connect fucking clusters
+</button>
+<button id="resetcountbutton" onclick="resetcount()">reset count</button>
+<button id="getfakedatabutton" onclick="getfakedata()">Get fake data</button>
+<button id="findunexplored" onclick="findUnexploredPart()">find unexplored part</button>
+<div id="currentclusterindex">current index:</div>
+<select id="followingwall">
+  <option value="left">left</option>
+  <option value="right">right</option>
+  <option value="none">none</option>
+</select>
+<input type="checkbox" id="checkboxshowwall" checked>
+<label for="checkboxshowwall">show bitchy walls</label>
+<input type="checkbox" id="checkboxshowscatterline" checked>
+<label for="checkboxshowscatterline">show bitchy scatterlines</label>
+<input type="checkbox" id="checkboxshowdatapoints" checked>
+<label for="checkboxshowdatapoints">show bitchy datapoints</label>
+<input type="checkbox" id="checkboxshowmazebound" checked>
+<label for="checkboxshowmazebound">show bitchy mazebound</label>
+<input type="checkbox" id="checkboxshowmazegrid" checked>
+<label for="checkboxshowmazegrid">show bitchy maze grid</label>
+<input type="checkbox" id="checkboxshowpointsingrid" checked>
+<label for="checkboxshowpointsingrid">show # points in grid</label>
+<input type="checkbox" id="checkboxshowclosedlooppolygons" checked>
+<label for="checkboxshowclosedlooppolygons">show closed loop polygons</label>
+<br/>
+<label for="textbox1">Start Cluster:</label>
+<input type="text" id="textboxstartcluster" value = "1"/><br>
+<label for="textbox2">End Cluster</label>
+<input type="text" id="textboxendcluster" value = "2" /><br>
+<div id="status" style="font-size: 16px">Status:</div>
+<!-- Add a svg area, empty -->
+<div id="scatter_area"></div>
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- useful K mean tut https://ivanludvig.github.io/tech/k-means-d3 -->
+
+
+<script src="fuckingjs/index.js"></script>
+
+<script>
+
+  
+</script>
