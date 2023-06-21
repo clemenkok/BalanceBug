@@ -1,9 +1,9 @@
 //region of the maze
 var mazeregion = {
-  topleft: [0, 180],
-  topright: [180, 180],
-  bottomleft: [0, -90],
-  bottomright: [180, -90],
+  topleft: [-700, 700],
+  topright: [700, 700],
+  bottomleft: [-700, -700],
+  bottomright: [700, -700],
 };
 
 // set the dimensions and margins of the graph
@@ -31,8 +31,8 @@ var data = [
 ];
 
 // X scale and Axis
-let xdomain = [-100, 200];
-let ydomain = [-100, 200];
+let xdomain = [-700, 700];
+let ydomain = [-700, 700];
 var x = d3
   .scaleLinear()
   .domain(xdomain) // This is the min and the max of the data: 0 to 100 if percentages
@@ -374,7 +374,7 @@ const generatePoints = (n) => {
   return Array.from(Array(n)).map((_) => getRandomPoint());
 };
 
-const numClusters = 200;
+var numClusters = 50;
 const centroids = generatePoints(numClusters);
 const color = d3.scaleOrdinal(d3.schemeCategory10); // 10 different colors for 10 different numbers
 

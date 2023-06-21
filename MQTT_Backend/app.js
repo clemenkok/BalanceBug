@@ -61,7 +61,7 @@ app.get('/newmapping', (req, res) => {
 var fs = require("fs");
 const { runInContext } = require("vm");
 
-var file = "./html/newmapping/data1646.txt";
+var file = "./html/newmapping/mapdata/data21jun1819.txt";
 var data = fs.readFileSync(file, "utf8");
 var dataArr = data.toString().split("\n");
 //remove last dataarr
@@ -132,7 +132,7 @@ var currentcount2 = 0;
 //console.log(blurredarray);
 
 //using my fake data ****
-var fakefile = "./html/newmapping/fakedata1.txt";
+var fakefile = "./html/newmapping/mapdata/fakedata1.txt";
 var fakedata = fs.readFileSync(fakefile, "utf8");
 var _fakedataArr = fakedata.toString().split("\n");
 var fakedataArr = [];
