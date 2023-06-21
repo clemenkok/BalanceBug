@@ -16,6 +16,7 @@ import { SearchPage } from "./pages/search";
 import { PageNotFound } from "./pages/pagenotfound";
 import { GridMonitoringPage } from "./pages/gridmonitoring";
 import { HomePage } from "./pages/home-page";
+import { NewMapping } from "./pages/newmapping";
 
 function App() {
   const { isLoading } = useAuth0();
@@ -34,11 +35,14 @@ function App() {
       <Route path="/history" element={<HistoryPage />} />
       <Route path="/search" element={<SearchPage />} />
       <Route path="/gridmonitoring" element={<GridMonitoringPage />} />
+      
       <Route path="/grid" element={<GridPage />} />
       <Route path="/callback" element={<CallbackPage />} />
+
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 }
-
+//<Route path="/newmapping" element={<NewMapping />} />
+//<Route path="/grid" element={<GridPage />} />
 export default App;
