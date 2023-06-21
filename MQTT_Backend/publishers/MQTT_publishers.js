@@ -1,3 +1,5 @@
+const { socketemit } = require('./socketshit');
+
 const { client } = new (require('../services/mqtt_service'))();
 
 // Starts the rover (initiated by the Frontend)
@@ -27,6 +29,14 @@ function update_rover_coords(result_coordinates_x, result_coordinates_y) {
     result_coordinates_x.toString() +
     ',' +
     result_coordinates_y.toString();
+
+  //change me it might not be right
+  socketemit('rover_current_coords', [
+    result_coordinates_x,
+    result_coordinates_y,
+    'right',
+  ]);
+
   client.publish(
     'rover_current_coords',
     payloadString,

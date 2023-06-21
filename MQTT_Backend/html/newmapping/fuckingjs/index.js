@@ -307,6 +307,7 @@ function ReceivednewBall(msg) {
 }
 
 socket.on("sendyouball", (msg) => ReceivednewBall(msg));
+socket.on("rover_current_coords", (msg) => console.log("rover_current_coords", msg));
 
 /// for my fucking button
 
