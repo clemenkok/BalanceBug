@@ -12,6 +12,8 @@ function subscribe() {
   client.subscribe('blue_beacon');
   client.subscribe('yellow_beacon');
   client.subscribe('localise');
+  client.subscribe('echo');
+
 
   /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -20,8 +22,9 @@ function subscribe() {
   client.on('message', function (topic, message, packet) {
     // processing when we receive deadreckoning data from ESP32
     if (topic === 'deadreckoning_data') {
+      console.log(message.toString());
       // if (deadreckoning_data === topics[0]) {
-      let data = message.toString().split(',');
+      /* let data = message.toString().split(',');
 
       // extract data
       let x = parseFloat(data[0]);
@@ -52,7 +55,14 @@ function subscribe() {
                 message:
                     err.message || "Some error occurred while creating the live_database Table."
             });
-        });
+        }); */
+    }
+
+    /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+    if (topic === 'echo') {
+      // TODO: processing when we have been notified that red_beacon is to turn on
+      console.log('Received Message:', message.toString());
     }
 
     /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
