@@ -2,8 +2,10 @@ const { client } = new (require('../services/mqtt_service'))();
 const { mazeMap, rover, funcCaseA } = require('../services/mapping');
 const { trilateration } = require('../services/trilateration');
 const { update_rover_coords } = require('../publishers/MQTT_publishers');
-const db = require("../models");
+const db = require('../models');
 const Live_database = db.live_database;
+
+const { socketemit } = require('../publishers/socketshit');
 
 function subscribe() {
   // subscribing to an array of topics may cause unintended side effects
@@ -14,7 +16,6 @@ function subscribe() {
   client.subscribe('localise');
   client.subscribe('echo');
 
-
   /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
 
   // Handler function that is called when ANY packet comes in
@@ -23,8 +24,7 @@ function subscribe() {
     // processing when we receive deadreckoning data from ESP32
     if (topic === 'deadreckoning_data') {
       console.log(message.toString());
-      // if (deadreckoning_data === topics[0]) {
-      /* let data = message.toString().split(',');
+      let data = message.toString().split(',');
 
       // extract data
       let x = parseFloat(data[0]);
@@ -32,6 +32,23 @@ function subscribe() {
       let bearing = parseFloat(data[2]);
       let leftWall = data[3] === '1';
       let rightWall = data[4] === '1';
+      
+      if (leftWall === '1') {
+        wallDirection = 'left';
+      } else if (rightWall === '1') {
+        wallDirection = 'right';
+      } else {
+        wallDirection = 'none';
+      }
+
+      //change me it might not be right
+      socketemit('rover_current_coords', [
+        x,
+        y,
+        wallDirection,
+      ]);
+
+      /*  
 
       let tile = funcCaseA(mazeMap, rover, x, y, bearing, leftWall, rightWall);
       tile_num = tile[0];

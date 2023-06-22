@@ -1,0 +1,998 @@
+21:08:17.096 > ets Jun  8 2016 00:22:57
+21:08:17.096 > 
+21:08:17.096 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+21:08:17.096 > configsip: 0, SPIWP:0xee
+21:08:17.096 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+21:08:17.096 > mode:DIO, clock div:2
+21:08:17.096 > load:0x3fff0030,len:1184
+21:08:17.096 > load:0x40078000,len:13192
+21:08:17.096 > load:0x40080400,len:3028
+21:08:17.096 > entry 0x400805e4
+21:08:17.096 > [    53][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [    54][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [    54][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [    59][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [    65][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [    71][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [    76][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [    81][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [    87][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [    93][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [    98][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   104][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   110][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   116][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   121][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   127][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   132][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   138][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   143][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   149][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   155][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   161][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   166][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   172][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   177][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   184][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   189][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   195][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   200][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   206][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   211][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   217][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   223][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   229][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   234][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   240][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   245][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   252][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   257][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   263][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   268][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   274][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   279][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   285][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   291][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   297][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   302][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   308][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   313][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   320][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   325][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   331][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   336][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   342][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   347][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   353][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   359][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   365][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   370][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   376][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   381][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   388][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   393][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   399][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   404][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   410][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   415][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   421][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   427][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   433][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   438][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   444][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   449][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   456][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   461][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   467][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   472][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   478][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   483][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   489][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   495][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   501][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   506][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   512][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   517][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   523][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   529][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   535][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   540][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   546][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   551][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   557][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   563][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   569][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   574][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   580][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   585][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   591][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   597][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   603][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   608][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   614][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   619][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   625][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   631][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   637][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   642][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   648][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   653][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   659][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   665][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   671][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   676][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   682][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   687][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   693][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   699][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   705][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   710][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   716][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   721][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   727][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   733][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   739][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   744][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   750][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   755][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   761][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   767][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   773][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   778][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   784][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   789][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   795][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   800][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   806][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   812][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   818][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   823][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   829][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   835][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   841][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   846][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   852][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   857][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   863][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   868][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   874][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   880][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   886][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   891][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   897][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   902][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   909][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   914][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   920][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   925][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   931][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   936][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   942][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   948][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   954][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   959][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   965][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   970][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   977][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [   982][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [   988][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [   993][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [   999][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [  1004][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [  1010][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [  1016][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [  1022][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [  1027][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [  1033][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [  1038][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [  1045][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [  1050][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [  1056][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.096 > [  1061][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.096 > [  1067][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.096 > [  1072][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.096 > [  1078][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.116 > [  1084][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.116 > [  1090][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.116 > [  1095][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.116 > [  1101][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.121 > [  1106][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.126 > [  1113][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.132 > [  1118][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.138 > [  1124][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.143 > [  1129][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.148 > [  1135][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.155 > [  1140][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.160 > [  1146][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.165 > [  1152][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.171 > [  1158][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.176 > [  1163][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.182 > [  1169][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.187 > [  1174][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.193 > [  1181][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.198 > [  1186][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.205 > [  1192][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.210 > [  1197][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.215 > [  1203][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.222 > [  1208][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.226 > [  1214][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.232 > [  1220][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.243 > [  1226][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.243 > [  1231][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.254 > [  1237][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.260 > [  1242][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.266 > [  1248][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.271 > [  1254][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.276 > [  1260][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.283 > [  1265][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.288 > [  1271][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.293 > [  1276][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.299 > [  1282][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.304 > [  1288][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.310 > [  1294][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.315 > [  1299][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.321 > [  1305][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.326 > [  1310][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.332 > [  1316][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.337 > [  1322][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.343 > [  1328][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.349 > [  1333][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.355 > [  1339][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.360 > [  1344][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.366 > [  1350][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.371 > [  1356][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.377 > [  1362][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.382 > [  1367][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.387 > [  1373][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.393 > [  1378][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.398 > [  1384][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.404 > [  1390][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.410 > [  1396][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.416 > [  1401][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.422 > [  1407][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.427 > [  1412][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.432 > [  1418][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.438 > [  1424][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.443 > [  1430][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.448 > [  1435][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.455 > [  1441][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.460 > [  1446][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.465 > [  1452][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.472 > [  1458][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.477 > [  1464][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.482 > [  1469][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.488 > [  1475][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.494 > [  1480][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.499 > [  1486][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.505 > [  1492][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.510 > [  1498][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.515 > [  1503][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.521 > [  1509][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.526 > [  1514][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.537 > [  1520][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.537 > [  1525][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.548 > [  1531][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.555 > [  1537][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.560 > [  1543][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.566 > [  1548][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.571 > [  1554][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.577 > [  1560][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.582 > [  1566][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.587 > [  1571][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.593 > [  1577][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.598 > [  1582][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.605 > [  1588][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.610 > [  1593][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.616 > [  1599][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.621 > [  1605][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.626 > [  1611][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.632 > [  1616][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.638 > [  1622][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.643 > [  1627][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.649 > [  1634][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.655 > [  1639][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.660 > [  1645][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.666 > [  1650][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.671 > [  1656][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.677 > [  1661][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.682 > [  1667][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.688 > [  1673][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.693 > [  1679][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.699 > [  1684][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.705 > [  1690][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.710 > [  1695][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.716 > [  1702][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.721 > [  1707][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.727 > [  1713][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.732 > [  1718][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.738 > [  1724][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.744 > [  1729][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.749 > [  1735][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.754 > [  1741][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.760 > [  1747][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.765 > [  1752][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.771 > [  1758][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.777 > [  1763][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.782 > [  1770][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.788 > [  1775][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.794 > [  1781][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.799 > [  1786][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.805 > [  1792][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.810 > [  1797][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.816 > [  1803][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.821 > [  1809][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.832 > [  1815][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.832 > [  1820][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.843 > [  1826][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.849 > [  1831][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.855 > [  1838][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.860 > [  1843][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.866 > [  1849][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.871 > [  1854][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.876 > [  1860][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.882 > [  1865][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.888 > [  1871][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.893 > [  1877][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.899 > [  1883][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.905 > [  1888][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.910 > [  1894][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.916 > [  1899][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.921 > [  1906][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.926 > [  1911][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.932 > [  1917][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.938 > [  1922][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.943 > [  1928][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.949 > [  1933][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.955 > [  1939][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.960 > [  1945][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.966 > [  1951][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.971 > [  1956][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.976 > [  1962][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:17.982 > [  1967][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:17.988 > [  1973][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:17.993 > [  1979][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:17.999 > [  1985][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.005 > [  1990][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.010 > [  1996][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.015 > [  2001][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.021 > [  2007][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.026 > [  2013][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.032 > [  2019][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.038 > [  2024][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.044 > [  2030][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.049 > [  2035][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.055 > [  2041][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.060 > [  2047][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.065 > [  2053][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.072 > [  2058][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.077 > [  2064][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.082 > [  2069][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.088 > [  2075][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.093 > [  2081][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.104 > [  2087][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.105 > [  2092][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.115 > [  2098][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.116 > [  2103][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.126 > [  2109][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.131 > [  2115][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.138 > [  2121][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.143 > [  2126][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.149 > [  2132][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.155 > [  2137][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.160 > [  2143][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.166 > [  2149][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.171 > [  2155][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.176 > [  2160][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.182 > [  2166][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.188 > [  2171][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.193 > [  2177][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.199 > [  2183][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.205 > [  2188][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.210 > [  2194][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.216 > [  2200][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.221 > [  2205][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.227 > [  2211][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.232 > [  2217][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.238 > [  2223][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.243 > [  2228][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.248 > [  2234][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.255 > [  2239][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.260 > [  2245][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.265 > [  2250][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.272 > [  2256][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.277 > [  2262][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.283 > [  2268][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.287 > [  2273][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.293 > [  2279][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.298 > [  2285][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.305 > [  2291][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.310 > [  2296][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.315 > [  2302][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.322 > [  2307][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.327 > [  2313][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.332 > [  2318][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.338 > [  2324][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.344 > [  2330][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.349 > [  2336][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.355 > [  2341][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.360 > [  2347][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.365 > [  2352][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.372 > [  2359][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.377 > [  2364][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.382 > [  2370][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.388 > [  2375][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.398 > [  2381][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.398 > [  2386][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.410 > [  2392][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.410 > [  2398][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.422 > [  2404][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.427 > [  2409][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.432 > [  2415][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.438 > [  2420][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.443 > [  2427][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.449 > [  2432][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.454 > [  2438][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.460 > [  2443][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.465 > [  2449][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.471 > [  2454][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.476 > [  2460][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.482 > [  2466][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.488 > [  2472][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.493 > [  2477][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.499 > [  2483][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.505 > [  2488][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.510 > [  2495][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.516 > [  2500][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.521 > [  2506][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.526 > [  2511][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.532 > [  2517][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.538 > [  2522][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.543 > [  2528][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.549 > [  2534][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.555 > [  2540][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.560 > [  2545][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.566 > [  2551][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.571 > [  2556][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.576 > [  2563][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.582 > [  2568][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.588 > [  2574][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.593 > [  2579][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.599 > [  2585][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.605 > [  2590][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.610 > [  2596][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.615 > [  2602][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.621 > [  2608][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.627 > [  2613][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.632 > [  2619][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.638 > [  2624][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.643 > [  2631][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.648 > [  2636][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.655 > [  2642][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.660 > [  2647][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.665 > [  2653][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.672 > [  2658][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.677 > [  2664][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.682 > [  2670][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.693 > [  2676][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.693 > [  2681][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.704 > [  2687][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.709 > [  2692][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.716 > [  2698][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.721 > [  2704][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.727 > [  2710][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.732 > [  2715][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.738 > [  2721][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.744 > [  2726][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.749 > [  2732][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.754 > [  2738][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.759 > [  2744][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.765 > [  2749][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.771 > [  2755][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.776 > [  2760][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.781 > [  2766][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.788 > [  2772][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.793 > [  2778][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.799 > [  2783][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.804 > [  2789][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.810 > [  2794][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.818 > [  2800][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.821 > [  2806][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.826 > [  2812][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.832 > [  2817][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.838 > [  2823][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.843 > [  2828][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.848 > [  2834][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.855 > [  2840][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.860 > [  2846][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.865 > [  2851][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.871 > [  2857][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.876 > [  2862][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.881 > [  2868][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.888 > [  2874][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.893 > [  2880][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.898 > [  2885][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.905 > [  2891][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.910 > [  2896][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.916 > [  2902][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.921 > [  2907][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.926 > [  2913][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.932 > [  2919][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.938 > [  2925][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.944 > [  2930][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.948 > [  2936][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.954 > [  2942][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.960 > [  2948][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.966 > [  2953][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.972 > [  2959][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:18.977 > [  2964][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:18.988 > [  2970][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:18.988 > [  2975][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:18.999 > [  2981][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.005 > [  2987][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.010 > [  2993][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.015 > [  2998][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.021 > [  3004][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.026 > [  3009][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.032 > [  3016][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.038 > [  3021][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.043 > [  3027][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.049 > [  3032][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.054 > [  3038][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.060 > [  3043][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.065 > [  3049][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.071 > [  3055][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.076 > [  3061][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.082 > [  3066][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.088 > [  3072][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.093 > [  3077][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.098 > [  3084][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.105 > [  3089][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.110 > [  3095][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.115 > [  3100][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.121 > [  3106][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.126 > [  3111][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.132 > [  3117][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.138 > [  3123][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.143 > [  3129][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.149 > [  3134][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.155 > [  3140][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.160 > [  3145][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.166 > [  3152][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.171 > [  3157][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.177 > [  3163][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.182 > [  3168][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.187 > [  3174][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.193 > [  3179][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.199 > [  3185][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.204 > [  3191][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.209 > [  3197][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.215 > [  3202][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.222 > [  3208][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.227 > [  3213][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.232 > [  3220][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.238 > [  3225][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.244 > [  3231][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.249 > [  3236][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.255 > [  3242][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.260 > [  3247][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.265 > [  3253][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.272 > [  3259][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.282 > [  3265][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.282 > [  3270][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.293 > [  3276][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.299 > [  3281][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.305 > [  3288][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.310 > [  3293][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.316 > [  3299][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.321 > [  3304][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.326 > [  3310][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.332 > [  3315][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.338 > [  3321][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.343 > [  3327][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.349 > [  3333][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.355 > [  3338][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.360 > [  3344][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.365 > [  3349][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.371 > [  3356][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.376 > [  3361][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.382 > [  3367][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.388 > [  3372][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.393 > [  3378][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.399 > [  3383][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.404 > [  3389][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.410 > [  3395][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.415 > [  3401][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.421 > [  3406][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.427 > [  3412][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.433 > [  3417][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.438 > [  3423][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.443 > [  3429][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.448 > [  3435][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.455 > [  3440][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.460 > [  3446][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.465 > [  3451][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.472 > [  3457][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.477 > [  3463][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.482 > [  3469][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.487 > [  3474][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.493 > [  3480][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.499 > [  3485][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.504 > [  3491][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.509 > [  3497][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.515 > [  3503][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.522 > [  3508][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.527 > [  3514][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.532 > [  3519][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.538 > [  3525][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.543 > [  3531][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.554 > [  3537][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.554 > [  3542][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.565 > [  3548][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.566 > [  3553][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.576 > [  3559][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.582 > [  3565][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.588 > [  3571][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.593 > [  3576][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.599 > [  3582][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.604 > [  3587][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.610 > [  3593][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.615 > [  3599][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.621 > [  3605][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.626 > [  3610][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.632 > [  3616][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.638 > [  3621][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.643 > [  3627][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.649 > [  3632][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.655 > [  3638][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.660 > [  3644][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.665 > [  3650][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.672 > [  3655][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.677 > [  3661][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.682 > [  3667][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.688 > [  3673][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.693 > [  3678][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.698 > [  3684][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.705 > [  3689][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.710 > [  3695][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.716 > [  3700][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.721 > [  3706][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.726 > [  3712][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.732 > [  3718][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.738 > [  3723][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.743 > [  3729][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.748 > [  3734][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.755 > [  3741][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.760 > [  3746][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.766 > [  3752][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.771 > [  3757][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.777 > [  3763][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.784 > [  3768][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.788 > [  3774][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.793 > [  3780][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.799 > [  3786][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.805 > [  3791][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.810 > [  3797][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.815 > [  3802][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.821 > [  3809][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.827 > [  3814][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.832 > [  3820][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.837 > [  3825][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.848 > [  3831][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.848 > [  3836][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.859 > [  3842][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.859 > [  3848][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.871 > [  3854][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.876 > [  3859][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.882 > [  3865][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.888 > [  3870][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.893 > [  3877][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.898 > [  3882][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.905 > [  3888][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.910 > [  3893][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.915 > [  3899][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.922 > [  3904][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.927 > [  3910][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.932 > [  3916][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.938 > [  3922][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.943 > [  3927][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.949 > [  3933][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.955 > [  3938][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.960 > [  3945][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.965 > [  3950][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.971 > [  3956][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.976 > [  3961][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:19.982 > [  3967][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:19.988 > [  3972][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:19.993 > [  3978][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:19.999 > [  3984][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.005 > [  3990][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.010 > [  3995][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.015 > [  4001][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.021 > [  4006][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.026 > [  4013][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.032 > [  4018][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.037 > [  4024][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.044 > [  4029][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.049 > [  4035][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.055 > [  4040][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.060 > [  4046][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.066 > [  4052][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.071 > [  4058][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.077 > [  4063][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.082 > [  4069][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.088 > [  4074][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.093 > [  4080][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.098 > [  4086][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.105 > [  4092][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.110 > [  4097][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.115 > [  4103][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.121 > [  4108][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.127 > [  4114][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.133 > [  4120][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.143 > [  4126][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.143 > [  4131][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.155 > [  4137][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.160 > [  4142][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.166 > [  4148][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.171 > [  4154][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.176 > [  4160][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.182 > [  4165][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.188 > [  4171][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.195 > [  4176][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.199 > [  4182][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.204 > [  4188][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.210 > [  4194][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.216 > [  4199][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.221 > [  4205][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.227 > [  4210][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.232 > [  4216][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.238 > [  4222][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.244 > [  4228][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.249 > [  4233][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.254 > [  4239][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.260 > [  4244][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.266 > [  4250][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.271 > [  4256][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.277 > [  4262][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.281 > [  4267][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.287 > [  4273][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.293 > [  4278][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.299 > [  4284][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.305 > [  4290][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.310 > [  4296][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.315 > [  4301][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.320 > [  4307][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.327 > [  4312][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.332 > [  4318][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.338 > [  4324][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.344 > [  4330][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.349 > [  4335][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.354 > [  4341][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.359 > [  4346][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.366 > [  4352][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.371 > [  4357][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.376 > [  4363][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.382 > [  4369][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.387 > [  4375][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.393 > [  4380][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.398 > [  4386][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.405 > [  4392][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.410 > [  4398][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.415 > [  4403][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.421 > [  4409][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.426 > [  4414][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.438 > [  4420][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.438 > [  4425][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.448 > [  4431][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.454 > [  4437][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.459 > [  4443][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.466 > [  4448][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.471 > [  4454][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.476 > [  4459][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.482 > [  4466][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.488 > [  4471][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.493 > [  4477][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.499 > [  4482][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.505 > [  4488][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.510 > [  4493][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.516 > [  4499][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.521 > [  4505][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.526 > [  4511][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.532 > [  4516][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.538 > [  4522][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.543 > [  4527][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.549 > [  4534][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.555 > [  4539][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.560 > [  4545][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.566 > [  4550][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.571 > [  4556][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.577 > [  4561][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.582 > [  4567][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.588 > [  4573][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.593 > [  4579][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.599 > [  4584][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.605 > [  4590][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.610 > [  4595][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.616 > [  4602][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.621 > [  4607][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.626 > [  4613][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.632 > [  4618][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.638 > [  4624][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.643 > [  4629][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.649 > [  4635][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.655 > [  4641][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.660 > [  4647][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.666 > [  4652][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.671 > [  4658][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.677 > [  4663][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.682 > [  4670][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.688 > [  4675][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.693 > [  4681][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.699 > [  4686][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.704 > [  4692][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.710 > [  4697][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.715 > [  4703][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.721 > [  4709][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.733 > [  4715][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.733 > [  4720][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.743 > [  4726][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.749 > [  4731][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.755 > [  4738][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.760 > [  4743][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.766 > [  4749][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.771 > [  4754][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.776 > [  4760][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.782 > [  4765][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.787 > [  4771][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.793 > [  4777][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.799 > [  4783][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.805 > [  4788][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.810 > [  4794][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.815 > [  4799][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.822 > [  4805][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.827 > [  4811][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.832 > [  4817][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.838 > [  4822][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.843 > [  4828][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.849 > [  4833][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.855 > [  4839][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.859 > [  4845][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.865 > [  4851][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.870 > [  4856][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.877 > [  4862][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.882 > [  4867][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.887 > [  4873][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.893 > [  4879][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.899 > [  4885][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.904 > [  4890][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.910 > [  4896][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.915 > [  4901][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.920 > [  4907][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.926 > [  4913][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.932 > [  4919][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.937 > [  4924][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.943 > [  4930][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.948 > [  4935][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.954 > [  4941][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.959 > [  4947][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.965 > [  4953][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.970 > [  4958][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:20.976 > [  4964][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:20.982 > [  4969][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:20.988 > [  4975][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:20.993 > [  4981][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.004 > [  4987][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.005 > [  4992][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.015 > [  4998][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.016 > [  5003][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.027 > [  5009][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.032 > [  5015][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.038 > [  5020][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.043 > [  5026][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.049 > [  5032][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.055 > [  5037][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.060 > [  5043][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.066 > [  5049][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.071 > [  5055][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.076 > [  5060][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.082 > [  5066][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.088 > [  5071][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.093 > [  5077][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.099 > [  5082][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.104 > [  5088][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.109 > [  5094][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.115 > [  5100][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.121 > [  5105][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.126 > [  5111][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.132 > [  5117][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.138 > [  5123][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.143 > [  5128][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.149 > [  5134][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.155 > [  5139][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.160 > [  5145][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.166 > [  5150][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.171 > [  5156][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.176 > [  5162][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.182 > [  5168][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.188 > [  5173][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.193 > [  5179][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.198 > [  5184][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.205 > [  5191][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.210 > [  5196][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.215 > [  5202][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.221 > [  5207][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.227 > [  5213][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.233 > [  5218][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.238 > [  5224][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.243 > [  5230][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.249 > [  5236][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.255 > [  5241][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.260 > [  5247][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.265 > [  5252][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.271 > [  5259][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.277 > [  5264][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.282 > [  5270][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.287 > [  5275][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.299 > [  5281][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.299 > [  5286][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.310 > [  5292][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.310 > [  5298][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.321 > [  5304][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.327 > [  5309][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.332 > [  5315][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.338 > [  5320][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.343 > [  5327][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.349 > [  5332][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.354 > [  5338][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.360 > [  5343][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.365 > [  5349][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.371 > [  5354][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.376 > [  5360][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.381 > [  5366][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.388 > [  5372][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.393 > [  5377][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.398 > [  5383][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.404 > [  5388][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.410 > [  5395][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.416 > [  5400][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.421 > [  5406][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.427 > [  5411][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.432 > [  5417][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.437 > [  5422][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.443 > [  5428][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.448 > [  5434][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.454 > [  5440][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.460 > [  5445][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.465 > [  5451][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.471 > [  5456][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.476 > [  5463][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.482 > [  5468][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.488 > [  5474][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.493 > [  5479][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.499 > [  5485][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.503 > [  5490][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.510 > [  5496][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.515 > [  5502][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.520 > [  5508][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.527 > [  5513][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.533 > [  5519][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.538 > [  5524][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.544 > [  5530][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.549 > [  5536][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.555 > [  5542][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.560 > [  5547][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.565 > [  5553][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.572 > [  5558][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.577 > [  5564][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.582 > [  5570][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.593 > [  5576][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.593 > [  5581][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.603 > [  5587][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.609 > [  5592][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.615 > [  5598][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.620 > [  5604][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.626 > [  5610][E][Wire.cpp:481] requestFrom(): NULL buffer pointer
+21:08:21.632 > [  5615][E][Wire.cpp:422] beginTransmission(): could not acquire lock
+21:08:21.638 > [  5621][E][Wire.cpp:526] write(): NULL TX buffer pointer
+21:08:21.643 > [  5626][E][Wire.cpp:448] endTransmission(): NULL TX buffer pointer
+21:08:21.648 > [  5632][E][Wire.cpp:481] requestFrom(): NULL buffer
