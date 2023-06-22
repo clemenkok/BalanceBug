@@ -7,7 +7,7 @@ var mazeregion = {
 };
 
 //domain of both axis
-let domainsize = 350;
+let domainsize = 400;
 
 // set the dimensions and margins of the graph
 var margin = { top: 10, right: 10, bottom: 10, left: 10 },
