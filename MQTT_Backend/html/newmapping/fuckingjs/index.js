@@ -699,7 +699,7 @@ function detectclosedloop(currentpos) {
       //temp.push(temp[0]);
 
       //calculate the area
-      let looparea = Math.round(Math.abs(d3.polygonArea(temp)))
+      let looparea = Math.round(Math.abs(d3.polygonArea(temp)));
       console.log(`closed loop detected with area ${looparea}`);
       //alert(`closed loop detected with area ${looparea}`);
       changeStatus(`closed loop detected with area ${looparea}`);
@@ -1111,15 +1111,19 @@ function findUnexploredPart() {
       svG
         .append("text") //the +-5 is to make the text not overlap with the grid
         .attr("class", "numberofpointsingrid")
-        .attr("x", x(mazeregion.topleft[0] + columnwidth * i + 5)) // X-coordinate of the text position
-        .attr("y", y(mazeregion.topleft[1] - rowheight * j - 10)) // Y-coordinate of the text position
+        .attr(
+          "x",
+          x(mazeregion.topleft[0] + columnwidth * i + columnwidth * 0.1)
+        ) // X-coordinate of the text position
+        .attr("y", y(mazeregion.topleft[1] - rowheight * j - rowheight * 0.1)) // Y-coordinate of the text position
         .attr("display", checkboxshowpointsingrid.checked ? "block" : "none")
         .text(pointsinRegion) // Text content
-        .style("font-size", "12px") // Set the font size
+        .style("font-size", "8px") // Set the font size
         .style(
           "fill",
           pointsinRegion < minimum_points_explored ? "red" : "black"
-        );
+        )
+        .style("opacity", "0.45");
 
       //console.log("pointsinRegion", pointsinRegion);
 
@@ -1190,14 +1194,22 @@ function findUnexploredPart() {
     .attr("class", "numberofpointsingrid")
     .attr(
       "x",
-      x(mazeregion.topleft[0] + columnwidth * closest_unexplored_region[0] + 5)
+      x(
+        mazeregion.topleft[0] +
+          columnwidth * closest_unexplored_region[0] +
+          columnwidth * 0.1
+      )
     ) // X-coordinate of the text position
     .attr(
       "y",
-      y(mazeregion.topleft[1] - rowheight * closest_unexplored_region[1] - 16)
+      y(
+        mazeregion.topleft[1] -
+          rowheight * closest_unexplored_region[1] -
+          rowheight * 0.4
+      )
     ) // Y-coordinate of the text position
     .attr("display", checkboxshowpointsingrid.checked ? "block" : "none") //use checkboxshowpointsingrid to toggle the display
-    .text("unexplored area") // Text content
+    .text("closest unexplored area") // Text content
     .style("font-size", "12px") // Set the font size
     .style("font-color", "orange")
     .style("opacity", 0.8);
