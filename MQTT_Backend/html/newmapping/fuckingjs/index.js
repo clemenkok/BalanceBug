@@ -1,9 +1,9 @@
 //region of the maze
 var mazeregion = {
-  topleft: [-150, 150],
-  topright: [150, 150],
-  bottomleft: [-150, -150],
-  bottomright: [150, -150],
+  topleft: [0, 400],
+  topright: [400, 400],
+  bottomleft: [0, -400],
+  bottomright: [400, -400],
 };
 
 //domain of both axis
@@ -666,8 +666,8 @@ document.addEventListener("keydown", function (event) {
 
 var detectionradius = 2.5; // how close 2 points are to consider the start and the end are the same
 var minimumindexaway = 10; // minimum number of datapoints between currentpos and the startpos   (eg: start at 0, currenpos at 100)
-var maximumarea = 2000; // if area < maximumarea then consider it as a closed unreachable loop
-var minimumarea = 200;
+var maximumarea = 6000; // if area < maximumarea then consider it as a closed unreachable loop
+var minimumarea = 625;
 var unreachablepointsfactor = 15; //for example if the area is 1000, there will be 1000/50 points in the closedloop
 
 function detectclosedloop(currentpos) {
