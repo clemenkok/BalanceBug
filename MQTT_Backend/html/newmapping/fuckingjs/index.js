@@ -44,7 +44,7 @@ var xaxis = svG
   .append("g")
   .attr("transform", "translate(0," + height / 2 + ")")
   //.attr("transform", "translate(0," + height + ")")
-  .style("opacity", 0.2)
+  .style("opacity", 0.25)
   .call(d3.axisBottom(x));
 
 // X scale and Axis
@@ -179,7 +179,7 @@ function ReceivednewBall(msg) {
     .attr("cy", function (d) {
       return y(d.y);
     })
-    .attr("r", 2);
+    .attr("r", 1.8);
 
   //connect the scatter with a fucking line
   var checkboxshowscatterline = document.getElementById(
@@ -189,7 +189,7 @@ function ReceivednewBall(msg) {
     .append("line")
     .attr("class", "scatterline")
     .style("stroke", "lightgreen")
-    .style("stroke-width", 3)
+    .style("stroke-width", 1.5)
     .style("display", checkboxshowscatterline.checked ? "block" : "none")
     .attr("x1", x(lastpos[0]))
     .attr("y1", y(lastpos[1]))
@@ -454,7 +454,7 @@ function kmeanallmyfuckingpoints(numClusters) {
     .style("display", "block")
     .attr("cx", (d) => x(d.x))
     .attr("cy", (d) => y(d.y))
-    .attr("r", 5) // a bit bigger than data points
+    .attr("r", 2.5) // a bit bigger than data points
     .style("fill", "#EE4B2B") // greyish fill
     .style("z-index", 10)
     .attr("stroke", function (d, i) {
@@ -463,7 +463,7 @@ function kmeanallmyfuckingpoints(numClusters) {
     }) // and a thick colorful outline
     .attr("stroke-width", 2)
     .on("mouseover", function (d, i) {
-      d3.select("#currentclusterindex").text(`current cluster index: ${i}`);
+      d3.select("#currentclusterindex").text(`Hovered Cluster index: ${i}`);
       d3.select("#centroids-svg").raise();
     });
 
@@ -698,7 +698,8 @@ function detectclosedloop(currentpos) {
       console.log("temp", temp);
       //temp.push(temp[0]);
 
-      let looparea = Math.abs(d3.polygonArea(temp));
+      //calculate the area
+      let looparea = Math.round(Math.abs(d3.polygonArea(temp)))
       console.log(`closed loop detected with area ${looparea}`);
       //alert(`closed loop detected with area ${looparea}`);
       changeStatus(`closed loop detected with area ${looparea}`);
@@ -760,7 +761,7 @@ function detectclosedloop(currentpos) {
           .attr("cy", function (d) {
             return y(d.y);
           })
-          .attr("r", 2);
+          .attr("r", 1.8);
 
         unreachablepts.push(...generatedpoints);
       }
@@ -770,7 +771,9 @@ function detectclosedloop(currentpos) {
       currentloop = [];
 
       // when we detected a closed loop, use A star to lead us to the cloest unexplored region
-      AstarToClosestUnexplored();
+      if (document.getElementById("checkboxastartoclosestunxpolored").checked) {
+        AstarToClosestUnexplored();
+      }
     }
   }
 }
@@ -899,6 +902,20 @@ checkboxshowKmean.addEventListener("change", function () {
   }
 });
 
+var checkboxshowAstarPath = document.getElementById("checkboxshowAstarPath");
+checkboxshowAstarPath.addEventListener("change", function () {
+  var astarline = document.getElementsByClassName("astarline");
+
+  //loop through all datapoints
+  for (var i = 0; i < astarline.length; i++) {
+    if (checkboxshowAstarPath.checked) {
+      astarline[i].style.display = "block";
+    } else {
+      astarline[i].style.display = "none";
+    }
+  }
+});
+
 // Maze Bound *****************************************************
 
 function drawMazeBound() {
@@ -972,7 +989,7 @@ function drawMazeGrids() {
       .attr("class", "mazegrid")
       .style("display", checkboxshowmazegrid.checked ? "block" : "none")
       .style("stroke", "black")
-      .style("stroke-width", 1)
+      .style("stroke-width", 0.7)
       .attr("x1", x(mazeregion.topleft[0] + columnwidth * i))
       .attr("y1", y(mazeregion.topleft[1]))
       .attr("x2", x(mazeregion.topleft[0] + columnwidth * i))
@@ -986,7 +1003,7 @@ function drawMazeGrids() {
       .attr("class", "mazegrid")
       .style("display", checkboxshowmazegrid.checked ? "block" : "none")
       .style("stroke", "black")
-      .style("stroke-width", 1)
+      .style("stroke-width", 0.7)
       .attr("x1", x(mazeregion.topleft[0]))
       .attr("y1", y(mazeregion.topleft[1] - rowheight * i))
       .attr("x2", x(mazeregion.topright[0]))
@@ -1098,7 +1115,7 @@ function findUnexploredPart() {
         .attr("y", y(mazeregion.topleft[1] - rowheight * j - 10)) // Y-coordinate of the text position
         .attr("display", checkboxshowpointsingrid.checked ? "block" : "none")
         .text(pointsinRegion) // Text content
-        .style("font-size", "15px") // Set the font size
+        .style("font-size", "12px") // Set the font size
         .style(
           "fill",
           pointsinRegion < minimum_points_explored ? "red" : "black"
@@ -1189,7 +1206,7 @@ function findUnexploredPart() {
 setInterval(() => {
   //change the text of data-label to the number of allmyfuckingpoints
   document.getElementById("data-label").innerText =
-    allmyfuckingpoints.length.toString();
+    "number of data points: " + allmyfuckingpoints.length.toString();
 
   //find unexplored regions
   findUnexploredPart();
@@ -1260,7 +1277,7 @@ function pointInPolygon(point, polygon) {
 
 d3.select("#status")
   .style("font-size", "26px")
-  .text("Status: Startkng this fkting bushit");
+  .text("Status: waiting for MQTT Rover data");
 
 function changeStatus(status) {
   document.getElementById("status").innerText += "\n" + status;
@@ -1452,7 +1469,7 @@ function Astar_and_Draw(
   );
 
   if (sendpathtoserver) {
-    let temp = []
+    let temp = [];
     for (var i = 0; i < path.length; i++) {
       temp.push(clustercoords[path[i]]);
     }
@@ -1476,7 +1493,7 @@ function Astar_and_Draw(
       .append("line")
       .attr("class", "astarline")
       .style("stroke", "green")
-      .style("stroke-width", 4)
+      .style("stroke-width", 2.5)
       .attr("x1", x(startx))
       .attr("y1", y(starty))
       .attr("x2", x(endx))
@@ -1595,9 +1612,11 @@ document.addEventListener("DOMContentLoaded", function () {
     cursorY = event.clientY - offsetY;
     //console.log("Mouse cursor position:", cursorX, cursorY);
     //console.log(x.invert(cursorX), y.invert(cursorY))
-    document.getElementById("mousecoord-label").innerHTML = `${x.invert(
-      cursorX
-    )}, ${y.invert(cursorY)}`;
+    document.getElementById(
+      "mousecoord-label"
+    ).innerHTML = `Mouse Coordinate: ${x.invert(cursorX)}, ${y.invert(
+      cursorY
+    )}`;
   });
 
   // Event listener for key click 'a'
@@ -1689,8 +1708,6 @@ async function WaitForKMean() {
     }
   }
 }
-
-processData();
 
 async function AstarToClosestUnexplored() {
   if (closest_unexplored_region == null) return;
