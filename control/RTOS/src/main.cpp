@@ -46,7 +46,7 @@ void callback(char *topic, byte *payload, unsigned int length)
         // have to add a function
         updateLocalisation(current_x, current_y);
     }
-
+    /*
      // if first letter of the payload is a B, then we know that we have to break out of the loop
     if (receivedPayload[0] == 'B')
     {
@@ -77,6 +77,7 @@ void callback(char *topic, byte *payload, unsigned int length)
         // TODO: Add a function
         setRoverCalculateNextCoord();
     }
+    */
 }
 
 void setup()
@@ -89,7 +90,7 @@ void setup()
 
     connectionSetup();
     compassSetup();
-    //driveSetup();
+    driveSetup();
 
     MQTTclient.setCallback(callback);
     /*
@@ -118,7 +119,7 @@ void setup()
 void loop()
 {
     MQTTclient.loop();
-    publishCompassReading();
+    // publishCompassReading();
 
-    // roverStateLoop();
+    roverStateLoop();
 }

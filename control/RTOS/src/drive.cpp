@@ -56,7 +56,7 @@ int darkThr = -1;
 int turnDur = 1100;
 unsigned long turnEndTime = 0;
 unsigned long turnStartTime = 0;
-int cruiseSpeed = 90;
+int cruiseSpeed = 60;
 int speedL = 0, speedR = 0;
 
 // Variables to store the current position and orientation
@@ -206,7 +206,7 @@ void driveSetup()
     stepperR.setMaxSpeed(500);
 
     // Set the PID parameters
-    myPID.SetOutputLimits(-80, 80); // Adjust the output limits based on your motor control range
+    myPID.SetOutputLimits(-60, 60); // Adjust the output limits based on your motor control range
     myPID.SetMode(AUTOMATIC);
 
     // both LEDs turn on for 5s, before turning off to signal start of calibration
@@ -379,8 +379,8 @@ void driveLoop()
             }
 
             myPID.Compute();
-            speedL = (cruiseSpeed - PIDoutput) * polarity;
-            speedR = (cruiseSpeed + PIDoutput) * polarity;
+            speedL = cruiseSpeed - (PIDoutput * polarity);
+            speedR = cruiseSpeed + (PIDoutput * polarity);
             break;
 
         case TURN_90_DEG: // case to turn 90deg away from cur wall
