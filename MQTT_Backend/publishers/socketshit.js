@@ -1,4 +1,5 @@
 var io = null;
+const { client } = new (require('../services/mqtt_service'))();
 
 var fs = require('fs');
 const { runInContext } = require('vm');
@@ -137,9 +138,40 @@ module.exports.setupsocket = function (http) {
     });
 
     socket.on('closedloopdetected', (msg) => {
-        console.log('closed loop detected');      
+      console.log('closed loop detected');
     });
-    
+
+    socket.on('astarpath', (msg) => {
+      console.log('astarpath', msg);
+
+      for (var i = 0; i < msg.length; i++) {
+        let tmp = `C,${i},${msg[i][0]},${msg[i][1]} `;
+
+        client.publish(
+          'rover_current_coords',
+          tmp,
+          { qos: 0, retain: false },
+          (error) => {
+            console.log(`a star fucked`);
+            if (error) {
+              console.error(error);
+            }
+          }
+        );
+      }
+
+      client.publish(
+        'rover_current_coords',
+        'D',
+        { qos: 0, retain: false },
+        (error) => {
+          console.log(`a star fucked`);
+          if (error) {
+            console.error(error);
+          }
+        }
+      );
+    });
   });
 
   return io;

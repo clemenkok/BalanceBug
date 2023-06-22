@@ -1,18 +1,23 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="index.css">
+
 <button id="button_testsocket" onclick="testsocket()">test socket</button>
 
-<button id="mybutton" onclick="addball()">Get raw data</button>
-<button id="mybutton2" onclick="addball()">Get blurred data</button>
-<button id="kmeanbutton" onclick="kmeanallmyfuckingpoints()">K mean</button>
+<button id="mybutton" onmousedown="getrawdataclicked()">Get raw data</button>
+<button id="mybutton2" onmousedown="getblurreddataclicked()">Get blurred data</button>
+<input type="text" id="textboxkmeannumber" placeholder = "number of K mean clusters" value = "2" >
+<button id="kmeanbutton" onclick="KmeanButton()">K mean</button>
 <button id="cleardatapointbutton" onclick="cleardatapoints()">
   clear fucking points
 </button>
-<button id="connectclusterbutton" onclick="connnectcluster()">
+<button id="connectclusterbutton" onclick="connectclusterbutton()">
   connect fucking clusters
 </button>
 <button id="resetcountbutton" onclick="resetcount()">reset count</button>
 <button id="getfakedatabutton" onclick="getfakedata()">Get fake data</button>
 <button id="findunexplored" onclick="findUnexploredPart()">find unexplored part</button>
+<button id="btnflipX" onclick="flipX()">Flip X axis</button>
+<button id="btnflipY" onclick="flipY()">Flip Y axis</button>
 <div id="currentclusterindex">current index:</div>
 <select id="followingwall">
   <option value="left">left</option>
@@ -33,12 +38,27 @@
 <label for="checkboxshowpointsingrid">show # points in grid</label>
 <input type="checkbox" id="checkboxshowclosedlooppolygons" checked>
 <label for="checkboxshowclosedlooppolygons">show closed loop polygons</label>
+<input type="checkbox" id="checkboxshowKmean" checked>
+<label for="checkboxshowKmean">show K Means</label>
 <br/>
 <label for="textbox1">Start Cluster:</label>
-<input type="text" id="textboxstartcluster" value = "1"/><br>
+<input type="text" id="textboxstartcluster" value = "1"/>
 <label for="textbox2">End Cluster</label>
-<input type="text" id="textboxendcluster" value = "2" /><br>
+<input type="text" id="textboxendcluster" value = "2" />
+<label for="textboxgridbottomleft">bottom left grid (X,Y):</label>
+<input type="text" id="textboxgridbottomleft" value = "predefined"/>
+<label for="textboxgridtopright">top right grid (X,Y):</label>
+<input type="text" id="textboxgridtopright" value = "predefined" />
+<button id="btnsetgrid" onclick="resizeGrid()">Resize Grid</button>
+<label for="textboxcolumnrow">Columm,Row:</label>
+<input type="text" id="textboxcolumnrow" value = "predefined" />
+<button id="btnsetcolumnrow" onclick="setColumnRow()">Set # Column Row</button>
+<label for="textboxxytoclosestcluster">X,Y</label>
+<input type="text" id="textboxxytoclosestcluster" value = "predefined" />
+<button id="btngetclosestcluster" onclick="GetClosestCluster()">Get Closest Cluster</button>
 <div id="status" style="font-size: 16px">Status:</div>
+<div id="data-label" style="font-size: 10px">Data:</div>
+<div id="mousecoord-label" style="font-size: 10px">Mouse Coord:</div>
 <!-- Add a svg area, empty -->
 <div id="scatter_area"></div>
 
