@@ -139,42 +139,57 @@ module.exports.setupsocket = function (http) {
 
     socket.on('closedloopdetected', (msg) => {
       console.log('closed loop detected');
-     /*  client.publish(
-        'rover_current_coords',
-        'B',
-      ) */
+      client.publish('rover_current_coords', 'B', function (error) {
+        if (error) {
+          // Error occurred while publishing
+          console.error('Error publishing message:', error);
+        } else {
+          // Message published successfully
+          console.log(
+            'Message published successfully: Rover received STOP command'
+          );
+        }
+      });
     });
 
     socket.on('astarpath', (msg) => {
       console.log('astarpath', msg);
-
       for (var i = 0; i < msg.length; i++) {
         let tmp = `C,${i},${msg[i][0]},${msg[i][1]} `;
-
-        /* client.publish(
+        client.publish(
           'rover_current_coords',
           tmp,
           { qos: 0, retain: false },
-          (error) => {
-            console.log(`a star fucked`);
+          function (error) {
             if (error) {
-              console.error(error);
+              // Error occurred while publishing
+              console.error('Error publishing message:', error);
+            } else {
+              // Message published successfully
+              console.log(
+                'Message published successfully: Rover waypoint buffer updated'
+              );
             }
           }
-        ); */
+        );
       }
 
-      /* client.publish(
+      client.publish(
         'rover_current_coords',
         'D',
         { qos: 0, retain: false },
-        (error) => {
-          console.log(`a star fucked`);
+        function (error) {
           if (error) {
-            console.error(error);
+            // Error occurred while publishing
+            console.error('Error publishing message:', error);
+          } else {
+            // Message published successfully
+            console.log(
+              'Message published successfully: Rover received Coordinates'
+            );
           }
         }
-      ); */
+      );
     });
   });
 
