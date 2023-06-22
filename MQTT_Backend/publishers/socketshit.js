@@ -3,7 +3,7 @@ var io = null;
 var fs = require('fs');
 const { runInContext } = require('vm');
 
-var file = './html/newmapping/mapdata/data21jun1819.txt';
+var file = './html/newmapping/mapdata/452.txt';
 var data = fs.readFileSync(file, 'utf8');
 var dataArr = data.toString().split('\n');
 //remove last dataarr

@@ -1,13 +1,6 @@
 #ifndef DRIVE_H_
 #define DRIVE_H_
 
-#include <WiFi.h>
-#include <PubSubClient.h>
-
-extern WiFiClient wifiClient;
-extern PubSubClient MQTTclient;
-
-
 #define DECLINATION 60
 
 void calibrate(int& VMax, int& VMin, int sensorPin, int testNo);
@@ -20,9 +13,17 @@ void collectData();
 void driftCorrection();
 void updateLocalisation(double new_x, double new_y);
 
+double calculateDistanceBetwCoord(double x1, double y1, double x2, double y2);
+double calculateAngleBetwCoord(double x1, double y1, double x2, double y2);
+
+void setRoverStop();
+void setRoverCalculateNextCoord();
+void updateWaypointBuffer(int index, double wayX, double wayY);
+
 
 
 void compassSetup();
 int getCompassHeading();
+void publishCompassReading();
 
 #endif

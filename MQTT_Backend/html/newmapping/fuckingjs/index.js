@@ -31,8 +31,8 @@ var data = [
 ];
 
 // X scale and Axis
-let xdomain = [-300, 300];
-let ydomain = [-300, 300];
+let xdomain = [-500, 500];
+let ydomain = [-500, 500];
 var x = d3
   .scaleLinear()
   .domain(xdomain) // This is the min and the max of the data: 0 to 100 if percentages

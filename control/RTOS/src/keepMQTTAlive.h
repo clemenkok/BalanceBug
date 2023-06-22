@@ -14,9 +14,6 @@ void WiFiEvent(WiFiEvent_t event);
 // function that connects ESP32 to wifi
 void connectToWiFi();
 
-// task that checks for MQTT connection status intermittently
-void keepMQTTAlive(void *parameters);
-void printStackSpaceMQTT();
 void connectionSetup();
 
 #endif

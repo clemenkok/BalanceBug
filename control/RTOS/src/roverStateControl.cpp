@@ -1,7 +1,6 @@
 #include "roverStateControl.h"
 #include "uartToDistance.h"
 #include "drive.h"
-#include <esp_task_wdt.h>
 
 bool test_without_localisation = true;
 
@@ -28,14 +27,17 @@ void startRoverWait()
 
 void startLocalise()
 {
-    if (!test_without_localisation){
+    if (!test_without_localisation)
+    {
         roverCurrState = LOCALISE;
         setStartLocalisationTrue();
         // flush the uart serial port
         Serial.println("Before Serial Flush");
         SerialPort.flush();
         Serial.println("After Serial Flush");
-    }else{
+    }
+    else
+    {
         stopSpinClockwise();
         roverCurrState = DRIVE;
         driftCorrect = true;
@@ -47,37 +49,23 @@ void roverSetup()
     uartToDistanceSetup();
 }
 
-// print out remaining stack space
-void printStackSpaceRover()
+void roverStateLoop()
 {
-    UBaseType_t freeStack = uxTaskGetStackHighWaterMark(NULL) * sizeof(StackType_t);
-    Serial.print("Free Stack Space (roverStateControl): ");
-    Serial.print(freeStack);
-    Serial.println(" bytes");
-}
-
-void roverStateLoop(void *parameters)
-{
-    for (;;)
+    switch (roverCurrState)
     {
-        switch (roverCurrState)
-        {
-        case DRIVE:
-            driveLoop();
-            break;
+    case DRIVE:
+        driveLoop();
+        break;
 
-        case LOCALISE:
-            uartToDistanceLoop();
-            break;
+    case LOCALISE:
+        uartToDistanceLoop();
+        break;
 
-        case ROVERWAIT:
-            break;
+    case ROVERWAIT:
+        //MQTTclient.loop();
+        break;
 
-        default:
-            break;
-        }
-
-        vTaskDelay(5 / portTICK_PERIOD_MS);
+    default:
+        break;
     }
-    vTaskDelete(NULL);
 }

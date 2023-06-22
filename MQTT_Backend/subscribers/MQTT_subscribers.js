@@ -33,9 +33,9 @@ function subscribe() {
       let leftWall = data[3] === '1';
       let rightWall = data[4] === '1';
       
-      if (leftWall === '1') {
+      if (leftWall) {
         wallDirection = 'left';
-      } else if (rightWall === '1') {
+      } else if (rightWall) {
         wallDirection = 'right';
       } else {
         wallDirection = 'none';
