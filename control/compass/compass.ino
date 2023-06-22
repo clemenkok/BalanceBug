@@ -448,7 +448,7 @@
 
 QMC5883L compass;
 
-#define DECLINATION 60
+#define DECLINATION 0
 
 void setup()
 {
@@ -465,7 +465,9 @@ void setup()
 
 void loop()
 {
+  Serial.println("start");
 	int heading = compass.readHeading();
+  Serial.println("end");
 	if(heading==0) {
 		/* Still calibrating, so measure but don't print */
     Serial.println("calibrating this fuck");

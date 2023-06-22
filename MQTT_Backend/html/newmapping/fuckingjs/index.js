@@ -13,15 +13,15 @@ var margin = { top: 10, right: 40, bottom: 30, left: 30 },
 
 // append the svg object to the body of the page
 var svG = d3
-  .select("#scatter_area")
-  .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-  .attr("color", "#e6e8ea") // font color
-  .attr("font-weight", "bold") // we are bold enough to do this
-  .attr("stroke-width", 2); // and even this
+  .select('#scatter_area')
+  .append('svg')
+  .attr('width', width + margin.left + margin.right)
+  .attr('height', height + margin.top + margin.bottom)
+  .append('g')
+  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
+  .attr('color', '#e6e8ea') // font color
+  .attr('font-weight', 'bold') // we are bold enough to do this
+  .attr('stroke-width', 2); // and even this
 
 // Create data
 var data = [
@@ -38,10 +38,10 @@ var x = d3
   .domain(xdomain) // This is the min and the max of the data: 0 to 100 if percentages
   .range([0, width]); // This is the corresponding value I want in Pixel
 svG
-  .append("g")
-  .attr("transform", "translate(0," + height / 2 + ")")
+  .append('g')
+  .attr('transform', 'translate(0,' + height / 2 + ')')
   //.attr("transform", "translate(0," + height + ")")
-  .style("opacity", 0.1)
+  .style('opacity', 0.1)
   .call(d3.axisBottom(x));
 
 // X scale and Axis
@@ -50,10 +50,10 @@ var y = d3
   .domain(ydomain) // This is the min and the max of the data: 0 to 100 if percentages
   .range([height, 0]); // This is the corresponding value I want in Pixel
 svG
-  .append("g")
-  .attr("transform", "translate(" + width / 2 + ",0)")
+  .append('g')
+  .attr('transform', 'translate(' + width / 2 + ',0)')
   //.attr("transform", "translate(0,0)")
-  .style("opacity", 0.1)
+  .style('opacity', 0.1)
   .call(d3.axisLeft(y));
 
 //testing for a circle and a line
@@ -82,7 +82,7 @@ var lastpos = [50, 80];
 lastpos = [0, 0];
 
 var lastwallpos = [0, 0];
-var direction = ["fucker", "fucker"];
+var direction = ['fucker', 'fucker'];
 var wallmargin = 4;
 let initwallmarign = 1;
 var drawWall = true;
@@ -94,28 +94,28 @@ var currentloop = [];
 
 // Add 3 dots for 0, 50 and 100% for testing
 svG
-  .selectAll("whatever")
+  .selectAll('whatever')
   .data(data)
   .enter()
-  .append("circle")
-  .attr("cx", function (d) {
+  .append('circle')
+  .attr('cx', function (d) {
     return x(d.x);
   })
-  .attr("cy", function (d) {
+  .attr('cy', function (d) {
     return y(d.y);
   })
-  .attr("r", 2)
-  .attr("opacity", "0");
+  .attr('r', 2)
+  .attr('opacity', '0');
 
 function addball() {
-  console.log("addball");
+  console.log('addball');
 
-  socket.emit("needball", "Asdad");
+  socket.emit('needball', 'Asdad');
 }
 
 var socket = io();
-function testsocket(){
-  console.log(socket)
+function testsocket() {
+  console.log(socket);
 }
 
 var isFirst = true; //only called in the first time so that i can set the lastwallpos correctly
@@ -124,7 +124,7 @@ let allmyfuckingpoints = []; //each
 let unreachablepts = [];
 
 function ReceivednewBall(msg) {
-  console.log("msg", msg);
+  console.log('msg', msg);
 
   var _x = Number(msg[0]);
   var _y = Number(msg[1]);
@@ -142,10 +142,10 @@ function ReceivednewBall(msg) {
     y: _y,
   });
 
-  if (_x >= lastpos[0]) direction[0] = "right";
-  if (_x < lastpos[0]) direction[0] = "left";
-  if (_y >= lastpos[1]) direction[1] = "up";
-  if (_y < lastpos[1]) direction[1] = "down";
+  if (_x >= lastpos[0]) direction[0] = 'right';
+  if (_x < lastpos[0]) direction[0] = 'left';
+  if (_y >= lastpos[1]) direction[1] = 'up';
+  if (_y < lastpos[1]) direction[1] = 'down';
 
   let angle = Math.abs(
     Math.atan(Math.abs(_y - lastpos[1]) / Math.abs(_x - lastpos[0]))
@@ -153,13 +153,13 @@ function ReceivednewBall(msg) {
   if (_x == lastpos[0]) angle = Math.PI / 2; //if it is vertical move then set the angle to 90 degree
 
   if (isFirst) {
-    if (direction[0] == "right") {
-      if (direction[1] == "up") lastwallpos = [0, initwallmarign];
-      if (direction[1] == "down") lastwallpos = [initwallmarign, 0];
+    if (direction[0] == 'right') {
+      if (direction[1] == 'up') lastwallpos = [0, initwallmarign];
+      if (direction[1] == 'down') lastwallpos = [initwallmarign, 0];
     }
-    if (direction[0] == "left") {
-      if (direction[1] == "up") lastwallpos = [-initwallmarign, 0];
-      if (direction[1] == "down") lastwallpos = [0, -initwallmarign];
+    if (direction[0] == 'left') {
+      if (direction[1] == 'up') lastwallpos = [-initwallmarign, 0];
+      if (direction[1] == 'down') lastwallpos = [0, -initwallmarign];
     }
 
     //set the lastpos for the joined line for scatters so that it doesnt always start as 0,0
@@ -169,40 +169,40 @@ function ReceivednewBall(msg) {
   var data = [{ x: _x, y: _y }];
   //add the scatter
   svG
-    .selectAll("whatever")
+    .selectAll('whatever')
     .data(data)
     .enter()
-    .append("circle")
-    .attr("class", "mydatapoint")
-    .style("z-index", 7)
-    .attr("cx", function (d) {
+    .append('circle')
+    .attr('class', 'mydatapoint')
+    .style('z-index', 7)
+    .attr('cx', function (d) {
       //console.log(x(d.x));
       return x(d.x);
     })
-    .attr("cy", function (d) {
+    .attr('cy', function (d) {
       return y(d.y);
     })
-    .attr("r", 2);
+    .attr('r', 2);
 
   //connect the scatter with a fucking line
   var checkboxshowscatterline = document.getElementById(
-    "checkboxshowscatterline"
+    'checkboxshowscatterline'
   );
   svG
-    .append("line")
-    .attr("class", "scatterline")
-    .style("stroke", "lightgreen")
-    .style("stroke-width", 3)
-    .style("display", checkboxshowscatterline.checked ? "block" : "none")
-    .attr("x1", x(lastpos[0]))
-    .attr("y1", y(lastpos[1]))
-    .attr("x2", x(_x))
-    .attr("y2", y(_y));
+    .append('line')
+    .attr('class', 'scatterline')
+    .style('stroke', 'lightgreen')
+    .style('stroke-width', 3)
+    .style('display', checkboxshowscatterline.checked ? 'block' : 'none')
+    .attr('x1', x(lastpos[0]))
+    .attr('y1', y(lastpos[1]))
+    .attr('x2', x(_x))
+    .attr('y2', y(_y));
 
   lastpos = [_x, _y];
 
   //draw the fucking wall
-  if (drawWall && !enteringwallnone && !(followingwall == "none")) {
+  if (drawWall && !enteringwallnone && !(followingwall == 'none')) {
     let start = []; //actually this part poorly coded but no fucks given
 
     if (followingwallwaslastnone) {
@@ -216,26 +216,26 @@ function ReceivednewBall(msg) {
     console.log(direction);
 
     //if we are following left
-    if (followingwall == "left") {
-      if (direction[0] == "right") {
-        if (direction[1] == "up")
+    if (followingwall == 'left') {
+      if (direction[0] == 'right') {
+        if (direction[1] == 'up')
           dest = [
             _x - wallmargin * Math.sin(angle),
             _y + wallmargin * Math.cos(angle),
           ];
-        if (direction[1] == "down")
+        if (direction[1] == 'down')
           dest = [
             _x + wallmargin * Math.sin(angle),
             _y + wallmargin * Math.cos(angle),
           ];
       }
-      if (direction[0] == "left") {
-        if (direction[1] == "up")
+      if (direction[0] == 'left') {
+        if (direction[1] == 'up')
           dest = [
             _x - wallmargin * Math.sin(angle),
             _y - wallmargin * Math.cos(angle),
           ];
-        if (direction[1] == "down")
+        if (direction[1] == 'down')
           dest = [
             _x + wallmargin * Math.sin(angle),
             _y - wallmargin * Math.cos(angle),
@@ -244,26 +244,26 @@ function ReceivednewBall(msg) {
     }
 
     //if we are following right
-    if (followingwall == "right") {
-      if (direction[0] == "right") {
-        if (direction[1] == "up")
+    if (followingwall == 'right') {
+      if (direction[0] == 'right') {
+        if (direction[1] == 'up')
           dest = [
             _x + wallmargin * Math.sin(angle),
             _y - wallmargin * Math.cos(angle),
           ];
-        if (direction[1] == "down")
+        if (direction[1] == 'down')
           dest = [
             _x - wallmargin * Math.sin(angle),
             _y - wallmargin * Math.cos(angle),
           ];
       }
-      if (direction[0] == "left") {
-        if (direction[1] == "up")
+      if (direction[0] == 'left') {
+        if (direction[1] == 'up')
           dest = [
             _x + wallmargin * Math.sin(angle),
             _y + wallmargin * Math.cos(angle),
           ];
-        if (direction[1] == "down")
+        if (direction[1] == 'down')
           dest = [
             _x - wallmargin * Math.sin(angle),
             _y + wallmargin * Math.cos(angle),
@@ -273,32 +273,32 @@ function ReceivednewBall(msg) {
 
     //draw the wall
 
-    var checkboxshowwall = document.getElementById("checkboxshowwall");
+    var checkboxshowwall = document.getElementById('checkboxshowwall');
     if (!isFirst) {
       svG
-        .append("line")
-        .attr("class", "wallline")
-        .style("display", checkboxshowwall.checked ? "block" : "none")
-        .style("stroke", "black")
-        .style("stroke-width", 1)
-        .attr("x1", x(start[0]))
-        .attr("y1", y(start[1]))
-        .attr("x2", x(dest[0]))
-        .attr("y2", y(dest[1]));
+        .append('line')
+        .attr('class', 'wallline')
+        .style('display', checkboxshowwall.checked ? 'block' : 'none')
+        .style('stroke', 'black')
+        .style('stroke-width', 1)
+        .attr('x1', x(start[0]))
+        .attr('y1', y(start[1]))
+        .attr('x2', x(dest[0]))
+        .attr('y2', y(dest[1]));
     }
 
-    console.log("start", lastwallpos);
-    console.log("dest", dest);
+    console.log('start', lastwallpos);
+    console.log('dest', dest);
     lastwallpos = dest;
 
-    console.log("wall added");
+    console.log('wall added');
   }
 
   enteringwallnone = false; //after the first time exiting from none, we will start drawing wall
 
   isFirst = false; // not the first time anymore
 
-  if (followingwall != "none") {
+  if (followingwall != 'none') {
     detectclosedloop({
       x: _x,
       y: _y,
@@ -306,54 +306,54 @@ function ReceivednewBall(msg) {
   }
 }
 
-socket.on("sendyouball", (msg) => ReceivednewBall(msg));
-socket.on("rover_current_coords", (msg) => ReceivednewBall(msg));
+socket.on('sendyouball', (msg) => ReceivednewBall(msg));
+socket.on('rover_current_coords', (msg) => ReceivednewBall(msg));
 
 /// for my fucking button
 
 setInterval(function () {
   //check if mouse is hovering on mybutton
-  if (isMouseHover) socket.emit("needball", "Asdad");
-  if (isMouseHover2) socket.emit("needbigball", "Asdad");
+  if (isMouseHover) socket.emit('needball', 'Asdad');
+  if (isMouseHover2) socket.emit('needbigball', 'Asdad');
 }, 100);
 
 let isMouseHover = false;
-let test = document.getElementById("mybutton");
+let test = document.getElementById('mybutton');
 test.addEventListener(
-  "mouseleave",
+  'mouseleave',
   function (event) {
     isMouseHover = false;
-    event.target.textContent = "mouse out";
+    event.target.textContent = 'mouse out';
     //console.log(isMouseHover)
   },
   false
 );
 test.addEventListener(
-  "mouseover",
+  'mouseover',
   function (event) {
     isMouseHover = true;
-    event.target.textContent = "mouse in";
+    event.target.textContent = 'mouse in';
     //console.log(isMouseHover)
   },
   false
 );
 
 let isMouseHover2 = false;
-let test2 = document.getElementById("mybutton2");
+let test2 = document.getElementById('mybutton2');
 test2.addEventListener(
-  "mouseleave",
+  'mouseleave',
   function (event) {
     isMouseHover2 = false;
-    event.target.textContent = "mouse out";
+    event.target.textContent = 'mouse out';
     //console.log(isMouseHover)
   },
   false
 );
 test2.addEventListener(
-  "mouseover",
+  'mouseover',
   function (event) {
     isMouseHover2 = true;
-    event.target.textContent = "mouse in";
+    event.target.textContent = 'mouse in';
     //console.log(isMouseHover)
   },
   false
@@ -380,28 +380,28 @@ const centroids = generatePoints(numClusters);
 const color = d3.scaleOrdinal(d3.schemeCategory10); // 10 different colors for 10 different numbers
 
 const centroidsSvg = svG
-  .append("g")
-  .attr("id", "centroids-svg")
+  .append('g')
+  .attr('id', 'centroids-svg')
   .raise()
-  .selectAll("dot")
+  .selectAll('dot')
   .data(centroids)
   .enter()
-  .append("circle")
-  .attr("class", "centroid")
-  .style("display", "none")
-  .attr("cx", (d) => x(d.x))
-  .attr("cy", (d) => y(d.y))
-  .attr("r", 5) // a bit bigger than data points
-  .style("fill", "#EE4B2B") // greyish fill
-  .style("z-index", 10)
-  .attr("stroke", function (d, i) {
+  .append('circle')
+  .attr('class', 'centroid')
+  .style('display', 'none')
+  .attr('cx', (d) => x(d.x))
+  .attr('cy', (d) => y(d.y))
+  .attr('r', 5) // a bit bigger than data points
+  .style('fill', '#EE4B2B') // greyish fill
+  .style('z-index', 10)
+  .attr('stroke', function (d, i) {
     color(i);
     //console.log(color(i));
   }) // and a thick colorful outline
-  .attr("stroke-width", 2)
-  .on("mouseover", function (d, i) {
-    d3.select("#currentclusterindex").text(`current cluster index: ${i}`);
-    d3.select("#centroids-svg").raise();
+  .attr('stroke-width', 2)
+  .on('mouseover', function (d, i) {
+    d3.select('#currentclusterindex').text(`current cluster index: ${i}`);
+    d3.select('#centroids-svg').raise();
   });
 
 const distance = (a, b) => {
@@ -437,15 +437,15 @@ const updateCentroids = () => {
   centroidsSvg
     .transition()
     .duration(50)
-    .attr("cx", (d) => x(d.x))
-    .attr("cy", (d) => y(d.y)); // update centroid position
+    .attr('cx', (d) => x(d.x))
+    .attr('cy', (d) => y(d.y)); // update centroid position
 };
 
 updatePoints(); // assign the initial cluster
 
 function kmeanallmyfuckingpoints() {
   //select .centroid and make them visible
-  d3.selectAll(".centroid").style("display", "block");
+  d3.selectAll('.centroid').style('display', 'block');
 
   setInterval(() => {
     updateCentroids();
@@ -467,7 +467,7 @@ function kmeanallmyfuckingpoints() {
           Math.random() * (mazeregion.topleft[1] - mazeregion.bottomleft[1]) +
           mazeregion.bottomleft[1];
 
-        console.log("unemptied", cluster);
+        console.log('unemptied', cluster);
 
         //update the centroids' positions so that the generated random point might fit onto the data
         centroids.forEach((centroid, i) => {
@@ -483,17 +483,17 @@ function kmeanallmyfuckingpoints() {
         centroidsSvg
           .transition()
           .duration(50)
-          .attr("cx", (d) => x(d.x))
-          .attr("cy", (d) => y(d.y)); // update centroid position
+          .attr('cx', (d) => x(d.x))
+          .attr('cy', (d) => y(d.y)); // update centroid position
       }
     });
   }, 50); // 1000ms = 1s
 }
 
 function cleardatapoints() {
-  d3.selectAll(".mydatapoint").remove();
-  d3.selectAll(".scatterline").remove();
-  d3.selectAll(".wallline").remove();
+  d3.selectAll('.mydatapoint').remove();
+  d3.selectAll('.scatterline').remove();
+  d3.selectAll('.wallline').remove();
 
   //Clear allmyfuckingpoints and allloops currentloop stuff??? not yet
 }
@@ -523,7 +523,7 @@ function connnectcluster() {
     currentcluster = temp;
   }
 
-  console.log("cluster connections", clusterconnections);
+  console.log('cluster connections', clusterconnections);
   // console.log("cluster connections" , JSON.stringify(clusterconnections))
   // console.log("all centroids" , centroids);
   // console.log("all centroids" , JSON.stringify(centroids));
@@ -534,8 +534,8 @@ function connnectcluster() {
   for (var i = 0; i < centroids.length; i++) {
     clustercoords[i] = [centroids[i].x, centroids[i].y];
   }
-  let textboxstartcluster = document.getElementById("textboxstartcluster");
-  let textboxendcluster = document.getElementById("textboxendcluster");
+  let textboxstartcluster = document.getElementById('textboxstartcluster');
+  let textboxendcluster = document.getElementById('textboxendcluster');
 
   let path = astar.search(
     clusterconnections,
@@ -545,7 +545,7 @@ function connnectcluster() {
   );
 
   //remove all the lines with class astarline
-  d3.selectAll(".astarline").remove();
+  d3.selectAll('.astarline').remove();
 
   //loop through the path and draw lines
   for (var i = 0; i < path.length - 1; i++) {
@@ -558,33 +558,33 @@ function connnectcluster() {
 
     //draw a line
     svG
-      .append("line")
-      .attr("class", "astarline")
-      .style("stroke", "green")
-      .style("stroke-width", 4)
-      .attr("x1", x(startx))
-      .attr("y1", y(starty))
-      .attr("x2", x(endx))
-      .attr("y2", y(endy));
+      .append('line')
+      .attr('class', 'astarline')
+      .style('stroke', 'green')
+      .style('stroke-width', 4)
+      .attr('x1', x(startx))
+      .attr('y1', y(starty))
+      .attr('x2', x(endx))
+      .attr('y2', y(endy));
   }
 }
 
 function resetcount() {
-  socket.emit("resetcount", "Asdad");
+  socket.emit('resetcount', 'Asdad');
 }
 
 function getfakedata() {
-  socket.emit("getfakedata", "Asdad");
+  socket.emit('getfakedata', 'Asdad');
 }
 
 // Following wall select *************************************
 
-var wallselect = document.getElementById("followingwall");
+var wallselect = document.getElementById('followingwall');
 // Add an event listener for the "changed" event
-wallselect.addEventListener("change", function (event) {
+wallselect.addEventListener('change', function (event) {
   // Get the selected option
   var selectedOption = event.target.value;
-  if (selectedOption == "none") {
+  if (selectedOption == 'none') {
     followingwallwaslastnone = true;
     enteringwallnone = true;
   }
@@ -594,12 +594,12 @@ wallselect.addEventListener("change", function (event) {
 
 let simulatorstep = 5;
 
-document.addEventListener("keydown", function (event) {
+document.addEventListener('keydown', function (event) {
   if (
-    event.key === "ArrowUp" ||
-    event.key === "ArrowDown" ||
-    event.key === "ArrowLeft" ||
-    event.key === "ArrowRight"
+    event.key === 'ArrowUp' ||
+    event.key === 'ArrowDown' ||
+    event.key === 'ArrowLeft' ||
+    event.key === 'ArrowRight'
   ) {
     event.preventDefault();
     //read the selected wall side
@@ -616,13 +616,13 @@ document.addEventListener("keydown", function (event) {
       allmyfuckingpoints[allmyfuckingpoints.length - 1].y,
       selectedValue,
     ];
-    if (event.key === "ArrowUp") {
+    if (event.key === 'ArrowUp') {
       lastpt[1] += simulatorstep;
-    } else if (event.key === "ArrowDown") {
+    } else if (event.key === 'ArrowDown') {
       lastpt[1] -= simulatorstep;
-    } else if (event.key === "ArrowLeft") {
+    } else if (event.key === 'ArrowLeft') {
       lastpt[0] -= simulatorstep;
-    } else if (event.key === "ArrowRight") {
+    } else if (event.key === 'ArrowRight') {
       lastpt[0] += simulatorstep;
     }
 
@@ -661,15 +661,15 @@ function detectclosedloop(currentpos) {
       for (let j = i; j < currentloop.length; j++) {
         temp.push([currentloop[j].x, currentloop[j].y]);
       }
-      console.log("currentloop", currentloop);
-      console.log("temp", temp);
+      console.log('currentloop', currentloop);
+      console.log('temp', temp);
       //temp.push(temp[0]);
 
       let looparea = d3.polygonArea(temp);
       console.log(`closed loop detected with area ${looparea}`);
       //alert(`closed loop detected with area ${looparea}`);
       changeStatus(`closed loop detected with area ${looparea}`);
-      socket.emit("closedloopdetected","asdigyasiudihuasdihuas")
+      socket.emit('closedloopdetected', 'asdigyasiudihuasdihuas');
 
       // draw the polygon and fill it with points which refers to unreachable points
       if (Math.abs(looparea) < maximumarea) {
@@ -684,27 +684,27 @@ function detectclosedloop(currentpos) {
         //   ];
 
         svG
-          .append("g")
-          .attr("id", "polygons")
-          .selectAll("polygon")
+          .append('g')
+          .attr('id', 'polygons')
+          .selectAll('polygon')
           .data([currentloop.slice(i)]) //starting from i as the reason discussed above
           .enter()
-          .append("polygon")
-          .attr("points", function (d) {
+          .append('polygon')
+          .attr('points', function (d) {
             let pt = d
               .map(function (d) {
-                return [x(d.x), y(d.y)].join(",");
+                return [x(d.x), y(d.y)].join(',');
               })
-              .join(" ");
+              .join(' ');
 
             //   console.log(pt)
             //   console.log(d)
             return pt;
           })
-          .attr("class", "closedlooppolygons")
-          .attr("opacity", 0.5)
-          .attr("stroke", "grey")
-          .attr("stroke-width", 2);
+          .attr('class', 'closedlooppolygons')
+          .attr('opacity', 0.5)
+          .attr('stroke', 'grey')
+          .attr('stroke-width', 2);
 
         //fill the polygon with points
 
@@ -714,20 +714,20 @@ function detectclosedloop(currentpos) {
         );
 
         svG
-          .selectAll("whatever")
+          .selectAll('whatever')
           .data(generatedpoints)
           .enter()
-          .append("circle")
-          .attr("class", "unreachablepoints")
-          .attr("fill", "blue")
-          .attr("cx", function (d) {
+          .append('circle')
+          .attr('class', 'unreachablepoints')
+          .attr('fill', 'blue')
+          .attr('cx', function (d) {
             //console.log(x(d.x));
             return x(d.x);
           })
-          .attr("cy", function (d) {
+          .attr('cy', function (d) {
             return y(d.y);
           })
-          .attr("r", 2);
+          .attr('r', 2);
 
         unreachablepts.push(...generatedpoints);
       }
@@ -742,109 +742,109 @@ function detectclosedloop(currentpos) {
 // Checkboxs *****************************************************
 
 //wall lines
-var checkboxshowwall = document.getElementById("checkboxshowwall");
-checkboxshowwall.addEventListener("change", function () {
-  var walllines = document.getElementsByClassName("wallline");
+var checkboxshowwall = document.getElementById('checkboxshowwall');
+checkboxshowwall.addEventListener('change', function () {
+  var walllines = document.getElementsByClassName('wallline');
 
   //loop through all walllines
   for (var i = 0; i < walllines.length; i++) {
     if (checkboxshowwall.checked) {
-      walllines[i].style.display = "block";
+      walllines[i].style.display = 'block';
     } else {
-      walllines[i].style.display = "none";
+      walllines[i].style.display = 'none';
     }
   }
 });
 
 //scatter lines
 var checkboxshowscatterline = document.getElementById(
-  "checkboxshowscatterline"
+  'checkboxshowscatterline'
 );
-checkboxshowscatterline.addEventListener("change", function () {
-  var scatterlines = document.getElementsByClassName("scatterline");
+checkboxshowscatterline.addEventListener('change', function () {
+  var scatterlines = document.getElementsByClassName('scatterline');
 
   //loop through all walllines
   for (var i = 0; i < scatterlines.length; i++) {
     if (checkboxshowscatterline.checked) {
-      scatterlines[i].style.display = "block";
+      scatterlines[i].style.display = 'block';
     } else {
-      scatterlines[i].style.display = "none";
+      scatterlines[i].style.display = 'none';
     }
   }
 });
 
-var checkboxshowmazebound = document.getElementById("checkboxshowmazebound");
-checkboxshowmazebound.addEventListener("change", function () {
-  var mazebound = document.getElementsByClassName("mazebound");
+var checkboxshowmazebound = document.getElementById('checkboxshowmazebound');
+checkboxshowmazebound.addEventListener('change', function () {
+  var mazebound = document.getElementsByClassName('mazebound');
 
   //loop through all mazebound
   for (var i = 0; i < mazebound.length; i++) {
     if (checkboxshowmazebound.checked) {
-      mazebound[i].style.display = "block";
+      mazebound[i].style.display = 'block';
     } else {
-      mazebound[i].style.display = "none";
+      mazebound[i].style.display = 'none';
     }
   }
 });
 
-var checkboxshowmazegrid = document.getElementById("checkboxshowmazegrid");
-checkboxshowmazegrid.addEventListener("change", function () {
-  var mazegrid = document.getElementsByClassName("mazegrid");
+var checkboxshowmazegrid = document.getElementById('checkboxshowmazegrid');
+checkboxshowmazegrid.addEventListener('change', function () {
+  var mazegrid = document.getElementsByClassName('mazegrid');
 
   //loop through all mazegrid
   for (var i = 0; i < mazegrid.length; i++) {
     if (checkboxshowmazegrid.checked) {
-      mazegrid[i].style.display = "block";
+      mazegrid[i].style.display = 'block';
     } else {
-      mazegrid[i].style.display = "none";
+      mazegrid[i].style.display = 'none';
     }
   }
 });
 
 var checkboxshowpointsingrid = document.getElementById(
-  "checkboxshowpointsingrid"
+  'checkboxshowpointsingrid'
 );
-checkboxshowpointsingrid.addEventListener("change", function () {
-  var pointsingrid = document.getElementsByClassName("numberofpointsingrid");
+checkboxshowpointsingrid.addEventListener('change', function () {
+  var pointsingrid = document.getElementsByClassName('numberofpointsingrid');
 
   //loop through all pointsingrid
   for (var i = 0; i < pointsingrid.length; i++) {
     if (checkboxshowpointsingrid.checked) {
-      pointsingrid[i].style.display = "block";
+      pointsingrid[i].style.display = 'block';
     } else {
-      pointsingrid[i].style.display = "none";
+      pointsingrid[i].style.display = 'none';
     }
   }
 });
 
 var checkboxshowclosedlooppolygons = document.getElementById(
-  "checkboxshowclosedlooppolygons"
+  'checkboxshowclosedlooppolygons'
 );
 
-checkboxshowclosedlooppolygons.addEventListener("change", function () {
+checkboxshowclosedlooppolygons.addEventListener('change', function () {
   var closedlooppolygons =
-    document.getElementsByClassName("closedlooppolygons");
+    document.getElementsByClassName('closedlooppolygons');
 
   //loop through all closedlooppolygons
   for (var i = 0; i < closedlooppolygons.length; i++) {
     if (checkboxshowclosedlooppolygons.checked) {
-      closedlooppolygons[i].style.display = "block";
+      closedlooppolygons[i].style.display = 'block';
     } else {
-      closedlooppolygons[i].style.display = "none";
+      closedlooppolygons[i].style.display = 'none';
     }
   }
 });
 
-var checkboxshowdatapoints = document.getElementById("checkboxshowdatapoints");
-checkboxshowdatapoints.addEventListener("change", function () {
-  var datapoints = document.getElementsByClassName("mydatapoint");
+var checkboxshowdatapoints = document.getElementById('checkboxshowdatapoints');
+checkboxshowdatapoints.addEventListener('change', function () {
+  var datapoints = document.getElementsByClassName('mydatapoint');
 
   //loop through all datapoints
   for (var i = 0; i < datapoints.length; i++) {
     if (checkboxshowdatapoints.checked) {
-      datapoints[i].style.display = "block";
+      datapoints[i].style.display = 'block';
     } else {
-      datapoints[i].style.display = "none";
+      datapoints[i].style.display = 'none';
     }
   }
 });
@@ -854,51 +854,51 @@ checkboxshowdatapoints.addEventListener("change", function () {
 function drawMazeBound() {
   //top wall
   svG
-    .append("line")
-    .attr("class", "mazebound")
-    .style("display", checkboxshowmazebound.checked ? "block" : "none")
-    .style("stroke", "black")
-    .style("stroke-width", 1)
-    .attr("x1", x(mazeregion.topleft[0]))
-    .attr("y1", y(mazeregion.topleft[1]))
-    .attr("x2", x(mazeregion.topright[0]))
-    .attr("y2", y(mazeregion.topright[1]));
+    .append('line')
+    .attr('class', 'mazebound')
+    .style('display', checkboxshowmazebound.checked ? 'block' : 'none')
+    .style('stroke', 'black')
+    .style('stroke-width', 1)
+    .attr('x1', x(mazeregion.topleft[0]))
+    .attr('y1', y(mazeregion.topleft[1]))
+    .attr('x2', x(mazeregion.topright[0]))
+    .attr('y2', y(mazeregion.topright[1]));
 
   //bottom wall
   svG
-    .append("line")
-    .attr("class", "mazebound")
-    .style("display", checkboxshowmazebound.checked ? "block" : "none")
-    .style("stroke", "black")
-    .style("stroke-width", 1)
-    .attr("x1", x(mazeregion.bottomleft[0]))
-    .attr("y1", y(mazeregion.bottomleft[1]))
-    .attr("x2", x(mazeregion.bottomright[0]))
-    .attr("y2", y(mazeregion.bottomright[1]));
+    .append('line')
+    .attr('class', 'mazebound')
+    .style('display', checkboxshowmazebound.checked ? 'block' : 'none')
+    .style('stroke', 'black')
+    .style('stroke-width', 1)
+    .attr('x1', x(mazeregion.bottomleft[0]))
+    .attr('y1', y(mazeregion.bottomleft[1]))
+    .attr('x2', x(mazeregion.bottomright[0]))
+    .attr('y2', y(mazeregion.bottomright[1]));
 
   //left wall
   svG
-    .append("line")
-    .attr("class", "mazebound")
-    .style("display", checkboxshowmazebound.checked ? "block" : "none")
-    .style("stroke", "black")
-    .style("stroke-width", 1)
-    .attr("x1", x(mazeregion.topleft[0]))
-    .attr("y1", y(mazeregion.topleft[1]))
-    .attr("x2", x(mazeregion.bottomleft[0]))
-    .attr("y2", y(mazeregion.bottomleft[1]));
+    .append('line')
+    .attr('class', 'mazebound')
+    .style('display', checkboxshowmazebound.checked ? 'block' : 'none')
+    .style('stroke', 'black')
+    .style('stroke-width', 1)
+    .attr('x1', x(mazeregion.topleft[0]))
+    .attr('y1', y(mazeregion.topleft[1]))
+    .attr('x2', x(mazeregion.bottomleft[0]))
+    .attr('y2', y(mazeregion.bottomleft[1]));
 
   //right wall
   svG
-    .append("line")
-    .attr("class", "mazebound")
-    .style("display", checkboxshowmazebound.checked ? "block" : "none")
-    .style("stroke", "black")
-    .style("stroke-width", 1)
-    .attr("x1", x(mazeregion.topright[0]))
-    .attr("y1", y(mazeregion.topright[1]))
-    .attr("x2", x(mazeregion.bottomright[0]))
-    .attr("y2", y(mazeregion.bottomright[1]));
+    .append('line')
+    .attr('class', 'mazebound')
+    .style('display', checkboxshowmazebound.checked ? 'block' : 'none')
+    .style('stroke', 'black')
+    .style('stroke-width', 1)
+    .attr('x1', x(mazeregion.topright[0]))
+    .attr('y1', y(mazeregion.topright[1]))
+    .attr('x2', x(mazeregion.bottomright[0]))
+    .attr('y2', y(mazeregion.bottomright[1]));
 }
 
 drawMazeBound();
@@ -918,29 +918,29 @@ function drawMazeGrids() {
   //draw vertical lines
   for (let i = 1; i < columns; i++) {
     svG
-      .append("line")
-      .attr("class", "mazegrid")
-      .style("display", checkboxshowmazegrid.checked ? "block" : "none")
-      .style("stroke", "black")
-      .style("stroke-width", 1)
-      .attr("x1", x(mazeregion.topleft[0] + columnwidth * i))
-      .attr("y1", y(mazeregion.topleft[1]))
-      .attr("x2", x(mazeregion.topleft[0] + columnwidth * i))
-      .attr("y2", y(mazeregion.bottomleft[1]));
+      .append('line')
+      .attr('class', 'mazegrid')
+      .style('display', checkboxshowmazegrid.checked ? 'block' : 'none')
+      .style('stroke', 'black')
+      .style('stroke-width', 1)
+      .attr('x1', x(mazeregion.topleft[0] + columnwidth * i))
+      .attr('y1', y(mazeregion.topleft[1]))
+      .attr('x2', x(mazeregion.topleft[0] + columnwidth * i))
+      .attr('y2', y(mazeregion.bottomleft[1]));
   }
 
   //draw horizontal lines
   for (let i = 1; i < rows; i++) {
     svG
-      .append("line")
-      .attr("class", "mazegrid")
-      .style("display", checkboxshowmazegrid.checked ? "block" : "none")
-      .style("stroke", "black")
-      .style("stroke-width", 1)
-      .attr("x1", x(mazeregion.topleft[0]))
-      .attr("y1", y(mazeregion.topleft[1] - rowheight * i))
-      .attr("x2", x(mazeregion.topright[0]))
-      .attr("y2", y(mazeregion.topleft[1] - rowheight * i));
+      .append('line')
+      .attr('class', 'mazegrid')
+      .style('display', checkboxshowmazegrid.checked ? 'block' : 'none')
+      .style('stroke', 'black')
+      .style('stroke-width', 1)
+      .attr('x1', x(mazeregion.topleft[0]))
+      .attr('y1', y(mazeregion.topleft[1] - rowheight * i))
+      .attr('x2', x(mazeregion.topright[0]))
+      .attr('y2', y(mazeregion.topleft[1] - rowheight * i));
   }
 }
 
@@ -960,7 +960,7 @@ function findUnexploredPart() {
   let unexploredPart = [];
 
   //remove all previous numbers on the grids
-  d3.selectAll(".numberofpointsingrid").remove();
+  d3.selectAll('.numberofpointsingrid').remove();
 
   //loop through all regions
   for (let i = 0; i < columns; i++) {
@@ -993,16 +993,16 @@ function findUnexploredPart() {
       }
 
       svG
-        .append("text") //the +-5 is to make the text not overlap with the grid
-        .attr("class", "numberofpointsingrid")
-        .attr("x", x(mazeregion.topleft[0] + columnwidth * i + 5)) // X-coordinate of the text position
-        .attr("y", y(mazeregion.topleft[1] - rowheight * j - 5)) // Y-coordinate of the text position
-        .attr("display", checkboxshowpointsingrid.checked ? "block" : "none")
+        .append('text') //the +-5 is to make the text not overlap with the grid
+        .attr('class', 'numberofpointsingrid')
+        .attr('x', x(mazeregion.topleft[0] + columnwidth * i + 5)) // X-coordinate of the text position
+        .attr('y', y(mazeregion.topleft[1] - rowheight * j - 5)) // Y-coordinate of the text position
+        .attr('display', checkboxshowpointsingrid.checked ? 'block' : 'none')
         .text(pointsinRegion) // Text content
-        .style("font-size", "15px") // Set the font size
+        .style('font-size', '15px') // Set the font size
         .style(
-          "fill",
-          pointsinRegion < minimum_points_explored ? "red" : "black"
+          'fill',
+          pointsinRegion < minimum_points_explored ? 'red' : 'black'
         );
 
       //console.log("pointsinRegion", pointsinRegion);
@@ -1035,7 +1035,7 @@ function findUnexploredPart() {
   //return if unexplored parts is none
 
   if (unexploredPart.length == 0) {
-    changeStatus("all explored i thn=ink");
+    changeStatus('all explored i thn=ink');
     return;
   }
 
@@ -1062,19 +1062,19 @@ function findUnexploredPart() {
     return closestPart;
   }
 
-  //draw the closest unexplored region
+  //draw the closest unexplored region (show the text unexplored area)
 
   let closestregion = findClosestUnexploredPart(unexploredPart, currentregion);
 
   svG
-    .append("text") //the +-5 is to make the text not overlap with the grid
-    .attr("class", "numberofpointsingrid")
-    .attr("x", x(mazeregion.topleft[0] + columnwidth * closestregion[0] + 10)) // X-coordinate of the text position
-    .attr("y", y(mazeregion.topleft[1] - rowheight * closestregion[1] - 10)) // Y-coordinate of the text position
-    //.attr("display", checkboxshowpointsingrid.checked ? "block" : "none")
-    .text("unexplored area") // Text content
-    .style("font-size", "15px") // Set the font size
-    .style("font-color", "orange");
+    .append('text') //the +-5 is to make the text not overlap with the grid
+    .attr('class', 'numberofpointsingrid')
+    .attr('x', x(mazeregion.topleft[0] + columnwidth * closestregion[0] + 10)) // X-coordinate of the text position
+    .attr('y', y(mazeregion.topleft[1] - rowheight * closestregion[1] - 10)) // Y-coordinate of the text position
+    .attr('display', checkboxshowpointsingrid.checked ? 'block' : 'none') //use checkboxshowpointsingrid to toggle the display
+    .text('unexplored area') // Text content
+    .style('font-size', '15px') // Set the font size
+    .style('font-color', 'orange');
 }
 
 setInterval(() => {
@@ -1144,12 +1144,12 @@ function pointInPolygon(point, polygon) {
 
 // STATUS PRINT *****************************************************
 
-d3.select("#status")
-  .style("font-size", "26px")
-  .text("Status: Startkng this fkting bushit");
+d3.select('#status')
+  .style('font-size', '26px')
+  .text('Status: Startkng this fkting bushit');
 
 function changeStatus(status) {
-  document.getElementById("status").innerHTML = status;
+  document.getElementById('status').innerHTML = status;
 }
 
 // A Star Algorithm ***************************************************** VErSION 1 (works)
@@ -1179,7 +1179,7 @@ var astar = {
         f: 99999999,
         g: 99999999,
         h: 99999999,
-        debug: "",
+        debug: '',
         parent: null,
       };
     }
@@ -1290,11 +1290,11 @@ var astar = {
           grid[neighbor].g = gScore;
           grid[neighbor].f = grid[neighbor].g + grid[neighbor].h;
           grid[neighbor].debug =
-            "F: " +
+            'F: ' +
             grid[neighbor].f +
-            "<br />G: " +
+            '<br />G: ' +
             grid[neighbor].g +
-            "<br />H: " +
+            '<br />H: ' +
             grid[neighbor].h;
         }
       }
