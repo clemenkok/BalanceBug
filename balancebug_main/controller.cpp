@@ -13,19 +13,24 @@ double veloInput, veloOutput;
 
 //set points
 //rollSetpoint = -58; //setpoint without battery
-double rollSetpoint = -60.578; //setpoint with battery
-double veloSetpoint = 0;
+//double rollSetpoint = -60.578; //setpoint with battery
+double rollSetpoint = -1.8; // good setpoint at -3.9 with multimeter lol
+double veloSetpoint = 1.2;
 
 
 // TUNE THIS FIRST
-double rollKp = 37;   // Pitch angle proportional gain 7.5
-double rollKi = 37;   // Pitch angle integral gain 0.82
-double rollKd = 9;   // Pi38h angle derivative gain
+// double rollKp = 37;   // Pitch angle proportional gain 7.5
+// double rollKi = 37;   // Pitch angle integral gain 0.82
+// double rollKd = 9;   // Pi38h angle derivative gain
 
-int RollPIDsampletime = 60;
-int velPIDsampletime = 10;
+double rollKp = 3.0;   // Pitch angle proportional gain 3.0 
+double rollKi = 2.5;   // Pitch angle integral gain 1
+double rollKd = 0.5;   // Pi38h angle derivative gain 0.5
 
-double veloKp = 0;
+int RollPIDsampletime = 150;
+int velPIDsampletime = 180;
+
+double veloKp = 2.0;
 double accumulatedError = 0;
 /*Best Roll Tuning Trials so far
 Rate: According to Loop
@@ -40,7 +45,7 @@ ki: 0.5;
 */
 
 PID rollPID(&rollInput, &rollOutput, &rollSetpoint, rollKp, rollKi, rollKd, DIRECT);
-PID veloPID(&veloInput, &veloOutput, &veloSetpoint, veloKp, 0, 0, DIRECT);
+PID veloPID(&veloInput, &veloOutput, &veloSetpoint, veloKp, 0.3, 0, DIRECT);
 
 //const float radius = 0.0337; // radius of wheel for velocity filter value
 //const float length = 0.16; // length of robot
@@ -52,10 +57,11 @@ void controllerSetup(){
 
     // turn PID ON
     rollPID.SetMode(AUTOMATIC);
-    rollPID.SetOutputLimits(-5*2*3.1415, 5*2*3.1415);
+    //rollPID.SetOutputLimits(-5*2*3.1415, 5*2*3.1415);
+    rollPID.SetOutputLimits(-1000,1000);
     // set output limit to keep within 1000 steps per sec = 5 revolutions per sec
     veloPID.SetMode(AUTOMATIC);
-    veloPID.SetOutputLimits(-70, 70);
+    veloPID.SetOutputLimits(-25, 25);
     // set output limit to keep within a roll angle of 70deg?
 }
 
@@ -67,6 +73,10 @@ double computeRollControllerOutput(){
 
 void setRollSetpoint(double newSetpoint){
     rollSetpoint = newSetpoint;
+}
+
+double getRollSetpoint(){
+    return rollSetpoint;
 }
 
 void updateRollInput(double newInput){
