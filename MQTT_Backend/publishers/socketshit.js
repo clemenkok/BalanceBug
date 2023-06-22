@@ -139,6 +139,10 @@ module.exports.setupsocket = function (http) {
 
     socket.on('closedloopdetected', (msg) => {
       console.log('closed loop detected');
+     /*  client.publish(
+        'rover_current_coords',
+        'B',
+      ) */
     });
 
     socket.on('astarpath', (msg) => {
@@ -147,7 +151,7 @@ module.exports.setupsocket = function (http) {
       for (var i = 0; i < msg.length; i++) {
         let tmp = `C,${i},${msg[i][0]},${msg[i][1]} `;
 
-        client.publish(
+        /* client.publish(
           'rover_current_coords',
           tmp,
           { qos: 0, retain: false },
@@ -157,10 +161,10 @@ module.exports.setupsocket = function (http) {
               console.error(error);
             }
           }
-        );
+        ); */
       }
 
-      client.publish(
+      /* client.publish(
         'rover_current_coords',
         'D',
         { qos: 0, retain: false },
@@ -170,7 +174,7 @@ module.exports.setupsocket = function (http) {
             console.error(error);
           }
         }
-      );
+      ); */
     });
   });
 
