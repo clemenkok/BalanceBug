@@ -2,9 +2,6 @@
 #include <PubSubClient.h>
 #include <WiFi.h>
 
-// semaphore declaration to prevent conflicts
-SemaphoreHandle_t mutex_v;
-
 // configs
 #define WIFI_NETWORK "myhotspot2"
 #define WIFI_PASSWORD "racemicracemate"
@@ -28,12 +25,12 @@ void connectToMQTT()
   {
     MQTTclient.connect(clientID.c_str(), MQTT_USERNAME, MQTT_PASSWORD);
     Serial.println("connecting to MQTT");
-    vTaskDelay(250 / portTICK_PERIOD_MS); // task runs approx every 250 mS
+    delay(250); // task runs approx every 250 mS
+    MQTTclient.publish("echo", "ESP32 is alive");
   }
 
   // SUBSCRIBED TOPICS GO HERE (JUST COPY AND PASTE BELOW)
   MQTTclient.subscribe("rover_current_coords"); // added subscribe upon connection. TO EXECUTE FN: go to callback
-  MQTTclient.subscribe("test_topic");           // added subscribe upon connection. TO EXECUTE FN: go to callback
 
   Serial.println("MQTT Connected");
 }
@@ -68,19 +65,19 @@ void connectToWiFi()
     WiFi.begin(WIFI_NETWORK, WIFI_PASSWORD);
     Serial.println("wifi connecting");
     log_i(" waiting on wifi connection");
-    vTaskDelay(4000 / portTICK_PERIOD_MS);
+    delay(4000);
   }
   Serial.println("Connected to WiFi");
   WiFi.onEvent(WiFiEvent);
 }
-
+/*
 void printStackSpaceMQTT()
 {
   UBaseType_t freeStack = uxTaskGetStackHighWaterMark(NULL) * sizeof(StackType_t);
   Serial.print("Free Stack Space (keepMQTTAlive): ");
   Serial.print(freeStack);
   Serial.println(" bytes");
-}
+} */
 
 // called in setup()
 void connectionSetup()
@@ -89,8 +86,9 @@ void connectionSetup()
   connectToMQTT();
 }
 
+/*
 // task that connects to and keeps MQTT connection alive through intermittent checks
-void keepMQTTAlive(void *parameters)
+void keepMQTTAlive()
 {
   // setting must be set before a MQTT connection is made
   MQTTclient.setKeepAlive(90); // setting keep alive to 90 seconds makes for a very reliable connection, must be set before the 1st connection is made.
@@ -100,10 +98,10 @@ void keepMQTTAlive(void *parameters)
     // check for a is-connected and if the WiFi 'thinks' its connected, found checking on both is more realible than just a single check
     if ((wifiClient.connected()) && (WiFi.status() == WL_CONNECTED))
     {
-      xSemaphoreTake(mutex_v, portMAX_DELAY);
+      // xSemaphoreTake(mutex_v, portMAX_DELAY);
       MQTTclient.loop();
-      MQTTclient.publish("keep_alive", "ESP32 connected to MQTT");
-      xSemaphoreGive(mutex_v);
+      // MQTTclient.publish("keep_alive", "ESP32 connected to MQTT");
+      // xSemaphoreGive(mutex_v);
       // MQTTclient.publish("alive_topic", "Alive"); // NEW ADDITION - MONITOR ESP32 status via CLI
     }
     else
@@ -122,4 +120,4 @@ void keepMQTTAlive(void *parameters)
     vTaskDelay(500 / portTICK_PERIOD_MS); // task runs approx every 250 ms
   }
   vTaskDelete(NULL);
-}
+} */

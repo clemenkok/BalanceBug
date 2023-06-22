@@ -143,7 +143,7 @@ void uartToDistanceLoop()
           change_state = true;
       }
     }
-    //Serial.println(currentState);
+    // Serial.println(currentState);
 
     switch (currentState)
     {
@@ -154,9 +154,7 @@ void uartToDistanceLoop()
         // Transition to the next state based on some condition or event
         currentState = LOOKING_FOR_1ST_BALL;
         // Turn on light for the first ball
-        xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("red_beacon", "ON");
-        xSemaphoreGive(mutex_v);
         start_localisation = false;
       }
       break;
@@ -170,10 +168,8 @@ void uartToDistanceLoop()
         // Transition to the next state based on some condition or event
         currentState = LOOKING_FOR_2ND_BALL;
         // Turn on light for the second ball
-        xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("red_beacon", "OFF");
         MQTTclient.publish("blue_beacon", "ON");
-        xSemaphoreGive(mutex_v);
       }
       break;
 
@@ -186,10 +182,8 @@ void uartToDistanceLoop()
         // Transition to the next state based on some condition or event
         currentState = LOOKING_FOR_3RD_BALL;
         // Turn on light for the third ball
-        xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("blue_beacon", "OFF");
         MQTTclient.publish("yellow_beacon", "ON");
-        xSemaphoreGive(mutex_v);
       }
       break;
 
@@ -201,9 +195,7 @@ void uartToDistanceLoop()
         distance = 0;
         // Transition to the next state based on some condition or event
         currentState = SEND_DISTANCES;
-        xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("yellow_beacon", "OFF");
-        xSemaphoreGive(mutex_v);
 
         // once found looking for third ball, stop spinning
         stopSpinClockwise();
@@ -240,9 +232,7 @@ void uartToDistanceLoop()
       std::strcat(distance_payload, current_y_str);
 
       // perform calculation
-      xSemaphoreTake(mutex_v, portMAX_DELAY);
       MQTTclient.publish("localise", distance_payload);
-      xSemaphoreGive(mutex_v);
       // make the rover wait
       startRoverWait();
       break;

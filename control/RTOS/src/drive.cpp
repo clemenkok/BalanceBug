@@ -60,13 +60,16 @@ int cruiseSpeed = 90;
 int speedL = 0, speedR = 0;
 
 // Variables to store the current position and orientation
-double posX = 0.0;     // X coordinate
-double posY = 0.0;     // Y coordinate
-double thetaRad = 0.0; // Orientation angle
-double thetaDeg = 0.0;
+double posX = 0.0;   // X coordinate
+double posY = 0.0;   // Y coordinate
+double thetaRad = 0; // Orientation angle // was 0
+double thetaDeg = 0; // was 0
 int positionUpdatePeriod = 5;
 unsigned long prevPositionUpdateTime = 0;
 int loop_count = 0;
+
+int currAngleGoToPoint = 0;
+
 
 // to be sent to server
 // bool leftWall = false; // '1' if we drive and see a left wall
@@ -87,12 +90,27 @@ bool rightWallArr[ARRAY_SIZE] = {0};
 bool driftCorrect = false;
 int driftCorrectSendIndex = 0;
 
+int xCoordBuffer[200] = {0};
+int yCoordBuffer[200] = {0};
+int coordBufferIndex = 0;
+int coordBufferLen = 0; // TODO: increase this with each coord in callback
+double prevPosX = 0;
+double prevPosY = 0;
+
+int angleToHit = 0;
+int distanceToHit = 0;
+
+bool angleHit = false;
+bool distanceHit = false;
+
 enum DriveState
 {
     STOP,
     LOOK_FOR_WALL,
     FOLLOW_WALL,
-    TURN_90_DEG
+    TURN_90_DEG,
+    CALCULATE_NEXT_COORD,
+    MOVE_TO_COORD
     // localise maybe
 };
 
@@ -104,9 +122,11 @@ AccelStepper stepperL(1, stepPinL, dirPinL);
 PID myPID(&PIDinput, &PIDoutput, &setpoint, Kp, Ki, Kd, DIRECT);
 
 DriveState currDriveState = FOLLOW_WALL;
-bool followLeft = true;
+bool followLeft = false;
 bool followRight = !followLeft;
 int polarity = 1;
+
+int compassOffset = 0;
 
 void compassSetup()
 {
@@ -122,7 +142,7 @@ void compassSetup()
 
     int compassCalibCount = 0;
 
-    while (compassCalibCount < 20 || heading == 0)
+    while (compassCalibCount < 30 || heading == 0)
     {
 
         /* Still calibrating, so measure but don't print */
@@ -131,16 +151,43 @@ void compassSetup()
         compassCalibCount++;
     }
     digitalWrite(ledPinR, LOW);
-    thetaRad = (float)getCompassHeading() / 180 * PIVAL;
+    // while (!compass.ready()){}
+    compassOffset = compass.readHeading();
+    // thetaRad = (float)getCompassHeading() / 180 * PIVAL;
 }
 
-int getCompassHeading()
-{
-    int heading = compass.readHeading();
-    int temp = heading + DECLINATION;
-    temp = temp > 360 ? temp - 360 : temp;
+// int getCompassHeading()
+// {
+//     int heading = compass.readHeading();
+//     int temp = heading - compassOffset;
+//     temp = temp > 360 ? temp - 360 : temp;
 
-    return temp;
+//     return temp;
+// }
+
+void publishCompassReading()
+{ // publish compass heading to server
+
+    // char compass_payload[50] = {0};
+    // char compass_str[50];
+    // std::sprintf(compass_str, "%d", 888);
+    // std::strcat(compass_payload, compass_str);
+    // MQTTclient.publish("echo", compass_payload);
+    if (compass.ready())
+    {
+        char compass_payload[50] = {0};
+        char compass_str[50];
+        std::sprintf(compass_str, "%d", compass.readHeading() - compassOffset);
+        std::strcat(compass_payload, compass_str);
+        MQTTclient.publish("echo", compass_payload);
+    }
+    // else{
+    //     char compass_payload[50] = {0};
+    //     char compass_str[50];
+    //     std::sprintf(compass_str, "%d", 999);
+    //     std::strcat(compass_payload, compass_str);
+    //     MQTTclient.publish("echo", compass_payload);
+    // }
 }
 
 void driveSetup()
@@ -173,9 +220,6 @@ void driveSetup()
     // initiate calibration
     if (newCalibrate)
     {
-        /*         xSemaphoreTake(mutex_v, portMAX_DELAY);
-                MQTTclient.publish("echo", "starting calibration");
-                xSemaphoreGive(mutex_v); */
 
         int testNo = 2;
         calibrate(FMax, FMin, ldrFPin, testNo);
@@ -201,9 +245,6 @@ void driveSetup()
     else
     {
         Serial.println("Use old calibration");
-        /*         xSemaphoreTake(mutex_v, portMAX_DELAY);
-                MQTTclient.publish("echo", "use old calibration");
-                xSemaphoreGive(mutex_v);  */
 
         LMax = oldLMax;
         LMin = oldLMin;
@@ -219,9 +260,9 @@ void driveLoop()
 {
     if (driftCorrect)
     {
+        delay(30);
         Serial.print("driftCorrectSendIndex");
         Serial.print(driftCorrectSendIndex);
-        Serial.print(" Mutex ");
         char deadreckoning_payload[50] = {0};
         char pos_x_str[8];
         std::sprintf(pos_x_str, "%.2f", posXArr[driftCorrectSendIndex]);
@@ -247,17 +288,16 @@ void driveLoop()
         Serial.println("deadreckoning_payload");
         Serial.println(deadreckoning_payload);
 
-        xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("deadreckoning_data", deadreckoning_payload);
-        xSemaphoreGive(mutex_v);
 
         if (driftCorrectSendIndex == ARRAY_SIZE - 1)
         {
             driftCorrectSendIndex = 0;
             driftCorrect = false;
-            thetaRad = (float)getCompassHeading() / 180.0 * PIVAL;
+            // thetaRad = (float)getCompassHeading() / 180.0 * PIVAL;
+            //  TODO: Set the angle back to what the compass was here.
+            prevPositionUpdateTime = millis();
             startDrive();
-            
         }
         else
         {
@@ -293,10 +333,6 @@ void driveLoop()
             ldrFVal = map(ldrFVal, FMin, FMax, 0, 100);
         }
 
-        /*         xSemaphoreTake(mutex_v, portMAX_DELAY);
-                MQTTclient.publish("echo", "done with calibration");
-                xSemaphoreGive(mutex_v); */
-
         thetaDeg = thetaRad / PIVAL * 180.0;
         // Serial.println("Curr Drive State");
         // Serial.println(currDriveState);
@@ -304,17 +340,11 @@ void driveLoop()
         {
         case STOP:
             // dont move at all
-            /* xSemaphoreTake(mutex_v, portMAX_DELAY);
-            MQTTclient.publish("echo", "stop");
-            xSemaphoreGive(mutex_v); */
             speedL = 0;
             speedR = 0;
 
         case FOLLOW_WALL:
 
-            /* xSemaphoreTake(mutex_v, portMAX_DELAY);
-            MQTTclient.publish("echo", "follow wall");
-            xSemaphoreGive(mutex_v); */
             // follow left wall
             if (followLeft)
             {
@@ -325,7 +355,7 @@ void driveLoop()
                 {
                     // turn 90 deg to right
                     currDriveState = TURN_90_DEG;
-                    turnStartTime = xTaskGetTickCount();
+                    turnStartTime = millis();
                 }
             }
 
@@ -338,7 +368,7 @@ void driveLoop()
                 {
                     // turn 90 deg to left
                     currDriveState = TURN_90_DEG;
-                    turnStartTime = xTaskGetTickCount();
+                    turnStartTime = millis();
                 }
             }
 
@@ -367,15 +397,7 @@ void driveLoop()
             speedL = cruiseSpeed * polarity;
             speedR = -cruiseSpeed * polarity;
 
-            /* str_curDur[8] = {0};
-            char char_curDur[8];
-            std::sprintf(char_curDur, "%d", curDur);
-            std::strcat(str_curDur, char_curDur); */
-            /* xSemaphoreTake(mutex_v, portMAX_DELAY);
-            MQTTclient.publish("echo", "turn 90");
-            xSemaphoreGive(mutex_v); */
-
-            turnEndTime = xTaskGetTickCount();
+            turnEndTime = millis();
 
             if (turnEndTime - turnStartTime >= turnDur)
             {
@@ -386,9 +408,6 @@ void driveLoop()
 
         // case where rover is far from wall (dark spot)
         case LOOK_FOR_WALL:
-            /* xSemaphoreTake(mutex_v, portMAX_DELAY);
-            MQTTclient.publish("echo", "look for wall");
-            xSemaphoreGive(mutex_v); */
             // for now just move straight and see if hit a wall
             speedL = cruiseSpeed;
             speedR = cruiseSpeed;
@@ -401,7 +420,7 @@ void driveLoop()
                 currDriveState = TURN_90_DEG;
                 followLeft = true;
                 followRight = false;
-                turnStartTime = xTaskGetTickCount();
+                turnStartTime = millis();
             }
 
             // if the left sees a wall close by
@@ -420,11 +439,122 @@ void driveLoop()
 
             break;
 
+        case CALCULATE_NEXT_COORD:
+            // TODO: Have a callback that switches the state to this
+            // Have another callback to add coords to a buffer
+
+            // In this state, look at the next coord in buffer
+            // and calculate how much to rotate, then move straight
+
+            if (coordBufferIndex = coordBufferLen)
+            {
+                // finsihed all coords to move to
+                xCoordBuffer[200] = {0};
+                yCoordBuffer[200] = {0};
+                coordBufferIndex = 0;
+                currDriveState = STOP;
+                startLocalise();
+            }
+            else
+            {
+                // Calculation here
+                currDriveState = MOVE_TO_COORD;
+                angleToHit = calculateAngleBetwCoord(posX, posY, xCoordBuffer[coordBufferIndex], yCoordBuffer[coordBufferIndex]);
+                distanceToHit = calculateDistanceBetwCoord(posX, posY, xCoordBuffer[coordBufferIndex], yCoordBuffer[coordBufferIndex]);
+                angleHit = false;
+                distanceHit = false;
+                coordBufferIndex += 1;
+            }
+            // if front LED meets wall, turn 90 deg to the left
+            if (ldrFVal > brightThr)
+            {
+                currDriveState = TURN_90_DEG;
+                followLeft = true;
+                followRight = false;
+                turnStartTime = millis();
+            }
+
+            // if the left sees a wall close by
+            else if (ldrLVal > setpoint - 20)
+            {
+                followLeft = true;
+                followRight = false;
+                currDriveState = FOLLOW_WALL;
+            }
+            else if (ldrRVal > setpoint - 20)
+            {
+                followLeft = false;
+                followRight = true;
+                currDriveState = FOLLOW_WALL;
+            }
+
+            break;
+
+        case MOVE_TO_COORD:
+
+            if (!angleHit)
+            {
+                speedL = cruiseSpeed;
+                speedR = -cruiseSpeed;
+                if (compass.ready())
+                {
+                    currAngleGoToPoint = compass.readHeading() - compassOffset;
+                }
+                // curr angle is thetaDeg
+                // angleToHit is target angle
+
+                // Case where we need to cross the 0/360 boundary
+                if (angleToHit > 340)
+                {
+                    if (currAngleGoToPoint > angleToHit - 20 && currAngleGoToPoint < 20 - 360 + angleToHit)
+                    {
+                        angleHit = true;
+                        speedL = 0;
+                        speedR = 0;
+                    }
+                }
+                else if (angleToHit < 20)
+                {
+                    if (currAngleGoToPoint > 360 - 20 + angleToHit || currAngleGoToPoint < angleToHit + 20)
+                    {
+                        angleHit = true;
+                        speedL = 0;
+                        speedR = 0;
+                    }
+                }
+                else
+                {
+                    // all other cases
+                    if (currAngleGoToPoint > angleToHit - 20 && currAngleGoToPoint < angleToHit + 20)
+                    {
+                        angleHit = true;
+                        speedL = 0;
+                        speedR = 0;
+                    }
+                }
+            }
+            else if (!distanceHit)
+            {
+                speedL = cruiseSpeed;
+                speedR = cruiseSpeed;
+                distanceToHit -= calculateDistanceBetwCoord(prevPosX, prevPosY, posX, posY);
+                if (distanceToHit <= 0)
+                {
+                    distanceHit = true;
+                    speedL = 0;
+                    speedR = 0;
+                }
+            }
+            currDriveState = CALCULATE_NEXT_COORD;
+            break;
+        }
+               
+
             // when localise stop sending stuff
             // when not in the driving state stop sending stuff
-        }
+        
 
-        unsigned long curTime = xTaskGetTickCount();
+        unsigned long curTime = millis();
 
         if (curTime - prevPositionUpdateTime > positionUpdatePeriod)
         {
@@ -455,10 +585,11 @@ void driveLoop()
         */
         transmitDataToCloud = (currDriveState == LOOK_FOR_WALL) ||
                               (currDriveState == FOLLOW_WALL) ||
-                              (currDriveState == TURN_90_DEG);
+                              (currDriveState == TURN_90_DEG) || 
+                              (currDriveState == MOVE_TO_COORD);
         // Serial.println("Transmit Data To Cloud");
         // Serial.println(transmitDataToCloud);
-        if (loop_count >= 50 && transmitDataToCloud)
+        if (loop_count >= 500 && transmitDataToCloud)
         {
             Serial.println("Curr Drive State");
             Serial.println(currDriveState);
@@ -517,7 +648,7 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
         break;
     }
 
-    unsigned long startTime = xTaskGetTickCount();
+    unsigned long startTime = millis();
     unsigned long curTime = startTime;
 
     while (curTime - startTime < 3500) // EXPLICIT DIFFERENCE
@@ -526,7 +657,7 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
         Serial.println("getting calibration values...");
         delay(100);
 
-        curTime = xTaskGetTickCount();
+        curTime = millis();
         sensorValue = analogRead(sensorPin);
         Serial.println(sensorValue);
 
@@ -548,10 +679,11 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
 // Function to update the position and orientation using the RK4 method
 void updatePosition(unsigned long positionElapsedTime)
 {
-    if (compass.ready()){
-        thetaRad = (float)getCompassHeading() / 180 *PIVAL ;
-    }
-    
+    // if (compass.ready())
+    // {
+    //     thetaRad = (double)getCompassHeading() / 180.0 * PIVAL;
+    // }
+
     // Compute time elapsed
     // double delta_time = 5 / 1000.0; // time elapsed in seconds
     double delta_time = positionElapsedTime / 1000.0; // time elapsed in seconds
@@ -588,7 +720,10 @@ void updatePosition(unsigned long positionElapsedTime)
     // Update the position and orientation
     posX += (k1x + 2 * k2x + 2 * k3x + k4x) * delta_time / 6.0;
     posY += (k1y + 2 * k2y + 2 * k3y + k4y) * delta_time / 6.0;
-    
+
+    prevPosX = posX;
+    prevPosY = posY;
+
     thetaRad += (k1theta + 2 * k2theta + 2 * k3theta + k4theta) * delta_time / 6.0;
     if (thetaRad > PIVAL * 2)
     {
@@ -598,7 +733,6 @@ void updatePosition(unsigned long positionElapsedTime)
     {
         thetaRad += (PIVAL * 2);
     }
-    
 }
 
 void updateLocalisation(double new_x, double new_y)
@@ -624,9 +758,7 @@ void driftCorrection()
     Serial.println(currLocalisation[0]);
     Serial.println(currLocalisation[1]);
 
-    xSemaphoreTake(mutex_v, portMAX_DELAY);
     MQTTclient.publish("echo", "Drift Correction Performed");
-    xSemaphoreGive(mutex_v);
 
     // before sending data to the topic, we need to drift-correct the data
     double a[2] = {prevLocalisation[0] - currLocalisation[0], prevLocalisation[1] - currLocalisation[1]};
@@ -647,10 +779,10 @@ void driftCorrection()
         posXArr[j] = prevLocalisation[0] + beta * (cos(alpha) * (tempPosX - posXArr[0]) - sin(alpha) * (tempPosY - posYArr[0]));
         posYArr[j] = prevLocalisation[1] + beta * (sin(alpha) * (tempPosX - posXArr[0]) + cos(alpha) * (tempPosY - posYArr[0]));
     }
-    Serial.println("Reached before Mutex");
+    posX = currLocalisation[0];
+    posY = currLocalisation[1];
 
     /*
-    xSemaphoreTake(mutex_v, portMAX_DELAY);
     // send all the data to the topic
     for (int i = 0; i < ARRAY_SIZE; i++)
     {
@@ -681,15 +813,11 @@ void driftCorrection()
         Serial.println("deadreckoning_payload");
         Serial.println(deadreckoning_payload);
 
-        // xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("deadreckoning_data", deadreckoning_payload);
         // delay(50); // small delay in between each publish
-        // xSemaphoreGive(mutex_v);
-       // delay(50); // small delay in between each publish
 
     }
     */
-    // xSemaphoreGive(mutex_v);
     //  after all the dead reckoning data has been drift corrected and published
     //  start driving again
     startDrive();
@@ -706,9 +834,7 @@ void collectData()
         dataIndex = 0;
         Serial.println("Finished collecting 30 pos points");
         /*
-        xSemaphoreTake(mutex_v, portMAX_DELAY);
         MQTTclient.publish("echo", "finished 30 pos points");
-        xSemaphoreGive(mutex_v);
         */
         startLocalise();
     }
@@ -728,8 +854,8 @@ void collectData()
 
 void spinClockwise()
 {
-    stepperL.setSpeed(50);
-    stepperR.setSpeed(50);
+    stepperL.setSpeed(-50);
+    stepperR.setSpeed(-50);
     stepperL.runSpeed();
     stepperR.runSpeed();
 }
@@ -738,4 +864,31 @@ void stopSpinClockwise()
 {
     stepperL.stop();
     stepperR.stop();
+}
+
+double calculateDistanceBetwCoord(double x1, double y1, double x2, double y2)
+{
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
+
+double calculateAngleBetwCoord(double x1, double y1, double x2, double y2)
+{
+    double angleRad = atan2(y2 - y1, x2 - x1);
+    // convert angle in radians to degrees
+    double angleDeg = angleRad * (180.0 / M_PI);
+    return angleDeg;
+}
+
+void setRoverStop(){
+    currDriveState = STOP;
+}
+
+void setRoverCalculateNextCoord(){
+    currDriveState = CALCULATE_NEXT_COORD;
+}
+
+void updateWaypointBuffer(int index, double wayX, double wayY){
+    xCoordBuffer[index] = wayX;
+    yCoordBuffer[index] = wayY;
+    coordBufferIndex = 0;
 }
