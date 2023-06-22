@@ -2,7 +2,7 @@
 #include "uartToDistance.h"
 #include "drive.h"
 
-bool test_without_localisation = true;
+bool test_without_localisation = false;
 
 enum RoverState
 {
