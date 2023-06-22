@@ -7,7 +7,7 @@ var mazeregion = {
 };
 
 //domain of both axis
-let domainsize = 150;
+let domainsize = 350;
 
 // set the dimensions and margins of the graph
 var margin = { top: 10, right: 10, bottom: 10, left: 10 },
@@ -667,6 +667,7 @@ document.addEventListener("keydown", function (event) {
 var detectionradius = 2.5; // how close 2 points are to consider the start and the end are the same
 var minimumindexaway = 10; // minimum number of datapoints between currentpos and the startpos   (eg: start at 0, currenpos at 100)
 var maximumarea = 2000; // if area < maximumarea then consider it as a closed unreachable loop
+var minimumarea = 200;
 var unreachablepointsfactor = 15; //for example if the area is 1000, there will be 1000/50 points in the closedloop
 
 function detectclosedloop(currentpos) {
@@ -704,7 +705,7 @@ function detectclosedloop(currentpos) {
       socket.emit("closedloopdetected", "asdigyasiudihuasdihuas");
 
       // draw the polygon and fill it with points which refers to unreachable points
-      if (Math.abs(looparea) < maximumarea) {
+      if (looparea < maximumarea && looparea > minimumarea) {
         //draw the polygon
 
         //example polygon format
@@ -1262,7 +1263,7 @@ d3.select("#status")
   .text("Status: Startkng this fkting bushit");
 
 function changeStatus(status) {
-  document.getElementById("status").innerHTML = status;
+  document.getElementById("status").innerText += "\n" + status;
 }
 
 // A Star Algorithm ***************************************************** VErSION 1 (works)
