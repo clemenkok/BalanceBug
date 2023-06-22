@@ -37,10 +37,10 @@ double Kd = 0.0; // Derivative gain
 // Define the input, output, and setpoint variables
 double PIDinput = 0.0;  // Current position
 double PIDoutput = 0.0; // Control output
-double setpoint = 75.0; // Desired position
+double setpoint = 50.0; // Desired position
 
 // calibration variables
-bool newCalibrate = false;
+bool newCalibrate = true;
 int LMax, LMin, RMax, RMin, FMax, FMin;
 int ldrLVal, ldrRVal, ldrFVal;
 int oldLMax = 1766;
@@ -56,7 +56,7 @@ int darkThr = -1;
 int turnDur = 1100;
 unsigned long turnEndTime = 0;
 unsigned long turnStartTime = 0;
-int cruiseSpeed = 90;
+int cruiseSpeed = 85;
 int speedL = 0, speedR = 0;
 
 // Variables to store the current position and orientation
@@ -69,7 +69,6 @@ unsigned long prevPositionUpdateTime = 0;
 int loop_count = 0;
 
 int currAngleGoToPoint = 0;
-
 
 // to be sent to server
 // bool leftWall = false; // '1' if we drive and see a left wall
@@ -379,8 +378,8 @@ void driveLoop()
             }
 
             myPID.Compute();
-            speedL = (cruiseSpeed - PIDoutput) * polarity;
-            speedR = (cruiseSpeed + PIDoutput) * polarity;
+            speedL = cruiseSpeed - (PIDoutput * polarity);
+            speedR = cruiseSpeed + (PIDoutput * polarity);
             break;
 
         case TURN_90_DEG: // case to turn 90deg away from cur wall
@@ -548,11 +547,9 @@ void driveLoop()
             currDriveState = CALCULATE_NEXT_COORD;
             break;
         }
-               
 
-            // when localise stop sending stuff
-            // when not in the driving state stop sending stuff
-        
+        // when localise stop sending stuff
+        // when not in the driving state stop sending stuff
 
         unsigned long curTime = millis();
 
@@ -585,11 +582,11 @@ void driveLoop()
         */
         transmitDataToCloud = (currDriveState == LOOK_FOR_WALL) ||
                               (currDriveState == FOLLOW_WALL) ||
-                              (currDriveState == TURN_90_DEG) || 
+                              (currDriveState == TURN_90_DEG) ||
                               (currDriveState == MOVE_TO_COORD);
         // Serial.println("Transmit Data To Cloud");
         // Serial.println(transmitDataToCloud);
-        if (loop_count >= 500 && transmitDataToCloud)
+        if (loop_count >= 1000 && transmitDataToCloud)
         {
             Serial.println("Curr Drive State");
             Serial.println(currDriveState);
@@ -879,15 +876,18 @@ double calculateAngleBetwCoord(double x1, double y1, double x2, double y2)
     return angleDeg;
 }
 
-void setRoverStop(){
+void setRoverStop()
+{
     currDriveState = STOP;
 }
 
-void setRoverCalculateNextCoord(){
+void setRoverCalculateNextCoord()
+{
     currDriveState = CALCULATE_NEXT_COORD;
 }
 
-void updateWaypointBuffer(int index, double wayX, double wayY){
+void updateWaypointBuffer(int index, double wayX, double wayY)
+{
     xCoordBuffer[index] = wayX;
     yCoordBuffer[index] = wayY;
     coordBufferIndex = 0;
