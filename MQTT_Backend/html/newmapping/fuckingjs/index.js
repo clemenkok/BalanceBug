@@ -1,9 +1,9 @@
 //region of the maze
 var mazeregion = {
-  topleft: [-700, 700],
-  topright: [700, 700],
-  bottomleft: [-700, -700],
-  bottomright: [700, -700],
+  topleft: [-150, 150],
+  topright: [150, 150],
+  bottomleft: [-150, -150],
+  bottomright: [150, -150],
 };
 
 // set the dimensions and margins of the graph
@@ -31,8 +31,8 @@ var data = [
 ];
 
 // X scale and Axis
-let xdomain = [-700, 700];
-let ydomain = [-700, 700];
+let xdomain = [-300, 300];
+let ydomain = [-300, 300];
 var x = d3
   .scaleLinear()
   .domain(xdomain) // This is the min and the max of the data: 0 to 100 if percentages

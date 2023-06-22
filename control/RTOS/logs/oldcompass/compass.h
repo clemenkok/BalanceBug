@@ -1,7 +1,10 @@
 #ifndef HMC5883LSimple_h
 #define HMC5883LSimple_h
 
-QMC5883L compass;
+#include <QMC5883L.h>
+
+extern QMC5883L compass;
+
 
 #define DECLINATION 60
 

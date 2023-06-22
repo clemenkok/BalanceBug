@@ -7,6 +7,9 @@
 extern WiFiClient wifiClient;
 extern PubSubClient MQTTclient;
 
+
+#define DECLINATION 60
+
 void calibrate(int& VMax, int& VMin, int sensorPin, int testNo);
 void driveSetup();
 void driveLoop();
@@ -17,5 +20,9 @@ void collectData();
 void driftCorrection();
 void updateLocalisation(double new_x, double new_y);
 
+
+
+void compassSetup();
+int getCompassHeading();
 
 #endif

@@ -10,11 +10,20 @@
 #include <Wire.h>
 #include "compass.h"
 
+eQMC5883L compass;
+
+
 // my added fucking functions
 void compassSetup()
 {
   compass.init();
   compass.setSamplingRate(50);
+  int heading = compass.readHeading();
+  int compassCalibCount = 0;
+  while (compassCalibCount < 10000 || heading == 0){
+    /* Still calibrating, so measure but don't print */
+    Serial.println("calibrating compass");
+  }
 }
 void compassLoop()
 {
@@ -22,7 +31,7 @@ void compassLoop()
   if (heading == 0)
   {
     /* Still calibrating, so measure but don't print */
-    Serial.println("calibrating this fuck");
+    Serial.println("calibrating compass");
   }
   else
   {

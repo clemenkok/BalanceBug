@@ -4,6 +4,7 @@
 #include "roverStateControl.h"
 #include "drive.h"
 
+
 // for MQTT Subscribe
 unsigned long lastMsg = 0;
 #define MSG_BUFFER_SIZE (50)
@@ -58,8 +59,10 @@ void setup()
     roverSetup();
         
     Serial.begin(115200);
-
+    
+    compassSetup();
     driveSetup();
+    
 
     //connectionSetup();
 

@@ -6,6 +6,11 @@
 // #include <cmath>
 #include <math.h>
 
+#include <QMC5883L.h>
+#include <Wire.h>
+
+QMC5883L compass;
+
 char str_curDur[50] = {0};
 
 const double PIVAL = 3.1415927;
@@ -103,13 +108,48 @@ bool followLeft = true;
 bool followRight = !followLeft;
 int polarity = 1;
 
+void compassSetup()
+{
+    pinMode(ledPinL, OUTPUT);
+    pinMode(ledPinR, OUTPUT);
+
+    digitalWrite(ledPinR, HIGH);
+
+    Wire.begin();
+    compass.init();
+    compass.setSamplingRate(50);
+    int heading = compass.readHeading();
+
+    int compassCalibCount = 0;
+
+    while (compassCalibCount < 20 || heading == 0)
+    {
+
+        /* Still calibrating, so measure but don't print */
+        Serial.println("calibrating compass");
+        heading = compass.readHeading();
+        compassCalibCount++;
+    }
+    digitalWrite(ledPinR, LOW);
+    thetaRad = (float)getCompassHeading() / 180 * PIVAL;
+}
+
+int getCompassHeading()
+{
+    int heading = compass.readHeading();
+    int temp = heading + DECLINATION;
+    temp = temp > 360 ? temp - 360 : temp;
+
+    return temp;
+}
+
 void driveSetup()
 {
     // analogReadResolution(12);  // Set ADC resolution (0-4095)
     Serial.println("start drive setup");
 
-    pinMode(ledPinL, OUTPUT);
-    pinMode(ledPinR, OUTPUT);
+    // pinMode(ledPinL, OUTPUT);
+    // pinMode(ledPinR, OUTPUT);
     pinMode(ldrLPin, INPUT);
     pinMode(ldrRPin, INPUT);
     pinMode(ldrFPin, INPUT);
@@ -215,7 +255,9 @@ void driveLoop()
         {
             driftCorrectSendIndex = 0;
             driftCorrect = false;
+            thetaRad = (float)getCompassHeading() / 180.0 * PIVAL;
             startDrive();
+            
         }
         else
         {
@@ -283,7 +325,7 @@ void driveLoop()
                 {
                     // turn 90 deg to right
                     currDriveState = TURN_90_DEG;
-                    turnStartTime = millis();
+                    turnStartTime = xTaskGetTickCount();
                 }
             }
 
@@ -296,7 +338,7 @@ void driveLoop()
                 {
                     // turn 90 deg to left
                     currDriveState = TURN_90_DEG;
-                    turnStartTime = millis();
+                    turnStartTime = xTaskGetTickCount();
                 }
             }
 
@@ -333,7 +375,7 @@ void driveLoop()
             MQTTclient.publish("echo", "turn 90");
             xSemaphoreGive(mutex_v); */
 
-            turnEndTime = millis();
+            turnEndTime = xTaskGetTickCount();
 
             if (turnEndTime - turnStartTime >= turnDur)
             {
@@ -359,7 +401,7 @@ void driveLoop()
                 currDriveState = TURN_90_DEG;
                 followLeft = true;
                 followRight = false;
-                turnStartTime = millis();
+                turnStartTime = xTaskGetTickCount();
             }
 
             // if the left sees a wall close by
@@ -382,7 +424,7 @@ void driveLoop()
             // when not in the driving state stop sending stuff
         }
 
-        unsigned long curTime = millis();
+        unsigned long curTime = xTaskGetTickCount();
 
         if (curTime - prevPositionUpdateTime > positionUpdatePeriod)
         {
@@ -475,16 +517,16 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
         break;
     }
 
-    unsigned long startTime = millis();
+    unsigned long startTime = xTaskGetTickCount();
     unsigned long curTime = startTime;
 
-    while (curTime - startTime < 3500)
+    while (curTime - startTime < 3500) // EXPLICIT DIFFERENCE
     {
 
         Serial.println("getting calibration values...");
         delay(100);
 
-        curTime = millis();
+        curTime = xTaskGetTickCount();
         sensorValue = analogRead(sensorPin);
         Serial.println(sensorValue);
 
@@ -506,8 +548,12 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
 // Function to update the position and orientation using the RK4 method
 void updatePosition(unsigned long positionElapsedTime)
 {
+    if (compass.ready()){
+        thetaRad = (float)getCompassHeading() / 180 *PIVAL ;
+    }
+    
     // Compute time elapsed
-    //double delta_time = 5 / 1000.0; // time elapsed in seconds
+    // double delta_time = 5 / 1000.0; // time elapsed in seconds
     double delta_time = positionElapsedTime / 1000.0; // time elapsed in seconds
 
     // compute wheel speed in cm/s
@@ -542,6 +588,7 @@ void updatePosition(unsigned long positionElapsedTime)
     // Update the position and orientation
     posX += (k1x + 2 * k2x + 2 * k3x + k4x) * delta_time / 6.0;
     posY += (k1y + 2 * k2y + 2 * k3y + k4y) * delta_time / 6.0;
+    
     thetaRad += (k1theta + 2 * k2theta + 2 * k3theta + k4theta) * delta_time / 6.0;
     if (thetaRad > PIVAL * 2)
     {
@@ -551,6 +598,7 @@ void updatePosition(unsigned long positionElapsedTime)
     {
         thetaRad += (PIVAL * 2);
     }
+    
 }
 
 void updateLocalisation(double new_x, double new_y)
@@ -575,6 +623,11 @@ void driftCorrection()
     Serial.println("currLocalisation");
     Serial.println(currLocalisation[0]);
     Serial.println(currLocalisation[1]);
+
+    xSemaphoreTake(mutex_v, portMAX_DELAY);
+    MQTTclient.publish("echo", "Drift Correction Performed");
+    xSemaphoreGive(mutex_v);
+
     // before sending data to the topic, we need to drift-correct the data
     double a[2] = {prevLocalisation[0] - currLocalisation[0], prevLocalisation[1] - currLocalisation[1]};
     double m[2] = {posXArr[0] - posXArr[ARRAY_SIZE - 1], posYArr[0] - posYArr[ARRAY_SIZE - 1]};
