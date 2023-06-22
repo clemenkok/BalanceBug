@@ -1,0 +1,3 @@
+02:27:22.260 > [  1039][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+02:27:23.188 > [  2041][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+02:27:24.178 > [  3042][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263

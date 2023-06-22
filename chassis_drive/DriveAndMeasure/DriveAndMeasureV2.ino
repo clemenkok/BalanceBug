@@ -15,8 +15,8 @@ ESP Blue
 
 // esp32 pins
 const int ledPinL = 27; // 2 pins for 2 LEDs
-const int ledPinR = 33;
-const int ldrLPin = 26; // pin for left front LED
+const int ledPinR = 26;
+const int ldrLPin = 33; // pin for left front LED
 const int ldrRPin = 35; // pin for right front LED
 const int ldrFPin = 32; // pin for front LED
 
@@ -32,14 +32,14 @@ bool followLeft = true; // follow left wall by default
 int polarity = 1;
 
 // Define the constants for PID control
-double Kp = 1.5;   // Proportional gain
+double Kp = 1.7;   // Proportional gain
 double Ki = 0.0;   // Integral gain
 double Kd = 0.0;   // Derivative gain
 
 // Define the input, output, and setpoint variables
 double PIDinput = 0.0;       // Current position
 double PIDoutput = 0.0;      // Control output
-double setpoint = 80.0;  // Desired position
+double setpoint = 75.0;  // Desired position: last time it was80
 
 // calibration variables
 bool newCalibrate = false; // change depedning on whether we want to calibrate
@@ -47,19 +47,19 @@ int VMax = 0;
 int VMin = 0;
 int LMax, LMin, RMax, RMin, FMax, FMin;
 int ldrLVal, ldrRVal, ldrFVal;
-int oldLMax = 598;
-int oldLMin = 173;
-int oldRMax = 640;
-int oldRMin = 308;
-int oldFMax = 637;
-int oldFMin = 336;
+int oldLMax = 1766;
+int oldLMin = 307;
+int oldRMax = 374;
+int oldRMin = 277;
+int oldFMax = 1506;
+int oldFMin = 151;
 
 int count = 0;
 int brightThr = 70;
-int darkThr = 30;
+int darkThr = -1;
 int turnDur = 2000;
 int curDur = 0;
-int cruiseSpeed = 90;
+int cruiseSpeed = 60;
 int speedL = 0, speedR = 0;
 unsigned long startTime = 0, curTime = 0, printTime = 0;
 
@@ -90,9 +90,8 @@ AccelStepper stepperL(1, stepPinL, dirPinL);
 PID myPID(&PIDinput, &PIDoutput, &setpoint, Kp, Ki, Kd, DIRECT);
 
 // Function to update the position and orientation using the RK4 method
-void updatePosition() {
-  // Compute time elapsed
-  delta_time = updatePeriod / 1000.0; // time elapsed in seconds
+void updatePosition(int timeElapsed) {
+  delta_time = timeElapsed / 1000.0; // time elapsed in seconds
 
   // compute wheel speed in cm/s
   double Lcms = speedL * 0.107; // 200 steps on 21.4 cm circumference => 0.107 cm per step
@@ -386,8 +385,8 @@ void loop() {
 
   if (curTime - startTime > updatePeriod){
 
+    updatePosition(curTime - startTime);
     startTime = curTime;
-    updatePosition();
     stepperL.setSpeed(-speedL);
     stepperR.setSpeed(speedR);
 
@@ -396,7 +395,7 @@ void loop() {
   stepperL.runSpeed();
   stepperR.runSpeed();
 
-  if (count >= 100){
+  if (count >= 500){
    
     Serial.print(posX);
     Serial.print(", ");

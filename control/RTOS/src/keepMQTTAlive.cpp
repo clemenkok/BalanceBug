@@ -100,10 +100,10 @@ void keepMQTTAlive(void *parameters)
     // check for a is-connected and if the WiFi 'thinks' its connected, found checking on both is more realible than just a single check
     if ((wifiClient.connected()) && (WiFi.status() == WL_CONNECTED))
     {
-      xSemaphoreTake(mutex_v, portMAX_DELAY);
+      // xSemaphoreTake(mutex_v, portMAX_DELAY);
       MQTTclient.loop();
-      MQTTclient.publish("keep_alive", "ESP32 connected to MQTT");
-      xSemaphoreGive(mutex_v);
+      // MQTTclient.publish("keep_alive", "ESP32 connected to MQTT");
+      // xSemaphoreGive(mutex_v);
       // MQTTclient.publish("alive_topic", "Alive"); // NEW ADDITION - MONITOR ESP32 status via CLI
     }
     else

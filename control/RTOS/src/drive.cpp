@@ -122,7 +122,7 @@ void compassSetup()
 
     int compassCalibCount = 0;
 
-    while (compassCalibCount < 20 || heading == 0)
+    while (compassCalibCount < 30 || heading == 0)
     {
 
         /* Still calibrating, so measure but don't print */
@@ -256,6 +256,7 @@ void driveLoop()
             driftCorrectSendIndex = 0;
             driftCorrect = false;
             thetaRad = (float)getCompassHeading() / 180.0 * PIVAL;
+            prevPositionUpdateTime = xTaskGetTickCount();
             startDrive();
             
         }
@@ -549,9 +550,9 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
 void updatePosition(unsigned long positionElapsedTime)
 {
     if (compass.ready()){
-        thetaRad = (float)getCompassHeading() / 180 *PIVAL ;
+        thetaRad = (double)getCompassHeading() / 180.0 *PIVAL ;
     }
-    
+        
     // Compute time elapsed
     // double delta_time = 5 / 1000.0; // time elapsed in seconds
     double delta_time = positionElapsedTime / 1000.0; // time elapsed in seconds
@@ -598,6 +599,7 @@ void updatePosition(unsigned long positionElapsedTime)
     {
         thetaRad += (PIVAL * 2);
     }
+    
     
 }
 
