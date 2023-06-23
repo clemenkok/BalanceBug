@@ -26,7 +26,7 @@
 
 ## What is this project?
 
-![arch4](img/archi.png)
+![arch4](report/img/archi.png)
 
 This project presents the design, development, and evaluation of an autonomous self-balancing rover capable of navigating and surveying mazes. The main goals of the project were to achieve stable self-balancing motion, efficient and complete maze exploration, and accurate path planning for the shortest route between arbitrary points. The rover's self-balancing mechanism utilised a cascaded control loop and an additional loop for rotational control. A comprehensive maze exploration strategy was employed to ensure complete coverage and identification of all walls. A real-time operating system, FreeRTOS, was used to integrate hardware submodules for concurrent execution. Image segmentation techniques were used for beacon differentiation, enabling accurate localization. Pathfinding was performed using the A* algorithm, and all algorithms developed were integrated on Node.js and deployed on the AWS Cloud. Extensive evaluations, including unit tests and maze navigation experiments, demonstrated the rover's successful performance in mapping and navigating the maze.  
 
