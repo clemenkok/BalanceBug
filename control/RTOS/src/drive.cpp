@@ -145,7 +145,7 @@ void compassSetup()
     {
 
         /* Still calibrating, so measure but don't print */
-        Serial.println("calibrating compass");
+        // Serial.println("calibrating compass");
         heading = compass.readHeading();
         compassCalibCount++;
     }
@@ -192,10 +192,10 @@ void publishCompassReading()
 void driveSetup()
 {
     // analogReadResolution(12);  // Set ADC resolution (0-4095)
-    Serial.println("start drive setup");
+    // Serial.println("start drive setup");
 
-    // pinMode(ledPinL, OUTPUT);
-    // pinMode(ledPinR, OUTPUT);
+    pinMode(ledPinL, OUTPUT);
+    pinMode(ledPinR, OUTPUT);
     pinMode(ldrLPin, INPUT);
     pinMode(ldrRPin, INPUT);
     pinMode(ldrFPin, INPUT);
@@ -222,28 +222,28 @@ void driveSetup()
 
         int testNo = 2;
         calibrate(FMax, FMin, ldrFPin, testNo);
-        Serial.print("FMax: ");
-        Serial.println(FMax);
-        Serial.print("FMin: ");
-        Serial.println(FMin);
+        // Serial.print("FMax: ");
+        // Serial.println(FMax);
+        // Serial.print("FMin: ");
+        // Serial.println(FMin);
 
         testNo = 0;
         calibrate(LMax, LMin, ldrLPin, testNo);
-        Serial.print("LMax: ");
-        Serial.println(LMax);
-        Serial.print("LMin: ");
-        Serial.println(LMin);
+        // Serial.print("LMax: ");
+        // Serial.println(LMax);
+        // Serial.print("LMin: ");
+        // Serial.println(LMin);
 
         testNo = 1;
         calibrate(RMax, RMin, ldrRPin, testNo);
-        Serial.print("RMax: ");
-        Serial.println(RMax);
-        Serial.print("RMin: ");
-        Serial.println(RMin);
+        // Serial.print("RMax: ");
+        // Serial.println(RMax);
+        // Serial.print("RMin: ");
+        // Serial.println(RMin);
     }
     else
     {
-        Serial.println("Use old calibration");
+        // Serial.println("Use old calibration");
 
         LMax = oldLMax;
         LMin = oldLMin;
@@ -260,8 +260,8 @@ void driveLoop()
     if (driftCorrect)
     {
         delay(30);
-        Serial.print("driftCorrectSendIndex");
-        Serial.print(driftCorrectSendIndex);
+        // Serial.print("driftCorrectSendIndex");
+        // Serial.print(driftCorrectSendIndex);
         char deadreckoning_payload[50] = {0};
         char pos_x_str[8];
         std::sprintf(pos_x_str, "%.2f", posXArr[driftCorrectSendIndex]);
@@ -284,8 +284,8 @@ void driveLoop()
         std::strcat(deadreckoning_payload, ",");
         std::strcat(deadreckoning_payload, right_wall_str);
 
-        Serial.println("deadreckoning_payload");
-        Serial.println(deadreckoning_payload);
+        // Serial.println("deadreckoning_payload");
+        // Serial.println(deadreckoning_payload);
 
         MQTTclient.publish("deadreckoning_data", deadreckoning_payload);
 
@@ -588,30 +588,31 @@ void driveLoop()
         // Serial.println(transmitDataToCloud);
         if (loop_count >= 1000 && transmitDataToCloud)
         {
-            Serial.println("Curr Drive State");
-            Serial.println(currDriveState);
-            Serial.println("Transmit Data To Cloud");
-            Serial.println(transmitDataToCloud);
-            Serial.print("ldrL, R, F: ");
-            Serial.print(ldrLVal);
-            Serial.print(", ");
-            Serial.print(ldrRVal);
-            Serial.print(", ");
-            Serial.print(ldrFVal);
-            Serial.println("");
-            Serial.print(speedL);
-            Serial.print(", ");
-            Serial.print(speedR);
-            Serial.print(", ");
-            Serial.print(posX);
-            Serial.print(", ");
-            Serial.print(posY);
-            Serial.print(", ");
-            Serial.print(thetaDeg);
-            Serial.print(", ");
-            Serial.print(followLeft);
-            Serial.print(", ");
-            Serial.println(followRight);
+            Serial.println("1 loop count");
+            // Serial.println("Curr Drive State");
+            // Serial.println(currDriveState);
+            // Serial.println("Transmit Data To Cloud");
+            // Serial.println(transmitDataToCloud);
+            // Serial.print("ldrL, R, F: ");
+            // Serial.print(ldrLVal);
+            // Serial.print(", ");
+            // Serial.print(ldrRVal);
+            // Serial.print(", ");
+            // Serial.print(ldrFVal);
+            // Serial.println("");
+            // Serial.print(speedL);
+            // Serial.print(", ");
+            // Serial.print(speedR);
+            // Serial.print(", ");
+            // Serial.print(posX);
+            // Serial.print(", ");
+            // Serial.print(posY);
+            // Serial.print(", ");
+            // Serial.print(thetaDeg);
+            // Serial.print(", ");
+            // Serial.print(followLeft);
+            // Serial.print(", ");
+            // Serial.println(followRight);
             collectData(); // record 5 new values in the 5 arrays
 
             loop_count = 0;
@@ -631,17 +632,17 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
     case 0:
         digitalWrite(ledPinL, HIGH);
         digitalWrite(ledPinR, LOW);
-        Serial.println("entering testcase 0");
+        // Serial.println("entering testcase 0");
         break;
     case 1:
         digitalWrite(ledPinL, LOW);
         digitalWrite(ledPinR, HIGH);
-        Serial.println("entering testcase 1");
+        // Serial.println("entering testcase 1");
         break;
     case 2:
         digitalWrite(ledPinL, HIGH);
         digitalWrite(ledPinR, HIGH);
-        Serial.println("entering testcase 2");
+        // Serial.println("entering testcase 2");
         break;
     }
 
@@ -651,12 +652,12 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
     while (curTime - startTime < 3500) // EXPLICIT DIFFERENCE
     {
 
-        Serial.println("getting calibration values...");
+        // Serial.println("getting calibration values...");
         delay(100);
 
         curTime = millis();
         sensorValue = analogRead(sensorPin);
-        Serial.println(sensorValue);
+        // Serial.println(sensorValue);
 
         if (sensorValue > VMax)
         {
@@ -739,7 +740,7 @@ void updateLocalisation(double new_x, double new_y)
     currLocalisation[0] = new_x;
     currLocalisation[1] = new_y;
 
-    Serial.println("Updated Localisation");
+    // Serial.println("Updated Localisation");
 
     // after localisation has been updated, do drift correction
     driftCorrection();
@@ -748,12 +749,12 @@ void updateLocalisation(double new_x, double new_y)
 void driftCorrection()
 {
     // this only happens after localisation is done and the prev and curr localization are updated
-    Serial.println("prevLocalisation");
-    Serial.println(prevLocalisation[0]);
-    Serial.println(prevLocalisation[1]);
-    Serial.println("currLocalisation");
-    Serial.println(currLocalisation[0]);
-    Serial.println(currLocalisation[1]);
+    // Serial.println("prevLocalisation");
+    // Serial.println(prevLocalisation[0]);
+    // Serial.println(prevLocalisation[1]);
+    // Serial.println("currLocalisation");
+    // Serial.println(currLocalisation[0]);
+    // Serial.println(currLocalisation[1]);
 
     MQTTclient.publish("echo", "Drift Correction Performed");
 
@@ -829,7 +830,7 @@ void collectData()
         // this means stop driving, go do localisation, and then process the data after localisation before going back to driving
 
         dataIndex = 0;
-        Serial.println("Finished collecting 30 pos points");
+        // Serial.println("Finished collecting 30 pos points");
         /*
         MQTTclient.publish("echo", "finished 30 pos points");
         */
@@ -844,15 +845,15 @@ void collectData()
         rightWallArr[dataIndex] = followRight;
 
         dataIndex++;
-        Serial.println("Data Index");
-        Serial.println(dataIndex);
+        // Serial.println("Data Index");
+        // Serial.println(dataIndex);
     }
 }
 
 void spinClockwise()
 {
-    stepperL.setSpeed(-50);
-    stepperR.setSpeed(-50);
+    stepperL.setSpeed(-25);
+    stepperR.setSpeed(-25);
     stepperL.runSpeed();
     stepperR.runSpeed();
 }

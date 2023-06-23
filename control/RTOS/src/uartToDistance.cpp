@@ -13,7 +13,8 @@
 HardwareSerial SerialPort(2);
 
 // String msg_buf;
-unsigned char myBuffer[12];
+unsigned char myBuffer[12] = {0};
+bool packetAligned = false;
 
 enum LocalisationState
 {
@@ -43,6 +44,10 @@ double current_y = 0;
 void uartToDistanceSetup()
 {
   SerialPort.begin(BAUDRATE, SERIAL_8N1, RX_PIN, TX_PIN);
+  while (!SerialPort){
+    ;
+  }
+  
 }
 
 long getBoxHeightInPixels(unsigned char (&myBuffer)[12])
@@ -89,7 +94,7 @@ bool takeReading(long pixel_center_x, long pixel_box_height)
   // take one single reading when center is within the range of 210-20 to 210+20
   if (pixel_box_height == 0)
     return false;
-  return 190 < pixel_center_x < 230;
+  return 100 < pixel_center_x < 540;
 }
 
 void setStartLocalisationTrue()
@@ -99,30 +104,44 @@ void setStartLocalisationTrue()
 
 void uartToDistanceLoop()
 {
-  Serial.println("Inside Uart to Dist Loop");
+  // Serial.println("Inside Uart to Dist Loop");
   // make the rover turn clockwise if it is looking for ball
   if (currentState == LOOKING_FOR_1ST_BALL || currentState == LOOKING_FOR_2ND_BALL || currentState == LOOKING_FOR_3RD_BALL)
   {
     spinClockwise();
-    Serial.println("SPin CLockwise");
-    Serial.println("Curr Localise State");
-    Serial.println(currentState);
+    // Serial.println("SPin CLockwise");
+    // Serial.println("Curr Localise State");
+    // Serial.println(currentState);
   }
 
-  if (SerialPort.available() > 11)
+  // always use A0 to align
+  if (SerialPort.available() > 0){
+    for (int i = 0; i < 11; i ++){
+      myBuffer[i] = myBuffer[i+1];
+    }
+    myBuffer[11] = SerialPort.read();
+    if (myBuffer[3] == 160){
+      packetAligned = true;
+    } else{
+      packetAligned = false;
+    }
+  }
+
+  //if (SerialPort.available() > 11)
+  if (packetAligned)
   {
     // The serial data comes in one byte at a time
     // Read 4 bytes at the same time
 
-    SerialPort.readBytes(myBuffer, 12);
-    /*
+    //SerialPort.readBytes(myBuffer, 12);
+    
     for (int i = 0; i < 12; i++)
     {
       Serial.print(myBuffer[i], HEX);
       Serial.print(" ");
     }
     Serial.println();
-    */
+    
 
     long pixel_box_height = getBoxHeightInPixels(myBuffer);
     long pixel_center_x = getPixelCenterX(myBuffer);
@@ -135,12 +154,14 @@ void uartToDistanceLoop()
       {
         distance = convertDistanceCm(pixel_box_height);
         // move the state machine forward
+        
         if (currentState == LOOKING_FOR_1ST_BALL && myBuffer[0] == 1)
           change_state = true;
         else if (currentState == LOOKING_FOR_2ND_BALL && myBuffer[0] == 2)
           change_state = true;
         else if (currentState == LOOKING_FOR_3RD_BALL && myBuffer[0] == 3)
           change_state = true;
+        
       }
     }
     // Serial.println(currentState);
@@ -160,6 +181,8 @@ void uartToDistanceLoop()
       break;
 
     case LOOKING_FOR_1ST_BALL:
+      //MQTTclient.publish("echo", "looking for first ball");
+      Serial.println("Looking for 1st ball");
       if (change_state)
       {
         change_state = false;
@@ -167,8 +190,11 @@ void uartToDistanceLoop()
         distance = 0;
         // Transition to the next state based on some condition or event
         currentState = LOOKING_FOR_2ND_BALL;
+
         // Turn on light for the second ball
         MQTTclient.publish("red_beacon", "OFF");
+        //
+        delay(300);
         MQTTclient.publish("blue_beacon", "ON");
       }
       break;
@@ -183,6 +209,7 @@ void uartToDistanceLoop()
         currentState = LOOKING_FOR_3RD_BALL;
         // Turn on light for the third ball
         MQTTclient.publish("blue_beacon", "OFF");
+        delay(300);
         MQTTclient.publish("yellow_beacon", "ON");
       }
       break;

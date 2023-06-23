@@ -1,0 +1,12 @@
+00:57:10.389 > connect to wifi
+00:57:10.389 > wifi connecting
+00:57:13.141 > Connected to WiFi
+00:57:13.620 > connecting to MQTT
+00:57:13.875 > MQTT Connected
+00:57:18.879 > [  9913][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+00:57:20.878 > [ 11914][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+00:57:22.878 > [ 13915][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+00:57:24.877 > [ 15916][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+00:57:26.878 > [ 17917][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+00:57:28.878 > [ 19918][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+00:57:30.018 > [ 21052][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
