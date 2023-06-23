@@ -6,10 +6,10 @@ const int MS_PIN1 = 4;
 const int MS_PIN2 = 15;
 const int MS_PIN3 = 27;
 #define INTERVAL_MS_PRINT 200
-#define OUTER_VELO_LOOP_ON 0
+#define OUTER_VELO_LOOP_ON 1
 
 // LPF Vars
-LowPassFilter wheelSpeedFilter = LowPassFilter(0.001, millis()); // Tf = 1ms (filter time constant)
+LowPassFilter wheelSpeedFilter = LowPassFilter(0.5, millis()); // Tf = 1ms (filter time constant)
 double filteredWheelSpeed = 0;
 
 int speed = 0;
@@ -56,24 +56,13 @@ void loop() {
     // curr velo = motorspeed/200*21.2
 
     double currentMotorSpeedInSteps = filteredWheelSpeed;
-    //double currentMotorSpeedInSteps = speed;
-    currentVelo =  currentMotorSpeedInSteps / 200 * 21.2;
-    // Serial.println("current motor speed in steps");
-    // Serial.println(currentMotorSpeedInSteps);
-    // Serial.println("current velocity");
-    // Serial.println(currentVelo);
+    currentVelo = stepSpeedToAngularVelo(currentMotorSpeedInSteps);
+    // currentVelo =  currentMotorSpeedInSteps / 200 * 21.2;
     updateVeloInput(currentVelo);
 
     // This should already be covered under the controller
     veloControllerOutput = computeVeloControllerOutput();
     setRollSetpoint(veloControllerOutput);
-
-
-
-
-
-    // Serial.println("roll setpoint from veloPID");
-    // Serial.println(veloControllerOutput);
   }
 
 
@@ -101,6 +90,7 @@ void loop() {
   // Serial.println(currRoll);
   
   double motorSpeedSteps = computeRollControllerOutput(); 
+
   //Serial.println(filteredRoll);
   //Serial.println(getRoll());
   //Serial.println(getError());

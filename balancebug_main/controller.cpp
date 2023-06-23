@@ -14,8 +14,8 @@ double veloInput, veloOutput;
 //set points
 //rollSetpoint = -58; //setpoint without battery
 //double rollSetpoint = -60.578; //setpoint with battery
-double rollSetpoint = -1.8; // good setpoint at -3.9 with multimeter lol
-double veloSetpoint = 1.2;
+double rollSetpoint = 3.9;  // good setpoint at 3.9 with multimeter lol or not idk
+double veloSetpoint = 200; //60
 
 
 // TUNE THIS FIRST
@@ -23,14 +23,16 @@ double veloSetpoint = 1.2;
 // double rollKi = 37;   // Pitch angle integral gain 0.82
 // double rollKd = 9;   // Pi38h angle derivative gain
 
-double rollKp = 3.0;   // Pitch angle proportional gain 3.0 
-double rollKi = 2.5;   // Pitch angle integral gain 1
-double rollKd = 0.5;   // Pi38h angle derivative gain 0.5
+double rollKp = 3.0;  // Pitch angle proportional gain 3.0
+double rollKi = 1;    // Pitch angle integral gain 1
+double rollKd = 0.5;  // Pi38h angle derivative gain 0.5
 
 int RollPIDsampletime = 150;
 int velPIDsampletime = 180;
 
-double veloKp = 2.0;
+double veloKp = 10;  //1
+double veloKi = 0.1;   //0.8
+double veloKd = 3.2;  // 500
 double accumulatedError = 0;
 /*Best Roll Tuning Trials so far
 Rate: According to Loop
@@ -45,60 +47,61 @@ ki: 0.5;
 */
 
 PID rollPID(&rollInput, &rollOutput, &rollSetpoint, rollKp, rollKi, rollKd, DIRECT);
-PID veloPID(&veloInput, &veloOutput, &veloSetpoint, veloKp, 0.3, 0, DIRECT);
+PID veloPID(&veloInput, &veloOutput, &veloSetpoint, veloKp, veloKi, veloKd, DIRECT);
 
 //const float radius = 0.0337; // radius of wheel for velocity filter value
 //const float length = 0.16; // length of robot
 
-void controllerSetup(){
-    //Determines how often the PID algorithm evaluates
-    rollPID.SetSampleTime(RollPIDsampletime);
-    veloPID.SetSampleTime(velPIDsampletime);
+void controllerSetup() {
+  //Determines how often the PID algorithm evaluates
+  rollPID.SetSampleTime(RollPIDsampletime);
+  veloPID.SetSampleTime(velPIDsampletime);
 
-    // turn PID ON
-    rollPID.SetMode(AUTOMATIC);
-    //rollPID.SetOutputLimits(-5*2*3.1415, 5*2*3.1415);
-    rollPID.SetOutputLimits(-1000,1000);
-    // set output limit to keep within 1000 steps per sec = 5 revolutions per sec
-    veloPID.SetMode(AUTOMATIC);
-    veloPID.SetOutputLimits(-25, 25);
-    // set output limit to keep within a roll angle of 70deg?
+  // turn PID ON
+  rollPID.SetMode(AUTOMATIC);
+  //rollPID.SetOutputLimits(-5*2*3.1415, 5*2*3.1415);
+  rollPID.SetOutputLimits(-700, 700);
+  // set output limit to keep within 1000 steps per sec = 5 revolutions per sec
+  veloPID.SetMode(AUTOMATIC);
+  veloPID.SetOutputLimits(-4, 4);
+  // set output limit to keep within a roll angle of 70deg?
 }
 
-double computeRollControllerOutput(){
-    // the output is motor speed in radians per sec
-    rollPID.Compute();
-    return rollOutput;
+double computeRollControllerOutput() {
+  // the output is motor speed in radians per sec
+  rollPID.Compute();
+  return rollOutput;
 }
 
-void setRollSetpoint(double newSetpoint){
-    rollSetpoint = newSetpoint;
+
+void setRollSetpoint(double newSetpoint) {
+  rollSetpoint = newSetpoint;
 }
 
-double getRollSetpoint(){
-    return rollSetpoint;
+double getRollSetpoint() {
+  return rollSetpoint;
 }
 
-void updateRollInput(double newInput){
-    rollInput = newInput;
+void updateRollInput(double newInput) {
+  rollInput = newInput;
 }
 
-double computeVeloControllerOutput(){
-    veloPID.Compute();
-    return veloOutput;
+double computeVeloControllerOutput() {
+  veloPID.Compute();
+  return veloOutput;
 }
 
-double getError(){
-    double error = &rollSetpoint - &rollInput;
-    accumulatedError += error;
-    return accumulatedError;
+double getError() {
+  double error = &rollSetpoint - &rollInput;
+  accumulatedError += error;
+  return accumulatedError;
 }
 
-void setVeloSetpoint(double newSetpoint){
+void setVeloSetpoint(double newSetpoint) {
   veloSetpoint = newSetpoint;
 }
 
-void updateVeloInput(double newInput){
+void updateVeloInput(double newInput) {
   veloInput = newInput;
 }
 
@@ -106,22 +109,19 @@ void updateVeloInput(double newInput){
 // https://docs.simplefoc.com/low_pass_filter
 
 LowPassFilter::LowPassFilter(double time_constant, unsigned long current_time)
-    : Tf(time_constant)
-    , timestamp_prev(current_time)
-    , y_prev(0)
-    {
-      ;
-    }
+  : Tf(time_constant), timestamp_prev(current_time), y_prev(0) {
+  ;
+}
 
-double LowPassFilter::operator() (double input, unsigned long current_time){
+double LowPassFilter::operator()(double input, unsigned long current_time) {
   unsigned long timestamp = current_time;
-  double dt = (timestamp - timestamp_prev)*0.001;
+  double dt = (timestamp - timestamp_prev) * 0.001;
   // quick fix for strange cases (micros overflow)
   if (dt < 0.0 || dt > 0.5) dt = 0.001;
 
-  // calculate the filtering 
-  double alpha = Tf/(Tf + dt);
-  double y = alpha*y_prev + (1.0 - alpha)*input;
+  // calculate the filtering
+  double alpha = Tf / (Tf + dt);
+  double y = alpha * y_prev + (1.0 - alpha) * input;
 
   // save the variables
   y_prev = y;
