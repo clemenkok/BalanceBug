@@ -20,8 +20,9 @@
 
 # Table of contents
 
-* [Team Members](#team-members)
 * [What is this project?](#what-is-this-project)
+* [Software Architecture](#software-architecture)
+* [Team Members](#team-members)
 * [Setup](#setup)
 
 ## What is this project?
@@ -32,7 +33,7 @@ This project presents the design, development, and evaluation of an autonomous s
 
 Keywords: self-balancing rover, maze navigation, surveying, autonomous, image segmentation, pathfinding, FreeRTOS  
 
-Overall Software Architecture:  
+## Software Architecture:  
 
 ![arch4](report/img/archi.png)
 
