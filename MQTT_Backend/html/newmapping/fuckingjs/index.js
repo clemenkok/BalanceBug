@@ -84,8 +84,10 @@ var lastpos = [50, 80];
 
 lastpos = [0, 0];
 
+var minimumdistancetolastpos = 2.3;
+
 var lastwallpos = [0, 0];
-var direction = ["fucker", "fucker"];
+var direction = ["leftright", "updown"];
 var wallmargin = 4;
 let initwallmarign = 1;
 var drawWall = true;
@@ -128,6 +130,18 @@ function ReceivednewBall(msg) {
   var followingwall = msg[2];
 
   if (_x == lastpos[0] && _y == lastpos[1]) return;
+
+  //do not add the point if it is too close to the last point
+  if (
+    allmyfuckingpoints.length > 1 &&
+    distance(
+      { x: _x, y: _y },
+      allmyfuckingpoints[allmyfuckingpoints.length - 1]
+    ) < minimumdistancetolastpos
+  ) {
+    //console.log("rejected");
+    return; // dont do anything if too close
+  }
 
   allmyfuckingpoints.push({
     x: _x,
