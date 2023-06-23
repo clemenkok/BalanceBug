@@ -1289,7 +1289,7 @@ function pointInPolygon(point, polygon) {
 
 d3.select("#status")
   .style("font-size", "26px")
-  .text("Status: waiting for MQTT Rover data");
+  .text("Status: \nwaiting for MQTT Rover data");
 
 function changeStatus(status) {
   document.getElementById("status").innerText += "\n" + status;
