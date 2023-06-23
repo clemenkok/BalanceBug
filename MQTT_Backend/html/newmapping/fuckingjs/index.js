@@ -1289,7 +1289,7 @@ function pointInPolygon(point, polygon) {
 
 d3.select("#status")
   .style("font-size", "26px")
-  .text("Status: \nwaiting for MQTT Rover data");
+  .html("Status: <br>Waiting for MQTT Rover data");
 
 function changeStatus(status) {
   document.getElementById("status").innerText += "\n" + status;
@@ -1730,7 +1730,7 @@ async function AstarToClosestUnexplored() {
   );
 
   //stop moving !!
-  changeStatus("stop moving, finding Route to the closestn unexplored region");
+  changeStatus("stop moving, finding Route to the closest unexplored region");
 
   //detect empty cluster
   await WaitForKMean();
