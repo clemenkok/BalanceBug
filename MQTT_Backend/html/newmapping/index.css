@@ -9,6 +9,10 @@ button {
   border: 1px solid #ccc;
 }
 
+button:active {
+  background-color: #ffb6c1; /* Set the desired background color */
+}
+
 /* Add margin and padding to buttons */
 button {
   margin: 5px;
