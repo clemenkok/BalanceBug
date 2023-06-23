@@ -328,7 +328,7 @@ var astar = {
 };
 
 astar.init();
-console.log(astar.search(0, 3));
+// console.log(astar.search(0, 3));
 clusters = JSON.parse(
   fs.readFileSync("./astardata/testclusterconnections1.json", "utf8")
 );
@@ -341,7 +341,7 @@ for (var i = 0; i < _clustercoords.length; i++) {
   clustercoords[i] = [_clustercoords[i].x, _clustercoords[i].y];
 }
 
-console.log(astar.search(55, 57 ));
+// console.log(astar.search(55, 57 ));
 
 
 // A Star Algorithm ***************************************************** VErSION 2 (works too)
