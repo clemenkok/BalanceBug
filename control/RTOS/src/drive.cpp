@@ -102,6 +102,8 @@ int distanceToHit = 0;
 bool angleHit = false;
 bool distanceHit = false;
 
+double thetaRadAtLocaliseStart = 0;
+
 enum DriveState
 {
     STOP,
@@ -134,16 +136,51 @@ void compassSetup()
 
     digitalWrite(ledPinR, HIGH);
 
+    // i2c scanner
+    while (!Serial)
+    {
+    }
+
+    Serial.println();
+    Serial.println("I2C scanner. Scanning ...");
+
     Wire.begin();
+
+    byte count = 0;
+    for (byte i = 8; i < 120; i++)
+    {
+        Serial.println(i);
+        Wire.beginTransmission(i);
+        if (Wire.endTransmission() == 0)
+        {
+            Serial.print("Found address: ");
+            Serial.print(i, DEC);
+            Serial.print(" (0x");
+            Serial.print(i, HEX);
+            Serial.println(")");
+            count++;
+            delay(1); // maybe unneeded?
+        }             // end of good response
+    }                 // end of for loop
+    Serial.println("Done.");
+    Serial.print("Found ");
+    Serial.print(count, DEC);
+    Serial.println(" device(s).");
+    delay(1000);
+
+
+    //
+
     compass.init();
     compass.setSamplingRate(50);
+
     int heading = compass.readHeading();
 
     int compassCalibCount = 0;
 
     while (compassCalibCount < 30 || heading == 0)
     {
-
+        Serial.println("Calibrating");
         /* Still calibrating, so measure but don't print */
         // Serial.println("calibrating compass");
         heading = compass.readHeading();
@@ -155,14 +192,14 @@ void compassSetup()
     // thetaRad = (float)getCompassHeading() / 180 * PIVAL;
 }
 
-// int getCompassHeading()
-// {
-//     int heading = compass.readHeading();
-//     int temp = heading - compassOffset;
-//     temp = temp > 360 ? temp - 360 : temp;
+int getCompassHeading()
+{
+    int heading = compass.readHeading();
+    int temp = heading - compassOffset;
+    temp = temp > 360 ? temp - 360 : temp;
 
-//     return temp;
-// }
+    return temp;
+}
 
 void publishCompassReading()
 { // publish compass heading to server
@@ -191,7 +228,7 @@ void publishCompassReading()
 
 void driveSetup()
 {
-    // analogReadResolution(12);  // Set ADC resolution (0-4095)
+    //analogReadResolution(12);  // Set ADC resolution (0-4095)
     // Serial.println("start drive setup");
 
     pinMode(ledPinL, OUTPUT);
@@ -222,24 +259,24 @@ void driveSetup()
 
         int testNo = 2;
         calibrate(FMax, FMin, ldrFPin, testNo);
-        // Serial.print("FMax: ");
-        // Serial.println(FMax);
-        // Serial.print("FMin: ");
-        // Serial.println(FMin);
+        Serial.print("FMax: ");
+        Serial.println(FMax);
+        Serial.print("FMin: ");
+        Serial.println(FMin);
 
         testNo = 0;
         calibrate(LMax, LMin, ldrLPin, testNo);
-        // Serial.print("LMax: ");
-        // Serial.println(LMax);
-        // Serial.print("LMin: ");
-        // Serial.println(LMin);
+        Serial.print("LMax: ");
+        Serial.println(LMax);
+        Serial.print("LMin: ");
+        Serial.println(LMin);
 
         testNo = 1;
         calibrate(RMax, RMin, ldrRPin, testNo);
-        // Serial.print("RMax: ");
-        // Serial.println(RMax);
-        // Serial.print("RMin: ");
-        // Serial.println(RMin);
+        Serial.print("RMax: ");
+        Serial.println(RMax);
+        Serial.print("RMin: ");
+        Serial.println(RMin);
     }
     else
     {
@@ -445,7 +482,8 @@ void driveLoop()
             // In this state, look at the next coord in buffer
             // and calculate how much to rotate, then move straight
 
-            if (coordBufferIndex = coordBufferLen)
+            // = or ==? also should i take note of DR angle here so i can turn back to it?
+            if (coordBufferIndex == coordBufferLen) 
             {
                 // finsihed all coords to move to
                 xCoordBuffer[200] = {0};
@@ -657,7 +695,7 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
 
         curTime = millis();
         sensorValue = analogRead(sensorPin);
-        // Serial.println(sensorValue);
+        Serial.println(sensorValue);
 
         if (sensorValue > VMax)
         {
@@ -744,6 +782,7 @@ void updateLocalisation(double new_x, double new_y)
 
     // after localisation has been updated, do drift correction
     driftCorrection();
+    
 }
 
 void driftCorrection()
@@ -834,6 +873,7 @@ void collectData()
         /*
         MQTTclient.publish("echo", "finished 30 pos points");
         */
+        thetaRadAtLocaliseStart = thetaRad;
         startLocalise();
     }
     else
@@ -892,4 +932,59 @@ void updateWaypointBuffer(int index, double wayX, double wayY)
     xCoordBuffer[index] = wayX;
     yCoordBuffer[index] = wayY;
     coordBufferIndex = 0;
+}
+
+bool turnBackWallFunction(){
+    spinClockwise();
+    
+    ldrLVal = analogRead(ldrLPin);
+    ldrRVal = analogRead(ldrRPin);
+    ldrFVal = analogRead(ldrFPin);
+
+    // in case the sensor value is outside the range seen during calibration
+    ldrLVal = constrain(ldrLVal, LMin, LMax);
+    ldrRVal = constrain(ldrRVal, RMin, RMax);
+    ldrFVal = constrain(ldrFVal, FMin, FMax);
+
+    // apply the calibration to the sensor reading (scale it from 0 - 100)
+    if (LMin != LMax)
+    {
+        ldrLVal = map(ldrLVal, LMin, LMax, 0, 100);
+    }
+
+    if (RMin != RMax)
+    {
+        ldrRVal = map(ldrRVal, RMin, RMax, 0, 100);
+    }
+
+    if (FMin != FMax)
+    {
+        ldrFVal = map(ldrFVal, FMin, FMax, 0, 100);
+    }
+
+    if (followLeft){
+        if (ldrLVal > setpoint - 20)
+        {
+            followLeft = true;
+            followRight = false;
+            currDriveState = FOLLOW_WALL;
+            stopSpinClockwise();
+            return true;
+        }
+    }
+    if (followRight){
+        Serial.println("--------------------");
+        Serial.println(ldrLVal);
+        Serial.println(setpoint);
+        if (ldrRVal > setpoint - 20)
+        {
+            followLeft = false;
+            followRight = true;
+            currDriveState = FOLLOW_WALL;
+            stopSpinClockwise();
+            Serial.println("stopspinclockwise");
+            return true;
+        }
+    }
+    return false;
 }

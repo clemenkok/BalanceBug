@@ -1,0 +1,648 @@
+07:48:41.553 > econnect to wifi
+07:48:41.553 > wifi connecting
+07:48:44.311 > Connected to WiFi
+07:48:45.469 > connecting to MQTT
+07:48:45.721 > MQTT Connected
+07:48:46.726 > [  6572][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:48:47.729 > [  7573][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:48:48.728 > [  8574][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:48:49.728 > [  9575][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:48:50.728 > [ 10576][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:48:51.735 > [ 11577][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:48:52.736 > [ 12578][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:48:53.325 > ets Jul 29 2019 12:21:46
+07:48:53.333 > 
+07:48:53.333 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+07:48:53.334 > configsip: 0, SPIWP:0xee
+07:48:53.334 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+07:48:53.341 > mode:DIO, clock div:2
+07:48:53.341 > load:0x3fff0030,len:1184
+07:48:53.349 > load:0x40078000,len:13192
+07:48:53.350 > load:0x40080400,len:3028
+07:48:53.350 > entry 0x400805e4
+07:48:53.700 > connect to wifi
+07:48:53.825 > wifi connecting
+07:48:57.831 > Connected to WiFi
+07:48:59.293 > connecting to MQTT
+07:48:59.544 > MQTT Connected
+07:49:00.555 > [  6882][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:01.552 > [  7883][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:02.552 > [  8884][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:03.553 > [  9885][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:04.554 > [ 10886][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:05.560 > [ 11887][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:06.561 > [ 12888][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:07.556 > [ 13889][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:08.437 > ets Jul 29 2019 12:21:46
+07:49:08.445 > 
+07:49:08.445 > rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+07:49:08.445 > configsip: 0, SPIWP:0xee
+07:49:08.453 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+07:49:08.458 > mode:DIO, clock div:2
+07:49:08.461 > load:0x3fff0030,len:1184
+07:49:08.461 > load:0x40078000,len:13192
+07:49:08.461 > load:0x40080400,len:3028
+07:49:08.461 > entry 0x400805e4
+07:49:08.810 > connect to wifi
+07:49:08.939 > wifi connecting
+07:49:12.935 > Connected to WiFi
+07:49:14.041 > connecting to MQTT
+07:49:14.299 > MQTT Connected
+07:49:15.298 > [  6516][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:16.297 > [  7517][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:17.297 > [  8518][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:18.298 > [  9519][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:19.306 > [ 10520][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:20.304 > [ 11521][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:21.303 > [ 12522][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:22.306 > [ 13523][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:23.305 > [ 14524][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:24.312 > [ 15525][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:25.308 > [ 16526][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:26.308 > [ 17527][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:27.308 > [ 18528][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:28.311 > [ 19529][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:29.317 > [ 20530][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:30.317 > [ 21531][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:31.318 > [ 22532][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:32.319 > [ 23533][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:33.318 > [ 24534][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:34.321 > [ 25535][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:35.319 > [ 26536][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:36.318 > [ 27537][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:37.318 > [ 28538][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:38.319 > [ 29539][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:39.326 > [ 30540][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:40.325 > [ 31541][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:41.327 > [ 32542][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:42.325 > [ 33543][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:43.325 > [ 34544][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:44.331 > [ 35545][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:45.328 > [ 36546][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:46.330 > [ 37547][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:47.330 > [ 38548][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:48.334 > [ 39549][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:49.329 > [ 40550][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:50.333 > [ 41551][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:51.331 > [ 42552][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:52.338 > [ 43553][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:53.339 > [ 44554][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:54.341 > [ 45555][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:55.338 > [ 46556][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:56.343 > [ 47557][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:57.342 > [ 48558][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:58.345 > [ 49559][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:49:59.344 > [ 50560][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:00.346 > [ 51561][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:01.344 > [ 52562][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:02.349 > [ 53563][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:03.343 > [ 54564][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:04.351 > [ 55565][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:05.352 > [ 56566][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:06.347 > [ 57567][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:07.352 > [ 58568][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:08.353 > [ 59569][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:09.354 > [ 60570][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:10.356 > [ 61571][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:11.353 > [ 62572][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:12.357 > [ 63573][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:13.360 > [ 64574][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:14.358 > [ 65575][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:15.356 > [ 66576][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:16.363 > [ 67577][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:17.364 > [ 68578][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:18.365 > [ 69579][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:19.366 > [ 70580][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:20.368 > [ 71581][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:21.368 > [ 72582][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:22.365 > [ 73583][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:23.368 > [ 74584][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:24.366 > [ 75585][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:25.367 > [ 76586][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:26.372 > [ 77587][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:27.372 > [ 78588][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:28.369 > [ 79589][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:29.376 > [ 80590][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:30.376 > [ 81591][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:31.372 > [ 82592][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:32.376 > [ 83593][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:33.380 > [ 84594][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:34.380 > [ 85595][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:35.377 > [ 86596][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:36.383 > [ 87597][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:37.377 > [ 88598][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:38.382 > [ 89599][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:39.378 > [ 90600][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:40.384 > [ 91601][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:41.389 > [ 92602][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:42.388 > [ 93603][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:43.385 > [ 94604][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:44.391 > [ 95605][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:45.390 > [ 96606][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:46.392 > [ 97607][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:47.394 > [ 98608][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:48.396 > [ 99609][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:49.393 > [100610][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:50.392 > [101611][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:51.397 > [102612][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:52.399 > [103613][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:53.399 > [104614][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:54.398 > [105615][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:55.400 > [106616][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:56.402 > [107617][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:57.400 > [108618][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:58.405 > [109619][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:50:59.401 > [110620][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:00.406 > [111621][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:01.407 > [112622][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:02.406 > [113623][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:03.408 > [114624][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:04.407 > [115625][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:05.413 > [116626][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:06.414 > [117627][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:07.411 > [118628][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:08.414 > [119629][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:09.412 > [120630][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:10.413 > [121631][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:11.418 > [122632][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:12.415 > [123633][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:13.414 > [124634][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:14.420 > [125635][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:15.423 > [126636][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:16.419 > [127637][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:17.423 > [128638][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:18.424 > [129639][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:19.425 > [130640][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:20.424 > [131641][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:21.425 > [132642][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:22.424 > [133643][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:23.424 > [134644][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:24.431 > [135645][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:25.430 > [136646][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:26.432 > [137647][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:27.433 > [138648][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:28.430 > [139649][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:29.436 > [140650][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:30.433 > [141651][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:31.435 > [142652][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:32.437 > [143653][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:33.431 > [144654][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:34.439 > [145655][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:35.440 > [146656][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:36.440 > [147657][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:37.442 > [148658][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:38.440 > [149659][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:39.445 > [150660][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:40.447 > [151661][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:41.442 > [152662][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:42.441 > [153663][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:43.445 > [154664][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:44.446 > [155665][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:45.447 > [156666][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:46.449 > [157667][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:47.444 > [158668][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:48.455 > [159669][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:49.455 > [160670][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:50.457 > [161671][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:51.458 > [162672][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:52.458 > [163673][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:53.459 > [164674][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:54.456 > [165675][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:55.456 > [166676][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:56.464 > [167677][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:57.459 > [168678][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:58.462 > [169679][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:51:59.464 > [170680][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:00.460 > [171681][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:01.469 > [172682][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:02.468 > [173683][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:03.460 > [174684][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:04.469 > [175685][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:05.457 > [176686][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:06.466 > [177687][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:07.474 > [178688][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:08.473 > [179689][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:09.477 > [180690][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:10.477 > [181691][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:11.479 > [182692][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:12.480 > [183693][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:13.481 > [184694][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:14.481 > [185695][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:15.482 > [186696][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:16.484 > [187697][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:17.485 > [188698][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:18.485 > [189699][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:19.487 > [190700][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:20.487 > [191701][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:21.488 > [192702][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:22.476 > [193703][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:23.489 > [194704][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:24.491 > [195705][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:25.481 > [196706][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:26.491 > [197707][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:27.495 > [198708][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:28.492 > [199709][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:29.496 > [200710][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:30.498 > [201711][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:31.491 > [202712][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:32.500 > [203713][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:33.488 > [204714][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:34.502 > [205715][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:35.491 > [206716][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:36.497 > [207717][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:37.505 > [208718][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:38.506 > [209719][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:39.506 > [210720][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:40.508 > [211721][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:41.509 > [212722][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:42.509 > [213723][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:43.510 > [214724][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:44.507 > [215725][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:45.511 > [216726][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:46.513 > [217727][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:47.510 > [218728][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:48.511 > [219729][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:49.517 > [220730][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:50.517 > [221731][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:51.514 > [222732][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:52.511 > [223733][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:53.510 > [224734][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:54.522 > [225735][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:55.521 > [226736][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:56.523 > [227737][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:57.522 > [228738][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:58.524 > [229739][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:52:59.525 > [230740][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:00.526 > [231741][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:01.525 > [232742][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:02.521 > [233743][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:03.531 > [234744][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:04.531 > [235745][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:05.533 > [236746][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:06.527 > [237747][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:07.522 > [238748][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:08.533 > [239749][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:09.525 > [240750][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:10.537 > [241751][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:11.531 > [242752][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:12.536 > [243753][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:13.539 > [244754][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:14.541 > [245755][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:15.543 > [246756][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:16.544 > [247757][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:17.543 > [248758][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:18.538 > [249759][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:19.535 > [250760][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:20.537 > [251761][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:21.549 > [252762][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:22.548 > [253763][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:23.552 > [254764][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:24.540 > [255765][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:25.553 > [256766][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:26.553 > [257767][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:27.546 > [258768][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:28.546 > [259769][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:29.556 > [260770][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:30.553 > [261771][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:31.552 > [262772][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:32.552 > [263773][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:33.556 > [264774][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:34.558 > [265775][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:35.563 > [266776][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:36.551 > [267777][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:37.555 > [268778][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:38.565 > [269779][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:39.567 > [270780][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:40.564 > [271781][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:41.559 > [272782][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:42.570 > [273783][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:43.564 > [274784][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:44.564 > [275785][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:45.572 > [276786][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:46.560 > [277787][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:47.571 > [278788][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:48.571 > [279789][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:49.577 > [280790][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:50.577 > [281791][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:51.571 > [282792][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:52.565 > [283793][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:53.578 > [284794][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:54.577 > [285795][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:55.576 > [286796][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:56.581 > [287797][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:57.585 > [288798][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:58.583 > [289799][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:53:59.584 > [290800][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:00.587 > [291801][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:01.588 > [292802][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:02.584 > [293803][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:03.590 > [294804][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:04.591 > [295805][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:05.593 > [296806][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:06.595 > [297807][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:07.595 > [298808][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:08.596 > [299809][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:09.596 > [300810][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:10.596 > [301811][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:11.597 > [302812][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:12.599 > [303813][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:13.596 > [304814][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:14.602 > [305815][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:15.599 > [306816][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:16.601 > [307817][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:17.604 > [308818][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:18.605 > [309819][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:19.593 > [310820][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:20.608 > [311821][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:21.607 > [312822][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:22.605 > [313823][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:23.605 > [314824][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:24.608 > [315825][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:25.602 > [316826][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:26.606 > [317827][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:27.606 > [318828][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:28.606 > [319829][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:29.606 > [320830][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:30.604 > [321831][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:31.618 > [322832][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:32.620 > [323833][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:33.620 > [324834][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:34.622 > [325835][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:35.622 > [326836][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:36.622 > [327837][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:37.619 > [328838][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:38.617 > [329839][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:39.627 > [330840][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:40.628 > [331841][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:41.623 > [332842][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:42.629 > [333843][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:43.630 > [334844][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:44.632 > [335845][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:45.623 > [336846][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:46.628 > [337847][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:47.635 > [338848][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:48.632 > [339849][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:49.637 > [340850][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:50.638 > [341851][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:51.637 > [342852][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:52.637 > [343853][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:53.637 > [344854][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:54.635 > [345855][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:55.639 > [346856][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:56.636 > [347857][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:57.633 > [348858][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:58.646 > [349859][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:54:59.645 > [350860][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:00.643 > [351861][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:01.644 > [352862][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:02.645 > [353863][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:03.643 > [354864][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:04.638 > [355865][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:05.653 > [356866][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:06.654 > [357867][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:07.654 > [358868][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:08.655 > [359869][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:09.650 > [360870][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:10.645 > [361871][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:11.659 > [362872][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:12.656 > [363873][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:13.661 > [364874][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:14.649 > [365875][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:15.660 > [366876][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:16.658 > [367877][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:17.658 > [368878][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:18.653 > [369879][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:19.654 > [370880][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:20.666 > [371881][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:21.666 > [372882][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:22.657 > [373883][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:23.666 > [374884][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:24.670 > [375885][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:25.664 > [376886][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:26.662 > [377887][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:27.674 > [378888][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:28.676 > [379889][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:29.672 > [380890][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:30.669 > [381891][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:31.672 > [382892][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:32.672 > [383893][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:33.670 > [384894][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:34.682 > [385895][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:35.678 > [386896][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:36.675 > [387897][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:37.672 > [388898][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:38.687 > [389899][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:39.684 > [390900][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:40.688 > [391901][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:41.683 > [392902][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:42.680 > [393903][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:43.681 > [394904][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:44.686 > [395905][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:45.693 > [396906][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:46.694 > [397907][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:47.695 > [398908][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:48.693 > [399909][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:49.692 > [400910][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:50.695 > [401911][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:51.692 > [402912][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:52.691 > [403913][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:53.702 > [404914][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:54.698 > [405915][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:55.697 > [406916][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:56.700 > [407917][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:57.699 > [408918][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:58.697 > [409919][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:55:59.694 > [410920][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:00.706 > [411921][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:01.706 > [412922][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:02.701 > [413923][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:03.700 > [414924][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:04.703 > [415925][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:05.712 > [416926][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:06.714 > [417927][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:07.710 > [418928][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:08.710 > [419929][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:09.711 > [420930][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:10.705 > [421931][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:11.719 > [422932][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:12.720 > [423933][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:13.721 > [424934][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:14.722 > [425935][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:15.723 > [426936][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:16.724 > [427937][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:17.725 > [428938][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:18.726 > [429939][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:19.727 > [430940][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:20.716 > [431941][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:21.723 > [432942][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:22.731 > [433943][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:23.731 > [434944][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:24.726 > [435945][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:25.733 > [436946][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:26.734 > [437947][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:27.736 > [438948][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:28.737 > [439949][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:29.737 > [440950][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:30.734 > [441951][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:31.738 > [442952][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:32.733 > [443953][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:33.732 > [444954][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:34.737 > [445955][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:35.734 > [446956][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:36.736 > [447957][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:37.737 > [448958][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:38.745 > [449959][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:39.748 > [450960][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:40.746 > [451961][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:41.751 > [452962][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:42.748 > [453963][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:43.752 > [454964][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:44.750 > [455965][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:45.751 > [456966][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:46.751 > [457967][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:47.753 > [458968][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:48.755 > [459969][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:49.756 > [460970][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:50.759 > [461971][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:51.759 > [462972][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:52.761 > [463973][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:53.761 > [464974][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:54.762 > [465975][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:55.763 > [466976][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:56.764 > [467977][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:57.766 > [468978][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:58.766 > [469979][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:56:59.768 > [470980][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:00.768 > [471981][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:01.770 > [472982][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:02.771 > [473983][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:03.771 > [474984][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:04.772 > [475985][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:05.773 > [476986][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:06.774 > [477987][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:07.775 > [478988][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:08.777 > [479989][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:09.778 > [480990][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:10.774 > [481991][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:11.770 > [482992][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:12.769 > [483993][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:13.777 > [484994][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:14.782 > [485995][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:15.783 > [486996][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:16.784 > [487997][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:17.786 > [488998][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:18.786 > [489999][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:19.788 > [491000][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:20.788 > [492001][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:21.789 > [493002][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:22.783 > [494003][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:23.778 > [495004][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:24.789 > [496005][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:25.785 > [497006][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:26.793 > [498007][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:27.795 > [499008][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:28.783 > [500009][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:29.793 > [501010][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:30.794 > [502011][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:31.799 > [503012][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:32.796 > [504013][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:33.794 > [505014][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:34.789 > [506015][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:35.789 > [507016][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:36.805 > [508017][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:37.807 > [509018][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:38.805 > [510019][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:39.801 > [511020][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:40.798 > [512021][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:41.798 > [513022][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:42.801 > [514023][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:43.799 > [515024][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:44.803 > [516025][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:45.815 > [517026][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:46.814 > [518027][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:47.814 > [519028][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:48.809 > [520029][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:49.805 > [521030][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:50.818 > [522031][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:51.810 > [523032][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:52.821 > [524033][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:53.818 > [525034][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:54.812 > [526035][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:55.821 > [527036][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:56.816 > [528037][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:57.824 > [529038][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:58.818 > [530039][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:57:59.827 > [531040][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:00.822 > [532041][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:01.829 > [533042][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:02.831 > [534043][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:03.828 > [535044][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:04.823 > [536045][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:05.821 > [537046][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:06.830 > [538047][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:07.831 > [539048][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:08.830 > [540049][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:09.829 > [541050][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:10.839 > [542051][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:11.830 > [543052][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:12.834 > [544053][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:13.829 > [545054][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:14.843 > [546055][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:15.841 > [547056][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:16.840 > [548057][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:17.839 > [549058][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:18.848 > [550059][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:19.845 > [551060][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:20.849 > [552061][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:21.849 > [553062][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:22.850 > [554063][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:23.852 > [555064][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:24.853 > [556065][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:25.853 > [557066][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:26.855 > [558067][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:27.856 > [559068][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:28.857 > [560069][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:29.857 > [561070][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:30.854 > [562071][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:31.859 > [563072][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:32.858 > [564073][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:33.862 > [565074][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:34.862 > [566075][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:35.864 > [567076][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:36.864 > [568077][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:37.866 > [569078][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:38.867 > [570079][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:39.861 > [571080][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:40.855 > [572081][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:41.867 > [573082][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:42.869 > [574083][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:43.864 > [575084][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:44.860 > [576085][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:45.868 > [577086][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:46.863 > [578087][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:47.872 > [579088][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:48.876 > [580089][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:49.877 > [581090][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:50.878 > [582091][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:51.879 > [583092][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:52.880 > [584093][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:53.882 > [585094][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:54.883 > [586095][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:55.883 > [587096][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:56.884 > [588097][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:57.886 > [589098][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:58.877 > [590099][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:58:59.880 > [591100][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:00.888 > [592101][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:01.890 > [593102][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:02.891 > [594103][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:03.892 > [595104][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:04.893 > [596105][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:05.882 > [597106][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:06.889 > [598107][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:07.886 > [599108][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:08.898 > [600109][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:09.897 > [601110][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:10.896 > [602111][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:11.889 > [603112][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263
+07:59:12.886 > [604113][E][Wire.cpp:513] requestFrom(): i2cRead returned Error 263

@@ -1,0 +1,209 @@
+13:59:02.527 > connect to wifi
+13:59:02.527 > wifi connecting
+13:59:05.341 > Connected to WiFi
+13:59:06.476 > connecting to MQTT
+13:59:06.734 > MQTT Connected
+13:59:16.583 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.595 > Memory dump at 0x4010405c: 08e0391f ffffffff ffffffff
+13:59:16.601 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.615 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.616 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.625 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.632 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.642 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.642 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.658 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.665 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.665 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.675 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.690 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.692 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.698 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.706 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.714 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.722 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.730 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.738 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.746 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.754 > Memory dump at 0x401537e0: bfaaaaaa ffffffff ffffffff
+13:59:16.762 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.770 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.778 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.786 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.794 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.802 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.810 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.818 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.826 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.826 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.842 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.850 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.850 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.858 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.866 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.875 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.883 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.892 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.899 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.908 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.915 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.923 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.931 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.942 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.942 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.956 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.964 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.964 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.980 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:16.988 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:16.988 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:16.996 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.004 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.012 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.020 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.028 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.036 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.049 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.057 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.061 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.070 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.078 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.086 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.094 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.102 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.102 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.118 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.126 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.127 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.142 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.142 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.150 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.158 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.166 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.175 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.182 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.192 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.199 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.209 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.215 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.223 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.231 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.240 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.242 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.256 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.264 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.264 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.280 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.280 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.288 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.296 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.304 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.312 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.320 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.329 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.336 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.344 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.352 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.361 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.369 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.377 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.385 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.393 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.401 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.401 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.417 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.425 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.426 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.441 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.442 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.449 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.459 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.466 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.475 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.482 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.492 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.499 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.509 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.515 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.523 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.531 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.540 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.540 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.556 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.564 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.564 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.572 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.580 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.588 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.596 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.604 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.612 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.620 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.628 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.636 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.644 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.652 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.660 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.668 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.676 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.684 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.693 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.700 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.700 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.716 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.725 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.726 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.733 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.742 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.749 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.758 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.765 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.774 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.782 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.793 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.798 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.806 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.814 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.814 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.830 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.839 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.839 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.855 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.863 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.863 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.871 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.879 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.887 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.895 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.903 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.911 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.919 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.927 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.935 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.943 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.951 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.959 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.967 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.975 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.975 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:17.991 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:17.999 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:17.999 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:18.015 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:18.023 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:18.026 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:18.040 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:18.042 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:18.048 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:18.062 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:18.070 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:18.073 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:18.081 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:18.089 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:18.097 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:18.105 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:18.113 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:18.121 > Core  0 register d������������������������������������������������������������������������������������������������      
+13:59:18.129 > Guru Meditation Error: Core  0 panic'ed (IllegalInstruction). Exception was unhandled.
+13:59:18.137 > Memory dump at 0x400e58dc: 019df0c7 ffffffff ffffffff
+13:59:18.137 > Core  0 register d��������������������������������������������������������������������������������������������
