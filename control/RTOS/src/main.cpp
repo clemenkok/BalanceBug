@@ -41,8 +41,8 @@ void callback(char *topic, byte *payload, unsigned int length)
         String y_coord = coordStr.substring(coordStr.indexOf(delimiter) + 1, coordStr.length());
         current_x = x_coord.toDouble();
         current_y = y_coord.toDouble();
-        Serial.println(current_x);
-        Serial.println(current_y);
+        // Serial.println(current_x);
+        // Serial.println(current_y);
         // have to add a function
         updateLocalisation(current_x, current_y);
     }
@@ -83,13 +83,13 @@ void callback(char *topic, byte *payload, unsigned int length)
 void setup()
 {
 
-    // Setup function for Rover Control Task
     roverSetup();
-
+    // Setup function for Rover Control Task
     Serial.begin(115200);
 
+
     connectionSetup();
-    compassSetup();
+    //compassSetup();
     driveSetup();
 
     MQTTclient.setCallback(callback);

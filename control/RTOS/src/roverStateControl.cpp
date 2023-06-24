@@ -32,9 +32,9 @@ void startLocalise()
         roverCurrState = LOCALISE;
         setStartLocalisationTrue();
         // flush the uart serial port
-        Serial.println("Before Serial Flush");
-        SerialPort.flush();
-        Serial.println("After Serial Flush");
+        // Serial.println("Before Serial Flush");
+        //SerialPort.flush();
+        // Serial.println("After Serial Flush");
     }
     else
     {
@@ -51,6 +51,8 @@ void roverSetup()
 
 void roverStateLoop()
 {
+    //Serial.println("roverCurrState");
+    //Serial.println(roverCurrState);
     switch (roverCurrState)
     {
     case DRIVE:

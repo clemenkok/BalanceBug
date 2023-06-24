@@ -102,6 +102,8 @@ int distanceToHit = 0;
 bool angleHit = false;
 bool distanceHit = false;
 
+double thetaRadAtLocaliseStart = 0;
+
 enum DriveState
 {
     STOP,
@@ -134,18 +136,53 @@ void compassSetup()
 
     digitalWrite(ledPinR, HIGH);
 
+    // i2c scanner
+    while (!Serial)
+    {
+    }
+
+    Serial.println();
+    Serial.println("I2C scanner. Scanning ...");
+
     Wire.begin();
+
+    byte count = 0;
+    for (byte i = 8; i < 120; i++)
+    {
+        Serial.println(i);
+        Wire.beginTransmission(i);
+        if (Wire.endTransmission() == 0)
+        {
+            Serial.print("Found address: ");
+            Serial.print(i, DEC);
+            Serial.print(" (0x");
+            Serial.print(i, HEX);
+            Serial.println(")");
+            count++;
+            delay(1); // maybe unneeded?
+        }             // end of good response
+    }                 // end of for loop
+    Serial.println("Done.");
+    Serial.print("Found ");
+    Serial.print(count, DEC);
+    Serial.println(" device(s).");
+    delay(1000);
+
+
+    //
+
     compass.init();
     compass.setSamplingRate(50);
+
     int heading = compass.readHeading();
 
     int compassCalibCount = 0;
 
     while (compassCalibCount < 30 || heading == 0)
     {
-
+        Serial.println("Calibrating");
         /* Still calibrating, so measure but don't print */
-        Serial.println("calibrating compass");
+        // Serial.println("calibrating compass");
         heading = compass.readHeading();
         compassCalibCount++;
     }
@@ -155,14 +192,14 @@ void compassSetup()
     // thetaRad = (float)getCompassHeading() / 180 * PIVAL;
 }
 
-// int getCompassHeading()
-// {
-//     int heading = compass.readHeading();
-//     int temp = heading - compassOffset;
-//     temp = temp > 360 ? temp - 360 : temp;
+int getCompassHeading()
+{
+    int heading = compass.readHeading();
+    int temp = heading - compassOffset;
+    temp = temp > 360 ? temp - 360 : temp;
 
-//     return temp;
-// }
+    return temp;
+}
 
 void publishCompassReading()
 { // publish compass heading to server
@@ -191,11 +228,11 @@ void publishCompassReading()
 
 void driveSetup()
 {
-    // analogReadResolution(12);  // Set ADC resolution (0-4095)
-    Serial.println("start drive setup");
+    //analogReadResolution(12);  // Set ADC resolution (0-4095)
+    // Serial.println("start drive setup");
 
-    // pinMode(ledPinL, OUTPUT);
-    // pinMode(ledPinR, OUTPUT);
+    pinMode(ledPinL, OUTPUT);
+    pinMode(ledPinR, OUTPUT);
     pinMode(ldrLPin, INPUT);
     pinMode(ldrRPin, INPUT);
     pinMode(ldrFPin, INPUT);
@@ -243,7 +280,7 @@ void driveSetup()
     }
     else
     {
-        Serial.println("Use old calibration");
+        // Serial.println("Use old calibration");
 
         LMax = oldLMax;
         LMin = oldLMin;
@@ -260,8 +297,8 @@ void driveLoop()
     if (driftCorrect)
     {
         delay(30);
-        Serial.print("driftCorrectSendIndex");
-        Serial.print(driftCorrectSendIndex);
+        // Serial.print("driftCorrectSendIndex");
+        // Serial.print(driftCorrectSendIndex);
         char deadreckoning_payload[50] = {0};
         char pos_x_str[8];
         std::sprintf(pos_x_str, "%.2f", posXArr[driftCorrectSendIndex]);
@@ -284,8 +321,8 @@ void driveLoop()
         std::strcat(deadreckoning_payload, ",");
         std::strcat(deadreckoning_payload, right_wall_str);
 
-        Serial.println("deadreckoning_payload");
-        Serial.println(deadreckoning_payload);
+        // Serial.println("deadreckoning_payload");
+        // Serial.println(deadreckoning_payload);
 
         MQTTclient.publish("deadreckoning_data", deadreckoning_payload);
 
@@ -445,7 +482,8 @@ void driveLoop()
             // In this state, look at the next coord in buffer
             // and calculate how much to rotate, then move straight
 
-            if (coordBufferIndex = coordBufferLen)
+            // = or ==? also should i take note of DR angle here so i can turn back to it?
+            if (coordBufferIndex == coordBufferLen) 
             {
                 // finsihed all coords to move to
                 xCoordBuffer[200] = {0};
@@ -588,30 +626,31 @@ void driveLoop()
         // Serial.println(transmitDataToCloud);
         if (loop_count >= 1000 && transmitDataToCloud)
         {
-            Serial.println("Curr Drive State");
-            Serial.println(currDriveState);
-            Serial.println("Transmit Data To Cloud");
-            Serial.println(transmitDataToCloud);
-            Serial.print("ldrL, R, F: ");
-            Serial.print(ldrLVal);
-            Serial.print(", ");
-            Serial.print(ldrRVal);
-            Serial.print(", ");
-            Serial.print(ldrFVal);
-            Serial.println("");
-            Serial.print(speedL);
-            Serial.print(", ");
-            Serial.print(speedR);
-            Serial.print(", ");
-            Serial.print(posX);
-            Serial.print(", ");
-            Serial.print(posY);
-            Serial.print(", ");
-            Serial.print(thetaDeg);
-            Serial.print(", ");
-            Serial.print(followLeft);
-            Serial.print(", ");
-            Serial.println(followRight);
+            Serial.println("1 loop count");
+            // Serial.println("Curr Drive State");
+            // Serial.println(currDriveState);
+            // Serial.println("Transmit Data To Cloud");
+            // Serial.println(transmitDataToCloud);
+            // Serial.print("ldrL, R, F: ");
+            // Serial.print(ldrLVal);
+            // Serial.print(", ");
+            // Serial.print(ldrRVal);
+            // Serial.print(", ");
+            // Serial.print(ldrFVal);
+            // Serial.println("");
+            // Serial.print(speedL);
+            // Serial.print(", ");
+            // Serial.print(speedR);
+            // Serial.print(", ");
+            // Serial.print(posX);
+            // Serial.print(", ");
+            // Serial.print(posY);
+            // Serial.print(", ");
+            // Serial.print(thetaDeg);
+            // Serial.print(", ");
+            // Serial.print(followLeft);
+            // Serial.print(", ");
+            // Serial.println(followRight);
             collectData(); // record 5 new values in the 5 arrays
 
             loop_count = 0;
@@ -631,17 +670,17 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
     case 0:
         digitalWrite(ledPinL, HIGH);
         digitalWrite(ledPinR, LOW);
-        Serial.println("entering testcase 0");
+        // Serial.println("entering testcase 0");
         break;
     case 1:
         digitalWrite(ledPinL, LOW);
         digitalWrite(ledPinR, HIGH);
-        Serial.println("entering testcase 1");
+        // Serial.println("entering testcase 1");
         break;
     case 2:
         digitalWrite(ledPinL, HIGH);
         digitalWrite(ledPinR, HIGH);
-        Serial.println("entering testcase 2");
+        // Serial.println("entering testcase 2");
         break;
     }
 
@@ -651,7 +690,7 @@ void calibrate(int &VMax, int &VMin, int sensorPin, int testNo)
     while (curTime - startTime < 3500) // EXPLICIT DIFFERENCE
     {
 
-        Serial.println("getting calibration values...");
+        // Serial.println("getting calibration values...");
         delay(100);
 
         curTime = millis();
@@ -739,21 +778,22 @@ void updateLocalisation(double new_x, double new_y)
     currLocalisation[0] = new_x;
     currLocalisation[1] = new_y;
 
-    Serial.println("Updated Localisation");
+    // Serial.println("Updated Localisation");
 
     // after localisation has been updated, do drift correction
     driftCorrection();
+    
 }
 
 void driftCorrection()
 {
     // this only happens after localisation is done and the prev and curr localization are updated
-    Serial.println("prevLocalisation");
-    Serial.println(prevLocalisation[0]);
-    Serial.println(prevLocalisation[1]);
-    Serial.println("currLocalisation");
-    Serial.println(currLocalisation[0]);
-    Serial.println(currLocalisation[1]);
+    // Serial.println("prevLocalisation");
+    // Serial.println(prevLocalisation[0]);
+    // Serial.println(prevLocalisation[1]);
+    // Serial.println("currLocalisation");
+    // Serial.println(currLocalisation[0]);
+    // Serial.println(currLocalisation[1]);
 
     MQTTclient.publish("echo", "Drift Correction Performed");
 
@@ -829,10 +869,11 @@ void collectData()
         // this means stop driving, go do localisation, and then process the data after localisation before going back to driving
 
         dataIndex = 0;
-        Serial.println("Finished collecting 30 pos points");
+        // Serial.println("Finished collecting 30 pos points");
         /*
         MQTTclient.publish("echo", "finished 30 pos points");
         */
+        thetaRadAtLocaliseStart = thetaRad;
         startLocalise();
     }
     else
@@ -844,15 +885,15 @@ void collectData()
         rightWallArr[dataIndex] = followRight;
 
         dataIndex++;
-        Serial.println("Data Index");
-        Serial.println(dataIndex);
+        // Serial.println("Data Index");
+        // Serial.println(dataIndex);
     }
 }
 
 void spinClockwise()
 {
-    stepperL.setSpeed(-50);
-    stepperR.setSpeed(-50);
+    stepperL.setSpeed(-25);
+    stepperR.setSpeed(-25);
     stepperL.runSpeed();
     stepperR.runSpeed();
 }
@@ -891,4 +932,59 @@ void updateWaypointBuffer(int index, double wayX, double wayY)
     xCoordBuffer[index] = wayX;
     yCoordBuffer[index] = wayY;
     coordBufferIndex = 0;
+}
+
+bool turnBackWallFunction(){
+    spinClockwise();
+    
+    ldrLVal = analogRead(ldrLPin);
+    ldrRVal = analogRead(ldrRPin);
+    ldrFVal = analogRead(ldrFPin);
+
+    // in case the sensor value is outside the range seen during calibration
+    ldrLVal = constrain(ldrLVal, LMin, LMax);
+    ldrRVal = constrain(ldrRVal, RMin, RMax);
+    ldrFVal = constrain(ldrFVal, FMin, FMax);
+
+    // apply the calibration to the sensor reading (scale it from 0 - 100)
+    if (LMin != LMax)
+    {
+        ldrLVal = map(ldrLVal, LMin, LMax, 0, 100);
+    }
+
+    if (RMin != RMax)
+    {
+        ldrRVal = map(ldrRVal, RMin, RMax, 0, 100);
+    }
+
+    if (FMin != FMax)
+    {
+        ldrFVal = map(ldrFVal, FMin, FMax, 0, 100);
+    }
+
+    if (followLeft){
+        if (ldrLVal > setpoint - 20)
+        {
+            followLeft = true;
+            followRight = false;
+            currDriveState = FOLLOW_WALL;
+            stopSpinClockwise();
+            return true;
+        }
+    }
+    if (followRight){
+        Serial.println("--------------------");
+        Serial.println(ldrLVal);
+        Serial.println(setpoint);
+        if (ldrRVal > setpoint - 20)
+        {
+            followLeft = false;
+            followRight = true;
+            currDriveState = FOLLOW_WALL;
+            stopSpinClockwise();
+            Serial.println("stopspinclockwise");
+            return true;
+        }
+    }
+    return false;
 }

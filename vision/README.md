@@ -78,6 +78,21 @@ http://www.hlam.ece.ufl.edu/EEL4712/LectureNotes/MAX10-EmbeddedMemory.pdf
 # SQUEEZING OUT EXTRA RAM FROM THE START CODE
 - ON CHIP MEMORY CHANGED FROM SIZE OF 131072 BYTES TO 120000 BYTES
 
+# Steps to flash the fpga permanently so that it continues to have the prior programmed after power off
+
+1. push quartus project and meminit to public github repo
+2. from ssh, clone the repo using https
+3. open qsys and follow the instructions to enable initialise memory content
+4. compile fpga project
+5. Quartus will not permit you to program the flash memory with certain IP blocks without a licence. These include the NIOS II CPU core and video IP blocks. You will need to compile the project on the departmental server to use the IP licences. In Quartus, open Tools → License Setup and check that the License file includes 7193@ee-lic01.ee.ic.uk
+
+You need to change the configuration mode to permit the inclusion of your NIOS II code in the configuration. Open Assignments → Device and Device and Pin Options. Set the configuration mode to 'Single Compressed Image with Memory Initialization'
+
+6. compile
+7. download the POF from the VPN
+8. Run quartus programmer diretly from local computer by typing "quartus_pgmw" in windows search
+9. In the programmer, tick program/configure and start
+
 
 
 

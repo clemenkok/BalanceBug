@@ -112,9 +112,9 @@ function subscribe() {
       // Hardcode the beacon x and y positions
       //        red       blue      yellow    rover rotate in clockwise direction
       const x = [
-        [225, 350],
-        [225, 0],
-        [0, 350],
+        [0, 360],
+        [240, 360],
+        [240, 0],
       ];
       // error here. Need to stringify before parsing
       const trilateration_result = JSON.parse(

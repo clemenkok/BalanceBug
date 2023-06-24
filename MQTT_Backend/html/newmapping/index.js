@@ -101,7 +101,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/fuck", (req, res) => {
+app.get("/kmean", (req, res) => {
   res.sendFile(__dirname + "/kmean.html");
 });
 

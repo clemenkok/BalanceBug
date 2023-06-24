@@ -13,7 +13,8 @@
 HardwareSerial SerialPort(2);
 
 // String msg_buf;
-unsigned char myBuffer[12];
+unsigned char myBuffer[12] = {0};
+bool packetAligned = false;
 
 enum LocalisationState
 {
@@ -21,9 +22,13 @@ enum LocalisationState
   LOOKING_FOR_1ST_BALL,
   LOOKING_FOR_2ND_BALL,
   LOOKING_FOR_3RD_BALL,
-  SEND_DISTANCES
+  SPIN_BACK_ORIGINAL,
+  SEND_DISTANCES,
+  TURNING_BACK_WALL
 };
 
+extern bool followLeft;
+extern bool followRight;
 // need to subscribe topic
 // 1) Receive new coordinates
 
@@ -32,6 +37,7 @@ LocalisationState currentState = WAITING;
 // state controllers
 bool start_localisation = false; // controlled by main rover state control
 bool change_state = false;
+int startCompassHeading = 0;
 
 int red_dist;
 int blue_dist;
@@ -43,6 +49,10 @@ double current_y = 0;
 void uartToDistanceSetup()
 {
   SerialPort.begin(BAUDRATE, SERIAL_8N1, RX_PIN, TX_PIN);
+  while (!SerialPort)
+  {
+    ;
+  }
 }
 
 long getBoxHeightInPixels(unsigned char (&myBuffer)[12])
@@ -89,7 +99,7 @@ bool takeReading(long pixel_center_x, long pixel_box_height)
   // take one single reading when center is within the range of 210-20 to 210+20
   if (pixel_box_height == 0)
     return false;
-  return 190 < pixel_center_x < 230;
+  return 100 < pixel_center_x < 540;
 }
 
 void setStartLocalisationTrue()
@@ -99,30 +109,48 @@ void setStartLocalisationTrue()
 
 void uartToDistanceLoop()
 {
-  Serial.println("Inside Uart to Dist Loop");
+  // Serial.println("Inside Uart to Dist Loop");
   // make the rover turn clockwise if it is looking for ball
   if (currentState == LOOKING_FOR_1ST_BALL || currentState == LOOKING_FOR_2ND_BALL || currentState == LOOKING_FOR_3RD_BALL)
   {
     spinClockwise();
-    Serial.println("SPin CLockwise");
-    Serial.println("Curr Localise State");
-    Serial.println(currentState);
+    // Serial.println("SPin CLockwise");
+    // Serial.println("Curr Localise State");
+    // Serial.println(currentState);
   }
 
-  if (SerialPort.available() > 11)
+  // always use A0 to align
+  if (SerialPort.available() > 0)
+  {
+    for (int i = 0; i < 11; i++)
+    {
+      myBuffer[i] = myBuffer[i + 1];
+    }
+    myBuffer[11] = SerialPort.read();
+    if (myBuffer[3] == 160)
+    {
+      packetAligned = true;
+    }
+    else
+    {
+      packetAligned = false;
+    }
+  }
+
+  // if (SerialPort.available() > 11)
+  if (packetAligned)
   {
     // The serial data comes in one byte at a time
     // Read 4 bytes at the same time
 
-    SerialPort.readBytes(myBuffer, 12);
-    /*
+    // SerialPort.readBytes(myBuffer, 12);
+
     for (int i = 0; i < 12; i++)
     {
       Serial.print(myBuffer[i], HEX);
       Serial.print(" ");
     }
     Serial.println();
-    */
 
     long pixel_box_height = getBoxHeightInPixels(myBuffer);
     long pixel_center_x = getPixelCenterX(myBuffer);
@@ -135,6 +163,7 @@ void uartToDistanceLoop()
       {
         distance = convertDistanceCm(pixel_box_height);
         // move the state machine forward
+
         if (currentState == LOOKING_FOR_1ST_BALL && myBuffer[0] == 1)
           change_state = true;
         else if (currentState == LOOKING_FOR_2ND_BALL && myBuffer[0] == 2)
@@ -153,13 +182,25 @@ void uartToDistanceLoop()
         change_state = false;
         // Transition to the next state based on some condition or event
         currentState = LOOKING_FOR_1ST_BALL;
+        Serial.println("turning red on");
+        Serial.print("MQTT connected: "); 
+        Serial.println(MQTTclient.connected());
         // Turn on light for the first ball
         MQTTclient.publish("red_beacon", "ON");
+        // MQTTclient.publish("red_beacon", "ON");
         start_localisation = false;
+
+        Serial.println("in waiting state getting compass heading hopefully not stuck");
+
+        //startCompassHeading = getCompassHeading();
+         Serial.println("in waiting state going in LOOKING_FOR_1ST_BALL");
       }
       break;
 
     case LOOKING_FOR_1ST_BALL:
+      // MQTTclient.publish("echo", "looking for first ball");
+      Serial.println("Looking for 1st ball");
+      MQTTclient.publish("red_beacon", "ON");
       if (change_state)
       {
         change_state = false;
@@ -167,9 +208,14 @@ void uartToDistanceLoop()
         distance = 0;
         // Transition to the next state based on some condition or event
         currentState = LOOKING_FOR_2ND_BALL;
+
         // Turn on light for the second ball
         MQTTclient.publish("red_beacon", "OFF");
+        // MQTTclient.publish("red_beacon", "OFF");
+        //
+        // delay(300);
         MQTTclient.publish("blue_beacon", "ON");
+        // MQTTclient.publish("blue_beacon", "ON");
       }
       break;
 
@@ -183,6 +229,9 @@ void uartToDistanceLoop()
         currentState = LOOKING_FOR_3RD_BALL;
         // Turn on light for the third ball
         MQTTclient.publish("blue_beacon", "OFF");
+        MQTTclient.publish("blue_beacon", "OFF");
+        delay(300);
+        MQTTclient.publish("yellow_beacon", "ON");
         MQTTclient.publish("yellow_beacon", "ON");
       }
       break;
@@ -194,7 +243,9 @@ void uartToDistanceLoop()
         yellow_dist = distance;
         distance = 0;
         // Transition to the next state based on some condition or event
-        currentState = SEND_DISTANCES;
+        currentState = TURNING_BACK_WALL;
+        //currentState = SEND_DISTANCES;
+        MQTTclient.publish("yellow_beacon", "OFF");
         MQTTclient.publish("yellow_beacon", "OFF");
 
         // once found looking for third ball, stop spinning
@@ -202,6 +253,32 @@ void uartToDistanceLoop()
       }
       break;
 
+    case TURNING_BACK_WALL:
+    {
+      bool turnCompleted = turnBackWallFunction();
+      if (turnCompleted){
+        currentState = SEND_DISTANCES;
+      }
+      break;
+    }
+      
+/*
+    case SPIN_BACK_ORIGINAL:
+      Serial.println("spinning back state");
+      Serial.print("getcompassheading:");
+      Serial.println(getCompassHeading());
+      Serial.print("start compass heading:");
+      Serial.println(startCompassHeading);
+      if (((getCompassHeading() - startCompassHeading) % 360) < 20)
+      {
+        stopSpinClockwise();
+        currentState = SEND_DISTANCES;
+      }
+      else
+      {
+        spinClockwise();
+      }
+*/
     case SEND_DISTANCES:
       // the payload is a string of the form "red_dist blue_dist yellow_dist current_x current_y"
       // current_x and current_y is the current coordinates based on deadreckoning
