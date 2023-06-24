@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 
 //my socket shits ********************************************************************************************************************
 const http = require('http').Server(app);
-const { setupsocket, socketemit } = require('./publishers/socketshit.js');
+const { setupsocket, socketemit } = require('./publishers/socketstuff.js');
 var io = setupsocket(http);
 
 // the 3rd element is whether rover is following wall: "right" "left" "none"

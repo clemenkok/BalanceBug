@@ -5,7 +5,7 @@ const { update_rover_coords } = require('../publishers/MQTT_publishers');
 const db = require('../models');
 const Live_database = db.live_database;
 
-const { socketemit } = require('../publishers/socketshit');
+const { socketemit } = require('../publishers/socketstuff');
 
 function subscribe() {
   // subscribing to an array of topics may cause unintended side effects
@@ -86,16 +86,16 @@ function subscribe() {
 
     if (topic === 'red_beacon') {
       // TODO: processing when we have been notified that red_beacon is to turn on
-      console.log('Received Message (red_beacon):', message.toString());
+      // console.log('Received Message (red_beacon):', message.toString());
     }
 
     if (topic === 'blue_beacon') {
       // TODO: processing when we have been notified that red_beacon is to turn on
-      console.log('Received Message (blue_beacon):', message.toString());
+      // console.log('Received Message (blue_beacon):', message.toString());
     }
     if (topic === 'yellow_beacon') {
       // TODO: processing when we have been notified that red_beacon is to turn on
-      console.log('Received Message (yellow_beacon):', message.toString());
+      // console.log('Received Message (yellow_beacon):', message.toString());
     }
     if (topic === 'localise') {
       // TODO: processing when we have been notified that red_beacon is to turn on

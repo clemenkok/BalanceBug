@@ -4,7 +4,8 @@ const { client } = new (require('../services/mqtt_service'))();
 var fs = require('fs');
 const { runInContext } = require('vm');
 
-var file = './html/newmapping/mapdata/452.txt';
+//var file = './html/newmapping/mapdata/452.txt';
+var file = './html/newmapping/mapdata/0449.txt';
 var data = fs.readFileSync(file, 'utf8');
 var dataArr = data.toString().split('\n');
 //remove last dataarr

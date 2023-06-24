@@ -638,7 +638,7 @@ wallselect.addEventListener("change", function (event) {
 
 //simulator******************************************************
 
-let simulatorstep = 5;
+let simulatorstep = 4;
 
 document.addEventListener("keydown", function (event) {
   if (
