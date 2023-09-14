@@ -33,6 +33,8 @@ This project presents the design, development, and evaluation of an autonomous s
 
 Keywords: self-balancing rover, maze navigation, surveying, autonomous, image segmentation, pathfinding, FreeRTOS  
 
+This project was awarded the First Prize for the best 2nd year group project.
+
 ## Software Architecture:  
 
 ![arch4](report/img/archi.png)
